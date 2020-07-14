@@ -12,9 +12,9 @@ The hyperloop train system is used to submit your analysis in a train to the Gri
 ## For the Run 2 LEGO train expert. What has changed?
 
 ## Creating or joining an analysis
+<img src="/comparisonwithjira.png" width="100%">
 
 ## Adding and configuring a wagon to an analysis
-<img src="/comparisonwithjira.png" width="100%">
 
 ## Enabling datasets
 There are 2 options for enabling or disabling a dataset in an analysis. 
