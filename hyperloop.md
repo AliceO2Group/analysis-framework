@@ -17,8 +17,11 @@ The hyperloop train system is used to submit your analysis in a train to the Gri
 
 ## Enabling datasets
 There are 2 options for enabling or disabling a dataset in an analysis. 
+
 Using the **My Analyses** page:
-Click on the button **Enable/disable datasets** 📝
+
+Click on the button `**Enable/disable datasets** 📝`
+
 ## Enabling wagon
 
 ## Service wagons
