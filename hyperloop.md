@@ -23,7 +23,7 @@ Using the **My Analyses** page:
 * Click on the button `Enable/disable datasets 📝`. 
 There will be a list of _Enabled datasets in **Analysis**_. You can disable a dataset by clicking on the button `❌`
 
-![](/enabledisableDatasets.png){ width=50% }
+![](/enabledisableDatasets.png | width=100)
 
 ## Enabling wagon
 
