@@ -14,6 +14,7 @@ The hyperloop train system is used to submit your analysis in a train to the Gri
 ## Creating or joining an analysis
 
 ## Adding and configuring a wagon to an analysis
+<img src="/comparisonwithjira.png" width="60%">
 
 ## Enabling datasets
 There are 2 options for enabling or disabling a dataset in an analysis. 
