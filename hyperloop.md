@@ -21,7 +21,7 @@ There are 2 options for enabling or disabling a dataset in an analysis.
 Using the **My Analyses** page:
 
 * Click on the button `Enable/disable datasets 📝`. 
-There will be a list of _Enabled datasets in **Analysis**_. You can disable a dataset by clicking on the button <span style="background-color:#17a2b8;color:white">blue</span> `❌`
+There will be a list of _Enabled datasets in **Analysis**_. You can disable a dataset by clicking on the button <span style="color: green"> Some green text </span> `❌`
 
 
 ## Enabling wagon
