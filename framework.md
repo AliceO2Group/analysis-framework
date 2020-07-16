@@ -281,8 +281,10 @@ struct MyTask : AnalysisTask {
 To get combinations of distinct tracks, helper functions from `ASoAHelpers.h` can be used. Presently, there are 3 combinations policies available: strictly upper, upper and full. `CombinationsStrictlyUpperPolicy` is applied by default if all tables are of the same type, otherwise `FullIndexPolicy` is applied.
 
 ```cpp
-combinations(tracks, tracks); // equivalent to combinations(CombinationsStrictlyUpperIndexPolicy(tracks, tracks));
-combinations(filter, tracks, covs); // equivalent to combinations(CombinationsUpperIndexPolicy(tracks, covs), filter, tracks, covs);
+// equivalent to combinations(CombinationsStrictlyUpperIndexPolicy(tracks, tracks));
+combinations(tracks, tracks);
+// equivalent to combinations(CombinationsUpperIndexPolicy(tracks, covs), filter, tracks, covs);
+combinations(filter, tracks, covs);
 ```
 
 The number of elements in a combination is deduced from the number of arguments passed to `combinations()` call. For example, to get pairs of tracks from the same source, one must specify `tracks` table twice:
@@ -315,8 +317,10 @@ struct MyTask : AnalysisTask {
 One can get combinations of elements with the same value in a given column. Input tables do not need to be the same but each table must contain the column used for categorizing. Additionally, you can specify a value to be skipped for grouping as well as the number of elements to be matched with first element in a combination. Again, full, strictly upper and upper policies are available:
 
 ```cpp
-for (auto& [c0, c1] : combinations(CombinationsBlockStrictlyUpperIndexPolicy("fRunNumber", 3, -1, collisions, collisions))) {
-  // Pairs of collisions with same fRunNumber, max 3 pairs for each element in a given "fRunNumber" bin. Entries with fRunNumber == -1 are skipped.
+for (auto& [c0, c1] : combinations(
+  CombinationsBlockStrictlyUpperIndexPolicy("fRunNumber", 3, -1, collisions, collisions))) {
+  // Pairs of collisions with same fRunNumber, max 3 pairs for each element in a given "fRunNumber" bin.
+  // Entries with fRunNumber == -1 are skipped.
 }
 for (auto& [c0, t1] : combinations(CombinationsBlockFullIndexPolicy("fX", 200, -1, collisions, tracks)));
 ```
@@ -324,9 +328,11 @@ for (auto& [c0, t1] : combinations(CombinationsBlockFullIndexPolicy("fX", 200, -
 For better performance, if the same table is used, `Block{Full,StrictlyUpper,Upper}SameIndex` policies should be preferred. `selfCombinations()` are a shortuct to apply StrictlyUpperSameIndex policy:
 
 ```cpp
-for (auto& [c0, c1] : combinations(CombinationsBlockFullSameIndexPolicy("fRunNumber", 3, -1, collisions, collisions)));
+for (auto& [c0, c1] : combinations(
+  CombinationsBlockFullSameIndexPolicy("fRunNumber", 3, -1, collisions, collisions)));
 for (auto& [c0, c1] : selfCombinations("fRunNumber", 3, -1, collisions, collisions)) {
-  // same as: combinations(CombinationsBlockStrictlyUpperSameIndexPolicy("fRunNumber", 3, -1, collisions, collisions));
+  // same as: combinations(
+  //            CombinationsBlockStrictlyUpperSameIndexPolicy("fRunNumber", 3, -1, collisions, collisions));
 }
 ```
 
@@ -337,13 +343,58 @@ struct MyTask : AnalysisTask {
 
   void process(Tracks const& tracks1, Tracks const& tracks2) {
     Filter triplesFilter = track::eta < 0;
-    for (auto& [t0, t1, t2] : combinations(CombinationsFullIndexPolicy(tracks1, tracks2, tracks2), triplesFilter, tracks1, tracks2, tracks2)) {
+    for (auto& [t0, t1, t2] : combinations(
+      CombinationsFullIndexPolicy(tracks1, tracks2, tracks2), triplesFilter, tracks1, tracks2, tracks2)) {
       // Triples of tracks, each of them with eta < 0
       ...
     }
   }
 };
 ```
+
+### Getting mixed event data
+> **Separate docs for specific analysis details?**
+
+Block combinations can be used to obtain tracks from mixed events. First, one needs to calculate hash to associate each collision with proper bins:
+
+```cpp
+struct HashTask {
+  std::vector<float> xBins{-1.5f, -1.0f, -0.5f, 0.0f, 0.5f, 1.0f, 1.5f};
+  std::vector<float> yBins{-1.5f, -1.0f, -0.5f, 0.0f, 0.5f, 1.0f, 1.5f};
+  Produces<aod::Hashes> hashes;
+
+  void process(aod::Collisions const& collisions)
+  {
+    for (auto& collision : collisions) {
+      hashes(getHash(xBins, yBins, collision.posX(), collision.posY()));
+    }
+  }
+};
+```
+
+Then, the following task is actually processing mixed-event data:
+
+```cpp
+struct CollisionsCombinationsTask {
+  void process(aod::Hashes const& hashes, aod::Collisions& collisions, soa::Filtered<aod::Tracks>& tracks)
+  {
+    // Strictly upper pairs of collisions with the same hash,
+    // max 5 elements paired with each element from the same `fBin`(hash).
+    // Entries with `fBin` == -1 are skipped.
+    for (auto& [c1, c2] : selfCombinations("fBin", 5, -1, join(hashes, collisions), join(hashes, collisions))) {
+
+      // Grouping and slicing of tracks needs to be hardcoded here for now
+      ...
+
+      // All pairs of tracks from mixed events c1 and c2
+      for (auto& [t1, t2] : combinations(CombinationsFullIndexPolicy(tracks1, tracks2))) {
+      }
+    }
+  }
+};
+```
+
+A full example can be found in `Analysis/Tutorials/src/eventMixing.cxx`.
 
 ### Saving tables to file
 
