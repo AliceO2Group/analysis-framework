@@ -17,7 +17,7 @@ struct MyTask : AnalysisTask {
 };
 ```
 
-such a task can then be added to a workflow via the `adaptAnalysisTask` helper. A full blown example can be built with:
+Such a task can then be added to a workflow via the `adaptAnalysisTask` helper. A full blown example can be built with:
 
 ```cpp
 #include "Framework/runDataProcessing.h"
@@ -89,7 +89,7 @@ void process(o2::aod::Collision const& collision, o2::aod::Tracks &tracks) {
 }
 ```
 
-the above will be called once per collision found in the time frame, and `tracks` will allow you to iterate on all the tracks associated to the given collision.
+The above will be called once per collision found in the time frame, and `tracks` will allow you to iterate on all the tracks associated to the given collision.
 
 Alternatively, you might not require to have all the tracks at once and you could do with:
 
@@ -98,18 +98,7 @@ void process(o2::aod::Collection const& collision, o2::aod::Track const& track) 
 }
 ```
 
-also in this case the advantage is that your code might be up for parallelization and vectorization.
-
-Notice that you are not limited to two different collections, but you could specify more. E.g.: 
-
-```cpp
-void process(o2::aod::Collection const& collision, o2::aod::V0 const& v0, o2::aod::Tracks const& tracks) {
-}
-```
-
-will be invoked for each v0 associated to a given collision and you will be given the tracks associated to it.
-
-This means that each subsequent argument is associated to all the one preceding it.
+Also in this case the advantage is that your code might be up for parallelization and vectorization.
 
 ### Processing related tables
 
@@ -176,10 +165,10 @@ struct MyTask : AnalysisTask {
 };
 ```
 
-the `etaphi` object is a functor that will effectively act as a cursor which allows to populate the `EtaPhi` table. Each invocation of the functor will create a new row in the table, using the arguments as contents of the given column. By default the arguments must be given in order, but one can give them in any order by using the correct column type. E.g. in the example above:
+The `etaphi` object is a functor that will effectively act as a cursor which allows to populate the `EtaPhi` table. Each invocation of the functor will create a new row in the table, using the arguments as contents of the given column. By default the arguments must be given in order, but one can give them in any order by using the correct column type. E.g. in the example above:
 
 ```cpp
-etaphi(track::Phi(calculatePhi(track), track::Eta(calculateEta(track)));
+etaphi(aod::track::Phi(calculatePhi(track), aod::track::Eta(calculateEta(track)));
 ```
 
 ### Adding dynamic columns to a data type
@@ -202,36 +191,6 @@ DECLARE_SOA_TABLE(Point, "MISC", "POINT", X, Y, (R2<X,Y>));
 
 Notice how the dynamic column is defined as a stand alone column and binds to X and Y
 only when you attach it as part of a table.
-
-### Executing a finalization method, post run
-
-Sometimes it's handy to perform an action when all the data has been processed, for example executing a fit on a histogram we filled during the processing. This can be done by implementing the postRun method.
-
-### Creating histograms
-
-New tables are not the only kind on objects you want to create, but most likely you would like to fill histograms associated to the objects you have calculated.
-
-You can do so by using the `Histogram` helper:
-
-```cpp
-struct MyTask : AnalysisTask {
-  Histogram etaHisto;
-
-  void process(o2::aod::EtaPhi const& etaphi) {
-    etaHisto.fill(etaphi.eta());
-  }
-};
-```
-
-# Creating new columns in a declarative way
-
-Besides the `Produces` helper, which allows you to create a new table which can be reused by others, there is another way to define a single column,  via the `Defines` helper.
-
-```cpp
-struct MyTask : AnalysisTask {
-  Defines<track::Eta> eta = track::alpha;
-};
-```
 
 ## Filtering and partitioning data
 
@@ -273,23 +232,6 @@ struct MyTask : AnalysisTask {
 
 You can specify multiple filters which will be applied in a sequence effectively resulting in the intersection of all them.
 
-**Not here yet**
-You can also specify filters on associated quantities:
-
-```cpp
-struct MyTask : AnalysisTask {
-  Filter<Collisions> collisionFilter = max(track::pt) > 1;
-
-  void process(Collsions const &filteredCollisions) {
-    for (auto& collision: collisions) {
-    ...
-    }
-  }
-};
-```
-
-will process all the collisions which have at least one track with `pt > 1`.
-
 ### Partitioning your inputs
 
 Filtering is not the only kind of conditional processing one wants to do. Sometimes you need to divide your data in two or more partitions. This is done via the `Partition` helper:
@@ -325,7 +267,7 @@ One of the features of the current framework is the ability to customize on the 
 
 ```cpp
 struct MyTask : AnalysisTask {
-  Filter<Collisions> collisionFilter = max(track::pt) > configurable<float>("my-pt-cut");
+  Filter collisionFilter = max(track::pt) > configurable<float>("my-pt-cut");
 
   void process(Collsions const &filteredCollisions) {
     for (auto& collision: collisions) {
@@ -687,7 +629,6 @@ to read these tables:
     ]
   }
 ```
-  
 
 #### Limitations
 
@@ -695,7 +636,6 @@ to read these tables:
   2. The internal-dpl-aod-reader loops over the selected input files in the order as they are listed. It is the duty of the user to make sure that the order is correct and that the order in the file lists
 of the various `InputDescriptors` are corresponding to each other.
   3. The regular expression `fileregex` is evaluated with the c++ Regular expressions library. Thus check there for the proper syntax of regexes.
-  
 
 ### Possible ideas
 
@@ -707,3 +647,63 @@ for (auto twoD : points.reshuffle<point::X, point::Y, Cached<point::R>>()) {
 ...
 } 
 ```
+
+## Features not implemented yet
+
+### More collections in `process()`
+For example:
+
+```cpp
+void process(o2::aod::Collection const& collision, o2::aod::V0 const& v0, o2::aod::Tracks const& tracks) {
+}
+```
+
+will be invoked for each v0 associated to a given collision and you will be given the tracks associated to it.
+
+This means that each subsequent argument is associated to all the one preceding it.
+
+### Executing a finalization method, post run
+
+Sometimes it's handy to perform an action when all the data has been processed, for example executing a fit on a histogram we filled during the processing. This can be done by implementing the postRun method.
+
+### Creating histograms
+
+New tables are not the only kind on objects you want to create, but most likely you would like to fill histograms associated to the objects you have calculated.
+
+You can do so by using the `Histogram` helper:
+
+```cpp
+struct MyTask : AnalysisTask {
+  Histogram etaHisto;
+
+  void process(o2::aod::EtaPhi const& etaphi) {
+    etaHisto.fill(etaphi.eta());
+  }
+};
+```
+
+### Creating new columns in a declarative way
+
+Besides the `Produces` helper, which allows you to create a new table which can be reused by others, there is another way to define a single column,  via the `Defines` helper.
+
+```cpp
+struct MyTask : AnalysisTask {
+  Defines<track::Eta> eta = track::alpha;
+};
+```
+
+### Filters on associated quantities:
+
+```cpp
+struct MyTask : AnalysisTask {
+  Filter<Collisions> collisionFilter = max(track::pt) > 1;
+
+  void process(Collsions const &filteredCollisions) {
+    for (auto& collision: collisions) {
+    ...
+    }
+  }
+};
+```
+
+This will process all the collisions which have at least one track with `pt > 1.0f`.
