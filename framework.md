@@ -26,9 +26,9 @@ such a task can then be added to a workflow via the `adaptAnalysisTask` helper. 
 struct MyTask : AnalysisTask {
 };
 
-defineDataProcessing() {
-  return {
-    adaptAnalysisTask<MyTask>("my-task-unique-name");
+WorkflowSpec defineDataProcessing(ConfigContext const&) {
+  return WorkflowSpec{
+    adaptAnalysisTask<MyTask>("my-task-unique-name")
   };
 }
 ```
@@ -120,7 +120,7 @@ However you might need to get all the information at once. This can be done by a
 ```cpp
 struct MyTask : AnalysisTask {
 
-  void process(Join<Tracks, TracksExtras> const& mytracks) {
+  void process(soa::Join<aod::Tracks, aod::TracksExtras> const& mytracks) {
     for (auto& track : mytracks) {
       if (track.length()) {  // from TrackExtras
         tracks.alpha();      // from Tracks
@@ -260,19 +260,20 @@ properties passes a certain criteria. This can be specified with the `Filter` he
 
 ```cpp
 struct MyTask : AnalysisTask {
-  Filter<Tracks> ptFilter = track::pt > 1;
+  Filter ptFilter = aod::track::pt > 1.0f;
 
-  void process(Tracks const &filteredTracks) {
+  void process(soa::Filtered<aod::Tracks> const &filteredTracks) {
     for (auto& track : filteredTracks) {
     }
   }
 };
 ```
 
-filteredTracks will contain only the tracks in the table which pass the condition `track::pt > 1`. 
+`filteredTracks` will contain only the tracks in the table which pass the condition `aod::track::pt > 1.0f`. 
 
 You can specify multiple filters which will be applied in a sequence effectively resulting in the intersection of all them.
 
+**Not here yet**
 You can also specify filters on associated quantities:
 
 ```cpp
@@ -297,10 +298,12 @@ Filtering is not the only kind of conditional processing one wants to do. Someti
 using namespace o2::aod;
 
 struct MyTask : AnalysisTask {
-  Partition<Tracks> leftTracks = track::eta < 0;
-  Partition<Tracks> rightTracks = track::eta >= 0;
+  Partition<aod::Tracks> leftTracksPartition = aod::track::eta < 0;
+  Partition<aod::Tracks> rightTracksPartition = aod::track::eta >= 0;
 
-  void process(Tracks const &tracks) {
+  void process(aod::Tracks const &tracks) {
+    auto& leftTracks = leftTracksPartition.getPartition();
+    auto& rightTracks = rightTracksPartition.getPartition();
     for (auto& left : leftTracks(tracks)) {
       for (auto& right : rightTracks(tracks)) {
         ...
@@ -310,11 +313,11 @@ struct MyTask : AnalysisTask {
 };
 ```
 
-i.e. `Filter` is applied to the objects before passing them to the `process` method, while `Select` objects can be used to do further reduction inside the `process` method itself. 
+i.e. `Filter` is applied to the objects before passing them to the `process` method, while `Partition` objects can be used to do further reduction inside the `process()` method itself.
 
 ### Filtering and partitioning together
 
-Of course it should be possible to filter and partition data in the same task. The way this works is that multiple `Filter`s are logically ANDed together and then they will get anded with the OR of all the `Select` specified selections.
+Of course it should be possible to filter and partition data in the same task. The way this works is that multiple `Filter`s are logically ANDed together and then they will get anded with each `Partition`'s selection.
 
 ### Configuring filters
 
