@@ -277,7 +277,7 @@ struct MyTask : AnalysisTask {
 };
 ```
 
-### Getting combinations (pairs, triplets, ...)
+## Getting combinations (pairs, triplets, ...)
 To get combinations of distinct tracks, helper functions from `ASoAHelpers.h` can be used. Presently, there are 3 combinations policies available: strictly upper, upper and full. `CombinationsStrictlyUpperPolicy` is applied by default if all tables are of the same type, otherwise `FullIndexPolicy` is applied.
 
 ```cpp
@@ -352,7 +352,7 @@ struct MyTask : AnalysisTask {
 };
 ```
 
-### Getting mixed event data
+## Getting mixed event data
 > **Separate docs for specific analysis details?**
 
 Block combinations can be used to obtain tracks from mixed events. First, one needs to calculate hash to associate each collision with proper bins:
@@ -396,7 +396,7 @@ struct CollisionsCombinationsTask {
 
 A full example can be found in `Analysis/Tutorials/src/eventMixing.cxx`.
 
-### Saving tables to file
+## Saving tables to file
 
 Produced tables can be saved to file as TTrees. This process is customized by various command line options of the internal-dpl-aod-writer. The options allow to specify which columns of which table are saved to which tree in which file.
 
@@ -410,7 +410,7 @@ The options to consider are:
 * --json-file
 
 
-#### --keep
+### --keep
 
 `keep` is a comma-separated list of `DataOuputDescriptors`.
 
@@ -451,20 +451,20 @@ The column names are expected to match column names of table `tablename` as defi
 
 `file` finally specifies the base name of the files the tables are saved to. The actual file names are composed as `file`_`x`.root, where `x` is an incremental number. If `file` is not specified the default file name is used. The default file name can be set with the command line option `--res-file`. However, if `res-file` is missing then the default file name is set to `AnalysisResults`.
 
-##### Dangling outputs
+#### Dangling outputs
 The `keep` option also accepts the string "dangling" (or any leading sub-string of it). In
 this case all dangling output tables are saved. For the parameters `tree`, `columns`, and
 `file` the default values ([see table below](#priorities)) are used.
 
-#### --ntfmerge
+### --ntfmerge
 
 `ntfmerge` specifies the number of time frames which are merged into a given root file. By default this value is set to 1. The actual file names are composed as `file`_`x`.root, where `x` is an incremental number. `x` is incremented by 1 at every `ntfmerge` time frame.
 
-#### --res-file
+### --res-file
 
 `res-file` specifies the default base name of the results files to which tables are saved. If in any of the `DataOutputDescriptors` the `file` value is missing it will be set to this default value.
 
-#### --json-file
+### --json-file
 
 `json-file` specifies the name of a json-file which contains the full information needed to customize the behavior of the internal-dpl-aod-writer. It can replace the other three options completely. Nevertheless, currently all options are supported ([see also discussion below](#redundancy)).
 
@@ -529,7 +529,7 @@ This hierarchy of the options is summarized in the following table. The columns 
 | `file`       | 1.   | 2.       | -        | 3.        | 4. (`default file name`)|
 
 
-#### Valid example command line options
+### Valid example command line options
 
 ```csh
 --keep AOD/UNO/0
@@ -547,21 +547,21 @@ This hierarchy of the options is summarized in the following table. The columns 
  # according to the contents of myconfig.json
 ```
 
-#### Limitations
+### Limitations
 
 If in any case two `DataOuputDescriptors` are provided which have equal combinations of
 the `tree` and `file` parameters then the processing is stopped! It is not possible to save
 two trees with equal name to a given file.
 
 
-### Reading tables from files
+## Reading tables from files
 
 The internal-dpl-aod-reader reads trees from root files and provides them as arrow tables to the requesting workflows. Its behavior is customized with the following command line options:
 
 * --aod-file
 * --json-file
 
-#### --aod-file
+### --aod-file
 
 `aod-file` takes a string as option value, which either is the name of the input root file or, if starting with an `@`-character, is an ASCII-file which contains a list of input files. 
 
@@ -574,7 +574,7 @@ The internal-dpl-aod-reader reads trees from root files and provides them as arr
 
 ```
 
-#### --json-file
+### --json-file
 
 'json-file' is a string and specifies a json file, which contains the
 customization information for the internal-dpl-aod-reader. An example file is
@@ -633,7 +633,7 @@ Of the four items of a `DataInputDescriptor`, `table` is the only required infor
 
 When the internal-dpl-aod-reader receives the request to fill a given table `tablename` it searches in the provided `InputDirector` for the corresponding `InputDescriptor` and proceeds as defined there. However, if there is no corresponding `InputDescriptor` it falls back to the information provided by the `resfiles` and `fileregex` options of the `InputDirector` and uses the `tablename` as `treename`.
 
-#### Some practical comments
+### Some practical comments
 
 The `json-file` option allows to setup the reading of tables in a rather
 flexible way. Here a few presumably practical cases are discussed:
@@ -681,23 +681,12 @@ to read these tables:
   }
 ```
 
-#### Limitations
+### Limitations
 
   1. It is required that all `InputDescriptors` have the same number of selected input files. This is internally checked and the processing is stopped if it turns out that this is not the case.
   2. The internal-dpl-aod-reader loops over the selected input files in the order as they are listed. It is the duty of the user to make sure that the order is correct and that the order in the file lists
 of the various `InputDescriptors` are corresponding to each other.
   3. The regular expression `fileregex` is evaluated with the c++ Regular expressions library. Thus check there for the proper syntax of regexes.
-
-### Possible ideas
-
-We could add a template `<typename C...> reshuffle()` method to the Table class which allows you to reduce the number of columns or attach new dynamic columns. A template wrapper could
-even be used to specify if a given dynamic column should be precalculated (or not). This would come handy to optimize the creation of a RowView, which could bind only the required (dynamic) columns. E.g.:
-
-```cpp
-for (auto twoD : points.reshuffle<point::X, point::Y, Cached<point::R>>()) {
-...
-} 
-```
 
 ## Features not implemented yet
 
@@ -758,3 +747,14 @@ struct MyTask : AnalysisTask {
 ```
 
 This will process all the collisions which have at least one track with `pt > 1.0f`.
+
+## Possible ideas
+
+We could add a template `<typename C...> reshuffle()` method to the Table class which allows you to reduce the number of columns or attach new dynamic columns. A template wrapper could
+even be used to specify if a given dynamic column should be precalculated (or not). This would come handy to optimize the creation of a RowView, which could bind only the required (dynamic) columns. E.g.:
+
+```cpp
+for (auto twoD : points.reshuffle<point::X, point::Y, Cached<point::R>>()) {
+...
+} 
+```
