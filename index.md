@@ -7,8 +7,14 @@ This pages document everything you need to know about doing Run 3 analysis in AL
 
 ## Installation of the O2 framework
 
-## 
+To install the O2 framework please follow the instructions provide in the official ALICE software page:
 
-[O2 Analysis Framework](framework.md)
+https://alice-doc.github.io/alice-analysis-tutorial/building/
+
+## O2 Analysis Framework documentation
+
+Please go here: [O2 Analysis Framework](framework.md)
 
 ## The Hyperloop train framework
+
+will appear shortly
