@@ -23,7 +23,7 @@ Using the _My Analyses_ page, inside of the _Analysis_ you want to add the wagon
 </div>
 
 There are 2 parameters required to create a new wagon:
-*  Name: The _newWagonName_ has to be unique within an _Analysis_, and it only accepts alphanumerical characters (no spaces).
+*  Name: The _newWagonName_ has to be unique within an _Analysis_, and it only accepts alphanumerical characters, no spaces.
 *  Work flow name: You can either select from a list of _workflow_Names_ from an existing package tag. Or create a _workflow_Name_ which belongs to a [pull request](#pullrequest).
 
 By clicking on `💾 Save` the wagon will be added, and you will be redirected to [_Edit **Wagon**_](#editwagon) where you can modify the wagon's configuration.
