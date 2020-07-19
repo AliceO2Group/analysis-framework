@@ -19,7 +19,7 @@ The hyperloop train system is used to submit your analysis in a train to the Gri
 ## Enabling datasets
 There are 2 options for enabling or disabling a dataset in an analysis. 
 
-1.Using the **My Analyses** page:
+1. Using the **My Analyses** page:
 
 *  Inside of an analysis, click on the button `Enable/disable datasets 📝`. 
 <img src="images/enabledisableDatasets.png" width="60%">
