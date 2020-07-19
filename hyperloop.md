@@ -22,9 +22,11 @@ Inside of the _Analysis_ you want to add the wagon to, click on `✚ Add new wag
 <img src="images/newwagon.png" width="50%">
 </div>
 
-There are 2 parameters required to create a wagon:
-*  Wagon name: The _newWagonName_ has to be unique within an _Analysis_, and it only accepts alphanumerical characters (no spaces).
-*  Work flow name: A list of _tasks_
+There are 2 parameters required to create a new wagon:
+*  Name: The _newWagonName_ has to be unique within an _Analysis_, and it only accepts alphanumerical characters (no spaces).
+*  Work flow name: You can either select from a list of _workflow_Names_ from an existing package tag. Or create a _workflow_Name_ which belongs to a [pull request](#pullrequest).
+
+By clicking on `💾 Save` the wagon will be added, and you will be redirected to _Edit **Wagon**_ where you can modify the configuration of the wagon.
 
 #### 2. Cloning a wagon:
 
@@ -53,5 +55,5 @@ There are 2 parameters required to create a wagon:
 
 ## Service wagons
 
-## Relation of pull requests
+## <a name="pullrequest"></a>Relation of pull requests
 
