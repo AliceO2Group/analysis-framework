@@ -31,8 +31,10 @@ There are 2 options for enabling or disabling a dataset in an analysis.
 *  Inside of _Enable dataset_ you can search for an active dataset by filtering by data type, collision system, anchor and period. And add it to your analysis by clicking on the button `✚ Add to analysis`. Or you can click the button `ℹ️ All datasets` to be redirected to the [**Datasets**](#datasets) page.
 
 2. <a name="datasets"></a> Using the **Datasets** page:
+<div align="center">
+<img src="images/enableDatasetDatasetsPage.png" width="60%">
+</div>
 
-*. when inside of the data
 
 ## Enabling wagon
 
