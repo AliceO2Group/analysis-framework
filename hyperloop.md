@@ -16,7 +16,7 @@ The hyperloop train system is used to submit your analysis in a train to the Gri
 
 ## Adding and configuring a wagon to an analysis
 #### 1. Adding a new wagon:
-Inside of the _Analysis_ you want to add the wagon to, click on `✚ Add new wagon`.
+Using the _My Analyses_ page, inside of the _Analysis_ you want to add the wagon to, click on `✚ Add new wagon`.
 
 <div align="center">
 <img src="images/newwagon.png" width="50%">
@@ -26,9 +26,17 @@ There are 2 parameters required to create a new wagon:
 *  Name: The _newWagonName_ has to be unique within an _Analysis_, and it only accepts alphanumerical characters (no spaces).
 *  Work flow name: You can either select from a list of _workflow_Names_ from an existing package tag. Or create a _workflow_Name_ which belongs to a [pull request](#pullrequest).
 
-By clicking on `💾 Save` the wagon will be added, and you will be redirected to _Edit **Wagon**_ where you can modify the configuration of the wagon.
+By clicking on `💾 Save` the wagon will be added, and you will be redirected to [_Edit **Wagon**_](#editwagon) where you can modify the wagon's configuration.
 
 #### 2. Cloning a wagon:
+
+*  Using the _My Analyses_ page,
+
+<div align="center">
+<img src="images/cloneWagon.png" width="50%">
+</div>
+
+#### <a name="editwagon"></a> 3. Edit a wagon:
 
 ## Enabling datasets
 
