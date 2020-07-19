@@ -1,4 +1,4 @@
-# <a name="pookie"></a> Hyperloop system
+# Hyperloop system
 
 The hyperloop train system is used to submit your analysis in a train to the Grid.
 
@@ -28,9 +28,11 @@ There are 2 options for enabling or disabling a dataset in an analysis.
 </div>
 
 *  There is a list of _Enabled datasets in **Analysis**_. You can disable a dataset for that analysis by clicking on the button `❌`.
-*  Inside of _Enable dataset_ Take me to [pookie](#pookie)
+*  Inside of _Enable dataset_ you can search for an active dataset by filtering by data type, anchor and period.
 
-2. Using the **Datasets** page:
+Take me to [pookie](#pookie)
+
+2. <a name="pookie"></a> Using the **Datasets** page:
 
 ## Enabling wagon
 
