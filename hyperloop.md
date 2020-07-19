@@ -12,6 +12,7 @@ The hyperloop train system is used to submit your analysis in a train to the Gri
 ## For the Run 2 LEGO train expert. What has changed?
 
 ## Creating or joining an analysis
+<a name="pookie"></a>
 <img src="images/comparisonwithjira.png" width="100%">
 
 ## Adding and configuring a wagon to an analysis
@@ -23,14 +24,12 @@ There are 2 options for enabling or disabling a dataset in an analysis.
 
 *  Inside of an analysis, click on the button `Enable/disable datasets 📝`. 
 
-<button type="button" class="btn btn-primary" name="button">View</button>
-
 <div align="center">
 <img src="images/enabledisableDatasets.png" width="60%">
 </div>
-
+Take me to [pookie](#pookie)
 *  There is a list of _Enabled datasets in **Analysis**_. You can disable a dataset for that analysis by clicking on the button `❌`.
-*  There is also 
+*  Inside of _Enable dataset_ 
 
 2. Using the **Datasets** page:
 
