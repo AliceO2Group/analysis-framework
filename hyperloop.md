@@ -21,7 +21,7 @@ There are 2 options for enabling or disabling a dataset in an analysis.
 
 1. Using the **My Analyses** page:
 
-*  Inside of an analysis, click on the button `Enable/disable datasets 📝`. 
+*  Inside of an analysis, click on the button `Enable/disable datasets 📝`. <span style="background-color:#4CAF50;">button</span>
 
 <div align="center">
 <img src="images/enabledisableDatasets.png" width="60%">
