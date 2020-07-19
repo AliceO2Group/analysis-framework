@@ -15,12 +15,22 @@ The hyperloop train system is used to submit your analysis in a train to the Gri
 <img src="images/comparisonwithjira.png" width="100%">
 
 ## Adding and configuring a wagon to an analysis
-There are 2 ways of adding a wagon to an analysis.
+#### 1. Adding a new wagon:
+Inside of the _Analysis_ you want to add the wagon to, click on `✚ Add new wagon`.
 
+<div align="center">
+<img src="images/newwagon.png" width="50%">
+</div>
+
+There are 2 parameters required to create a wagon:
+*  Wagon name: The _newWagonName_ has to be unique within an _Analysis_, and it only accepts alphanumerical characters (no spaces).
+*  Work flow name: A list of _tasks_
+
+#### 2. Cloning a wagon:
 
 ## Enabling datasets
 
-### 1. Using the **My Analyses** page:
+### 1. Using the _My Analyses_ page:
 
 *  Inside of an analysis, click on the button `Enable/disable datasets 📝`. 
 
@@ -31,7 +41,7 @@ There are 2 ways of adding a wagon to an analysis.
 *  There is a list of _Enabled datasets in **Analysis**_. You can disable a dataset for that analysis by clicking on the button `❌`.
 *  Inside of _Enable dataset_ you can search for an active dataset by filtering by data type, collision system, anchor and period. And add it to your analysis by clicking on the button `✚ Add to analysis`. Or you can click the button `ℹ️ All datasets` to be redirected to the [**Datasets**](#datasets) page.
 
-### 2. <a name="datasets"></a> Using the **Datasets** page:
+### 2. <a name="datasets"></a> Using the _Datasets_ page:
 *  You can browse and click on the _Dataset_ you want to add to your analysis.
 <div align="center">
 <img src="images/enableDatasetDatasetsPage.png" width="70%">
