@@ -30,10 +30,10 @@ By clicking on `💾 Save` the wagon will be added, and you will be redirected t
 
 #### 2. Cloning a wagon:
 
-*  Using the _My Analyses_ page,
+*  Using the _My Analyses_ page, click on the button `🧬` to clone a wagon. 
 
 <div align="center">
-<img src="images/cloneWagon.png" width="50%">
+<img src="images/cloneWagon.png" width="60%">
 </div>
 
 #### <a name="editwagon"></a> 3. Edit a wagon:
