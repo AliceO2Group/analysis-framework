@@ -10,10 +10,17 @@ The hyperloop train system is used to submit your analysis in a train to the Gri
 ## Concept
 
 ## For the Run 2 LEGO train expert. What has changed?
-* There are different webpages for users and train operators. In the user view, _My Analyses_, the user will see only _Analyses_ where the user belongs to, this is [defined through JIRA](#joinanalysis). 
-* There is a history feature for wagons and datasets. You can access it by clicking on the button `📜` available inside of a wagon or a dataset view. A detailed view of what has been created/updated/removed from the wagon/dataset is shown, as well as the username and the time when the change was made.
+* There are different webpages for users and train operators: 
+1. _My Analyses_, the user will see only _Analyses_ where the user belongs to, this is [defined through JIRA](#joinanalysis). 
+2. _All Analyses_
+3. _Train Submission_
+4. _Train Runs_
+5. _Datasets_
+6. _DPG Runlists_
+
+* There is a history feature for wagons and datasets. You can access it by clicking on the button `📜` available inside of a wagon/dataset view. A detailed view of what has been created/updated/removed from the wagon/dataset is shown, as well as the username and the time when the change was made.
 <div align="center">
-<img src="images/datasetHistory.png" width="80%">
+<img src="images/datasetHistory.png" width="90%">
 </div>
 
 
