@@ -10,12 +10,16 @@ The hyperloop train system is used to submit your analysis in a train to the Gri
 ## Concept
 
 ## For the Run 2 LEGO train expert. What has changed?
-* There is a history feature for wagons and datasets. You can access it by clicking on the button `📜` available inside of a wagon or a dataset view.
+* There are different webpages for users and train operators. In the user view, _My Analyses_, the user will see only _Analyses_ where the user belongs to, this is [defined through JIRA](#joinanalysis). 
+* There is a history feature for wagons and datasets. You can access it by clicking on the button `📜` available inside of a wagon or a dataset view. A detailed view of what has been created/updated/removed from the wagon/dataset is shown, as well as the username and the time when the change was made.
 <div align="center">
 <img src="images/datasetHistory.png" width="80%">
 </div>
-## Creating or joining an analysis
-<img src="images/comparisonwithjira.png" width="100%">
+
+
+## <a name="joinanalysis"></a> Creating or joining an analysis
+
+<img src="images/comparisonwithjira.png" width="90%">
 
 ## Adding and configuring a wagon to an analysis
 #### 1. Adding a new wagon:
