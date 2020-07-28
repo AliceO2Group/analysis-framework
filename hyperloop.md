@@ -53,6 +53,10 @@ You can get to the _All Analyses_ page by using the main menu, or by the link in
 
 * In _Configuration_ the wagon configuration corresponding to the workflow will be available.
 
+<div align="center">
+<img src="images/wagonConfis.png" width="60%">
+</div>
+
 ## Enabling datasets
 
 ### 1. Using the _My Analyses_ page:
