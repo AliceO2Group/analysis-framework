@@ -44,6 +44,8 @@ You can get to the _All Analyses_ page by using the main menu, or by the link in
 
 #### <a name="editwagon"></a> 3. Edit a wagon:
 
+*  You can edit a wagon by clicking on the _Wagon_ name in the _My Analyses_ page.
+
 ## Enabling datasets
 
 ### 1. Using the _My Analyses_ page:
