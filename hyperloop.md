@@ -36,6 +36,12 @@ By clicking on `💾 Save` the wagon will be added, and you will be redirected t
 <img src="images/cloneWagon.png" width="60%">
 </div>
 
+A list of _Analyses_ you belong to will be displayed. You have to select the _Analysis_ where you want to clone the _Wagon_ to, and name the _NewWagon_ (the wagon name has to be unique within _Analysis_). By clicking on `🧬 Clone`, a new wagon will be added with the same configuration, including subwagons, as the _Wagon_.
+
+*  Using the _All Analyses_ page:
+
+You can get to the _All Analyses_ page by using the main menu, or by the link in _My Analyses_ page: `(or clone wagon from other analysis)`. In the _All Analyses_ page, all the analyses available in the system will be displayed. Browse and click on the _Analysis_ you want to clone the wagon from, and follow the procedure mentioned above.
+
 #### <a name="editwagon"></a> 3. Edit a wagon:
 
 ## Enabling datasets
