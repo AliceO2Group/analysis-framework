@@ -12,7 +12,7 @@ The hyperloop train system is used to submit your analysis in a train to the Gri
 ## For the Run 2 LEGO train expert. What has changed?
 * There is a history feature for wagons and datasets. You can access it by clicking on the button `📜` available inside of a wagon or a dataset view.
 <div align="center">
-<img src="images/datasetHistory.png" width="60%">
+<img src="images/datasetHistory.png" width="80%">
 </div>
 ## Creating or joining an analysis
 <img src="images/comparisonwithjira.png" width="100%">
