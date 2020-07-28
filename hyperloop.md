@@ -44,7 +44,8 @@ You can get to the _All Analyses_ page by using the main menu, or by the link in
 
 #### <a name="editwagon"></a> 3. Edit a wagon:
 
-*  You can edit a wagon by clicking on the _Wagon_ name in the _My Analyses_ page.
+*  You can edit a wagon by clicking on the _Wagon_ name in the _My Analyses_ page. There are different tabs: Wagon settings, Configuration, Testing Statistics.
+*  In _Wagon settings_ you can modify the wagon name, work flow name, and select wagon's dependencies. The dependencies offered are wagons from the same _Analysis_ or from [_Service wagons_](#servicewagons).
 
 ## Enabling datasets
 
@@ -69,7 +70,7 @@ You can get to the _All Analyses_ page by using the main menu, or by the link in
 
 ## Enabling wagon
 
-## Service wagons
+## <a name="servicewagons"></a>Service wagons
 
 ## <a name="pullrequest"></a>Relation of pull requests
 
