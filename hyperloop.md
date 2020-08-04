@@ -11,12 +11,12 @@ The hyperloop train system is used to submit your analysis in a train to the Gri
 
 ## For the Run 2 LEGO train expert. What has changed?
 * There are different webpages for users and train operators: 
-  1. _My Analyses_, the user will see only _Analyses_ where the user belongs to, this is [defined through JIRA](#joinanalysis). 
-  2. _All Analyses_
-  3. _Train Submission_
-  4. _Train Runs_
-  5. _Datasets_
-  6. _DPG Runlists_
+  1. _My Analyses_, the user will see only _Analyses_ where the user belongs to, this is [defined through JIRA](#joinanalysis). The user has writing permits to all elements in this webpage. 
+  2. _All Analyses_ is a read only view of all the _Analyses_ available in the system. The only action permitted is [cloning a wagon](#clonewagon). 
+  3. _Train Submission_ is a webpage designed for operators. It displays only datasets which have enabled wagons, allowing train composition. Submitting, modifying and killing a train is also allowed.
+  4. _Train Runs_ is a webpage designed for operators. It displays all train runs available in the system. The actions permitted are submitting, modifying and killing a train.
+  5. _Datasets_, for the users, it is a read only view of all the _Datasets_ available in the system. For the train operators, it allows creation,configuration and deletion of _Datasets_. The _Datasets_ are directly created from runlists already defined in the _DPG Runlists_ webpage instead of copying from a text file in the twiki page like the LEGO trains. 
+  6. _DPG Runlists_ is a webpage designed for the DPG. It allows creation, configuration and deletion of runlists.
 
 * There is a history feature for wagons and datasets. You can access it by clicking on the button `📜` available inside of a wagon/dataset view. A detailed view of what has been created/updated/removed from the wagon/dataset is shown, as well as the username and the time when the change was made.
 <div align="center">
@@ -42,7 +42,7 @@ There are 2 parameters required to create a new wagon:
 
 By clicking on `💾 Save` the wagon will be added, and you will be redirected to [_Edit **Wagon**_](#editwagon) where you can modify the wagon's configuration.
 
-#### 2. Cloning a wagon:
+#### 2. <a name="clonewagon"></a>Cloning a wagon:
 
 *  Using the _My Analyses_ page, click on the button `🧬` to clone a wagon. 
 
