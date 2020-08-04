@@ -23,6 +23,10 @@ The hyperloop train system is used to submit your analysis in a train to the Gri
 <img src="images/datasetHistory.png" width="90%">
 </div>
 
+* There are automated notifications
+
+* There is an impersonation features for debugging
+
 
 ## <a name="joinanalysis"></a> Creating or joining an analysis
 
