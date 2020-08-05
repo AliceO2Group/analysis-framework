@@ -27,6 +27,9 @@ The hyperloop train system is used to submit your analysis in a train to the Gri
 
 * There is an impersonation feature `🕵` that can be used by experts in order to help users if they have a problem with the UI.
 
+* When [enabling a wagon](#enablewagon) in a dataset the user can choose whether to enable it with a fixed package tag, latest package tag or a [pull request](#pullrequest).
+
+* After [enabling a wagon](#enablewagon) in a dataset, the wagon is automatically tested, and the user can follow the test status (`⌛️`,`⏳`,`❗️`,`🌟`,`💣`) in the _My Analyses_ page.
 
 ## <a name="joinanalysis"></a> Creating or joining an analysis
 
@@ -96,7 +99,7 @@ You can get to the _All Analyses_ page by using the main menu, or by the link in
 
 *  Inside of the _Dataset_ view page, click on the button `✚ Add dataset to analysis`. It will display a list of all the analyses you belong to. Select the _Analysis_ you want to add the dataset to, and click on `💾 Save`.
 
-## Enabling wagon
+## <a name="enablingwagon"></a>Enabling wagon
 
 ## <a name="servicewagons"></a>Service wagons
 
