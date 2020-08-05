@@ -84,13 +84,13 @@ You can get to the _All Analyses_ page by using the main menu, or by the link in
 <img src="images/wagonSettings.png" width="60%">
 </div>
 
-* In _Configuration_ the wagon configuration corresponding to the workflow will be available in the _Base_.
+* In _Configuration_ the wagon configuration corresponding to the workflow will be available in the _Base_. The configuration is divided per _Task_. So if you need to add a new parameter, you will need add it in the following order: task, parameter and value.
 
 <div align="center">
 <img src="images/wagonConfig.png" width="60%">
 </div>
   
-  If you need to run the same workflow, but modify one (or more) of the parameter's value, you can use a subwagon instead of creating a new wagon. In order to create a subwagon, type the name of the new subwagon, the name has to be unique within the wagon, and type the value of at least one parameter in the configuration. The configuration of a subwagon will be kept the same as the _Base_ and overwrite the parameters that are different.
+    If you need to run the same workflow, but modify one (or more) of the parameter's value, you can use a subwagon instead of creating a new wagon. In order to create a subwagon, type the name of the new subwagon, the name has to be unique within the wagon, and type the value of at least one parameter in the configuration. The configuration of a subwagon will be kept the same as the _Base_ and overwrite the parameters that are different.
 
 
 ## Enabling datasets
