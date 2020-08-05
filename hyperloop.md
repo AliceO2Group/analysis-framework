@@ -94,7 +94,7 @@ You can get to the _All Analyses_ page by using the main menu, or by the link in
 
 * In order to update the configuration with the latest version of the workflow, click on the button `↻ sync`. By synchronizing the configuration, the parameters which no longer belong to the workflow will be removed, and the values of the wagon's _Base_ will be updated as well if they have not been modified by the user.
 
-## Enabling datasets
+## <a name="enabledatasets"></a>Enabling datasets
 
 ### 1. Using the _My Analyses_ page:
 
@@ -116,6 +116,12 @@ You can get to the _All Analyses_ page by using the main menu, or by the link in
 *  Inside of the _Dataset_ view page, click on the button `✚ Add dataset to analysis`. It will display a list of all the analyses you belong to. Select the _Analysis_ you want to add the dataset to, and click on `💾 Save`.
 
 ## <a name="enablingwagon"></a>Enabling wagon
+
+You can enable a wagon in the _My Analyses_ page. Inside of the _Analysis_ there are the datasets available for that analysis, or you can [_enable/disable_ datasets](#enabledatasets). There are 3 options for enabling a wagon:
+
+  1. Latest package tag:
+  2. Fixed package tag:
+  3. Pull request:
 
 ## <a name="servicewagons"></a>Service wagons
 
