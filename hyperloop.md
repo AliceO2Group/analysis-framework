@@ -33,7 +33,7 @@ The hyperloop train system is used to submit your analysis in a train to the Gri
 
 ## <a name="joinanalysis"></a> Creating or joining an analysis
 
-The Analyses to which a user belongs to, is defined through a <a href="https://alice.its.cern.ch/jira/secure/Dashboard.jspa">JIRA</a> ticket.
+The Analyses to which a user belongs to, is defined through a <a href="https://alice.its.cern.ch/jira/secure/Dashboard.jspa" target="_blank">JIRA</a> ticket.
 <img src="images/comparisonwithjira.png" width="90%">
 
 ## Adding and configuring a wagon to an analysis
