@@ -23,9 +23,9 @@ The hyperloop train system is used to submit your analysis in a train to the Gri
 <img src="images/datasetHistory.png" width="90%">
 </div>
 
-* There are automated notifications
+* There are automated notifications. These notifications are created per user, and display changes made to tools, like _Datasets_, that are being used by the user. They are displayed per _Analysis_ in the _My Analyses_ page, or globally in the button `🔔` which can be found on the top menu.
 
-* There is an impersonation features for debugging
+* There is an impersonation feature that can be used by experts in order to help users if they have a problem with the UI.
 
 
 ## <a name="joinanalysis"></a> Creating or joining an analysis
