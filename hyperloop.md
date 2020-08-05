@@ -33,7 +33,7 @@ The hyperloop train system is used to submit your analysis in a train to the Gri
 
 ## <a name="joinanalysis"></a> Creating or joining an analysis
 
-The Analyses to which a user belongs to, is defined through a <a href="https://alice.its.cern.ch/jira/secure/Dashboard.jspa" target="_blank">JIRA</a> ticket by a team leader.
+The Analyses to which a user belongs to, is defined through a <a href="https://alice.its.cern.ch/jira/secure/Dashboard.jspa" target="_blank">JIRA</a> ticket by a team leader or a convener.
 In the JIRA page, create an issue by clicking on the button `Create`, and fill the information with the following parameters:
 
 * In _Project_ select your PWG. Or if you need to create an analysis for [service wagons](#servicewagons) select _O2 Hyperloop Service Wagons (OHSW)_.
@@ -84,11 +84,14 @@ You can get to the _All Analyses_ page by using the main menu, or by the link in
 <img src="images/wagonSettings.png" width="60%">
 </div>
 
-* In _Configuration_ the wagon configuration corresponding to the workflow will be available.
+* In _Configuration_ the wagon configuration corresponding to the workflow will be available in the _Base_.
 
 <div align="center">
 <img src="images/wagonConfig.png" width="60%">
 </div>
+  
+  If you need to run the same workflow, but modify one (or more) of the parameter's value, you can use a subwagon instead of creating a new wagon. In order to create a subwagon, type the name of the new subwagon, the name has to be unique within the wagon, and type the value of at least one parameter in the configuration. The configuration of a subwagon will be kept the same as the _Base_ and overwrite the parameters that are different.
+
 
 ## Enabling datasets
 
