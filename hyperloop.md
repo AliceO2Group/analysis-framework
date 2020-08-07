@@ -119,9 +119,13 @@ You can get to the _All Analyses_ page by using the main menu, or by the link in
 
 You can enable a wagon in the _My Analyses_ page. Inside of the _Analysis_ there are the datasets available for that analysis, or you can [_enable/disable_ datasets](#enabledatasets). There are 3 options for enabling a wagon:
 
-  1. Latest package tag:
-  2. Fixed package tag:
-  3. Pull request:
+  1. Latest package tag: You can select a package tag with the option _or newer_. This means that your wagon can be tested and composed in a train with the package tag chosen or the latest package tag available.
+  2. Fixed package tag: You can select a package tag and disable the option _or newer_. This means that your wagon can be tested and composed in a train with that package tag only.
+  3. Pull request: Select the option `☑️ Future tag based on pull request`. There will be a list of the latest merged/unmerger pull requests available with their corresponding description. By choosing a pull request, your wagon will be tested as soon as the pull request is merged in a package tag. Then your wagon will be composed in a train with the latest package tag available.
+  
+  After choosing the package tag to be used, click on the button `❌` to enable your wagon in a dataset inside of the analysis:
+  
+  
 
 ## <a name="servicewagons"></a>Service wagons
 
