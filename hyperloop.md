@@ -123,9 +123,15 @@ You can enable a wagon in the _My Analyses_ page. Inside of the _Analysis_ there
   2. Fixed package tag: You can select a package tag and disable the option _or newer_. This means that your wagon can be tested and composed in a train with that package tag only.
   3. Pull request: Select the option `☑️ Future tag based on pull request`. There will be a list of the latest merged/unmerger pull requests available with their corresponding description. By choosing a pull request, your wagon will be tested as soon as the pull request is merged in a package tag. Then your wagon will be composed in a train with the latest package tag available.
   
-  After choosing the package tag to be used, click on the button `❌` to enable your wagon in a dataset inside of the analysis:
+ <div align="center">
+<img src="images/enablewagon.png" width="50%">
+</div>
+
+  After choosing the package tag to be used, click on the button `❌` to enable your wagon in a dataset, the icon will change from `❌` to `✅`. If you hover over `✅` you can see the information about the enabled wagon: package tag, time and username. If you need to disable a wagon in a dataset, click on the button `✅`. After enabled, the wagon will be automatically tested and you can follow the progress of the test on the button next to `✅`: `⌛️` queued,`⏳` ongoing,`🌟` done, `❗️` warning and `💣` failed.
   
+  If a wagon has dependencies, there is no need to enable the dependencies as well. The wagon's dependencies will be automatically tested by the system as well.
   
+  If a wagon has activated subwagons, the [wagon's _Base_ will not run](#editwagon).
 
 ## <a name="servicewagons"></a>Service wagons
 
