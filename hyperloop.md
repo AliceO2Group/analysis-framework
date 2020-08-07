@@ -48,7 +48,7 @@ After all the parameters have been set, click on `Create` and your _Analysis_ wi
 <img src="images/comparisonwithjira.png" width="90%">
 
 ## Adding and configuring a wagon to an analysis
-#### 1. Adding a new wagon:
+#### 1. <a name="addwagon"></a>Adding a new wagon:
 Using the _My Analyses_ page, inside of the _Analysis_ you want to add the wagon to, click on `✚ Add new wagon`.
 
 <div align="center">
@@ -119,8 +119,8 @@ You can get to the _All Analyses_ page by using the main menu, or by the link in
 
 You can enable a wagon in the _My Analyses_ page. Inside of the _Analysis_ there are the datasets available for that analysis, or you can [_enable/disable_ datasets](#enabledatasets). There are 3 options for enabling a wagon:
 
-  1. Latest package tag: You can select a package tag with the option _or newer_. This means that your wagon can be tested and composed in a train with the package tag chosen or the latest package tag available.
-  2. Fixed package tag: You can select a package tag and disable the option _or newer_. This means that your wagon can be tested and composed in a train with that package tag only.
+  1. Latest package tag: You can select a package tag with the option `or newer`. This means that your wagon can be tested and composed in a train with the package tag chosen or the latest package tag available.
+  2. Fixed package tag: You can select a package tag and disable the option `or newer`. This means that your wagon can be tested and composed in a train with that package tag only.
   3. Pull request: Select the option `☑️ Future tag based on pull request`. There will be a list of the latest merged/unmerger pull requests available with their corresponding description. By choosing a pull request, your wagon will be tested as soon as the pull request is merged in a package tag. Then your wagon will be composed in a train with the latest package tag available.
   
  <div align="center">
@@ -134,6 +134,11 @@ You can enable a wagon in the _My Analyses_ page. Inside of the _Analysis_ there
   If a wagon has activated subwagons, the [wagon's _Base_ will not run](#editwagon).
 
 ## <a name="servicewagons"></a>Service wagons
+
+The _Service wagons_ are wagons which are dependencies to other wagons. They are created by experts, and you can add it as a dependency to your wagon in [edit wagon](#editwagon). 
+
+For the users, in the _My Analyses_ page, there is a read only view of the _Service Analyses_ available on the top of the page.
+For the experts, if you need to create _Service wagons_, you need to have an analysis with the project type _O2 Hyperloop Service Wagons (OHSW)_ which can be [created in JIRA](#joinanalysis). Once the analysis is created, you can [add a new wagon](#addwagon) inside of the analysis available in _My Analyses_.
 
 ## <a name="pullrequest"></a>Relation of pull requests
 
