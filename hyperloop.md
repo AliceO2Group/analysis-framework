@@ -4,9 +4,8 @@ The hyperloop train system is used to submit your analysis in a train to the Gri
 
 ## Preconditions
 
-* <a href="https://alice-doc.github.io/alice-analysis-tutorial/start/cert.html" target="_blank">Valid AliEn certificate</a>. If you can access https://alimonitor.cern.ch/hyperloop/ without getting "access denied", then everything is fine.
+* Have a <a href="https://alice-doc.github.io/alice-analysis-tutorial/start/cert.html" target="_blank">valid AliEn certificate</a>. If you can access https://alimonitor.cern.ch/hyperloop/ without getting "access denied", then everything is fine.
 
-Please follow the instructions here TODO
 * Installed in your browser. Please follow the instructions at TODO
 
 ## Concept
