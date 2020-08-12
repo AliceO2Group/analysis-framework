@@ -11,6 +11,9 @@ The hyperloop train system is used to submit your analysis in a train to the Gri
 
 The Hyperloop framework is a tool to run and manage analysis trains on AliEn. It is based on the concept of the LEGO train system used during Run 2 (you can skip this part if you are a [Run 2 LEGO train expert](#legoexpert)). It builds on existing infrastructure, the analysis framework, MonALISA and LPM, and is compatible with O2. To use the Hyperloop train system, you need a valid <a href="https://alice-doc.github.io/alice-analysis-tutorial/start/cert.html" target="_blank">Grid certificate</a> which is loaded into your browser, and you need to [be part of an _Analysis_](#joinanalysis). If you can access https://alimonitor.cern.ch/hyperloop/ without getting "access denied", then everything is fine.
 
+In order to run trains on the Grid, the code has to be contained in an AliEn package. Therefore, the train uses the regularly deployed O2 tags. 
+Hyperloop supports Run3 data and converted Run2 data. 
+
 Hyperloop provides a web interface for users and operators which allows to:
 
 * register train wagons
@@ -20,17 +23,14 @@ Hyperloop provides a web interface for users and operators which allows to:
 * submit the train to the Grid
 * study the resource consumption of the train for each wagon
 
-In order to run trains on the Grid, the code has to be contained in an AliEn package. Therefore, the train uses the regularly deployed O2 tags. 
-Hyperloop supports Run3 data and converted Run2 data. 
-
 The views available in the Hyperloop framework are:
 
-* For a user, there is a personalized webpage _My Analyses_ which displays all the analyses where the user belongs to. The user can create, configure and enable wagons in this page. 
-* In the _All Analyses_ page, there is a read only view of all analyses available in the system. 
-* For a train operator, the _Train Submission_ page displays only datasets which have enabled wagons, and allows train composition, as well as submitting, modifying and killing a train.
-* For a train operator, the _Train Runs_ page displays all trains available in the system, and allows submitting, modifying and killing a train.
-* For a user, the _Datasets_ page displays a read view only of all the datasets available in the system. For a train operator, the _Datasets_ page allow creation, configuration and deletion of datasets. 
-* For the DPG experts, the _DPG Runlists_ page allows creation, configuration and deletion of runlists.
+* For a user, there is a personalized webpage **My Analyses** which displays all the analyses where the user belongs to. The user can create, configure and enable wagons in this page. 
+* In the **All Analyses** page, there is a read only view of all analyses available in the system. 
+* For a train operator, the **Train Submission** page displays only datasets which have enabled wagons, and allows train composition, as well as submitting, modifying and killing a train.
+* For a train operator, the **Train Runs** page displays all trains available in the system, and allows submitting, modifying and killing a train.
+* For a user, the **Datasets** page displays a read view only of all the datasets available in the system. For a train operator, the _Datasets_ page allow creation, configuration and deletion of datasets. 
+* For the DPG experts, the **DPG Runlists** page allows creation, configuration and deletion of runlists.
 
 ## <a name="legoexpert"></a>For the Run 2 LEGO train expert. What has changed?
 * There are different webpages for users and train operators: 
