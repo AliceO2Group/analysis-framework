@@ -9,7 +9,17 @@ The hyperloop train system is used to submit your analysis in a train to the Gri
 
 ## Concept
 
-The Hyperloop framework is a tool to run and manage analysis trains on AliEn. It is based on the concept of the LEGO train system used during Run 2 (you can skip this part if you are a [Run 2 LEGO train expert](#legoexpert).
+The Hyperloop framework is a tool to run and manage analysis trains on AliEn. It is based on the concept of the LEGO train system used during Run 2 (you can skip this part if you are a [Run 2 LEGO train expert](#legoexpert)). It builds on existing infrastructure, the analysis framework, MonALISA and LPM, and is compatible with O2. Hyperloop provides a web interface for users and operators which allows to:
+
+* register train wagons
+* configure trains (wagons, input datasets)
+* test the wagons and the train in a well-defined environment
+* study the test results
+* submit the train to the Grid
+* study the resource consumption of the train for each wagon
+
+In order to run trains on the Grid, the code has to be contained in an AliEn package. Therefore, the train uses the regularly deployed O2 tags.
+To use the Hyperloop train system, you need a valid <a href="https://alice-doc.github.io/alice-analysis-tutorial/start/cert.html" target="_blank">Grid certificate</a> which is loaded into your browser. If you can access https://alimonitor.cern.ch/hyperloop/ without getting "access denied" and it display your AliEn username in the top right, then everything is fine.
 
 ## <a name="legoexpert"></a>For the Run 2 LEGO train expert. What has changed?
 * There are different webpages for users and train operators: 
