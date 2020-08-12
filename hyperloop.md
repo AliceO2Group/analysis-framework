@@ -29,7 +29,7 @@ The views available in the Hyperloop framework are:
 * In the **All Analyses** page, there is a read only view of all analyses available in the system. 
 * For a train operator, the **Train Submission** page displays only datasets which have enabled wagons, and allows train composition, as well as submitting, modifying and killing a train.
 * For a train operator, the **Train Runs** page displays all trains available in the system, and allows submitting, modifying and killing a train.
-* For a user, the **Datasets** page displays a read view only of all the datasets available in the system. For a train operator, the _Datasets_ page allow creation, configuration and deletion of datasets. 
+* For a user, the **Datasets** page displays a read view only of all the datasets available in the system. For a train operator, the **Datasets** page allows creation, configuration and deletion of datasets. 
 * For the DPG experts, the **DPG Runlists** page allows creation, configuration and deletion of runlists.
 
 ## <a name="legoexpert"></a>For the Run 2 LEGO train expert. What has changed?
