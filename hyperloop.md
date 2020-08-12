@@ -19,7 +19,7 @@ The Hyperloop framework is a tool to run and manage analysis trains on AliEn. It
 * study the resource consumption of the train for each wagon
 
 In order to run trains on the Grid, the code has to be contained in an AliEn package. Therefore, the train uses the regularly deployed O2 tags.
-To use the Hyperloop train system, you need a valid <a href="https://alice-doc.github.io/alice-analysis-tutorial/start/cert.html" target="_blank">Grid certificate</a> which is loaded into your browser. If you can access https://alimonitor.cern.ch/hyperloop/ without getting "access denied" and it display your AliEn username in the top right, then everything is fine.
+To use the Hyperloop train system, you need a valid <a href="https://alice-doc.github.io/alice-analysis-tutorial/start/cert.html" target="_blank">Grid certificate</a> which is loaded into your browser. If you can access https://alimonitor.cern.ch/hyperloop/ without getting "access denied", then everything is fine.
 
 ## <a name="legoexpert"></a>For the Run 2 LEGO train expert. What has changed?
 * There are different webpages for users and train operators: 
