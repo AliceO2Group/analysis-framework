@@ -9,7 +9,9 @@ The hyperloop train system is used to submit your analysis in a train to the Gri
 
 ## Concept
 
-## For the Run 2 LEGO train expert. What has changed?
+The Hyperloop framework is a tool to run and manage analysis trains on AliEn. It is based on the concept of the LEGO train system used during Run 2 (you can skip this part if you are a [Run 2 LEGO train expert](#legoexpert).
+
+## <a name="legoexpert"></a>For the Run 2 LEGO train expert. What has changed?
 * There are different webpages for users and train operators: 
   1. **My Analyses**, the user will see only _Analyses_ where the user belongs to, this is [defined through JIRA](#joinanalysis). The user has writing permits to all elements in this webpage. 
   2. **All Analyses** is a read only view of all the _Analyses_ available in the system. The only action permitted is [cloning a wagon](#clonewagon). 
