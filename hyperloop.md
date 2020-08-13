@@ -8,7 +8,7 @@ The hyperloop train system is used to submit your analysis in a train to the Gri
 
 ## Concept
 
-The Hyperloop framework is a tool to run and manage analysis trains on AliEn. It is based on the concept of the LEGO train system used during Run 2. It builds on existing infrastructure, the analysis framework, MonALISA and LPM, and is compatible with O2. If you are a Run 2 train expert, and you don't have much time, you can just jump to this section: [_Run 2 LEGO train expert_](#legoexpert). 
+The Hyperloop framework is a tool to run and manage analysis trains on AliEn. It is based on the concept of the LEGO train system used during Run 2. It builds on the O2 analysis framework, O2 DPL, MonALISA and LPM. If you are a Run 2 train expert, and you don't have much time, you can just jump to this section: [_Run 2 LEGO train expert_](#legoexpert). 
 
 In order to run trains on the Grid, the code has to be contained in an AliEn package. Therefore, the train uses the regularly deployed O2 tags. 
 Hyperloop supports Run 3 data and converted Run 2 data. 
@@ -93,7 +93,7 @@ You can get to the _All Analyses_ page by using the main menu, or by the link in
 <img src="images/wagonConfig.png" width="60%">
 </div>
   
-* If you need to run the same workflow, but modify one (or more) of the parameter's value, you can use a subwagon instead of creating a new wagon. In order to create a subwagon, type the name of the new subwagon, the name has to be unique within the wagon, and type the value of at least one parameter in the configuration. The configuration of a subwagon will be kept the same as the _Base_ and overwrite the parameters that are different. When there are subwagons activated, the wagon's _Base_ will not run.
+* If you need to run the same workflow, but modify one (or more) of the parameter's value, you can use a subwagon instead of creating a new wagon. In order to create a subwagon, type the name of the new subwagon, the name has to be unique within the wagon, and type the value of at least one parameter in the configuration. The configuration of a subwagon will be kept the same as the _Base_ and overwrite the parameters that are different. When there are subwagons activated, the wagon's _Base_ will not run. NOTE: subwagon submission is at present not yet supported, but will come soon.
 
 * In order to update the configuration with the latest version of the workflow, click on the button `↻ sync`. By synchronizing the configuration, the parameters which no longer belong to the workflow will be removed, and the values of the wagon's _Base_ will be updated as well if they have not been modified by the user.
 
