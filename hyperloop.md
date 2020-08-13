@@ -47,6 +47,8 @@ After all the parameters have been set, click on `Create` and your _Analysis_ wi
 
 <img src="images/comparisonwithjira.png" width="90%">
 
+The synchronization from JIRA to the Hyperloop train system can take up to 30 minutes.
+
 ## Adding and configuring a wagon to an analysis
 #### 1. <a name="addwagon"></a>Adding a new wagon:
 Using the _My Analyses_ page, inside of the _Analysis_ you want to add the wagon to, click on `✚ Add new wagon`.
@@ -131,8 +133,6 @@ You can enable a wagon in the _My Analyses_ page. Inside of the _Analysis_ there
   
   If a wagon has dependencies, there is no need to enable the dependencies as well. The wagon's dependencies will be automatically tested by the system as well.
   
-  If a wagon has activated subwagons, the [wagon's _Base_ will not run](#editwagon).
-
 ## <a name="servicewagons"></a>Service wagons
 
 The _Service wagons_ are wagons which are dependencies to other wagons. They are created by experts, and you can add it as a dependency to your wagon in [edit wagon](#editwagon). 
