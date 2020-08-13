@@ -33,10 +33,10 @@ The views available in the Hyperloop framework are:
 
 ## <a name="joinanalysis"></a> Creating or joining an analysis
 
-The Analyses to which a user belongs to, is defined through a <a href="https://alice.its.cern.ch/jira/secure/Dashboard.jspa" target="_blank">JIRA</a> ticket by a team leader or a convener.
+The Analyses to which a user belongs to, is defined through a <a href="https://alice.its.cern.ch/jira/secure/Dashboard.jspa" target="_blank">JIRA</a> ticket.
 In the JIRA page, create an issue by clicking on the button `Create`, and fill the information with the following parameters:
 
-* In _Project_ select your PWG. Or if you need to create an analysis for [service wagons](#servicewagons) select _O2 Hyperloop Service Wagons (OHSW)_.
+* In _Project_ select your PWG. 
 * In _Summary_ write the name of your _Analysis_.
 * In _Run 3 analysis_ choose `Yes`.
 * In _Analyzers_ select all the users that will be part of this analysis. All the analyzers will have writing permits to all components in the analysis.
