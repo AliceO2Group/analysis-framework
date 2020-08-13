@@ -29,7 +29,7 @@ The views available in the Hyperloop framework are:
 * For a train operator, the **Train Submission** page displays only datasets which have enabled wagons, and allows train composition, as well as submitting, modifying and killing a train.
 * For a train operator, the **Train Runs** page displays all trains available in the system, and allows submitting, modifying and killing a train.
 * For a user, the **Datasets** page displays a read view only of all the datasets available in the system. For a train operator, the **Datasets** page allows creation, configuration and deletion of datasets. 
-* For the DPG experts, the **DPG Runlists** page allows creation, configuration and deletion of runlists.
+* For the DPG experts, the **DPG Runlists** page allows creation, configuration and deletion of runlists. For the users it offers a read only view of all DPG runlists available in the system.
 
 ## <a name="joinanalysis"></a> Creating or joining an analysis
 
@@ -155,7 +155,7 @@ When creating or enabling wagons, you can use a pull request instead of a packag
   3. **Train Submission** is a webpage designed for operators. It displays only datasets which have enabled wagons, allowing train composition. Submitting, modifying and killing a train is also allowed.
   4. **Train Runs** is a webpage designed for operators. It displays all train runs available in the system. The actions permitted are submitting, modifying and killing a train.
   5. **Datasets**, for the users, it is a read only view of all the _Datasets_ available in the system. For the train operators, it allows creation,configuration and deletion of _Datasets_. The _Datasets_ are directly created from runlists already defined in the _DPG Runlists_ webpage instead of copying from a text file in the twiki page like the LEGO trains. 
-  6. **DPG Runlists** is a webpage designed for the DPG. It allows creation, configuration and deletion of runlists, instead of defining them in a twiki page.
+  6. **DPG Runlists** is a webpage designed for the DPG. For the DPG experts, it allows creation, configuration and deletion of runlists, instead of defining them in a twiki page. For the users it offers a read only view of all DPG runlists available in the system.
 
 * There is a history feature for wagons and datasets. You can access it by clicking on the button `📜` available inside of a wagon/dataset view. A detailed view of what has been created/updated/removed from the wagon/dataset is shown, as well as the username and the time when the change was made.
 <div align="center">
