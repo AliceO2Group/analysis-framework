@@ -4,13 +4,11 @@ The hyperloop train system is used to submit your analysis in a train to the Gri
 
 ## Preconditions
 
-* Have a <a href="https://alice-doc.github.io/alice-analysis-tutorial/start/cert.html" target="_blank">valid AliEn certificate</a>. If you can access https://alimonitor.cern.ch/hyperloop/ without getting "access denied", then everything is fine.
-
-* Installed in your browser. Please follow the instructions at TODO
+* Have installed in your browser a <a href="https://alice-doc.github.io/alice-analysis-tutorial/start/cert.html" target="_blank">valid AliEn certificate</a>. If you can access https://alimonitor.cern.ch/hyperloop/ without getting "access denied", then everything is fine.
 
 ## Concept
 
-The Hyperloop framework is a tool to run and manage analysis trains on AliEn. It is based on the concept of the LEGO train system used during Run 2 (you can skip this part if you are a [Run 2 LEGO train expert](#legoexpert)). It builds on existing infrastructure, the analysis framework, MonALISA and LPM, and is compatible with O2.
+The Hyperloop framework is a tool to run and manage analysis trains on AliEn. It is based on the concept of the LEGO train system used during Run 2. It builds on existing infrastructure, the analysis framework, MonALISA and LPM, and is compatible with O2. If you are a Run 2 train expert, and you don't have much time, you can just jump to this section [_Run 2 LEGO train expert_](#legoexpert). 
 
 In order to run trains on the Grid, the code has to be contained in an AliEn package. Therefore, the train uses the regularly deployed O2 tags. 
 Hyperloop supports Run 3 data and converted Run 2 data. 
@@ -32,28 +30,6 @@ The views available in the Hyperloop framework are:
 * For a train operator, the **Train Runs** page displays all trains available in the system, and allows submitting, modifying and killing a train.
 * For a user, the **Datasets** page displays a read view only of all the datasets available in the system. For a train operator, the **Datasets** page allows creation, configuration and deletion of datasets. 
 * For the DPG experts, the **DPG Runlists** page allows creation, configuration and deletion of runlists.
-
-## <a name="legoexpert"></a>For the Run 2 LEGO train expert. What has changed?
-* There are different webpages for users and train operators: 
-  1. **My Analyses**, the user will see only _Analyses_ where the user belongs to, this is [defined through JIRA](#joinanalysis). The user has writing permits to all elements in this webpage. 
-  2. **All Analyses** is a read only view of all the _Analyses_ available in the system. The only action permitted is [cloning a wagon](#clonewagon). 
-  3. **Train Submission** is a webpage designed for operators. It displays only datasets which have enabled wagons, allowing train composition. Submitting, modifying and killing a train is also allowed.
-  4. **Train Runs** is a webpage designed for operators. It displays all train runs available in the system. The actions permitted are submitting, modifying and killing a train.
-  5. **Datasets**, for the users, it is a read only view of all the _Datasets_ available in the system. For the train operators, it allows creation,configuration and deletion of _Datasets_. The _Datasets_ are directly created from runlists already defined in the _DPG Runlists_ webpage instead of copying from a text file in the twiki page like the LEGO trains. 
-  6. **DPG Runlists** is a webpage designed for the DPG. It allows creation, configuration and deletion of runlists, instead of defining them in a twiki page.
-
-* There is a history feature for wagons and datasets. You can access it by clicking on the button `📜` available inside of a wagon/dataset view. A detailed view of what has been created/updated/removed from the wagon/dataset is shown, as well as the username and the time when the change was made.
-<div align="center">
-<img src="images/datasetHistory.png" width="90%">
-</div>
-
-* There are automated notifications. These notifications are created per user, and display changes made to tools, like _Datasets_, that are being used by the user. They are displayed per _Analysis_ in the _My Analyses_ page, or globally in the button `🔔` which can be found on the top menu.
-
-* There is an impersonation feature `🕵` that can be used by experts in order to help users if they have a problem with the UI.
-
-* When [enabling a wagon](#enablewagon) in a dataset the user can choose whether to enable it with a fixed package tag, latest package tag or a [pull request](#pullrequest).
-
-* After [enabling a wagon](#enablewagon) in a dataset, the wagon is automatically tested, and the user can follow the test status (`⌛️`,`⏳`,`❗️`,`🌟`,`💣`) in the _My Analyses_ page.
 
 ## <a name="joinanalysis"></a> Creating or joining an analysis
 
@@ -170,3 +146,26 @@ When creating or enabling wagons, you can use a pull request instead of a packag
 
 1. [Adding a new wagon](#addwagon): You can create a wagon with your unmerged or unreleased workflow. If the workflow is not available, add manually the configuration of the wagon, and subwagons if needed. You can synchronize the wagon's configuration once the package tag that includes your pull request has been released.
 2. [Enabling a wagon in a dataset](#enablewagon): If you need to enable your wagon with workflow that is unmerged or unreleased, use a `Future tag based on pull request`. There is a list of the latest merged and unmerged pull requests available in the system, you can see the pull request number and description. Select the _pull request tag_ and enable the wagon in a dataset. By doing this, the wagon will be queued to test, and the test will begin once the _pull request_ has been merged to a package tag, and the package tag is released. And then, if the test is successful, it'll be composed in a train with the latest package tag available.
+
+## <a name="legoexpert"></a>For the Run 2 LEGO train expert. What has changed?
+
+* There are different webpages for users and train operators: 
+  1. **My Analyses**, the user will see only _Analyses_ where the user belongs to, this is [defined through JIRA](#joinanalysis). The user has writing permits to all elements in this webpage. 
+  2. **All Analyses** is a read only view of all the _Analyses_ available in the system. The only action permitted is [cloning a wagon](#clonewagon). 
+  3. **Train Submission** is a webpage designed for operators. It displays only datasets which have enabled wagons, allowing train composition. Submitting, modifying and killing a train is also allowed.
+  4. **Train Runs** is a webpage designed for operators. It displays all train runs available in the system. The actions permitted are submitting, modifying and killing a train.
+  5. **Datasets**, for the users, it is a read only view of all the _Datasets_ available in the system. For the train operators, it allows creation,configuration and deletion of _Datasets_. The _Datasets_ are directly created from runlists already defined in the _DPG Runlists_ webpage instead of copying from a text file in the twiki page like the LEGO trains. 
+  6. **DPG Runlists** is a webpage designed for the DPG. It allows creation, configuration and deletion of runlists, instead of defining them in a twiki page.
+
+* There is a history feature for wagons and datasets. You can access it by clicking on the button `📜` available inside of a wagon/dataset view. A detailed view of what has been created/updated/removed from the wagon/dataset is shown, as well as the username and the time when the change was made.
+<div align="center">
+<img src="images/datasetHistory.png" width="90%">
+</div>
+
+* There are automated notifications. These notifications are created per user, and display changes made to tools, like _Datasets_, that are being used by the user. They are displayed per _Analysis_ in the _My Analyses_ page, or globally in the button `🔔` which can be found on the top menu.
+
+* There is an impersonation feature `🕵` that can be used by experts in order to help users if they have a problem with the UI.
+
+* When [enabling a wagon](#enablewagon) in a dataset the user can choose whether to enable it with a fixed package tag, latest package tag or a [pull request](#pullrequest).
+
+* After [enabling a wagon](#enablewagon) in a dataset, the wagon is automatically tested, and the user can follow the test status (`⌛️`,`⏳`,`❗️`,`🌟`,`💣`) in the _My Analyses_ page.
