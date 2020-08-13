@@ -38,6 +38,7 @@ In the JIRA page, create an issue by clicking on the button `Create`, and fill t
 
 * In _Project_ select your PWG. 
 * In _Summary_ write the name of your _Analysis_.
+* In _Components_ select your PAG.
 * In _Run 3 analysis_ choose `Yes`.
 * In _Analyzers_ select all the users that will be part of this analysis. All the analyzers will have writing permits to all components in the analysis.
 * (Optional) In _Description_ give a brief description of the analysis.
