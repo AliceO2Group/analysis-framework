@@ -17,4 +17,4 @@ Please go here: [O2 Analysis Framework](framework.md)
 
 ## The Hyperloop train framework
 
-will appear shortly
+How to run your analysis on the Grid is explained [here](hyperloop.md)
