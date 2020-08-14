@@ -2,18 +2,14 @@
 \page refFrameworkCoreANALYSIS Core ANALYSIS
 /doxy -->
 
-##  Core ANALYSIS
+# Analysis Framework infrastructure on top of O2 DPL
 
-This document is WIP and provides an idea of what kind of API to expect from the DPL enabled analysis framework. APIs are neither final nor fully implemented in O2.
+In order to simplify analysis we have introduced an extension to DPL which allows to describe an Analysis in the form of a collection of Analysis Task.
 
-# Analysis Task infrastructure on top of DPL
-
-In order to simplify analysis we have introduced an extension to DPL which allows to describe an Analysis in the form of a collection of AnalysisTask.
-
-In order to create its own task, as user needs to create your own Task deriving from AnalysisTask.
+In order to create its own task, as user you need to create your own Task.
 
 ```cpp
-struct MyTask : AnalysisTask {
+struct MyTask {
 };
 ```
 
@@ -23,7 +19,7 @@ Such a task can then be added to a workflow via the `adaptAnalysisTask` helper. 
 #include "Framework/runDataProcessing.h"
 #include "Framework/AnalysisTask.h"
 
-struct MyTask : AnalysisTask {
+struct MyTask {
 };
 
 WorkflowSpec defineDataProcessing(ConfigContext const&) {
@@ -33,22 +29,22 @@ WorkflowSpec defineDataProcessing(ConfigContext const&) {
 }
 ```
 
-> **Implementation details**: `AnalysisTask` is simply a `struct`. Since `struct` default inheritance policy is `public`, we can omit specifying it when declaring MyTask.
+> **Implementation details**: an Analysis Task is simply a `struct`.
 >
-> `AnalysisTask` will not actually provide any virtual method, as the `adaptAnalysis` helper relies on template argument matching to discover the properties of the task. It will come clear in the next paragraph how this allow is used to avoid the proliferation of data subscription methods.   
+> An Analysis Task does not actually need provide any virtual method, as the `adaptAnalysisTask` helper relies on template argument matching to discover the properties of the task. It will come clear in the next paragraph how this allow is used to avoid the proliferation of data subscription methods.   
 
 ## Processing data
 
 ### Simple subscriptions
 
-Once you have an `AnalysisTask` derived type, the most generic way which you can use to process data is to provide a `process` method for it.
+Once you have Analysis Task (task, from now on), the most generic way which you can use to process data is to provide a `process` method for it.
 
 Depending on the arguments of such a function, you get to iterate on different parts of the AOD content.
 
 For example:
 
 ```cpp
-struct MyTask : AnalysisTask {
+struct MyTask {
   void process(o2::aod::Tracks const& tracks) {
     ...
   }
@@ -66,7 +62,7 @@ for (auto &track : tracks) {
 Alternatively you can subscribe to tracks one by one via (notice the missing `s`):
 
 ```cpp
-struct MyTask : AnalysisTask {
+struct MyTask {
   void process(o2::aod::Track const& track) {
     ...
   }
@@ -107,7 +103,7 @@ For performance reasons, sometimes it's a good idea to split data in separate ta
 However you might need to get all the information at once. This can be done by asking for a `Join` table in the process method:
 
 ```cpp
-struct MyTask : AnalysisTask {
+struct MyTask {
 
   void process(soa::Join<aod::Tracks, aod::TracksExtras> const& mytracks) {
     for (auto& track : mytracks) {
@@ -192,12 +188,16 @@ DECLARE_SOA_TABLE(Point, "MISC", "POINT", X, Y, (R2<X,Y>));
 Notice how the dynamic column is defined as a stand alone column and binds to X and Y
 only when you attach it as part of a table.
 
+## Expression columns
+
+TODO: describe
+
 ## Filtering and partitioning data
 
 Given a process function, one can of course define a filter using an if condition:
 
 ```cpp
-struct MyTask : AnalysisTask {
+struct MyTask {
   void process(o2::aod::EtaPhi const& etaphi) {
     if (etaphi.phi() > 1 && etaphi.phi < 1) {
       ...
@@ -218,7 +218,7 @@ The most common kind of filtering is when you process objects only if one of its
 properties passes a certain criteria. This can be specified with the `Filter` helper.
 
 ```cpp
-struct MyTask : AnalysisTask {
+struct MyTask {
   Filter ptFilter = aod::track::pt > 1.0f;
 
   void process(soa::Filtered<aod::Tracks> const &filteredTracks) {
@@ -239,7 +239,7 @@ Filtering is not the only kind of conditional processing one wants to do. Someti
 ```cpp
 using namespace o2::aod;
 
-struct MyTask : AnalysisTask {
+struct MyTask {
   Partition<aod::Tracks> leftTracksPartition = aod::track::eta < 0;
   Partition<aod::Tracks> rightTracksPartition = aod::track::eta >= 0;
 
@@ -266,7 +266,7 @@ Of course it should be possible to filter and partition data in the same task. T
 One of the features of the current framework is the ability to customize on the fly cuts and selection. The idea is to allow that by having a `configurable("mnemonic-name-of-the-parameter")` helper which can be used to refer to configurable options. The previous example will then become:
 
 ```cpp
-struct MyTask : AnalysisTask {
+struct MyTask {
   Filter collisionFilter = max(track::pt) > configurable<float>("my-pt-cut");
 
   void process(Collsions const &filteredCollisions) {
@@ -713,7 +713,7 @@ New tables are not the only kind on objects you want to create, but most likely 
 You can do so by using the `Histogram` helper:
 
 ```cpp
-struct MyTask : AnalysisTask {
+struct MyTask {
   Histogram etaHisto;
 
   void process(o2::aod::EtaPhi const& etaphi) {
@@ -727,7 +727,7 @@ struct MyTask : AnalysisTask {
 Besides the `Produces` helper, which allows you to create a new table which can be reused by others, there is another way to define a single column,  via the `Defines` helper.
 
 ```cpp
-struct MyTask : AnalysisTask {
+struct MyTask {
   Defines<track::Eta> eta = track::alpha;
 };
 ```
@@ -735,7 +735,7 @@ struct MyTask : AnalysisTask {
 ### Filters on associated quantities:
 
 ```cpp
-struct MyTask : AnalysisTask {
+struct MyTask {
   Filter<Collisions> collisionFilter = max(track::pt) > 1;
 
   void process(Collsions const &filteredCollisions) {
@@ -747,14 +747,3 @@ struct MyTask : AnalysisTask {
 ```
 
 This will process all the collisions which have at least one track with `pt > 1.0f`.
-
-## Possible ideas
-
-We could add a template `<typename C...> reshuffle()` method to the Table class which allows you to reduce the number of columns or attach new dynamic columns. A template wrapper could
-even be used to specify if a given dynamic column should be precalculated (or not). This would come handy to optimize the creation of a RowView, which could bind only the required (dynamic) columns. E.g.:
-
-```cpp
-for (auto twoD : points.reshuffle<point::X, point::Y, Cached<point::R>>()) {
-...
-} 
-```
