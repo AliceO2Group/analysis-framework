@@ -4,7 +4,7 @@ The hyperloop train system is used to submit your analysis in a train to the Gri
 
 ## Preconditions
 
-* Have installed in your browser a <a href="https://alice-doc.github.io/alice-analysis-tutorial/start/cert.html" target="_blank">valid AliEn certificate</a>. If you can access https://alimonitor.cern.ch/hyperloop/ without getting "access denied", then everything is fine.
+* Have installed in your browser a <a href="https://alice-doc.github.io/alice-analysis-tutorial/start/cert.html" target="_blank">valid AliEn certificate</a>. If you can access <a href="https://alimonitor.cern.ch/hyperloop/" target="_blank">https://alimonitor.cern.ch/hyperloop/</a> without getting "access denied", then everything is fine.
 
 ## Concept
 
@@ -46,7 +46,7 @@ The rest of the parameters are not relevant for the Hyperloop train system.
 
 After all the parameters have been set, click on `Create` and your _Analysis_ will be available in the _My Analyses_ and _All Analyses_ page.
 
-<img src="images/comparisonwithjira.png" width="90%">
+<img src="images/comparisonwithjira.png" width="100%">
 
 The synchronization from JIRA to the Hyperloop train system can take up to 30 minutes.
 
@@ -55,7 +55,7 @@ The synchronization from JIRA to the Hyperloop train system can take up to 30 mi
 Using the _My Analyses_ page, inside of the _Analysis_ you want to add the wagon to, click on `✚ Add new wagon`.
 
 <div align="center">
-<img src="images/newwagon.png" width="50%">
+<img src="images/newwagon.png" width="60%">
 </div>
 
 There are 2 parameters required to create a new wagon:
@@ -69,7 +69,7 @@ By clicking on `💾 Save` the wagon will be added, and you will be redirected t
 *  Using the _My Analyses_ page, click on the button `🧬` to clone a wagon. 
 
 <div align="center">
-<img src="images/cloneWagon.png" width="60%">
+<img src="images/cloneWagon.png" width="70%">
 </div>
 
 A list of _Analyses_ you belong to will be displayed. You have to select the _Analysis_ where you want to clone the _Wagon_ to, and name the _NewWagon_ (the wagon name has to be unique within _Analysis_). By clicking on `🧬 Clone`, a new wagon will be added with the same configuration, including subwagons, as the _Wagon_.
@@ -84,13 +84,13 @@ You can get to the _All Analyses_ page by using the main menu, or by the link in
 *  In _Wagon settings_ you can modify the wagon name, work flow name, and select wagon's dependencies. The dependencies offered are wagons from the same _Analysis_ or from [_Service wagons_](#servicewagons).
 
 <div align="center">
-<img src="images/wagonSettings.png" width="60%">
+<img src="images/wagonSettings.png" width="70%">
 </div>
 
 * In _Configuration_ the wagon configuration corresponding to the workflow will be available in the _Base_. The configuration is divided per _Task_, hence if you need to add a new parameter, you will need add it in the following order: task, parameter and value.
 
 <div align="center">
-<img src="images/wagonConfig.png" width="60%">
+<img src="images/wagonConfig.png" width="70%">
 </div>
   
 * If you need to run the same workflow, but modify one (or more) of the parameter's value, you can use a subwagon instead of creating a new wagon. In order to create a subwagon, type the name of the new subwagon, the name has to be unique within the wagon, and type the value of at least one parameter in the configuration. The configuration of a subwagon will be kept the same as the _Base_ and overwrite the parameters that are different. When there are subwagons activated, the wagon's _Base_ will not run. NOTE: subwagon submission is at present not yet supported, but will come soon.
@@ -104,7 +104,7 @@ You can get to the _All Analyses_ page by using the main menu, or by the link in
 *  Inside of an analysis, click on the button `Enable/disable datasets 📝`. 
 
 <div align="center">
-<img src="images/enabledisableDatasets.png" width="50%">
+<img src="images/enabledisableDatasets.png" width="60%">
 </div>
 
 *  There is a list of _Enabled datasets in **Analysis**_. You can disable a dataset for that analysis by clicking on the button `❌`.
@@ -113,7 +113,7 @@ You can get to the _All Analyses_ page by using the main menu, or by the link in
 ### 2. <a name="datasets"></a> Using the _Datasets_ page:
 *  You can browse and click on the _Dataset_ you want to add to your analysis.
 <div align="center">
-<img src="images/enableDatasetDatasetsPage.png" width="70%">
+<img src="images/enableDatasetDatasetsPage.png" width="80%">
 </div>
 
 *  Inside of the _Dataset_ view page, click on the button `✚ Add dataset to analysis`. It will display a list of all the analyses you belong to. Select the _Analysis_ you want to add the dataset to, and click on `💾 Save`.
@@ -127,7 +127,7 @@ You can enable a wagon in the _My Analyses_ page. Inside of the _Analysis_ there
   3. Pull request: Select the option `☑️ Future tag based on pull request`. There will be a list of the latest merged/unmerger pull requests available with their corresponding description. By choosing a pull request, your wagon will be tested as soon as the pull request is merged in a package tag. Then your wagon will be composed in a train with the latest package tag available.
   
  <div align="center">
-<img src="images/enablewagon.png" width="60%">
+<img src="images/enablewagon.png" width="70%">
 </div>
 
   After choosing the package tag to be used, click on the button `❌` to enable your wagon in a dataset, the icon will change from `❌` to `✅`. If you hover over `✅` you can see the information about the enabled wagon: package tag, time and username. If you need to disable a wagon in a dataset, click on the button `✅`. After enabled, the wagon will be automatically tested and you can follow the progress of the test on the button next to `✅`: `⌛️` queued,`⏳` ongoing,`🌟` done, `❗️` warning and `💣` failed.
@@ -160,7 +160,7 @@ When creating or enabling wagons, you can use a pull request instead of a packag
 
 * There is a history feature for wagons and datasets. You can access it by clicking on the button `📜` available inside of a wagon/dataset view. A detailed view of what has been created/updated/removed from the wagon/dataset is shown, as well as the username and the time when the change was made.
 <div align="center">
-<img src="images/datasetHistory.png" width="90%">
+<img src="images/datasetHistory.png" width="100%">
 </div>
 
 * There are automated notifications. These notifications are created per user, and display changes made to tools, like _Datasets_, that are being used by the user. They are displayed per _Analysis_ in the _My Analyses_ page, or globally in the button `🔔` which can be found on the top menu.
