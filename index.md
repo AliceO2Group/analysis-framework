@@ -15,6 +15,10 @@ To install the O2 framework please follow the instructions provide in the offici
 
 Please go here: [O2 Analysis Framework](framework.md)
 
+### PID in O2 Analysis tasks
+
+Please go here: [O2 PID](pid.md)
+
 ## The Hyperloop train framework
 
 How to run your analysis on the Grid is explained [here](hyperloop.md)
