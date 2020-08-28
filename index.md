@@ -15,6 +15,14 @@ To install the O2 framework please follow the instructions provide in the offici
 
 Please go here: [O2 Analysis Framework](framework.md)
 
+## Event selection in O2
+
+Please go here: [Event selection](evsel.md)
+
+## Multiplicity and centrality selection in O2
+
+Please go here: [Multiplicity and centrality selection](mult.md)
+
 ### PID in O2 Analysis tasks
 
 Please go here: [O2 PID](pid.md)
