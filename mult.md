@@ -3,12 +3,12 @@
 ## Concept
 
 The multiplicity and centrality selection in O2 is based on the concept of derived tables created in dedicated tasks from available AOD contents:
-* o2-analysis-multiplicity-table task [`Analysis/Tasks/multiplicityTable.cxx`](https://github.com/AliceO2Group/AliceO2/blob/dev/Analysis/Tasks/multiplicityTable.cxx) stores relevant multiplicity values (V0A, V0C, ZNA, ZNC) and their dynamic sums (V0M) in [`Mults`](https://github.com/AliceO2Group/AliceO2/blob/dev/Analysis/DataModel/include/Analysis/Multiplicity.h) table joinable wih Collisions table.
-* o2-analysis-multiplicity-qa task [`Analysis/Tasks/multiplicityQa.cxx`](https://github.com/AliceO2Group/AliceO2/blob/dev/Analysis/Tasks/multiplicityQa.cxx) creates multiplicity distributions in minimum bias triggers necessary for centrality calibration.
-* o2-analysis-centrality-table task [`Analysis/Tasks/centralityTable.cxx`](https://github.com/AliceO2Group/AliceO2/blob/dev/Analysis/Tasks/centralityTable.cxx) takes multiplicity values from the multiplicity tables and stores centrality values in [`Cents`](https://github.com/AliceO2Group/AliceO2/blob/dev/Analysis/DataModel/include/Analysis/Centrality.h) table joinable with Collisions table. Relevant cumulative multiplicity distributions are stored in CCDB. At the moment, the centrality calibration objects are available for LHC15o run-by-run. The centrality calibration relies on 90% anchor points but doesn't take into account vertex dependence yet. The difference with AliPhysics centrality calibration doesn't exceed 0.5%. 
-* o2-analysis-centrality-qa task [`Analysis/Tasks/centralityQa.cxx`](https://github.com/AliceO2Group/AliceO2/blob/dev/Analysis/Tasks/centralityQa.cxx) creates centrality distributions for minimum bias triggers and can be used for control and QA purposes. 
+* _o2-analysis-multiplicity-table_ task [`Analysis/Tasks/multiplicityTable.cxx`](https://github.com/AliceO2Group/AliceO2/blob/dev/Analysis/Tasks/multiplicityTable.cxx) stores relevant multiplicity values (V0A, V0C, ZNA, ZNC) and their dynamic sums (V0M) in [`Mults`](https://github.com/AliceO2Group/AliceO2/blob/dev/Analysis/DataModel/include/Analysis/Multiplicity.h) table joinable wih Collisions table.
+* _o2-analysis-multiplicity-qa_ task [`Analysis/Tasks/multiplicityQa.cxx`](https://github.com/AliceO2Group/AliceO2/blob/dev/Analysis/Tasks/multiplicityQa.cxx) creates multiplicity distributions in minimum bias triggers necessary for centrality calibration.
+* _o2-analysis-centrality-table_ task [`Analysis/Tasks/centralityTable.cxx`](https://github.com/AliceO2Group/AliceO2/blob/dev/Analysis/Tasks/centralityTable.cxx) takes multiplicity values from the [`Mults`](https://github.com/AliceO2Group/AliceO2/blob/dev/Analysis/DataModel/include/Analysis/Multiplicity.h) table and stores centrality values in [`Cents`](https://github.com/AliceO2Group/AliceO2/blob/dev/Analysis/DataModel/include/Analysis/Centrality.h) table joinable with _Collisions_ table. Relevant cumulative multiplicity distributions are stored in CCDB. At the moment, centrality calibration objects are available only for LHC15o. The centrality calibration relies on 90% anchor points but doesn't take into account vertex dependence yet. The difference with AliPhysics centrality calibration doesn't exceed 0.5%. 
+* _o2-analysis-centrality-qa_ task [`Analysis/Tasks/centralityQa.cxx`](https://github.com/AliceO2Group/AliceO2/blob/dev/Analysis/Tasks/centralityQa.cxx) creates centrality distributions for minimum bias triggers and can be used for control and QA purposes. 
 
-Note that o2-analysis-multiplicity-qa dna o2-analysis-centrality-qa tasks rely on the minimum bias trigger selection therefore one has to run event selection in stack with these tasks, see here [evsel.md] for more details.
+Note that _o2-analysis-multiplicity-qa_ and _o2-analysis-centrality-qa_ tasks rely on the minimum bias trigger selection therefore one has to run event selection in stack with these tasks, see here [evsel.md] for more details.
 
 ## Usage in user tasks
 
@@ -18,7 +18,7 @@ One can check o2-analysis-centrality-qa task for example usage: [`Analysis/Tasks
     #include "Analysis/EventSelection.h"
     #include "Analysis/Centrality.h"
     ```
-* join Collisions, EvSels and Cents table and use corresponding iterator as an argument of the process function:
+* join _Collisions_, _EvSels_ and _Cents_ tables and use corresponding iterator as an argument of the process function:
     ``` c++
     void soa::Join<aod::Collisions, aod::EvSels, aod::Cents>::iterator const& col, ...)
     ```
@@ -26,7 +26,7 @@ One can check o2-analysis-centrality-qa task for example usage: [`Analysis/Tasks
     ``` c++
     if (!col.alias()[kINT7])
       return;
-    ``` c++
+    ```
     Bypass this check if you analyse MC or future continuous Run3 data. 
 * apply further offline selection criteria:
     ``` c++
@@ -43,4 +43,4 @@ One can check o2-analysis-centrality-qa task for example usage: [`Analysis/Tasks
     ``` bash
     o2-analysis-timestamp --aod-file AO2D.root -b | o2-analysis-event-selection -b | o2-analysis-mulitplicity-table -b | o2-analysis-centrality-table -b | o2-analysis-user-task -b
     ```
-    o2-analysis-timestamp task [`Analysis/Tasks/timestamp.cxx`](https://github.com/AliceO2Group/AliceO2/blob/dev/Analysis/Tasks/timestamp.cxx) is required to create per-event timestamps necessary to access relevant CCDB objects in the event selection and/or centrality tasks. 
+    _o2-analysis-timestamp_ task [`Analysis/Tasks/timestamp.cxx`](https://github.com/AliceO2Group/AliceO2/blob/dev/Analysis/Tasks/timestamp.cxx) is required to create per-event timestamps necessary to access relevant CCDB objects in the event selection and/or centrality tasks. 
