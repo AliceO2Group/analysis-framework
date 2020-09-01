@@ -50,8 +50,9 @@ After all the parameters have been set, click on `Create` and your _Analysis_ wi
 
 The synchronization from JIRA to the Hyperloop train system can take up to 30 minutes.
 
-## Adding and configuring a wagon to an analysis
-#### 1. <a name="addwagon"></a>Adding a new wagon:
+## My Analyses
+### Adding and configuring a wagon to an analysis
+##### 1. <a name="addwagon"></a>Adding a new wagon:
 Using the _My Analyses_ page, inside of the _Analysis_ you want to add the wagon to, click on `✚ Add new wagon`.
 
 <div align="center">
@@ -64,7 +65,7 @@ There are 2 parameters required to create a new wagon:
 
 By clicking on `💾 Save` the wagon will be added, and you will be redirected to [_Edit **Wagon**_](#editwagon) where you can modify the wagon's configuration.
 
-#### 2. <a name="clonewagon"></a>Cloning a wagon:
+##### 2. <a name="clonewagon"></a>Cloning a wagon:
 
 *  Using the _My Analyses_ page, click on the button `🧬` to clone a wagon. 
 
@@ -78,7 +79,7 @@ A list of _Analyses_ you belong to will be displayed. You have to select the _An
 
 You can get to the _All Analyses_ page by using the main menu, or by the link in _My Analyses_ page: `(or clone wagon from other analysis)`. In the _All Analyses_ page, a read only view of all the analyses available in the system will be displayed. Browse and click on the _Analysis_ you want to clone the wagon from, and follow the procedure mentioned above.
 
-#### <a name="editwagon"></a> 3. Edit a wagon:
+##### <a name="editwagon"></a> 3. Edit a wagon:
 
 *  You can edit a wagon by clicking on the _Wagon_ name in the _My Analyses_ page. There are different tabs: Wagon settings, Configuration, Testing Statistics.
 *  In _Wagon settings_ you can modify the wagon name, work flow name, and select wagon's dependencies. The dependencies offered are wagons from the same _Analysis_ or from [_Service wagons_](#servicewagons).
@@ -97,9 +98,9 @@ You can get to the _All Analyses_ page by using the main menu, or by the link in
 
 * In order to update the configuration with the latest version of the workflow, click on the button `↻ sync`. By synchronizing the configuration, the parameters which no longer belong to the workflow will be removed, and the values of the wagon's _Base_ will be updated as well if they have not been modified by the user.
 
-## <a name="enabledatasets"></a>Enabling datasets
+### <a name="enabledatasets"></a>Enabling datasets
 
-### 1. Using the _My Analyses_ page:
+#### 1. Using the _My Analyses_ page:
 
 *  Inside of an analysis, click on the button `Enable/disable datasets 📝`. 
 
@@ -110,7 +111,7 @@ You can get to the _All Analyses_ page by using the main menu, or by the link in
 *  There is a list of _Enabled datasets in **Analysis**_. You can disable a dataset for that analysis by clicking on the button `❌`.
 *  Inside of _Enable dataset_ you can search for an active dataset by filtering by data type, collision system, anchor and period. And add it to your analysis by clicking on the button `✚ Add to analysis`. Or you can click the button `ℹ️ All datasets` to be redirected to the [**Datasets**](#datasets) page.
 
-### 2. <a name="datasets"></a> Using the _Datasets_ page:
+#### 2. <a name="datasets"></a> Using the _Datasets_ page:
 *  You can browse and click on the _Dataset_ you want to add to your analysis.
 <div align="center">
 <img src="images/enableDatasetDatasetsPage.png" width="70%">
@@ -118,7 +119,7 @@ You can get to the _All Analyses_ page by using the main menu, or by the link in
 
 *  Inside of the _Dataset_ view page, click on the button `✚ Add dataset to analysis`. It will display a list of all the analyses you belong to. Select the _Analysis_ you want to add the dataset to, and click on `💾 Save`.
 
-## <a name="enablingwagon"></a>Enabling wagon
+### <a name="enablingwagon"></a>Enabling a wagon
 
 You can enable a wagon in the _My Analyses_ page. Inside of the _Analysis_ there are the datasets available for that analysis, or you can [_enable/disable_ datasets](#enabledatasets). There are 3 options for enabling a wagon:
 
@@ -134,14 +135,14 @@ You can enable a wagon in the _My Analyses_ page. Inside of the _Analysis_ there
   
   If a wagon has dependencies, there is no need to enable the dependencies as well. The wagon's dependencies will be automatically tested by the system as well.
   
-## <a name="servicewagons"></a>Service wagons
+### <a name="servicewagons"></a>Service wagons
 
 The _Service wagons_ are wagons which are dependencies to other wagons. They are created by experts, and you can add it as a dependency to your wagon in [edit wagon](#editwagon). 
 
 * For the users, in the _My Analyses_ page, there is a read only view of the _Service Analyses_ available on the top of the page.
 * For the experts, if you need to create _Service wagons_, you need to have an analysis with the project type _O2 Hyperloop Service Wagons (OHSW)_ which can be [created in JIRA](#joinanalysis). Once the analysis is created, you can [add a new wagon](#addwagon) inside of the analysis available in _My Analyses_.
 
-## <a name="pullrequest"></a>Relation of pull requests
+### <a name="pullrequest"></a>Relation of pull requests
 
 When creating or enabling wagons, you can use a pull request instead of a package tag. By doing this, you don't need to wait until your code has been merged and released in a package tag.
 
