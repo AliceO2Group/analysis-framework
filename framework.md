@@ -112,7 +112,7 @@ struct MyTask {
       }
     }
   }
-}
+};
 ```
 
 ## Configurables
@@ -129,7 +129,7 @@ struct MyTask {
       }
     }
   }
-}
+};
 ```
 
 Supported types for configurables are basic arithmetic types (e.g. `int`, `float`, `double`), string (i.e. `std::string`) and flat structures containing those (provided they have a ROOT dictionary attached). 
