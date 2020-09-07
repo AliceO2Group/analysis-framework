@@ -115,6 +115,25 @@ struct MyTask {
 }
 ```
 
+## Configurables
+
+In a data processing task there are of course parameters which are not part of data but are the same for each chunk of data being processed. These parameters can be declared as part of a task by using the `Configurable` construct. E.g.:
+
+```cpp
+struct MyTask {
+  Configurable<float> someCut; 
+  void process(soa::Join<aod::Tracks, aod::TracksExtras> const& mytracks) {
+    for (auto& track : mytracks) {
+      if (track.pt() > someCut) {  // Converts automatically to float 
+      ...;
+      }
+    }
+  }
+}
+```
+
+Supported types for configurables are basic arithmetic types (e.g. `int`, `float`, `double`), string (i.e. `std::string`) and flat structures containing those (provided they have a ROOT dictionary attached). 
+
 ## Creating new collections
 
 In order to create new collections of objects, you need two things. First of all you need to define a datatype for it, then you need to specify that your analysis task will create such an object. Notice that in a given workflow, only one task is allowed to create a given type of object.
