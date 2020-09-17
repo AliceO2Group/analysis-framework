@@ -37,6 +37,7 @@ The Analyses to which a user belongs to, is defined through a <a href="https://a
 In the JIRA page, create an issue by clicking on the button `Create`, and fill the information with the following parameters:
 
 * In _Project_ select your PWG. 
+* In _Issue Type_ select _Analysis_.
 * In _Summary_ write the name of your _Analysis_.
 * In _Components_ select your PAG.
 * In _Run 3 analysis_ choose `Yes`.
