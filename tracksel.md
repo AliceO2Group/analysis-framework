@@ -12,7 +12,7 @@ Based on a set of track quality criteria, the track selection workflow produces 
 #include "Analysis/TrackSelectionTables.h"
    ...
 
-Filter trackFilter = aod::track::isGlobalTrack == (uint8_t)1; // NB.: the right hand side can soon be replaced by 'true'
+Filter trackFilter = aod::track::isGlobalTrack == true; 
 void process(soa::Filtered<soa::Join<aod::Tracks, aod::TrackSelection>>::iterator const& track)
 {
    ...
@@ -112,4 +112,4 @@ bool isSelected = mySelection.IsSelected(track)
 ## Remarks
 Please note that this documentation only represents the status quo of the track selection implementation and many things can and will change. 
 In particular the cut values will most likely change with the 'new' detector in Run3 and some of the legacy cuts will be removed or only available for converted Run2 data.
-In case of questions or suggestions dont hesitate to contact us.
+In case of questions or suggestions don't hesitate to contact us.
