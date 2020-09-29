@@ -23,6 +23,10 @@ Please go here: [Event selection](evsel.md)
 
 Please go here: [Multiplicity and centrality selection](mult.md)
 
+## Track selection
+
+Please go here: [Track selection](tracksel.md)
+
 ### PID in O2 Analysis tasks
 
 Please go here: [O2 PID](pid.md)
