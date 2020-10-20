@@ -73,7 +73,7 @@ By clicking on `💾 Save` the wagon will be added, and you will be redirected t
 <img src="images/cloneWagon.png" width="60%">
 </div>
 
-A list of _Analyses_ you belong to will be displayed. You have to select the _Analysis_ where you want to clone the _Wagon_ to, and name the _NewWagon_ (the wagon name has to be unique within _Analysis_). By clicking on `🧬 Clone`, a new wagon will be added with the same configuration, including subwagons, as the _Wagon_.
+A list of _Analyses_ you belong to will be displayed. You have to select the _Analysis_ where you want to clone the _Wagon_ to, and name the _NewWagon_ (the wagon name has to be unique within _Analysis_). By clicking on `🧬 Clone`, a new wagon will be added with the same configuration as the _Wagon_ including subwagons and derived data.
 
 *  Using the _All Analyses_ page:
 
@@ -85,18 +85,24 @@ You can get to the _All Analyses_ page by using the main menu, or by the link in
 *  In _Wagon settings_ you can modify the wagon name, work flow name, and select wagon's dependencies. The dependencies offered are wagons from the same _Analysis_ or from [_Service wagons_](#servicewagons).
 
 <div align="center">
-<img src="images/wagonSettings.png" width="60%">
+<img src="images/wagonSettings.png" width="70%">
 </div>
 
 * In _Configuration_ the wagon configuration corresponding to the workflow will be available in the _Base_. The configuration is divided per _Task_, hence if you need to add a new parameter, you will need add it in the following order: task, parameter and value.
 
 <div align="center">
-<img src="images/wagonConfig.png" width="60%">
+<img src="images/wagonConfig.png" width="70%">
 </div>
   
 * If you need to run the same workflow, but modify one (or more) of the parameter's value, you can use a subwagon instead of creating a new wagon. In order to create a subwagon, type the name of the new subwagon, the name has to be unique within the wagon, and type the value of at least one parameter in the configuration. The configuration of a subwagon will be kept the same as the _Base_ and overwrite the parameters that are different. When there are subwagons activated, the wagon's _Base_ will not run.
 
 * In order to update the configuration with the latest version of the workflow, click on the button `↻ sync`. By synchronizing the configuration, the parameters which no longer belong to the workflow will be removed, and the values of the wagon's _Base_ will be updated as well if they have not been modified by the user.
+
+* In _Derived Data_ the output directories are displayed. If activated,the train will be run with derived data.
+
+<div align="center">
+<img src="images/deriveddata.png" width="70%">
+</div>
 
 ### <a name="enabledatasets"></a>Enabling datasets
 
