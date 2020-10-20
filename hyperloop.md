@@ -98,7 +98,7 @@ You can get to the _All Analyses_ page by using the main menu, or by the link in
 
 * In order to update the configuration with the latest version of the workflow, click on the button `↻ sync`. By synchronizing the configuration, the parameters which no longer belong to the workflow will be removed, and the values of the wagon's _Base_ will be updated as well if they have not been modified by the user.
 
-* In _Derived Data_ the output directories are displayed. If activated,the train will be run with derived data.
+* In _Derived Data_ the tables which are produced by the task are displayed. If activated, these are saved to the output if the train is run as a derived data production.
 
 <div align="center">
 <img src="images/deriveddata.png" width="70%">
