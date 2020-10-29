@@ -26,7 +26,7 @@ The views available in the Hyperloop framework are:
 * [My Analyses](#myanalyses)
 * [All Analyses](#allanalyses)
 * [Train Submission](#trainsubmission)
-* For a train operator, the **Train Runs** page displays all trains available in the system, and allows submitting, modifying and killing a train.
+* [Train Runs](#trainruns)
 * For a user, the **Datasets** page displays a read view only of all the datasets available in the system. For a train operator, the **Datasets** page allows creation, configuration and deletion of datasets. 
 * For the DPG experts, the **DPG Runlists** page allows creation, configuration and deletion of runlists. For the users it offers a read only view of all DPG runlists available in the system.
 
@@ -180,7 +180,11 @@ When creating or enabling wagons, you can use a pull request instead of a packag
 * By default, wagons that were enabled at most one week ago are shown. In order to display all enabled wagons, click on `off` in the _Enabled_ column.
 * In order to compose a train, click `☑️` in the _Compose_ column. The package tag will be automatically chosen, and other wagons that can be included in the train run are signalized with 🟢, and the ones which are not compatible with 🔴. All wagons that are compatible can be automatically chosen by clicking on `✅ Select all compatible tags`, or by selecting them one by one.
 * If a wagon has _Derived data_ tables activated, it will be signalized with the icon 🗂️ in the _Test status_ column. 
+* Finally, after defining the configuration, click on `Compose` to compose a train.
+* The train will be automatically tested, and its progress can be followed in the _Train Runs_ table, or in the [**Train Runs**](#trainruns) page.
 
+## <a name="trainruns"></a>Train Runs
+* For a train operator, the **Train Runs** page displays all trains available in the system, and allows submitting, modifying and killing a train.
 
 ## <a name="legoexpert"></a>For the Run 2 LEGO train expert. What has changed?
 
