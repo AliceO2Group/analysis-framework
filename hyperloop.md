@@ -23,9 +23,8 @@ Hyperloop provides a web interface for users and operators which allows to:
 * study the resource consumption of the train for each wagon
 
 The views available in the Hyperloop framework are:
-
-* For a user, there is a personalized webpage **My Analyses** which displays all the analyses where the user belongs to. The user can create, configure and enable wagons in this page. 
-* In the **All Analyses** page, there is a read only view of all analyses available in the system. 
+* [My Analyses](#myanalyses)
+* [All Analyses](#allanalyses)
 * For a train operator, the **Train Submission** page displays only datasets which have enabled wagons, and allows train composition, as well as submitting, modifying and killing a train.
 * For a train operator, the **Train Runs** page displays all trains available in the system, and allows submitting, modifying and killing a train.
 * For a user, the **Datasets** page displays a read view only of all the datasets available in the system. For a train operator, the **Datasets** page allows creation, configuration and deletion of datasets. 
@@ -50,11 +49,18 @@ After all the parameters have been set, click on `Create` and your _Analysis_ wi
 
 The synchronization from JIRA to the Hyperloop train system can take up to 30 minutes.
 
-## My Analyses
+## <a name="myanalyses"></a>My Analyses
 * _My Analyses_ is a personalized webpage which displays all the analyses where the user belongs to. 
 * The analyses display can be expanded/collapsed and reordered with the buttons `✚/-`,`⇧` and `⇩`, or by dragging and dropping. This configuration is saved per user.
 * The user can add/remove, configure and enable/disable wagons in this page.
 * The user can add/remove datasets per analysis.
+
+### <a name="servicewagons"></a>Service wagons
+
+The _Service wagons_ are wagons which are dependencies to other wagons. They are created by experts, and you can add it as a dependency to your wagon in [edit wagon](#editwagon). 
+
+* For the users, in the _My Analyses_ page, there is a read only view of the _Service Analyses_ available on the top of the page.
+* For the experts, if you need to create _Service wagons_, you need to have an analysis with the project type _O2 Hyperloop Service Wagons (OHSW)_ which can be [created in JIRA](#joinanalysis). Once the analysis is created, you can [add a new wagon](#addwagon) inside of the analysis available in _My Analyses_.
 
 ### Adding and configuring a wagon to an analysis
 ##### 1. <a name="addwagon"></a>Adding a new wagon:
@@ -145,20 +151,17 @@ You can enable a wagon in the _My Analyses_ page. Inside of the _Analysis_ there
   After choosing the package tag to be used, click on the button `❌` to enable your wagon in a dataset, the icon will change from `❌` to `✅`. If you hover over `✅` you can see the information about the enabled wagon: package tag, time and username. If you need to disable a wagon in a dataset, click on the button `✅`. After enabled, the wagon will be automatically tested and you can follow the progress of the test on the button next to `✅`: `⌛️` queued,`⏳` ongoing,`🌟` done, `❗️` warning and `💣` failed.
   
   If a wagon has dependencies, there is no need to enable the dependencies as well. The wagon's dependencies will be automatically tested by the system as well.
-  
-### <a name="servicewagons"></a>Service wagons
-
-The _Service wagons_ are wagons which are dependencies to other wagons. They are created by experts, and you can add it as a dependency to your wagon in [edit wagon](#editwagon). 
-
-* For the users, in the _My Analyses_ page, there is a read only view of the _Service Analyses_ available on the top of the page.
-* For the experts, if you need to create _Service wagons_, you need to have an analysis with the project type _O2 Hyperloop Service Wagons (OHSW)_ which can be [created in JIRA](#joinanalysis). Once the analysis is created, you can [add a new wagon](#addwagon) inside of the analysis available in _My Analyses_.
-
 ### <a name="pullrequest"></a>Relation of pull requests
 
 When creating or enabling wagons, you can use a pull request instead of a package tag. By doing this, you don't need to wait until your code has been merged and released in a package tag.
 
 1. [Adding a new wagon](#addwagon): You can create a wagon with your unmerged or unreleased workflow. If the workflow is not available, add manually the configuration of the wagon, and subwagons if needed. You can synchronize the wagon's configuration once the package tag that includes your pull request has been released.
 2. [Enabling a wagon in a dataset](#enablewagon): If you need to enable your wagon with workflow that is unmerged or unreleased, use a `Future tag based on pull request`. There is a list of the latest merged and unmerged pull requests available in the system, you can see the pull request number and description. Select the _pull request tag_ and enable the wagon in a dataset. By doing this, the wagon will be queued to test, and the test will begin once the _pull request_ has been merged to a package tag, and the package tag is released. And then, if the test is successful, it'll be composed in a train with the latest package tag available.
+
+## <a name="allanalyses"></a>All Analyses
+
+* There is a read only view of all analyses available in the system. 
+* Wagons from any analysis can be cloned to a user's analysis.
 
 ## <a name="legoexpert"></a>For the Run 2 LEGO train expert. What has changed?
 
