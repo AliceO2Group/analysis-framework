@@ -188,7 +188,7 @@ When creating or enabling wagons, you can use a pull request instead of a packag
 * For a train operator, the _Train Runs_ page displays all trains available in the system, and allows submitting, modifying and killing a train.
 * The train run detail can be accessed by clicking on the TRAIN_ID, or with the url https://alimonitor.cern.ch/hyperloop/wagon-test/TRAIN_ID.
 * For submitting a train:
-** Only
+  * Only
 
 ## <a name="legoexpert"></a>For the Run 2 LEGO train expert. What has changed?
 
