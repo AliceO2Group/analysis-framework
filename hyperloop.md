@@ -23,11 +23,10 @@ Hyperloop provides a web interface for users and operators which allows to:
 * study the resource consumption of the train for each wagon
 
 The views available in the Hyperloop framework are:
-
-* For a user, there is a personalized webpage **My Analyses** which displays all the analyses where the user belongs to. The user can create, configure and enable wagons in this page. 
-* In the **All Analyses** page, there is a read only view of all analyses available in the system. 
-* For a train operator, the **Train Submission** page displays only datasets which have enabled wagons, and allows train composition, as well as submitting, modifying and killing a train.
-* For a train operator, the **Train Runs** page displays all trains available in the system, and allows submitting, modifying and killing a train.
+* [My Analyses](#myanalyses)
+* [All Analyses](#allanalyses)
+* [Train Submission](#trainsubmission)
+* [Train Runs](#trainruns)
 * For a user, the **Datasets** page displays a read view only of all the datasets available in the system. For a train operator, the **Datasets** page allows creation, configuration and deletion of datasets. 
 * For the DPG experts, the **DPG Runlists** page allows creation, configuration and deletion of runlists. For the users it offers a read only view of all DPG runlists available in the system.
 
@@ -51,8 +50,21 @@ After all the parameters have been set, click on `Create` and your _Analysis_ wi
 
 The synchronization from JIRA to the Hyperloop train system can take up to 30 minutes.
 
-## Adding and configuring a wagon to an analysis
-#### 1. <a name="addwagon"></a>Adding a new wagon:
+## <a name="myanalyses"></a>My Analyses
+* _My Analyses_ is a personalized webpage which displays all the analyses where the user belongs to. 
+* The analyses display can be expanded/collapsed and reordered with the buttons `✚/-`,`⇧` and `⇩`, or by dragging and dropping. This configuration is saved per user.
+* The user can add/remove, configure and enable/disable wagons in this page.
+* The user can add/remove datasets per analysis.
+
+### <a name="servicewagons"></a>Service wagons
+
+The _Service wagons_ are wagons which are dependencies to other wagons. They are created by experts, and you can add it as a dependency to your wagon in [edit wagon](#editwagon). 
+
+* For the users, in the _My Analyses_ page, there is a read only view of the _Service Analyses_ available on the top of the page.
+* For the experts, if you need to create _Service wagons_, you need to have an analysis with the project type _O2 Hyperloop Service Wagons (OHSW)_ which can be [created in JIRA](#joinanalysis). Once the analysis is created, you can [add a new wagon](#addwagon) inside of the analysis available in _My Analyses_.
+
+### Adding and configuring a wagon to an analysis
+##### 1. <a name="addwagon"></a>Adding a new wagon:
 Using the _My Analyses_ page, inside of the _Analysis_ you want to add the wagon to, click on `✚ Add new wagon`.
 
 <div align="center">
@@ -65,7 +77,7 @@ There are 2 parameters required to create a new wagon:
 
 By clicking on `💾 Save` the wagon will be added, and you will be redirected to [_Edit **Wagon**_](#editwagon) where you can modify the wagon's configuration.
 
-#### 2. <a name="clonewagon"></a>Cloning a wagon:
+##### 2. <a name="clonewagon"></a>Cloning a wagon:
 
 *  Using the _My Analyses_ page, click on the button `🧬` to clone a wagon. 
 
@@ -73,13 +85,13 @@ By clicking on `💾 Save` the wagon will be added, and you will be redirected t
 <img src="images/cloneWagon.png" width="70%">
 </div>
 
-A list of _Analyses_ you belong to will be displayed. You have to select the _Analysis_ where you want to clone the _Wagon_ to, and name the _NewWagon_ (the wagon name has to be unique within _Analysis_). By clicking on `🧬 Clone`, a new wagon will be added with the same configuration, including subwagons, as the _Wagon_.
+A list of _Analyses_ you belong to will be displayed. You have to select the _Analysis_ where you want to clone the _Wagon_ to, and name the _NewWagon_ (the wagon name has to be unique within _Analysis_). By clicking on `🧬 Clone`, a new wagon will be added with the same configuration as the _Wagon_ including subwagons and derived data.
 
 *  Using the _All Analyses_ page:
 
 You can get to the _All Analyses_ page by using the main menu, or by the link in _My Analyses_ page: `(or clone wagon from other analysis)`. In the _All Analyses_ page, a read only view of all the analyses available in the system will be displayed. Browse and click on the _Analysis_ you want to clone the wagon from, and follow the procedure mentioned above.
 
-#### <a name="editwagon"></a> 3. Edit a wagon:
+##### <a name="editwagon"></a> 3. Edit a wagon:
 
 *  You can edit a wagon by clicking on the _Wagon_ name in the _My Analyses_ page. There are different tabs: Wagon settings, Configuration, Testing Statistics.
 *  In _Wagon settings_ you can modify the wagon name, work flow name, and select wagon's dependencies. The dependencies offered are wagons from the same _Analysis_ or from [_Service wagons_](#servicewagons).
@@ -96,11 +108,19 @@ You can get to the _All Analyses_ page by using the main menu, or by the link in
   
 * If you need to run the same workflow, but modify one (or more) of the parameter's value, you can use a subwagon instead of creating a new wagon. In order to create a subwagon, type the name of the new subwagon, the name has to be unique within the wagon, and type the value of at least one parameter in the configuration. The configuration of a subwagon will be kept the same as the _Base_ and overwrite the parameters that are different. When there are subwagons activated, the wagon's _Base_ will not run. NOTE: subwagon submission is at present not yet supported, but will come soon.
 
-* In order to update the configuration with the latest version of the workflow, click on the button `↻ sync`. By synchronizing the configuration, the parameters which no longer belong to the workflow will be removed, and the values of the wagon's _Base_ will be updated as well if they have not been modified by the user.
+* In order to update the base and subwagon configuration with the latest version of the workflow, click on the button `↻ sync` in _Configuration_. By synchronizing the configuration, the parameters which no longer belong to the workflow will be removed, and the values of the wagon's _Base_ will be updated as well if they have not been modified by the user.
 
-## <a name="enabledatasets"></a>Enabling datasets
+* In _Derived Data_ the tables which are produced by the task are displayed. If activated, these are saved to the output if the train is run as a derived data production.
 
-### 1. Using the _My Analyses_ page:
+<div align="center">
+<img src="images/deriveddata.png" width="70%">
+</div>
+
+* In order to update the derived data configuration with the latest version of the workflow, click on the button `↻ sync` in _Derived data_. By synchronizing the derived data, the tables which no longer belong to the workflow will be removed, and the values of the tables will be updated.
+
+### <a name="enabledatasets"></a>Enabling datasets
+
+#### 1. Using the _My Analyses_ page:
 
 *  Inside of an analysis, click on the button `Enable/disable datasets 📝`. 
 
@@ -111,7 +131,7 @@ You can get to the _All Analyses_ page by using the main menu, or by the link in
 *  There is a list of _Enabled datasets in **Analysis**_. You can disable a dataset for that analysis by clicking on the button `❌`.
 *  Inside of _Enable dataset_ you can search for an active dataset by filtering by data type, collision system, anchor and period. And add it to your analysis by clicking on the button `✚ Add to analysis`. Or you can click the button `ℹ️ All datasets` to be redirected to the [**Datasets**](#datasets) page.
 
-### 2. <a name="datasets"></a> Using the _Datasets_ page:
+#### 2. <a name="datasets"></a> Using the _Datasets_ page:
 *  You can browse and click on the _Dataset_ you want to add to your analysis.
 <div align="center">
 <img src="images/enableDatasetDatasetsPage.png" width="80%">
@@ -119,7 +139,7 @@ You can get to the _All Analyses_ page by using the main menu, or by the link in
 
 *  Inside of the _Dataset_ view page, click on the button `✚ Add dataset to analysis`. It will display a list of all the analyses you belong to. Select the _Analysis_ you want to add the dataset to, and click on `💾 Save`.
 
-## <a name="enablingwagon"></a>Enabling wagon
+### <a name="enablingwagon"></a>Enabling a wagon
 
 You can enable a wagon in the _My Analyses_ page. Inside of the _Analysis_ there are the datasets available for that analysis, or you can [_enable/disable_ datasets](#enabledatasets). There are 3 options for enabling a wagon:
 
@@ -131,23 +151,50 @@ You can enable a wagon in the _My Analyses_ page. Inside of the _Analysis_ there
 <img src="images/enablewagon.png" width="70%">
 </div>
 
-  After choosing the package tag to be used, click on the button `❌` to enable your wagon in a dataset, the icon will change from `❌` to `✅`. If you hover over `✅` you can see the information about the enabled wagon: package tag, time and username. If you need to disable a wagon in a dataset, click on the button `✅`. After enabled, the wagon will be automatically tested and you can follow the progress of the test on the button next to `✅`: `⌛️` queued,`⏳` ongoing,`🌟` done, `❗️` warning and `💣` failed.
+  After choosing the package tag to be used, click on the button `❌` to enable your wagon in a dataset, the icon will change from `❌` to `✅`. If you hover over `✅` you can see the information about the enabled wagon: package tag, time and username. If you need to disable a wagon in a dataset, click on the button `✅`. After enabled, the wagon will be automatically tested and you can follow the progress of the [test](#wagontest) on the button next to `✅`: `⌛️` queued,`⏳` ongoing,`🌟` done, `❗️` warning and `💣` failed.
   
   If a wagon has dependencies, there is no need to enable the dependencies as well. The wagon's dependencies will be automatically tested by the system as well.
-  
-## <a name="servicewagons"></a>Service wagons
 
-The _Service wagons_ are wagons which are dependencies to other wagons. They are created by experts, and you can add it as a dependency to your wagon in [edit wagon](#editwagon). 
+### <a name="wagontest"></a>Wagon tests
+* The wagon test can be accessed in the _My Analyses_ page by clicking on the buttons: `⏳`,`🌟`, `❗️` or `💣`.
+* If the TEST_ID is known, it can be directly accessed using the url https://alimonitor.cern.ch/hyperloop/wagon-test/TEST_ID. 
+* Inside of a wagon test, the test configuration, results, graphs and statistics are displayed.
+* The test output can be accessed by clicking on the buttons: `⏳`,`🌟`, `❗️` or `💣`, or the link `(test output)` 
 
-* For the users, in the _My Analyses_ page, there is a read only view of the _Service Analyses_ available on the top of the page.
-* For the experts, if you need to create _Service wagons_, you need to have an analysis with the project type _O2 Hyperloop Service Wagons (OHSW)_ which can be [created in JIRA](#joinanalysis). Once the analysis is created, you can [add a new wagon](#addwagon) inside of the analysis available in _My Analyses_.
-
-## <a name="pullrequest"></a>Relation of pull requests
+### <a name="pullrequest"></a>Relation of pull requests
 
 When creating or enabling wagons, you can use a pull request instead of a package tag. By doing this, you don't need to wait until your code has been merged and released in a package tag.
 
 1. [Adding a new wagon](#addwagon): You can create a wagon with your unmerged or unreleased workflow. If the workflow is not available, add manually the configuration of the wagon, and subwagons if needed. You can synchronize the wagon's configuration once the package tag that includes your pull request has been released.
 2. [Enabling a wagon in a dataset](#enablewagon): If you need to enable your wagon with workflow that is unmerged or unreleased, use a `Future tag based on pull request`. There is a list of the latest merged and unmerged pull requests available in the system, you can see the pull request number and description. Select the _pull request tag_ and enable the wagon in a dataset. By doing this, the wagon will be queued to test, and the test will begin once the _pull request_ has been merged to a package tag, and the package tag is released. And then, if the test is successful, it'll be composed in a train with the latest package tag available.
+
+## <a name="allanalyses"></a>All Analyses
+
+* There is a read only view of all analyses available in the system. 
+* Wagons from any analysis available in the system can be cloned `🧬` to a user's analysis.
+
+## <a name="trainsubmission"></a>Train Submission
+* For a user, the _Train Submission_ page displays a read view only of datasets which have enabled wagons.
+* For a train operator, the  _Train Submission_ page displays only datasets which have enabled wagons, and allows train composition, as well as submitting, modifying and killing a train.
+### <a name="trainsubmission"></a>Train Composition
+* Trains are composed per dataset. Only wagons which have a test status of success `🌟` or warning `❗️` can be composed in a train.
+* By default, wagons that were enabled at most one week ago are shown. In order to display all enabled wagons, click on `off` in the _Enabled_ column.
+* In order to compose a train, click `☑️` in the _Compose_ column. The package tag will be automatically chosen, and other wagons that can be included in the train run are signalized with 🟢, and the ones which are not compatible with 🔴. All wagons that are compatible can be automatically chosen by clicking on `✅ Select all compatible tags`, or by selecting them one by one.
+* If a wagon has _Derived data_ tables activated, it will be signalized with the icon 🗂️ in the _Test status_ column. 
+* Finally, after defining the configuration, click on `Compose` to compose a train. After composing a train run, the wagons selected cannot be selected for a different train run unless the current train run is [decomposed](#decompose). After the train run is [submitted](#submit), the wagons will be disabled. 
+* The train will be automatically tested, and its progress can be followed in the _Train Runs_ table, or in the [**Train Runs**](#trainruns) page by clicking on the TRAIN_ID link.
+
+## <a name="trainruns"></a>Train Runs
+* For a user, the _Train Runs_ page displays a read view only of all train runs available in the system.
+* For a train operator, the _Train Runs_ page displays all trains available in the system, and allows submitting, modifying and killing a train.
+* The train run detail can be accessed by clicking on the TRAIN_ID, or with the url https://alimonitor.cern.ch/hyperloop/train-run/TRAIN_ID.
+* The actions allowed in a train run:
+  * Adding a _comment_.
+  * <a name="decompose"></a>Decomposing a train run by clicking on `Decompose ☠️`. When decomposing a train run, the wagons in it will be allowed to be composed in a new train run.
+  * <a name="submit"></a>Submitting a train run. Only train runs which test status is success `🌟` or warning `❗️` can be submitted. By default, the train run is submitted to the _Grid - single core_, but a different target can be chosen. To submit a train run, click on `Submit 🚂`.
+  * <a name="submitfinalmerge"></a>When a dataset has activate final merge, a button `Submit final merge` appears after all the masterjobs are finished successfully.
+  * Killing a train by clicking on `Kill ☠️`.
+
 
 ## <a name="legoexpert"></a>For the Run 2 LEGO train expert. What has changed?
 
