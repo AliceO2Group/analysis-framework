@@ -51,6 +51,11 @@ After all the parameters have been set, click on `Create` and your _Analysis_ wi
 The synchronization from JIRA to the Hyperloop train system can take up to 30 minutes.
 
 ## My Analyses
+* _My Analyses_ is a personalized webpage which displays all the analyses where the user belongs to. 
+* The analyses display can be expanded/collapsed and reordered with the buttons `✚/-`,`⇧` and `⇩`, or by dragging and dropping. This configuration is saved per user.
+* The user can add/remove, configure and enable/disable wagons in this page.
+* The user can add/remove datasets per analysis.
+
 ### Adding and configuring a wagon to an analysis
 ##### 1. <a name="addwagon"></a>Adding a new wagon:
 Using the _My Analyses_ page, inside of the _Analysis_ you want to add the wagon to, click on `✚ Add new wagon`.
