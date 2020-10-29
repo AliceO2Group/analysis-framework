@@ -25,7 +25,7 @@ Hyperloop provides a web interface for users and operators which allows to:
 The views available in the Hyperloop framework are:
 * [My Analyses](#myanalyses)
 * [All Analyses](#allanalyses)
-* For a train operator, the **Train Submission** page displays only datasets which have enabled wagons, and allows train composition, as well as submitting, modifying and killing a train.
+* [Train Submission](#trainsubmission)
 * For a train operator, the **Train Runs** page displays all trains available in the system, and allows submitting, modifying and killing a train.
 * For a user, the **Datasets** page displays a read view only of all the datasets available in the system. For a train operator, the **Datasets** page allows creation, configuration and deletion of datasets. 
 * For the DPG experts, the **DPG Runlists** page allows creation, configuration and deletion of runlists. For the users it offers a read only view of all DPG runlists available in the system.
@@ -148,9 +148,16 @@ You can enable a wagon in the _My Analyses_ page. Inside of the _Analysis_ there
 <img src="images/enablewagon.png" width="60%">
 </div>
 
-  After choosing the package tag to be used, click on the button `❌` to enable your wagon in a dataset, the icon will change from `❌` to `✅`. If you hover over `✅` you can see the information about the enabled wagon: package tag, time and username. If you need to disable a wagon in a dataset, click on the button `✅`. After enabled, the wagon will be automatically tested and you can follow the progress of the test on the button next to `✅`: `⌛️` queued,`⏳` ongoing,`🌟` done, `❗️` warning and `💣` failed.
+  After choosing the package tag to be used, click on the button `❌` to enable your wagon in a dataset, the icon will change from `❌` to `✅`. If you hover over `✅` you can see the information about the enabled wagon: package tag, time and username. If you need to disable a wagon in a dataset, click on the button `✅`. After enabled, the wagon will be automatically tested and you can follow the progress of the [test](#wagontest) on the button next to `✅`: `⌛️` queued,`⏳` ongoing,`🌟` done, `❗️` warning and `💣` failed.
   
   If a wagon has dependencies, there is no need to enable the dependencies as well. The wagon's dependencies will be automatically tested by the system as well.
+
+### <a name="wagontest"></a>Wagon tests
+* The wagon test can be accessed in the _My Analyses_ page by clicking on the buttons: `⏳`,`🌟`, `❗️` or `💣`.
+* If the TEST_ID is known, it can be directly accessed using the url https://alimonitor.cern.ch/hyperloop/wagon-test/TEST_ID. 
+* Inside of a wagon test, the test configuration, results, graphs and statistics are displayed.
+* The test output can be accessed by clicking on the buttons: `⏳`,`🌟`, `❗️` or `💣`, or the link `(test output)` 
+
 ### <a name="pullrequest"></a>Relation of pull requests
 
 When creating or enabling wagons, you can use a pull request instead of a package tag. By doing this, you don't need to wait until your code has been merged and released in a package tag.
@@ -161,7 +168,12 @@ When creating or enabling wagons, you can use a pull request instead of a packag
 ## <a name="allanalyses"></a>All Analyses
 
 * There is a read only view of all analyses available in the system. 
-* Wagons from any analysis can be cloned to a user's analysis.
+* Wagons from any analysis available in the system can be cloned `🧬` to a user's analysis.
+
+## <a name="trainsubmission"></a>Train Submission
+* For a user, the _Train Submission_ page displays a read view only of datasets which have enabled wagons.
+* For a train operator, the  _Train Submission_ page displays only datasets which have enabled wagons, and allows train composition, as well as submitting, modifying and killing a train.
+
 
 ## <a name="legoexpert"></a>For the Run 2 LEGO train expert. What has changed?
 
