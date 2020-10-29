@@ -181,10 +181,14 @@ When creating or enabling wagons, you can use a pull request instead of a packag
 * In order to compose a train, click `☑️` in the _Compose_ column. The package tag will be automatically chosen, and other wagons that can be included in the train run are signalized with 🟢, and the ones which are not compatible with 🔴. All wagons that are compatible can be automatically chosen by clicking on `✅ Select all compatible tags`, or by selecting them one by one.
 * If a wagon has _Derived data_ tables activated, it will be signalized with the icon 🗂️ in the _Test status_ column. 
 * Finally, after defining the configuration, click on `Compose` to compose a train.
-* The train will be automatically tested, and its progress can be followed in the _Train Runs_ table, or in the [**Train Runs**](#trainruns) page.
+* The train will be automatically tested, and its progress can be followed in the _Train Runs_ table, or in the [**Train Runs**](#trainruns) page by clicking on the TRAIN_ID link.
 
 ## <a name="trainruns"></a>Train Runs
-* For a train operator, the **Train Runs** page displays all trains available in the system, and allows submitting, modifying and killing a train.
+* For a user, the _Train Runs_ page displays a read view only of all train runs available in the system.
+* For a train operator, the _Train Runs_ page displays all trains available in the system, and allows submitting, modifying and killing a train.
+* The train run detail can be accessed by clicking on the TRAIN_ID, or with the url https://alimonitor.cern.ch/hyperloop/wagon-test/TRAIN_ID.
+* For submitting a train:
+** Only
 
 ## <a name="legoexpert"></a>For the Run 2 LEGO train expert. What has changed?
 
