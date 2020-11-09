@@ -20,7 +20,7 @@ One can check _o2-analysis-centrality-qa_ task for example usage: [`Analysis/Tas
     ```
 * join _Collisions_, _EvSels_ and _Cents_ tables and use corresponding iterator as an argument of the process function:
     ``` c++
-    void void process(soa::Join<aod::Collisions, aod::EvSels, aod::Cents>::iterator const& col, ...)
+    void process(soa::Join<aod::Collisions, aod::EvSels, aod::Cents>::iterator const& col, ...)
     ```
 * check if your trigger alias is fired if you run over Run1 or Run2 data (or future triggered Run3 data):
     ``` c++
