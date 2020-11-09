@@ -107,7 +107,7 @@ struct MyTask {
 
   void process(soa::Join<aod::Tracks, aod::TracksExtra> const& mytracks) {
     for (auto& track : mytracks) {
-      if (track.length()) {  // from TrackExtras
+      if (track.length()) {  // from TracksExtra
         tracks.alpha();      // from Tracks
       }
     }
@@ -122,7 +122,7 @@ In a data processing task there are of course parameters which are not part of d
 ```cpp
 struct MyTask {
   Configurable<float> someCut; 
-  void process(soa::Join<aod::Tracks, aod::TracksExtras> const& mytracks) {
+  void process(soa::Join<aod::Tracks, aod::TracksExtra> const& mytracks) {
     for (auto& track : mytracks) {
       if (track.pt() > someCut) {  // Converts automatically to float 
       ...;

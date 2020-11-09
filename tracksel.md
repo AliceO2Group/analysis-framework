@@ -33,7 +33,7 @@ void process(soa::Filtered<soa::Join<aod::Tracks, aod::TracksExtended, aod::Trac
 Both the definition of TrackSelection and the TracksExtended table can be found here: [`TrackSelectionTables`](https://github.com/AliceO2Group/AliceO2/blob/dev/Analysis/DataModel/include/Analysis/TrackSelectionTables.h).
 If you want to have a look at the track parameters after the selection, you can use the [`trackqa`](https://github.com/AliceO2Group/AliceO2/blob/dev/Analysis/Tasks/trackqa.cxx) task:
 ```
-o2-analysis-trackselection | o2-analysis-trackqa
+o2-analysis-trackextension | o2-analysis-trackselection | o2-analysis-trackqa
 ```
 Currently it will show you only the distributions for globalTracks, but soon the track filter will also be configurable.
 
