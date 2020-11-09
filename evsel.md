@@ -2,7 +2,7 @@
 
 ## Concept
 
-The event selection in O2 is based on the concept of derived tables created in dedicated tasks from available AOD contents. The derived event selection table [`EvSels`](https://github.com/AliceO2Group/AliceO2/blob/dev/Analysis/DataModel/include/Analysis/EventSelection.h) is joinable with collisions table and contains information on 
+The event selection in O2 is based on the concept of derived tables created in dedicated tasks from available AOD contents. The derived event selection table [`EvSels`](https://github.com/AliceO2Group/AliceO2/blob/dev/Analysis/DataModel/include/Analysis/EventSelection.h) is joinable with the ```Collisions``` table and contains information on:
 * fired trigger class aliases 
 * offline event selection criteria such as beam-beam and beam-gas decisions from forward detectors (V0, FDD and ZDC)
 * logical combinations of offline event selection criteria, e.g. _sel7_ corresponding to beam-beam decisions in V0A, V0C, ZNA and ZNC detectors

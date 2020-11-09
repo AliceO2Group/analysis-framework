@@ -4,7 +4,7 @@
 
 # Analysis Framework infrastructure on top of O2 DPL
 
-In order to simplify analysis we have introduced an extension to DPL which allows to describe an Analysis in the form of a collection of Analysis Task.
+In order to simplify analysis we have introduced an extension to DPL which allows to describe an Analysis in the form of a collection of Analysis Tasks.
 
 In order to create its own task, as user you need to create your own Task.
 
@@ -77,7 +77,7 @@ This has the advantage that you might be able to benefit from vectorization / pa
 
 ### Navigating data associations
 
-For performance reasons, data is organized in a set of flat table and navigation between objects of different tables has to be expressed explicitly in the `process` method. So if you want to get all the tracks for a specific collision, you will have to implement:
+For performance reasons, data is organized in a set of flat tables and navigation between objects of different tables has to be expressed explicitly in the `process` method. So if you want to get all the tracks for a specific collision, you will have to implement:
 
 ```cpp
 void process(o2::aod::Collision const& collision, o2::aod::Tracks &tracks) {
@@ -98,14 +98,14 @@ Also in this case the advantage is that your code might be up for parallelizatio
 
 ### Processing related tables
 
-For performance reasons, sometimes it's a good idea to split data in separate tables, so that once can request only the subset which is required for a given task. For example, so far the track related information is split in three tables: `Tracks`, `TrackCovs`, `TrackExtras`.
+For performance reasons, sometimes it's a good idea to split data in separate tables, so that once can request only the subset which is required for a given task. For example, so far the track related information is split in three tables: `Tracks`, `TracksCov`, `TracksExtra`.
 
 However you might need to get all the information at once. This can be done by asking for a `Join` table in the process method:
 
 ```cpp
 struct MyTask {
 
-  void process(soa::Join<aod::Tracks, aod::TracksExtras> const& mytracks) {
+  void process(soa::Join<aod::Tracks, aod::TracksExtra> const& mytracks) {
     for (auto& track : mytracks) {
       if (track.length()) {  // from TrackExtras
         tracks.alpha();      // from Tracks
@@ -136,11 +136,11 @@ Supported types for configurables are basic arithmetic types (e.g. `int`, `float
 
 ## Creating new collections
 
-In order to create new collections of objects, you need two things. First of all you need to define a datatype for it, then you need to specify that your analysis task will create such an object. Notice that in a given workflow, only one task is allowed to create a given type of object.
+In order to create new collections of objects, you need two things. First of all you need to define a data type for it, then you need to specify that your analysis task will create such an object. Notice that in a given workflow, only one task is allowed to create a given type of object.
 
 ### Introducing a new data type
 
-In order to define the datatype you need to use `DEFINE_SOA_COLUMN` and `DEFINE_SOA_TABLE` helpers, defined in `ASoA.h`. Assuming you want to extend the standard AOD format you will also need `Framework/AnalysisDataModel.h`. For example, to define an extra table where to define phi and eta, you first need to define the two columns:
+In order to define the data type you need to use `DEFINE_SOA_COLUMN` and `DEFINE_SOA_TABLE` helpers, defined in `ASoA.h`. Assuming you want to extend the standard AOD format you will also need `Framework/AnalysisDataModel.h`. For example, to define an extra table where to define phi and eta, you first need to define the two columns:
 
 ```cpp
 #include "Framework/ASoA.h"
@@ -188,7 +188,7 @@ etaphi(aod::track::Phi(calculatePhi(track), aod::track::Eta(calculateEta(track))
 
 ### Adding dynamic columns to a data type
 
-Sometimes columns are not backed by actual persisted data, but they are merely
+Sometimes columns are not backed by actual persistent data, but they are merely
 derived from it. For example you might want to have different representations
 (e.g. spherical, cylindrical) for a given persistent representation. You can
 do that by using the `DECLARE_SOA_DYNAMIC_COLUMN` macro.

@@ -1,6 +1,6 @@
 # PID in O2
 
-Here are described the PID working principles in O2 as well as hot to get PID information (expected values, separation et cetera) in your task.
+Here are described the PID working principles in O2 as well as how to get PID information (expected values, separation et cetera) in your task.
 
 ## Introduction
 
