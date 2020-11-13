@@ -9,7 +9,7 @@ These pages document everything you need to know about doing Run 3 analysis in A
 
 To install the O2 framework please follow the instructions provided in the official ALICE software page:
 
-[https://alice-doc.github.io/alice-analysis-tutorial/building/]()
+[https://alice-doc.github.io/alice-analysis-tutorial/building/](https://alice-doc.github.io/alice-analysis-tutorial/building/)
 
 ## Analysis framework
 
