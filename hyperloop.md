@@ -121,10 +121,10 @@ You can get to the _All Analyses_ page by using the main menu, or by the link in
 
 #### 1. Using the _My Analyses_ page:
 
-*  Inside of an analysis, click on the button `Enable/disable datasets 📝`. 
+*  Inside of an analysis, click on the button `Datasets and Settings 📝`. 
 
 <div align="center">
-<img src="images/enabledisableDatasets.png" width="50%">
+<img src="images/datasetandsettings.png" width="50%">
 </div>
 
 *  There is a list of _Enabled datasets in **Analysis**_. You can disable a dataset for that analysis by clicking on the button `❌`.
