@@ -113,6 +113,12 @@ You can get to the _All Analyses_ page by using the main menu, or by the link in
 
 * In _Derived Data_ the tables which are produced by the task are displayed. If activated, these are saved to the output if the train is run as a derived data production.
 
+* In _Test Statistics_ the different metrics following the tests this wagon was part of are displayed in three graphs. The first graph plots the _PSS Memory_ corresponding to each test run. The second one diplays the _CPU Time_, _Wall time_ and _Throughput_ along the test runs for this wagon. Finally, the third graph shows the _Output size_ at each test run.
+
+* Depending on the datasets this wagon is using, the user is able to choose the _Dataset_ on which the metrics mentioned above are plotted, from the upper-left dropdown. In case no tests were run on the chosen dataset, a message will appear stating this.
+
+* By clicking on the bullets representing the metric value at any of the test runs plotted, the user will open a new tab with the wagon test page.
+
 <div align="center">
 <img src="images/deriveddata.png" width="70%">
 </div>
