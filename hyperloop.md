@@ -113,14 +113,26 @@ You can get to the _All Analyses_ page by using the main menu, or by the link in
 
 * In _Derived Data_ the tables which are produced by the task are displayed. If activated, these are saved to the output if the train is run as a derived data production.
 
-* In _Test Statistics_ the different metrics following the tests this wagon was part of are displayed in three graphs. The first graph plots the _PSS Memory_ corresponding to each test run. The second one diplays the _CPU Time_, _Wall time_ and _Throughput_ along the test runs for this wagon. Finally, the third graph shows the _Output size_ at each test run.
+* _Test Statistics_ contains three graphs that display the different metrics following the tests this wagon was part of. The first graph plots the _PSS Memory_ corresponding to each test run. The second one diplays the _CPU Time_, _Wall time_ and _Throughput_ along the test runs for this wagon. Finally, the third graph shows the _Output size_ at each test run.
+
+<div align="center">
+<img src="images/testStatistics.png" width="70%">
+</div>
 
 * Depending on the datasets this wagon is using, the user is able to choose the _Dataset_ on which the metrics mentioned above are plotted, from the upper-left dropdown. In case no tests were run on the chosen dataset, a message will appear stating this.
 
-* By clicking on the bullets representing the metric value at any of the test runs plotted, the user will open a new tab with the wagon test page.
+<div align="center">
+<img src="images/datasetDropdown.png" width="70%">
+</div>
+
+* By clicking on the bullets representing the metric value at any of the test runs plotted, the user will open a new tab with the wagon test page. Likewise, in the upper-left corner, there is a link to the _Wagon History_ page, which will display the state evolution of the wagon.
 
 <div align="center">
 <img src="images/deriveddata.png" width="70%">
+</div>
+
+<div align="center">
+<img src="images/bullets.png" width="70%">
 </div>
 
 * In order to update the derived data configuration with the latest version of the workflow, click on the button `↻ sync` in _Derived data_. By synchronizing the derived data, the tables which no longer belong to the workflow will be removed, and the values of the tables will be updated.
