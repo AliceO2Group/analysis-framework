@@ -127,13 +127,24 @@ You can get to the _All Analyses_ page by using the main menu, or by the link in
 
 * By clicking on the bullets representing the metric value at any of the test runs plotted, the user will open a new tab with the wagon test page. Likewise, in the upper-left corner, there is a link to the _Wagon History_ page, which will display the state evolution of the wagon.
 
-<div align="center">
-<img src="images/deriveddata.png" width="70%">
-</div>
 
 <div align="center">
 <img src="images/bullets.png" width="70%">
 </div>
+
+<div align="center">
+<img src="images/deriveddata.png" width="70%">
+</div>
+
+##### <a name="editwagon"></a> 4. Wagon History:
+
+* In the _Wagon History_ page, there is a summary of the wagon's state from the creation until the last update. By clicking on the _+_ symbol, one can expand the information, showing the subwagons' details and the derived data at each timestamp.
+
+<div align="center">
+<img src="images/wagonHistory.png" width="70%">
+</div>
+
+* On the right side of the page, the user can select two timestamps in order to compare the state of the wagon between the two by clicking _Compare_. You can cancel your current selection by clicking _Unselect all_.
 
 * In order to update the derived data configuration with the latest version of the workflow, click on the button `↻ sync` in _Derived data_. By synchronizing the derived data, the tables which no longer belong to the workflow will be removed, and the values of the tables will be updated.
 
