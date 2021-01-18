@@ -131,7 +131,7 @@ You can get to the _All Analyses_ page by using the main menu, or by the link in
 <img src="images/datasetDropdown.png" width="70%">
 </div>
 
-* By clicking on the bullets representing the metric value at any of the test runs plotted, the user will open a new tab with the wagon test page. Likewise, in the upper-left corner, there is a link to the _Wagon History_ page, which will display the state evolution of the wagon.
+* By clicking on the bullets representing the metric value at any of the test runs plotted, the user will open a new tab with the wagon test page. Likewise, in the upper-left corner, there is a link to the [_Wagon **History**_](#wagonhistory) page, which will display the state evolution of the wagon.
 
 
 <div align="center">
@@ -139,7 +139,7 @@ You can get to the _All Analyses_ page by using the main menu, or by the link in
 </div>
 
 
-##### <a name="editwagon"></a> 4. Wagon History:
+##### <a name="wagonhistory"></a> 4. Wagon History:
 
 * In the _Wagon History_ page, there is a summary of the wagon's state from the creation until the last update. By clicking on the _+_ symbol, one can expand the information, showing the subwagons' details and the derived data at each timestamp.
 
@@ -147,9 +147,9 @@ You can get to the _All Analyses_ page by using the main menu, or by the link in
 <img src="images/WagonHistory.png" width="70%">
 </div>
 
-* On the right side of the page, the user can select two timestamps in order to compare the state of the wagon between the two by clicking _Compare_. You can cancel your current selection by clicking _Unselect all_.
+* On the right side of the page, the user can select two timestamps in order to compare the state of the wagon between the two by clicking _Compare_. This will lead to [_Compare Wagons_](#comparewagons) page. You can cancel your current selection by clicking _Unselect all_.
 
-
+##### <a name="comparewagons"></a> 5. Compare two wagons:
 
 ### <a name="enabledatasets"></a>Enabling datasets
 
