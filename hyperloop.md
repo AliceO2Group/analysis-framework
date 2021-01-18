@@ -223,7 +223,7 @@ When creating or enabling wagons, you can use a pull request instead of a packag
 <img src="images/dashboard.png" width="70%">
 </div>
 
-* By clicking the number of wagons wanted to be included in a train, the user can directly open the [_Train Submission_](#trainsubmission). Similarly, a link to the [_Train Runs_](#trainruns) is available by cliking the number of trains to be submitted to the grid, the number of running tests, or the number of finished trains.
+* By clicking the number of wagons waiting to be included in a train, the user can directly open the [_Train Submission_](#trainsubmission). Similarly, a link to the [_Train Runs_](#trainruns) is available by cliking the number of trains to be submitted to the grid, the number of running tests, or the number of finished trains.
 
 ## <a name="trainsubmission"></a>Train Submission
 * For a user, the _Train Submission_ page displays a read view only of datasets which have enabled wagons.
