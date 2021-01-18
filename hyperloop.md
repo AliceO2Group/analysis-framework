@@ -113,6 +113,12 @@ You can get to the _All Analyses_ page by using the main menu, or by the link in
 
 * In _Derived Data_ the tables which are produced by the task are displayed. If activated, these are saved to the output if the train is run as a derived data production.
 
+* In order to update the derived data configuration with the latest version of the workflow, click on the button `↻ sync` in _Derived data_. By synchronizing the derived data, the tables which no longer belong to the workflow will be removed, and the values of the tables will be updated.
+
+<div align="center">
+<img src="images/deriveddata.png" width="70%">
+</div>
+
 * _Test Statistics_ contains three graphs that display the different metrics following the tests this wagon was part of. The first graph plots the _PSS Memory_ corresponding to each test run. The second one diplays the _CPU Time_, _Wall time_ and _Throughput_ along the test runs for this wagon. Finally, the third graph shows the _Output size_ at each test run.
 
 <div align="center">
@@ -132,21 +138,18 @@ You can get to the _All Analyses_ page by using the main menu, or by the link in
 <img src="images/bullets.png" width="70%">
 </div>
 
-<div align="center">
-<img src="images/deriveddata.png" width="70%">
-</div>
 
 ##### <a name="editwagon"></a> 4. Wagon History:
 
 * In the _Wagon History_ page, there is a summary of the wagon's state from the creation until the last update. By clicking on the _+_ symbol, one can expand the information, showing the subwagons' details and the derived data at each timestamp.
 
 <div align="center">
-<img src="images/wagonHistory.png" width="70%">
+<img src="images/WagonHistory.png" width="70%">
 </div>
 
 * On the right side of the page, the user can select two timestamps in order to compare the state of the wagon between the two by clicking _Compare_. You can cancel your current selection by clicking _Unselect all_.
 
-* In order to update the derived data configuration with the latest version of the workflow, click on the button `↻ sync` in _Derived data_. By synchronizing the derived data, the tables which no longer belong to the workflow will be removed, and the values of the tables will be updated.
+
 
 ### <a name="enabledatasets"></a>Enabling datasets
 
