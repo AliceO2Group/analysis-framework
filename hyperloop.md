@@ -151,6 +151,10 @@ You can get to the _All Analyses_ page by using the main menu, or by the link in
 
 ##### <a name="comparewagons"></a> 5. Compare two wagons:
 
+* In the _Compare Wagons_ view, we can analyse the state of a wagon at two different timestamps. The _Wagon settings_ tab shows the changes regarding the name, workflow and dependencies and/or the common features between the two. By clicking on one of the dependencies, a new tab will open showing the comparison between the same two timestamps for the wagon clicked. 
+
+* The Derived data tab reflects the differences concerning the derived data at the two timestamps.
+
 ### <a name="enabledatasets"></a>Enabling datasets
 
 #### 1. Using the _My Analyses_ page:
