@@ -153,6 +153,10 @@ You can get to the _All Analyses_ page by using the main menu, or by the link in
 
 * In the _Compare Wagons_ view, we can analyse the state of a wagon at two different timestamps. The _Wagon settings_ tab shows the changes regarding the name, workflow and dependencies and/or the common features between the two. By clicking on one of the dependencies, a new tab will open showing the comparison between the same two timestamps for the wagon clicked. 
 
+<div align="center">
+<img src="images/compareWagons.png" width="70%">
+</div>
+
 * The Derived data tab reflects the differences concerning the derived data at the two timestamps.
 
 ### <a name="enabledatasets"></a>Enabling datasets
@@ -215,6 +219,10 @@ When creating or enabling wagons, you can use a pull request instead of a packag
 
 * The Dashboard displays the current state of the system by showing a number of status parameters related to wagons, trains and grid jobs. Additionally, the user can see the summary of the last week: average completion time, number of finished trains and wagon tests. 
 
+<div align="center">
+<img src="images/dashboard.png" width="70%">
+</div>
+
 * By clicking the number of wagons wanted to be included in a train, the user can directly open the [_Train Submission_](#trainsubmission). Similarly, a link to the [_Train Runs_](#trainruns) is available by cliking the number of trains to be submitted to the grid, the number of running tests, or the number of finished trains.
 
 ## <a name="trainsubmission"></a>Train Submission
@@ -245,8 +253,17 @@ When creating or enabling wagons, you can use a pull request instead of a packag
   * Killing a train by clicking on `Kill ☠️`.
   * Cloning a train in the tab `Clone`. When cloning a train, the wagons and dataset configuration used will be the same as of the original train. Other settings can be changed: package tag, target facility, slow train, derived data, automatic submission.
 * In the _Test Graphs_ tab, the user can plot the available metrics for the specific _Train run_. By hovering over the graph, the corresponding values are displayed in a dynamic window, stating the value for each participating wagon.
+
+  <div align="center">
+    <img src="images/testGraphs.png" width="70%">
+  </div>
+
   * The metric can be selected from the upper-left dropdown, and the graph will change accordingly.
   * The user can choose to plot the metric data per device, by checking the _Per Device_ near the dropdown.
+  
+  <div align="center">
+    <img src="images/testGraphsDevice.png" width="70%">
+  </div>
 
 
 ## <a name="legoexpert"></a>For the Run 2 LEGO train expert. What has changed?
