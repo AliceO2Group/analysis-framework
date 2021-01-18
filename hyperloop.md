@@ -211,6 +211,12 @@ When creating or enabling wagons, you can use a pull request instead of a packag
 * There is a read only view of all analyses available in the system. 
 * Wagons from any analysis available in the system can be cloned `🧬` to a user's analysis.
 
+## <a name="dashboard"></a>Dashboard
+
+* The Dashboard displays the current state of the system by showing a number of status parameters related to wagons, trains and grid jobs. Additionally, the user can see the summary of the last week: average completion time, number of finished trains and wagon tests. 
+
+* By clicking the number of wagons wanted to be included in a train, the user can directly open the [_Train Submission_](#trainsubmission). Similarly, a link to the [_Train Runs_](#trainruns) is available by cliking the number of trains to be submitted to the grid, the number of running tests, or the number of finished trains.
+
 ## <a name="trainsubmission"></a>Train Submission
 * For a user, the _Train Submission_ page displays a read view only of datasets which have enabled wagons.
 * For a train operator, the  _Train Submission_ page displays only datasets which have enabled wagons, and allows train composition, as well as submitting, modifying and killing a train.
