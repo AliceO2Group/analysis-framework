@@ -238,6 +238,10 @@ When creating or enabling wagons, you can use a pull request instead of a packag
   * <a name="submitfinalmerge"></a>When a dataset has activate final merge, a button `Submit final merge` appears after all the masterjobs are finished successfully.
   * Killing a train by clicking on `Kill ☠️`.
   * Cloning a train in the tab `Clone`. When cloning a train, the wagons and dataset configuration used will be the same as of the original train. Other settings can be changed: package tag, target facility, slow train, derived data, automatic submission.
+* In the _Test Graphs_ tab, the user can plot the available metrics for the specific _Train run_. By hovering over the graph, the corresponding values are displayed in a dynamic window, stating the value for each participating wagon.
+  * The metric can be selected from the upper-left dropdown, and the graph will change accordingly.
+  * The user can choose to plot the metric data per device, by checking the _Per Device_ near the dropdown.
+
 
 ## <a name="legoexpert"></a>For the Run 2 LEGO train expert. What has changed?
 
