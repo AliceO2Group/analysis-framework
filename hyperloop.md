@@ -119,7 +119,7 @@ You can get to the _All Analyses_ page by using the main menu, or by the link in
 <img src="images/deriveddata.png" width="70%">
 </div>
 
-* _Test Statistics_ contains three graphs that display the different metrics following the tests this wagon was part of. The first graph plots the _PSS Memory_ corresponding to each test run. The second one diplays the _CPU Time_, _Wall time_ and _Throughput_ along the test runs for this wagon. Finally, the third graph shows the _Output size_ at each test run.
+* _Test Statistics_ contains three graphs that display different metrics following the tests this wagon was part of. The first graph plots the _PSS Memory_ corresponding to each test run. The second one diplays the _CPU Time_, _Wall time_ and _Throughput_ along the test runs for this wagon. Finally, the third graph shows the _Output size_ at each test run.
 
 <div align="center">
 <img src="images/testStatistics.png" width="70%">
@@ -153,11 +153,11 @@ You can get to the _All Analyses_ page by using the main menu, or by the link in
 
 * In the _Compare Wagons_ view, we can analyse the state of a wagon at two different timestamps. The _Wagon settings_ tab shows the changes regarding the name, workflow and dependencies and/or the common features between the two. By clicking on one of the dependencies, a new tab will open showing the comparison between the same two timestamps for the wagon clicked. 
 
+* The Derived data tab reflects the differences concerning the derived data at the two timestamps.
+
 <div align="center">
 <img src="images/compareWagons.png" width="70%">
 </div>
-
-* The Derived data tab reflects the differences concerning the derived data at the two timestamps.
 
 ### <a name="enabledatasets"></a>Enabling datasets
 
