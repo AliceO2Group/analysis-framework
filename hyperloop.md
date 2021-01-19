@@ -113,11 +113,51 @@ You can get to the _All Analyses_ page by using the main menu, or by the link in
 
 * In _Derived Data_ the tables which are produced by the task are displayed. If activated, these are saved to the output if the train is run as a derived data production.
 
+* In order to update the derived data configuration with the latest version of the workflow, click on the button `↻ sync` in _Derived data_. By synchronizing the derived data, the tables which no longer belong to the workflow will be removed, and the values of the tables will be updated.
+
 <div align="center">
 <img src="images/deriveddata.png" width="70%">
 </div>
 
-* In order to update the derived data configuration with the latest version of the workflow, click on the button `↻ sync` in _Derived data_. By synchronizing the derived data, the tables which no longer belong to the workflow will be removed, and the values of the tables will be updated.
+* _Test Statistics_ contains three graphs that display different metrics following the tests this wagon was part of. The first graph plots the _PSS Memory_ corresponding to each test run. The second one diplays the _CPU Time_, _Wall time_ and _Throughput_ along the test runs for this wagon. Finally, the third graph shows the _Output size_ at each test run.
+
+<div align="center">
+<img src="images/testStatistics.png" width="70%">
+</div>
+
+* Depending on the datasets this wagon is using, the user is able to choose the _Dataset_ on which the metrics mentioned above are plotted, from the upper-left dropdown. In case no tests were run on the chosen dataset, a message will appear stating this.
+
+<div align="center">
+<img src="images/datasetDropdown.png" width="70%">
+</div>
+
+* By clicking on the bullets representing the metric value at any of the test runs plotted, the user will open a new tab with the wagon test page. Likewise, in the upper-left corner, there is a link to the [_Wagon **History**_](#wagonhistory) page, which will display the state evolution of the wagon.
+
+
+<div align="center">
+<img src="images/bullets.png" width="70%">
+</div>
+
+
+##### <a name="wagonhistory"></a> 4. Wagon History:
+
+* In the _Wagon History_ page, there is a summary of the wagon's state from the creation until the last update. By clicking on the _+_ symbol, one can expand the information, showing the subwagons' details and the derived data at each timestamp.
+
+<div align="center">
+<img src="images/WagonHistory.png" width="70%">
+</div>
+
+* On the right side of the page, the user can select two timestamps in order to compare the state of the wagon between the two by clicking _Compare_. This will lead to [_Compare Wagons_](#comparewagons) page. You can cancel your current selection by clicking _Unselect all_.
+
+##### <a name="comparewagons"></a> 5. Compare two wagons:
+
+* In the _Compare Wagons_ view, we can analyse the state of a wagon at two different timestamps. The _Wagon settings_ tab shows the changes regarding the name, workflow and dependencies and/or the common features between the two. By clicking on one of the dependencies, a new tab will open showing the comparison between the same two timestamps for the wagon clicked. 
+
+* The Derived data tab reflects the differences concerning the derived data at the two timestamps.
+
+<div align="center">
+<img src="images/compareWagons.png" width="70%">
+</div>
 
 ### <a name="enabledatasets"></a>Enabling datasets
 
@@ -175,6 +215,16 @@ When creating or enabling wagons, you can use a pull request instead of a packag
 * There is a read only view of all analyses available in the system. 
 * Wagons from any analysis available in the system can be cloned `🧬` to a user's analysis.
 
+## <a name="dashboard"></a>Dashboard
+
+* The Dashboard displays the current state of the system by showing a number of status parameters related to wagons, trains and grid jobs. Additionally, the user can see the summary of the last week: average completion time, number of finished trains and wagon tests. 
+
+<div align="center">
+<img src="images/dashboard.png" width="70%">
+</div>
+
+* By clicking the number of wagons waiting to be included in a train, the user can directly open the [_Train Submission_](#trainsubmission). Similarly, a link to the [_Train Runs_](#trainruns) is available by clicking the number of trains to be submitted to the grid, the number of running tests, or the number of finished trains.
+
 ## <a name="trainsubmission"></a>Train Submission
 * For a user, the _Train Submission_ page displays a read view only of datasets which have enabled wagons.
 * For a train operator, the  _Train Submission_ page displays only datasets which have enabled wagons, and allows train composition, as well as submitting, modifying and killing a train.
@@ -202,6 +252,19 @@ When creating or enabling wagons, you can use a pull request instead of a packag
   * <a name="submitfinalmerge"></a>When a dataset has activate final merge, a button `Submit final merge` appears after all the masterjobs are finished successfully.
   * Killing a train by clicking on `Kill ☠️`.
   * Cloning a train in the tab `Clone`. When cloning a train, the wagons and dataset configuration used will be the same as of the original train. Other settings can be changed: package tag, target facility, slow train, derived data, automatic submission.
+* In the _Test Graphs_ tab, the user can plot the available metrics for the specific _Train run_. By hovering over the graph, the corresponding values are displayed in a dynamic window, stating the value for each participating wagon.
+
+  <div align="center">
+    <img src="images/testGraphs.png" width="70%">
+  </div>
+
+  * The metric can be selected from the upper-left dropdown, and the graph will change accordingly.
+  * The user can choose to plot the metric data per device, by checking the _Per Device_ near the dropdown.
+  
+  <div align="center">
+    <img src="images/testGraphsDevice.png" width="70%">
+  </div>
+
 
 ## <a name="legoexpert"></a>For the Run 2 LEGO train expert. What has changed?
 
