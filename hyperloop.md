@@ -25,6 +25,7 @@ Hyperloop provides a web interface for users and operators which allows to:
 The views available in the Hyperloop framework are:
 * [My Analyses](#myanalyses)
 * [All Analyses](#allanalyses)
+* [Dashboard](#dashboard)
 * [Train Submission](#trainsubmission)
 * [Train Runs](#trainruns)
 * For a user, the **Datasets** page displays a read view only of all the datasets available in the system. For a train operator, the **Datasets** page allows creation, configuration and deletion of datasets. 
@@ -275,6 +276,7 @@ When creating or enabling wagons, you can use a pull request instead of a packag
   4. **Train Runs** is a webpage designed for operators. It displays all train runs available in the system. The actions permitted are submitting, modifying and killing a train.
   5. **Datasets**, for the users, it is a read only view of all the _Datasets_ available in the system. For the train operators, it allows creation,configuration and deletion of _Datasets_. The _Datasets_ are directly created from runlists already defined in the _DPG Runlists_ webpage instead of copying from a text file in the twiki page like the LEGO trains. 
   6. **DPG Runlists** is a webpage designed for the DPG. For the DPG experts, it allows creation, configuration and deletion of runlists, instead of defining them in a twiki page. For the users it offers a read only view of all DPG runlists available in the system.
+  7. **Dashboard** provides a summary of the current state of the system by displaying a set of status parameters. The user can check information such as the number of ongoing tests, the number running trains and the current grid jobs. Moreover, an overview of the previous week is presented.
 
 * There is a history feature for wagons and datasets. You can access it by clicking on the button `📜` available inside of a wagon/dataset view. A detailed view of what has been created/updated/removed from the wagon/dataset is shown, as well as the username and the time when the change was made.
 <div align="center">
