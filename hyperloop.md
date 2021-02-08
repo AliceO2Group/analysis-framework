@@ -291,7 +291,7 @@ When creating or enabling wagons, you can use a pull request instead of a packag
 
 * After [enabling a wagon](#enablewagon) in a dataset, the wagon is automatically tested, and the user can follow the test status (`⌛️`,`⏳`,`❗️`,`🌟`,`💣`) in the _My Analyses_ page.
 
-* **Performance Graphs** page allows the user to upload his own local metrics file, and then generate the test graphs specific to that file. These are the same type of graphs produced in _Test Graphs_ tab of the train run. This page can be accessed at: https://alimonitor.cern.ch/hyperloop/performance-graphs.
+* **Performance Graphs** page allows the user to upload his own local metrics file, and then generate the test graphs specific to that file. These are the same type of graphs produced in the _Test Graphs_ tab of the train run. This page can be accessed at: https://alimonitor.cern.ch/hyperloop/performance-graphs.
 <div align="center">
 <img src="images/performanceGraphs.png" width="100%">
 </div>
