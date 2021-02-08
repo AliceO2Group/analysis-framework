@@ -199,7 +199,7 @@ You can enable a wagon in the _My Analyses_ page. Inside of the _Analysis_ there
  
 ### <a name="wagontest"></a>Wagon tests
 * The wagon test can be accessed in the _My Analyses_ page by clicking on the buttons: `⏳`,`🌟`, `❗️` or `💣`.
-* If the TEST_ID is known, it can be directly accessed using the url https://alimonitor.cern.ch/hyperloop/wagon-test/TEST_ID. 
+* If the TEST_ID is known, it can be directly accessed using the url <a href="https://alimonitor.cern.ch/hyperloop/wagon-test/TEST_ID" target="_blank">https://alimonitor.cern.ch/hyperloop/wagon-test/TEST_ID</a>. 
 * Inside of a wagon test, the test configuration, results, graphs and statistics are displayed.
 * The test output can be accessed by clicking on the buttons: `⏳`,`🌟`, `❗️` or `💣`, or the link `(test output)` 
 * Whenever a wagon configuration is changed, if there are enabled wagons (including wagons that depend on it), then the test is automatically reset and a new test is launched. However, if the enabled wagon was already composed in a train, the train will run with the wagons and dataset configuration of the time at which the train was created.
@@ -245,7 +245,7 @@ When creating or enabling wagons, you can use a pull request instead of a packag
 ## <a name="trainruns"></a>Train Runs
 * For a user, the _Train Runs_ page displays a read view only of all train runs available in the system.
 * For a train operator, the _Train Runs_ page displays all trains available in the system, and allows submitting, modifying and killing a train.
-* The train run detail can be accessed by clicking on the TRAIN_ID, or with the url https://alimonitor.cern.ch/hyperloop/train-run/TRAIN_ID.
+* The train run detail can be accessed by clicking on the TRAIN_ID, or with the url <a href="https://alimonitor.cern.ch/hyperloop/train-run/TRAIN_ID" target="_blank">https://alimonitor.cern.ch/hyperloop/train-run/TRAIN_ID</a>.
 * The actions allowed in a train run:
   * Adding a _comment_.
   * <a name="decompose"></a>Decomposing a train run by clicking on `Decompose ☠️`. When decomposing a train run, the wagons in it will be allowed to be composed in a new train run.
@@ -291,7 +291,7 @@ When creating or enabling wagons, you can use a pull request instead of a packag
 
 * After [enabling a wagon](#enablewagon) in a dataset, the wagon is automatically tested, and the user can follow the test status (`⌛️`,`⏳`,`❗️`,`🌟`,`💣`) in the _My Analyses_ page.
 
-* **Performance Graphs** page allows the user to upload his own local metrics file, and then generate the test graphs specific to that file. These are the same type of graphs produced in the _Test Graphs_ tab of the train run. This page can be accessed at: https://alimonitor.cern.ch/hyperloop/performance-graphs.
+* **Performance Graphs** page allows the user to upload his own local metrics file, and then generate the test graphs specific to that file. These are the same type of graphs produced in the _Test Graphs_ tab of the train run. This page can be accessed at: <a href="https://alimonitor.cern.ch/hyperloop/performance-graphs" target="_blank">https://alimonitor.cern.ch/hyperloop/performance-graphs</a>.
 <div align="center">
 <img src="images/performanceGraphs.png" width="100%">
 </div>
