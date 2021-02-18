@@ -251,6 +251,8 @@ struct MyTask {
 
 You can specify multiple filters which will be applied in a sequence effectively resulting in the intersection of all them.
 
+Functions can be used, prefixed with an "n", such as: absolute value (nabs), square-root (nsqrt), power (npow), trigonometric functions (ncos, nsin, ntan, nacos, nasin, natan), exponent (nexp) and logarithm (nlog and nlog10). Those are defined in the file [Expressions.h](https://github.com/AliceO2Group/AliceO2/blob/4adfa838d7fa71ac579c2de9d41cdec639cfa118/Framework/Core/include/Framework/Expressions.h).
+
 ### Partitioning your inputs
 
 Filtering is not the only kind of conditional processing one wants to do. Sometimes you need to divide your data in two or more partitions. This is done via the `Partition` helper:
