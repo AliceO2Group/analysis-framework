@@ -250,6 +250,7 @@ struct MyTask {
 `filteredTracks` will contain only the tracks in the table which pass the condition `aod::track::pt > 1.0f`. 
 
 You can specify multiple filters which will be applied in a sequence effectively resulting in the intersection of all them.
+Functions can be used, prefixed with an "n", such as: absolute value (nabs), square-root (nsqrt), power (npow), trigonometric functions (ncos, nsin, ntan, nacos, nasin, natan), exponent (nexp) and logarithm (nlog and nlog10).
 
 ### Partitioning your inputs
 
