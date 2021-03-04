@@ -1,4 +1,4 @@
-# Downloading a small AO2D for local tests
+# Downloading a small AO2D for local test of workflows
 
 If you need single input files from the same train, please take them from the train test, by:
 
