@@ -34,3 +34,7 @@ Please go here: [PID](pid.md)
 ## The Hyperloop train framework
 
 How to run your analysis on the Grid is explained [here](hyperloop.md)
+
+## Where to find AO2Ds for local tests
+Please go here [here](DownloadAo2d.md)
+
