@@ -1,0 +1,9 @@
+<div class="toasts instruction mb-4">
+    <div class="title px-2 py-1">
+        <i class="fa fa-gavel"></i>
+        {{ __.instruction | default: "Instruction" }}
+    </div>
+    <div class="content px-2 py-3">
+        {{ codes | markdownify | strip_newlines -}}
+    </div>
+</div>
