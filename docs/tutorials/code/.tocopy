@@ -1,0 +1,27 @@
+#!/bin/bash
+
+. $HOME/tools/.setO2
+
+destpath="/home/pbuehler/physics/projects/alice/O2/documentation/documentation/docs/tutorials/code"
+
+tutfiles=(  \
+  "aodreader.cxx"  \
+  "aodwriter.cxx"  \
+  "associatedExample.cxx" \
+  "ccdbaccess.cxx"  \
+  "collisionTracksIteration.cxx"  \
+  "eventMixing.cxx" \
+  "filters.cxx" \
+  "histogramRegistry.cxx" \
+  "histograms.cxx"  \
+  "mcHistograms.cxx"  \
+  "newCollections.cxx"  \
+  "partitions.cxx" \
+  "trackIteration.cxx"  \
+)
+
+
+for file in ${tutfiles[@]}
+do
+  cp ${ALIBUILD_WORK_DIR}/../O2/Analysis/Tutorials/src/${file} ${destpath}/.
+done
