@@ -7,4 +7,4 @@ These pages document everything you need to know about doing Run 3 analysis in A
 
 and finally get some practice!
 
-The site can be viewed at [https://pbuehler.github.io/documentation/](https://pbuehler.github.io/documentation/)
+The site can be viewed at [https://aliceo2group.github.io/analysis-framework/](https://aliceo2group.github.io/analysis-framework/)
