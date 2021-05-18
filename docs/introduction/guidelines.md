@@ -11,7 +11,7 @@ target="_blank">repository</a> under the directory **docs**.
 
 They are converted by the <a href="https://docs.github.com/en/pages"
 target="_blank">GitHub Pages</a> engine into the documentation website, which
-consists of static html files. The html files are place into the **_site/docs**
+consists of static html files. The html files are placed into the **_site/docs**
 folder of the git repository. For details about the markdown flavor used by
 GitHub see GitHubs specific <a
 href="https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github"
