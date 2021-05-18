@@ -12,20 +12,20 @@ target="_blank">repository</a> under the directory **docs**.
 They are converted by the <a href="https://docs.github.com/en/pages"
 target="_blank">GitHub Pages</a> engine into the documentation website, which
 consists of static html files. The html files are place into the **_site/docs**
-folder of the git repository. For details about the markdown flovour used by
+folder of the git repository. For details about the markdown flavor used by
 GitHub see GitHubs specific <a
 href="https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github"
 target="_blank">documentation</a>.
 
 ### Testing off-line
 
-Be aware that changes to the repository are immediately rendered automatically. So it is recommended to test changes localy before applying them to the GitHub repository.
+Be aware that changes to the repository are immediately rendered automatically. So it is recommended to test changes locally before applying them to the GitHub repository.
 
 The procedure to set up the site locally is described <a
 href="https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/testing-your-github-pages-site-locally-with-jekyll"
 target="_blank">here</a>.
 
-### Organisation
+### Organization
 
 The source files are organized in a directory structure as outlined below. It consists of a number of subdirectories in the main directory docs/. Each subdirectory contains a README.md and any number of documentation files.
 
@@ -64,7 +64,7 @@ n determines the sequence the items appear in the menu. If n is not provided the
 
 ### Headers
 
-Any level of header can be used. Be aware, that it is the level 2 headers which are indluded in the site menu.
+Any level of header can be used. Be aware, that it is the level 2 headers which are included in the site menu.
 
 
 ### Links
@@ -103,9 +103,9 @@ In contrast to the local case this method opens the linked page in a new window 
 
 Markdown provides several methods to highlight text.
 
-In order to highlight blocks of code use fenced code blocks. Fenced code blocks are marked by two lines with three back ticks ```` ``` ```` befor and after the text to display in a box. In order to have the syntax of the code highlighted you can specify a language next to the backticks before the fenced code block, e.g. ```` ```json ````.
+In order to highlight blocks of code use fenced code blocks. Fenced code blocks are marked by two lines with three back ticks ```` ``` ```` before and after the text to display in a box. In order to have the syntax of the code highlighted you can specify a language next to the back ticks before the fenced code block, e.g. ```` ```json ````.
 
-In addition to languages other specifications of fenced blocks are available. Use these to emphasize specific information. The available flavours are listed below.
+In addition to languages other specifications of fenced blocks are available. Use these to emphasize specific information. The available flavors are listed below.
 
 
 ```note
