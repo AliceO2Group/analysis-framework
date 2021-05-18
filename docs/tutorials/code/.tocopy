@@ -2,7 +2,7 @@
 
 . $HOME/tools/.setO2
 
-destpath="/home/pbuehler/physics/projects/alice/O2/documentation/analysis-framework/analysis-framework/docs/tutorials/code"
+destpath="/home/pbuehler/physics/projects/alice/O2/documentation/analysis-framework/docs/tutorials/code"
 
 tutfiles=(  \
   "associatedExample.cxx"  \
