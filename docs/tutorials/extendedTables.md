@@ -11,13 +11,13 @@ Learn how add new columns to existing tables, use dynamic and expression columns
 ```
 
 <div style="margin-bottom:5mm">
-  source: <a href="https://github.com/pbuehler/documentation/blob/main/docs/tutorials/code/extendedTables.cxx" target="_blank">extendedTables.cxx</a><br>
+  source: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev/Analysis/Tutorials/src/extendedTables.cxx" target="_blank">extendedTables.cxx</a><br>
   Executable: o2-analysistutorial-extended-tables
 </div>
   
 
-<a name="atask"></a>
-### ATask
+<a name="extendtable"></a>
+### ExtendTable
 
 Existing tables can be extended with additional expression columns using the 'Extend" function. The first step is the declaration of the new expression column (see also tutorial [Creating Tables](creatingTables)).
 
@@ -35,7 +35,7 @@ DECLARE_SOA_EXPRESSION_COLUMN(P2exp, p2exp, float, track::p * track::p);
 Then within the process function a new table table_extension, consisting of the table o2::aod::Tracks and the new column is created.
 
 ```cpp
-struct ATask {
+struct ExtendTable {
   // group tracks according to collisions
   void process(aod::Collision const&, aod::Tracks const& tracks)
   {
@@ -47,8 +47,8 @@ struct ATask {
 
 Note that the argument of the Extend function (here track) is a table object and needs to include all information required to fill the new table.
 
-<a name="btask"></a>
-### BTask
+<a name="attachcolumn"></a>
+### AttachColumn
 
 Extend can only be used with expression columns. The function to extend a table with a dynamic column is `Attach`.
 
@@ -67,19 +67,19 @@ DECLARE_SOA_DYNAMIC_COLUMN(R2dyn, r2dyn, [](float x, float y) -> float { return 
 and in this example add it with the Attach function to the table Tracks.
 
 ```cpp
-structBTask {
+struct AttachColumn {
   void process(aod::Collision const&, aod::Tracks const& tracks)
   {
     auto table_extension = soa::Attach<aod::Tracks, aod::extension::R2dyn<aod::track::X,aod::track::Y> (tracks);
 ```
 
-<a name="ctask"></a>
-### CTask
+<a name="extendandattach"></a>
+### ExtendAndAttach
 
-The two types of extension can be combined as demonstrated in CTask.
+The two types of extension can be combined as demonstrated in task ExtendAndAttach.
 
-<a name="dtask"></a>
-### DTask and ETask
+<a name="spawndynamiccolumns"></a>
+### SpawnDynamicColumns and ProcessExtendedTables
 
 A Similar effect can be achieved by joining tables with the soa::Join helper function. Again we need some declarations at the beginning.
 
@@ -115,7 +115,7 @@ DynTable is a table with a few dynamic columns and has to be created and filled 
 
 ```cpp
 // spawn ExTable and produce DynTable
-struct DTask {
+struct SpawnDynamicColumns {
   Produces<aod::DynTable> dyntable;
   Spawns<aod::ExTable> extable;
 
@@ -128,11 +128,14 @@ struct DTask {
 };
 ```
 
-In ETask the two tables are joined and used as an argument for the process function.  Note, that a table which is Spawned in a given task can not be consumed (used in the process function) in the same task. That is why table ExTable is Spawned in task DTask before it can be consumed in task ETask.
+In task ProcessExtendedTables the two tables are joined and used as an argument
+for the process function.  Note, that a table which is Spawned in a given task
+can not be consumed (used in the process function) in the same task. That is why
+table ExTable is Spawned in task SpawnDynamicColumns before it can be consumed in task ProcessExtendedTables.
 
 ```cpp
 // loop over the joined table <ExTable, DynTable>
-struct ETask {
+struct ProcessExtendedTables {
   using allinfo = soa::Join<aod::ExTable,aod::DynTable>;
   
   void process(aod::Collision const&, allinfo const& tracks)

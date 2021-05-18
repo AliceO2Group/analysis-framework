@@ -17,20 +17,20 @@ Grouping (see e.g. tutorial [Table Combinations](tableCombinations.md)) is also 
 <a name="filter"></a>
 ## Filter
 <div style="margin-bottom:5mm">
-  source: <a href="https://github.com/pbuehler/documentation/blob/main/docs/tutorials/code/filters.cxx" target="_blank">filters.cxx</a><br>
+  source: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev/Analysis/Tutorials/src/filters.cxx" target="_blank">filters.cxx</a><br>
   Executable: o2-analysistutorial-filters
 </div>
 
 Filters are used to select table entries only which comply with given reqirements.
 
-<a name="btask"></a>
-### BTask
+<a name="spawnextendedtables"></a>
+### SpawnExtendedTables
 
-In BTask a couple of filters are defined. One of them (posZfilter) acts on collisions, the others on tracks. Note, that Filters is defined in namespace o2::framework::expressions.
+In task SpawnExtendedTables a couple of filters are defined. One of them (posZfilter) acts on collisions, the others on tracks. Note, that Filters is defined in namespace o2::framework::expressions.
 
 ```cpp
 
-struct BTask {
+struct SpawnExtendedTables {
   .
   .
   Configurable<float> ptlow{"ptlow", 0.5f, ""};
@@ -71,12 +71,12 @@ Filters defined in front can be applied to the arguments of the process function
 <a name="partition"></a>
 ## Partition
 <div style="margin-bottom:5mm">
-  source: <a href="https://github.com/pbuehler/documentation/blob/main/docs/tutorials/code/filters.cxx" target="_blank">partitions.cxx</a><br>
+  source: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev/Analysis/Tutorials/src/partitions.cxx" target="_blank">partitions.cxx</a><br>
   Executable: o2-analysistutorial-partitions
 </div>
 
-<a name="atask"></a>
-### ATask
+<a name="partitionoutside"></a>
+### PartitionOutside
 
 Partitions are subsets of existing tables, subsets of rows which are consistent
 with set requirements. The Partition function is templated and takes the type of
@@ -86,7 +86,7 @@ the process function. Note how in this example Filter and Partition are
 combined.
 
 ```cpp
-struct ATask {
+struct PartitionOutside {
   .
   .
   .
@@ -124,15 +124,15 @@ struct ATask {
 
 ```
 
-<a name="btask"></a>
-### BTask
+<a name="partitioninside"></a>
+### PartitionInside
 
 Partitions can also be defined and used within the process function. in order to
 have the partition filled use the bindTable(T t) method where t is the table the
 partition shall be applied to.
 
 ```cpp
-struct BTask {
+struct PartitionInside {
   void process(aod::Collisions const& collisions, aod::Tracks& tracks)
   {
     for (auto& c : collisions) {

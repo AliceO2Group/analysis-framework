@@ -10,11 +10,11 @@ title: Creating Tables
 Learn how to declare and produce new tables.
 ```
 <div style="margin-bottom:5mm">
-  source: <a href="https://github.com/pbuehler/documentation/blob/main/docs/tutorials/code/newCollections.cxx" target="_blank">newCollections.cxx</a><br>
+  source: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev/Analysis/Tutorials/src/newCollections.cxx" target="_blank">newCollections.cxx</a><br>
   Executable: o2-analysistutorial-new-collections
 </div>
 
-Before we come to discussing the tutorial [code](#atask) a few general words about creating tables.
+Before we come to discussing the tutorial [code](#produceetaphi) a few general words about creating tables.
 
 <a name="declareTables"></a>
 ### Declaration of tables
@@ -312,8 +312,8 @@ a column (tab.pt() e.g. gives access to an element of the column which was decla
 This tutorial demonstrates the creation and filling of normal tables. The usage of index tables is explained in tutorial [Index Tables](indexTables.md).
 
 
-<a name="atask"></a>
-### ATask
+<a name="produceetaphi"></a>
+### ProduceEtaPhi
 
 In order to avoid naming conflicts between different tasks it is advisable to declare new columns in subspaces of the namespace o2::aod and the new tables in namespace o2::aod. 
 
@@ -336,7 +336,7 @@ Now that the table is declared we can use it to create a corresponding table obj
 The filling of the table etaphi is done with the method (... ) which takes as many arguments as columns are available.
 
 ```cpp
-struct ATask {
+struct ProduceEtaPhi {
   // declare production of table etaphi
   Produces<aod::EtaPhi> etaphi;
 
@@ -353,7 +353,7 @@ struct ATask {
 };
 ```
 
-<a name="btask"></a>
-### BTask and CTask
+<a name="consumeetaphi"></a>
+### ConsumeEtaPhi and LoopEtaPhi
 
-Within all tasks of a workflow the such created and filled table is available and hence can be use for further calculations. This is demonstrated with BTask and CTask of this tutorial.
+Within all tasks of a workflow the such created and filled table is available and hence can be use for further calculations. This is demonstrated with the tasks ConsumeEtaPhi and LoopEtaPhi of this tutorial.
