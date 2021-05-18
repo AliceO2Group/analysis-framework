@@ -8,7 +8,7 @@ Learn how to create, fill, and manage histograms and other objects
 ```
 
 <div style="margin-bottom:5mm">
-  Source: <a href="https://github.com/pbuehler/documentation/blob/main/docs/tutorials/code/histogramRegistry.cxx" target="_blank">histogramRegistry.cxx</a><br>
+  Source: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev/Analysis/Tutorials/src/histogramRegistry.cxx" target="_blank">histogramRegistry.cxx</a><br>
   Executable: o2-analysistutorial-histogram-registry
 </div>
 

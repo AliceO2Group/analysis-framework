@@ -11,8 +11,8 @@ Learn how to customize the reading of tables from root files. Write tables selec
 ```
 
 <div style="margin-bottom:5mm">
-  Sources: <a href="https://github.com/pbuehler/documentation/blob/main/docs/tutorials/code/tableIOout.cxx" target="_blank">tableIOout.cxx</a>
-/ <a href="https://github.com/pbuehler/documentation/blob/main/docs/tutorials/code/tableIOin.cxx" target="_blank">tableIOin.cxx</a><br>
+  Sources: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev/Analysis/Tutorials/src/tableIOout.cxx" target="_blank">tableIOout.cxx</a>
+/ <a href="https://github.com/AliceO2Group/AliceO2/tree/dev/Analysis/Tutorials/src/tableIOin.cxx" target="_blank">tableIOin.cxx</a><br>
   Executables: o2-analysistutorial-tableioout, o2-analysistutorial-tableioin
 </div>
 
@@ -58,7 +58,7 @@ DECLARE_SOA_TABLE(MinMaxEta, "AOD", "MINMAXETA",
 } // namespace o2::aod
 ```
 
-The table MinMaxPt is produced in ATask but not consumed, means there is no other task which uses the table. The table is dangling. Table MinMaxEta on the other hand is produced in BTask and consumed by CTask, hence not dangling.
+The table MinMaxPt is produced in task ProduceMinMaxPt but not consumed, means there is no other task which uses the table. The table is dangling. Table MinMaxEta on the other hand is produced in task ProduceMinMaxEta and consumed by task ConsumeMinMaxEta, hence not dangling.
 
 Writing out dangling tables is easy. For this use
 
@@ -151,7 +151,7 @@ DECLARE_SOA_TABLE(EtaRange, "AOD", "ETARANGE",
 using namespace o2;
 using namespace o2::framework;
 
-struct ATask {
+struct ProduceMinMaxPt {
   void process(aod::PtRange const& ptranges, aod::EtaRange const& etaranges)
   {
     // check ptranges and etaranges to have same number of rows

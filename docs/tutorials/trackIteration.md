@@ -10,12 +10,12 @@ Learn how to access the tracks and their measured quantities.
 ```
 
 <div style="margin-bottom:5mm">
-  Source: <a href="https://github.com/pbuehler/documentation/blob/main/docs/tutorials/code/trackIteration.cxx" target="_blank">trackIteration.cxx</a><br>
+  Source: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev/Analysis/Tutorials/src/trackIteration.cxx" target="_blank">trackIteration.cxx</a><br>
   Executable: o2-analysistutorial-track-iteration
 </div>
 
-<a name="atask"></a>
-### ATask
+<a name="singletracks"></a>
+### SingleTracks
 
 Information about the tracks is contained in the tables `Tracks`, `TracksCov`, and `TracksExtra`. The respective iterators are defined as `Track`, `TrackCov`, and `TrackExtra`.
 
@@ -57,10 +57,10 @@ void process(aod::fullTrack const& fullTrack)
 }
 ```
 
-<a name="btask"></a>
-### BTask
+<a name="alltracks"></a>
+### AllTracks
 
-In the above <a href="#atask">example</a> the processing loops over all tracks of the input files. Within the processing function only one specific track is available. This is achieved by using the iterator version `Track` of table `Tracks`.
+In the above <a href="#singletracks">example</a> the processing loops over all tracks of the input files. Within the processing function only one specific track is available. This is achieved by using the iterator version `Track` of table `Tracks`.
 
 A run3 analysis however is more likely based on data frames and thus looping over data frames will often be required. To have all tracks of a data frame simultaneously available in the process function one needs to subscribing to table `Tracks` or to any join of the track tables.
 

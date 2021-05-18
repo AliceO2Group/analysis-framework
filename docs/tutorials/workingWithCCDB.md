@@ -8,7 +8,7 @@ Learn how to access and use the Conditions and Calibration DataBase (CCDB)
 ```
 
 <div style="margin-bottom:5mm">
-  Source: <a href="https://github.com/pbuehler/documentation/blob/main/docs/tutorials/code/ccdbaccess.cxx" target="_blank">ccdbaccess.cxx</a><br>
+  Source: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev/Analysis/Tutorials/src/ccdbaccess.cxx" target="_blank">ccdbaccess.cxx</a><br>
   Executable: o2-analysistutorial-ccdbaccess
 </div>
 
