@@ -19,7 +19,7 @@ The histogram registry is an object to create and manage histograms in a consist
 ROOT provides an extensive list of histogram types. So why would one create a new interface? The reason is to offload histogram/object creation and management to the analysis framework and to allow with this for optimization. It is therefore recommended to use HistogramRegistry to create and work with histograms.
 
 The  HistogramRegistry is a container for different types of ROOT histograms.
-The list of supported ROOT histogram types can be found in <a href="https://github.com/AliceO2Group/AliceO2/blob/dev/Framework/Core/include/Framework/HistogramRegistry.h" target="_blank">HistogramRegistry.h</a>.
+The list of supported ROOT histogram types can be found in <a href="https://github.com/AliceO2Group/AliceO2/blob/dev/Framework/Core/include/Framework/HistogramSpec.h" target="_blank">HistogramSpec.h</a>.
 
 The HistogramRegistry and its functionality is described in detail [here](../framework/framework.md#histogramregistry).
 

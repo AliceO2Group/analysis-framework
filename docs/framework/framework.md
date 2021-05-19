@@ -140,16 +140,28 @@ struct MyTask : AnalysisTask {
 
 See also tutorials [Track Iteration](../tutorials/trackiteration.md) and [Table Combinations](../tutorials/trackiteration.md).
 
+<a name="configurables"></a>
 ## Configurables
 
-In a data processing task there are of course parameters which are not part of data but are the same for each chunk of data being processed. These parameters can be declared as part of a task by using the `Configurable` construct. E.g.:
+In a data processing task there are parameters which are not part of the data but are the same for each chunk of data being processed. These parameters can be declared as part of a task by using the `Configurable` construct. The constructor of Configurable has three arguments.
+
+```cpp
+template <typename T, ConfigParamKind K = ConfigParamKind::kGeneric, typename IP = ConfigurablePolicyConst<T, K>>
+Configurable(std::string const& name,
+             T&& defaultValue,
+             std::string const& help)
+```
+
+The constructor is templated and T is the type of the Configurable. Supported types are basic arithmetic types (e.g. `int`, `float`, `double`), string (i.e. `std::string`) and flat structures (provided they have a ROOT dictionary attached). ConfigParamKind does normally not need to be changed, except for special cases (see [ConfigurableAxis](#configurableaxis)).
+
+name is a unique identifier of the Configurable, defaultValue of type T its default value, and help a string explaining the meaning of the Configurable.
 
 ```cpp
 struct MyTask {
-  Configurable<float> someCut; 
+  Configurable<float> someCut("myCut",1.2,"maximum track pt value [Gev/c]"); 
   void process(soa::Join<aod::Tracks, aod::TracksExtra> const& mytracks) {
     for (auto& track : mytracks) {
-      if (track.pt() > someCut) {  // Converts automatically to float 
+      if (track.pt() < someCut) {  // Converts automatically to float 
       ...;
       }
     }
@@ -157,7 +169,23 @@ struct MyTask {
 };
 ```
 
-Supported types for configurables are basic arithmetic types (e.g. `int`, `float`, `double`), string (i.e. `std::string`) and flat structures containing those (provided they have a ROOT dictionary attached). See e.g. the tutorial [configurableObjects.cxx](../tutorials/otherTutorials.md#list-of-available-tutorials).
+### Command line options
+
+Configurables can be set on the command line. For each configurable a command line option is provided. When using the --help option the name of the Configurable, its default value, and the help string are displayed.
+
+For a practical example see e.g. the tutorial [configurableObjects.cxx](../tutorials/otherTutorials.md#list-of-available-tutorials).
+
+<a name="configurableaxis"></a>
+### ConfigurableAxis
+
+ConfigurableAxis is a special kind of a Configurable. It is defined as
+
+```cpp
+ConfigurableAxis = Configurable<std::vector<double>, ConfigParamKind::kAxisSpec, ConfigurablePolicyConst<std::vector<double>, ConfigParamKind::kAxisSpec>>;
+```
+
+It is of type std::vector&lt;<double&gt; and hasConfigParamKind = ConfigParamKind::kAxisSpec. ConfigurableAxis can be used together with [HistogramRegistry](#histogramregistry) to enable the configuration of a histogram axis by command line options.
+
 
 ## Creating new collections
 
@@ -275,13 +303,128 @@ struct MyTask : AnalysisTask {
 };
 ```
 
-## HistogramRegistry
+<a name="histogramregistry"></a>
+## Histogram Registry
 
-```todo
-Add description of HistogramRegistry and its functionality
+The histogram registry is a class to create and manage histograms in a consistent and optimized way.
+
+The constructor of the histogram Registry has five arguments
+
+```cpp
+HistogramRegistry(char const* const name,
+                  std::vector<HistogramSpec> histSpecs = {},
+                  OutputObjHandlingPolicy policy = OutputObjHandlingPolicy::AnalysisObject,
+                  bool sortHistos = true,
+                  bool createRegistryDir = false)
 ```
 
-See also tutorials [Extending Tables](../tutorials/histograms.md) and[histogram Registry](../tutorials/histogramRegistry.md).
+name is a unique identifier of the registry. histSpecs is a vector of
+HistogramSpec, which contain the specifications of the histograms. The argument
+policy can take two values, either OutputObjHandlingPolicy::AnalysisObject or
+OutputObjHandlingPolicy::QAObject. The histograms managed by a HistogramRegistry
+are automatically saved to file. AnalysisObjects are written by default to the
+root file AnalysisResults.root, whereas QAObjects are written into
+QAResults.root. If the argument sortHistos is set true then the histograms are
+written in alphabetical order to the output file, and if createRegistryDir is
+set true then a dedicated directory is created to hold all the histograms
+contained in the registry.
+
+A histogram is defined with a HistogramSpec. Its constructor has four arguments.
+
+```cpp
+HistogramSpec(char const* const name,
+              char const* const title,
+              HistogramConfigSpec config,
+              bool callSumw2 = false)
+```
+
+The argument HistogramConfigSpec contains the details of the histogram. If
+callSumw2 is set true then the <a
+href="https://root.cern.ch/doc/master/classTH1.html#aefa4ee94f053ec3d217f3223b01fa014"
+target="_blank">Sumw2</a> method of the respective histogram is executed when it
+is created.
+
+The constructor of a HistogramConfigSpec has three arguments.
+
+```cpp
+HistogramConfigSpec(HistType type,
+                    std::vector<AxisSpec> axes,
+                    uint8_t nSteps = 1)
+```
+
+HistType specifies the type of the histogram. The supported hstograms types are listed in <a href="https://github.com/AliceO2Group/AliceO2/blob/dev/Framework/Core/include/Framework/HistogramSpec.h" target="_blank">HistogramSpec.h</a>. The vector of AxisSpec describe the axes of the histogram. nSteps is only used for histograms of type <a href="https://github.com/AliceO2Group/AliceO2/blob/dev/Framework/Core/include/Framework/StepTHn.h" target="_blank">StepTHn</a>.
+
+Histogram axes are realized by AxisSpec which has two constructors.
+
+```cpp
+AxisSpec(std::vector<double> binEdges,
+         std::optional<std::string> title = std::nullopt,
+         std::optional<std::string> name = std::nullopt)
+
+AxisSpec(int nBins,
+         double binMin,
+         double binMax,
+         std::optional<std::string> title = std::nullopt,
+         std::optional<std::string> name = std::nullopt)
+```
+
+They differ in the way the axis bins are defined. In the first version a vector of bin edges is provided, which allows for bins of differnt widths, whereas in the second case the edges of the equally wide bins are computed with the provided number of bins and the range of the axis, defined by binMin and binMax.
+
+By-the-way, there is in fact a third version of the AxisSpec constructor, which is similar to the first version, but takes as first argument a ConfigurableAxis (= [Configurable](#configurables)&lt;std::vector&lt;double&gt;&gt;) instead of a std::vector&lt;double&gt;. 
+
+### Adding histograms
+
+A HistogramRegistry can be created together with the histograms it contains. It can however also be created empty and the histograms can be added later with the add method of which there a three versions.
+
+```cpp
+void add(const HistogramSpec& histSpec);
+
+void add(char const* const name,
+         char const* const title,
+         const HistogramConfigSpec& histConfigSpec,
+         bool callSumw2 = false);
+
+void add(char const* const name,
+         char const* const title,
+         HistType histType,
+         std::vector<AxisSpec> axes,
+         bool callSumw2 = false);
+```
+
+### Filling histograms
+
+HistogramRegistry has a fill method to update the histograms. There are two versions and both are templated.
+
+```cpp
+template <typename... Ts, typename H>
+void fill(const H& histName,
+          Ts&&... positionAndWeight)
+
+template <typename... Cs, typename T, typename H>
+void fill(const H& histName,
+          const T& table,
+          const o2::framework::expressions::Filter& filter)
+```
+
+In both cases histName represents the name of the histogram. In fact to address the histogram which was defined with name = histname one needs to supply HIST("histname") as the first argument to the fill method.
+
+positionAndWeight is a comma separated list of values to fill into the histogram. There must be n or n+1 values, where n is the number of histogram axes. A weight can be given as last number in the list.
+
+The second variant of fill method allows to copy filtered values from a table into a histogram.
+
+### Accessing histograms
+
+The get method allows to access a histogram contained in a HistogramRegistry.
+
+```cpp
+template <typename T, typename H>
+std::shared_ptr<T>& get(const H& histName)
+```
+Again HIST("histname") must be provided as argument to get the histogram with name = histname.
+
+Practical examples of histogram manipulations in O2 can be found in the
+tutorials [Histograms](../tutorials/histograms.md) and [Histogram
+Registry](../tutorials/histogramRegistry.md).
 
 
 ## Filtering and partitioning data
