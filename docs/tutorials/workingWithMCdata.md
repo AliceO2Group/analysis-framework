@@ -14,12 +14,12 @@ Learn how access and work with MC data
 
 # Working with MC data
 
-The MC truth and MC reconstructed information can be accessd separately but are related by dedicated index columns.
+The MC truth and MC reconstructed information can be accessed separately but are related by dedicated index columns.
 
 <a name="vertexdistribution"></a>
 ### VertexDistribution
 
-The data model includes a set of MC related tables (see also [datamodel](../datamodel/)) which contain the MC truth information. In TaskA the process function loops over the rows of the MC truth Mccollisions table.
+The data model includes a set of MC related tables (see also [datamodel](../datamodel/)) which contain the MC truth information. In task VertexDistribution the process function loops over the rows of the MC truth McCollisions table.
 
 ```cpp
 struct VertexDistribution {

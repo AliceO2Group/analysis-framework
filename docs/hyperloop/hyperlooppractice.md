@@ -222,7 +222,7 @@ When creating or enabling wagons, you can use a pull request instead of a packag
 ## <a name="legoexpert"></a>For the Run 2 LEGO train expert. What has changed?
 
 * There are different webpages for users and train operators: 
-  1. **My Analyses**, the user will see only _Analyses_ where the user belongs to, this is [defined through JIRA](#joinanalysis). The user has writing permits to all elements in this webpage. 
+  1. **My Analyses**, the user will see only _Analyses_ where the user belongs to, this is [defined through JIRA](hyperloopintro.md#joinanalysis). The user has writing permits to all elements in this webpage. 
   2. **All Analyses** is a read only view of all the _Analyses_ available in the system. The only action permitted is [cloning a wagon](#clonewagon). 
   3. **Train Submission** is a webpage designed for operators. It displays only datasets which have enabled wagons, allowing train composition. Submitting, modifying and killing a train is also allowed.
   4. **Train Runs** is a webpage designed for operators. It displays all train runs available in the system. The actions permitted are submitting, modifying and killing a train.
