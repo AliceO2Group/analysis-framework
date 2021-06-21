@@ -6,7 +6,7 @@ title: Contributing
 
 The source of this documentation consists of <a
 href="https://www.markdownguide.org/" target="_blank">markdown</a> files which 
-are located at this GitHub <a href="https://github.com/pbuehler/documentation"
+are located at this GitHub <a href="https://github.com/AliceO2Group/analysis-framework/"
 target="_blank">repository</a> under the directory **docs**.
 
 They are converted by the <a href="https://docs.github.com/en/pages"
