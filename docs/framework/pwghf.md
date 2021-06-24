@@ -31,7 +31,13 @@ Mattermost channel: [hf-o2-analysis-challenge](https://mattermost.web.cern.ch/al
 [`TrackSelectorPID`](https://github.com/AliceO2Group/AliceO2/blob/dev/Analysis/Core/include/AnalysisCore/TrackSelectorPID.h) class.
 * Code for easy running of the HF tasks and output processing can be found in the
 [Run3Analysisvalidation](https://github.com/AliceO2Group/Run3Analysisvalidation) repository.
-* [JIRA ticket](https://alice.its.cern.ch/jira/browse/PWGHF-269) of the HF analysis on AliHyperloop
+
+## [AliHyperloop](https://alimonitor.cern.ch/hyperloop/)
+
+JIRA tickets of the HF analyses on AliHyperloop:
+* [ALICE 2](https://alice.its.cern.ch/jira/browse/PWGHF-269)
+* [ALICE 3](https://alice.its.cern.ch/jira/browse/PWGHF-284)
+* [DDbar correlations](https://alice.its.cern.ch/jira/browse/PWGHF-283)
 
 ## Framework structure
 
@@ -89,7 +95,7 @@ in a derived table of reconstructed candidates (*candidate table*).
 For simulated data, reconstructed decay candidates are matched with their generated counterparts
 by checking the correspondence between the candidate prongs and the expected decay tree.
 The MC matching procedure is performed also for generated MC particles by checking their identity and their decay tree.
-Particle origin is determined by inspecting the decay tree to identity non-prompt particles, produced from b quarks.
+Particle origin is determined by inspecting the decay tree to identify non-prompt particles, produced from b quarks.
 
 Derived tables with MC flags used for the estimation of the signal efficiencies and the optimisation of the signal and background selections are produced.
 
