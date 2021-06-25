@@ -22,7 +22,7 @@ Click on the labels to display the table details.
   <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::BCs</button>
   <div class="panel">
     <div>
-       
+       Root of data model for tables pointing to a bunch crossing
     </div>
     <div>
       Header file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev/Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
@@ -53,21 +53,21 @@ Click on the labels to display the table details.
         <td></td>
         <td>runNumber</td>
         <td>int</td>
-        <td></td>
+        <td>Run number</td>
       </tr>
       <tr>
         <td>o2::aod::bc::GlobalBC</td>
         <td></td>
         <td>globalBC</td>
         <td>uint64_t</td>
-        <td>Bunch crossing number</td>
+        <td>Bunch crossing number (globally unique in this run)</td>
       </tr>
       <tr>
         <td>o2::aod::bc::TriggerMask</td>
         <td></td>
         <td>triggerMask</td>
         <td>uint64_t</td>
-        <td></td>
+        <td>CTP trigger mask</td>
       </tr>
     </table>
   </div>
@@ -107,28 +107,28 @@ Click on the labels to display the table details.
         <td>I</td>
         <td>bcId</td>
         <td>int32</td>
-        <td>Pointer into BCs</td>
+        <td>Most probably BC to where this collision has occured</td>
       </tr>
       <tr>
         <td>o2::aod::collision::PosX</td>
         <td></td>
         <td>posX</td>
         <td>float</td>
-        <td>Vertex position</td>
+        <td>X Vertex position in cm</td>
       </tr>
       <tr>
         <td>o2::aod::collision::PosY</td>
         <td></td>
         <td>posY</td>
         <td>float</td>
-        <td></td>
+        <td>Y Vertex position in cm</td>
       </tr>
       <tr>
         <td>o2::aod::collision::PosZ</td>
         <td></td>
         <td>posZ</td>
         <td>float</td>
-        <td></td>
+        <td>Z Vertex position in cm</td>
       </tr>
       <tr>
         <td>o2::aod::collision::CovXX</td>
@@ -142,70 +142,70 @@ Click on the labels to display the table details.
         <td></td>
         <td>covXY</td>
         <td>float</td>
-        <td></td>
+        <td>Vertex covariance matrix</td>
       </tr>
       <tr>
         <td>o2::aod::collision::CovXZ</td>
         <td></td>
         <td>covXZ</td>
         <td>float</td>
-        <td></td>
+        <td>Vertex covariance matrix</td>
       </tr>
       <tr>
         <td>o2::aod::collision::CovYY</td>
         <td></td>
         <td>covYY</td>
         <td>float</td>
-        <td></td>
+        <td>Vertex covariance matrix</td>
       </tr>
       <tr>
         <td>o2::aod::collision::CovYZ</td>
         <td></td>
         <td>covYZ</td>
         <td>float</td>
-        <td></td>
+        <td>Vertex covariance matrix</td>
       </tr>
       <tr>
         <td>o2::aod::collision::CovZZ</td>
         <td></td>
         <td>covZZ</td>
         <td>float</td>
-        <td></td>
+        <td>Vertex covariance matrix</td>
       </tr>
       <tr>
         <td>o2::aod::collision::Flags</td>
         <td></td>
         <td>flags</td>
         <td>uint16_t</td>
-        <td>Run2, see CollisionFlagsRun2 | Run 3, see Vertex::Flags</td>
+        <td>Run 2: see CollisionFlagsRun2 | Run 3: see Vertex::Flags</td>
       </tr>
       <tr>
         <td>o2::aod::collision::Chi2</td>
         <td></td>
         <td>chi2</td>
         <td>float</td>
-        <td></td>
+        <td>Chi2 of vertex fit</td>
       </tr>
       <tr>
         <td>o2::aod::collision::NumContrib</td>
         <td></td>
         <td>numContrib</td>
         <td>uint16_t</td>
-        <td>Number of tracks at vertex</td>
+        <td>Number of tracks used for the vertex</td>
       </tr>
       <tr>
         <td>o2::aod::collision::CollisionTime</td>
         <td></td>
         <td>collisionTime</td>
         <td>float</td>
-        <td>mus</td>
+        <td>Collision time in ns relative to BC stored in bc()</td>
       </tr>
       <tr>
         <td>o2::aod::collision::CollisionTimeRes</td>
         <td></td>
         <td>collisionTimeRes</td>
         <td>float</td>
-        <td></td>
+        <td>Resolution of collision time</td>
       </tr>
       <tr>
         <td>o2::aod::collision::CollisionTimeMask</td>
@@ -220,7 +220,7 @@ Click on the labels to display the table details.
   <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::StoredTracks</button>
   <div class="panel">
     <div>
-       
+       On disk version of the Track table
     </div>
     <div>
       Header file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev/Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
@@ -245,14 +245,14 @@ Click on the labels to display the table details.
         <td>I</td>
         <td>collisionId</td>
         <td>int32</td>
-        <td>Pointer into Collisions</td>
+        <td>Collision to which this track belongs</td>
       </tr>
       <tr>
         <td>o2::aod::track::TrackType</td>
         <td></td>
         <td>trackType</td>
         <td>uint8_t</td>
-        <td>TODO change to TrackTypeEnum when enums are supported</td>
+        <td>Type of track. See enum TrackTypeEnum</td>
       </tr>
       <tr>
         <td>o2::aod::track::X</td>
@@ -301,35 +301,35 @@ Click on the labels to display the table details.
         <td></td>
         <td>signed1Pt</td>
         <td>float</td>
-        <td>(sign of charge)/Pt [c/GeV]</td>
+        <td>(sign of charge)/Pt in c/GeV. Use pt() and sign() instead</td>
       </tr>
       <tr>
         <td>o2::aod::track::NormalizedPhi</td>
         <td>D</td>
         <td>phi</td>
         <td>float</td>
-        <td></td>
+        <td>Phi of the track, in radians within [0, 2pi)</td>
       </tr>
       <tr>
         <td>o2::aod::track::Px</td>
         <td>D</td>
         <td>px</td>
         <td>float</td>
-        <td>Momentum in x-direction [GeV/c]</td>
+        <td>Momentum in x-direction in GeV/c</td>
       </tr>
       <tr>
         <td>o2::aod::track::Py</td>
         <td>D</td>
         <td>py</td>
         <td>float</td>
-        <td>Momentum in y-direction [GeV/c]</td>
+        <td>Momentum in y-direction in GeV/c</td>
       </tr>
       <tr>
         <td>o2::aod::track::Pz</td>
         <td>D</td>
         <td>pz</td>
         <td>float</td>
-        <td>Momentum in z-direction [GeV/c]</td>
+        <td>Momentum in z-direction in GeV/c</td>
       </tr>
       <tr>
         <td>o2::aod::track::Sign</td>
@@ -344,7 +344,7 @@ Click on the labels to display the table details.
   <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::Tracks (E)</button>
   <div class="panel">
     <div>
-       
+       Basic track properties
     </div>
     <div>
       Header file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev/Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
@@ -382,14 +382,14 @@ Click on the labels to display the table details.
         <td>I</td>
         <td>collisionId</td>
         <td>int32</td>
-        <td>Pointer into Collisions</td>
+        <td>Collision to which this track belongs</td>
       </tr>
       <tr>
         <td>o2::aod::track::TrackType</td>
         <td></td>
         <td>trackType</td>
         <td>uint8_t</td>
-        <td>TODO change to TrackTypeEnum when enums are supported</td>
+        <td>Type of track. See enum TrackTypeEnum</td>
       </tr>
       <tr>
         <td>o2::aod::track::X</td>
@@ -438,35 +438,35 @@ Click on the labels to display the table details.
         <td></td>
         <td>signed1Pt</td>
         <td>float</td>
-        <td>(sign of charge)/Pt [c/GeV]</td>
+        <td>(sign of charge)/Pt in c/GeV. Use pt() and sign() instead</td>
       </tr>
       <tr>
         <td>o2::aod::track::NormalizedPhi</td>
         <td>D</td>
         <td>phi</td>
         <td>float</td>
-        <td></td>
+        <td>Phi of the track, in radians within [0, 2pi)</td>
       </tr>
       <tr>
         <td>o2::aod::track::Px</td>
         <td>D</td>
         <td>px</td>
         <td>float</td>
-        <td>Momentum in x-direction [GeV/c]</td>
+        <td>Momentum in x-direction in GeV/c</td>
       </tr>
       <tr>
         <td>o2::aod::track::Py</td>
         <td>D</td>
         <td>py</td>
         <td>float</td>
-        <td>Momentum in y-direction [GeV/c]</td>
+        <td>Momentum in y-direction in GeV/c</td>
       </tr>
       <tr>
         <td>o2::aod::track::Pz</td>
         <td>D</td>
         <td>pz</td>
         <td>float</td>
-        <td>Momentum in z-direction [GeV/c]</td>
+        <td>Momentum in z-direction in GeV/c</td>
       </tr>
       <tr>
         <td>o2::aod::track::Sign</td>
@@ -480,28 +480,28 @@ Click on the labels to display the table details.
         <td>E</td>
         <td>pt</td>
         <td>float</td>
-        <td></td>
+        <td>Transverse momentum of the track in GeV/c</td>
       </tr>
       <tr>
         <td>o2::aod::track::P</td>
         <td>E</td>
         <td>p</td>
         <td>float</td>
-        <td>Absolute momentum [Gev/c]</td>
+        <td>Momentum in Gev/c</td>
       </tr>
       <tr>
         <td>o2::aod::track::Eta</td>
         <td>E</td>
         <td>eta</td>
         <td>float</td>
-        <td>Pseudo rapidity</td>
+        <td>Pseudorapidity</td>
       </tr>
       <tr>
         <td>o2::aod::track::RawPhi</td>
         <td>E</td>
         <td>phiraw</td>
         <td>float</td>
-        <td></td>
+        <td>Raw Phi (not folded onto [0, 2pi)). Use phi() instead</td>
       </tr>
     </table>
   </div>
@@ -509,7 +509,7 @@ Click on the labels to display the table details.
   <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::StoredTracksCov</button>
   <div class="panel">
     <div>
-       
+       On disk version of the TracksCov table
     </div>
     <div>
       Header file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev/Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
@@ -527,105 +527,105 @@ Click on the labels to display the table details.
         <td></td>
         <td>sigmaY</td>
         <td>float</td>
-        <td></td>
+        <td>Covariance matrix</td>
       </tr>
       <tr>
         <td>o2::aod::track::SigmaZ</td>
         <td></td>
         <td>sigmaZ</td>
         <td>float</td>
-        <td></td>
+        <td>Covariance matrix</td>
       </tr>
       <tr>
         <td>o2::aod::track::SigmaSnp</td>
         <td></td>
         <td>sigmaSnp</td>
         <td>float</td>
-        <td></td>
+        <td>Covariance matrix</td>
       </tr>
       <tr>
         <td>o2::aod::track::SigmaTgl</td>
         <td></td>
         <td>sigmaTgl</td>
         <td>float</td>
-        <td></td>
+        <td>Covariance matrix</td>
       </tr>
       <tr>
         <td>o2::aod::track::Sigma1Pt</td>
         <td></td>
         <td>sigma1Pt</td>
         <td>float</td>
-        <td></td>
+        <td>Covariance matrix</td>
       </tr>
       <tr>
         <td>o2::aod::track::RhoZY</td>
         <td></td>
         <td>rhoZY</td>
         <td>int8_t</td>
-        <td></td>
+        <td>Covariance matrix in compressed form</td>
       </tr>
       <tr>
         <td>o2::aod::track::RhoSnpY</td>
         <td></td>
         <td>rhoSnpY</td>
         <td>int8_t</td>
-        <td></td>
+        <td>Covariance matrix in compressed form</td>
       </tr>
       <tr>
         <td>o2::aod::track::RhoSnpZ</td>
         <td></td>
         <td>rhoSnpZ</td>
         <td>int8_t</td>
-        <td></td>
+        <td>Covariance matrix in compressed form</td>
       </tr>
       <tr>
         <td>o2::aod::track::RhoTglY</td>
         <td></td>
         <td>rhoTglY</td>
         <td>int8_t</td>
-        <td></td>
+        <td>Covariance matrix in compressed form</td>
       </tr>
       <tr>
         <td>o2::aod::track::RhoTglZ</td>
         <td></td>
         <td>rhoTglZ</td>
         <td>int8_t</td>
-        <td></td>
+        <td>Covariance matrix in compressed form</td>
       </tr>
       <tr>
         <td>o2::aod::track::RhoTglSnp</td>
         <td></td>
         <td>rhoTglSnp</td>
         <td>int8_t</td>
-        <td></td>
+        <td>Covariance matrix in compressed form</td>
       </tr>
       <tr>
         <td>o2::aod::track::Rho1PtY</td>
         <td></td>
         <td>rho1PtY</td>
         <td>int8_t</td>
-        <td></td>
+        <td>Covariance matrix in compressed form</td>
       </tr>
       <tr>
         <td>o2::aod::track::Rho1PtZ</td>
         <td></td>
         <td>rho1PtZ</td>
         <td>int8_t</td>
-        <td></td>
+        <td>Covariance matrix in compressed form</td>
       </tr>
       <tr>
         <td>o2::aod::track::Rho1PtSnp</td>
         <td></td>
         <td>rho1PtSnp</td>
         <td>int8_t</td>
-        <td></td>
+        <td>Covariance matrix in compressed form</td>
       </tr>
       <tr>
         <td>o2::aod::track::Rho1PtTgl</td>
         <td></td>
         <td>rho1PtTgl</td>
         <td>int8_t</td>
-        <td></td>
+        <td>Covariance matrix in compressed form</td>
       </tr>
     </table>
   </div>
@@ -633,7 +633,7 @@ Click on the labels to display the table details.
   <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::TracksCov (E)</button>
   <div class="panel">
     <div>
-       
+       Track covariance matrix
     </div>
     <div>
       Header file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev/Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
@@ -664,105 +664,105 @@ Click on the labels to display the table details.
         <td></td>
         <td>sigmaY</td>
         <td>float</td>
-        <td></td>
+        <td>Covariance matrix</td>
       </tr>
       <tr>
         <td>o2::aod::track::SigmaZ</td>
         <td></td>
         <td>sigmaZ</td>
         <td>float</td>
-        <td></td>
+        <td>Covariance matrix</td>
       </tr>
       <tr>
         <td>o2::aod::track::SigmaSnp</td>
         <td></td>
         <td>sigmaSnp</td>
         <td>float</td>
-        <td></td>
+        <td>Covariance matrix</td>
       </tr>
       <tr>
         <td>o2::aod::track::SigmaTgl</td>
         <td></td>
         <td>sigmaTgl</td>
         <td>float</td>
-        <td></td>
+        <td>Covariance matrix</td>
       </tr>
       <tr>
         <td>o2::aod::track::Sigma1Pt</td>
         <td></td>
         <td>sigma1Pt</td>
         <td>float</td>
-        <td></td>
+        <td>Covariance matrix</td>
       </tr>
       <tr>
         <td>o2::aod::track::RhoZY</td>
         <td></td>
         <td>rhoZY</td>
         <td>int8_t</td>
-        <td></td>
+        <td>Covariance matrix in compressed form</td>
       </tr>
       <tr>
         <td>o2::aod::track::RhoSnpY</td>
         <td></td>
         <td>rhoSnpY</td>
         <td>int8_t</td>
-        <td></td>
+        <td>Covariance matrix in compressed form</td>
       </tr>
       <tr>
         <td>o2::aod::track::RhoSnpZ</td>
         <td></td>
         <td>rhoSnpZ</td>
         <td>int8_t</td>
-        <td></td>
+        <td>Covariance matrix in compressed form</td>
       </tr>
       <tr>
         <td>o2::aod::track::RhoTglY</td>
         <td></td>
         <td>rhoTglY</td>
         <td>int8_t</td>
-        <td></td>
+        <td>Covariance matrix in compressed form</td>
       </tr>
       <tr>
         <td>o2::aod::track::RhoTglZ</td>
         <td></td>
         <td>rhoTglZ</td>
         <td>int8_t</td>
-        <td></td>
+        <td>Covariance matrix in compressed form</td>
       </tr>
       <tr>
         <td>o2::aod::track::RhoTglSnp</td>
         <td></td>
         <td>rhoTglSnp</td>
         <td>int8_t</td>
-        <td></td>
+        <td>Covariance matrix in compressed form</td>
       </tr>
       <tr>
         <td>o2::aod::track::Rho1PtY</td>
         <td></td>
         <td>rho1PtY</td>
         <td>int8_t</td>
-        <td></td>
+        <td>Covariance matrix in compressed form</td>
       </tr>
       <tr>
         <td>o2::aod::track::Rho1PtZ</td>
         <td></td>
         <td>rho1PtZ</td>
         <td>int8_t</td>
-        <td></td>
+        <td>Covariance matrix in compressed form</td>
       </tr>
       <tr>
         <td>o2::aod::track::Rho1PtSnp</td>
         <td></td>
         <td>rho1PtSnp</td>
         <td>int8_t</td>
-        <td></td>
+        <td>Covariance matrix in compressed form</td>
       </tr>
       <tr>
         <td>o2::aod::track::Rho1PtTgl</td>
         <td></td>
         <td>rho1PtTgl</td>
         <td>int8_t</td>
-        <td></td>
+        <td>Covariance matrix in compressed form</td>
       </tr>
       <tr>
         <td>o2::aod::track::CYY</td>
@@ -875,7 +875,7 @@ Click on the labels to display the table details.
   <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::TracksExtra</button>
   <div class="panel">
     <div>
-       
+       Additional track information (clusters, PID, etc.)
     </div>
     <div>
       Header file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev/Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
@@ -901,168 +901,182 @@ Click on the labels to display the table details.
         <td></td>
         <td>tpcInnerParam</td>
         <td>float</td>
-        <td></td>
+        <td>Momentum at inner wall of the TPC</td>
       </tr>
       <tr>
         <td>o2::aod::track::Flags</td>
         <td></td>
         <td>flags</td>
         <td>uint32_t</td>
-        <td></td>
+        <td>Track flags. Run 2: see TrackFlagsRun2Enum | Run 3: TODO</td>
       </tr>
       <tr>
         <td>o2::aod::track::ITSClusterMap</td>
         <td></td>
         <td>itsClusterMap</td>
         <td>uint8_t</td>
-        <td></td>
+        <td>ITS cluster map, one bit per a layer, starting from the innermost</td>
       </tr>
       <tr>
         <td>o2::aod::track::TPCNClsFindable</td>
         <td></td>
         <td>tpcNClsFindable</td>
         <td>uint8_t</td>
-        <td></td>
+        <td>Findable TPC clusters for this track geometry</td>
       </tr>
       <tr>
         <td>o2::aod::track::TPCNClsFindableMinusFound</td>
         <td></td>
         <td>tpcNClsFindableMinusFound</td>
         <td>int8_t</td>
-        <td></td>
+        <td>TPC Clusters: Findable - Found</td>
       </tr>
       <tr>
         <td>o2::aod::track::TPCNClsFindableMinusCrossedRows</td>
         <td></td>
         <td>tpcNClsFindableMinusCrossedRows</td>
         <td>int8_t</td>
-        <td></td>
+        <td>TPC Clusters: Findable - crossed rows</td>
       </tr>
       <tr>
         <td>o2::aod::track::TPCNClsShared</td>
         <td></td>
         <td>tpcNClsShared</td>
         <td>uint8_t</td>
-        <td></td>
+        <td>Number of shared TPC clusters</td>
       </tr>
       <tr>
         <td>o2::aod::track::TRDPattern</td>
         <td></td>
         <td>trdPattern</td>
         <td>uint8_t</td>
-        <td></td>
+        <td>Contributor to the track on TRD layer in bits 0-5, starting from the innermost</td>
       </tr>
       <tr>
         <td>o2::aod::track::ITSChi2NCl</td>
         <td></td>
         <td>itsChi2NCl</td>
         <td>float</td>
-        <td></td>
+        <td>Chi2 / cluster for the ITS track segment</td>
       </tr>
       <tr>
         <td>o2::aod::track::TPCChi2NCl</td>
         <td></td>
         <td>tpcChi2NCl</td>
         <td>float</td>
-        <td></td>
+        <td>Chi2 / cluster for the TPC track segment</td>
       </tr>
       <tr>
         <td>o2::aod::track::TRDChi2</td>
         <td></td>
         <td>trdChi2</td>
         <td>float</td>
-        <td></td>
+        <td>Chi2 for the TRD track segment</td>
       </tr>
       <tr>
         <td>o2::aod::track::TOFChi2</td>
         <td></td>
         <td>tofChi2</td>
         <td>float</td>
-        <td></td>
+        <td>Chi2 for the TOF track segment</td>
       </tr>
       <tr>
         <td>o2::aod::track::TPCSignal</td>
         <td></td>
         <td>tpcSignal</td>
         <td>float</td>
-        <td></td>
+        <td>dE/dx signal in the TPC</td>
       </tr>
       <tr>
         <td>o2::aod::track::TRDSignal</td>
         <td></td>
         <td>trdSignal</td>
         <td>float</td>
-        <td></td>
+        <td>dE/dx signal in the TRD</td>
       </tr>
       <tr>
         <td>o2::aod::track::TOFSignal</td>
         <td></td>
         <td>tofSignal</td>
         <td>float</td>
-        <td></td>
+        <td>TOF signal matched to the track</td>
       </tr>
       <tr>
         <td>o2::aod::track::Length</td>
         <td></td>
         <td>length</td>
         <td>float</td>
-        <td></td>
+        <td>Track length</td>
       </tr>
       <tr>
         <td>o2::aod::track::TOFExpMom</td>
         <td></td>
         <td>tofExpMom</td>
         <td>float</td>
-        <td></td>
+        <td>TOF expected momentum obtained in tracking, used to compute the expected times</td>
       </tr>
       <tr>
         <td>o2::aod::track::PIDForTracking</td>
         <td>D</td>
         <td>pidForTracking</td>
         <td>uint32_t</td>
-        <td></td>
+        <td>PID hypothesis used during tracking. See the constants in the class PID in PID.h</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::HasTOF</td>
+        <td>D</td>
+        <td>hasTOF</td>
+        <td>bool</td>
+        <td>Flag to check if track has a TOF measurement</td>
       </tr>
       <tr>
         <td>o2::aod::track::TPCNClsFound</td>
         <td>D</td>
         <td>tpcNClsFound</td>
         <td>int16_t</td>
-        <td></td>
+        <td>Number of found TPC clusters</td>
       </tr>
       <tr>
         <td>o2::aod::track::TPCNClsCrossedRows</td>
         <td>D</td>
         <td>tpcNClsCrossedRows</td>
         <td>int16_t</td>
-        <td></td>
+        <td>Number of crossed TPC Rows</td>
       </tr>
       <tr>
         <td>o2::aod::track::ITSNCls</td>
         <td>D</td>
         <td>itsNCls</td>
         <td>uint8_t</td>
-        <td></td>
+        <td>Number of ITS clusters</td>
       </tr>
       <tr>
         <td>o2::aod::track::ITSNClsInnerBarrel</td>
         <td>D</td>
         <td>itsNClsInnerBarrel</td>
         <td>uint8_t</td>
-        <td></td>
+        <td>Number of ITS clusters in the Inner Barrel</td>
       </tr>
       <tr>
         <td>o2::aod::track::TPCCrossedRowsOverFindableCls</td>
         <td>D</td>
         <td>tpcCrossedRowsOverFindableCls</td>
         <td>float</td>
-        <td></td>
+        <td>Ratio  crossed rows over findable clusters</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::TPCFoundOverFindableCls</td>
+        <td>D</td>
+        <td>tpcFoundOverFindableCls</td>
+        <td>float</td>
+        <td>Ratio of found over findable clusters</td>
       </tr>
       <tr>
         <td>o2::aod::track::TPCFractionSharedCls</td>
         <td>D</td>
         <td>tpcFractionSharedCls</td>
         <td>float</td>
-        <td></td>
+        <td>Fraction of shared TPC clusters</td>
       </tr>
       <tr>
         <td>o2::aod::track::TrackEtaEMCAL</td>
@@ -2104,7 +2118,7 @@ Click on the labels to display the table details.
     </table>
   </div>
 
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::UnassignedTracks</button>
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::MuonClusters</button>
   <div class="panel">
     <div>
        
@@ -2114,7 +2128,7 @@ Click on the labels to display the table details.
     </div>
     <div>Is used in:
       <ul>
-        <li>o2::aod::UnassignedTrack = o2::aod::UnassignedTracks::iterator</li>
+        <li>o2::aod::MuonCluster = o2::aod::MuonClusters::iterator</li>
       </ul>
     </div>
     <table class=DataModel>
@@ -2126,33 +2140,75 @@ Click on the labels to display the table details.
         <th>Comment</th>
       </tr>
       <tr>
-        <td>o2::aod::unassignedtracks::CollisionId</td>
+        <td>o2::aod::muoncluster::FwdTrackId</td>
         <td>I</td>
-        <td>collisionId</td>
+        <td>fwdtrackId</td>
         <td>int32</td>
-        <td>Pointer into Collisions</td>
+        <td>points to a fwdtrack in the fwdtrack table</td>
       </tr>
       <tr>
-        <td>o2::aod::unassignedtracks::TrackId</td>
-        <td>I</td>
-        <td>trackId</td>
-        <td>int32</td>
-        <td>Pointer into Tracks</td>
+        <td>o2::aod::muoncluster::X</td>
+        <td></td>
+        <td>x</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::muoncluster::Y</td>
+        <td></td>
+        <td>y</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::muoncluster::Z</td>
+        <td></td>
+        <td>z</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::muoncluster::ErrX</td>
+        <td></td>
+        <td>errX</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::muoncluster::ErrY</td>
+        <td></td>
+        <td>errY</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::muoncluster::Charge</td>
+        <td></td>
+        <td>charge</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::muoncluster::Chi2</td>
+        <td></td>
+        <td>chi2</td>
+        <td>float</td>
+        <td></td>
       </tr>
     </table>
   </div>
 
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::UnassignedMFTTracks</button>
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::AmbiguousTracks</button>
   <div class="panel">
     <div>
-       
+       Table for tracks which are not uniquely associated with a collision
     </div>
     <div>
       Header file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev/Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
     </div>
     <div>Is used in:
       <ul>
-        <li>o2::aod::UnassignedMFTTrack = o2::aod::UnassignedMFTTracks::iterator</li>
+        <li>o2::aod::AmbiguousTrack = o2::aod::AmbiguousTracks::iterator</li>
       </ul>
     </div>
     <table class=DataModel>
@@ -2164,18 +2220,56 @@ Click on the labels to display the table details.
         <th>Comment</th>
       </tr>
       <tr>
-        <td>o2::aod::unassignedmfttracks::CollisionId</td>
+        <td>o2::aod::ambiguoustracks::CollisionId</td>
         <td>I</td>
         <td>collisionId</td>
         <td>int32</td>
-        <td>Pointer into Collisions</td>
+        <td>Collision index</td>
       </tr>
       <tr>
-        <td>o2::aod::unassignedmfttracks::MFTTrackId</td>
+        <td>o2::aod::ambiguoustracks::TrackId</td>
+        <td>I</td>
+        <td>trackId</td>
+        <td>int32</td>
+        <td>Track index</td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::AmbiguousMFTTracks</button>
+  <div class="panel">
+    <div>
+       Table for MFT tracks which are not uniquely associated with a collision
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev/Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::AmbiguousMFTTrack = o2::aod::AmbiguousMFTTracks::iterator</li>
+      </ul>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::ambiguousmfttracks::CollisionId</td>
+        <td>I</td>
+        <td>collisionId</td>
+        <td>int32</td>
+        <td>Collision index</td>
+      </tr>
+      <tr>
+        <td>o2::aod::ambiguousmfttracks::MFTTrackId</td>
         <td>I</td>
         <td>mfttrackId</td>
         <td>int32</td>
-        <td>Pointer into MFTTracks</td>
+        <td>MFTTrack index</td>
       </tr>
     </table>
   </div>
@@ -2183,7 +2277,7 @@ Click on the labels to display the table details.
   <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::HMPIDs</button>
   <div class="panel">
     <div>
-       
+       HMPID information
     </div>
     <div>
       Header file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev/Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
@@ -2213,35 +2307,35 @@ Click on the labels to display the table details.
         <td>I</td>
         <td>trackId</td>
         <td>int32</td>
-        <td>Pointer into Tracks</td>
+        <td>Track index</td>
       </tr>
       <tr>
         <td>o2::aod::hmpid::HMPIDSignal</td>
         <td></td>
         <td>hmpidSignal</td>
         <td>float</td>
-        <td></td>
+        <td>Signal of the HMPID</td>
       </tr>
       <tr>
         <td>o2::aod::hmpid::HMPIDDistance</td>
         <td></td>
         <td>hmpidDistance</td>
         <td>float</td>
-        <td></td>
+        <td>Distance between the matched HMPID signal and the propagated track</td>
       </tr>
       <tr>
         <td>o2::aod::hmpid::HMPIDNPhotons</td>
         <td></td>
         <td>hmpidNPhotons</td>
         <td>short</td>
-        <td></td>
+        <td>Number of detected photons in HMPID</td>
       </tr>
       <tr>
         <td>o2::aod::hmpid::HMPIDQMip</td>
         <td></td>
         <td>hmpidQMip</td>
         <td>short</td>
-        <td></td>
+        <td>Collected charge in the HMPID</td>
       </tr>
     </table>
   </div>
@@ -2272,7 +2366,7 @@ Click on the labels to display the table details.
         <td>I</td>
         <td>bcId</td>
         <td>int32</td>
-        <td>Pointer into BCs</td>
+        <td>BC index</td>
       </tr>
       <tr>
         <td>o2::aod::calo::CellNumber</td>
@@ -2338,7 +2432,7 @@ Click on the labels to display the table details.
         <td>I</td>
         <td>bcId</td>
         <td>int32</td>
-        <td>Pointer into BCs</td>
+        <td>BC index</td>
       </tr>
       <tr>
         <td>o2::aod::calotrigger::FastOrAbsId</td>
@@ -2392,376 +2486,10 @@ Click on the labels to display the table details.
     </table>
   </div>
 
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::StoredMuons</button>
-  <div class="panel">
-    <div>
-       
-    </div>
-    <div>
-      Header file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev/Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
-    </div>
-    <table class=DataModel>
-      <tr>
-        <th>Name</th>
-        <th></th>
-        <th>Getter</th>
-        <th>Type</th>
-        <th>Comment</th>
-      </tr>
-      <tr>
-        <td>o2::aod::muon::BCId</td>
-        <td>I</td>
-        <td>bcId</td>
-        <td>int32</td>
-        <td>Pointer into BCs</td>
-      </tr>
-      <tr>
-        <td>o2::aod::muon::InverseBendingMomentum</td>
-        <td></td>
-        <td>inverseBendingMomentum</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::muon::ThetaX</td>
-        <td></td>
-        <td>thetaX</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::muon::ThetaY</td>
-        <td></td>
-        <td>thetaY</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::muon::ZMu</td>
-        <td></td>
-        <td>zMu</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::muon::BendingCoor</td>
-        <td></td>
-        <td>bendingCoor</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::muon::NonBendingCoor</td>
-        <td></td>
-        <td>nonBendingCoor</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::muon::Covariances</td>
-        <td></td>
-        <td>covariances</td>
-        <td>float[15]</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::muon::Chi2</td>
-        <td></td>
-        <td>chi2</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::muon::Chi2MatchTrigger</td>
-        <td></td>
-        <td>chi2MatchTrigger</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::muon::Eta</td>
-        <td>D</td>
-        <td>eta</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::muon::Phi</td>
-        <td>D</td>
-        <td>phi</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::muon::RAtAbsorberEnd</td>
-        <td>D</td>
-        <td>rAtAbsorberEnd</td>
-        <td>float</td>
-        <td>linear extrapolation of the coordinates of the track to the position of the end of the absorber (-505 cm)</td>
-      </tr>
-      <tr>
-        <td>o2::aod::muon::PDca</td>
-        <td>D</td>
-        <td>pDca</td>
-        <td>float</td>
-        <td>linear extrapolation of the coordinates of the track to the position of the end of the absorber (-505 cm)</td>
-      </tr>
-      <tr>
-        <td>o2::aod::muon::Sign</td>
-        <td>D</td>
-        <td>sign</td>
-        <td>short</td>
-        <td></td>
-      </tr>
-    </table>
-  </div>
-
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::Muons (E)</button>
-  <div class="panel">
-    <div>
-       
-    </div>
-    <div>
-      Header file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev/Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
-    </div>
-    <div>Extends:
-      <ul>
-         o2::aod::StoredMuons
-      </ul>
-    </div>
-    <div>Is used in:
-      <ul>
-        <li>o2::aod::Muon = o2::aod::Muons::iterator</li>
-      </ul>
-    </div>
-    <table class=DataModel>
-      <tr>
-        <th>Name</th>
-        <th></th>
-        <th>Getter</th>
-        <th>Type</th>
-        <th>Comment</th>
-      </tr>
-      <tr>
-        <td>o2::aod::muon::BCId</td>
-        <td>I</td>
-        <td>bcId</td>
-        <td>int32</td>
-        <td>Pointer into BCs</td>
-      </tr>
-      <tr>
-        <td>o2::aod::muon::InverseBendingMomentum</td>
-        <td></td>
-        <td>inverseBendingMomentum</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::muon::ThetaX</td>
-        <td></td>
-        <td>thetaX</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::muon::ThetaY</td>
-        <td></td>
-        <td>thetaY</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::muon::ZMu</td>
-        <td></td>
-        <td>zMu</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::muon::BendingCoor</td>
-        <td></td>
-        <td>bendingCoor</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::muon::NonBendingCoor</td>
-        <td></td>
-        <td>nonBendingCoor</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::muon::Covariances</td>
-        <td></td>
-        <td>covariances</td>
-        <td>float[15]</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::muon::Chi2</td>
-        <td></td>
-        <td>chi2</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::muon::Chi2MatchTrigger</td>
-        <td></td>
-        <td>chi2MatchTrigger</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::muon::Eta</td>
-        <td>D</td>
-        <td>eta</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::muon::Phi</td>
-        <td>D</td>
-        <td>phi</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::muon::RAtAbsorberEnd</td>
-        <td>D</td>
-        <td>rAtAbsorberEnd</td>
-        <td>float</td>
-        <td>linear extrapolation of the coordinates of the track to the position of the end of the absorber (-505 cm)</td>
-      </tr>
-      <tr>
-        <td>o2::aod::muon::PDca</td>
-        <td>D</td>
-        <td>pDca</td>
-        <td>float</td>
-        <td>linear extrapolation of the coordinates of the track to the position of the end of the absorber (-505 cm)</td>
-      </tr>
-      <tr>
-        <td>o2::aod::muon::Sign</td>
-        <td>D</td>
-        <td>sign</td>
-        <td>short</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::muon::Pt</td>
-        <td>E</td>
-        <td>pt</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::muon::Px</td>
-        <td>E</td>
-        <td>px</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::muon::Py</td>
-        <td>E</td>
-        <td>py</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::muon::Pz</td>
-        <td>E</td>
-        <td>pz</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-    </table>
-  </div>
-
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::MuonClusters</button>
-  <div class="panel">
-    <div>
-       
-    </div>
-    <div>
-      Header file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev/Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
-    </div>
-    <div>Is used in:
-      <ul>
-        <li>o2::aod::MuonCluster = o2::aod::MuonClusters::iterator</li>
-      </ul>
-    </div>
-    <table class=DataModel>
-      <tr>
-        <th>Name</th>
-        <th></th>
-        <th>Getter</th>
-        <th>Type</th>
-        <th>Comment</th>
-      </tr>
-      <tr>
-        <td>o2::aod::muoncluster::TrackId</td>
-        <td>I</td>
-        <td>trackId</td>
-        <td>int</td>
-        <td>points to a muon track in the Muon table</td>
-      </tr>
-      <tr>
-        <td>o2::aod::muoncluster::X</td>
-        <td></td>
-        <td>x</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::muoncluster::Y</td>
-        <td></td>
-        <td>y</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::muoncluster::Z</td>
-        <td></td>
-        <td>z</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::muoncluster::ErrX</td>
-        <td></td>
-        <td>errX</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::muoncluster::ErrY</td>
-        <td></td>
-        <td>errY</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::muoncluster::Charge</td>
-        <td></td>
-        <td>charge</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::muoncluster::Chi2</td>
-        <td></td>
-        <td>chi2</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-    </table>
-  </div>
-
   <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::Zdcs</button>
   <div class="panel">
     <div>
-       
+       ZDC information
     </div>
     <div>
       Header file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev/Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
@@ -2791,7 +2519,7 @@ Click on the labels to display the table details.
         <td>I</td>
         <td>bcId</td>
         <td>int32</td>
-        <td>Pointer into BCs</td>
+        <td>BC index</td>
       </tr>
       <tr>
         <td>o2::aod::zdc::EnergyZEM1</td>
@@ -2941,21 +2669,21 @@ Click on the labels to display the table details.
         <td>I</td>
         <td>bcId</td>
         <td>int32</td>
-        <td>Pointer into BCs</td>
+        <td>BC index</td>
       </tr>
       <tr>
         <td>o2::aod::fv0a::Amplitude</td>
         <td></td>
         <td>amplitude</td>
         <td>float[48]</td>
-        <td></td>
+        <td>Amplitudes per cell</td>
       </tr>
       <tr>
         <td>o2::aod::fv0a::Time</td>
         <td></td>
         <td>time</td>
         <td>float</td>
-        <td></td>
+        <td>Time in ns</td>
       </tr>
       <tr>
         <td>o2::aod::fv0a::TriggerMask</td>
@@ -2970,7 +2698,7 @@ Click on the labels to display the table details.
   <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::FV0Cs</button>
   <div class="panel">
     <div>
-       
+       Only for RUN 2 converted data: V0C table
     </div>
     <div>
       Header file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev/Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
@@ -3000,21 +2728,21 @@ Click on the labels to display the table details.
         <td>I</td>
         <td>bcId</td>
         <td>int32</td>
-        <td>Pointer into BCs</td>
+        <td>BC index</td>
       </tr>
       <tr>
         <td>o2::aod::fv0c::Amplitude</td>
         <td></td>
         <td>amplitude</td>
         <td>float[32]</td>
-        <td></td>
+        <td>Amplitudes per cell</td>
       </tr>
       <tr>
         <td>o2::aod::fv0c::Time</td>
         <td></td>
         <td>time</td>
         <td>float</td>
-        <td></td>
+        <td>Time in ns</td>
       </tr>
     </table>
   </div>
@@ -3052,7 +2780,7 @@ Click on the labels to display the table details.
         <td>I</td>
         <td>bcId</td>
         <td>int32</td>
-        <td>Pointer into BCs</td>
+        <td>BC index</td>
       </tr>
       <tr>
         <td>o2::aod::ft0::AmplitudeA</td>
@@ -3125,7 +2853,7 @@ Click on the labels to display the table details.
         <td>I</td>
         <td>bcId</td>
         <td>int32</td>
-        <td>Pointer into BCs</td>
+        <td>BC index</td>
       </tr>
       <tr>
         <td>o2::aod::fdd::AmplitudeA</td>
@@ -3168,7 +2896,7 @@ Click on the labels to display the table details.
   <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::StoredV0s</button>
   <div class="panel">
     <div>
-       
+       On disk V0 table
     </div>
     <div>
       Header file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev/Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
@@ -3199,14 +2927,14 @@ Click on the labels to display the table details.
         <td>I</td>
         <td>posTrackId</td>
         <td>int</td>
-        <td>Pointer into Tracks</td>
+        <td>Positive track</td>
       </tr>
       <tr>
         <td>o2::aod::v0::NegTrackId</td>
         <td>I</td>
         <td>negTrackId</td>
         <td>int</td>
-        <td>Pointer into Tracks</td>
+        <td>Negative track</td>
       </tr>
     </table>
   </div>
@@ -3214,7 +2942,7 @@ Click on the labels to display the table details.
   <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::StoredCascades</button>
   <div class="panel">
     <div>
-       
+       On disk cascade table
     </div>
     <div>
       Header file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev/Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
@@ -3245,14 +2973,14 @@ Click on the labels to display the table details.
         <td>I</td>
         <td>v0Id</td>
         <td>int32</td>
-        <td>Pointer into V0s</td>
+        <td>V0 index</td>
       </tr>
       <tr>
         <td>o2::aod::cascade::BachelorId</td>
         <td>I</td>
         <td>bachelorId</td>
         <td>int</td>
-        <td>Pointer into Tracks</td>
+        <td>Bachelor track index</td>
       </tr>
     </table>
   </div>
@@ -3260,7 +2988,7 @@ Click on the labels to display the table details.
   <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::Run2BCInfos</button>
   <div class="panel">
     <div>
-       
+       Legacy information for Run 2 event selection
     </div>
     <div>
       Header file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev/Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
@@ -3283,77 +3011,77 @@ Click on the labels to display the table details.
         <td></td>
         <td>eventCuts</td>
         <td>uint32_t</td>
-        <td></td>
+        <td>Event selection flags. Check enum Run2EventSelectionCut</td>
       </tr>
       <tr>
         <td>o2::aod::run2::TriggerMaskNext50</td>
         <td></td>
         <td>triggerMaskNext50</td>
         <td>uint64_t</td>
-        <td></td>
+        <td>50 further trigger classes after bc.triggerMask()</td>
       </tr>
       <tr>
         <td>o2::aod::run2::L0TriggerInputMask</td>
         <td></td>
         <td>l0TriggerInputMask</td>
         <td>uint32_t</td>
-        <td></td>
+        <td>CTP L0 trigger input mask</td>
       </tr>
       <tr>
         <td>o2::aod::run2::SPDClustersL0</td>
         <td></td>
         <td>spdClustersL0</td>
         <td>uint16_t</td>
-        <td></td>
+        <td>Number of clusters in the first layer of the SPD</td>
       </tr>
       <tr>
         <td>o2::aod::run2::SPDClustersL1</td>
         <td></td>
         <td>spdClustersL1</td>
         <td>uint16_t</td>
-        <td></td>
+        <td>Number of clusters in the second layer of the SPD</td>
       </tr>
       <tr>
         <td>o2::aod::run2::SPDFiredChipsL0</td>
         <td></td>
         <td>spdFiredChipsL0</td>
         <td>uint16_t</td>
-        <td></td>
+        <td>Fired chips in the first layer of the SPD (offline)</td>
       </tr>
       <tr>
         <td>o2::aod::run2::SPDFiredChipsL1</td>
         <td></td>
         <td>spdFiredChipsL1</td>
         <td>uint16_t</td>
-        <td></td>
+        <td>Fired chips in the second layer of the SPD (offline)</td>
       </tr>
       <tr>
         <td>o2::aod::run2::SPDFiredFastOrL0</td>
         <td></td>
         <td>spdFiredFastOrL0</td>
         <td>uint16_t</td>
-        <td></td>
+        <td>Fired FASTOR signals in the first layer of the SPD (online)</td>
       </tr>
       <tr>
         <td>o2::aod::run2::SPDFiredFastOrL1</td>
         <td></td>
         <td>spdFiredFastOrL1</td>
         <td>uint16_t</td>
-        <td></td>
+        <td>Fired FASTOR signals in the first layer of the SPD (online)</td>
       </tr>
       <tr>
         <td>o2::aod::run2::V0TriggerChargeA</td>
         <td></td>
         <td>v0TriggerChargeA</td>
         <td>uint16_t</td>
-        <td></td>
+        <td>V0A trigger charge</td>
       </tr>
       <tr>
         <td>o2::aod::run2::V0TriggerChargeC</td>
         <td></td>
         <td>v0TriggerChargeC</td>
         <td>uint16_t</td>
-        <td></td>
+        <td>V0C trigger charge</td>
       </tr>
     </table>
   </div>
@@ -3361,7 +3089,7 @@ Click on the labels to display the table details.
   <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::McCollisions</button>
   <div class="panel">
     <div>
-       
+       MC collision table
     </div>
     <div>
       Header file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev/Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
@@ -3391,7 +3119,7 @@ Click on the labels to display the table details.
         <td>I</td>
         <td>bcId</td>
         <td>int32</td>
-        <td>Pointer into BCs</td>
+        <td>BC index</td>
       </tr>
       <tr>
         <td>o2::aod::mccollision::GeneratorsID</td>
@@ -3405,42 +3133,42 @@ Click on the labels to display the table details.
         <td></td>
         <td>posX</td>
         <td>float</td>
-        <td></td>
+        <td>X vertex position in cm</td>
       </tr>
       <tr>
         <td>o2::aod::mccollision::PosY</td>
         <td></td>
         <td>posY</td>
         <td>float</td>
-        <td></td>
+        <td>Y vertex position in cm</td>
       </tr>
       <tr>
         <td>o2::aod::mccollision::PosZ</td>
         <td></td>
         <td>posZ</td>
         <td>float</td>
-        <td></td>
+        <td>Z vertex position in cm</td>
       </tr>
       <tr>
         <td>o2::aod::mccollision::T</td>
         <td></td>
         <td>t</td>
         <td>float</td>
-        <td></td>
+        <td>Collision time</td>
       </tr>
       <tr>
         <td>o2::aod::mccollision::Weight</td>
         <td></td>
         <td>weight</td>
         <td>float</td>
-        <td></td>
+        <td>MC weight</td>
       </tr>
       <tr>
         <td>o2::aod::mccollision::ImpactParameter</td>
         <td></td>
         <td>impactParameter</td>
         <td>float</td>
-        <td></td>
+        <td>Impact parameter for A-A</td>
       </tr>
     </table>
   </div>
@@ -3448,7 +3176,7 @@ Click on the labels to display the table details.
   <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::McParticles</button>
   <div class="panel">
     <div>
-       
+       MC particle table
     </div>
     <div>
       Header file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev/Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
@@ -3478,147 +3206,147 @@ Click on the labels to display the table details.
         <td>I</td>
         <td>mcCollisionId</td>
         <td>int32</td>
-        <td>Pointer into McCollisions</td>
+        <td>MC collision of this particle</td>
       </tr>
       <tr>
         <td>o2::aod::mcparticle::PdgCode</td>
         <td></td>
         <td>pdgCode</td>
         <td>int</td>
-        <td></td>
+        <td>PDG code</td>
       </tr>
       <tr>
         <td>o2::aod::mcparticle::StatusCode</td>
         <td></td>
         <td>statusCode</td>
         <td>int</td>
-        <td></td>
+        <td>Status code directly from the generator</td>
       </tr>
       <tr>
         <td>o2::aod::mcparticle::Flags</td>
         <td></td>
         <td>flags</td>
         <td>uint8_t</td>
-        <td></td>
+        <td>ALICE specific flags. Do not use directly. Use the dynamic columns, e.g. producedByGenerator()</td>
       </tr>
       <tr>
         <td>o2::aod::mcparticle::Mother0</td>
         <td></td>
         <td>mother0</td>
         <td>int</td>
-        <td></td>
+        <td>Track index of the first mother</td>
       </tr>
       <tr>
         <td>o2::aod::mcparticle::Mother1</td>
         <td></td>
         <td>mother1</td>
         <td>int</td>
-        <td></td>
+        <td>Track index of the second mother</td>
       </tr>
       <tr>
         <td>o2::aod::mcparticle::Daughter0</td>
         <td></td>
         <td>daughter0</td>
         <td>int</td>
-        <td></td>
+        <td>Track index of the first daugther</td>
       </tr>
       <tr>
         <td>o2::aod::mcparticle::Daughter1</td>
         <td></td>
         <td>daughter1</td>
         <td>int</td>
-        <td></td>
+        <td>Track index of the second daugther</td>
       </tr>
       <tr>
         <td>o2::aod::mcparticle::Weight</td>
         <td></td>
         <td>weight</td>
         <td>float</td>
-        <td></td>
+        <td>MC weight</td>
       </tr>
       <tr>
         <td>o2::aod::mcparticle::Px</td>
         <td></td>
         <td>px</td>
         <td>float</td>
-        <td></td>
+        <td>Momentum in x in GeV/c</td>
       </tr>
       <tr>
         <td>o2::aod::mcparticle::Py</td>
         <td></td>
         <td>py</td>
         <td>float</td>
-        <td></td>
+        <td>Momentum in y in GeV/c</td>
       </tr>
       <tr>
         <td>o2::aod::mcparticle::Pz</td>
         <td></td>
         <td>pz</td>
         <td>float</td>
-        <td></td>
+        <td>Momentum in z in GeV/c</td>
       </tr>
       <tr>
         <td>o2::aod::mcparticle::E</td>
         <td></td>
         <td>e</td>
         <td>float</td>
-        <td></td>
+        <td>Energy</td>
       </tr>
       <tr>
         <td>o2::aod::mcparticle::Vx</td>
         <td></td>
         <td>vx</td>
         <td>float</td>
-        <td></td>
+        <td>X production vertex in cm</td>
       </tr>
       <tr>
         <td>o2::aod::mcparticle::Vy</td>
         <td></td>
         <td>vy</td>
         <td>float</td>
-        <td></td>
+        <td>Y production vertex in cm</td>
       </tr>
       <tr>
         <td>o2::aod::mcparticle::Vz</td>
         <td></td>
         <td>vz</td>
         <td>float</td>
-        <td></td>
+        <td>Z production vertex in cm</td>
       </tr>
       <tr>
         <td>o2::aod::mcparticle::Vt</td>
         <td></td>
         <td>vt</td>
         <td>float</td>
-        <td></td>
+        <td>Production time</td>
       </tr>
       <tr>
         <td>o2::aod::mcparticle::Phi</td>
         <td>D</td>
         <td>phi</td>
         <td>float</td>
-        <td></td>
+        <td>Phi</td>
       </tr>
       <tr>
         <td>o2::aod::mcparticle::Eta</td>
         <td>D</td>
         <td>eta</td>
         <td>float</td>
-        <td></td>
+        <td>Pseudorapidity</td>
       </tr>
       <tr>
         <td>o2::aod::mcparticle::Pt</td>
         <td>D</td>
         <td>pt</td>
         <td>float</td>
-        <td></td>
+        <td>Transverse momentum in GeV/c</td>
       </tr>
       <tr>
         <td>o2::aod::mcparticle::ProducedByGenerator</td>
         <td>D</td>
         <td>producedByGenerator</td>
         <td>bool</td>
-        <td></td>
+        <td>Particle produced by the generator or by the transport code</td>
       </tr>
     </table>
   </div>
@@ -3626,7 +3354,7 @@ Click on the labels to display the table details.
   <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::McTrackLabels</button>
   <div class="panel">
     <div>
-       
+       Table joined to the track table containing the MC index
     </div>
     <div>
       Header file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev/Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
@@ -3650,13 +3378,51 @@ Click on the labels to display the table details.
         <td>I</td>
         <td>mcParticleId</td>
         <td>int32</td>
-        <td>Pointer into McParticles</td>
+        <td>MC particle</td>
       </tr>
       <tr>
         <td>o2::aod::mctracklabel::McMask</td>
         <td></td>
         <td>mcMask</td>
         <td>uint16_t</td>
+        <td>Bit mask to indicate detector mismatches (bit ON means mismatch). Bit 0-6: mismatch at ITS layer. Bit 7-9: # of TPC mismatches in the ranges 0, 1, 2-3, 4-7, 8-15, 16-31, 32-63, >64. Bit 10: TRD, bit 11: TOF, bit 15: indicates negative label</td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::McMFTTrackLabels</button>
+  <div class="panel">
+    <div>
+       Table joined to the mft track table containing the MC index
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev/Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::McMFTTrackLabel = o2::aod::McMFTTrackLabels::iterator</li>
+      </ul>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::mcmfttracklabel::McParticleId</td>
+        <td>I</td>
+        <td>mcParticleId</td>
+        <td>int32</td>
+        <td>MC particle</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mcmfttracklabel::McMask</td>
+        <td></td>
+        <td>mcMask</td>
+        <td>uint8_t</td>
         <td></td>
       </tr>
     </table>
@@ -3665,7 +3431,7 @@ Click on the labels to display the table details.
   <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::McCaloLabels</button>
   <div class="panel">
     <div>
-       
+       Table joined to the calo table containing the MC index
     </div>
     <div>
       Header file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev/Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
@@ -3688,14 +3454,14 @@ Click on the labels to display the table details.
         <td>I</td>
         <td>mcParticleId</td>
         <td>int32</td>
-        <td>Pointer into McParticles</td>
+        <td>MC particle</td>
       </tr>
       <tr>
         <td>o2::aod::mccalolabel::McMask</td>
         <td></td>
         <td>mcMask</td>
         <td>uint16_t</td>
-        <td></td>
+        <td>Bit mask to indicate detector mismatches (bit ON means mismatch). Bit 15: indicates negative label</td>
       </tr>
     </table>
   </div>
@@ -3703,7 +3469,7 @@ Click on the labels to display the table details.
   <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::McCollisionLabels</button>
   <div class="panel">
     <div>
-       
+       Table joined to the collision table containing the MC index
     </div>
     <div>
       Header file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev/Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
@@ -3726,14 +3492,14 @@ Click on the labels to display the table details.
         <td>I</td>
         <td>mcCollisionId</td>
         <td>int32</td>
-        <td>Pointer into McCollisions</td>
+        <td>MC collision</td>
       </tr>
       <tr>
         <td>o2::aod::mccollisionlabel::McMask</td>
         <td></td>
         <td>mcMask</td>
         <td>uint16_t</td>
-        <td></td>
+        <td>Bit mask to indicate collision mismatches (bit ON means mismatch). Bit 15: indicates negative label</td>
       </tr>
     </table>
   </div>

@@ -441,10 +441,10 @@ struct MyTask : AnalysisTask {
 };
 ```
 
-however this has the disadvantage that the filtering will be done for every
+However this has the disadvantage that the filtering will be done for every
 task which has similar or more restrictive conditions. By declaring your
 filters upfront you can not only simplify your code, but allow the framework to
-optimize your processing.  To do so, we provide two helpers: `Filter` and
+optimize the processing. To do so, we provide two helpers: `Filter` and
 `Partition`. 
 
 ### Upfront filtering
@@ -463,7 +463,7 @@ struct MyTask : AnalysisTask {
 };
 ```
 
-filteredTracks will contain only the tracks in the table which pass the condition `track::pt > 1`. 
+filteredTracks will contain only the tracks in the table which pass the condition `track::pt > 1`.
 
 You can specify multiple filters which will be applied in a sequence effectively resulting in the intersection of all them.
 
@@ -482,6 +482,7 @@ struct MyTask : AnalysisTask {
 ```
 
 will process all the collisions which have at least one track with `pt > 1`.
+
 
 ### Partitioning your inputs
 

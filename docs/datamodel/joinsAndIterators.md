@@ -6,7 +6,7 @@ title: Joins and iterators
 The data model provides in addition to the set of tables also some predefined joines which are listed below.
 
 <a name="usings"></a>
-# List of defined joins and iterators
+## List of defined joins and iterators
 <div>
 
   <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::BC</button>
@@ -86,6 +86,13 @@ The data model provides in addition to the set of tables also some predefined jo
     </ul>
   </div>
 
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::MuonCluster</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::MuonCluster = o2::aod::MuonClusters::iterator</li>
+    </ul>
+  </div>
+
   <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::FullFwdTracks</button>
   <div class="panel">
     <ul>
@@ -100,17 +107,17 @@ The data model provides in addition to the set of tables also some predefined jo
     </ul>
   </div>
 
-  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::UnassignedTrack</button>
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::AmbiguousTrack</button>
   <div class="panel">
     <ul>
-        <li>o2::aod::UnassignedTrack = o2::aod::UnassignedTracks::iterator</li>
+        <li>o2::aod::AmbiguousTrack = o2::aod::AmbiguousTracks::iterator</li>
     </ul>
   </div>
 
-  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::UnassignedMFTTrack</button>
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::AmbiguousMFTTrack</button>
   <div class="panel">
     <ul>
-        <li>o2::aod::UnassignedMFTTrack = o2::aod::UnassignedMFTTracks::iterator</li>
+        <li>o2::aod::AmbiguousMFTTrack = o2::aod::AmbiguousMFTTracks::iterator</li>
     </ul>
   </div>
 
@@ -132,20 +139,6 @@ The data model provides in addition to the set of tables also some predefined jo
   <div class="panel">
     <ul>
         <li>o2::aod::CaloTrigger = o2::aod::CaloTriggers::iterator</li>
-    </ul>
-  </div>
-
-  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::Muon</button>
-  <div class="panel">
-    <ul>
-        <li>o2::aod::Muon = o2::aod::Muons::iterator</li>
-    </ul>
-  </div>
-
-  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::MuonCluster</button>
-  <div class="panel">
-    <ul>
-        <li>o2::aod::MuonCluster = o2::aod::MuonClusters::iterator</li>
     </ul>
   </div>
 
@@ -237,6 +230,13 @@ The data model provides in addition to the set of tables also some predefined jo
   <div class="panel">
     <ul>
         <li>o2::aod::McTrackLabel = o2::aod::McTrackLabels::iterator</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::McMFTTrackLabel</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::McMFTTrackLabel = o2::aod::McMFTTrackLabels::iterator</li>
     </ul>
   </div>
 
@@ -335,6 +335,13 @@ The data model provides in addition to the set of tables also some predefined jo
   <div class="panel">
     <ul>
         <li>o2::aod::HfCandProng2 = o2::aod::HfCandProng2Ext</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::HfCandCascade</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::HfCandCascade = o2::aod::HfCandCascExt</li>
     </ul>
   </div>
 

@@ -51,7 +51,7 @@ struct SpawnExtendedTables {
 
 ```
 
-Filters defined in front can be applied to the arguments of the process function using the templated function soa::Filtered&lt;T&gt;. T is used to deduce which of the declared filters can be applied. If there are several matching filters then they are all logically anded.
+Filters defined in front of a process function can be applied to the arguments of the process function using the templated function soa::Filtered&lt;T&gt;. T is used to deduce which of the declared filters can be applied. If there are several matching filters then they are all logically anded.
 
 ```cpp
 

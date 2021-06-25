@@ -17,7 +17,7 @@ Click on the labels to display the table details.
 <!----------------------------------------------------------------------------->
 
 ####  o2-analysis-centrality-table
-Code file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev//Analysis/Tasks///centralityTable.cxx" target="_blank">centralityTable.cxx</a>
+Code file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev//Analysis/Tasks/.//centralityTable.cxx" target="_blank">centralityTable.cxx</a>
 <div>
 
   <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::Cents</button>
@@ -26,7 +26,7 @@ Code file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev//Analysis/T
        
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev/Analysis/DataModel/include/AnalysisDataModel//Centrality.h" target="_blank">Analysis/DataModel/include/AnalysisDataModel//Centrality.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev/Analysis/DataModel/include/AnalysisDataModel/./Centrality.h" target="_blank">Analysis/DataModel/include/AnalysisDataModel/./Centrality.h</a>
     </div>
     <div>Is used in:
       <ul>
@@ -54,7 +54,7 @@ Code file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev//Analysis/T
 </div>
 
 ####  o2-analysis-emcal-correction-task
-Code file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev//Analysis/Tasks///emcalCorrectionTask.cxx" target="_blank">emcalCorrectionTask.cxx</a>
+Code file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev//Analysis/Tasks/.//emcalCorrectionTask.cxx" target="_blank">emcalCorrectionTask.cxx</a>
 <div>
 
   <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::EMCALClusters</button>
@@ -63,7 +63,7 @@ Code file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev//Analysis/T
        
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev/Analysis/DataModel/include/AnalysisDataModel//EMCALClusters.h" target="_blank">Analysis/DataModel/include/AnalysisDataModel//EMCALClusters.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev/Analysis/DataModel/include/AnalysisDataModel/./EMCALClusters.h" target="_blank">Analysis/DataModel/include/AnalysisDataModel/./EMCALClusters.h</a>
     </div>
     <div>Is used in:
       <ul>
@@ -126,7 +126,7 @@ Code file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev//Analysis/T
 </div>
 
 ####  o2-analysis-event-selection
-Code file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev//Analysis/Tasks///eventSelection.cxx" target="_blank">eventSelection.cxx</a>
+Code file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev//Analysis/Tasks/.//eventSelection.cxx" target="_blank">eventSelection.cxx</a>
 <div>
 
   <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::EvSels</button>
@@ -135,7 +135,7 @@ Code file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev//Analysis/T
        
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev/Analysis/DataModel/include/AnalysisDataModel//EventSelection.h" target="_blank">Analysis/DataModel/include/AnalysisDataModel//EventSelection.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev/Analysis/DataModel/include/AnalysisDataModel/./EventSelection.h" target="_blank">Analysis/DataModel/include/AnalysisDataModel/./EventSelection.h</a>
     </div>
     <div>Is used in:
       <ul>
@@ -267,7 +267,7 @@ Code file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev//Analysis/T
         <td></td>
         <td>foundFT0</td>
         <td>int64_t</td>
-        <td>The nearest FT0 signal</td>
+        <td>FT0 entry index in FT0s table (-1 if doesn't exist)</td>
       </tr>
     </table>
   </div>
@@ -278,7 +278,7 @@ Code file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev//Analysis/T
        
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev/Analysis/DataModel/include/AnalysisDataModel//EventSelection.h" target="_blank">Analysis/DataModel/include/AnalysisDataModel//EventSelection.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev/Analysis/DataModel/include/AnalysisDataModel/./EventSelection.h" target="_blank">Analysis/DataModel/include/AnalysisDataModel/./EventSelection.h</a>
     </div>
     <div>Is used in:
       <ul>
@@ -384,13 +384,20 @@ Code file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev//Analysis/T
         <td>uint32_t</td>
         <td>Number of SPD clusters in two layers</td>
       </tr>
+      <tr>
+        <td>o2::aod::evsel::FoundFT0</td>
+        <td></td>
+        <td>foundFT0</td>
+        <td>int64_t</td>
+        <td>FT0 entry index in FT0s table (-1 if doesn't exist)</td>
+      </tr>
     </table>
   </div>
 
 </div>
 
 ####  o2-analysis-multiplicity-table
-Code file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev//Analysis/Tasks///multiplicityTable.cxx" target="_blank">multiplicityTable.cxx</a>
+Code file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev//Analysis/Tasks/.//multiplicityTable.cxx" target="_blank">multiplicityTable.cxx</a>
 <div>
 
   <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::Mults</button>
@@ -399,7 +406,7 @@ Code file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev//Analysis/T
        
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev/Analysis/DataModel/include/AnalysisDataModel//Multiplicity.h" target="_blank">Analysis/DataModel/include/AnalysisDataModel//Multiplicity.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev/Analysis/DataModel/include/AnalysisDataModel/./Multiplicity.h" target="_blank">Analysis/DataModel/include/AnalysisDataModel/./Multiplicity.h</a>
     </div>
     <div>Is used in:
       <ul>
@@ -483,13 +490,13 @@ Code file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev//Analysis/T
 </div>
 
 ####  o2-analysis-timestamp
-Code file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev//Analysis/Tasks///timestamp.cxx" target="_blank">timestamp.cxx</a>
+Code file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev//Analysis/Tasks/.//timestamp.cxx" target="_blank">timestamp.cxx</a>
 <div>
 
   <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::Timestamps</button>
   <div class="panel">
     <div>
-       
+       Table which holds the timestamp of a BC
     </div>
     <div>
       Header file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev/Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
@@ -512,7 +519,7 @@ Code file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev//Analysis/T
         <td></td>
         <td>timestamp</td>
         <td>uint64_t</td>
-        <td></td>
+        <td>Timestamp of a BC in ms (epoch style)</td>
       </tr>
     </table>
   </div>
@@ -520,7 +527,7 @@ Code file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev//Analysis/T
 </div>
 
 ####  o2-analysis-trackextension
-Code file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev//Analysis/Tasks///trackextension.cxx" target="_blank">trackextension.cxx</a>
+Code file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev//Analysis/Tasks/.//trackextension.cxx" target="_blank">trackextension.cxx</a>
 <div>
 
   <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::TracksExtended</button>
@@ -529,7 +536,7 @@ Code file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev//Analysis/T
        
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev/Analysis/DataModel/include/AnalysisDataModel//TrackSelectionTables.h" target="_blank">Analysis/DataModel/include/AnalysisDataModel//TrackSelectionTables.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev/Analysis/DataModel/include/AnalysisDataModel/./TrackSelectionTables.h" target="_blank">Analysis/DataModel/include/AnalysisDataModel/./TrackSelectionTables.h</a>
     </div>
     <table class=DataModel>
       <tr>
@@ -559,7 +566,7 @@ Code file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev//Analysis/T
 </div>
 
 ####  o2-analysis-trackselection
-Code file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev//Analysis/Tasks///trackselection.cxx" target="_blank">trackselection.cxx</a>
+Code file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev//Analysis/Tasks/.//trackselection.cxx" target="_blank">trackselection.cxx</a>
 <div>
 
   <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::TrackSelection</button>
@@ -568,7 +575,7 @@ Code file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev//Analysis/T
        
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev/Analysis/DataModel/include/AnalysisDataModel//TrackSelectionTables.h" target="_blank">Analysis/DataModel/include/AnalysisDataModel//TrackSelectionTables.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev/Analysis/DataModel/include/AnalysisDataModel/./TrackSelectionTables.h" target="_blank">Analysis/DataModel/include/AnalysisDataModel/./TrackSelectionTables.h</a>
     </div>
     <table class=DataModel>
       <tr>
@@ -598,13 +605,13 @@ Code file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev//Analysis/T
 </div>
 
 ####  o2-analysis-weak-decay-indices
-Code file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev//Analysis/Tasks///weakDecayIndices.cxx" target="_blank">weakDecayIndices.cxx</a>
+Code file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev//Analysis/Tasks/.//weakDecayIndices.cxx" target="_blank">weakDecayIndices.cxx</a>
 <div>
 
   <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::TransientV0s</button>
   <div class="panel">
     <div>
-       
+       In-memory V0 table
     </div>
     <div>
       Header file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev/Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
@@ -628,7 +635,7 @@ Code file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev//Analysis/T
         <td>I</td>
         <td>collisionId</td>
         <td>int32</td>
-        <td>Pointer into Collisions</td>
+        <td>Collision index</td>
       </tr>
     </table>
   </div>
@@ -636,7 +643,7 @@ Code file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev//Analysis/T
   <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::TransientCascades</button>
   <div class="panel">
     <div>
-       
+       In-memory cascade table
     </div>
     <div>
       Header file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev/Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
@@ -660,7 +667,7 @@ Code file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev//Analysis/T
         <td>I</td>
         <td>collisionId</td>
         <td>int32</td>
-        <td>Pointer into Collisions</td>
+        <td>Collision index</td>
       </tr>
     </table>
   </div>
@@ -2132,7 +2139,7 @@ Code file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev//Analysis/T
        
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev/Analysis/DataModel/include/AnalysisDataModel//StrangenessTables.h" target="_blank">Analysis/DataModel/include/AnalysisDataModel//StrangenessTables.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev/Analysis/DataModel/include/AnalysisDataModel/./StrangenessTables.h" target="_blank">Analysis/DataModel/include/AnalysisDataModel/./StrangenessTables.h</a>
     </div>
     <div>Is used in:
       <ul>
@@ -2428,7 +2435,7 @@ Code file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev//Analysis/T
        
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev/Analysis/DataModel/include/AnalysisDataModel//StrangenessTables.h" target="_blank">Analysis/DataModel/include/AnalysisDataModel//StrangenessTables.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev/Analysis/DataModel/include/AnalysisDataModel/./StrangenessTables.h" target="_blank">Analysis/DataModel/include/AnalysisDataModel/./StrangenessTables.h</a>
     </div>
     <table class=DataModel>
       <tr>
@@ -2607,6 +2614,13 @@ Code file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev//Analysis/T
         <td></td>
       </tr>
       <tr>
+        <td>o2::aod::v0data::PsiPair</td>
+        <td>D</td>
+        <td>psipair</td>
+        <td>?</td>
+        <td></td>
+      </tr>
+      <tr>
         <td>o2::aod::v0data::MLambda</td>
         <td>D</td>
         <td>mLambda</td>
@@ -2677,7 +2691,7 @@ Code file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev//Analysis/T
        
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev/Analysis/DataModel/include/AnalysisDataModel//HFSecondaryVertex.h" target="_blank">Analysis/DataModel/include/AnalysisDataModel//HFSecondaryVertex.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev/Analysis/DataModel/include/AnalysisDataModel/./HFSecondaryVertex.h" target="_blank">Analysis/DataModel/include/AnalysisDataModel/./HFSecondaryVertex.h</a>
     </div>
     <table class=DataModel>
       <tr>
@@ -3088,7 +3102,7 @@ Code file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev//Analysis/T
        
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev/Analysis/DataModel/include/AnalysisDataModel//HFSecondaryVertex.h" target="_blank">Analysis/DataModel/include/AnalysisDataModel//HFSecondaryVertex.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev/Analysis/DataModel/include/AnalysisDataModel/./HFSecondaryVertex.h" target="_blank">Analysis/DataModel/include/AnalysisDataModel/./HFSecondaryVertex.h</a>
     </div>
     <table class=DataModel>
       <tr>
@@ -3121,7 +3135,7 @@ Code file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev//Analysis/T
        
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev/Analysis/DataModel/include/AnalysisDataModel//HFSecondaryVertex.h" target="_blank">Analysis/DataModel/include/AnalysisDataModel//HFSecondaryVertex.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev/Analysis/DataModel/include/AnalysisDataModel/./HFSecondaryVertex.h" target="_blank">Analysis/DataModel/include/AnalysisDataModel/./HFSecondaryVertex.h</a>
     </div>
     <table class=DataModel>
       <tr>
@@ -3160,7 +3174,7 @@ Code file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev//Analysis/T
        
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev/Analysis/DataModel/include/AnalysisDataModel//HFSecondaryVertex.h" target="_blank">Analysis/DataModel/include/AnalysisDataModel//HFSecondaryVertex.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev/Analysis/DataModel/include/AnalysisDataModel/./HFSecondaryVertex.h" target="_blank">Analysis/DataModel/include/AnalysisDataModel/./HFSecondaryVertex.h</a>
     </div>
     <table class=DataModel>
       <tr>
@@ -3627,7 +3641,7 @@ Code file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev//Analysis/T
        
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev/Analysis/DataModel/include/AnalysisDataModel//HFSecondaryVertex.h" target="_blank">Analysis/DataModel/include/AnalysisDataModel//HFSecondaryVertex.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev/Analysis/DataModel/include/AnalysisDataModel/./HFSecondaryVertex.h" target="_blank">Analysis/DataModel/include/AnalysisDataModel/./HFSecondaryVertex.h</a>
     </div>
     <table class=DataModel>
       <tr>
@@ -3667,7 +3681,7 @@ Code file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev//Analysis/T
        
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev/Analysis/DataModel/include/AnalysisDataModel//HFSecondaryVertex.h" target="_blank">Analysis/DataModel/include/AnalysisDataModel//HFSecondaryVertex.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev/Analysis/DataModel/include/AnalysisDataModel/./HFSecondaryVertex.h" target="_blank">Analysis/DataModel/include/AnalysisDataModel/./HFSecondaryVertex.h</a>
     </div>
     <table class=DataModel>
       <tr>
@@ -3703,6 +3717,715 @@ Code file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev//Analysis/T
 
 </div>
 
+####  o2-analysis-hf-candidate-creator-cascade
+Code file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev//Analysis/Tasks/PWGHF//HFCandidateCreatorCascade.cxx" target="_blank">HFCandidateCreatorCascade.cxx</a>
+<div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::HfCandCascBase</button>
+  <div class="panel">
+    <div>
+       
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev/Analysis/DataModel/include/AnalysisDataModel/./HFSecondaryVertex.h" target="_blank">Analysis/DataModel/include/AnalysisDataModel/./HFSecondaryVertex.h</a>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_cand::CollisionId</td>
+        <td>I</td>
+        <td>collisionId</td>
+        <td>int32</td>
+        <td>Pointer into Collisions</td>
+      </tr>
+      <tr>
+        <td>o2::aod::collision::PosX</td>
+        <td>GI</td>
+        <td></td>
+        <td>?</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::collision::PosY</td>
+        <td>GI</td>
+        <td></td>
+        <td>?</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::collision::PosZ</td>
+        <td>GI</td>
+        <td></td>
+        <td>?</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_cand::XSecondaryVertex</td>
+        <td></td>
+        <td>xSecondaryVertex</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_cand::YSecondaryVertex</td>
+        <td></td>
+        <td>ySecondaryVertex</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_cand::ZSecondaryVertex</td>
+        <td></td>
+        <td>zSecondaryVertex</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_cand::ErrorDecayLength</td>
+        <td></td>
+        <td>errorDecayLength</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_cand::ErrorDecayLengthXY</td>
+        <td></td>
+        <td>errorDecayLengthXY</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_cand::Chi2PCA</td>
+        <td></td>
+        <td>chi2PCA</td>
+        <td>float</td>
+        <td>sum of (non-weighted) distances of the secondary vertex to its prongs</td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_cand::RSecondaryVertex</td>
+        <td>D</td>
+        <td>rSecondaryVertex</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_cand::DecayLength</td>
+        <td>D</td>
+        <td>decayLength</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_cand::DecayLengthXY</td>
+        <td>D</td>
+        <td>decayLengthXY</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_cand::DecayLengthNormalised</td>
+        <td>D</td>
+        <td>decayLengthNormalised</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_cand::DecayLengthXYNormalised</td>
+        <td>D</td>
+        <td>decayLengthXYNormalised</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_cand::ImpactParameterNormalised0</td>
+        <td>D</td>
+        <td>impactParameterNormalised0</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_cand::PtProng0</td>
+        <td>D</td>
+        <td>ptProng0</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_cand::Pt2Prong0</td>
+        <td>D</td>
+        <td>pt2Prong0</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_cand::PVectorProng0</td>
+        <td>D</td>
+        <td>pVectorProng0</td>
+        <td>array<float,3></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_cand::ImpactParameterNormalised1</td>
+        <td>D</td>
+        <td>impactParameterNormalised1</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_cand::PtProng1</td>
+        <td>D</td>
+        <td>ptProng1</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_cand::Pt2Prong1</td>
+        <td>D</td>
+        <td>pt2Prong1</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_cand::PVectorProng1</td>
+        <td>D</td>
+        <td>pVectorProng1</td>
+        <td>array<float,3></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_cand::PxProng0</td>
+        <td></td>
+        <td>pxProng0</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_cand::PyProng0</td>
+        <td></td>
+        <td>pyProng0</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_cand::PzProng0</td>
+        <td></td>
+        <td>pzProng0</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_cand::PxProng1</td>
+        <td></td>
+        <td>pxProng1</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_cand::PyProng1</td>
+        <td></td>
+        <td>pyProng1</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_cand::PzProng1</td>
+        <td></td>
+        <td>pzProng1</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_cand::ImpactParameter0</td>
+        <td></td>
+        <td>impactParameter0</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_cand::ImpactParameter1</td>
+        <td></td>
+        <td>impactParameter1</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_cand::ErrorImpactParameter0</td>
+        <td></td>
+        <td>errorImpactParameter0</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_cand::ErrorImpactParameter1</td>
+        <td></td>
+        <td>errorImpactParameter1</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_track_index::Index0Id</td>
+        <td>I</td>
+        <td>index0Id</td>
+        <td>int</td>
+        <td>Pointer into Tracks</td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_track_index::IndexV0Id</td>
+        <td>I</td>
+        <td>indexV0Id</td>
+        <td>int</td>
+        <td>Pointer into aod</td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_track_index::HFflag</td>
+        <td></td>
+        <td>hfflag</td>
+        <td>uint8_t</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::v0data::X</td>
+        <td>GI</td>
+        <td></td>
+        <td>?</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::v0data::Y</td>
+        <td>GI</td>
+        <td></td>
+        <td>?</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::v0data::Z</td>
+        <td>GI</td>
+        <td></td>
+        <td>?</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::v0data::PosTrackId</td>
+        <td>GI</td>
+        <td></td>
+        <td>?</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::v0data::NegTrackId</td>
+        <td>GI</td>
+        <td></td>
+        <td>?</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::v0data::PxPos</td>
+        <td>GI</td>
+        <td></td>
+        <td>?</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::v0data::PyPos</td>
+        <td>GI</td>
+        <td></td>
+        <td>?</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::v0data::PzPos</td>
+        <td>GI</td>
+        <td></td>
+        <td>?</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::v0data::PxNeg</td>
+        <td>GI</td>
+        <td></td>
+        <td>?</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::v0data::PyNeg</td>
+        <td>GI</td>
+        <td></td>
+        <td>?</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::v0data::PzNeg</td>
+        <td>GI</td>
+        <td></td>
+        <td>?</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::v0data::DCAV0Daughters</td>
+        <td>GI</td>
+        <td></td>
+        <td>?</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::v0data::DCAPosToPV</td>
+        <td>GI</td>
+        <td></td>
+        <td>?</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::v0data::DCANegToPV</td>
+        <td>GI</td>
+        <td></td>
+        <td>?</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_cand_prong2::M</td>
+        <td>D</td>
+        <td>m</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_cand_prong2::M2</td>
+        <td>D</td>
+        <td>m2</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_cand_prong2::ImpactParameterProduct</td>
+        <td>D</td>
+        <td>impactParameterProduct</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_cand_prong2::CosThetaStar</td>
+        <td>D</td>
+        <td>cosThetaStar</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_cand_prong2::ImpactParameterProngSqSum</td>
+        <td>D</td>
+        <td>impactParameterProngSqSum</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_cand::Pt</td>
+        <td>D</td>
+        <td>pt</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_cand::Pt2</td>
+        <td>D</td>
+        <td>pt2</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_cand::P</td>
+        <td>D</td>
+        <td>p</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_cand::P2</td>
+        <td>D</td>
+        <td>p2</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_cand::PVector</td>
+        <td>D</td>
+        <td>pVector</td>
+        <td>array<float,3></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_cand::CPA</td>
+        <td>D</td>
+        <td>cpa</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_cand::CPAXY</td>
+        <td>D</td>
+        <td>cpaXY</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_cand::Ct</td>
+        <td>D</td>
+        <td>ct</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_cand::ImpactParameterXY</td>
+        <td>D</td>
+        <td>impactParameterXY</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_cand_prong2::MaxNormalisedDeltaIP</td>
+        <td>D</td>
+        <td>maxNormalisedDeltaIP</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_cand::Eta</td>
+        <td>D</td>
+        <td>eta</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_cand::Phi</td>
+        <td>D</td>
+        <td>phi</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_cand::Y</td>
+        <td>D</td>
+        <td>y</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_cand::E</td>
+        <td>D</td>
+        <td>e</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_cand::E2</td>
+        <td>D</td>
+        <td>e2</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_cand_casc::PtV0Pos</td>
+        <td>D</td>
+        <td>ptV0Pos</td>
+        <td>?</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_cand_casc::PtV0Neg</td>
+        <td>D</td>
+        <td>ptV0Neg</td>
+        <td>?</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::v0data::V0Radius</td>
+        <td>GI</td>
+        <td></td>
+        <td>?</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::v0data::V0CosPA</td>
+        <td>GI</td>
+        <td></td>
+        <td>?</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::v0data::MLambda</td>
+        <td>GI</td>
+        <td></td>
+        <td>?</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::v0data::MAntiLambda</td>
+        <td>GI</td>
+        <td></td>
+        <td>?</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::v0data::MK0Short</td>
+        <td>GI</td>
+        <td></td>
+        <td>?</td>
+        <td></td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::HfCandCascadeMCRec</button>
+  <div class="panel">
+    <div>
+       
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev/Analysis/DataModel/include/AnalysisDataModel/./HFSecondaryVertex.h" target="_blank">Analysis/DataModel/include/AnalysisDataModel/./HFSecondaryVertex.h</a>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_cand_casc::FlagMCMatchRec</td>
+        <td></td>
+        <td>flagMCMatchRec</td>
+        <td>int8_t</td>
+        <td>reconstruction level</td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::HfCandCascadeMCGen</button>
+  <div class="panel">
+    <div>
+       
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev/Analysis/DataModel/include/AnalysisDataModel/./HFSecondaryVertex.h" target="_blank">Analysis/DataModel/include/AnalysisDataModel/./HFSecondaryVertex.h</a>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_cand_casc::FlagMCMatchGen</td>
+        <td></td>
+        <td>flagMCMatchGen</td>
+        <td>int8_t</td>
+        <td>generator level</td>
+      </tr>
+    </table>
+  </div>
+
+</div>
+
+####  o2-analysis-hf-correlator-dplusdminus
+Code file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev//Analysis/Tasks/PWGHF//HFCorrelatorDplusDminus.cxx" target="_blank">HFCorrelatorDplusDminus.cxx</a>
+<div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::DDbarPair</button>
+  <div class="panel">
+    <div>
+       
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev/Analysis/DataModel/include/AnalysisDataModel/./HFSecondaryVertex.h" target="_blank">Analysis/DataModel/include/AnalysisDataModel/./HFSecondaryVertex.h</a>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_correlation_ddbar::DeltaPhi</td>
+        <td></td>
+        <td>deltaPhi</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_correlation_ddbar::DeltaEta</td>
+        <td></td>
+        <td>deltaEta</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_correlation_ddbar::PtD</td>
+        <td></td>
+        <td>ptD</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_correlation_ddbar::PtDbar</td>
+        <td></td>
+        <td>ptDbar</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::DDbarRecoInfo</button>
+  <div class="panel">
+    <div>
+       
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev/Analysis/DataModel/include/AnalysisDataModel/./HFSecondaryVertex.h" target="_blank">Analysis/DataModel/include/AnalysisDataModel/./HFSecondaryVertex.h</a>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_correlation_ddbar::MD</td>
+        <td></td>
+        <td>mD</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_correlation_ddbar::MDbar</td>
+        <td></td>
+        <td>mDbar</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_correlation_ddbar::SignalStatus</td>
+        <td></td>
+        <td>signalStatus</td>
+        <td>int</td>
+        <td></td>
+      </tr>
+    </table>
+  </div>
+
+</div>
+
 ####  o2-analysis-hf-d0-candidate-selector
 Code file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev//Analysis/Tasks/PWGHF//HFD0CandidateSelector.cxx" target="_blank">HFD0CandidateSelector.cxx</a>
 <div>
@@ -3713,7 +4436,7 @@ Code file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev//Analysis/T
        
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev/Analysis/DataModel/include/AnalysisDataModel//HFCandidateSelectionTables.h" target="_blank">Analysis/DataModel/include/AnalysisDataModel//HFCandidateSelectionTables.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev/Analysis/DataModel/include/AnalysisDataModel/./HFCandidateSelectionTables.h" target="_blank">Analysis/DataModel/include/AnalysisDataModel/./HFCandidateSelectionTables.h</a>
     </div>
     <table class=DataModel>
       <tr>
@@ -3752,7 +4475,7 @@ Code file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev//Analysis/T
        
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev/Analysis/DataModel/include/AnalysisDataModel//HFCandidateSelectionTables.h" target="_blank">Analysis/DataModel/include/AnalysisDataModel//HFCandidateSelectionTables.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev/Analysis/DataModel/include/AnalysisDataModel/./HFCandidateSelectionTables.h" target="_blank">Analysis/DataModel/include/AnalysisDataModel/./HFCandidateSelectionTables.h</a>
     </div>
     <table class=DataModel>
       <tr>
@@ -3784,7 +4507,7 @@ Code file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev//Analysis/T
        
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev/Analysis/DataModel/include/AnalysisDataModel//HFCandidateSelectionTables.h" target="_blank">Analysis/DataModel/include/AnalysisDataModel//HFCandidateSelectionTables.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev/Analysis/DataModel/include/AnalysisDataModel/./HFCandidateSelectionTables.h" target="_blank">Analysis/DataModel/include/AnalysisDataModel/./HFCandidateSelectionTables.h</a>
     </div>
     <table class=DataModel>
       <tr>
@@ -3816,7 +4539,7 @@ Code file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev//Analysis/T
        
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev/Analysis/DataModel/include/AnalysisDataModel//HFCandidateSelectionTables.h" target="_blank">Analysis/DataModel/include/AnalysisDataModel//HFCandidateSelectionTables.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev/Analysis/DataModel/include/AnalysisDataModel/./HFCandidateSelectionTables.h" target="_blank">Analysis/DataModel/include/AnalysisDataModel/./HFCandidateSelectionTables.h</a>
     </div>
     <table class=DataModel>
       <tr>
@@ -3845,9 +4568,67 @@ Code file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev//Analysis/T
 
 </div>
 
+####  o2-analysis-hf-lc-tok0sp-candidate-selector
+Code file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev//Analysis/Tasks/PWGHF//HFLcK0sPCandidateSelector.cxx" target="_blank">HFLcK0sPCandidateSelector.cxx</a>
+<div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::HFSelLcK0sPCandidate</button>
+  <div class="panel">
+    <div>
+       
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev/Analysis/DataModel/include/AnalysisDataModel/./HFCandidateSelectionTables.h" target="_blank">Analysis/DataModel/include/AnalysisDataModel/./HFCandidateSelectionTables.h</a>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_selcandidate_lc_k0sp::IsSelLcK0sP</td>
+        <td></td>
+        <td>isSelLcK0sP</td>
+        <td>int</td>
+        <td></td>
+      </tr>
+    </table>
+  </div>
+
+</div>
+
 ####  o2-analysis-hf-track-index-skims-creator
 Code file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev//Analysis/Tasks/PWGHF//HFTrackIndexSkimsCreator.cxx" target="_blank">HFTrackIndexSkimsCreator.cxx</a>
 <div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::HFSelCollision</button>
+  <div class="panel">
+    <div>
+       
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev/Analysis/DataModel/include/AnalysisDataModel/./HFSecondaryVertex.h" target="_blank">Analysis/DataModel/include/AnalysisDataModel/./HFSecondaryVertex.h</a>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_selcollision::WhyRejectColl</td>
+        <td></td>
+        <td>whyRejectColl</td>
+        <td>int</td>
+        <td></td>
+      </tr>
+    </table>
+  </div>
 
   <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::HFSelTrack</button>
   <div class="panel">
@@ -3855,7 +4636,7 @@ Code file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev//Analysis/T
        
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev/Analysis/DataModel/include/AnalysisDataModel//HFSecondaryVertex.h" target="_blank">Analysis/DataModel/include/AnalysisDataModel//HFSecondaryVertex.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev/Analysis/DataModel/include/AnalysisDataModel/./HFSecondaryVertex.h" target="_blank">Analysis/DataModel/include/AnalysisDataModel/./HFSecondaryVertex.h</a>
     </div>
     <div>Is used in:
       <ul>
@@ -3900,7 +4681,7 @@ Code file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev//Analysis/T
        
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev/Analysis/DataModel/include/AnalysisDataModel//HFSecondaryVertex.h" target="_blank">Analysis/DataModel/include/AnalysisDataModel//HFSecondaryVertex.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev/Analysis/DataModel/include/AnalysisDataModel/./HFSecondaryVertex.h" target="_blank">Analysis/DataModel/include/AnalysisDataModel/./HFSecondaryVertex.h</a>
     </div>
     <table class=DataModel>
       <tr>
@@ -3934,13 +4715,53 @@ Code file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev//Analysis/T
     </table>
   </div>
 
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::HfTrackIndexCasc</button>
+  <div class="panel">
+    <div>
+       
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev/Analysis/DataModel/include/AnalysisDataModel/./HFSecondaryVertex.h" target="_blank">Analysis/DataModel/include/AnalysisDataModel/./HFSecondaryVertex.h</a>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_track_index::Index0Id</td>
+        <td>I</td>
+        <td>index0Id</td>
+        <td>int</td>
+        <td>Pointer into Tracks</td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_track_index::IndexV0Id</td>
+        <td>I</td>
+        <td>indexV0Id</td>
+        <td>int</td>
+        <td>Pointer into aod</td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_track_index::HFflag</td>
+        <td></td>
+        <td>hfflag</td>
+        <td>uint8_t</td>
+        <td></td>
+      </tr>
+    </table>
+  </div>
+
   <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::HfCutStatusProng2</button>
   <div class="panel">
     <div>
        
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev/Analysis/DataModel/include/AnalysisDataModel//HFSecondaryVertex.h" target="_blank">Analysis/DataModel/include/AnalysisDataModel//HFSecondaryVertex.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev/Analysis/DataModel/include/AnalysisDataModel/./HFSecondaryVertex.h" target="_blank">Analysis/DataModel/include/AnalysisDataModel/./HFSecondaryVertex.h</a>
     </div>
     <table class=DataModel>
       <tr>
@@ -3973,7 +4794,7 @@ Code file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev//Analysis/T
        
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev/Analysis/DataModel/include/AnalysisDataModel//HFSecondaryVertex.h" target="_blank">Analysis/DataModel/include/AnalysisDataModel//HFSecondaryVertex.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev/Analysis/DataModel/include/AnalysisDataModel/./HFSecondaryVertex.h" target="_blank">Analysis/DataModel/include/AnalysisDataModel/./HFSecondaryVertex.h</a>
     </div>
     <table class=DataModel>
       <tr>
@@ -4020,7 +4841,7 @@ Code file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev//Analysis/T
        
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev/Analysis/DataModel/include/AnalysisDataModel//HFSecondaryVertex.h" target="_blank">Analysis/DataModel/include/AnalysisDataModel//HFSecondaryVertex.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev/Analysis/DataModel/include/AnalysisDataModel/./HFSecondaryVertex.h" target="_blank">Analysis/DataModel/include/AnalysisDataModel/./HFSecondaryVertex.h</a>
     </div>
     <table class=DataModel>
       <tr>
@@ -4073,7 +4894,7 @@ Code file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev//Analysis/T
        
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev/Analysis/DataModel/include/AnalysisDataModel//HFCandidateSelectionTables.h" target="_blank">Analysis/DataModel/include/AnalysisDataModel//HFCandidateSelectionTables.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev/Analysis/DataModel/include/AnalysisDataModel/./HFCandidateSelectionTables.h" target="_blank">Analysis/DataModel/include/AnalysisDataModel/./HFCandidateSelectionTables.h</a>
     </div>
     <table class=DataModel>
       <tr>
