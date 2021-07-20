@@ -19,9 +19,7 @@ Mattermost channel: [hf-o2-analysis-challenge](https://mattermost.web.cern.ch/al
 [`AnalysisDataModel/HFSecondaryVertex.h`](https://github.com/AliceO2Group/AliceO2/blob/dev/Analysis/DataModel/include/AnalysisDataModel/HFSecondaryVertex.h).
 * Tables produced by candidate selectors are defined in
 [`AnalysisDataModel/HFCandidateSelectionTables.h`](https://github.com/AliceO2Group/AliceO2/blob/dev/Analysis/DataModel/include/AnalysisDataModel/HFCandidateSelectionTables.h).
-* Parameters used in the preselection of track-index skims are defined in the `HFTrackIndexSkimsCreatorConfigs` class in
-[`AnalysisCore/HFConfigurables.h`](https://github.com/AliceO2Group/AliceO2/blob/dev/Analysis/Core/include/AnalysisCore/HFConfigurables.h).
-* Parameters used in the selection of single tracks and candidates are defined in
+* Default parameters used in the selection of single tracks, track-index skims and candidates are defined in
 [`AnalysisCore/HFSelectorCuts.h`](https://github.com/AliceO2Group/AliceO2/blob/dev/Analysis/Core/include/AnalysisCore/HFSelectorCuts.h).
 * Secondary-vertex reconstruction algorithms are implemented in the
 [`DCAFitterN`](https://github.com/AliceO2Group/AliceO2/blob/dev/Detectors/Vertexing/include/DetectorsVertexing/DCAFitterN.h) class.
@@ -31,10 +29,12 @@ Mattermost channel: [hf-o2-analysis-challenge](https://mattermost.web.cern.ch/al
 [`TrackSelectorPID`](https://github.com/AliceO2Group/AliceO2/blob/dev/Analysis/Core/include/AnalysisCore/TrackSelectorPID.h) class.
 * Code for easy running of the HF tasks and output processing can be found in the
 [Run3Analysisvalidation](https://github.com/AliceO2Group/Run3Analysisvalidation) repository.
+  * Analysis code for postprocessing of the task output is collected in the
+  [`FirstAnalysis`](https://github.com/AliceO2Group/Run3Analysisvalidation/tree/master/FirstAnalysis) directory.
 
-## [AliHyperloop](https://alimonitor.cern.ch/hyperloop/)
+## AliHyperloop
 
-JIRA tickets of the HF analyses on AliHyperloop:
+JIRA tickets of the HF analyses on [AliHyperloop](https://alimonitor.cern.ch/hyperloop/):
 * [ALICE 2](https://alice.its.cern.ch/jira/browse/PWGHF-269)
 * [ALICE 3](https://alice.its.cern.ch/jira/browse/PWGHF-284)
 * [DDbar correlations](https://alice.its.cern.ch/jira/browse/PWGHF-283)
