@@ -10,11 +10,7 @@ The AO2D data files contain the basic set of data which is available for data an
 
 Click on the labels to display the table details.
 
-<!----------------------------------------------------------------------------->
-<!--                                                                         -->
-<!-- copy html version of AnalysisDataModel.h here below                     -->
-<!--                                                                         -->
-<!----------------------------------------------------------------------------->
+<!-- Block with helper tasks -->
 
 ####  o2-analysis-centrality-table
 Code file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev//Analysis/Tasks/.//centralityTable.cxx" target="_blank">centralityTable.cxx</a>
@@ -674,6 +670,279 @@ Code file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev//Analysis/T
 
 </div>
 
+####  o2-analysis-pid-bayes
+Code file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev//Analysis/Tasks/PID//pidBayes.cxx" target="_blank">pidBayes.cxx</a>
+<div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::pidBayesEl</button>
+  <div class="panel">
+    <div>
+       Binned (in percentage) Bayesian probability of having a Electron
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev/Analysis/DataModel/include/AnalysisDataModel/PID/PIDResponse.h" target="_blank">Analysis/DataModel/include/AnalysisDataModel/PID/PIDResponse.h</a>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::pidbayes::BayesEl</td>
+        <td></td>
+        <td>bayesEl</td>
+        <td>int8_t</td>
+        <td>Bayesian probability for electron expressed in %</td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::pidBayesMu</button>
+  <div class="panel">
+    <div>
+       Binned (in percentage) Bayesian probability of having a Muon
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev/Analysis/DataModel/include/AnalysisDataModel/PID/PIDResponse.h" target="_blank">Analysis/DataModel/include/AnalysisDataModel/PID/PIDResponse.h</a>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::pidbayes::BayesMu</td>
+        <td></td>
+        <td>bayesMu</td>
+        <td>int8_t</td>
+        <td>Bayesian probability for muon expressed in %</td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::pidBayesPi</button>
+  <div class="panel">
+    <div>
+       Binned (in percentage) Bayesian probability of having a Pion
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev/Analysis/DataModel/include/AnalysisDataModel/PID/PIDResponse.h" target="_blank">Analysis/DataModel/include/AnalysisDataModel/PID/PIDResponse.h</a>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::pidbayes::BayesPi</td>
+        <td></td>
+        <td>bayesPi</td>
+        <td>int8_t</td>
+        <td>Bayesian probability for pion expressed in %</td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::pidBayesKa</button>
+  <div class="panel">
+    <div>
+       Binned (in percentage) Bayesian probability of having a Kaon
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev/Analysis/DataModel/include/AnalysisDataModel/PID/PIDResponse.h" target="_blank">Analysis/DataModel/include/AnalysisDataModel/PID/PIDResponse.h</a>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::pidbayes::BayesKa</td>
+        <td></td>
+        <td>bayesKa</td>
+        <td>int8_t</td>
+        <td>Bayesian probability for kaon expressed in %</td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::pidBayesPr</button>
+  <div class="panel">
+    <div>
+       Binned (in percentage) Bayesian probability of having a Proton
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev/Analysis/DataModel/include/AnalysisDataModel/PID/PIDResponse.h" target="_blank">Analysis/DataModel/include/AnalysisDataModel/PID/PIDResponse.h</a>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::pidbayes::BayesPr</td>
+        <td></td>
+        <td>bayesPr</td>
+        <td>int8_t</td>
+        <td>Bayesian probability for proton expressed in %</td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::pidBayesDe</button>
+  <div class="panel">
+    <div>
+       Binned (in percentage) Bayesian probability of having a Deuteron
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev/Analysis/DataModel/include/AnalysisDataModel/PID/PIDResponse.h" target="_blank">Analysis/DataModel/include/AnalysisDataModel/PID/PIDResponse.h</a>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::pidbayes::BayesDe</td>
+        <td></td>
+        <td>bayesDe</td>
+        <td>int8_t</td>
+        <td>Bayesian probability for deuteron expressed in %</td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::pidBayesTr</button>
+  <div class="panel">
+    <div>
+       Binned (in percentage) Bayesian probability of having a Triton
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev/Analysis/DataModel/include/AnalysisDataModel/PID/PIDResponse.h" target="_blank">Analysis/DataModel/include/AnalysisDataModel/PID/PIDResponse.h</a>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::pidbayes::BayesTr</td>
+        <td></td>
+        <td>bayesTr</td>
+        <td>int8_t</td>
+        <td>Bayesian probability for triton expressed in %</td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::pidBayesHe</button>
+  <div class="panel">
+    <div>
+       Binned (in percentage) Bayesian probability of having a Helium3
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev/Analysis/DataModel/include/AnalysisDataModel/PID/PIDResponse.h" target="_blank">Analysis/DataModel/include/AnalysisDataModel/PID/PIDResponse.h</a>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::pidbayes::BayesHe</td>
+        <td></td>
+        <td>bayesHe</td>
+        <td>int8_t</td>
+        <td>Bayesian probability for helium3 expressed in %</td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::pidBayesAl</button>
+  <div class="panel">
+    <div>
+       Binned (in percentage) Bayesian probability of having a Alpha
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev/Analysis/DataModel/include/AnalysisDataModel/PID/PIDResponse.h" target="_blank">Analysis/DataModel/include/AnalysisDataModel/PID/PIDResponse.h</a>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::pidbayes::BayesAl</td>
+        <td></td>
+        <td>bayesAl</td>
+        <td>int8_t</td>
+        <td>Bayesian probability for alpha expressed in %</td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::pidBayes</button>
+  <div class="panel">
+    <div>
+       Index of the most probable ID and its bayesian probability
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev/Analysis/DataModel/include/AnalysisDataModel/PID/PIDResponse.h" target="_blank">Analysis/DataModel/include/AnalysisDataModel/PID/PIDResponse.h</a>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::pidbayes::BayesProb</td>
+        <td></td>
+        <td>bayesProb</td>
+        <td>int8_t</td>
+        <td>Bayesian probability of the most probable ID</td>
+      </tr>
+      <tr>
+        <td>o2::aod::pidbayes::BayesID</td>
+        <td></td>
+        <td>bayesID</td>
+        <td>o2::track::pid_constants::ID</td>
+        <td>Most probable ID</td>
+      </tr>
+    </table>
+  </div>
+
+</div>
+
 ####  o2-analysis-pid-tof-beta
 Code file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev//Analysis/Tasks/PID//pidTOFbeta.cxx" target="_blank">pidTOFbeta.cxx</a>
 <div>
@@ -727,14 +996,14 @@ Code file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev//Analysis/T
         <td></td>
         <td>separationbetael</td>
         <td>float</td>
-        <td></td>
+        <td>Separation computed with the expected beta for electrons</td>
       </tr>
       <tr>
         <td>o2::aod::pidtofbeta::DiffBetaEl</td>
         <td>D</td>
         <td>diffbetael</td>
         <td>float</td>
-        <td></td>
+        <td>Difference between the measured and the expected beta for electrons</td>
       </tr>
     </table>
   </div>
@@ -766,7 +1035,7 @@ Code file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev//Analysis/T
         <td></td>
         <td>tofNSigmaStoreEl</td>
         <td>int8_t</td>
-        <td></td>
+        <td>Stored binned nsigma with the TOF detector for electron</td>
       </tr>
       <tr>
         <td>o2::aod::pidtof_tiny::TOFNSigmaEl</td>
@@ -799,7 +1068,7 @@ Code file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev//Analysis/T
         <td></td>
         <td>tofNSigmaStoreMu</td>
         <td>int8_t</td>
-        <td></td>
+        <td>Stored binned nsigma with the TOF detector for muon</td>
       </tr>
       <tr>
         <td>o2::aod::pidtof_tiny::TOFNSigmaMu</td>
@@ -832,7 +1101,7 @@ Code file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev//Analysis/T
         <td></td>
         <td>tofNSigmaStorePi</td>
         <td>int8_t</td>
-        <td></td>
+        <td>Stored binned nsigma with the TOF detector for pion</td>
       </tr>
       <tr>
         <td>o2::aod::pidtof_tiny::TOFNSigmaPi</td>
@@ -865,7 +1134,7 @@ Code file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev//Analysis/T
         <td></td>
         <td>tofNSigmaStoreKa</td>
         <td>int8_t</td>
-        <td></td>
+        <td>Stored binned nsigma with the TOF detector for kaon</td>
       </tr>
       <tr>
         <td>o2::aod::pidtof_tiny::TOFNSigmaKa</td>
@@ -898,7 +1167,7 @@ Code file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev//Analysis/T
         <td></td>
         <td>tofNSigmaStorePr</td>
         <td>int8_t</td>
-        <td></td>
+        <td>Stored binned nsigma with the TOF detector for proton</td>
       </tr>
       <tr>
         <td>o2::aod::pidtof_tiny::TOFNSigmaPr</td>
@@ -931,7 +1200,7 @@ Code file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev//Analysis/T
         <td></td>
         <td>tofNSigmaStoreDe</td>
         <td>int8_t</td>
-        <td></td>
+        <td>Stored binned nsigma with the TOF detector for deuteron</td>
       </tr>
       <tr>
         <td>o2::aod::pidtof_tiny::TOFNSigmaDe</td>
@@ -964,7 +1233,7 @@ Code file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev//Analysis/T
         <td></td>
         <td>tofNSigmaStoreTr</td>
         <td>int8_t</td>
-        <td></td>
+        <td>Stored binned nsigma with the TOF detector for triton</td>
       </tr>
       <tr>
         <td>o2::aod::pidtof_tiny::TOFNSigmaTr</td>
@@ -997,7 +1266,7 @@ Code file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev//Analysis/T
         <td></td>
         <td>tofNSigmaStoreHe</td>
         <td>int8_t</td>
-        <td></td>
+        <td>Stored binned nsigma with the TOF detector for helium3</td>
       </tr>
       <tr>
         <td>o2::aod::pidtof_tiny::TOFNSigmaHe</td>
@@ -1030,7 +1299,7 @@ Code file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev//Analysis/T
         <td></td>
         <td>tofNSigmaStoreAl</td>
         <td>int8_t</td>
-        <td></td>
+        <td>Stored binned nsigma with the TOF detector for alpha</td>
       </tr>
       <tr>
         <td>o2::aod::pidtof_tiny::TOFNSigmaAl</td>
@@ -1081,14 +1350,14 @@ Code file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev//Analysis/T
         <td></td>
         <td>tofExpSigmaEl</td>
         <td>float</td>
-        <td></td>
+        <td>Expected resolution with the TOF detector for electron</td>
       </tr>
       <tr>
         <td>o2::aod::pidtof::TOFNSigmaEl</td>
         <td></td>
         <td>tofNSigmaEl</td>
         <td>float</td>
-        <td></td>
+        <td>Nsigma separation with the TOF detector for electron</td>
       </tr>
     </table>
   </div>
@@ -1126,14 +1395,14 @@ Code file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev//Analysis/T
         <td></td>
         <td>tofExpSigmaMu</td>
         <td>float</td>
-        <td></td>
+        <td>Expected resolution with the TOF detector for muon</td>
       </tr>
       <tr>
         <td>o2::aod::pidtof::TOFNSigmaMu</td>
         <td></td>
         <td>tofNSigmaMu</td>
         <td>float</td>
-        <td></td>
+        <td>Nsigma separation with the TOF detector for muon</td>
       </tr>
     </table>
   </div>
@@ -1171,14 +1440,14 @@ Code file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev//Analysis/T
         <td></td>
         <td>tofExpSigmaPi</td>
         <td>float</td>
-        <td></td>
+        <td>Expected resolution with the TOF detector for pion</td>
       </tr>
       <tr>
         <td>o2::aod::pidtof::TOFNSigmaPi</td>
         <td></td>
         <td>tofNSigmaPi</td>
         <td>float</td>
-        <td></td>
+        <td>Nsigma separation with the TOF detector for pion</td>
       </tr>
     </table>
   </div>
@@ -1216,14 +1485,14 @@ Code file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev//Analysis/T
         <td></td>
         <td>tofExpSigmaKa</td>
         <td>float</td>
-        <td></td>
+        <td>Expected resolution with the TOF detector for kaon</td>
       </tr>
       <tr>
         <td>o2::aod::pidtof::TOFNSigmaKa</td>
         <td></td>
         <td>tofNSigmaKa</td>
         <td>float</td>
-        <td></td>
+        <td>Nsigma separation with the TOF detector for kaon</td>
       </tr>
     </table>
   </div>
@@ -1261,14 +1530,14 @@ Code file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev//Analysis/T
         <td></td>
         <td>tofExpSigmaPr</td>
         <td>float</td>
-        <td></td>
+        <td>Expected resolution with the TOF detector for proton</td>
       </tr>
       <tr>
         <td>o2::aod::pidtof::TOFNSigmaPr</td>
         <td></td>
         <td>tofNSigmaPr</td>
         <td>float</td>
-        <td></td>
+        <td>Nsigma separation with the TOF detector for proton</td>
       </tr>
     </table>
   </div>
@@ -1301,14 +1570,14 @@ Code file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev//Analysis/T
         <td></td>
         <td>tofExpSigmaDe</td>
         <td>float</td>
-        <td></td>
+        <td>Expected resolution with the TOF detector for deuteron</td>
       </tr>
       <tr>
         <td>o2::aod::pidtof::TOFNSigmaDe</td>
         <td></td>
         <td>tofNSigmaDe</td>
         <td>float</td>
-        <td></td>
+        <td>Nsigma separation with the TOF detector for deuteron</td>
       </tr>
     </table>
   </div>
@@ -1341,14 +1610,14 @@ Code file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev//Analysis/T
         <td></td>
         <td>tofExpSigmaTr</td>
         <td>float</td>
-        <td></td>
+        <td>Expected resolution with the TOF detector for triton</td>
       </tr>
       <tr>
         <td>o2::aod::pidtof::TOFNSigmaTr</td>
         <td></td>
         <td>tofNSigmaTr</td>
         <td>float</td>
-        <td></td>
+        <td>Nsigma separation with the TOF detector for triton</td>
       </tr>
     </table>
   </div>
@@ -1381,14 +1650,14 @@ Code file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev//Analysis/T
         <td></td>
         <td>tofExpSigmaHe</td>
         <td>float</td>
-        <td></td>
+        <td>Expected resolution with the TOF detector for helium3</td>
       </tr>
       <tr>
         <td>o2::aod::pidtof::TOFNSigmaHe</td>
         <td></td>
         <td>tofNSigmaHe</td>
         <td>float</td>
-        <td></td>
+        <td>Nsigma separation with the TOF detector for helium3</td>
       </tr>
     </table>
   </div>
@@ -1421,14 +1690,14 @@ Code file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev//Analysis/T
         <td></td>
         <td>tofExpSigmaAl</td>
         <td>float</td>
-        <td></td>
+        <td>Expected resolution with the TOF detector for alpha</td>
       </tr>
       <tr>
         <td>o2::aod::pidtof::TOFNSigmaAl</td>
         <td></td>
         <td>tofNSigmaAl</td>
         <td>float</td>
-        <td></td>
+        <td>Nsigma separation with the TOF detector for alpha</td>
       </tr>
     </table>
   </div>
@@ -1460,7 +1729,7 @@ Code file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev//Analysis/T
         <td></td>
         <td>tpcNSigmaStoreEl</td>
         <td>int8_t</td>
-        <td></td>
+        <td>Stored binned nsigma with the TPC detector for electron</td>
       </tr>
       <tr>
         <td>o2::aod::pidtpc_tiny::TPCNSigmaEl</td>
@@ -1493,7 +1762,7 @@ Code file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev//Analysis/T
         <td></td>
         <td>tpcNSigmaStoreMu</td>
         <td>int8_t</td>
-        <td></td>
+        <td>Stored binned nsigma with the TPC detector for muon</td>
       </tr>
       <tr>
         <td>o2::aod::pidtpc_tiny::TPCNSigmaMu</td>
@@ -1526,7 +1795,7 @@ Code file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev//Analysis/T
         <td></td>
         <td>tpcNSigmaStorePi</td>
         <td>int8_t</td>
-        <td></td>
+        <td>Stored binned nsigma with the TPC detector for pion</td>
       </tr>
       <tr>
         <td>o2::aod::pidtpc_tiny::TPCNSigmaPi</td>
@@ -1559,7 +1828,7 @@ Code file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev//Analysis/T
         <td></td>
         <td>tpcNSigmaStoreKa</td>
         <td>int8_t</td>
-        <td></td>
+        <td>Stored binned nsigma with the TPC detector for kaon</td>
       </tr>
       <tr>
         <td>o2::aod::pidtpc_tiny::TPCNSigmaKa</td>
@@ -1592,7 +1861,7 @@ Code file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev//Analysis/T
         <td></td>
         <td>tpcNSigmaStorePr</td>
         <td>int8_t</td>
-        <td></td>
+        <td>Stored binned nsigma with the TPC detector for proton</td>
       </tr>
       <tr>
         <td>o2::aod::pidtpc_tiny::TPCNSigmaPr</td>
@@ -1625,7 +1894,7 @@ Code file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev//Analysis/T
         <td></td>
         <td>tpcNSigmaStoreDe</td>
         <td>int8_t</td>
-        <td></td>
+        <td>Stored binned nsigma with the TPC detector for deuteron</td>
       </tr>
       <tr>
         <td>o2::aod::pidtpc_tiny::TPCNSigmaDe</td>
@@ -1658,7 +1927,7 @@ Code file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev//Analysis/T
         <td></td>
         <td>tpcNSigmaStoreTr</td>
         <td>int8_t</td>
-        <td></td>
+        <td>Stored binned nsigma with the TPC detector for triton</td>
       </tr>
       <tr>
         <td>o2::aod::pidtpc_tiny::TPCNSigmaTr</td>
@@ -1691,7 +1960,7 @@ Code file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev//Analysis/T
         <td></td>
         <td>tpcNSigmaStoreHe</td>
         <td>int8_t</td>
-        <td></td>
+        <td>Stored binned nsigma with the TPC detector for helium3</td>
       </tr>
       <tr>
         <td>o2::aod::pidtpc_tiny::TPCNSigmaHe</td>
@@ -1724,7 +1993,7 @@ Code file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev//Analysis/T
         <td></td>
         <td>tpcNSigmaStoreAl</td>
         <td>int8_t</td>
-        <td></td>
+        <td>Stored binned nsigma with the TPC detector for alpha</td>
       </tr>
       <tr>
         <td>o2::aod::pidtpc_tiny::TPCNSigmaAl</td>
@@ -1768,21 +2037,21 @@ Code file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev//Analysis/T
         <td>D</td>
         <td>tpcExpSignalDiffEl</td>
         <td>float</td>
-        <td></td>
+        <td>Difference between signal and expected for electron</td>
       </tr>
       <tr>
         <td>o2::aod::pidtpc::TPCExpSigmaEl</td>
         <td></td>
         <td>tpcExpSigmaEl</td>
         <td>float</td>
-        <td></td>
+        <td>Expected resolution with the TPC detector for electron</td>
       </tr>
       <tr>
         <td>o2::aod::pidtpc::TPCNSigmaEl</td>
         <td></td>
         <td>tpcNSigmaEl</td>
         <td>float</td>
-        <td></td>
+        <td>Nsigma separation with the TPC detector for electron</td>
       </tr>
     </table>
   </div>
@@ -1813,21 +2082,21 @@ Code file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev//Analysis/T
         <td>D</td>
         <td>tpcExpSignalDiffMu</td>
         <td>float</td>
-        <td></td>
+        <td>Difference between signal and expected for muon</td>
       </tr>
       <tr>
         <td>o2::aod::pidtpc::TPCExpSigmaMu</td>
         <td></td>
         <td>tpcExpSigmaMu</td>
         <td>float</td>
-        <td></td>
+        <td>Expected resolution with the TPC detector for muon</td>
       </tr>
       <tr>
         <td>o2::aod::pidtpc::TPCNSigmaMu</td>
         <td></td>
         <td>tpcNSigmaMu</td>
         <td>float</td>
-        <td></td>
+        <td>Nsigma separation with the TPC detector for muon</td>
       </tr>
     </table>
   </div>
@@ -1858,21 +2127,21 @@ Code file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev//Analysis/T
         <td>D</td>
         <td>tpcExpSignalDiffPi</td>
         <td>float</td>
-        <td></td>
+        <td>Difference between signal and expected for pion</td>
       </tr>
       <tr>
         <td>o2::aod::pidtpc::TPCExpSigmaPi</td>
         <td></td>
         <td>tpcExpSigmaPi</td>
         <td>float</td>
-        <td></td>
+        <td>Expected resolution with the TPC detector for pion</td>
       </tr>
       <tr>
         <td>o2::aod::pidtpc::TPCNSigmaPi</td>
         <td></td>
         <td>tpcNSigmaPi</td>
         <td>float</td>
-        <td></td>
+        <td>Nsigma separation with the TPC detector for pion</td>
       </tr>
     </table>
   </div>
@@ -1903,21 +2172,21 @@ Code file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev//Analysis/T
         <td>D</td>
         <td>tpcExpSignalDiffKa</td>
         <td>float</td>
-        <td></td>
+        <td>Difference between signal and expected for kaon</td>
       </tr>
       <tr>
         <td>o2::aod::pidtpc::TPCExpSigmaKa</td>
         <td></td>
         <td>tpcExpSigmaKa</td>
         <td>float</td>
-        <td></td>
+        <td>Expected resolution with the TPC detector for kaon</td>
       </tr>
       <tr>
         <td>o2::aod::pidtpc::TPCNSigmaKa</td>
         <td></td>
         <td>tpcNSigmaKa</td>
         <td>float</td>
-        <td></td>
+        <td>Nsigma separation with the TPC detector for kaon</td>
       </tr>
     </table>
   </div>
@@ -1948,21 +2217,21 @@ Code file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev//Analysis/T
         <td>D</td>
         <td>tpcExpSignalDiffPr</td>
         <td>float</td>
-        <td></td>
+        <td>Difference between signal and expected for proton</td>
       </tr>
       <tr>
         <td>o2::aod::pidtpc::TPCExpSigmaPr</td>
         <td></td>
         <td>tpcExpSigmaPr</td>
         <td>float</td>
-        <td></td>
+        <td>Expected resolution with the TPC detector for proton</td>
       </tr>
       <tr>
         <td>o2::aod::pidtpc::TPCNSigmaPr</td>
         <td></td>
         <td>tpcNSigmaPr</td>
         <td>float</td>
-        <td></td>
+        <td>Nsigma separation with the TPC detector for proton</td>
       </tr>
     </table>
   </div>
@@ -1988,21 +2257,21 @@ Code file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev//Analysis/T
         <td>D</td>
         <td>tpcExpSignalDiffDe</td>
         <td>float</td>
-        <td></td>
+        <td>Difference between signal and expected for deuteron</td>
       </tr>
       <tr>
         <td>o2::aod::pidtpc::TPCExpSigmaDe</td>
         <td></td>
         <td>tpcExpSigmaDe</td>
         <td>float</td>
-        <td></td>
+        <td>Expected resolution with the TPC detector for deuteron</td>
       </tr>
       <tr>
         <td>o2::aod::pidtpc::TPCNSigmaDe</td>
         <td></td>
         <td>tpcNSigmaDe</td>
         <td>float</td>
-        <td></td>
+        <td>Nsigma separation with the TPC detector for deuteron</td>
       </tr>
     </table>
   </div>
@@ -2028,21 +2297,21 @@ Code file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev//Analysis/T
         <td>D</td>
         <td>tpcExpSignalDiffTr</td>
         <td>float</td>
-        <td></td>
+        <td>Difference between signal and expected for triton</td>
       </tr>
       <tr>
         <td>o2::aod::pidtpc::TPCExpSigmaTr</td>
         <td></td>
         <td>tpcExpSigmaTr</td>
         <td>float</td>
-        <td></td>
+        <td>Expected resolution with the TPC detector for triton</td>
       </tr>
       <tr>
         <td>o2::aod::pidtpc::TPCNSigmaTr</td>
         <td></td>
         <td>tpcNSigmaTr</td>
         <td>float</td>
-        <td></td>
+        <td>Nsigma separation with the TPC detector for triton</td>
       </tr>
     </table>
   </div>
@@ -2068,21 +2337,21 @@ Code file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev//Analysis/T
         <td>D</td>
         <td>tpcExpSignalDiffHe</td>
         <td>float</td>
-        <td></td>
+        <td>Difference between signal and expected for helium3</td>
       </tr>
       <tr>
         <td>o2::aod::pidtpc::TPCExpSigmaHe</td>
         <td></td>
         <td>tpcExpSigmaHe</td>
         <td>float</td>
-        <td></td>
+        <td>Expected resolution with the TPC detector for helium3</td>
       </tr>
       <tr>
         <td>o2::aod::pidtpc::TPCNSigmaHe</td>
         <td></td>
         <td>tpcNSigmaHe</td>
         <td>float</td>
-        <td></td>
+        <td>Nsigma separation with the TPC detector for helium3</td>
       </tr>
     </table>
   </div>
@@ -2108,21 +2377,21 @@ Code file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev//Analysis/T
         <td>D</td>
         <td>tpcExpSignalDiffAl</td>
         <td>float</td>
-        <td></td>
+        <td>Difference between signal and expected for alpha</td>
       </tr>
       <tr>
         <td>o2::aod::pidtpc::TPCExpSigmaAl</td>
         <td></td>
         <td>tpcExpSigmaAl</td>
         <td>float</td>
-        <td></td>
+        <td>Expected resolution with the TPC detector for alpha</td>
       </tr>
       <tr>
         <td>o2::aod::pidtpc::TPCNSigmaAl</td>
         <td></td>
         <td>tpcNSigmaAl</td>
         <td>float</td>
-        <td></td>
+        <td>Nsigma separation with the TPC detector for alpha</td>
       </tr>
     </table>
   </div>
@@ -2478,203 +2747,245 @@ Code file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev//Analysis/T
         <td></td>
         <td>posX</td>
         <td>float</td>
-        <td></td>
+        <td>positive track X at min</td>
       </tr>
       <tr>
         <td>o2::aod::v0data::NegX</td>
         <td></td>
         <td>negX</td>
         <td>float</td>
-        <td></td>
+        <td>negative track X at min</td>
       </tr>
       <tr>
         <td>o2::aod::v0data::X</td>
         <td></td>
         <td>x</td>
         <td>float</td>
-        <td></td>
+        <td>decay position X</td>
       </tr>
       <tr>
         <td>o2::aod::v0data::Y</td>
         <td></td>
         <td>y</td>
         <td>float</td>
-        <td></td>
+        <td>decay position Y</td>
       </tr>
       <tr>
         <td>o2::aod::v0data::Z</td>
         <td></td>
         <td>z</td>
         <td>float</td>
-        <td></td>
+        <td>decay position Z</td>
       </tr>
       <tr>
         <td>o2::aod::v0data::PxPos</td>
         <td></td>
         <td>pxpos</td>
         <td>float</td>
-        <td></td>
+        <td>positive track px at min</td>
       </tr>
       <tr>
         <td>o2::aod::v0data::PyPos</td>
         <td></td>
         <td>pypos</td>
         <td>float</td>
-        <td></td>
+        <td>positive track py at min</td>
       </tr>
       <tr>
         <td>o2::aod::v0data::PzPos</td>
         <td></td>
         <td>pzpos</td>
         <td>float</td>
-        <td></td>
+        <td>positive track pz at min</td>
       </tr>
       <tr>
         <td>o2::aod::v0data::PxNeg</td>
         <td></td>
         <td>pxneg</td>
         <td>float</td>
-        <td></td>
+        <td>negative track px at min</td>
       </tr>
       <tr>
         <td>o2::aod::v0data::PyNeg</td>
         <td></td>
         <td>pyneg</td>
         <td>float</td>
-        <td></td>
+        <td>negative track py at min</td>
       </tr>
       <tr>
         <td>o2::aod::v0data::PzNeg</td>
         <td></td>
         <td>pzneg</td>
         <td>float</td>
-        <td></td>
+        <td>negative track pz at min</td>
       </tr>
       <tr>
         <td>o2::aod::v0data::DCAV0Daughters</td>
         <td></td>
         <td>dcaV0daughters</td>
         <td>float</td>
-        <td></td>
+        <td>DCA between V0 daughters</td>
       </tr>
       <tr>
         <td>o2::aod::v0data::DCAPosToPV</td>
         <td></td>
         <td>dcapostopv</td>
         <td>float</td>
-        <td></td>
+        <td>DCA positive prong to PV</td>
       </tr>
       <tr>
         <td>o2::aod::v0data::DCANegToPV</td>
         <td></td>
         <td>dcanegtopv</td>
         <td>float</td>
-        <td></td>
+        <td>DCA negative prong to PV</td>
       </tr>
       <tr>
         <td>o2::aod::v0data::Pt</td>
         <td>D</td>
         <td>pt</td>
         <td>float</td>
-        <td></td>
+        <td>V0 pT</td>
       </tr>
       <tr>
         <td>o2::aod::v0data::V0Radius</td>
         <td>D</td>
         <td>v0radius</td>
         <td>float</td>
-        <td></td>
+        <td>V0 decay radius (2D, centered at zero)</td>
       </tr>
       <tr>
         <td>o2::aod::v0data::V0CosPA</td>
         <td>D</td>
         <td>v0cosPA</td>
         <td>float</td>
-        <td></td>
+        <td>V0 CosPA</td>
       </tr>
       <tr>
         <td>o2::aod::v0data::DCAV0ToPV</td>
         <td>D</td>
         <td>dcav0topv</td>
         <td>float</td>
-        <td></td>
+        <td>DCA of V0 to PV</td>
       </tr>
       <tr>
         <td>o2::aod::v0data::Alpha</td>
         <td>D</td>
         <td>alpha</td>
         <td>?</td>
-        <td></td>
+        <td>Armenteros Alpha</td>
       </tr>
       <tr>
         <td>o2::aod::v0data::QtArm</td>
         <td>D</td>
         <td>qtarm</td>
         <td>?</td>
-        <td></td>
+        <td>Armenteros Qt</td>
       </tr>
       <tr>
         <td>o2::aod::v0data::PsiPair</td>
         <td>D</td>
         <td>psipair</td>
         <td>?</td>
-        <td></td>
+        <td>psi pair angle</td>
       </tr>
       <tr>
         <td>o2::aod::v0data::MLambda</td>
         <td>D</td>
         <td>mLambda</td>
         <td>float</td>
-        <td></td>
+        <td>mass under lambda hypothesis</td>
       </tr>
       <tr>
         <td>o2::aod::v0data::MAntiLambda</td>
         <td>D</td>
         <td>mAntiLambda</td>
         <td>float</td>
-        <td></td>
+        <td>mass under antilambda hypothesis</td>
       </tr>
       <tr>
         <td>o2::aod::v0data::MK0Short</td>
         <td>D</td>
         <td>mK0Short</td>
         <td>float</td>
-        <td></td>
+        <td>mass under K0short hypothesis</td>
       </tr>
       <tr>
         <td>o2::aod::v0data::MGamma</td>
         <td>D</td>
         <td>mGamma</td>
         <td>float</td>
-        <td></td>
+        <td>mass under gamma hypothesis</td>
       </tr>
       <tr>
         <td>o2::aod::v0data::YK0Short</td>
         <td>D</td>
         <td>yK0Short</td>
         <td>float</td>
-        <td></td>
+        <td>V0 y with K0short hypothesis</td>
       </tr>
       <tr>
         <td>o2::aod::v0data::YLambda</td>
         <td>D</td>
         <td>yLambda</td>
         <td>float</td>
-        <td></td>
+        <td>V0 y with lambda or antilambda hypothesis</td>
       </tr>
       <tr>
         <td>o2::aod::v0data::Eta</td>
         <td>D</td>
         <td>eta</td>
         <td>float</td>
-        <td></td>
+        <td>V0 eta</td>
       </tr>
       <tr>
         <td>o2::aod::v0data::Phi</td>
         <td>D</td>
         <td>phi</td>
         <td>float</td>
-        <td></td>
+        <td>V0 phi</td>
+      </tr>
+      <tr>
+        <td>o2::aod::v0data::NegativePt</td>
+        <td>D</td>
+        <td>negativept</td>
+        <td>float</td>
+        <td>negative daughter pT</td>
+      </tr>
+      <tr>
+        <td>o2::aod::v0data::PositivePt</td>
+        <td>D</td>
+        <td>positivept</td>
+        <td>float</td>
+        <td>positive daughter pT</td>
+      </tr>
+      <tr>
+        <td>o2::aod::v0data::NegativeEta</td>
+        <td>D</td>
+        <td>negativeeta</td>
+        <td>float</td>
+        <td>negative daughter eta</td>
+      </tr>
+      <tr>
+        <td>o2::aod::v0data::NegativePhi</td>
+        <td>D</td>
+        <td>negativephi</td>
+        <td>float</td>
+        <td>negative daughter phi</td>
+      </tr>
+      <tr>
+        <td>o2::aod::v0data::PositiveEta</td>
+        <td>D</td>
+        <td>positiveeta</td>
+        <td>float</td>
+        <td>positive daughter eta</td>
+      </tr>
+      <tr>
+        <td>o2::aod::v0data::PositivePhi</td>
+        <td>D</td>
+        <td>positivephi</td>
+        <td>float</td>
+        <td>positive daughter phi</td>
       </tr>
     </table>
   </div>
@@ -4922,3 +5233,4 @@ Code file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev//Analysis/T
   </div>
 
 </div>
+<!-- Block with helper tasks -->

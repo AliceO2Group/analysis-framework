@@ -10,11 +10,7 @@ The tables which are extracted from the AO2D files are declared in <a href="http
 
 Click on the labels to display the table details.
 
-<!----------------------------------------------------------------------------->
-<!--                                                                         -->
-<!-- copy html version of AnalysisDataModel.h here below                     -->
-<!--                                                                         -->
-<!----------------------------------------------------------------------------->
+<!-- Block with AO2D tables -->
 
 ####  AO2D files
 <div>
@@ -2220,18 +2216,25 @@ Click on the labels to display the table details.
         <th>Comment</th>
       </tr>
       <tr>
-        <td>o2::aod::ambiguoustracks::CollisionId</td>
-        <td>I</td>
-        <td>collisionId</td>
-        <td>int32</td>
-        <td>Collision index</td>
-      </tr>
-      <tr>
         <td>o2::aod::ambiguoustracks::TrackId</td>
         <td>I</td>
         <td>trackId</td>
         <td>int32</td>
         <td>Track index</td>
+      </tr>
+      <tr>
+        <td>o2::aod::ambiguoustracks::BCIdSlice</td>
+        <td>GI</td>
+        <td></td>
+        <td>?</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::ambiguoustracks::CollisionIds</td>
+        <td>GI</td>
+        <td></td>
+        <td>?</td>
+        <td></td>
       </tr>
     </table>
   </div>
@@ -3230,32 +3233,32 @@ Click on the labels to display the table details.
         <td>ALICE specific flags. Do not use directly. Use the dynamic columns, e.g. producedByGenerator()</td>
       </tr>
       <tr>
-        <td>o2::aod::mcparticle::Mother0</td>
+        <td>o2::aod::mcparticle::Mother0Id</td>
+        <td>GI</td>
         <td></td>
-        <td>mother0</td>
-        <td>int</td>
-        <td>Track index of the first mother</td>
+        <td>?</td>
+        <td></td>
       </tr>
       <tr>
-        <td>o2::aod::mcparticle::Mother1</td>
+        <td>o2::aod::mcparticle::Mother1Id</td>
+        <td>GI</td>
         <td></td>
-        <td>mother1</td>
-        <td>int</td>
-        <td>Track index of the second mother</td>
+        <td>?</td>
+        <td></td>
       </tr>
       <tr>
-        <td>o2::aod::mcparticle::Daughter0</td>
+        <td>o2::aod::mcparticle::Daughter0Id</td>
+        <td>GI</td>
         <td></td>
-        <td>daughter0</td>
-        <td>int</td>
-        <td>Track index of the first daugther</td>
+        <td>?</td>
+        <td></td>
       </tr>
       <tr>
-        <td>o2::aod::mcparticle::Daughter1</td>
+        <td>o2::aod::mcparticle::Daughter1Id</td>
+        <td>GI</td>
         <td></td>
-        <td>daughter1</td>
-        <td>int</td>
-        <td>Track index of the second daugther</td>
+        <td>?</td>
+        <td></td>
       </tr>
       <tr>
         <td>o2::aod::mcparticle::Weight</td>
@@ -3340,6 +3343,20 @@ Click on the labels to display the table details.
         <td>pt</td>
         <td>float</td>
         <td>Transverse momentum in GeV/c</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::P</td>
+        <td>D</td>
+        <td>p</td>
+        <td>float</td>
+        <td>Total momentum in GeV/c</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::Y</td>
+        <td>D</td>
+        <td>y</td>
+        <td>float</td>
+        <td>Particle rapidity</td>
       </tr>
       <tr>
         <td>o2::aod::mcparticle::ProducedByGenerator</td>
@@ -4008,3 +4025,4 @@ Click on the labels to display the table details.
   </div>
 
 </div>
+<!-- Block with AO2D tables -->

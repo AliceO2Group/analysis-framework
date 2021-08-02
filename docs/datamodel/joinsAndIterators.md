@@ -5,6 +5,8 @@ title: Joins and iterators
 
 The data model provides in addition to the set of tables also some predefined joines which are listed below.
 
+<!-- Block with joins and iterators -->
+
 <a name="usings"></a>
 ## List of defined joins and iterators
 <div>
@@ -457,6 +459,13 @@ The data model provides in addition to the set of tables also some predefined jo
     </ul>
   </div>
 
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::V0Bit</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::V0Bit = o2::aod::V0Bits::iterator</li>
+    </ul>
+  </div>
+
   <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::V0Data</button>
   <div class="panel">
     <ul>
@@ -485,3 +494,4 @@ The data model provides in addition to the set of tables also some predefined jo
     </ul>
   </div>
 </div>
+<!-- Block with joins and iterators -->
