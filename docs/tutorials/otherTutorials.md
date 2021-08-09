@@ -18,11 +18,21 @@ target="_blank">ALICEO2 code repository</a>.
   </div>
 </div>
   
+
 <div style="margin-bottom:5mm">
   Source: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev/Analysis/Tutorials/src/configurableObjects.cxx" target="_blank">configurableObjects.cxx</a>, <a href="https://github.com/AliceO2Group/AliceO2/tree/dev/Analysis/Tutorials/src/configurableCut.cxx" target="_blank">configurableCut.cxx</a>, <a href="https://github.com/AliceO2Group/AliceO2/tree/dev/Analysis/Tutorials/include/Analysis/configurableCut.h" target="_blank">configurableCut.h</a>, <a href="https://github.com/AliceO2Group/AliceO2/tree/dev/Analysis/Tutorials/src/configurableCut.json" target="_blank">configurableCut.json</a><br>
   Executable: o2-analysistutorial-configurable-objects
   <div class="indBox">
     Configurables are handy because their values can be set on the command line. The tutorial demonstrates the usage of such configurables.
+  </div>
+</div>
+
+
+<div style="margin-bottom:5mm">
+  Source: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev/Analysis/Tutorials/src/conditionalExpressions.cxx" target="_blank">conditionalExpressions.cxx</a><br>
+  Executable: o2-analysistutorial-conditional-expressions
+  <div class="indBox">
+    Configurables can also be used in Filters.
   </div>
 </div>
 
@@ -68,15 +78,6 @@ target="_blank">ALICEO2 code repository</a>.
   Executable: o2-analysistutorial-track-iteration
   <div class="indBox">
     An example showing how to loop over the entries of joined tables.
-  </div>
-</div>
-
-
-<div style="margin-bottom:5mm">
-  Source: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev/Analysis/Tutorials/src/histHelpersTest.cxx" target="_blank">histHelpersTest.cxx</a><br>
-  Executable: o2-analysistutorial-hist-helpers-test
-  <div class="indBox">
-    Demonstrates various ways to create, manage, and fill histograms.
   </div>
 </div>
 
