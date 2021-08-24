@@ -8,7 +8,7 @@ The data model provides in addition to the set of tables also some predefined jo
 <!-- Block with joins and iterators -->
 
 <a name="usings"></a>
-## List of defined joins and iterators
+#### List of defined joins and iterators
 <div>
 
   <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::BC</button>
@@ -270,13 +270,6 @@ The data model provides in addition to the set of tables also some predefined jo
     </ul>
   </div>
 
-  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::Cent</button>
-  <div class="panel">
-    <ul>
-        <li>o2::aod::Cent = o2::aod::Cents::iterator</li>
-    </ul>
-  </div>
-
   <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::CFCollision</button>
   <div class="panel">
     <ul>
@@ -288,6 +281,13 @@ The data model provides in addition to the set of tables also some predefined jo
   <div class="panel">
     <ul>
         <li>o2::aod::CFTrack = o2::aod::CFTracks::iterator</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::Cent</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::Cent = o2::aod::Cents::iterator</li>
     </ul>
   </div>
 
@@ -354,6 +354,20 @@ The data model provides in addition to the set of tables also some predefined jo
     </ul>
   </div>
 
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::HfCandX</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::HfCandX = o2::aod::HfCandXExt</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::HfCandXicc</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::HfCandXicc = o2::aod::HfCandXiccExt</li>
+    </ul>
+  </div>
+
   <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::Jet</button>
   <div class="panel">
     <ul>
@@ -361,10 +375,24 @@ The data model provides in addition to the set of tables also some predefined jo
     </ul>
   </div>
 
-  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::JetConstituent</button>
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::MatchedJet</button>
   <div class="panel">
     <ul>
-        <li>o2::aod::JetConstituent = o2::aod::JetConstituents::iterator</li>
+        <li>o2::aod::MatchedJet = o2::aod::MatchedJets::iterator</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::JetTrackConstituent</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::JetTrackConstituent = o2::aod::JetTrackConstituents::iterator</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::JetClusterConstituent</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::JetClusterConstituent = o2::aod::JetClusterConstituents::iterator</li>
     </ul>
   </div>
 
@@ -372,6 +400,111 @@ The data model provides in addition to the set of tables also some predefined jo
   <div class="panel">
     <ul>
         <li>o2::aod::JetConstituentSub = o2::aod::JetConstituentsSub::iterator</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::MCParticleLevelJet</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::MCParticleLevelJet = o2::aod::MCParticleLevelJets::iterator</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::MatchedMCParticleLevelJet</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::MatchedMCParticleLevelJet = o2::aod::MatchedMCParticleLevelJets::iterator</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::MCParticleLevelJetTrackConstituent</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::MCParticleLevelJetTrackConstituent = o2::aod::MCParticleLevelJetTrackConstituents::iterator</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::MCParticleLevelJetClusterConstituent</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::MCParticleLevelJetClusterConstituent = o2::aod::MCParticleLevelJetClusterConstituents::iterator</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::MCParticleLevelJetConstituentSub</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::MCParticleLevelJetConstituentSub = o2::aod::MCParticleLevelJetConstituentsSub::iterator</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::MCDetectorLevelJet</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::MCDetectorLevelJet = o2::aod::MCDetectorLevelJets::iterator</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::MatchedMCDetectorLevelJet</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::MatchedMCDetectorLevelJet = o2::aod::MatchedMCDetectorLevelJets::iterator</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::MCDetectorLevelJetTrackConstituent</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::MCDetectorLevelJetTrackConstituent = o2::aod::MCDetectorLevelJetTrackConstituents::iterator</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::MCDetectorLevelJetClusterConstituent</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::MCDetectorLevelJetClusterConstituent = o2::aod::MCDetectorLevelJetClusterConstituents::iterator</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::MCDetectorLevelJetConstituentSub</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::MCDetectorLevelJetConstituentSub = o2::aod::MCDetectorLevelJetConstituentsSub::iterator</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::HybridIntermediateJet</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::HybridIntermediateJet = o2::aod::HybridIntermediateJets::iterator</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::MatchedHybridIntermediateJet</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::MatchedHybridIntermediateJet = o2::aod::MatchedHybridIntermediateJets::iterator</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::HybridIntermediateJetTrackConstituent</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::HybridIntermediateJetTrackConstituent = o2::aod::HybridIntermediateJetTrackConstituents::iterator</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::HybridIntermediateJetClusterConstituent</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::HybridIntermediateJetClusterConstituent = o2::aod::HybridIntermediateJetClusterConstituents::iterator</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::HybridIntermediateJetConstituentSub</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::HybridIntermediateJetConstituentSub = o2::aod::HybridIntermediateJetConstituentsSub::iterator</li>
     </ul>
   </div>
 
@@ -403,6 +536,13 @@ The data model provides in addition to the set of tables also some predefined jo
     </ul>
   </div>
 
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::ReducedEventMC</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::ReducedEventMC = o2::aod::ReducedEventsMC::iterator</li>
+    </ul>
+  </div>
+
   <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::ReducedTrack</button>
   <div class="panel">
     <ul>
@@ -428,6 +568,20 @@ The data model provides in addition to the set of tables also some predefined jo
   <div class="panel">
     <ul>
         <li>o2::aod::ReducedTrackBarrelPID = o2::aod::ReducedTracksBarrelPID::iterator</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::ReducedMCTrack</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::ReducedMCTrack = o2::aod::ReducedMCTracks::iterator</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::ReducedTrackBarrelLabel</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::ReducedTrackBarrelLabel = o2::aod::ReducedTracksBarrelLabels::iterator</li>
     </ul>
   </div>
 
