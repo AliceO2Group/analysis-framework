@@ -7,7 +7,7 @@ title: Basic concept
 
 The Hyperloop framework is a tool to run and manage analysis trains on AliEn. It is based on the concept of the LEGO train system used during Run 2. It builds on the O2 analysis framework, O2 DPL, MonALISA and LPM. If you are a Run 2 train expert, and you don't have much time, you can just jump to this section: [_Run 2 LEGO train expert_](hyperlooppractice.md#legoexpert). 
 
-In order to run trains on the Grid, the code has to be contained in an AliEn package. Therefore, the train uses the regularly deployed O2 tags. 
+In order to run trains on the Grid, the code has to be contained in an AliEn package. Therefore, the train uses the regularly deployed O2Physics tags. 
 Hyperloop supports Run 3 data and converted Run 2 data. 
 
 Hyperloop provides a web interface for users and operators which allows to:
