@@ -38,6 +38,8 @@ JIRA tickets of the HF analyses on [AliHyperloop](https://alimonitor.cern.ch/hyp
 * [ALICE 2](https://alice.its.cern.ch/jira/browse/PWGHF-269)
 * [ALICE 3 pp](https://alice.its.cern.ch/jira/browse/PWGHF-284)
 * [ALICE 3 AA](https://alice.its.cern.ch/jira/browse/PWGHF-287)
+* [ALICE 3 pp onia](https://alice.its.cern.ch/jira/browse/PWGHF-289)
+* [ALICE 3 AA onia](https://alice.its.cern.ch/jira/browse/PWGHF-288)
 * [DDbar correlations](https://alice.its.cern.ch/jira/browse/PWGHF-283)
 
 ## Framework structure
