@@ -14,19 +14,19 @@ Mattermost channel: [hf-o2-analysis-challenge](https://mattermost.web.cern.ch/al
 ## Code
 
 * Tasks used by the heavy-flavour analysis framework are in the
-[`Analysis/Tasks/PWGHF`](https://github.com/AliceO2Group/AliceO2/tree/dev/Analysis/Tasks/PWGHF) directory.
+[`Tasks/PWGHF`](https://github.com/AliceO2Group/O2Physics/tree/master/Tasks/PWGHF) directory.
 * Tables produced by skimming and candidate creators are defined in
-[`AnalysisDataModel/HFSecondaryVertex.h`](https://github.com/AliceO2Group/AliceO2/blob/dev/Analysis/DataModel/include/AnalysisDataModel/HFSecondaryVertex.h).
+[`HFSecondaryVertex.h`](https://github.com/AliceO2Group/O2Physics/blob/master/DataModel/include/AnalysisDataModel/HFSecondaryVertex.h).
 * Tables produced by candidate selectors are defined in
-[`AnalysisDataModel/HFCandidateSelectionTables.h`](https://github.com/AliceO2Group/AliceO2/blob/dev/Analysis/DataModel/include/AnalysisDataModel/HFCandidateSelectionTables.h).
+[`HFCandidateSelectionTables.h`](https://github.com/AliceO2Group/O2Physics/blob/master/DataModel/include/AnalysisDataModel/HFCandidateSelectionTables.h).
 * Default parameters used in the selection of single tracks, track-index skims and candidates are defined in
-[`AnalysisCore/HFSelectorCuts.h`](https://github.com/AliceO2Group/AliceO2/blob/dev/Analysis/Core/include/AnalysisCore/HFSelectorCuts.h).
+[`HFSelectorCuts.h`](https://github.com/AliceO2Group/O2Physics/blob/master/Core/include/AnalysisCore/HFSelectorCuts.h).
 * Secondary-vertex reconstruction algorithms are implemented in the
 [`DCAFitterN`](https://github.com/AliceO2Group/AliceO2/blob/dev/Detectors/Vertexing/include/DetectorsVertexing/DCAFitterN.h) class.
 * Functions for calculations of kinematic quantities and for MC matching are implemented in the
-[`RecoDecay`](https://github.com/AliceO2Group/AliceO2/blob/dev/Analysis/Core/include/AnalysisCore/RecoDecay.h) class.
+[`RecoDecay`](https://github.com/AliceO2Group/O2Physics/blob/master/Core/include/AnalysisCore/RecoDecay.h) class.
 * Selection of tracks based on the particle identification (PID) detectors is performed via the
-[`TrackSelectorPID`](https://github.com/AliceO2Group/AliceO2/blob/dev/Analysis/Core/include/AnalysisCore/TrackSelectorPID.h) class.
+[`TrackSelectorPID`](https://github.com/AliceO2Group/O2Physics/blob/master/Core/include/AnalysisCore/TrackSelectorPID.h) class.
 * Code for easy running of the HF tasks and output processing can be found in the
 [Run3Analysisvalidation](https://github.com/AliceO2Group/Run3Analysisvalidation) repository.
   * Analysis code for postprocessing of the task output is collected in the
@@ -36,7 +36,8 @@ Mattermost channel: [hf-o2-analysis-challenge](https://mattermost.web.cern.ch/al
 
 JIRA tickets of the HF analyses on [AliHyperloop](https://alimonitor.cern.ch/hyperloop/):
 * [ALICE 2](https://alice.its.cern.ch/jira/browse/PWGHF-269)
-* [ALICE 3](https://alice.its.cern.ch/jira/browse/PWGHF-284)
+* [ALICE 3 pp](https://alice.its.cern.ch/jira/browse/PWGHF-284)
+* [ALICE 3 AA](https://alice.its.cern.ch/jira/browse/PWGHF-287)
 * [DDbar correlations](https://alice.its.cern.ch/jira/browse/PWGHF-283)
 
 ## Framework structure
@@ -79,6 +80,8 @@ Workflow | File | Type
 `o2-analysis-hf-candidate-creator-2prong` | `HFCandidateCreator2Prong.cxx` | direct 2-prong decays
 `o2-analysis-hf-candidate-creator-3prong` | `HFCandidateCreator3Prong.cxx` | direct 3-prong decays
 `o2-analysis-hf-candidate-creator-cascade` | `HFCandidateCreatorCascade.cxx` | cascade decays with V<sup>0</sup> daughters (Λ<sub>c</sub><sup>±</sup>)
+`o2-analysis-hf-candidate-creator-xicc` | `HFCandidateCreatorXicc.cxx` | Ξ<sub>cc</sub><sup>±±</sup> → Ξ<sub>c</sub><sup>±</sup> π<sup>±</sup>
+`o2-analysis-hf-candidate-creator-x` | `HFCandidateCreatorX.cxx` | X(3872) → J/ψ π<sup>±</sup> π<sup>∓</sup>
 
 #### Candidate creation
 
@@ -104,11 +107,13 @@ Derived tables with MC flags used for the estimation of the signal efficiencies 
 Workflow | File | Type
 --- | --- | ---
 `o2-analysis-hf-d0-candidate-selector` | `HFD0CandidateSelector.cxx` | D<sup>0</sup>(bar) → π<sup>±</sup> K<sup>∓</sup>
-`o2-analysis-hf-jpsi-toee-candidate-selector` | `HFJpsiToEECandidateSelector.cxx` | J/ψ → e<sup>+</sup> e<sup>−</sup>
+`o2-analysis-hf-jpsi-candidate-selector` | `HFJpsiCandidateSelector.cxx` | J/ψ → e<sup>+</sup> e<sup>−</sup>/μ<sup>+</sup> μ<sup>−</sup>
+`o2-analysis-hf-x-tojpsipipi-candidate-selector` | `HFXToJpsiPiPiCandidateSelector.cxx` | X(3872) → J/ψ π<sup>±</sup> π<sup>∓</sup>
 `o2-analysis-hf-dplus-topikpi-candidate-selector` | `HFDplusToPiKPiCandidateSelector.cxx` | D<sup>±</sup> → π<sup>±</sup> K<sup>∓</sup> π<sup>±</sup>
 `o2-analysis-hf-lc-candidate-selector` | `HFLcCandidateSelector.cxx` | Λ<sub>c</sub><sup>±</sup> → p(bar) K<sup>∓</sup> π<sup>±</sup>
 `o2-analysis-hf-lc-tok0sp-candidate-selector` | `HFLcK0sPCandidateSelector.cxx` | Λ<sub>c</sub><sup>±</sup> → p(bar) K<sub>S</sub><sup>0</sup>
 `o2-analysis-hf-xic-topkpi-candidate-selector` | `HFXicToPKPiCandidateSelector.cxx` | Ξ<sub>c</sub><sup>±</sup> → p(bar) K<sup>∓</sup> π<sup>±</sup>
+`o2-analysis-hf-xicc-topkpipi-candidate-selector` | `HFXiccToPKPiPiCandidateSelector.cxx` | Ξ<sub>cc</sub><sup>±±</sup> → Ξ<sub>c</sub><sup>±</sup> π<sup>±</sup>
 
 In a dedicated selector task, tailored for each decay channel, accurate analysis level selection criteria
 based on decay topology and PID are applied to the reconstructed candidates.
@@ -120,13 +125,16 @@ The selection results are stored in a column of a new dedicated table that is la
 Workflow | File | Type
 --- | --- | ---
 `o2-analysis-hf-task-d0` | `taskD0.cxx` | D<sup>0</sup>(bar) → π<sup>±</sup> K<sup>∓</sup>
-`o2-analysis-hf-task-jpsi` | `taskJpsi.cxx` | J/ψ → e<sup>+</sup> e<sup>−</sup>
+`o2-analysis-hf-task-jpsi` | `taskJpsi.cxx` | J/ψ → e<sup>+</sup> e<sup>−</sup>/μ<sup>+</sup> μ<sup>−</sup>
 `o2-analysis-hf-task-dplus` | `taskDPlus.cxx` | D<sup>±</sup> → π<sup>±</sup> K<sup>∓</sup> π<sup>±</sup>
 `o2-analysis-hf-task-lc` | `taskLc.cxx` | Λ<sub>c</sub><sup>±</sup> → p(bar) K<sup>∓</sup> π<sup>±</sup>
 `o2-analysis-hf-task-lc-tok0sp` | `taskLcK0sP.cxx` | Λ<sub>c</sub><sup>±</sup> → p(bar) K<sub>S</sub><sup>0</sup>
 `o2-analysis-hf-task-xic` | `taskXic.cxx` | Ξ<sub>c</sub><sup>±</sup> → p(bar) K<sup>∓</sup> π<sup>±</sup>
+`o2-analysis-hf-task-xicc` | `taskXicc.cxx` | Ξ<sub>cc</sub><sup>±±</sup> → Ξ<sub>c</sub><sup>±</sup> π<sup>±</sup>
 `o2-analysis-hf-task-bplus` | `taskBPlus.cxx` | B<sup>±</sup> → D<sup>0</sup>(bar) π<sup>±</sup>
 `o2-analysis-hf-task-x` | `taskX.cxx` | X(3872) → J/ψ π<sup>±</sup> π<sup>∓</sup>
+`o2-analysis-hf-hf-correlator-d0d0bar` | `HFCorrelatorD0D0bar.cxx` | D<sup>0</sup>–D<sup>0</sup>bar correlations
+`o2-analysis-hf-hf-correlator-dplusdminus` | `HFCorrelatorDplusDminus.cxx` | D<sup>+</sup>–D<sup>−</sup> correlations
 `o2-analysis-hf-task-correlation-ddbar` | `taskCorrelationDDbar.cxx` | D<sup>0</sup>–D<sup>0</sup>bar, D<sup>+</sup>–D<sup>−</sup> correlations
 
 #### Real-data analysis
@@ -154,3 +162,4 @@ Distributions of various quantities are saved in histograms by dedicated tasks t
 Workflow | File | Type
 --- | --- | ---
 `o2-analysis-hf-mc-validation` | `HFMCValidation.cxx` | validation of HF MC distributions
+`o2-analysis-qa-rejection` | `qaPidRejection.cxx` | PID selection performance
