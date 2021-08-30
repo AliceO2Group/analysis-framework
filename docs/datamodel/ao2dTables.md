@@ -21,7 +21,7 @@ Click on the labels to display the table details.
        Root of data model for tables pointing to a bunch crossing
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev/Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev/Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
     </div>
     <div>Is used in:
       <ul>
@@ -74,7 +74,7 @@ Click on the labels to display the table details.
        Time and vertex information of collision
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev/Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev/Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
     </div>
     <div>Is used in:
       <ul>
@@ -219,7 +219,7 @@ Click on the labels to display the table details.
        On disk version of the Track table
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev/Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev/Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
     </div>
     <table class=DataModel>
       <tr>
@@ -343,7 +343,7 @@ Click on the labels to display the table details.
        Basic track properties
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev/Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev/Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
     </div>
     <div>Extends:
       <ul>
@@ -508,7 +508,7 @@ Click on the labels to display the table details.
        On disk version of the TracksCov table
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev/Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev/Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
     </div>
     <table class=DataModel>
       <tr>
@@ -632,7 +632,7 @@ Click on the labels to display the table details.
        Track covariance matrix
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev/Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev/Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
     </div>
     <div>Extends:
       <ul>
@@ -874,7 +874,7 @@ Click on the labels to display the table details.
        Additional track information (clusters, PID, etc.)
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev/Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev/Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
     </div>
     <div>Is used in:
       <ul>
@@ -1094,10 +1094,10 @@ Click on the labels to display the table details.
   <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::StoredMFTTracks</button>
   <div class="panel">
     <div>
-       
+
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev/Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev/Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
     </div>
     <table class=DataModel>
       <tr>
@@ -1211,10 +1211,10 @@ Click on the labels to display the table details.
   <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::MFTTracks (E)</button>
   <div class="panel">
     <div>
-       
+
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev/Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev/Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
     </div>
     <div>Extends:
       <ul>
@@ -1359,10 +1359,10 @@ Click on the labels to display the table details.
   <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::StoredFwdTracks</button>
   <div class="panel">
     <div>
-       
+
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev/Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev/Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
     </div>
     <table class=DataModel>
       <tr>
@@ -1533,16 +1533,23 @@ Click on the labels to display the table details.
         <td>int</td>
         <td>ID of matching MCH track for GlobalMuonTracks  (ints while self indexing not available)</td>
       </tr>
+      <tr>
+        <td>o2::aod::fwdtrack::MCHBitMap</td>
+        <td></td>
+        <td>MchBitMap</td>
+        <td>uint16_t</td>
+        <td>Fired muon trackig chambers bitmap</td>
+      </tr>
     </table>
   </div>
 
   <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::FwdTracks (E)</button>
   <div class="panel">
     <div>
-       
+
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev/Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev/Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
     </div>
     <div>Extends:
       <ul>
@@ -1726,6 +1733,13 @@ Click on the labels to display the table details.
         <td>ID of matching MCH track for GlobalMuonTracks  (ints while self indexing not available)</td>
       </tr>
       <tr>
+        <td>o2::aod::fwdtrack::MCHBitMap</td>
+        <td></td>
+        <td>MchBitMap</td>
+        <td>uint16_t</td>
+        <td>Fired muon trackig chambers bitmap</td>
+      </tr>
+      <tr>
         <td>o2::aod::fwdtrack::Eta</td>
         <td>E</td>
         <td>eta</td>
@@ -1752,10 +1766,10 @@ Click on the labels to display the table details.
   <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::StoredFwdTracksCov</button>
   <div class="panel">
     <div>
-       
+
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev/Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev/Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
     </div>
     <table class=DataModel>
       <tr>
@@ -1876,10 +1890,10 @@ Click on the labels to display the table details.
   <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::FwdTracksCov (E)</button>
   <div class="panel">
     <div>
-       
+
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev/Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev/Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
     </div>
     <div>Extends:
       <ul>
@@ -2117,10 +2131,10 @@ Click on the labels to display the table details.
   <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::MuonClusters</button>
   <div class="panel">
     <div>
-       
+
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev/Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev/Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
     </div>
     <div>Is used in:
       <ul>
@@ -2200,7 +2214,7 @@ Click on the labels to display the table details.
        Table for tracks which are not uniquely associated with a collision
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev/Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev/Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
     </div>
     <div>Is used in:
       <ul>
@@ -2245,7 +2259,7 @@ Click on the labels to display the table details.
        Table for MFT tracks which are not uniquely associated with a collision
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev/Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev/Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
     </div>
     <div>Is used in:
       <ul>
@@ -2283,7 +2297,7 @@ Click on the labels to display the table details.
        HMPID information
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev/Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev/Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
     </div>
     <div>Is used in:
       <ul>
@@ -2346,10 +2360,10 @@ Click on the labels to display the table details.
   <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::Calos</button>
   <div class="panel">
     <div>
-       
+
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev/Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev/Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
     </div>
     <div>Is used in:
       <ul>
@@ -2412,10 +2426,10 @@ Click on the labels to display the table details.
   <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::CaloTriggers</button>
   <div class="panel">
     <div>
-       
+
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev/Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev/Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
     </div>
     <div>Is used in:
       <ul>
@@ -2495,7 +2509,7 @@ Click on the labels to display the table details.
        ZDC information
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev/Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev/Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
     </div>
     <div>Is used in:
       <ul>
@@ -2642,10 +2656,10 @@ Click on the labels to display the table details.
   <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::FV0As</button>
   <div class="panel">
     <div>
-       
+
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev/Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev/Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
     </div>
     <div>Is used in:
       <ul>
@@ -2704,7 +2718,7 @@ Click on the labels to display the table details.
        Only for RUN 2 converted data: V0C table
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev/Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev/Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
     </div>
     <div>Is used in:
       <ul>
@@ -2753,10 +2767,10 @@ Click on the labels to display the table details.
   <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::FT0s</button>
   <div class="panel">
     <div>
-       
+
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev/Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev/Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
     </div>
     <div>Is used in:
       <ul>
@@ -2826,10 +2840,10 @@ Click on the labels to display the table details.
   <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::FDDs</button>
   <div class="panel">
     <div>
-       
+
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev/Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev/Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
     </div>
     <div>Is used in:
       <ul>
@@ -2902,7 +2916,7 @@ Click on the labels to display the table details.
        On disk V0 table
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev/Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev/Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
     </div>
     <div>Is used in:
       <ul>
@@ -2948,7 +2962,7 @@ Click on the labels to display the table details.
        On disk cascade table
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev/Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev/Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
     </div>
     <div>Is used in:
       <ul>
@@ -2994,7 +3008,7 @@ Click on the labels to display the table details.
        Legacy information for Run 2 event selection
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev/Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev/Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
     </div>
     <div>Is used in:
       <ul>
@@ -3095,7 +3109,7 @@ Click on the labels to display the table details.
        MC collision table
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev/Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev/Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
     </div>
     <div>Is used in:
       <ul>
@@ -3176,18 +3190,13 @@ Click on the labels to display the table details.
     </table>
   </div>
 
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::McParticles</button>
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::StoredMcParticles</button>
   <div class="panel">
     <div>
-       MC particle table
+       On disk version of the MC particle table
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev/Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
-    </div>
-    <div>Is used in:
-      <ul>
-        <li>o2::aod::McParticle = o2::aod::McParticles::iterator</li>
-      </ul>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev/Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
     </div>
     <table class=DataModel>
       <tr>
@@ -3234,31 +3243,31 @@ Click on the labels to display the table details.
       </tr>
       <tr>
         <td>o2::aod::mcparticle::Mother0Id</td>
-        <td>GI</td>
-        <td></td>
-        <td>?</td>
-        <td></td>
+        <td>SI</td>
+        <td>mother0Id</td>
+        <td>int</td>
+        <td>Track index of the first mother</td>
       </tr>
       <tr>
         <td>o2::aod::mcparticle::Mother1Id</td>
-        <td>GI</td>
-        <td></td>
-        <td>?</td>
-        <td></td>
+        <td>SI</td>
+        <td>mother1Id</td>
+        <td>int</td>
+        <td>Track index of the last mother</td>
       </tr>
       <tr>
         <td>o2::aod::mcparticle::Daughter0Id</td>
-        <td>GI</td>
-        <td></td>
-        <td>?</td>
-        <td></td>
+        <td>SI</td>
+        <td>daughter0Id</td>
+        <td>int</td>
+        <td>Track index of the first daugther</td>
       </tr>
       <tr>
         <td>o2::aod::mcparticle::Daughter1Id</td>
-        <td>GI</td>
-        <td></td>
-        <td>?</td>
-        <td></td>
+        <td>SI</td>
+        <td>daughter1Id</td>
+        <td>int</td>
+        <td>Track index of the last daugther</td>
       </tr>
       <tr>
         <td>o2::aod::mcparticle::Weight</td>
@@ -3331,32 +3340,173 @@ Click on the labels to display the table details.
         <td>Phi</td>
       </tr>
       <tr>
-        <td>o2::aod::mcparticle::Eta</td>
+        <td>o2::aod::mcparticle::ProducedByGenerator</td>
         <td>D</td>
-        <td>eta</td>
-        <td>float</td>
-        <td>Pseudorapidity</td>
+        <td>producedByGenerator</td>
+        <td>bool</td>
+        <td>Particle produced by the generator or by the transport code</td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::McParticles (E)</button>
+  <div class="panel">
+    <div>
+       Basic MC particle properties
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev/Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
+    </div>
+    <div>Extends:
+      <ul>
+         o2::aod::StoredMcParticles
+      </ul>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::McParticle = o2::aod::McParticles::iterator</li>
+      </ul>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
       </tr>
       <tr>
-        <td>o2::aod::mcparticle::Pt</td>
-        <td>D</td>
-        <td>pt</td>
-        <td>float</td>
-        <td>Transverse momentum in GeV/c</td>
+        <td>o2::soa::Index</td>
+        <td>GI</td>
+        <td>globalIndex</td>
+        <td>int64_t</td>
+        <td></td>
       </tr>
       <tr>
-        <td>o2::aod::mcparticle::P</td>
-        <td>D</td>
-        <td>p</td>
-        <td>float</td>
-        <td>Total momentum in GeV/c</td>
+        <td>o2::aod::mcparticle::McCollisionId</td>
+        <td>I</td>
+        <td>mcCollisionId</td>
+        <td>int32</td>
+        <td>MC collision of this particle</td>
       </tr>
       <tr>
-        <td>o2::aod::mcparticle::Y</td>
-        <td>D</td>
-        <td>y</td>
+        <td>o2::aod::mcparticle::PdgCode</td>
+        <td></td>
+        <td>pdgCode</td>
+        <td>int</td>
+        <td>PDG code</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::StatusCode</td>
+        <td></td>
+        <td>statusCode</td>
+        <td>int</td>
+        <td>Status code directly from the generator</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::Flags</td>
+        <td></td>
+        <td>flags</td>
+        <td>uint8_t</td>
+        <td>ALICE specific flags. Do not use directly. Use the dynamic columns, e.g. producedByGenerator()</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::Mother0Id</td>
+        <td>SI</td>
+        <td>mother0Id</td>
+        <td>int</td>
+        <td>Track index of the first mother</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::Mother1Id</td>
+        <td>SI</td>
+        <td>mother1Id</td>
+        <td>int</td>
+        <td>Track index of the last mother</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::Daughter0Id</td>
+        <td>SI</td>
+        <td>daughter0Id</td>
+        <td>int</td>
+        <td>Track index of the first daugther</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::Daughter1Id</td>
+        <td>SI</td>
+        <td>daughter1Id</td>
+        <td>int</td>
+        <td>Track index of the last daugther</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::Weight</td>
+        <td></td>
+        <td>weight</td>
         <td>float</td>
-        <td>Particle rapidity</td>
+        <td>MC weight</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::Px</td>
+        <td></td>
+        <td>px</td>
+        <td>float</td>
+        <td>Momentum in x in GeV/c</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::Py</td>
+        <td></td>
+        <td>py</td>
+        <td>float</td>
+        <td>Momentum in y in GeV/c</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::Pz</td>
+        <td></td>
+        <td>pz</td>
+        <td>float</td>
+        <td>Momentum in z in GeV/c</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::E</td>
+        <td></td>
+        <td>e</td>
+        <td>float</td>
+        <td>Energy</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::Vx</td>
+        <td></td>
+        <td>vx</td>
+        <td>float</td>
+        <td>X production vertex in cm</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::Vy</td>
+        <td></td>
+        <td>vy</td>
+        <td>float</td>
+        <td>Y production vertex in cm</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::Vz</td>
+        <td></td>
+        <td>vz</td>
+        <td>float</td>
+        <td>Z production vertex in cm</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::Vt</td>
+        <td></td>
+        <td>vt</td>
+        <td>float</td>
+        <td>Production time</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::Phi</td>
+        <td>D</td>
+        <td>phi</td>
+        <td>float</td>
+        <td>Phi</td>
       </tr>
       <tr>
         <td>o2::aod::mcparticle::ProducedByGenerator</td>
@@ -3364,6 +3514,34 @@ Click on the labels to display the table details.
         <td>producedByGenerator</td>
         <td>bool</td>
         <td>Particle produced by the generator or by the transport code</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::Eta</td>
+        <td>E</td>
+        <td>eta</td>
+        <td>float</td>
+        <td>Pseudorapidity, conditionally defined to avoid FPEs</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::Pt</td>
+        <td>E</td>
+        <td>pt</td>
+        <td>float</td>
+        <td>Transverse momentum in GeV/c</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::P</td>
+        <td>E</td>
+        <td>p</td>
+        <td>float</td>
+        <td>Total momentum in GeV/c</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::Y</td>
+        <td>E</td>
+        <td>y</td>
+        <td>float</td>
+        <td>Particle rapidity, conditionally defined to avoid FPEs</td>
       </tr>
     </table>
   </div>
@@ -3374,7 +3552,7 @@ Click on the labels to display the table details.
        Table joined to the track table containing the MC index
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev/Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev/Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
     </div>
     <div>Is used in:
       <ul>
@@ -3413,7 +3591,7 @@ Click on the labels to display the table details.
        Table joined to the mft track table containing the MC index
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev/Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev/Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
     </div>
     <div>Is used in:
       <ul>
@@ -3451,7 +3629,7 @@ Click on the labels to display the table details.
        Table joined to the calo table containing the MC index
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev/Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev/Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
     </div>
     <div>Is used in:
       <ul>
@@ -3489,7 +3667,7 @@ Click on the labels to display the table details.
        Table joined to the collision table containing the MC index
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev/Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev/Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
     </div>
     <div>Is used in:
       <ul>
@@ -3524,10 +3702,10 @@ Click on the labels to display the table details.
   <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::Run2MatchedExclusive (I)</button>
   <div class="panel">
     <div>
-       
+
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev/Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev/Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
     </div>
     <table class=DataModel>
       <tr>
@@ -3592,10 +3770,10 @@ Click on the labels to display the table details.
   <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::Run2MatchedSparse (I)</button>
   <div class="panel">
     <div>
-       
+
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev/Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev/Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
     </div>
     <div>Is used in:
       <ul>
@@ -3665,10 +3843,10 @@ Click on the labels to display the table details.
   <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::Run3MatchedExclusive (I)</button>
   <div class="panel">
     <div>
-       
+
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev/Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev/Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
     </div>
     <table class=DataModel>
       <tr>
@@ -3726,10 +3904,10 @@ Click on the labels to display the table details.
   <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::Run3MatchedSparse (I)</button>
   <div class="panel">
     <div>
-       
+
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev/Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev/Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
     </div>
     <div>Is used in:
       <ul>
@@ -3792,10 +3970,10 @@ Click on the labels to display the table details.
   <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::MatchedBCCollisionsExclusive (I)</button>
   <div class="panel">
     <div>
-       
+
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev/Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev/Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
     </div>
     <table class=DataModel>
       <tr>
@@ -3825,10 +4003,10 @@ Click on the labels to display the table details.
   <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::MatchedBCCollisionsSparse (I)</button>
   <div class="panel">
     <div>
-       
+
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev/Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev/Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
     </div>
     <table class=DataModel>
       <tr>
@@ -3858,10 +4036,10 @@ Click on the labels to display the table details.
   <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::Run3MatchedToBCExclusive (I)</button>
   <div class="panel">
     <div>
-       
+
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev/Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev/Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
     </div>
     <table class=DataModel>
       <tr>
@@ -3912,10 +4090,10 @@ Click on the labels to display the table details.
   <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::Run3MatchedToBCSparse (I)</button>
   <div class="panel">
     <div>
-       
+
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev/Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev/Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
     </div>
     <table class=DataModel>
       <tr>
@@ -3966,10 +4144,10 @@ Click on the labels to display the table details.
   <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::Run2MatchedToBCSparse (I)</button>
   <div class="panel">
     <div>
-       
+
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/AliceO2/blob/dev/Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev/Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
     </div>
     <table class=DataModel>
       <tr>
