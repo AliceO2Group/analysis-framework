@@ -11,7 +11,7 @@ Learn how to create, fill, and save histograms.
 ```
 
 <div style="margin-bottom:5mm">
-  source: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev/Analysis/Tutorials/src/histograms.cxx" target="_blank">histograms.cxx</a><br>
+  source: <a href="https://github.com/AliceO2Group/O2Physics/blob/master/Tutorials/src/histograms.cxx" target="_blank">histograms.cxx</a><br>
   Executable: o2-analysistutorial-histograms
 </div>
   

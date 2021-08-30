@@ -10,7 +10,7 @@ Obtain mixed event tuples.
 ```
 
 <div style="margin-bottom:5mm">
-  Source: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev/Analysis/Tutorials/src/eventMixing.cxx" target="_blank">eventMixing.cxx</a><br>
+  Source: <a href="https://github.com/AliceO2Group/O2Physics/blob/master/Tutorials/src/eventMixing.cxx" target="_blank">eventMixing.cxx</a><br>
   Executable: o2-analysistutorial-event-mixing
 </div>
 

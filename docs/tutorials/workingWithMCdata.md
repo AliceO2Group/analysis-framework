@@ -8,7 +8,7 @@ Learn how access and work with MC data
 ```
 
 <div style="margin-bottom:5mm">
-  Source: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev/Analysis/Tutorials/src/mcHistograms.cxx" target="_blank">mcHistograms.cxx</a><br>
+  Source: <a href="https://github.com/AliceO2Group/O2Physics/blob/master/Tutorials/src/mcHistograms.cxx" target="_blank">mcHistograms.cxx</a><br>
   Executable: o2-analysistutorial-mc-histograms
 </div>
 

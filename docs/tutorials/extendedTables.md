@@ -11,7 +11,7 @@ Learn how add new columns to existing tables, use dynamic and expression columns
 ```
 
 <div style="margin-bottom:5mm">
-  source: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev/Analysis/Tutorials/src/extendedTables.cxx" target="_blank">extendedTables.cxx</a><br>
+  source: <a href="https://github.com/AliceO2Group/O2Physics/blob/master/Tutorials/src/extendedTables.cxx" target="_blank">extendedTables.cxx</a><br>
   Executable: o2-analysistutorial-extended-tables
 </div>
   

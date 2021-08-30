@@ -10,7 +10,7 @@ title: Table Combinations
 Learn how to efficiently access and process related information from different tables.
 ```
 <div style="margin-bottom:5mm">
-  source: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev/Analysis/Tutorials/src/collisionTracksIteration.cxx" target="_blank">collisionTracksIteration.cxx</a><br>
+  source: <a href="https://github.com/AliceO2Group/O2Physics/blob/master/Tutorials/src/collisionTracksIteration.cxx" target="_blank">collisionTracksIteration.cxx</a><br>
   Executable: o2-analysistutorial-collision-tracks-iteration
 </div>
 

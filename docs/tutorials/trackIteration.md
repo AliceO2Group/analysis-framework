@@ -10,7 +10,7 @@ Learn how to access the tracks and their measured quantities.
 ```
 
 <div style="margin-bottom:5mm">
-  Source: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev/Analysis/Tutorials/src/trackIteration.cxx" target="_blank">trackIteration.cxx</a><br>
+  Source: <a href="https://github.com/AliceO2Group/O2Physics/blob/master/Tutorials/src/trackIteration.cxx" target="_blank">trackIteration.cxx</a><br>
   Executable: o2-analysistutorial-track-iteration
 </div>
 
