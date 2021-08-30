@@ -7,7 +7,7 @@ title: Tutorials
 
 There is a number of example tasks available at the AliceO2 software repository
 on github.com under
-[AliceO2/Analysis/Tutorials/src/](https://github.com/AliceO2Group/AliceO2/tree/dev/Analysis/Tutorials/src/).
+[O2Physics/Tutorials/src/](https://github.com/AliceO2Group/O2Physics/tree/master/Tutorials/src/).
 It is ready-to-use code which you can run or copy to your own tasks and modify
 according to your needs.
 
