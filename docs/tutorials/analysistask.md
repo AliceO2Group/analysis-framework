@@ -50,7 +50,7 @@ using namespace o2::framework;
 ```
 
 ```note
-ALl tables of the ALICE O2 analysis data model reside in the namespace o2::aod. Thus e.g. the full specifier of the table Tracks is o2::aod::Tracks. Within the namespace o2 this hence becomes aod::Tracks.
+All tables of the ALICE O2 analysis data model reside in the namespace o2::aod. Thus e.g. the full specifier of the table Tracks is o2::aod::Tracks. Within the namespace o2 this hence becomes aod::Tracks.
 ```
 
 ## Tasks, workflows, data analysis
@@ -94,8 +94,8 @@ struct BTask {
 WorkflowSpec defineDataProcessing(ConfigContext const& cfgc)
 {
   return WorkflowSpec{
-    adaptAnalysisTask<ATask>(cfgc, TaskName{"rask_A"}),
-    adaptAnalysisTask<BTask>(cfgc, TaskName{"task_B"}),
+    adaptAnalysisTask<ATask>(cfgc),
+    adaptAnalysisTask<BTask>(cfgc),
   };
 }
 ```
