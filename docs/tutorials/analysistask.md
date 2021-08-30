@@ -82,13 +82,13 @@ using namespace o2;
 using namespace o2::framework;
 
 struct ATask {
-  init();
-  process();
+  init() {};
+  process() {};
 };
 
 struct BTask {
-  init();
-  process();
+  init() {};
+  process() {};
 };
 
 WorkflowSpec defineDataProcessing(ConfigContext const& cfgc)
