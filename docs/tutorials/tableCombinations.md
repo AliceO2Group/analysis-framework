@@ -86,4 +86,3 @@ o2-analysis-weak-decay-indices --aod-file AO2D.root | o2-analysistutorial-weak-d
 ```
 Success?
 
-More about creating pipelines of tasks is found [here]().
