@@ -3503,6 +3503,13 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Tasks
         <th>Comment</th>
       </tr>
       <tr>
+        <td>o2::soa::Index</td>
+        <td>GI</td>
+        <td>globalIndex</td>
+        <td>int64_t</td>
+        <td></td>
+      </tr>
+      <tr>
         <td>o2::aod::hf_cand::CollisionId</td>
         <td>I</td>
         <td>collisionId</td>
