@@ -11,8 +11,8 @@ Learn how to customize the reading of tables from root files. Write tables selec
 ```
 
 <div style="margin-bottom:5mm">
-  Sources: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev/Analysis/Tutorials/src/tableIOout.cxx" target="_blank">tableIOout.cxx</a>
-/ <a href="https://github.com/AliceO2Group/AliceO2/tree/dev/Analysis/Tutorials/src/tableIOin.cxx" target="_blank">tableIOin.cxx</a><br>
+  Sources: <a href="https://github.com/AliceO2Group/O2Physics/blob/master/Tutorials/src/tableIOout.cxx" target="_blank">tableIOout.cxx</a>
+/ <a href="https://github.com/AliceO2Group/O2Physics/blob/master/Tutorials/src/tableIOin.cxx" target="_blank">tableIOin.cxx</a><br>
   Executables: o2-analysistutorial-tableioout, o2-analysistutorial-tableioin
 </div>
 

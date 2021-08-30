@@ -10,7 +10,7 @@ title: Creating Tables
 Learn how to declare and produce new tables.
 ```
 <div style="margin-bottom:5mm">
-  source: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev/Analysis/Tutorials/src/newCollections.cxx" target="_blank">newCollections.cxx</a><br>
+  source: <a href="https://github.com/AliceO2Group/O2Physics/blob/master/Tutorials/src/newCollections.cxx" target="_blank">newCollections.cxx</a><br>
   Executable: o2-analysistutorial-new-collections
 </div>
 

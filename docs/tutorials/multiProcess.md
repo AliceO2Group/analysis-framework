@@ -8,7 +8,7 @@ Learn how to implement a task with more than one process function, and be aware 
 ```
 
 <div style="margin-bottom:5mm">
-  Source: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev/Analysis/Tutorials/src/multiProcess.cxx" target="_blank">multiProcess.cxx</a><br>
+  Source: <a href="https://github.com/AliceO2Group/O2Physics/blob/master/Tutorials/src/multiProcess.cxx" target="_blank">multiProcess.cxx</a><br>
   Executable: o2-analysistutorial-multiprocess-example
 </div>
 

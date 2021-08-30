@@ -8,7 +8,7 @@ Learn how to associate information from distinct tables through index columns an
 ```
 
 <div style="margin-bottom:5mm">
-  Source: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev/Analysis/Tutorials/src/associatedExample.cxx" target="_blank">associatedExample.cxx</a><br>
+  Source: <a href="https://github.com/AliceO2Group/O2Physics/blob/master/Tutorials/src/associatedExample.cxx" target="_blank">associatedExample.cxx</a><br>
   Executable: o2-analysistutorial-associated-derived
 </div>
 

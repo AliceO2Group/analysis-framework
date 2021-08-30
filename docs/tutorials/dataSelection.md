@@ -17,7 +17,7 @@ Grouping (see e.g. tutorial [Table Combinations](tableCombinations.md)) is also 
 <a name="filter"></a>
 ## Filter
 <div style="margin-bottom:5mm">
-  source: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev/Analysis/Tutorials/src/filters.cxx" target="_blank">filters.cxx</a><br>
+  source: <a href="https://github.com/AliceO2Group/O2Physics/blob/master/Tutorials/src/filters.cxx" target="_blank">filters.cxx</a><br>
   Executable: o2-analysistutorial-filters
 </div>
 
@@ -71,7 +71,7 @@ Filters defined in front of a process function can be applied to the arguments o
 <a name="partition"></a>
 ## Partition
 <div style="margin-bottom:5mm">
-  source: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev/Analysis/Tutorials/src/partitions.cxx" target="_blank">partitions.cxx</a><br>
+  source: <a href="https://github.com/AliceO2Group/O2Physics/blob/master/Tutorials/src/partitions.cxx" target="_blank">partitions.cxx</a><br>
   Executable: o2-analysistutorial-partitions
 </div>
 
