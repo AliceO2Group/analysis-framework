@@ -167,7 +167,7 @@ struct ProduceMinMaxPt {
 To run the example do
 
 ```csh
-o2-analysistutorial-tableioin --aod-file EtaPtRanges.root
+o2-analysistutorial-tableio-read --aod-file EtaPtRanges.root
 ```
 
 and as a result you should obtain the confirmation message that the number of rows in tables PtRange and EtaRange are equal. The case works fine without further specification, because a few rules have been followed in the declaration of the two tables and their columns. By default a table 'TABLE' is filled with data from the tree 'O2tABLE' and column 'COLUMN' with values from branch 'fCOLUMN'.
@@ -182,7 +182,7 @@ To customize the aod-reader beyond the default behavior we use the command line 
 </center>
 
 ```csh
-o2-analysistutorial-tableioin --aod-file @resultFiles.txt --aod-reader-json reader.json
+o2-analysistutorial-tableio-read --aod-file @resultFiles.txt --aod-reader-json reader.json
 ```
 
 `reader.json`
