@@ -63,7 +63,7 @@ The table MinMaxPt is produced in task ProduceMinMaxPt but not consumed, means t
 Writing out dangling tables is easy. For this use
 
 ```csh
-o2-analysistutorial-aodwriter --aod-file AO2D.root --aod-writer-keep dangling
+o2-analysistutorial-tablio-write --aod-file AO2D.root --aod-writer-keep dangling
 ```
 
 As a result the file AnalysisResults_trees.root is created with directories DF_x, one directory for each processed data frame. And within the directories a tree O2minpaxpt with branches fMinpt and fMaxpt is created which holds the values of the dangling MinMaxPt table. The tree and column names are deduced from the table and column names.
@@ -77,7 +77,7 @@ The --aod-writer-keep argument is however more powerful than that and allows to 
 With the following command the non-dangling table MinMaxEta will be saved to file TemporaryResults_trees.root into tree etarange. In this case both columns of table MinMaxEta are listed in the argument value and hence two branches are created.
 
 ```csh
-o2-analysistutorial-aodwriter --aod-file AO2D.root --aod-writer-keep AOD/MINMAXETA/0:etarange:fMineta/fMaxeta:TemporaryResults_trees
+o2-analysistutorial-tablio-write --aod-file AO2D.root --aod-writer-keep AOD/MINMAXETA/0:etarange:fMineta/fMaxeta:TemporaryResults_trees
 ```
 
 The exact syntax of the argument string is described
@@ -87,7 +87,7 @@ the values!
 Instructions to write out several tables can be provided in a comma-separated list. However, with growing number of tables this quickly becomes clumsy. For this you can provide a [json](https://www.json.org/json-en.html) file including the related information to the command line argument --aod-writer-json.
 
 ```csh
-o2-analysistutorial-aodwriter --aod-file AO2D.root --aod-writer-json writer.json
+o2-analysistutorial-tablio-write --aod-file AO2D.root --aod-writer-json writer.json
 ```
 
 With the following json file both tables of the example are saved to file EtaPtRanges.root, table MinMaxPt to tree O2ptrange and table MinMaxEta to tree O2etarange.
