@@ -14,19 +14,19 @@ Mattermost channel: [hf-o2-analysis-challenge](https://mattermost.web.cern.ch/al
 ## Code
 
 * Tasks used by the heavy-flavour analysis framework are in the
-[`Tasks/PWGHF`](https://github.com/AliceO2Group/O2Physics/tree/master/Tasks/PWGHF) directory.
+[`PWGHF`](https://github.com/AliceO2Group/O2Physics/tree/master/PWGHF) directory.
 * Tables produced by skimming and candidate creators are defined in
-[`HFSecondaryVertex.h`](https://github.com/AliceO2Group/O2Physics/blob/master/DataModel/include/AnalysisDataModel/HFSecondaryVertex.h).
+[`HFSecondaryVertex.h`](https://github.com/AliceO2Group/O2Physics/blob/master/PWGHF/DataModel/HFSecondaryVertex.h).
 * Tables produced by candidate selectors are defined in
-[`HFCandidateSelectionTables.h`](https://github.com/AliceO2Group/O2Physics/blob/master/DataModel/include/AnalysisDataModel/HFCandidateSelectionTables.h).
+[`HFCandidateSelectionTables.h`](https://github.com/AliceO2Group/O2Physics/blob/master/PWGHF/DataModel/HFCandidateSelectionTables.h).
 * Default parameters used in the selection of single tracks, track-index skims and candidates are defined in
-[`HFSelectorCuts.h`](https://github.com/AliceO2Group/O2Physics/blob/master/Core/include/AnalysisCore/HFSelectorCuts.h).
+[`HFSelectorCuts.h`](https://github.com/AliceO2Group/O2Physics/blob/master/PWGHF/Core/HFSelectorCuts.h).
 * Secondary-vertex reconstruction algorithms are implemented in the
 [`DCAFitterN`](https://github.com/AliceO2Group/AliceO2/blob/dev/Detectors/Vertexing/include/DetectorsVertexing/DCAFitterN.h) class.
 * Functions for calculations of kinematic quantities and for MC matching are implemented in the
-[`RecoDecay`](https://github.com/AliceO2Group/O2Physics/blob/master/Core/include/AnalysisCore/RecoDecay.h) class.
+[`RecoDecay`](https://github.com/AliceO2Group/O2Physics/blob/master/Common/Core/RecoDecay.h) class.
 * Selection of tracks based on the particle identification (PID) detectors is performed via the
-[`TrackSelectorPID`](https://github.com/AliceO2Group/O2Physics/blob/master/Core/include/AnalysisCore/TrackSelectorPID.h) class.
+[`TrackSelectorPID`](https://github.com/AliceO2Group/O2Physics/blob/master/Common/Core/TrackSelectorPID.h) class.
 * Code for easy running of the HF tasks and output processing can be found in the
 [Run3Analysisvalidation](https://github.com/AliceO2Group/Run3Analysisvalidation) repository.
   * Analysis code for postprocessing of the task output is collected in the
@@ -34,13 +34,8 @@ Mattermost channel: [hf-o2-analysis-challenge](https://mattermost.web.cern.ch/al
 
 ## AliHyperloop
 
-JIRA tickets of the HF analyses on [AliHyperloop](https://alimonitor.cern.ch/hyperloop/):
-* [ALICE 2](https://alice.its.cern.ch/jira/browse/PWGHF-269)
-* [ALICE 3 pp](https://alice.its.cern.ch/jira/browse/PWGHF-284)
-* [ALICE 3 AA](https://alice.its.cern.ch/jira/browse/PWGHF-287)
-* [ALICE 3 pp onia](https://alice.its.cern.ch/jira/browse/PWGHF-289)
-* [ALICE 3 AA onia](https://alice.its.cern.ch/jira/browse/PWGHF-288)
-* [DDbar correlations](https://alice.its.cern.ch/jira/browse/PWGHF-283)
+[JIRA tickets](https://alice.its.cern.ch/jira/browse/PWGHF-291?jql=project%20%3D%20PWGHF%20AND%20issuetype%20%3D%20Analysis%20AND%20component%20%3D%20PWG-HF)
+of the HF analyses on [AliHyperloop](https://alimonitor.cern.ch/hyperloop/):
 
 ## Framework structure
 
@@ -84,6 +79,7 @@ Workflow | File | Type
 `o2-analysis-hf-candidate-creator-cascade` | `HFCandidateCreatorCascade.cxx` | cascade decays with V<sup>0</sup> daughters (Λ<sub>c</sub><sup>±</sup>)
 `o2-analysis-hf-candidate-creator-xicc` | `HFCandidateCreatorXicc.cxx` | Ξ<sub>cc</sub><sup>±±</sup> → Ξ<sub>c</sub><sup>±</sup> π<sup>±</sup>
 `o2-analysis-hf-candidate-creator-x` | `HFCandidateCreatorX.cxx` | X(3872) → J/ψ π<sup>±</sup> π<sup>∓</sup>
+`o2-analysis-hf-candidate-creator-bplus` | `HFCandidateCreatorBPlus.cxx` | B<sup>±</sup> → D<sup>0</sup>(bar) π<sup>±</sup>
 
 #### Candidate creation
 
@@ -116,13 +112,14 @@ Workflow | File | Type
 `o2-analysis-hf-lc-tok0sp-candidate-selector` | `HFLcK0sPCandidateSelector.cxx` | Λ<sub>c</sub><sup>±</sup> → p(bar) K<sub>S</sub><sup>0</sup>
 `o2-analysis-hf-xic-topkpi-candidate-selector` | `HFXicToPKPiCandidateSelector.cxx` | Ξ<sub>c</sub><sup>±</sup> → p(bar) K<sup>∓</sup> π<sup>±</sup>
 `o2-analysis-hf-xicc-topkpipi-candidate-selector` | `HFXiccToPKPiPiCandidateSelector.cxx` | Ξ<sub>cc</sub><sup>±±</sup> → Ξ<sub>c</sub><sup>±</sup> π<sup>±</sup>
+`o2-analysis-hf-bplus-tod0pi-candidate-selector` | `HFBPlusToD0PiCandidateSelector.cxx` | B<sup>±</sup> → D<sup>0</sup>(bar) π<sup>±</sup>
 
 In a dedicated selector task, tailored for each decay channel, accurate analysis level selection criteria
 based on decay topology and PID are applied to the reconstructed candidates.
 
 The selection results are stored in a column of a new dedicated table that is later joined with the candidate table to filter them.
 
-### Analysis task
+### Analysis tasks
 
 Workflow | File | Type
 --- | --- | ---
@@ -147,6 +144,14 @@ In the user analysis task, histograms needed for the analysis are filled with pr
 
 For MC events, histograms with quantities of generated MC particles and MC-matched candidates are produced.
 
+### QA and helper tasks
+
+Workflow | File | Type
+--- | --- | ---
+`o2-analysis-hf-mc-validation` | `HFMCValidation.cxx` | validation of HF MC distributions
+`o2-analysis-qa-rejection` | `qaPidRejection.cxx` | PID selection performance
+`o2-analysis-hf-sel-optimisation` | `HFSelOptimisation.cxx` | preselection optimisation
+
 ### Tree creation
 
 Candidate tables and other related derived tables are exported to disk as ROOT trees for
@@ -156,12 +161,5 @@ Workflow | File | Type
 --- | --- | ---
 `o2-analysis-hf-tree-creator-d0-tokpi` | `HFTreeCreatorD0ToKPi.cxx` | D<sup>0</sup>(bar) → π<sup>±</sup> K<sup>∓</sup>
 `o2-analysis-hf-tree-creator-lc-topkpi` | `HFTreeCreatorLcToPKPi.cxx` | Λ<sub>c</sub><sup>±</sup> → p(bar) K<sup>∓</sup> π<sup>±</sup>
-
-### QA
-
-Distributions of various quantities are saved in histograms by dedicated tasks to validate code and data.
-
-Workflow | File | Type
---- | --- | ---
-`o2-analysis-hf-mc-validation` | `HFMCValidation.cxx` | validation of HF MC distributions
-`o2-analysis-qa-rejection` | `qaPidRejection.cxx` | PID selection performance
+`o2-analysis-hf-tree-creator-x-tojpsipipi` | `HFTreeCreatorXToJpsiPiPi.cxx` | X(3872) → J/ψ π<sup>±</sup> π<sup>∓</sup>
+`o2-analysis-hf-tree-creator-xicc-topkpipi` | `HFTreeCreatorXiccToPKPiPi.cxx` | Ξ<sub>cc</sub><sup>±±</sup> → Ξ<sub>c</sub><sup>±</sup> π<sup>±</sup>
