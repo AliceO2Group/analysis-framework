@@ -2220,21 +2220,14 @@ Click on the labels to display the table details.
         <th>Comment</th>
       </tr>
       <tr>
-        <td>o2::aod::ambiguoustracks::TrackId</td>
+        <td>o2::aod::ambiguous::TrackId</td>
         <td>I</td>
         <td>trackId</td>
         <td>int32</td>
         <td>Track index</td>
       </tr>
       <tr>
-        <td>o2::aod::ambiguoustracks::BCIdSlice</td>
-        <td>GI</td>
-        <td></td>
-        <td>?</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::ambiguoustracks::CollisionIds</td>
+        <td>o2::aod::ambiguous::BCIdSlice</td>
         <td>GI</td>
         <td></td>
         <td>?</td>
@@ -2265,18 +2258,18 @@ Click on the labels to display the table details.
         <th>Comment</th>
       </tr>
       <tr>
-        <td>o2::aod::ambiguousmfttracks::CollisionId</td>
-        <td>I</td>
-        <td>collisionId</td>
-        <td>int32</td>
-        <td>Collision index</td>
-      </tr>
-      <tr>
-        <td>o2::aod::ambiguousmfttracks::MFTTrackId</td>
+        <td>o2::aod::ambiguous::MFTTrackId</td>
         <td>I</td>
         <td>mfttrackId</td>
         <td>int32</td>
         <td>MFTTrack index</td>
+      </tr>
+      <tr>
+        <td>o2::aod::ambiguous::BCIdSlice</td>
+        <td>GI</td>
+        <td></td>
+        <td>?</td>
+        <td></td>
       </tr>
     </table>
   </div>
