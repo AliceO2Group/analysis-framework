@@ -894,7 +894,7 @@ Click on the labels to display the table details.
         <td></td>
         <td>flags</td>
         <td>uint32_t</td>
-        <td>Track flags. Run 2: see TrackFlagsRun2Enum | Run 3: TODO</td>
+        <td>Track flags. Run 2: see TrackFlagsRun2Enum | Run 3: see TrackFlags</td>
       </tr>
       <tr>
         <td>o2::aod::track::ITSClusterMap</td>
@@ -979,13 +979,6 @@ Click on the labels to display the table details.
         <td>trdSignal</td>
         <td>float</td>
         <td>dE/dx signal in the TRD</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::TOFSignal</td>
-        <td></td>
-        <td>tofSignal</td>
-        <td>float</td>
-        <td>TOF signal matched to the track</td>
       </tr>
       <tr>
         <td>o2::aod::track::Length</td>
@@ -1078,6 +1071,20 @@ Click on the labels to display the table details.
         <td>float</td>
         <td></td>
       </tr>
+      <tr>
+        <td>o2::aod::track::TrackTime</td>
+        <td></td>
+        <td>trackTime</td>
+        <td>float</td>
+        <td>Estimated time of the track in ns wrt collision().bc() or ambiguoustrack.bcSlice()[0]</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::TrackTimeRes</td>
+        <td></td>
+        <td>trackTimeRes</td>
+        <td>float</td>
+        <td>Resolution of the track time in ns (see TrackFlags::TrackTimeResIsRange)</td>
+      </tr>
     </table>
   </div>
 
@@ -1116,49 +1123,49 @@ Click on the labels to display the table details.
         <td></td>
         <td>x</td>
         <td>float</td>
-        <td>TrackParFwd parameters: x, y, z, phi, tan(lamba), q/pt</td>
+        <td>TrackParFwd parameter x</td>
       </tr>
       <tr>
         <td>o2::aod::fwdtrack::Y</td>
         <td></td>
         <td>y</td>
         <td>float</td>
-        <td></td>
+        <td>TrackParFwd parameter y</td>
       </tr>
       <tr>
         <td>o2::aod::fwdtrack::Z</td>
         <td></td>
         <td>z</td>
         <td>float</td>
-        <td></td>
+        <td>TrackParFwd propagation parameter z</td>
       </tr>
       <tr>
         <td>o2::aod::fwdtrack::Phi</td>
         <td></td>
         <td>phi</td>
         <td>float</td>
-        <td></td>
+        <td>TrackParFwd parameter phi; (i.e. pt pointing direction)</td>
       </tr>
       <tr>
         <td>o2::aod::fwdtrack::Tgl</td>
         <td></td>
         <td>tgl</td>
         <td>float</td>
-        <td></td>
+        <td>TrackParFwd parameter tan(\lamba); (\lambda = 90 - \theta_{polar})</td>
       </tr>
       <tr>
         <td>o2::aod::fwdtrack::Signed1Pt</td>
         <td></td>
         <td>signed1Pt</td>
         <td>float</td>
-        <td></td>
+        <td>TrackParFwd parameter: charged inverse transverse momentum; (q/pt)</td>
       </tr>
       <tr>
         <td>o2::aod::fwdtrack::NClusters</td>
         <td></td>
         <td>nClusters</td>
         <td>int8_t</td>
-        <td></td>
+        <td>Number of clusters</td>
       </tr>
       <tr>
         <td>o2::aod::fwdtrack::Px</td>
@@ -1186,14 +1193,14 @@ Click on the labels to display the table details.
         <td>D</td>
         <td>sign</td>
         <td>short</td>
-        <td></td>
+        <td>Sign of the track eletric charge</td>
       </tr>
       <tr>
         <td>o2::aod::fwdtrack::Chi2</td>
         <td></td>
         <td>chi2</td>
         <td>float</td>
-        <td></td>
+        <td>Track chi^2</td>
       </tr>
     </table>
   </div>
@@ -1243,49 +1250,49 @@ Click on the labels to display the table details.
         <td></td>
         <td>x</td>
         <td>float</td>
-        <td>TrackParFwd parameters: x, y, z, phi, tan(lamba), q/pt</td>
+        <td>TrackParFwd parameter x</td>
       </tr>
       <tr>
         <td>o2::aod::fwdtrack::Y</td>
         <td></td>
         <td>y</td>
         <td>float</td>
-        <td></td>
+        <td>TrackParFwd parameter y</td>
       </tr>
       <tr>
         <td>o2::aod::fwdtrack::Z</td>
         <td></td>
         <td>z</td>
         <td>float</td>
-        <td></td>
+        <td>TrackParFwd propagation parameter z</td>
       </tr>
       <tr>
         <td>o2::aod::fwdtrack::Phi</td>
         <td></td>
         <td>phi</td>
         <td>float</td>
-        <td></td>
+        <td>TrackParFwd parameter phi; (i.e. pt pointing direction)</td>
       </tr>
       <tr>
         <td>o2::aod::fwdtrack::Tgl</td>
         <td></td>
         <td>tgl</td>
         <td>float</td>
-        <td></td>
+        <td>TrackParFwd parameter tan(\lamba); (\lambda = 90 - \theta_{polar})</td>
       </tr>
       <tr>
         <td>o2::aod::fwdtrack::Signed1Pt</td>
         <td></td>
         <td>signed1Pt</td>
         <td>float</td>
-        <td></td>
+        <td>TrackParFwd parameter: charged inverse transverse momentum; (q/pt)</td>
       </tr>
       <tr>
         <td>o2::aod::fwdtrack::NClusters</td>
         <td></td>
         <td>nClusters</td>
         <td>int8_t</td>
-        <td></td>
+        <td>Number of clusters</td>
       </tr>
       <tr>
         <td>o2::aod::fwdtrack::Px</td>
@@ -1313,14 +1320,14 @@ Click on the labels to display the table details.
         <td>D</td>
         <td>sign</td>
         <td>short</td>
-        <td></td>
+        <td>Sign of the track eletric charge</td>
       </tr>
       <tr>
         <td>o2::aod::fwdtrack::Chi2</td>
         <td></td>
         <td>chi2</td>
         <td>float</td>
-        <td></td>
+        <td>Track chi^2</td>
       </tr>
       <tr>
         <td>o2::aod::fwdtrack::Pt</td>
@@ -1377,67 +1384,60 @@ Click on the labels to display the table details.
         <td>Pointer into Collisions</td>
       </tr>
       <tr>
-        <td>o2::aod::fwdtrack::BCId</td>
-        <td>I</td>
-        <td>bcId</td>
-        <td>int32</td>
-        <td>Pointer into BCs</td>
-      </tr>
-      <tr>
         <td>o2::aod::fwdtrack::TrackType</td>
         <td></td>
         <td>trackType</td>
         <td>uint8_t</td>
-        <td>TODO change to ForwardTrackTypeEnum when enums are supported</td>
+        <td>Type of track. See enum ForwardTrackTypeEnum</td>
       </tr>
       <tr>
         <td>o2::aod::fwdtrack::X</td>
         <td></td>
         <td>x</td>
         <td>float</td>
-        <td>TrackParFwd parameters: x, y, z, phi, tan(lamba), q/pt</td>
+        <td>TrackParFwd parameter x</td>
       </tr>
       <tr>
         <td>o2::aod::fwdtrack::Y</td>
         <td></td>
         <td>y</td>
         <td>float</td>
-        <td></td>
+        <td>TrackParFwd parameter y</td>
       </tr>
       <tr>
         <td>o2::aod::fwdtrack::Z</td>
         <td></td>
         <td>z</td>
         <td>float</td>
-        <td></td>
+        <td>TrackParFwd propagation parameter z</td>
       </tr>
       <tr>
         <td>o2::aod::fwdtrack::Phi</td>
         <td></td>
         <td>phi</td>
         <td>float</td>
-        <td></td>
+        <td>TrackParFwd parameter phi; (i.e. pt pointing direction)</td>
       </tr>
       <tr>
         <td>o2::aod::fwdtrack::Tgl</td>
         <td></td>
         <td>tgl</td>
         <td>float</td>
-        <td></td>
+        <td>TrackParFwd parameter tan(\lamba); (\lambda = 90 - \theta_{polar})</td>
       </tr>
       <tr>
         <td>o2::aod::fwdtrack::Signed1Pt</td>
         <td></td>
         <td>signed1Pt</td>
         <td>float</td>
-        <td></td>
+        <td>TrackParFwd parameter: charged inverse transverse momentum; (q/pt)</td>
       </tr>
       <tr>
         <td>o2::aod::fwdtrack::NClusters</td>
         <td></td>
         <td>nClusters</td>
         <td>int8_t</td>
-        <td></td>
+        <td>Number of clusters</td>
       </tr>
       <tr>
         <td>o2::aod::fwdtrack::PDca</td>
@@ -1479,14 +1479,14 @@ Click on the labels to display the table details.
         <td>D</td>
         <td>sign</td>
         <td>short</td>
-        <td></td>
+        <td>Sign of the track eletric charge</td>
       </tr>
       <tr>
         <td>o2::aod::fwdtrack::Chi2</td>
         <td></td>
         <td>chi2</td>
         <td>float</td>
-        <td></td>
+        <td>Track chi^2</td>
       </tr>
       <tr>
         <td>o2::aod::fwdtrack::Chi2MatchMCHMID</td>
@@ -1510,18 +1510,18 @@ Click on the labels to display the table details.
         <td>MCH-MFT Machine Learning Matching Score for GlobalMuonTracks</td>
       </tr>
       <tr>
-        <td>o2::aod::fwdtrack::MatchMFTTrackID</td>
-        <td></td>
-        <td>matchMFTTrackID</td>
-        <td>int</td>
-        <td>ID of matching MFT track for GlobalMuonTrack (ints while self indexing not available)</td>
+        <td>o2::aod::fwdtrack::MFTTrackId</td>
+        <td>I</td>
+        <td>matchMFTTrackId</td>
+        <td>int32</td>
+        <td>ID of matching MFT track for GlobalMuonTracks and GlobalForwardTracks</td>
       </tr>
       <tr>
-        <td>o2::aod::fwdtrack::MatchMCHTrackID</td>
-        <td></td>
-        <td>matchMCHTrackID</td>
+        <td>o2::aod::fwdtrack::MCHTrackId</td>
+        <td>SI</td>
+        <td>matchMCHTrackId</td>
         <td>int</td>
-        <td>ID of matching MCH track for GlobalMuonTracks  (ints while self indexing not available)</td>
+        <td>Index of matching MCH track for GlobalMuonTracks and GlobalForwardTracks</td>
       </tr>
       <tr>
         <td>o2::aod::fwdtrack::MCHBitMap</td>
@@ -1529,6 +1529,34 @@ Click on the labels to display the table details.
         <td>MchBitMap</td>
         <td>uint16_t</td>
         <td>Fired muon trackig chambers bitmap</td>
+      </tr>
+      <tr>
+        <td>o2::aod::fwdtrack::MIDBitMap</td>
+        <td></td>
+        <td>midBitMap</td>
+        <td>uint8_t</td>
+        <td>MID bitmap: non-bending plane (4bit), bending plane (4bit)</td>
+      </tr>
+      <tr>
+        <td>o2::aod::fwdtrack::MIDBoards</td>
+        <td></td>
+        <td>midBoards</td>
+        <td>uint32_t</td>
+        <td>Local boards on each MID plane (8 bits per plane)</td>
+      </tr>
+      <tr>
+        <td>o2::aod::fwdtrack::TrackTime</td>
+        <td></td>
+        <td>trackTime</td>
+        <td>float</td>
+        <td>Estimated time of the track in ns wrt collision().bc() or ambiguoustrack.bcSlice()[0]</td>
+      </tr>
+      <tr>
+        <td>o2::aod::fwdtrack::TrackTimeRes</td>
+        <td></td>
+        <td>trackTimeRes</td>
+        <td>float</td>
+        <td>Resolution of the track time in ns</td>
       </tr>
     </table>
   </div>
@@ -1576,67 +1604,60 @@ Click on the labels to display the table details.
         <td>Pointer into Collisions</td>
       </tr>
       <tr>
-        <td>o2::aod::fwdtrack::BCId</td>
-        <td>I</td>
-        <td>bcId</td>
-        <td>int32</td>
-        <td>Pointer into BCs</td>
-      </tr>
-      <tr>
         <td>o2::aod::fwdtrack::TrackType</td>
         <td></td>
         <td>trackType</td>
         <td>uint8_t</td>
-        <td>TODO change to ForwardTrackTypeEnum when enums are supported</td>
+        <td>Type of track. See enum ForwardTrackTypeEnum</td>
       </tr>
       <tr>
         <td>o2::aod::fwdtrack::X</td>
         <td></td>
         <td>x</td>
         <td>float</td>
-        <td>TrackParFwd parameters: x, y, z, phi, tan(lamba), q/pt</td>
+        <td>TrackParFwd parameter x</td>
       </tr>
       <tr>
         <td>o2::aod::fwdtrack::Y</td>
         <td></td>
         <td>y</td>
         <td>float</td>
-        <td></td>
+        <td>TrackParFwd parameter y</td>
       </tr>
       <tr>
         <td>o2::aod::fwdtrack::Z</td>
         <td></td>
         <td>z</td>
         <td>float</td>
-        <td></td>
+        <td>TrackParFwd propagation parameter z</td>
       </tr>
       <tr>
         <td>o2::aod::fwdtrack::Phi</td>
         <td></td>
         <td>phi</td>
         <td>float</td>
-        <td></td>
+        <td>TrackParFwd parameter phi; (i.e. pt pointing direction)</td>
       </tr>
       <tr>
         <td>o2::aod::fwdtrack::Tgl</td>
         <td></td>
         <td>tgl</td>
         <td>float</td>
-        <td></td>
+        <td>TrackParFwd parameter tan(\lamba); (\lambda = 90 - \theta_{polar})</td>
       </tr>
       <tr>
         <td>o2::aod::fwdtrack::Signed1Pt</td>
         <td></td>
         <td>signed1Pt</td>
         <td>float</td>
-        <td></td>
+        <td>TrackParFwd parameter: charged inverse transverse momentum; (q/pt)</td>
       </tr>
       <tr>
         <td>o2::aod::fwdtrack::NClusters</td>
         <td></td>
         <td>nClusters</td>
         <td>int8_t</td>
-        <td></td>
+        <td>Number of clusters</td>
       </tr>
       <tr>
         <td>o2::aod::fwdtrack::PDca</td>
@@ -1678,14 +1699,14 @@ Click on the labels to display the table details.
         <td>D</td>
         <td>sign</td>
         <td>short</td>
-        <td></td>
+        <td>Sign of the track eletric charge</td>
       </tr>
       <tr>
         <td>o2::aod::fwdtrack::Chi2</td>
         <td></td>
         <td>chi2</td>
         <td>float</td>
-        <td></td>
+        <td>Track chi^2</td>
       </tr>
       <tr>
         <td>o2::aod::fwdtrack::Chi2MatchMCHMID</td>
@@ -1709,18 +1730,18 @@ Click on the labels to display the table details.
         <td>MCH-MFT Machine Learning Matching Score for GlobalMuonTracks</td>
       </tr>
       <tr>
-        <td>o2::aod::fwdtrack::MatchMFTTrackID</td>
-        <td></td>
-        <td>matchMFTTrackID</td>
-        <td>int</td>
-        <td>ID of matching MFT track for GlobalMuonTrack (ints while self indexing not available)</td>
+        <td>o2::aod::fwdtrack::MFTTrackId</td>
+        <td>I</td>
+        <td>matchMFTTrackId</td>
+        <td>int32</td>
+        <td>ID of matching MFT track for GlobalMuonTracks and GlobalForwardTracks</td>
       </tr>
       <tr>
-        <td>o2::aod::fwdtrack::MatchMCHTrackID</td>
-        <td></td>
-        <td>matchMCHTrackID</td>
+        <td>o2::aod::fwdtrack::MCHTrackId</td>
+        <td>SI</td>
+        <td>matchMCHTrackId</td>
         <td>int</td>
-        <td>ID of matching MCH track for GlobalMuonTracks  (ints while self indexing not available)</td>
+        <td>Index of matching MCH track for GlobalMuonTracks and GlobalForwardTracks</td>
       </tr>
       <tr>
         <td>o2::aod::fwdtrack::MCHBitMap</td>
@@ -1728,6 +1749,34 @@ Click on the labels to display the table details.
         <td>MchBitMap</td>
         <td>uint16_t</td>
         <td>Fired muon trackig chambers bitmap</td>
+      </tr>
+      <tr>
+        <td>o2::aod::fwdtrack::MIDBitMap</td>
+        <td></td>
+        <td>midBitMap</td>
+        <td>uint8_t</td>
+        <td>MID bitmap: non-bending plane (4bit), bending plane (4bit)</td>
+      </tr>
+      <tr>
+        <td>o2::aod::fwdtrack::MIDBoards</td>
+        <td></td>
+        <td>midBoards</td>
+        <td>uint32_t</td>
+        <td>Local boards on each MID plane (8 bits per plane)</td>
+      </tr>
+      <tr>
+        <td>o2::aod::fwdtrack::TrackTime</td>
+        <td></td>
+        <td>trackTime</td>
+        <td>float</td>
+        <td>Estimated time of the track in ns wrt collision().bc() or ambiguoustrack.bcSlice()[0]</td>
+      </tr>
+      <tr>
+        <td>o2::aod::fwdtrack::TrackTimeRes</td>
+        <td></td>
+        <td>trackTimeRes</td>
+        <td>float</td>
+        <td>Resolution of the track time in ns</td>
       </tr>
       <tr>
         <td>o2::aod::fwdtrack::Eta</td>
@@ -1774,105 +1823,105 @@ Click on the labels to display the table details.
         <td></td>
         <td>sigmaX</td>
         <td>float</td>
-        <td></td>
+        <td>Covariance matrix</td>
       </tr>
       <tr>
         <td>o2::aod::fwdtrack::SigmaY</td>
         <td></td>
         <td>sigmaY</td>
         <td>float</td>
-        <td></td>
+        <td>Covariance matrix</td>
       </tr>
       <tr>
         <td>o2::aod::fwdtrack::SigmaPhi</td>
         <td></td>
         <td>sigmaPhi</td>
         <td>float</td>
-        <td></td>
+        <td>Covariance matrix</td>
       </tr>
       <tr>
         <td>o2::aod::fwdtrack::SigmaTgl</td>
         <td></td>
         <td>sigmaTgl</td>
         <td>float</td>
-        <td></td>
+        <td>Covariance matrix</td>
       </tr>
       <tr>
         <td>o2::aod::fwdtrack::Sigma1Pt</td>
         <td></td>
         <td>sigma1Pt</td>
         <td>float</td>
-        <td></td>
+        <td>Covariance matrix</td>
       </tr>
       <tr>
         <td>o2::aod::fwdtrack::RhoXY</td>
         <td></td>
         <td>rhoXY</td>
         <td>int8_t</td>
-        <td></td>
+        <td>Covariance matrix in compressed form</td>
       </tr>
       <tr>
         <td>o2::aod::fwdtrack::RhoPhiY</td>
         <td></td>
         <td>rhoPhiY</td>
         <td>int8_t</td>
-        <td></td>
+        <td>Covariance matrix in compressed form</td>
       </tr>
       <tr>
         <td>o2::aod::fwdtrack::RhoPhiX</td>
         <td></td>
         <td>rhoPhiX</td>
         <td>int8_t</td>
-        <td></td>
+        <td>Covariance matrix in compressed form</td>
       </tr>
       <tr>
         <td>o2::aod::fwdtrack::RhoTglX</td>
         <td></td>
         <td>rhoTglX</td>
         <td>int8_t</td>
-        <td></td>
+        <td>Covariance matrix in compressed form</td>
       </tr>
       <tr>
         <td>o2::aod::fwdtrack::RhoTglY</td>
         <td></td>
         <td>rhoTglY</td>
         <td>int8_t</td>
-        <td></td>
+        <td>Covariance matrix in compressed form</td>
       </tr>
       <tr>
         <td>o2::aod::fwdtrack::RhoTglPhi</td>
         <td></td>
         <td>rhoTglPhi</td>
         <td>int8_t</td>
-        <td></td>
+        <td>Covariance matrix in compressed form</td>
       </tr>
       <tr>
         <td>o2::aod::fwdtrack::Rho1PtX</td>
         <td></td>
         <td>rho1PtX</td>
         <td>int8_t</td>
-        <td></td>
+        <td>Covariance matrix in compressed form</td>
       </tr>
       <tr>
         <td>o2::aod::fwdtrack::Rho1PtY</td>
         <td></td>
         <td>rho1PtY</td>
         <td>int8_t</td>
-        <td></td>
+        <td>Covariance matrix in compressed form</td>
       </tr>
       <tr>
         <td>o2::aod::fwdtrack::Rho1PtPhi</td>
         <td></td>
         <td>rho1PtPhi</td>
         <td>int8_t</td>
-        <td></td>
+        <td>Covariance matrix in compressed form</td>
       </tr>
       <tr>
         <td>o2::aod::fwdtrack::Rho1PtTgl</td>
         <td></td>
         <td>rho1PtTgl</td>
         <td>int8_t</td>
-        <td></td>
+        <td>Covariance matrix in compressed form</td>
       </tr>
     </table>
   </div>
@@ -1910,105 +1959,105 @@ Click on the labels to display the table details.
         <td></td>
         <td>sigmaX</td>
         <td>float</td>
-        <td></td>
+        <td>Covariance matrix</td>
       </tr>
       <tr>
         <td>o2::aod::fwdtrack::SigmaY</td>
         <td></td>
         <td>sigmaY</td>
         <td>float</td>
-        <td></td>
+        <td>Covariance matrix</td>
       </tr>
       <tr>
         <td>o2::aod::fwdtrack::SigmaPhi</td>
         <td></td>
         <td>sigmaPhi</td>
         <td>float</td>
-        <td></td>
+        <td>Covariance matrix</td>
       </tr>
       <tr>
         <td>o2::aod::fwdtrack::SigmaTgl</td>
         <td></td>
         <td>sigmaTgl</td>
         <td>float</td>
-        <td></td>
+        <td>Covariance matrix</td>
       </tr>
       <tr>
         <td>o2::aod::fwdtrack::Sigma1Pt</td>
         <td></td>
         <td>sigma1Pt</td>
         <td>float</td>
-        <td></td>
+        <td>Covariance matrix</td>
       </tr>
       <tr>
         <td>o2::aod::fwdtrack::RhoXY</td>
         <td></td>
         <td>rhoXY</td>
         <td>int8_t</td>
-        <td></td>
+        <td>Covariance matrix in compressed form</td>
       </tr>
       <tr>
         <td>o2::aod::fwdtrack::RhoPhiY</td>
         <td></td>
         <td>rhoPhiY</td>
         <td>int8_t</td>
-        <td></td>
+        <td>Covariance matrix in compressed form</td>
       </tr>
       <tr>
         <td>o2::aod::fwdtrack::RhoPhiX</td>
         <td></td>
         <td>rhoPhiX</td>
         <td>int8_t</td>
-        <td></td>
+        <td>Covariance matrix in compressed form</td>
       </tr>
       <tr>
         <td>o2::aod::fwdtrack::RhoTglX</td>
         <td></td>
         <td>rhoTglX</td>
         <td>int8_t</td>
-        <td></td>
+        <td>Covariance matrix in compressed form</td>
       </tr>
       <tr>
         <td>o2::aod::fwdtrack::RhoTglY</td>
         <td></td>
         <td>rhoTglY</td>
         <td>int8_t</td>
-        <td></td>
+        <td>Covariance matrix in compressed form</td>
       </tr>
       <tr>
         <td>o2::aod::fwdtrack::RhoTglPhi</td>
         <td></td>
         <td>rhoTglPhi</td>
         <td>int8_t</td>
-        <td></td>
+        <td>Covariance matrix in compressed form</td>
       </tr>
       <tr>
         <td>o2::aod::fwdtrack::Rho1PtX</td>
         <td></td>
         <td>rho1PtX</td>
         <td>int8_t</td>
-        <td></td>
+        <td>Covariance matrix in compressed form</td>
       </tr>
       <tr>
         <td>o2::aod::fwdtrack::Rho1PtY</td>
         <td></td>
         <td>rho1PtY</td>
         <td>int8_t</td>
-        <td></td>
+        <td>Covariance matrix in compressed form</td>
       </tr>
       <tr>
         <td>o2::aod::fwdtrack::Rho1PtPhi</td>
         <td></td>
         <td>rho1PtPhi</td>
         <td>int8_t</td>
-        <td></td>
+        <td>Covariance matrix in compressed form</td>
       </tr>
       <tr>
         <td>o2::aod::fwdtrack::Rho1PtTgl</td>
         <td></td>
         <td>rho1PtTgl</td>
         <td>int8_t</td>
-        <td></td>
+        <td>Covariance matrix in compressed form</td>
       </tr>
       <tr>
         <td>o2::aod::fwdtrack::CXX</td>
@@ -2118,86 +2167,6 @@ Click on the labels to display the table details.
     </table>
   </div>
 
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::MuonClusters</button>
-  <div class="panel">
-    <div>
-
-    </div>
-    <div>
-      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev/Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
-    </div>
-    <div>Is used in:
-      <ul>
-        <li>o2::aod::MuonCluster = o2::aod::MuonClusters::iterator</li>
-      </ul>
-    </div>
-    <table class=DataModel>
-      <tr>
-        <th>Name</th>
-        <th></th>
-        <th>Getter</th>
-        <th>Type</th>
-        <th>Comment</th>
-      </tr>
-      <tr>
-        <td>o2::aod::muoncluster::FwdTrackId</td>
-        <td>I</td>
-        <td>fwdtrackId</td>
-        <td>int32</td>
-        <td>points to a fwdtrack in the fwdtrack table</td>
-      </tr>
-      <tr>
-        <td>o2::aod::muoncluster::X</td>
-        <td></td>
-        <td>x</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::muoncluster::Y</td>
-        <td></td>
-        <td>y</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::muoncluster::Z</td>
-        <td></td>
-        <td>z</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::muoncluster::ErrX</td>
-        <td></td>
-        <td>errX</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::muoncluster::ErrY</td>
-        <td></td>
-        <td>errY</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::muoncluster::Charge</td>
-        <td></td>
-        <td>charge</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::muoncluster::Chi2</td>
-        <td></td>
-        <td>chi2</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-    </table>
-  </div>
-
   <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::AmbiguousTracks</button>
   <div class="panel">
     <div>
@@ -2263,6 +2232,44 @@ Click on the labels to display the table details.
         <td>mfttrackId</td>
         <td>int32</td>
         <td>MFTTrack index</td>
+      </tr>
+      <tr>
+        <td>o2::aod::ambiguous::BCIdSlice</td>
+        <td>GI</td>
+        <td></td>
+        <td>?</td>
+        <td></td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::AmbiguousFwdTracks</button>
+  <div class="panel">
+    <div>
+       Table for Fwd tracks which are not uniquely associated with a collision
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev/Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::AmbiguousFwdTrack = o2::aod::AmbiguousFwdTracks::iterator</li>
+      </ul>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::ambiguous::FwdTrackId</td>
+        <td>I</td>
+        <td>fwdtrackId</td>
+        <td>int32</td>
+        <td>FwdTrack index</td>
       </tr>
       <tr>
         <td>o2::aod::ambiguous::BCIdSlice</td>
@@ -2409,7 +2416,7 @@ Click on the labels to display the table details.
   <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::CaloTriggers</button>
   <div class="panel">
     <div>
-
+       Trigger information from the calorimeter detectors
     </div>
     <div>
       Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev/Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
@@ -2435,53 +2442,32 @@ Click on the labels to display the table details.
         <td>BC index</td>
       </tr>
       <tr>
-        <td>o2::aod::calotrigger::FastOrAbsId</td>
+        <td>o2::aod::calotrigger::FastOrAbsID</td>
         <td></td>
-        <td>fastOrAbsId</td>
-        <td>int32_t</td>
-        <td></td>
+        <td>fastOrAbsID</td>
+        <td>int16_t</td>
+        <td>FastOR absolute ID</td>
       </tr>
       <tr>
-        <td>o2::aod::calotrigger::L0Amplitude</td>
+        <td>o2::aod::calotrigger::LnAmplitude</td>
         <td></td>
-        <td>l0Amplitude</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::calotrigger::L0Time</td>
-        <td></td>
-        <td>l0Time</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::calotrigger::L1TimeSum</td>
-        <td></td>
-        <td>l1TimeSum</td>
-        <td>int32_t</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::calotrigger::NL0Times</td>
-        <td></td>
-        <td>nl0Times</td>
-        <td>int8_t</td>
-        <td></td>
+        <td>lnAmplitude</td>
+        <td>int16_t</td>
+        <td>L0 amplitude (ADC) := Peak Amplitude</td>
       </tr>
       <tr>
         <td>o2::aod::calotrigger::TriggerBits</td>
         <td></td>
         <td>triggerBits</td>
         <td>int32_t</td>
-        <td></td>
+        <td>Online trigger bits</td>
       </tr>
       <tr>
         <td>o2::aod::calotrigger::CaloType</td>
         <td></td>
         <td>caloType</td>
         <td>int8_t</td>
-        <td></td>
+        <td>Calorimeter type (-1 is undefined, 0 is PHOS, 1 is EMCAL)</td>
       </tr>
     </table>
   </div>

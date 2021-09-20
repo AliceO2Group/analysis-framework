@@ -88,13 +88,6 @@ The data model provides in addition to the set of tables also some predefined jo
     </ul>
   </div>
 
-  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::MuonCluster</button>
-  <div class="panel">
-    <ul>
-        <li>o2::aod::MuonCluster = o2::aod::MuonClusters::iterator</li>
-    </ul>
-  </div>
-
   <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::FullFwdTracks</button>
   <div class="panel">
     <ul>
@@ -120,6 +113,13 @@ The data model provides in addition to the set of tables also some predefined jo
   <div class="panel">
     <ul>
         <li>o2::aod::AmbiguousMFTTrack = o2::aod::AmbiguousMFTTracks::iterator</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::AmbiguousFwdTrack</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::AmbiguousFwdTrack = o2::aod::AmbiguousFwdTracks::iterator</li>
     </ul>
   </div>
 
@@ -323,6 +323,13 @@ The data model provides in addition to the set of tables also some predefined jo
   <div class="panel">
     <ul>
         <li>o2::pid::pidvar_t = o2::pid::float</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::pid::tof::ResponseImplementation</button>
+  <div class="panel">
+    <ul>
+        <li>o2::pid::tof::ResponseImplementation = o2::pid::tof::ExpTimes<TrackType,pid></li>
     </ul>
   </div>
 </div>

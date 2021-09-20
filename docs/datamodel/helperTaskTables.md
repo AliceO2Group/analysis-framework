@@ -875,6 +875,32 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//./Com
 Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//./Common/TableProducer/PID//pidTOF.cxx" target="_blank">pidTOF.cxx</a>
 <div>
 
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::TOFSignal</button>
+  <div class="panel">
+    <div>
+       Table of the TOF signal
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master/./Common/Core/PID/PIDResponse.h" target="_blank">./Common/Core/PID/PIDResponse.h</a>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::pidtofsignal::TOFSignal</td>
+        <td></td>
+        <td>tofSignal</td>
+        <td>float</td>
+        <td>TOF signal from track time</td>
+      </tr>
+    </table>
+  </div>
+
   <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::pidTOFEl</button>
   <div class="panel">
     <div>
