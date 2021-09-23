@@ -995,6 +995,27 @@ Click on the labels to display the table details.
         <td>PID hypothesis used during tracking. See the constants in the class PID in PID.h</td>
       </tr>
       <tr>
+        <td>o2::aod::track::HasITS</td>
+        <td>D</td>
+        <td>hasITS</td>
+        <td>bool</td>
+        <td>Flag to check if track has a ITS match</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::HasTPC</td>
+        <td>D</td>
+        <td>hasTPC</td>
+        <td>bool</td>
+        <td>Flag to check if track has a TPC match</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::HasTRD</td>
+        <td>D</td>
+        <td>hasTRD</td>
+        <td>bool</td>
+        <td>Flag to check if track has a TRD match</td>
+      </tr>
+      <tr>
         <td>o2::aod::track::HasTOF</td>
         <td>D</td>
         <td>hasTOF</td>
@@ -1227,6 +1248,27 @@ Click on the labels to display the table details.
         <td>pidForTracking</td>
         <td>uint32_t</td>
         <td>PID hypothesis used during tracking. See the constants in the class PID in PID.h</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::HasITS</td>
+        <td>D</td>
+        <td>hasITS</td>
+        <td>bool</td>
+        <td>Flag to check if track has a ITS match</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::HasTPC</td>
+        <td>D</td>
+        <td>hasTPC</td>
+        <td>bool</td>
+        <td>Flag to check if track has a TPC match</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::HasTRD</td>
+        <td>D</td>
+        <td>hasTRD</td>
+        <td>bool</td>
+        <td>Flag to check if track has a TRD match</td>
       </tr>
       <tr>
         <td>o2::aod::track::HasTOF</td>
