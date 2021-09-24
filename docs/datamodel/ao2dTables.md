@@ -3867,6 +3867,44 @@ Click on the labels to display the table details.
     </table>
   </div>
 
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::McFwdTrackLabels</button>
+  <div class="panel">
+    <div>
+       Table joined to the mft track table containing the MC index
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev/Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::McFwdTrackLabel = o2::aod::McFwdTrackLabels::iterator</li>
+      </ul>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::mcfwdtracklabel::McParticleId</td>
+        <td>I</td>
+        <td>mcParticleId</td>
+        <td>int32</td>
+        <td>MC particle</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mcfwdtracklabel::McMask</td>
+        <td></td>
+        <td>mcMask</td>
+        <td>uint8_t</td>
+        <td></td>
+      </tr>
+    </table>
+  </div>
+
   <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::McCaloLabels</button>
   <div class="panel">
     <div>
