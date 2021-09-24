@@ -242,6 +242,13 @@ The data model provides in addition to the set of tables also some predefined jo
     </ul>
   </div>
 
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::McFwdTrackLabel</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::McFwdTrackLabel = o2::aod::McFwdTrackLabels::iterator</li>
+    </ul>
+  </div>
+
   <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::McCaloLabel</button>
   <div class="panel">
     <ul>
