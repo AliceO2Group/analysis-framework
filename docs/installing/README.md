@@ -89,12 +89,12 @@ Go to the build directory
 cd sw/BUILD/O2Physics-latest/O2Physics
 ```
 
-You can now rebuild everything with
+You can now rebuild a specific directory with
 
 ```bash
-ninja install <your-analysis-workflow>
+ninja install <your-analysis-directory>/all
 ```
 For example:
 ```bash
-ninja install Tasks/PWGCF/o2-analysis-correlations
+ninja install PWGCF/Tasks/all
 ```
