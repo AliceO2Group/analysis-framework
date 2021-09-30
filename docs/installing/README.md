@@ -98,3 +98,12 @@ For example:
 ```bash
 ninja install PWGCF/Tasks/all
 ```
+
+A specific executable can be build with
+```bash
+ninja install O2Physicsexe-<target>
+```
+For example:
+```bash
+ninja install O2Physicsexe-analysis-cf-correlations
+```
