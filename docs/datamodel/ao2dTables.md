@@ -3416,7 +3416,7 @@ Click on the labels to display the table details.
         <td></td>
         <td>t</td>
         <td>float</td>
-        <td>Collision time</td>
+        <td>Collision time relative to given bc in ns</td>
       </tr>
       <tr>
         <td>o2::aod::mccollision::Weight</td>
