@@ -103,7 +103,7 @@ A specific executable can be build with
 ```bash
 ninja install O2Physicsexe-<target>
 ```
-For example:
+For example (note the missing o2-):
 ```bash
 ninja install O2Physicsexe-analysis-cf-correlations
 ```
