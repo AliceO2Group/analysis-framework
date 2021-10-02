@@ -993,9 +993,9 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//./Com
       </tr>
       <tr>
         <td>o2::aod::pidtof_tiny::TOFNSigmaEl</td>
-        <td>D</td>
-        <td>tofNSigmaEl</td>
-        <td>float</td>
+        <td>GI</td>
+        <td></td>
+        <td>?</td>
         <td></td>
       </tr>
     </table>
@@ -1026,9 +1026,9 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//./Com
       </tr>
       <tr>
         <td>o2::aod::pidtof_tiny::TOFNSigmaMu</td>
-        <td>D</td>
-        <td>tofNSigmaMu</td>
-        <td>float</td>
+        <td>GI</td>
+        <td></td>
+        <td>?</td>
         <td></td>
       </tr>
     </table>
@@ -1059,9 +1059,9 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//./Com
       </tr>
       <tr>
         <td>o2::aod::pidtof_tiny::TOFNSigmaPi</td>
-        <td>D</td>
-        <td>tofNSigmaPi</td>
-        <td>float</td>
+        <td>GI</td>
+        <td></td>
+        <td>?</td>
         <td></td>
       </tr>
     </table>
@@ -1092,9 +1092,9 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//./Com
       </tr>
       <tr>
         <td>o2::aod::pidtof_tiny::TOFNSigmaKa</td>
-        <td>D</td>
-        <td>tofNSigmaKa</td>
-        <td>float</td>
+        <td>GI</td>
+        <td></td>
+        <td>?</td>
         <td></td>
       </tr>
     </table>
@@ -1125,9 +1125,9 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//./Com
       </tr>
       <tr>
         <td>o2::aod::pidtof_tiny::TOFNSigmaPr</td>
-        <td>D</td>
-        <td>tofNSigmaPr</td>
-        <td>float</td>
+        <td>GI</td>
+        <td></td>
+        <td>?</td>
         <td></td>
       </tr>
     </table>
@@ -1158,9 +1158,9 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//./Com
       </tr>
       <tr>
         <td>o2::aod::pidtof_tiny::TOFNSigmaDe</td>
-        <td>D</td>
-        <td>tofNSigmaDe</td>
-        <td>float</td>
+        <td>GI</td>
+        <td></td>
+        <td>?</td>
         <td></td>
       </tr>
     </table>
@@ -1191,9 +1191,9 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//./Com
       </tr>
       <tr>
         <td>o2::aod::pidtof_tiny::TOFNSigmaTr</td>
-        <td>D</td>
-        <td>tofNSigmaTr</td>
-        <td>float</td>
+        <td>GI</td>
+        <td></td>
+        <td>?</td>
         <td></td>
       </tr>
     </table>
@@ -1224,9 +1224,9 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//./Com
       </tr>
       <tr>
         <td>o2::aod::pidtof_tiny::TOFNSigmaHe</td>
-        <td>D</td>
-        <td>tofNSigmaHe</td>
-        <td>float</td>
+        <td>GI</td>
+        <td></td>
+        <td>?</td>
         <td></td>
       </tr>
     </table>
@@ -1257,9 +1257,9 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//./Com
       </tr>
       <tr>
         <td>o2::aod::pidtof_tiny::TOFNSigmaAl</td>
-        <td>D</td>
-        <td>tofNSigmaAl</td>
-        <td>float</td>
+        <td>GI</td>
+        <td></td>
+        <td>?</td>
         <td></td>
       </tr>
     </table>
@@ -1278,6 +1278,11 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//./Com
     </div>
     <div>
       Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master/./Common/Core/PID/PIDResponse.h" target="_blank">./Common/Core/PID/PIDResponse.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::BigTracksPID = soa::Join<o2::aod::BigTracks, o2::aod::pidTPCFullEl, o2::aod::pidTPCFullMu, o2::aod::pidTPCFullPi, o2::aod::pidTPCFullKa, o2::aod::pidTPCFullPr, o2::aod::pidTOFFullEl, o2::aod::pidTOFFullMu, o2::aod::pidTOFFullPi, o2::aod::pidTOFFullKa, o2::aod::pidTOFFullPr></li>
+      </ul>
     </div>
     <table class=DataModel>
       <tr>
@@ -1319,6 +1324,11 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//./Com
     <div>
       Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master/./Common/Core/PID/PIDResponse.h" target="_blank">./Common/Core/PID/PIDResponse.h</a>
     </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::BigTracksPID = soa::Join<o2::aod::BigTracks, o2::aod::pidTPCFullEl, o2::aod::pidTPCFullMu, o2::aod::pidTPCFullPi, o2::aod::pidTPCFullKa, o2::aod::pidTPCFullPr, o2::aod::pidTOFFullEl, o2::aod::pidTOFFullMu, o2::aod::pidTOFFullPi, o2::aod::pidTOFFullKa, o2::aod::pidTOFFullPr></li>
+      </ul>
+    </div>
     <table class=DataModel>
       <tr>
         <th>Name</th>
@@ -1358,6 +1368,11 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//./Com
     </div>
     <div>
       Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master/./Common/Core/PID/PIDResponse.h" target="_blank">./Common/Core/PID/PIDResponse.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::BigTracksPID = soa::Join<o2::aod::BigTracks, o2::aod::pidTPCFullEl, o2::aod::pidTPCFullMu, o2::aod::pidTPCFullPi, o2::aod::pidTPCFullKa, o2::aod::pidTPCFullPr, o2::aod::pidTOFFullEl, o2::aod::pidTOFFullMu, o2::aod::pidTOFFullPi, o2::aod::pidTOFFullKa, o2::aod::pidTOFFullPr></li>
+      </ul>
     </div>
     <table class=DataModel>
       <tr>
@@ -1399,6 +1414,11 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//./Com
     <div>
       Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master/./Common/Core/PID/PIDResponse.h" target="_blank">./Common/Core/PID/PIDResponse.h</a>
     </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::BigTracksPID = soa::Join<o2::aod::BigTracks, o2::aod::pidTPCFullEl, o2::aod::pidTPCFullMu, o2::aod::pidTPCFullPi, o2::aod::pidTPCFullKa, o2::aod::pidTPCFullPr, o2::aod::pidTOFFullEl, o2::aod::pidTOFFullMu, o2::aod::pidTOFFullPi, o2::aod::pidTOFFullKa, o2::aod::pidTOFFullPr></li>
+      </ul>
+    </div>
     <table class=DataModel>
       <tr>
         <th>Name</th>
@@ -1438,6 +1458,11 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//./Com
     </div>
     <div>
       Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master/./Common/Core/PID/PIDResponse.h" target="_blank">./Common/Core/PID/PIDResponse.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::BigTracksPID = soa::Join<o2::aod::BigTracks, o2::aod::pidTPCFullEl, o2::aod::pidTPCFullMu, o2::aod::pidTPCFullPi, o2::aod::pidTPCFullKa, o2::aod::pidTPCFullPr, o2::aod::pidTOFFullEl, o2::aod::pidTOFFullMu, o2::aod::pidTOFFullPi, o2::aod::pidTOFFullKa, o2::aod::pidTOFFullPr></li>
+      </ul>
     </div>
     <table class=DataModel>
       <tr>
@@ -1662,9 +1687,9 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//./Com
       </tr>
       <tr>
         <td>o2::aod::pidtpc_tiny::TPCNSigmaEl</td>
-        <td>D</td>
-        <td>tpcNSigmaEl</td>
-        <td>float</td>
+        <td>GI</td>
+        <td></td>
+        <td>?</td>
         <td></td>
       </tr>
     </table>
@@ -1695,9 +1720,9 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//./Com
       </tr>
       <tr>
         <td>o2::aod::pidtpc_tiny::TPCNSigmaMu</td>
-        <td>D</td>
-        <td>tpcNSigmaMu</td>
-        <td>float</td>
+        <td>GI</td>
+        <td></td>
+        <td>?</td>
         <td></td>
       </tr>
     </table>
@@ -1728,9 +1753,9 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//./Com
       </tr>
       <tr>
         <td>o2::aod::pidtpc_tiny::TPCNSigmaPi</td>
-        <td>D</td>
-        <td>tpcNSigmaPi</td>
-        <td>float</td>
+        <td>GI</td>
+        <td></td>
+        <td>?</td>
         <td></td>
       </tr>
     </table>
@@ -1761,9 +1786,9 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//./Com
       </tr>
       <tr>
         <td>o2::aod::pidtpc_tiny::TPCNSigmaKa</td>
-        <td>D</td>
-        <td>tpcNSigmaKa</td>
-        <td>float</td>
+        <td>GI</td>
+        <td></td>
+        <td>?</td>
         <td></td>
       </tr>
     </table>
@@ -1794,9 +1819,9 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//./Com
       </tr>
       <tr>
         <td>o2::aod::pidtpc_tiny::TPCNSigmaPr</td>
-        <td>D</td>
-        <td>tpcNSigmaPr</td>
-        <td>float</td>
+        <td>GI</td>
+        <td></td>
+        <td>?</td>
         <td></td>
       </tr>
     </table>
@@ -1827,9 +1852,9 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//./Com
       </tr>
       <tr>
         <td>o2::aod::pidtpc_tiny::TPCNSigmaDe</td>
-        <td>D</td>
-        <td>tpcNSigmaDe</td>
-        <td>float</td>
+        <td>GI</td>
+        <td></td>
+        <td>?</td>
         <td></td>
       </tr>
     </table>
@@ -1860,9 +1885,9 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//./Com
       </tr>
       <tr>
         <td>o2::aod::pidtpc_tiny::TPCNSigmaTr</td>
-        <td>D</td>
-        <td>tpcNSigmaTr</td>
-        <td>float</td>
+        <td>GI</td>
+        <td></td>
+        <td>?</td>
         <td></td>
       </tr>
     </table>
@@ -1893,9 +1918,9 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//./Com
       </tr>
       <tr>
         <td>o2::aod::pidtpc_tiny::TPCNSigmaHe</td>
-        <td>D</td>
-        <td>tpcNSigmaHe</td>
-        <td>float</td>
+        <td>GI</td>
+        <td></td>
+        <td>?</td>
         <td></td>
       </tr>
     </table>
@@ -1926,9 +1951,9 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//./Com
       </tr>
       <tr>
         <td>o2::aod::pidtpc_tiny::TPCNSigmaAl</td>
-        <td>D</td>
-        <td>tpcNSigmaAl</td>
-        <td>float</td>
+        <td>GI</td>
+        <td></td>
+        <td>?</td>
         <td></td>
       </tr>
     </table>
@@ -1947,6 +1972,11 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//./Com
     </div>
     <div>
       Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master/./Common/Core/PID/PIDResponse.h" target="_blank">./Common/Core/PID/PIDResponse.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::BigTracksPID = soa::Join<o2::aod::BigTracks, o2::aod::pidTPCFullEl, o2::aod::pidTPCFullMu, o2::aod::pidTPCFullPi, o2::aod::pidTPCFullKa, o2::aod::pidTPCFullPr, o2::aod::pidTOFFullEl, o2::aod::pidTOFFullMu, o2::aod::pidTOFFullPi, o2::aod::pidTOFFullKa, o2::aod::pidTOFFullPr></li>
+      </ul>
     </div>
     <table class=DataModel>
       <tr>
@@ -1988,6 +2018,11 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//./Com
     <div>
       Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master/./Common/Core/PID/PIDResponse.h" target="_blank">./Common/Core/PID/PIDResponse.h</a>
     </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::BigTracksPID = soa::Join<o2::aod::BigTracks, o2::aod::pidTPCFullEl, o2::aod::pidTPCFullMu, o2::aod::pidTPCFullPi, o2::aod::pidTPCFullKa, o2::aod::pidTPCFullPr, o2::aod::pidTOFFullEl, o2::aod::pidTOFFullMu, o2::aod::pidTOFFullPi, o2::aod::pidTOFFullKa, o2::aod::pidTOFFullPr></li>
+      </ul>
+    </div>
     <table class=DataModel>
       <tr>
         <th>Name</th>
@@ -2027,6 +2062,11 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//./Com
     </div>
     <div>
       Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master/./Common/Core/PID/PIDResponse.h" target="_blank">./Common/Core/PID/PIDResponse.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::BigTracksPID = soa::Join<o2::aod::BigTracks, o2::aod::pidTPCFullEl, o2::aod::pidTPCFullMu, o2::aod::pidTPCFullPi, o2::aod::pidTPCFullKa, o2::aod::pidTPCFullPr, o2::aod::pidTOFFullEl, o2::aod::pidTOFFullMu, o2::aod::pidTOFFullPi, o2::aod::pidTOFFullKa, o2::aod::pidTOFFullPr></li>
+      </ul>
     </div>
     <table class=DataModel>
       <tr>
@@ -2068,6 +2108,11 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//./Com
     <div>
       Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master/./Common/Core/PID/PIDResponse.h" target="_blank">./Common/Core/PID/PIDResponse.h</a>
     </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::BigTracksPID = soa::Join<o2::aod::BigTracks, o2::aod::pidTPCFullEl, o2::aod::pidTPCFullMu, o2::aod::pidTPCFullPi, o2::aod::pidTPCFullKa, o2::aod::pidTPCFullPr, o2::aod::pidTOFFullEl, o2::aod::pidTOFFullMu, o2::aod::pidTOFFullPi, o2::aod::pidTOFFullKa, o2::aod::pidTOFFullPr></li>
+      </ul>
+    </div>
     <table class=DataModel>
       <tr>
         <th>Name</th>
@@ -2107,6 +2152,11 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//./Com
     </div>
     <div>
       Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master/./Common/Core/PID/PIDResponse.h" target="_blank">./Common/Core/PID/PIDResponse.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::BigTracksPID = soa::Join<o2::aod::BigTracks, o2::aod::pidTPCFullEl, o2::aod::pidTPCFullMu, o2::aod::pidTPCFullPi, o2::aod::pidTPCFullKa, o2::aod::pidTPCFullPr, o2::aod::pidTOFFullEl, o2::aod::pidTOFFullMu, o2::aod::pidTOFFullPi, o2::aod::pidTOFFullKa, o2::aod::pidTOFFullPr></li>
+      </ul>
     </div>
     <table class=DataModel>
       <tr>

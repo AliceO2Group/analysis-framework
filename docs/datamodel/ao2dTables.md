@@ -379,6 +379,7 @@ Click on the labels to display the table details.
         <li>o2::aod::Track = o2::aod::Tracks::iterator</li>
         <li>o2::aod::FullTracks = soa::Join<o2::aod::Tracks, o2::aod::TracksCov, o2::aod::TracksExtra></li>
         <li>o2::aod::FullTrack = soa::Join<o2::aod::Tracks, o2::aod::TracksCov, o2::aod::TracksExtra>::iterator</li>
+        <li>o2::aod::BigTracks = soa::Join<o2::aod::Tracks, o2::aod::TracksCov, o2::aod::TracksExtra, o2::aod::HFSelTrack></li>
       </ul>
     </div>
     <table class=DataModel>
@@ -667,6 +668,7 @@ Click on the labels to display the table details.
         <li>o2::aod::TrackCov = o2::aod::TracksCov::iterator</li>
         <li>o2::aod::FullTracks = soa::Join<o2::aod::Tracks, o2::aod::TracksCov, o2::aod::TracksExtra></li>
         <li>o2::aod::FullTrack = soa::Join<o2::aod::Tracks, o2::aod::TracksCov, o2::aod::TracksExtra>::iterator</li>
+        <li>o2::aod::BigTracks = soa::Join<o2::aod::Tracks, o2::aod::TracksCov, o2::aod::TracksExtra, o2::aod::HFSelTrack></li>
       </ul>
     </div>
     <table class=DataModel>
@@ -1086,7 +1088,7 @@ Click on the labels to display the table details.
         <td>D</td>
         <td>tpcCrossedRowsOverFindableCls</td>
         <td>float</td>
-        <td>Ratio  crossed rows over findable clusters</td>
+        <td>Ratio crossed rows over findable clusters</td>
       </tr>
       <tr>
         <td>o2::aod::track::TPCFoundOverFindableCls</td>
@@ -1151,6 +1153,7 @@ Click on the labels to display the table details.
         <li>o2::aod::TrackExtra = o2::aod::TracksExtra::iterator</li>
         <li>o2::aod::FullTracks = soa::Join<o2::aod::Tracks, o2::aod::TracksCov, o2::aod::TracksExtra></li>
         <li>o2::aod::FullTrack = soa::Join<o2::aod::Tracks, o2::aod::TracksCov, o2::aod::TracksExtra>::iterator</li>
+        <li>o2::aod::BigTracks = soa::Join<o2::aod::Tracks, o2::aod::TracksCov, o2::aod::TracksExtra, o2::aod::HFSelTrack></li>
       </ul>
     </div>
     <table class=DataModel>
@@ -1341,7 +1344,7 @@ Click on the labels to display the table details.
         <td>D</td>
         <td>tpcCrossedRowsOverFindableCls</td>
         <td>float</td>
-        <td>Ratio  crossed rows over findable clusters</td>
+        <td>Ratio crossed rows over findable clusters</td>
       </tr>
       <tr>
         <td>o2::aod::track::TPCFoundOverFindableCls</td>
@@ -3897,6 +3900,8 @@ Click on the labels to display the table details.
     <div>Is used in:
       <ul>
         <li>o2::aod::McTrackLabel = o2::aod::McTrackLabels::iterator</li>
+        <li>o2::aod::BigTracksMC = soa::Join<o2::aod::BigTracks, o2::aod::McTrackLabels></li>
+        <li>o2::aod::hf_cand_casc::MyBigTracks = soa::Join<o2::aod::BigTracksPID, o2::aod::McTrackLabels></li>
       </ul>
     </div>
     <table class=DataModel>
