@@ -130,105 +130,105 @@ Click on the labels to display the table details.
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::collision::BCId</td>
+        <td>o2::aod::&zwnj;collision::BCId</td>
         <td>I</td>
         <td>bcId</td>
         <td>int32</td>
         <td>Most probably BC to where this collision has occured</td>
       </tr>
       <tr>
-        <td>o2::aod::collision::PosX</td>
+        <td>o2::aod::&zwnj;collision::PosX</td>
         <td></td>
         <td>posX</td>
         <td>float</td>
         <td>X Vertex position in cm</td>
       </tr>
       <tr>
-        <td>o2::aod::collision::PosY</td>
+        <td>o2::aod::&zwnj;collision::PosY</td>
         <td></td>
         <td>posY</td>
         <td>float</td>
         <td>Y Vertex position in cm</td>
       </tr>
       <tr>
-        <td>o2::aod::collision::PosZ</td>
+        <td>o2::aod::&zwnj;collision::PosZ</td>
         <td></td>
         <td>posZ</td>
         <td>float</td>
         <td>Z Vertex position in cm</td>
       </tr>
       <tr>
-        <td>o2::aod::collision::CovXX</td>
+        <td>o2::aod::&zwnj;collision::CovXX</td>
         <td></td>
         <td>covXX</td>
         <td>float</td>
         <td>Vertex covariance matrix</td>
       </tr>
       <tr>
-        <td>o2::aod::collision::CovXY</td>
+        <td>o2::aod::&zwnj;collision::CovXY</td>
         <td></td>
         <td>covXY</td>
         <td>float</td>
         <td>Vertex covariance matrix</td>
       </tr>
       <tr>
-        <td>o2::aod::collision::CovXZ</td>
+        <td>o2::aod::&zwnj;collision::CovXZ</td>
         <td></td>
         <td>covXZ</td>
         <td>float</td>
         <td>Vertex covariance matrix</td>
       </tr>
       <tr>
-        <td>o2::aod::collision::CovYY</td>
+        <td>o2::aod::&zwnj;collision::CovYY</td>
         <td></td>
         <td>covYY</td>
         <td>float</td>
         <td>Vertex covariance matrix</td>
       </tr>
       <tr>
-        <td>o2::aod::collision::CovYZ</td>
+        <td>o2::aod::&zwnj;collision::CovYZ</td>
         <td></td>
         <td>covYZ</td>
         <td>float</td>
         <td>Vertex covariance matrix</td>
       </tr>
       <tr>
-        <td>o2::aod::collision::CovZZ</td>
+        <td>o2::aod::&zwnj;collision::CovZZ</td>
         <td></td>
         <td>covZZ</td>
         <td>float</td>
         <td>Vertex covariance matrix</td>
       </tr>
       <tr>
-        <td>o2::aod::collision::Flags</td>
+        <td>o2::aod::&zwnj;collision::Flags</td>
         <td></td>
         <td>flags</td>
         <td>uint16_t</td>
         <td>Run 2: see CollisionFlagsRun2 | Run 3: see Vertex::Flags</td>
       </tr>
       <tr>
-        <td>o2::aod::collision::Chi2</td>
+        <td>o2::aod::&zwnj;collision::Chi2</td>
         <td></td>
         <td>chi2</td>
         <td>float</td>
         <td>Chi2 of vertex fit</td>
       </tr>
       <tr>
-        <td>o2::aod::collision::NumContrib</td>
+        <td>o2::aod::&zwnj;collision::NumContrib</td>
         <td></td>
         <td>numContrib</td>
         <td>uint16_t</td>
         <td>Number of tracks used for the vertex</td>
       </tr>
       <tr>
-        <td>o2::aod::collision::CollisionTime</td>
+        <td>o2::aod::&zwnj;collision::CollisionTime</td>
         <td></td>
         <td>collisionTime</td>
         <td>float</td>
         <td>Collision time in ns relative to BC stored in bc()</td>
       </tr>
       <tr>
-        <td>o2::aod::collision::CollisionTimeRes</td>
+        <td>o2::aod::&zwnj;collision::CollisionTimeRes</td>
         <td></td>
         <td>collisionTimeRes</td>
         <td>float</td>
