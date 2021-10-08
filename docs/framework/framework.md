@@ -837,7 +837,7 @@ aod-file takes a string as option value, which either is the name of the input r
  # uses AnalysisResults_0.root as input file
 
 --aod-file @AnalysisResults.txt
- # uses files listed in AnalysisResults.txt as input files
+ # uses files listed in AnalysisResults.txt as input files, separated by linebreaks
 
 ```
 
