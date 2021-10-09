@@ -871,73 +871,6 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
 
 </div>
 
-####  o2-analysis-pid-tof-beta
-Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/TableProducer/PID//pidTOFbeta.cxx" target="_blank">pidTOFbeta.cxx</a>
-<div>
-
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::pidTOFbeta</button>
-  <div class="panel">
-    <div>
-       Table of the TOF beta
-    </div>
-    <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master/Common/Core/PID/PIDResponse.h" target="_blank">Common/Core/PID/PIDResponse.h</a>
-    </div>
-    <table class=DataModel>
-      <tr>
-        <th>Name</th>
-        <th></th>
-        <th>Getter</th>
-        <th>Type</th>
-        <th>Comment</th>
-      </tr>
-      <tr>
-        <td>o2::aod::pidtofbeta::Beta</td>
-        <td></td>
-        <td>beta</td>
-        <td>float</td>
-        <td>TOF beta</td>
-      </tr>
-      <tr>
-        <td>o2::aod::pidtofbeta::BetaError</td>
-        <td></td>
-        <td>betaerror</td>
-        <td>float</td>
-        <td>Uncertainty on the TOF beta</td>
-      </tr>
-      <tr>
-        <td>o2::aod::pidtofbeta::ExpBetaEl</td>
-        <td></td>
-        <td>expbetael</td>
-        <td>float</td>
-        <td>Expected beta of electron</td>
-      </tr>
-      <tr>
-        <td>o2::aod::pidtofbeta::ExpBetaElError</td>
-        <td></td>
-        <td>expbetaelerror</td>
-        <td>float</td>
-        <td>Expected uncertainty on the beta of electron</td>
-      </tr>
-      <tr>
-        <td>o2::aod::pidtofbeta::SeparationBetaEl</td>
-        <td></td>
-        <td>separationbetael</td>
-        <td>float</td>
-        <td>Separation computed with the expected beta for electrons</td>
-      </tr>
-      <tr>
-        <td>o2::aod::pidtofbeta::DiffBetaEl</td>
-        <td>D</td>
-        <td>diffbetael</td>
-        <td>float</td>
-        <td>Difference between the measured and the expected beta for electrons</td>
-      </tr>
-    </table>
-  </div>
-
-</div>
-
 ####  o2-analysis-pid-tof
 Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/TableProducer/PID//pidTOF.cxx" target="_blank">pidTOF.cxx</a>
 <div>
@@ -1652,6 +1585,73 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
         <td>tofNSigmaAl</td>
         <td>float</td>
         <td>Nsigma separation with the TOF detector for alpha</td>
+      </tr>
+    </table>
+  </div>
+
+</div>
+
+####  o2-analysis-pid-tof-beta
+Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/TableProducer/PID//pidTOFbeta.cxx" target="_blank">pidTOFbeta.cxx</a>
+<div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::pidTOFbeta</button>
+  <div class="panel">
+    <div>
+       Table of the TOF beta
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master/Common/Core/PID/PIDResponse.h" target="_blank">Common/Core/PID/PIDResponse.h</a>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::pidtofbeta::Beta</td>
+        <td></td>
+        <td>beta</td>
+        <td>float</td>
+        <td>TOF beta</td>
+      </tr>
+      <tr>
+        <td>o2::aod::pidtofbeta::BetaError</td>
+        <td></td>
+        <td>betaerror</td>
+        <td>float</td>
+        <td>Uncertainty on the TOF beta</td>
+      </tr>
+      <tr>
+        <td>o2::aod::pidtofbeta::ExpBetaEl</td>
+        <td></td>
+        <td>expbetael</td>
+        <td>float</td>
+        <td>Expected beta of electron</td>
+      </tr>
+      <tr>
+        <td>o2::aod::pidtofbeta::ExpBetaElError</td>
+        <td></td>
+        <td>expbetaelerror</td>
+        <td>float</td>
+        <td>Expected uncertainty on the beta of electron</td>
+      </tr>
+      <tr>
+        <td>o2::aod::pidtofbeta::SeparationBetaEl</td>
+        <td></td>
+        <td>separationbetael</td>
+        <td>float</td>
+        <td>Separation computed with the expected beta for electrons</td>
+      </tr>
+      <tr>
+        <td>o2::aod::pidtofbeta::DiffBetaEl</td>
+        <td>D</td>
+        <td>diffbetael</td>
+        <td>float</td>
+        <td>Difference between the measured and the expected beta for electrons</td>
       </tr>
     </table>
   </div>

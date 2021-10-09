@@ -718,10 +718,24 @@ The data model provides in addition to the set of tables also some predefined jo
     </ul>
   </div>
 
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::analysis::hf_cuts_d0_topik::Trks</button>
+  <div class="panel">
+    <ul>
+        <li>o2::analysis::hf_cuts_d0_topik::Trks = soa::Join<o2::analysis::hf_cuts_d0_topik::aod::BigTracksPID, o2::analysis::hf_cuts_d0_topik::aod::Tracks, o2::analysis::hf_cuts_d0_topik::aod::RICHTracksIndex, o2::analysis::hf_cuts_d0_topik::aod::McTrackLabels, o2::analysis::hf_cuts_d0_topik::aod::TracksExtra></li>
+    </ul>
+  </div>
+
   <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::analysis::hf_cuts_jpsi_toee::TracksPID</button>
   <div class="panel">
     <ul>
         <li>o2::analysis::hf_cuts_jpsi_toee::TracksPID = soa::Join<o2::analysis::hf_cuts_jpsi_toee::aod::BigTracksPID, o2::analysis::hf_cuts_jpsi_toee::aod::HfTrackIndexALICE3PID></li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::analysis::hf_cuts_lc_topkpi::Trks</button>
+  <div class="panel">
+    <ul>
+        <li>o2::analysis::hf_cuts_lc_topkpi::Trks = soa::Join<o2::analysis::hf_cuts_lc_topkpi::aod::BigTracksPID, o2::analysis::hf_cuts_lc_topkpi::aod::Tracks, o2::analysis::hf_cuts_lc_topkpi::aod::RICHTracksIndex, o2::analysis::hf_cuts_lc_topkpi::aod::McTrackLabels, o2::analysis::hf_cuts_lc_topkpi::aod::TracksExtra></li>
     </ul>
   </div>
 
