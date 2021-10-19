@@ -3582,7 +3582,7 @@ Click on the labels to display the table details.
         <td></td>
         <td>flags</td>
         <td>uint8_t</td>
-        <td>ALICE specific flags. Do not use directly. Use the dynamic columns, e.g. producedByGenerator()</td>
+        <td>ALICE specific flags, see MCParticleFlags. Do not use directly. Use the dynamic columns, e.g. producedByGenerator()</td>
       </tr>
       <tr>
         <td>o2::aod::mcparticle::Mother0Id</td>
@@ -3688,6 +3688,13 @@ Click on the labels to display the table details.
         <td>producedByGenerator</td>
         <td>bool</td>
         <td>Particle produced by the generator or by the transport code</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::FromBackgroundEvent</td>
+        <td>D</td>
+        <td>fromBackgroundEvent</td>
+        <td>bool</td>
+        <td>Particle from background event</td>
       </tr>
     </table>
   </div>
@@ -3751,7 +3758,7 @@ Click on the labels to display the table details.
         <td></td>
         <td>flags</td>
         <td>uint8_t</td>
-        <td>ALICE specific flags. Do not use directly. Use the dynamic columns, e.g. producedByGenerator()</td>
+        <td>ALICE specific flags, see MCParticleFlags. Do not use directly. Use the dynamic columns, e.g. producedByGenerator()</td>
       </tr>
       <tr>
         <td>o2::aod::mcparticle::Mother0Id</td>
@@ -3857,6 +3864,13 @@ Click on the labels to display the table details.
         <td>producedByGenerator</td>
         <td>bool</td>
         <td>Particle produced by the generator or by the transport code</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::FromBackgroundEvent</td>
+        <td>D</td>
+        <td>fromBackgroundEvent</td>
+        <td>bool</td>
+        <td>Particle from background event</td>
       </tr>
       <tr>
         <td>o2::aod::mcparticle::Eta</td>
