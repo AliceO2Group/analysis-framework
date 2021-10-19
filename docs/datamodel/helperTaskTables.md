@@ -16,17 +16,17 @@ Click on the labels to display the table details.
 Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/TableProducer//centralityTable.cxx" target="_blank">centralityTable.cxx</a>
 <div>
 
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::Cents</button>
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::CentV0Ms</button>
   <div class="panel">
     <div>
-
+       V0M estimated centrality table
     </div>
     <div>
       Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master/Common/DataModel/Centrality.h" target="_blank">Common/DataModel/Centrality.h</a>
     </div>
     <div>Is used in:
       <ul>
-        <li>o2::aod::Cent = o2::aod::Cents::iterator</li>
+        <li>o2::aod::CentV0M = o2::aod::CentV0Ms::iterator</li>
       </ul>
     </div>
     <table class=DataModel>
@@ -38,11 +38,104 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
         <th>Comment</th>
       </tr>
       <tr>
-        <td>o2::aod::cent::CentV0M</td>
+        <td>o2::aod::cent::CentEstV0M</td>
         <td></td>
         <td>centV0M</td>
         <td>float</td>
+        <td>Centrality percentile estimated from V0C+V0A multiplicities</td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::CentRun2SPDs</button>
+  <div class="panel">
+    <div>
+       Run2 SPD tracklets estimated centrality table
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master/Common/DataModel/Centrality.h" target="_blank">Common/DataModel/Centrality.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::CentRun2SPD = o2::aod::CentRun2SPDs::iterator</li>
+      </ul>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::cent::CentEstRun2SPDTracklets</td>
         <td></td>
+        <td>centRun2SPDTracklets</td>
+        <td>float</td>
+        <td>Run2 centrality percentile estimated from SPD tracklets multiplicity</td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::CentRun2CL0s</button>
+  <div class="panel">
+    <div>
+       Run2 CL0 estimated centrality table
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master/Common/DataModel/Centrality.h" target="_blank">Common/DataModel/Centrality.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::CentRun2CL0 = o2::aod::CentRun2CL0s::iterator</li>
+      </ul>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::cent::CentEstRun2CL0</td>
+        <td></td>
+        <td>centRun2CL0</td>
+        <td>float</td>
+        <td>Run2 centrality percentile estimated from CL0 multiplicity</td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::CentRun2CL1s</button>
+  <div class="panel">
+    <div>
+       Run2 CL1 estimated centrality table
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master/Common/DataModel/Centrality.h" target="_blank">Common/DataModel/Centrality.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::CentRun2CL1 = o2::aod::CentRun2CL1s::iterator</li>
+      </ul>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::cent::CentEstRun2CL1</td>
+        <td></td>
+        <td>centRun2CL1</td>
+        <td>float</td>
+        <td>Run2 centrality percentile estimated from CL1 multiplicity</td>
       </tr>
     </table>
   </div>

@@ -277,10 +277,31 @@ The data model provides in addition to the set of tables also some predefined jo
     </ul>
   </div>
 
-  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::Cent</button>
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::CentV0M</button>
   <div class="panel">
     <ul>
-        <li>o2::aod::Cent = o2::aod::Cents::iterator</li>
+        <li>o2::aod::CentV0M = o2::aod::CentV0Ms::iterator</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::CentRun2SPD</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::CentRun2SPD = o2::aod::CentRun2SPDs::iterator</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::CentRun2CL0</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::CentRun2CL0 = o2::aod::CentRun2CL0s::iterator</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::CentRun2CL1</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::CentRun2CL1 = o2::aod::CentRun2CL1s::iterator</li>
     </ul>
   </div>
 
