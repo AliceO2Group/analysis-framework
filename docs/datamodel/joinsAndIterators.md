@@ -564,6 +564,13 @@ The data model provides in addition to the set of tables also some predefined jo
     </ul>
   </div>
 
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::HfCandLb</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::HfCandLb = o2::aod::HfCandLbExt</li>
+    </ul>
+  </div>
+
   <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::EMCALCluster</button>
   <div class="panel">
     <ul>

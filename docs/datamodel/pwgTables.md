@@ -3884,6 +3884,482 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
 
 </div>
 
+####  o2-analysis-candidate-creator-lb
+Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer//HFCandidateCreatorLb.cxx" target="_blank">HFCandidateCreatorLb.cxx</a>
+<div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::HfCandLbBase</button>
+  <div class="panel">
+    <div>
+
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master/PWGHF/DataModel/HFSecondaryVertex.h" target="_blank">PWGHF/DataModel/HFSecondaryVertex.h</a>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_cand::CollisionId</td>
+        <td>I</td>
+        <td>collisionId</td>
+        <td>int32</td>
+        <td>Pointer into Collisions</td>
+      </tr>
+      <tr>
+        <td>o2::aod::&zwnj;collision::PosX</td>
+        <td></td>
+        <td>posX</td>
+        <td>float</td>
+        <td>X Vertex position in cm</td>
+      </tr>
+      <tr>
+        <td>o2::aod::&zwnj;collision::PosY</td>
+        <td></td>
+        <td>posY</td>
+        <td>float</td>
+        <td>Y Vertex position in cm</td>
+      </tr>
+      <tr>
+        <td>o2::aod::&zwnj;collision::PosZ</td>
+        <td></td>
+        <td>posZ</td>
+        <td>float</td>
+        <td>Z Vertex position in cm</td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_cand::XSecondaryVertex</td>
+        <td></td>
+        <td>xSecondaryVertex</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_cand::YSecondaryVertex</td>
+        <td></td>
+        <td>ySecondaryVertex</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_cand::ZSecondaryVertex</td>
+        <td></td>
+        <td>zSecondaryVertex</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_cand::ErrorDecayLength</td>
+        <td></td>
+        <td>errorDecayLength</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_cand::ErrorDecayLengthXY</td>
+        <td></td>
+        <td>errorDecayLengthXY</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_cand::Chi2PCA</td>
+        <td></td>
+        <td>chi2PCA</td>
+        <td>float</td>
+        <td>sum of (non-weighted) distances of the secondary vertex to its prongs</td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_cand::RSecondaryVertex</td>
+        <td>D</td>
+        <td>rSecondaryVertex</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_cand::DecayLength</td>
+        <td>D</td>
+        <td>decayLength</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_cand::DecayLengthXY</td>
+        <td>D</td>
+        <td>decayLengthXY</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_cand::DecayLengthNormalised</td>
+        <td>D</td>
+        <td>decayLengthNormalised</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_cand::DecayLengthXYNormalised</td>
+        <td>D</td>
+        <td>decayLengthXYNormalised</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_cand::ImpactParameterNormalised0</td>
+        <td>D</td>
+        <td>impactParameterNormalised0</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_cand::PtProng0</td>
+        <td>D</td>
+        <td>ptProng0</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_cand::Pt2Prong0</td>
+        <td>D</td>
+        <td>pt2Prong0</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_cand::PVectorProng0</td>
+        <td>D</td>
+        <td>pVectorProng0</td>
+        <td>array<float,3></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_cand::ImpactParameterNormalised1</td>
+        <td>D</td>
+        <td>impactParameterNormalised1</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_cand::PtProng1</td>
+        <td>D</td>
+        <td>ptProng1</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_cand::Pt2Prong1</td>
+        <td>D</td>
+        <td>pt2Prong1</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_cand::PVectorProng1</td>
+        <td>D</td>
+        <td>pVectorProng1</td>
+        <td>array<float,3></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_cand::PxProng0</td>
+        <td></td>
+        <td>pxProng0</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_cand::PyProng0</td>
+        <td></td>
+        <td>pyProng0</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_cand::PzProng0</td>
+        <td></td>
+        <td>pzProng0</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_cand::PxProng1</td>
+        <td></td>
+        <td>pxProng1</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_cand::PyProng1</td>
+        <td></td>
+        <td>pyProng1</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_cand::PzProng1</td>
+        <td></td>
+        <td>pzProng1</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_cand::ImpactParameter0</td>
+        <td></td>
+        <td>impactParameter0</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_cand::ImpactParameter1</td>
+        <td></td>
+        <td>impactParameter1</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_cand::ErrorImpactParameter0</td>
+        <td></td>
+        <td>errorImpactParameter0</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_cand::ErrorImpactParameter1</td>
+        <td></td>
+        <td>errorImpactParameter1</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_cand_lb::Index0Id</td>
+        <td>I</td>
+        <td>index0Id</td>
+        <td>int</td>
+        <td>Pointer into HfCandProng3</td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_track_index::Index1Id</td>
+        <td>I</td>
+        <td>index1Id</td>
+        <td>int</td>
+        <td>Pointer into Tracks</td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_track_index::HFflag</td>
+        <td></td>
+        <td>hfflag</td>
+        <td>uint8_t</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_cand_prong2::M</td>
+        <td>D</td>
+        <td>m</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_cand_prong2::M2</td>
+        <td>D</td>
+        <td>m2</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_cand_prong2::ImpactParameterProduct</td>
+        <td>D</td>
+        <td>impactParameterProduct</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_cand::Pt</td>
+        <td>D</td>
+        <td>pt</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_cand::Pt2</td>
+        <td>D</td>
+        <td>pt2</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_cand::P</td>
+        <td>D</td>
+        <td>p</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_cand::P2</td>
+        <td>D</td>
+        <td>p2</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_cand::PVector</td>
+        <td>D</td>
+        <td>pVector</td>
+        <td>array<float,3></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_cand::CPA</td>
+        <td>D</td>
+        <td>cpa</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_cand::CPAXY</td>
+        <td>D</td>
+        <td>cpaXY</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_cand::Ct</td>
+        <td>D</td>
+        <td>ct</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_cand::ImpactParameterXY</td>
+        <td>D</td>
+        <td>impactParameterXY</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_cand_prong2::MaxNormalisedDeltaIP</td>
+        <td>D</td>
+        <td>maxNormalisedDeltaIP</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_cand::Eta</td>
+        <td>D</td>
+        <td>eta</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_cand::Phi</td>
+        <td>D</td>
+        <td>phi</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_cand::Y</td>
+        <td>D</td>
+        <td>y</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_cand::E</td>
+        <td>D</td>
+        <td>e</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_cand::E2</td>
+        <td>D</td>
+        <td>e2</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::HfCandLbMCRec</button>
+  <div class="panel">
+    <div>
+
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master/PWGHF/DataModel/HFSecondaryVertex.h" target="_blank">PWGHF/DataModel/HFSecondaryVertex.h</a>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_cand_lb::FlagMCMatchRec</td>
+        <td></td>
+        <td>flagMCMatchRec</td>
+        <td>int8_t</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_cand_lb::OriginMCRec</td>
+        <td></td>
+        <td>originMCRec</td>
+        <td>int8_t</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_cand_lb::DebugMCRec</td>
+        <td></td>
+        <td>debugMCRec</td>
+        <td>int8_t</td>
+        <td></td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::HfCandLbMCGen</button>
+  <div class="panel">
+    <div>
+
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master/PWGHF/DataModel/HFSecondaryVertex.h" target="_blank">PWGHF/DataModel/HFSecondaryVertex.h</a>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_cand_lb::FlagMCMatchGen</td>
+        <td></td>
+        <td>flagMCMatchGen</td>
+        <td>int8_t</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_cand_lb::OriginMCGen</td>
+        <td></td>
+        <td>originMCGen</td>
+        <td>int8_t</td>
+        <td></td>
+      </tr>
+    </table>
+  </div>
+
+</div>
+
 ####  o2-analysis-candidate-creator-x
 Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer//HFCandidateCreatorX.cxx" target="_blank">HFCandidateCreatorX.cxx</a>
 <div>
@@ -5304,6 +5780,38 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <td>o2::aod::hf_selcandidate_jpsi::IsSelJpsiToMuMuMid</td>
         <td></td>
         <td>isSelJpsiToMuMuMid</td>
+        <td>int</td>
+        <td></td>
+      </tr>
+    </table>
+  </div>
+
+</div>
+
+####  o2-analysis-lb-tolcpi-candidate-selector
+Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer//HFLbToLcPiCandidateSelector.cxx" target="_blank">HFLbToLcPiCandidateSelector.cxx</a>
+<div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::HFSelLbToLcPiCandidate</button>
+  <div class="panel">
+    <div>
+
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master/PWGHF/DataModel/HFCandidateSelectionTables.h" target="_blank">PWGHF/DataModel/HFCandidateSelectionTables.h</a>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_selcandidate_lb::IsSelLbToLcPi</td>
+        <td></td>
+        <td>isSelLbToLcPi</td>
         <td>int</td>
         <td></td>
       </tr>
