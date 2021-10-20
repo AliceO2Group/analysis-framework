@@ -3113,6 +3113,13 @@ Click on the labels to display the table details.
         <td>uint8_t</td>
         <td></td>
       </tr>
+      <tr>
+        <td>o2::aod::ft0::PosZ</td>
+        <td>D</td>
+        <td>posZ</td>
+        <td>float</td>
+        <td>Z position calculated from timeA and timeC in cm</td>
+      </tr>
     </table>
   </div>
 
