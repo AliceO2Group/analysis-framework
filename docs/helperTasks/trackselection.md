@@ -47,7 +47,7 @@ At the moment there are two 'FilterBits' available in the TrackSelection table, 
 
  Cuts | globalTrack | globalTrackSDD
 -------- | -------- | --------
-min number of TPC clusters   | 70   | 70
+min number of crossed rows TPC   | 70   | 70
 min ratio of crossed rows over findable clusters TPC   | 0.8   | 0.8
 max chi2 per cluster TPC | 4.0 | 4.0
 max chi2 per cluster ITS | 36.0 | 36.0
