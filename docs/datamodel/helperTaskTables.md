@@ -413,6 +413,71 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
 
 </div>
 
+####  o2-analysis-ft0-corrected-table
+Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/TableProducer//ft0CorrectedTable.cxx" target="_blank">ft0CorrectedTable.cxx</a>
+<div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::FT0sCorrected</button>
+  <div class="panel">
+    <div>
+       Table with corrected FT0 values
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master/Common/DataModel/FT0Corrected.h" target="_blank">Common/DataModel/FT0Corrected.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::FT0Corrected = o2::aod::FT0sCorrected::iterator</li>
+      </ul>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::ft0::T0ACorrected</td>
+        <td></td>
+        <td>t0ACorrected</td>
+        <td>float</td>
+        <td>Collision time A-side, corrected with primary vertex</td>
+      </tr>
+      <tr>
+        <td>o2::aod::ft0::T0CCorrected</td>
+        <td></td>
+        <td>t0CCorrected</td>
+        <td>float</td>
+        <td>Collision time C-side, corrected with primary vertex</td>
+      </tr>
+      <tr>
+        <td>o2::aod::ft0::T0AC</td>
+        <td>D</td>
+        <td>t0AC</td>
+        <td>float</td>
+        <td>Collision time (A+C)/2</td>
+      </tr>
+      <tr>
+        <td>o2::aod::ft0::T0ACorrectedValid</td>
+        <td>D</td>
+        <td>t0ACorrectedValid</td>
+        <td>bool</td>
+        <td>Was T0ACorrected computable?</td>
+      </tr>
+      <tr>
+        <td>o2::aod::ft0::T0CCorrectedValid</td>
+        <td>D</td>
+        <td>t0CCorrectedValid</td>
+        <td>bool</td>
+        <td>Was T0CCorrected computable?</td>
+      </tr>
+    </table>
+  </div>
+
+</div>
+
 ####  o2-analysis-multiplicity-table
 Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/TableProducer//multiplicityTable.cxx" target="_blank">multiplicityTable.cxx</a>
 <div>
