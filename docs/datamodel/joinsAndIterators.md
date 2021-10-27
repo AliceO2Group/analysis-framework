@@ -319,6 +319,13 @@ The data model provides in addition to the set of tables also some predefined jo
     </ul>
   </div>
 
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::FT0Corrected</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::FT0Corrected = o2::aod::FT0sCorrected::iterator</li>
+    </ul>
+  </div>
+
   <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::Mult</button>
   <div class="panel">
     <ul>
