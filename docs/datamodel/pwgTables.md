@@ -8669,6 +8669,20 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <th>Comment</th>
       </tr>
       <tr>
+        <td>o2::aod::&zwnj;collision::BCId</td>
+        <td>I</td>
+        <td>bcId</td>
+        <td>int32</td>
+        <td>Most probably BC to where this collision has occured</td>
+      </tr>
+      <tr>
+        <td>o2::aod::&zwnj;collision::NumContrib</td>
+        <td></td>
+        <td>numContrib</td>
+        <td>uint16_t</td>
+        <td>Number of tracks used for the vertex</td>
+      </tr>
+      <tr>
         <td>o2::aod::&zwnj;collision::PosX</td>
         <td></td>
         <td>posX</td>
@@ -8688,6 +8702,41 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <td>posZ</td>
         <td>float</td>
         <td>Z Vertex position in cm</td>
+      </tr>
+      <tr>
+        <td>o2::aod::full::ImpactParameterNormalised0</td>
+        <td></td>
+        <td>impactParameterNormalised0</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::full::ImpactParameterNormalised1</td>
+        <td></td>
+        <td>impactParameterNormalised1</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::full::RSecondaryVertex</td>
+        <td></td>
+        <td>rSecondaryVertex</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::full::DecayLength</td>
+        <td></td>
+        <td>decayLength</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::full::DecayLengthXY</td>
+        <td></td>
+        <td>decayLengthXY</td>
+        <td>float</td>
+        <td></td>
       </tr>
       <tr>
         <td>o2::aod::full::PtProng0</td>
@@ -8730,6 +8779,55 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <td>pProng2</td>
         <td>float</td>
         <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::full::NSigmaTOFPi1</td>
+        <td></td>
+        <td>nSigmaTOFPi1</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::full::NSigmaTOFKa1</td>
+        <td></td>
+        <td>nSigmaTOFKa1</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::full::NSigmaTOFPr1</td>
+        <td></td>
+        <td>nSigmaTOFPr1</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::full::NSigmaTOFPi2</td>
+        <td></td>
+        <td>nSigmaTOFPi2</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::full::NSigmaTOFKa2</td>
+        <td></td>
+        <td>nSigmaTOFKa2</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::full::NSigmaTOFPr2</td>
+        <td></td>
+        <td>nSigmaTOFPr2</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_cand::Chi2PCA</td>
+        <td></td>
+        <td>chi2PCA</td>
+        <td>float</td>
+        <td>sum of (non-weighted) distances of the secondary vertex to its prongs</td>
       </tr>
       <tr>
         <td>o2::aod::hf_cand::ImpactParameter0</td>
@@ -8819,6 +8917,34 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <td>o2::aod::full::Y</td>
         <td></td>
         <td>y</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::full::Q</td>
+        <td></td>
+        <td>q</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::full::DR1</td>
+        <td></td>
+        <td>dr1</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::full::DR2</td>
+        <td></td>
+        <td>dr2</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::full::PiBalance</td>
+        <td></td>
+        <td>piBalance</td>
         <td>float</td>
         <td></td>
       </tr>
