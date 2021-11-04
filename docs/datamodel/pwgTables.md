@@ -2161,7 +2161,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGDQ
         <td></td>
         <td>statusCode</td>
         <td>int</td>
-        <td>Status code directly from the generator</td>
+        <td>Generators status code or physics process. Do not use directly. Use dynamic columns getGenStatusCode() or getProcess()</td>
       </tr>
       <tr>
         <td>o2::aod::mcparticle::Flags</td>
@@ -2308,7 +2308,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGDQ
         <td>D</td>
         <td>producedByGenerator</td>
         <td>bool</td>
-        <td>Particle produced by the generator or by the transport code</td>
+        <td>True if particle produced by the generator (==TMCProcess::kPrimary); False if by the transport code</td>
       </tr>
     </table>
   </div>

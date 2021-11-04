@@ -56,14 +56,14 @@ The data model provides in addition to the set of tables also some predefined jo
   <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::FullTracks</button>
   <div class="panel">
     <ul>
-        <li>o2::aod::FullTracks = soa::Join<o2::aod::Tracks, o2::aod::TracksCov, o2::aod::TracksExtra></li>
+        <li>o2::aod::FullTracks = soa::Join<o2::aod::Tracks, o2::aod::TracksExtra></li>
     </ul>
   </div>
 
   <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::FullTrack</button>
   <div class="panel">
     <ul>
-        <li>o2::aod::FullTrack = soa::Join<o2::aod::Tracks, o2::aod::TracksCov, o2::aod::TracksExtra>::iterator</li>
+        <li>o2::aod::FullTrack = soa::Join<o2::aod::Tracks, o2::aod::TracksExtra>::iterator</li>
     </ul>
   </div>
 
@@ -763,7 +763,7 @@ The data model provides in addition to the set of tables also some predefined jo
   <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::analysis::hf_cuts_d0_topik::Trks</button>
   <div class="panel">
     <ul>
-        <li>o2::analysis::hf_cuts_d0_topik::Trks = soa::Join<o2::analysis::hf_cuts_d0_topik::aod::BigTracksPID, o2::analysis::hf_cuts_d0_topik::aod::Tracks, o2::analysis::hf_cuts_d0_topik::aod::RICHTracksIndex, o2::analysis::hf_cuts_d0_topik::aod::McTrackLabels, o2::analysis::hf_cuts_d0_topik::aod::TracksExtra></li>
+        <li>o2::analysis::hf_cuts_d0_topik::Trks = soa::Join<o2::analysis::hf_cuts_d0_topik::aod::BigTracksPID, o2::analysis::hf_cuts_d0_topik::aod::RICHTracksIndex, o2::analysis::hf_cuts_d0_topik::aod::McTrackLabels></li>
     </ul>
   </div>
 
@@ -791,7 +791,7 @@ The data model provides in addition to the set of tables also some predefined jo
   <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::analysis::hf_cuts_single_track::MyTracks</button>
   <div class="panel">
     <ul>
-        <li>o2::analysis::hf_cuts_single_track::MyTracks = soa::Join<o2::analysis::hf_cuts_single_track::aod::FullTracks, o2::analysis::hf_cuts_single_track::aod::HFSelTrack, o2::analysis::hf_cuts_single_track::aod::TracksExtended, o2::analysis::hf_cuts_single_track::aod::McTrackLabels></li>
+        <li>o2::analysis::hf_cuts_single_track::MyTracks = soa::Join<o2::analysis::hf_cuts_single_track::aod::FullTracks, o2::analysis::hf_cuts_single_track::aod::TracksCov, o2::analysis::hf_cuts_single_track::aod::HFSelTrack, o2::analysis::hf_cuts_single_track::aod::TracksExtended, o2::analysis::hf_cuts_single_track::aod::McTrackLabels></li>
     </ul>
   </div>
 
@@ -805,7 +805,7 @@ The data model provides in addition to the set of tables also some predefined jo
   <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::analysis::hf_cuts_single_track::MyTracks</button>
   <div class="panel">
     <ul>
-        <li>o2::analysis::hf_cuts_single_track::MyTracks = soa::Join<o2::analysis::hf_cuts_single_track::aod::FullTracks, o2::analysis::hf_cuts_single_track::aod::HFSelTrack, o2::analysis::hf_cuts_single_track::aod::TracksExtended></li>
+        <li>o2::analysis::hf_cuts_single_track::MyTracks = soa::Join<o2::analysis::hf_cuts_single_track::aod::FullTracks, o2::analysis::hf_cuts_single_track::aod::TracksCov, o2::analysis::hf_cuts_single_track::aod::HFSelTrack, o2::analysis::hf_cuts_single_track::aod::TracksExtended></li>
     </ul>
   </div>
 

@@ -377,8 +377,8 @@ Click on the labels to display the table details.
     <div>Is used in:
       <ul>
         <li>o2::aod::Track = o2::aod::Tracks::iterator</li>
-        <li>o2::aod::FullTracks = soa::Join<o2::aod::Tracks, o2::aod::TracksCov, o2::aod::TracksExtra></li>
-        <li>o2::aod::FullTrack = soa::Join<o2::aod::Tracks, o2::aod::TracksCov, o2::aod::TracksExtra>::iterator</li>
+        <li>o2::aod::FullTracks = soa::Join<o2::aod::Tracks, o2::aod::TracksExtra></li>
+        <li>o2::aod::FullTrack = soa::Join<o2::aod::Tracks, o2::aod::TracksExtra>::iterator</li>
         <li>o2::aod::BigTracks = soa::Join<o2::aod::Tracks, o2::aod::TracksCov, o2::aod::TracksExtra, o2::aod::HFSelTrack></li>
       </ul>
     </div>
@@ -666,8 +666,6 @@ Click on the labels to display the table details.
     <div>Is used in:
       <ul>
         <li>o2::aod::TrackCov = o2::aod::TracksCov::iterator</li>
-        <li>o2::aod::FullTracks = soa::Join<o2::aod::Tracks, o2::aod::TracksCov, o2::aod::TracksExtra></li>
-        <li>o2::aod::FullTrack = soa::Join<o2::aod::Tracks, o2::aod::TracksCov, o2::aod::TracksExtra>::iterator</li>
         <li>o2::aod::BigTracks = soa::Join<o2::aod::Tracks, o2::aod::TracksCov, o2::aod::TracksExtra, o2::aod::HFSelTrack></li>
       </ul>
     </div>
@@ -1151,8 +1149,8 @@ Click on the labels to display the table details.
     <div>Is used in:
       <ul>
         <li>o2::aod::TrackExtra = o2::aod::TracksExtra::iterator</li>
-        <li>o2::aod::FullTracks = soa::Join<o2::aod::Tracks, o2::aod::TracksCov, o2::aod::TracksExtra></li>
-        <li>o2::aod::FullTrack = soa::Join<o2::aod::Tracks, o2::aod::TracksCov, o2::aod::TracksExtra>::iterator</li>
+        <li>o2::aod::FullTracks = soa::Join<o2::aod::Tracks, o2::aod::TracksExtra></li>
+        <li>o2::aod::FullTrack = soa::Join<o2::aod::Tracks, o2::aod::TracksExtra>::iterator</li>
         <li>o2::aod::BigTracks = soa::Join<o2::aod::Tracks, o2::aod::TracksCov, o2::aod::TracksExtra, o2::aod::HFSelTrack></li>
       </ul>
     </div>
@@ -3582,7 +3580,7 @@ Click on the labels to display the table details.
         <td></td>
         <td>statusCode</td>
         <td>int</td>
-        <td>Status code directly from the generator</td>
+        <td>Generators status code or physics process. Do not use directly. Use dynamic columns getGenStatusCode() or getProcess()</td>
       </tr>
       <tr>
         <td>o2::aod::mcparticle::Flags</td>
@@ -3694,7 +3692,7 @@ Click on the labels to display the table details.
         <td>D</td>
         <td>producedByGenerator</td>
         <td>bool</td>
-        <td>Particle produced by the generator or by the transport code</td>
+        <td>True if particle produced by the generator (==TMCProcess::kPrimary); False if by the transport code</td>
       </tr>
       <tr>
         <td>o2::aod::mcparticle::FromBackgroundEvent</td>
@@ -3702,6 +3700,20 @@ Click on the labels to display the table details.
         <td>fromBackgroundEvent</td>
         <td>bool</td>
         <td>Particle from background event</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::GetGenStatusCode</td>
+        <td>D</td>
+        <td>getGenStatusCode</td>
+        <td>int</td>
+        <td>The status code put by the generator, or -1 if a particle produced during transport</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::GetProcess</td>
+        <td>D</td>
+        <td>getProcess</td>
+        <td>int</td>
+        <td>The VMC physics code (as int) that generated this particle (see header TMCProcess.h in ROOT)</td>
       </tr>
     </table>
   </div>
@@ -3758,7 +3770,7 @@ Click on the labels to display the table details.
         <td></td>
         <td>statusCode</td>
         <td>int</td>
-        <td>Status code directly from the generator</td>
+        <td>Generators status code or physics process. Do not use directly. Use dynamic columns getGenStatusCode() or getProcess()</td>
       </tr>
       <tr>
         <td>o2::aod::mcparticle::Flags</td>
@@ -3870,7 +3882,7 @@ Click on the labels to display the table details.
         <td>D</td>
         <td>producedByGenerator</td>
         <td>bool</td>
-        <td>Particle produced by the generator or by the transport code</td>
+        <td>True if particle produced by the generator (==TMCProcess::kPrimary); False if by the transport code</td>
       </tr>
       <tr>
         <td>o2::aod::mcparticle::FromBackgroundEvent</td>
@@ -3878,6 +3890,20 @@ Click on the labels to display the table details.
         <td>fromBackgroundEvent</td>
         <td>bool</td>
         <td>Particle from background event</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::GetGenStatusCode</td>
+        <td>D</td>
+        <td>getGenStatusCode</td>
+        <td>int</td>
+        <td>The status code put by the generator, or -1 if a particle produced during transport</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::GetProcess</td>
+        <td>D</td>
+        <td>getProcess</td>
+        <td>int</td>
+        <td>The VMC physics code (as int) that generated this particle (see header TMCProcess.h in ROOT)</td>
       </tr>
       <tr>
         <td>o2::aod::mcparticle::Eta</td>
