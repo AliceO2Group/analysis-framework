@@ -3715,6 +3715,13 @@ Click on the labels to display the table details.
         <td>int</td>
         <td>The VMC physics code (as int) that generated this particle (see header TMCProcess.h in ROOT)</td>
       </tr>
+      <tr>
+        <td>o2::aod::mcparticle::IsPhysicalPrimary</td>
+        <td>D</td>
+        <td>isPhysicalPrimary</td>
+        <td>bool</td>
+        <td>True if particle is considered a physical primary according to the ALICE definition</td>
+      </tr>
     </table>
   </div>
 
@@ -3904,6 +3911,13 @@ Click on the labels to display the table details.
         <td>getProcess</td>
         <td>int</td>
         <td>The VMC physics code (as int) that generated this particle (see header TMCProcess.h in ROOT)</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::IsPhysicalPrimary</td>
+        <td>D</td>
+        <td>isPhysicalPrimary</td>
+        <td>bool</td>
+        <td>True if particle is considered a physical primary according to the ALICE definition</td>
       </tr>
       <tr>
         <td>o2::aod::mcparticle::Eta</td>
