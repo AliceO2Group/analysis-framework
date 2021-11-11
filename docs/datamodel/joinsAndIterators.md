@@ -417,10 +417,17 @@ The data model provides in addition to the set of tables also some predefined jo
     </ul>
   </div>
 
-  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::ReducedEventMC</button>
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::ReducedMCEvent</button>
   <div class="panel">
     <ul>
-        <li>o2::aod::ReducedEventMC = o2::aod::ReducedEventsMC::iterator</li>
+        <li>o2::aod::ReducedMCEvent = o2::aod::ReducedMCEvents::iterator</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::ReducedMCEventLabel</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::ReducedMCEventLabel = o2::aod::ReducedMCEventLabels::iterator</li>
     </ul>
   </div>
 
@@ -484,6 +491,13 @@ The data model provides in addition to the set of tables also some predefined jo
   <div class="panel">
     <ul>
         <li>o2::aod::ReducedMuonCov = o2::aod::ReducedMuonsCov::iterator</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::ReducedMuonsLabel</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::ReducedMuonsLabel = o2::aod::ReducedMuonsLabels::iterator</li>
     </ul>
   </div>
 
@@ -784,7 +798,7 @@ The data model provides in addition to the set of tables also some predefined jo
   <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::analysis::hf_cuts_single_track::MY_TYPE1</button>
   <div class="panel">
     <ul>
-        <li>o2::analysis::hf_cuts_single_track::MY_TYPE1 = soa::Join<o2::analysis::hf_cuts_single_track::aod::Tracks, o2::analysis::hf_cuts_single_track::aod::TracksCov, o2::analysis::hf_cuts_single_track::aod::TracksExtra, o2::analysis::hf_cuts_single_track::aod::McTrackLabels></li>
+        <li>o2::analysis::hf_cuts_single_track::MY_TYPE1 = soa::Join<o2::analysis::hf_cuts_single_track::aod::Tracks, o2::analysis::hf_cuts_single_track::aod::TracksCov, o2::analysis::hf_cuts_single_track::aod::TracksExtra, o2::analysis::hf_cuts_single_track::aod::TracksExtended, o2::analysis::hf_cuts_single_track::aod::McTrackLabels></li>
     </ul>
   </div>
 
@@ -798,7 +812,7 @@ The data model provides in addition to the set of tables also some predefined jo
   <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::analysis::hf_cuts_single_track::MY_TYPE1</button>
   <div class="panel">
     <ul>
-        <li>o2::analysis::hf_cuts_single_track::MY_TYPE1 = soa::Join<o2::analysis::hf_cuts_single_track::aod::Tracks, o2::analysis::hf_cuts_single_track::aod::TracksCov, o2::analysis::hf_cuts_single_track::aod::TracksExtra></li>
+        <li>o2::analysis::hf_cuts_single_track::MY_TYPE1 = soa::Join<o2::analysis::hf_cuts_single_track::aod::Tracks, o2::analysis::hf_cuts_single_track::aod::TracksCov, o2::analysis::hf_cuts_single_track::aod::TracksExtra, o2::analysis::hf_cuts_single_track::aod::TracksExtended></li>
     </ul>
   </div>
 
