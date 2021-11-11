@@ -227,6 +227,20 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGDQ
         <td>uint16_t</td>
         <td>Number of tracks used for the vertex</td>
       </tr>
+      <tr>
+        <td>o2::aod::&zwnj;collision::CollisionTime</td>
+        <td></td>
+        <td>collisionTime</td>
+        <td>float</td>
+        <td>Collision time in ns relative to BC stored in bc()</td>
+      </tr>
+      <tr>
+        <td>o2::aod::&zwnj;collision::CollisionTimeRes</td>
+        <td></td>
+        <td>collisionTimeRes</td>
+        <td>float</td>
+        <td>Resolution of collision time</td>
+      </tr>
     </table>
   </div>
 
@@ -396,13 +410,6 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGDQ
         <td>reducedeventId</td>
         <td>int32</td>
         <td>Pointer into ReducedEvents</td>
-      </tr>
-      <tr>
-        <td>o2::aod::reducedtrack::Idx</td>
-        <td></td>
-        <td>idx</td>
-        <td>uint16_t</td>
-        <td></td>
       </tr>
       <tr>
         <td>o2::aod::reducedtrack::FilteringFlags</td>
@@ -1362,6 +1369,20 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGDQ
         <td>uint16_t</td>
         <td>Number of tracks used for the vertex</td>
       </tr>
+      <tr>
+        <td>o2::aod::&zwnj;collision::CollisionTime</td>
+        <td></td>
+        <td>collisionTime</td>
+        <td>float</td>
+        <td>Collision time in ns relative to BC stored in bc()</td>
+      </tr>
+      <tr>
+        <td>o2::aod::&zwnj;collision::CollisionTimeRes</td>
+        <td></td>
+        <td>collisionTimeRes</td>
+        <td>float</td>
+        <td>Resolution of collision time</td>
+      </tr>
     </table>
   </div>
 
@@ -1497,7 +1518,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGDQ
     </table>
   </div>
 
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::ReducedEventsMC</button>
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::ReducedMCEvents</button>
   <div class="panel">
     <div>
        Event level MC truth information
@@ -1507,7 +1528,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGDQ
     </div>
     <div>Is used in:
       <ul>
-        <li>o2::aod::ReducedEventMC = o2::aod::ReducedEventsMC::iterator</li>
+        <li>o2::aod::ReducedMCEvent = o2::aod::ReducedMCEvents::iterator</li>
       </ul>
     </div>
     <table class=DataModel>
@@ -1517,6 +1538,13 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGDQ
         <th>Getter</th>
         <th>Type</th>
         <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::soa::Index</td>
+        <td>GI</td>
+        <td>globalIndex</td>
+        <td>int64_t</td>
+        <td></td>
       </tr>
       <tr>
         <td>o2::aod::mccollision::GeneratorsID</td>
@@ -1570,6 +1598,44 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGDQ
     </table>
   </div>
 
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::ReducedMCEventLabels</button>
+  <div class="panel">
+    <div>
+       Table joined to the ReducedEvents table containing the MC index
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master/PWGDQ/DataModel/ReducedInfoTables.h" target="_blank">PWGDQ/DataModel/ReducedInfoTables.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::ReducedMCEventLabel = o2::aod::ReducedMCEventLabels::iterator</li>
+      </ul>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::reducedeventlabel::ReducedMCEventId</td>
+        <td>I</td>
+        <td>reducedMCeventId</td>
+        <td>int32</td>
+        <td>MC collision</td>
+      </tr>
+      <tr>
+        <td>o2::aod::reducedeventlabel::McMask</td>
+        <td></td>
+        <td>mcMask</td>
+        <td>uint16_t</td>
+        <td>Bit mask to indicate collision mismatches (bit ON means mismatch). Bit 15: indicates negative label</td>
+      </tr>
+    </table>
+  </div>
+
   <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::ReducedTracks</button>
   <div class="panel">
     <div>
@@ -1604,13 +1670,6 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGDQ
         <td>reducedeventId</td>
         <td>int32</td>
         <td>Pointer into ReducedEvents</td>
-      </tr>
-      <tr>
-        <td>o2::aod::reducedtrack::Idx</td>
-        <td></td>
-        <td>idx</td>
-        <td>uint16_t</td>
-        <td></td>
       </tr>
       <tr>
         <td>o2::aod::reducedtrack::FilteringFlags</td>
@@ -2143,11 +2202,11 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGDQ
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::reducedtrack::ReducedEventId</td>
+        <td>o2::aod::reducedtrackMC::ReducedMCEventId</td>
         <td>I</td>
-        <td>reducedeventId</td>
+        <td>reducedMCeventId</td>
         <td>int32</td>
-        <td>Pointer into ReducedEvents</td>
+        <td>Pointer into ReducedMCEvents</td>
       </tr>
       <tr>
         <td>o2::aod::mcparticle::PdgCode</td>
@@ -2266,7 +2325,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGDQ
         <td></td>
         <td>mcReducedFlags</td>
         <td>uint16_t</td>
-        <td></td>
+        <td>Flags to hold compressed MC selection information</td>
       </tr>
       <tr>
         <td>o2::aod::reducedtrackMC::Px</td>
@@ -2335,14 +2394,14 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGDQ
         <th>Comment</th>
       </tr>
       <tr>
-        <td>o2::aod::reducedtrackMC::ReducedMCTrackId</td>
+        <td>o2::aod::reducedbarreltracklabel::ReducedMCTrackId</td>
         <td>I</td>
         <td>reducedMCTrackId</td>
         <td>int32</td>
         <td>Pointer into ReducedMCTracks</td>
       </tr>
       <tr>
-        <td>o2::aod::reducedtrackMC::McMask</td>
+        <td>o2::aod::reducedbarreltracklabel::McMask</td>
         <td></td>
         <td>mcMask</td>
         <td>uint16_t</td>
@@ -2353,7 +2412,432 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGDQ
         <td></td>
         <td>mcReducedFlags</td>
         <td>uint16_t</td>
+        <td>Flags to hold compressed MC selection information</td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::ReducedMuons</button>
+  <div class="panel">
+    <div>
+
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master/PWGDQ/DataModel/ReducedInfoTables.h" target="_blank">PWGDQ/DataModel/ReducedInfoTables.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::ReducedMuon = o2::aod::ReducedMuons::iterator</li>
+      </ul>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::soa::Index</td>
+        <td>GI</td>
+        <td>globalIndex</td>
+        <td>int64_t</td>
         <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::reducedmuon::ReducedEventId</td>
+        <td>I</td>
+        <td>reducedeventId</td>
+        <td>int32</td>
+        <td>Pointer into ReducedEvents</td>
+      </tr>
+      <tr>
+        <td>o2::aod::reducedmuon::FilteringFlags</td>
+        <td></td>
+        <td>filteringFlags</td>
+        <td>uint8_t</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::reducedmuon::Pt</td>
+        <td></td>
+        <td>pt</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::reducedmuon::Eta</td>
+        <td></td>
+        <td>eta</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::reducedmuon::Phi</td>
+        <td></td>
+        <td>phi</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::reducedmuon::Sign</td>
+        <td></td>
+        <td>sign</td>
+        <td>int</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::reducedmuon::Px</td>
+        <td>D</td>
+        <td>px</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::reducedmuon::Py</td>
+        <td>D</td>
+        <td>py</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::reducedmuon::Pz</td>
+        <td>D</td>
+        <td>pz</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::reducedmuon::P</td>
+        <td>D</td>
+        <td>p</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::ReducedMuonsExtra</button>
+  <div class="panel">
+    <div>
+
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master/PWGDQ/DataModel/ReducedInfoTables.h" target="_blank">PWGDQ/DataModel/ReducedInfoTables.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::ReducedMuonExtra = o2::aod::ReducedMuonsExtra::iterator</li>
+      </ul>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::fwdtrack::NClusters</td>
+        <td></td>
+        <td>nClusters</td>
+        <td>int8_t</td>
+        <td>Number of clusters</td>
+      </tr>
+      <tr>
+        <td>o2::aod::fwdtrack::PDca</td>
+        <td></td>
+        <td>pDca</td>
+        <td>float</td>
+        <td>PDca for MUONStandalone</td>
+      </tr>
+      <tr>
+        <td>o2::aod::fwdtrack::RAtAbsorberEnd</td>
+        <td></td>
+        <td>rAtAbsorberEnd</td>
+        <td>float</td>
+        <td>RAtAbsorberEnd for MUONStandalone tracks and GlobalMuonTrackstracks</td>
+      </tr>
+      <tr>
+        <td>o2::aod::fwdtrack::Chi2</td>
+        <td></td>
+        <td>chi2</td>
+        <td>float</td>
+        <td>Track chi^2</td>
+      </tr>
+      <tr>
+        <td>o2::aod::fwdtrack::Chi2MatchMCHMID</td>
+        <td></td>
+        <td>chi2MatchMCHMID</td>
+        <td>float</td>
+        <td>MCH-MID Match Chi2 for MUONStandalone tracks</td>
+      </tr>
+      <tr>
+        <td>o2::aod::fwdtrack::Chi2MatchMCHMFT</td>
+        <td></td>
+        <td>chi2MatchMCHMFT</td>
+        <td>float</td>
+        <td>MCH-MFT Match Chi2 for GlobalMuonTracks</td>
+      </tr>
+      <tr>
+        <td>o2::aod::fwdtrack::MatchScoreMCHMFT</td>
+        <td></td>
+        <td>matchScoreMCHMFT</td>
+        <td>float</td>
+        <td>MCH-MFT Machine Learning Matching Score for GlobalMuonTracks</td>
+      </tr>
+      <tr>
+        <td>o2::aod::fwdtrack::MFTTrackId</td>
+        <td>I</td>
+        <td>matchMFTTrackId</td>
+        <td>int32</td>
+        <td>ID of matching MFT track for GlobalMuonTracks and GlobalForwardTracks</td>
+      </tr>
+      <tr>
+        <td>o2::aod::fwdtrack::MCHTrackId</td>
+        <td>SI</td>
+        <td>matchMCHTrackId</td>
+        <td>int</td>
+        <td>Index of matching MCH track for GlobalMuonTracks and GlobalForwardTracks</td>
+      </tr>
+      <tr>
+        <td>o2::aod::fwdtrack::MCHBitMap</td>
+        <td></td>
+        <td>mchBitMap</td>
+        <td>uint16_t</td>
+        <td>Fired muon trackig chambers bitmap</td>
+      </tr>
+      <tr>
+        <td>o2::aod::fwdtrack::MIDBitMap</td>
+        <td></td>
+        <td>midBitMap</td>
+        <td>uint8_t</td>
+        <td>MID bitmap: non-bending plane (4bit), bending plane (4bit)</td>
+      </tr>
+      <tr>
+        <td>o2::aod::fwdtrack::MIDBoards</td>
+        <td></td>
+        <td>midBoards</td>
+        <td>uint32_t</td>
+        <td>Local boards on each MID plane (8 bits per plane)</td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::ReducedMuonsCov</button>
+  <div class="panel">
+    <div>
+
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master/PWGDQ/DataModel/ReducedInfoTables.h" target="_blank">PWGDQ/DataModel/ReducedInfoTables.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::ReducedMuonCov = o2::aod::ReducedMuonsCov::iterator</li>
+      </ul>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::fwdtrack::X</td>
+        <td></td>
+        <td>x</td>
+        <td>float</td>
+        <td>TrackParFwd parameter x</td>
+      </tr>
+      <tr>
+        <td>o2::aod::fwdtrack::Y</td>
+        <td></td>
+        <td>y</td>
+        <td>float</td>
+        <td>TrackParFwd parameter y</td>
+      </tr>
+      <tr>
+        <td>o2::aod::fwdtrack::Z</td>
+        <td></td>
+        <td>z</td>
+        <td>float</td>
+        <td>TrackParFwd propagation parameter z</td>
+      </tr>
+      <tr>
+        <td>o2::aod::reducedmuon::RawPhi</td>
+        <td></td>
+        <td>rawPhi</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::fwdtrack::Tgl</td>
+        <td></td>
+        <td>tgl</td>
+        <td>float</td>
+        <td>TrackParFwd parameter tan(\lamba); (\lambda = 90 - \theta_{polar})</td>
+      </tr>
+      <tr>
+        <td>o2::aod::fwdtrack::Signed1Pt</td>
+        <td></td>
+        <td>signed1Pt</td>
+        <td>float</td>
+        <td>TrackParFwd parameter: charged inverse transverse momentum; (q/pt)</td>
+      </tr>
+      <tr>
+        <td>o2::aod::fwdtrack::CXX</td>
+        <td>E</td>
+        <td>cXX</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::fwdtrack::CXY</td>
+        <td>E</td>
+        <td>cXY</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::fwdtrack::CYY</td>
+        <td>E</td>
+        <td>cYY</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::fwdtrack::CPhiX</td>
+        <td>E</td>
+        <td>cPhiX</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::fwdtrack::CPhiY</td>
+        <td>E</td>
+        <td>cPhiY</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::fwdtrack::CPhiPhi</td>
+        <td>E</td>
+        <td>cPhiPhi</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::fwdtrack::CTglX</td>
+        <td>E</td>
+        <td>cTglX</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::fwdtrack::CTglY</td>
+        <td>E</td>
+        <td>cTglY</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::fwdtrack::CTglPhi</td>
+        <td>E</td>
+        <td>cTglPhi</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::fwdtrack::CTglTgl</td>
+        <td>E</td>
+        <td>cTglTgl</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::fwdtrack::C1PtX</td>
+        <td>E</td>
+        <td>c1PtX</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::fwdtrack::C1PtY</td>
+        <td>E</td>
+        <td>c1PtY</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::fwdtrack::C1PtPhi</td>
+        <td>E</td>
+        <td>c1PtPhi</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::fwdtrack::C1PtTgl</td>
+        <td>E</td>
+        <td>c1PtTgl</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::fwdtrack::C1Pt21Pt2</td>
+        <td>E</td>
+        <td>c1Pt21Pt2</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::ReducedMuonsLabels</button>
+  <div class="panel">
+    <div>
+
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master/PWGDQ/DataModel/ReducedInfoTables.h" target="_blank">PWGDQ/DataModel/ReducedInfoTables.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::ReducedMuonsLabel = o2::aod::ReducedMuonsLabels::iterator</li>
+      </ul>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::reducedmuonlabel::ReducedMCTrackId</td>
+        <td>I</td>
+        <td>reducedMCTrackId</td>
+        <td>int32</td>
+        <td>Pointer into ReducedMCTracks</td>
+      </tr>
+      <tr>
+        <td>o2::aod::reducedmuonlabel::McMask</td>
+        <td></td>
+        <td>mcMask</td>
+        <td>uint16_t</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::reducedtrackMC::McReducedFlags</td>
+        <td></td>
+        <td>mcReducedFlags</td>
+        <td>uint16_t</td>
+        <td>Flags to hold compressed MC selection information</td>
       </tr>
     </table>
   </div>
