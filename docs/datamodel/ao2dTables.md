@@ -324,13 +324,6 @@ Click on the labels to display the table details.
         <td>(sign of charge)/Pt in c/GeV. Use pt() and sign() instead</td>
       </tr>
       <tr>
-        <td>o2::aod::track::NormalizedPhi</td>
-        <td>D</td>
-        <td>phi</td>
-        <td>float</td>
-        <td>Phi of the track, in radians within [0, 2pi)</td>
-      </tr>
-      <tr>
         <td>o2::aod::track::Px</td>
         <td>D</td>
         <td>px</td>
@@ -461,13 +454,6 @@ Click on the labels to display the table details.
         <td>(sign of charge)/Pt in c/GeV. Use pt() and sign() instead</td>
       </tr>
       <tr>
-        <td>o2::aod::track::NormalizedPhi</td>
-        <td>D</td>
-        <td>phi</td>
-        <td>float</td>
-        <td>Phi of the track, in radians within [0, 2pi)</td>
-      </tr>
-      <tr>
         <td>o2::aod::track::Px</td>
         <td>D</td>
         <td>px</td>
@@ -517,11 +503,11 @@ Click on the labels to display the table details.
         <td>Pseudorapidity</td>
       </tr>
       <tr>
-        <td>o2::aod::track::RawPhi</td>
+        <td>o2::aod::track::Phi</td>
         <td>E</td>
-        <td>phiraw</td>
+        <td>phi</td>
         <td>float</td>
-        <td>Raw Phi (not folded onto [0, 2pi)). Use phi() instead</td>
+        <td>Phi of the track, in radians within [0, 2pi)</td>
       </tr>
     </table>
   </div>
