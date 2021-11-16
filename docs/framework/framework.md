@@ -473,8 +473,8 @@ You can also specify filters on associated quantities:
 struct MyTask : AnalysisTask {
   Filter<Collisions> collisionFilter = max(track::pt) > 1;
 
-  void process(Collsions const &filteredCollisions) {
-    for (auto& collision: collisions) {
+  void process(Collisions const &filteredCollisions) {
+    for (auto& collision: filteredCollisions) {
     ...
     }
   }
@@ -519,8 +519,8 @@ One of the features of the current framework is the ability to customize on the 
 struct MyTask : AnalysisTask {
   Filter<Collisions> collisionFilter = max(track::pt) > configurable<float>("my-pt-cut");
 
-  void process(Collsions const &filteredCollisions) {
-    for (auto& collision: collisions) {
+  void process(Collisions const &filteredCollisions) {
+    for (auto& collision: filteredCollisions) {
     ...
     }
   }
