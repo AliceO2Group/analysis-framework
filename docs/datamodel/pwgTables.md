@@ -13,6 +13,252 @@ Click on the labels to display the table details.
 
 ## PWG-CF
 
+####  o2-analysis-cf-dptdpt-filter
+Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGCF/TableProducer//dptdptfilter.cxx" target="_blank">dptdptfilter.cxx</a>
+<div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::DptDptCFAcceptedCollisions</button>
+  <div class="panel">
+    <div>
+       Accepted reconstructed collisions/events filtered table
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master/PWGCF/DataModel/DptDptFiltered.h" target="_blank">PWGCF/DataModel/DptDptFiltered.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::DptDptCFAcceptedCollision = o2::aod::DptDptCFAcceptedCollisions::iterator</li>
+      </ul>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::soa::Index</td>
+        <td>GI</td>
+        <td>globalIndex</td>
+        <td>int64_t</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::&zwnj;collision::BCId</td>
+        <td>I</td>
+        <td>bcId</td>
+        <td>int32</td>
+        <td>Most probably BC to where this collision has occured</td>
+      </tr>
+      <tr>
+        <td>o2::aod::&zwnj;collision::PosZ</td>
+        <td></td>
+        <td>posZ</td>
+        <td>float</td>
+        <td>Z Vertex position in cm</td>
+      </tr>
+      <tr>
+        <td>o2::aod::dptdptfilter::DptDptCFCollisionAccepted</td>
+        <td></td>
+        <td>collisionaccepted</td>
+        <td>bool</td>
+        <td>If the collision/event has been accepted or not</td>
+      </tr>
+      <tr>
+        <td>o2::aod::dptdptfilter::DptDptCFCollisionCentMult</td>
+        <td></td>
+        <td>centmult</td>
+        <td>float</td>
+        <td>The centrality/multiplicity pecentile</td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::DptDptCFAcceptedTrueCollisions</button>
+  <div class="panel">
+    <div>
+       Accepted generated collisions/events filtered table
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master/PWGCF/DataModel/DptDptFiltered.h" target="_blank">PWGCF/DataModel/DptDptFiltered.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::DptDptCFAcceptedTrueCollision = o2::aod::DptDptCFAcceptedTrueCollisions::iterator</li>
+      </ul>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::soa::Index</td>
+        <td>GI</td>
+        <td>globalIndex</td>
+        <td>int64_t</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::&zwnj;collision::BCId</td>
+        <td>I</td>
+        <td>bcId</td>
+        <td>int32</td>
+        <td>Most probably BC to where this collision has occured</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mccollision::PosZ</td>
+        <td></td>
+        <td>posZ</td>
+        <td>float</td>
+        <td>Z vertex position in cm</td>
+      </tr>
+      <tr>
+        <td>o2::aod::dptdptfilter::DptDptCFCollisionAccepted</td>
+        <td></td>
+        <td>collisionaccepted</td>
+        <td>bool</td>
+        <td>If the collision/event has been accepted or not</td>
+      </tr>
+      <tr>
+        <td>o2::aod::dptdptfilter::DptDptCFCollisionCentMult</td>
+        <td></td>
+        <td>centmult</td>
+        <td>float</td>
+        <td>The centrality/multiplicity pecentile</td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::ScannedTracks</button>
+  <div class="panel">
+    <div>
+       The reconstructed tracks filtered table
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master/PWGCF/DataModel/DptDptFiltered.h" target="_blank">PWGCF/DataModel/DptDptFiltered.h</a>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::dptdptfilter::DptDptCFAcceptedCollisionId</td>
+        <td>I</td>
+        <td>eventId</td>
+        <td>int32</td>
+        <td>Reconstructed collision/event</td>
+      </tr>
+      <tr>
+        <td>o2::aod::dptdptfilter::TrackacceptedAsOne</td>
+        <td></td>
+        <td>trackacceptedasone</td>
+        <td>bool</td>
+        <td>Track accepted as type one</td>
+      </tr>
+      <tr>
+        <td>o2::aod::dptdptfilter::TrackacceptedAsTwo</td>
+        <td></td>
+        <td>trackacceptedastwo</td>
+        <td>bool</td>
+        <td>Track accepted as type two</td>
+      </tr>
+      <tr>
+        <td>o2::aod::dptdptfilter::Pt</td>
+        <td></td>
+        <td>pt</td>
+        <td>float</td>
+        <td>The track transverse momentum</td>
+      </tr>
+      <tr>
+        <td>o2::aod::dptdptfilter::Eta</td>
+        <td></td>
+        <td>eta</td>
+        <td>float</td>
+        <td>The track pseudorapidity</td>
+      </tr>
+      <tr>
+        <td>o2::aod::dptdptfilter::Phi</td>
+        <td></td>
+        <td>phi</td>
+        <td>float</td>
+        <td>The track azimuthal angle</td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::ScannedTrueTracks</button>
+  <div class="panel">
+    <div>
+       The generated particles filtered table
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master/PWGCF/DataModel/DptDptFiltered.h" target="_blank">PWGCF/DataModel/DptDptFiltered.h</a>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::dptdptfilter::DptDptCFAcceptedTrueCollisionId</td>
+        <td>I</td>
+        <td>mceventId</td>
+        <td>int32</td>
+        <td>Generated collision/event</td>
+      </tr>
+      <tr>
+        <td>o2::aod::dptdptfilter::TrackacceptedAsOne</td>
+        <td></td>
+        <td>trackacceptedasone</td>
+        <td>bool</td>
+        <td>Track accepted as type one</td>
+      </tr>
+      <tr>
+        <td>o2::aod::dptdptfilter::TrackacceptedAsTwo</td>
+        <td></td>
+        <td>trackacceptedastwo</td>
+        <td>bool</td>
+        <td>Track accepted as type two</td>
+      </tr>
+      <tr>
+        <td>o2::aod::dptdptfilter::Pt</td>
+        <td></td>
+        <td>pt</td>
+        <td>float</td>
+        <td>The track transverse momentum</td>
+      </tr>
+      <tr>
+        <td>o2::aod::dptdptfilter::Eta</td>
+        <td></td>
+        <td>eta</td>
+        <td>float</td>
+        <td>The track pseudorapidity</td>
+      </tr>
+      <tr>
+        <td>o2::aod::dptdptfilter::Phi</td>
+        <td></td>
+        <td>phi</td>
+        <td>float</td>
+        <td>The track azimuthal angle</td>
+      </tr>
+    </table>
+  </div>
+
+</div>
+
 ####  o2-analysis-cf-filter-correlations
 Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGCF/TableProducer//filterCorrelations.cxx" target="_blank">filterCorrelations.cxx</a>
 <div>
@@ -7100,7 +7346,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
 
 </div>
 
-####  o2-analysis-hf-d0-candidate-selector-ALICE3-Barrel
+####  o2-analysis-hf-d0-candidate-selector-alice3-barrel
 Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer//HFD0CandidateSelectorALICE3Barrel.cxx" target="_blank">HFD0CandidateSelectorALICE3Barrel.cxx</a>
 <div>
 
@@ -7174,7 +7420,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
 
 </div>
 
-####  o2-analysis-hf-d0-candidate-selector-ALICE3-Forward
+####  o2-analysis-hf-d0-candidate-selector-alice3-forward
 Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer//HFD0CandidateSelectorALICE3Forward.cxx" target="_blank">HFD0CandidateSelectorALICE3Forward.cxx</a>
 <div>
 
@@ -7220,7 +7466,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
 
 </div>
 
-####  o2-analysis-hf-d0-candidate-selector-parametrizedPID
+####  o2-analysis-hf-d0-candidate-selector-parametrized-pid
 Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer//HFD0CandidateSelectorparametrizedPID.cxx" target="_blank">HFD0CandidateSelectorparametrizedPID.cxx</a>
 <div>
 
@@ -7478,7 +7724,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
 
 </div>
 
-####  o2-analysis-hf-lc-candidate-selector-ALICE3
+####  o2-analysis-hf-lc-candidate-selector-alice3
 Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer//HFLcCandidateSelectorALICE3.cxx" target="_blank">HFLcCandidateSelectorALICE3.cxx</a>
 <div>
 
@@ -7559,7 +7805,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
 
 </div>
 
-####  o2-analysis-hf-lc-candidate-selector-parametrizedPID
+####  o2-analysis-hf-lc-candidate-selector-parametrized-pid
 Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer//HFLcCandidateSelectorparametrizedPID.cxx" target="_blank">HFLcCandidateSelectorparametrizedPID.cxx</a>
 <div>
 
@@ -7727,6 +7973,27 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <td>o2::aod::hf_seltrack::DCAPrim1</td>
         <td></td>
         <td>dcaPrim1</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_seltrack::PxProng</td>
+        <td></td>
+        <td>pxProng</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_seltrack::PyProng</td>
+        <td></td>
+        <td>pyProng</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_seltrack::PzProng</td>
+        <td></td>
+        <td>pzProng</td>
         <td>float</td>
         <td></td>
       </tr>
@@ -10168,11 +10435,11 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGJE
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::jet:CollisionId</td>
-        <td>GI</td>
-        <td></td>
-        <td>?</td>
-        <td></td>
+        <td>o2::aod::jet::CollisionId</td>
+        <td>I</td>
+        <td>collisionId</td>
+        <td>int32</td>
+        <td>Pointer into Collisions</td>
       </tr>
       <tr>
         <td>o2::aod::jet::Pt</td>
@@ -10283,18 +10550,18 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGJE
         <th>Comment</th>
       </tr>
       <tr>
-        <td>o2::aod::jetconstituents:JetId</td>
-        <td>GI</td>
-        <td></td>
-        <td>?</td>
-        <td></td>
+        <td>o2::aod::jetconstituents::JetId</td>
+        <td>I</td>
+        <td>jetId</td>
+        <td>int32</td>
+        <td>Pointer into Jets</td>
       </tr>
       <tr>
-        <td>o2::aod::jetconstituents:TrackId</td>
-        <td>GI</td>
-        <td></td>
-        <td>?</td>
-        <td></td>
+        <td>o2::aod::jetconstituents::TrackId</td>
+        <td>I</td>
+        <td>trackId</td>
+        <td>int32</td>
+        <td>Pointer into Tracks</td>
       </tr>
     </table>
   </div>
@@ -10321,11 +10588,11 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGJE
         <th>Comment</th>
       </tr>
       <tr>
-        <td>o2::aod::jetconstituents:JetId</td>
-        <td>GI</td>
-        <td></td>
-        <td>?</td>
-        <td></td>
+        <td>o2::aod::jetconstituents::JetId</td>
+        <td>I</td>
+        <td>jetId</td>
+        <td>int32</td>
+        <td>Pointer into Jets</td>
       </tr>
       <tr>
         <td>o2::aod::jetconstituents::EMCALClusterId</td>
@@ -10359,11 +10626,11 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGJE
         <th>Comment</th>
       </tr>
       <tr>
-        <td>o2::aod::jetconstituents:JetId</td>
-        <td>GI</td>
-        <td></td>
-        <td>?</td>
-        <td></td>
+        <td>o2::aod::jetconstituents::JetId</td>
+        <td>I</td>
+        <td>jetId</td>
+        <td>int32</td>
+        <td>Pointer into Jets</td>
       </tr>
       <tr>
         <td>o2::aod::constituentssub::Pt</td>
@@ -10467,11 +10734,11 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGJE
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::jet:McCollisionId</td>
-        <td>GI</td>
-        <td></td>
-        <td>?</td>
-        <td></td>
+        <td>o2::aod::jet::McCollisionId</td>
+        <td>I</td>
+        <td>mcCollisionId</td>
+        <td>int32</td>
+        <td>Pointer into McCollisions</td>
       </tr>
       <tr>
         <td>o2::aod::jet::Pt</td>
@@ -10582,18 +10849,18 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGJE
         <th>Comment</th>
       </tr>
       <tr>
-        <td>o2::aod::mcparticleleveljetconstituents:MCParticleLevelJetId</td>
-        <td>GI</td>
-        <td></td>
-        <td>?</td>
-        <td></td>
+        <td>o2::aod::mcparticleleveljetconstituents::MCParticleLevelJetId</td>
+        <td>I</td>
+        <td>jetId</td>
+        <td>int32</td>
+        <td>Pointer into MCParticleLevelJets</td>
       </tr>
       <tr>
-        <td>o2::aod::mcparticleleveljetconstituents:McParticleId</td>
-        <td>GI</td>
-        <td></td>
-        <td>?</td>
-        <td></td>
+        <td>o2::aod::mcparticleleveljetconstituents::McParticleId</td>
+        <td>I</td>
+        <td>trackId</td>
+        <td>int32</td>
+        <td>Pointer into McParticles</td>
       </tr>
     </table>
   </div>
@@ -10620,11 +10887,11 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGJE
         <th>Comment</th>
       </tr>
       <tr>
-        <td>o2::aod::mcparticleleveljetconstituents:MCParticleLevelJetId</td>
-        <td>GI</td>
-        <td></td>
-        <td>?</td>
-        <td></td>
+        <td>o2::aod::mcparticleleveljetconstituents::MCParticleLevelJetId</td>
+        <td>I</td>
+        <td>jetId</td>
+        <td>int32</td>
+        <td>Pointer into MCParticleLevelJets</td>
       </tr>
       <tr>
         <td>o2::aod::mcparticleleveljetconstituents::EMCALClusterId</td>
@@ -10658,11 +10925,11 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGJE
         <th>Comment</th>
       </tr>
       <tr>
-        <td>o2::aod::mcparticleleveljetconstituents:MCParticleLevelJetId</td>
-        <td>GI</td>
-        <td></td>
-        <td>?</td>
-        <td></td>
+        <td>o2::aod::mcparticleleveljetconstituents::MCParticleLevelJetId</td>
+        <td>I</td>
+        <td>jetId</td>
+        <td>int32</td>
+        <td>Pointer into MCParticleLevelJets</td>
       </tr>
       <tr>
         <td>o2::aod::constituentssub::Pt</td>
@@ -10766,11 +11033,11 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGJE
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::jet:CollisionId</td>
-        <td>GI</td>
-        <td></td>
-        <td>?</td>
-        <td></td>
+        <td>o2::aod::jet::CollisionId</td>
+        <td>I</td>
+        <td>collisionId</td>
+        <td>int32</td>
+        <td>Pointer into Collisions</td>
       </tr>
       <tr>
         <td>o2::aod::jet::Pt</td>
@@ -10881,18 +11148,18 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGJE
         <th>Comment</th>
       </tr>
       <tr>
-        <td>o2::aod::mcdetectorleveljetconstituents:MCDetectorLevelJetId</td>
-        <td>GI</td>
-        <td></td>
-        <td>?</td>
-        <td></td>
+        <td>o2::aod::mcdetectorleveljetconstituents::MCDetectorLevelJetId</td>
+        <td>I</td>
+        <td>jetId</td>
+        <td>int32</td>
+        <td>Pointer into MCDetectorLevelJets</td>
       </tr>
       <tr>
-        <td>o2::aod::mcdetectorleveljetconstituents:TrackId</td>
-        <td>GI</td>
-        <td></td>
-        <td>?</td>
-        <td></td>
+        <td>o2::aod::mcdetectorleveljetconstituents::TrackId</td>
+        <td>I</td>
+        <td>trackId</td>
+        <td>int32</td>
+        <td>Pointer into Tracks</td>
       </tr>
     </table>
   </div>
@@ -10919,11 +11186,11 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGJE
         <th>Comment</th>
       </tr>
       <tr>
-        <td>o2::aod::mcdetectorleveljetconstituents:MCDetectorLevelJetId</td>
-        <td>GI</td>
-        <td></td>
-        <td>?</td>
-        <td></td>
+        <td>o2::aod::mcdetectorleveljetconstituents::MCDetectorLevelJetId</td>
+        <td>I</td>
+        <td>jetId</td>
+        <td>int32</td>
+        <td>Pointer into MCDetectorLevelJets</td>
       </tr>
       <tr>
         <td>o2::aod::mcdetectorleveljetconstituents::EMCALClusterId</td>
@@ -10957,11 +11224,11 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGJE
         <th>Comment</th>
       </tr>
       <tr>
-        <td>o2::aod::mcdetectorleveljetconstituents:MCDetectorLevelJetId</td>
-        <td>GI</td>
-        <td></td>
-        <td>?</td>
-        <td></td>
+        <td>o2::aod::mcdetectorleveljetconstituents::MCDetectorLevelJetId</td>
+        <td>I</td>
+        <td>jetId</td>
+        <td>int32</td>
+        <td>Pointer into MCDetectorLevelJets</td>
       </tr>
       <tr>
         <td>o2::aod::constituentssub::Pt</td>
@@ -11065,11 +11332,11 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGJE
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::jet:CollisionId</td>
-        <td>GI</td>
-        <td></td>
-        <td>?</td>
-        <td></td>
+        <td>o2::aod::jet::CollisionId</td>
+        <td>I</td>
+        <td>collisionId</td>
+        <td>int32</td>
+        <td>Pointer into Collisions</td>
       </tr>
       <tr>
         <td>o2::aod::jet::Pt</td>
@@ -11180,18 +11447,18 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGJE
         <th>Comment</th>
       </tr>
       <tr>
-        <td>o2::aod::hybridintermediateconstituents:HybridIntermediateJetId</td>
-        <td>GI</td>
-        <td></td>
-        <td>?</td>
-        <td></td>
+        <td>o2::aod::hybridintermediateconstituents::HybridIntermediateJetId</td>
+        <td>I</td>
+        <td>jetId</td>
+        <td>int32</td>
+        <td>Pointer into HybridIntermediateJets</td>
       </tr>
       <tr>
-        <td>o2::aod::hybridintermediateconstituents:TrackId</td>
-        <td>GI</td>
-        <td></td>
-        <td>?</td>
-        <td></td>
+        <td>o2::aod::hybridintermediateconstituents::TrackId</td>
+        <td>I</td>
+        <td>trackId</td>
+        <td>int32</td>
+        <td>Pointer into Tracks</td>
       </tr>
     </table>
   </div>
@@ -11218,11 +11485,11 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGJE
         <th>Comment</th>
       </tr>
       <tr>
-        <td>o2::aod::hybridintermediateconstituents:HybridIntermediateJetId</td>
-        <td>GI</td>
-        <td></td>
-        <td>?</td>
-        <td></td>
+        <td>o2::aod::hybridintermediateconstituents::HybridIntermediateJetId</td>
+        <td>I</td>
+        <td>jetId</td>
+        <td>int32</td>
+        <td>Pointer into HybridIntermediateJets</td>
       </tr>
       <tr>
         <td>o2::aod::hybridintermediateconstituents::EMCALClusterId</td>
@@ -11256,11 +11523,11 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGJE
         <th>Comment</th>
       </tr>
       <tr>
-        <td>o2::aod::hybridintermediateconstituents:HybridIntermediateJetId</td>
-        <td>GI</td>
-        <td></td>
-        <td>?</td>
-        <td></td>
+        <td>o2::aod::hybridintermediateconstituents::HybridIntermediateJetId</td>
+        <td>I</td>
+        <td>jetId</td>
+        <td>int32</td>
+        <td>Pointer into HybridIntermediateJets</td>
       </tr>
       <tr>
         <td>o2::aod::constituentssub::Pt</td>
@@ -11370,11 +11637,11 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGJE
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::jet:CollisionId</td>
-        <td>GI</td>
-        <td></td>
-        <td>?</td>
-        <td></td>
+        <td>o2::aod::jet::CollisionId</td>
+        <td>I</td>
+        <td>collisionId</td>
+        <td>int32</td>
+        <td>Pointer into Collisions</td>
       </tr>
       <tr>
         <td>o2::aod::jet::Pt</td>
@@ -11485,18 +11752,18 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGJE
         <th>Comment</th>
       </tr>
       <tr>
-        <td>o2::aod::jetconstituents:JetId</td>
-        <td>GI</td>
-        <td></td>
-        <td>?</td>
-        <td></td>
+        <td>o2::aod::jetconstituents::JetId</td>
+        <td>I</td>
+        <td>jetId</td>
+        <td>int32</td>
+        <td>Pointer into Jets</td>
       </tr>
       <tr>
-        <td>o2::aod::jetconstituents:TrackId</td>
-        <td>GI</td>
-        <td></td>
-        <td>?</td>
-        <td></td>
+        <td>o2::aod::jetconstituents::TrackId</td>
+        <td>I</td>
+        <td>trackId</td>
+        <td>int32</td>
+        <td>Pointer into Tracks</td>
       </tr>
     </table>
   </div>
@@ -11529,11 +11796,11 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGJE
         <th>Comment</th>
       </tr>
       <tr>
-        <td>o2::aod::jetmatching:JetId</td>
-        <td>GI</td>
-        <td></td>
-        <td>?</td>
-        <td></td>
+        <td>o2::aod::jetmatching::JetId</td>
+        <td>I</td>
+        <td>jetId</td>
+        <td>int32</td>
+        <td>Pointer into Jets</td>
       </tr>
       <tr>
         <td>o2::aod::jetmatching::MatchedJetIndex</td>
@@ -11567,11 +11834,11 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGJE
         <th>Comment</th>
       </tr>
       <tr>
-        <td>o2::aod::mcparticleleveljetmatching:MCParticleLevelJetId</td>
-        <td>GI</td>
-        <td></td>
-        <td>?</td>
-        <td></td>
+        <td>o2::aod::mcparticleleveljetmatching::MCParticleLevelJetId</td>
+        <td>I</td>
+        <td>jetId</td>
+        <td>int32</td>
+        <td>Pointer into MCParticleLevelJets</td>
       </tr>
       <tr>
         <td>o2::aod::mcparticleleveljetmatching::MatchedJetIndex</td>
@@ -11605,11 +11872,11 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGJE
         <th>Comment</th>
       </tr>
       <tr>
-        <td>o2::aod::mcdetectorleveljetmatching:MCDetectorLevelJetId</td>
-        <td>GI</td>
-        <td></td>
-        <td>?</td>
-        <td></td>
+        <td>o2::aod::mcdetectorleveljetmatching::MCDetectorLevelJetId</td>
+        <td>I</td>
+        <td>jetId</td>
+        <td>int32</td>
+        <td>Pointer into MCDetectorLevelJets</td>
       </tr>
       <tr>
         <td>o2::aod::mcdetectorleveljetmatching::MatchedJetIndex</td>
@@ -11643,11 +11910,11 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGJE
         <th>Comment</th>
       </tr>
       <tr>
-        <td>o2::aod::hybridintermediatejetmatching:HybridIntermediateJetId</td>
-        <td>GI</td>
-        <td></td>
-        <td>?</td>
-        <td></td>
+        <td>o2::aod::hybridintermediatejetmatching::HybridIntermediateJetId</td>
+        <td>I</td>
+        <td>jetId</td>
+        <td>int32</td>
+        <td>Pointer into HybridIntermediateJets</td>
       </tr>
       <tr>
         <td>o2::aod::hybridintermediatejetmatching::MatchedJetIndex</td>

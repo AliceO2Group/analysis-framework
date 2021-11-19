@@ -47,7 +47,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
     </table>
   </div>
 
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::CentRun2SPDs</button>
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::CentRun2SPDTrks</button>
   <div class="panel">
     <div>
        Run2 SPD tracklets estimated centrality table
@@ -57,7 +57,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
     </div>
     <div>Is used in:
       <ul>
-        <li>o2::aod::CentRun2SPD = o2::aod::CentRun2SPDs::iterator</li>
+        <li>o2::aod::CentRun2SPDTrk = o2::aod::CentRun2SPDTrks::iterator</li>
       </ul>
     </div>
     <table class=DataModel>
@@ -74,6 +74,37 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
         <td>centRun2SPDTracklets</td>
         <td>float</td>
         <td>Run2 centrality percentile estimated from SPD tracklets multiplicity</td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::CentRun2SPDClss</button>
+  <div class="panel">
+    <div>
+       Run2 SPD clusters estimated centrality table
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master/Common/DataModel/Centrality.h" target="_blank">Common/DataModel/Centrality.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::CentRun2SPDCls = o2::aod::CentRun2SPDClss::iterator</li>
+      </ul>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::cent::CentEstRun2SPDClusters</td>
+        <td></td>
+        <td>centRun2SPDClusters</td>
+        <td>float</td>
+        <td>Run2 centrality percentile estimated from SPD clusters multiplicity</td>
       </tr>
     </table>
   </div>

@@ -284,10 +284,17 @@ The data model provides in addition to the set of tables also some predefined jo
     </ul>
   </div>
 
-  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::CentRun2SPD</button>
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::CentRun2SPDTrk</button>
   <div class="panel">
     <ul>
-        <li>o2::aod::CentRun2SPD = o2::aod::CentRun2SPDs::iterator</li>
+        <li>o2::aod::CentRun2SPDTrk = o2::aod::CentRun2SPDTrks::iterator</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::CentRun2SPDCls</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::CentRun2SPDCls = o2::aod::CentRun2SPDClss::iterator</li>
     </ul>
   </div>
 
@@ -365,6 +372,20 @@ The data model provides in addition to the set of tables also some predefined jo
   <div class="panel">
     <ul>
         <li>o2::aod::CFTrack = o2::aod::CFTracks::iterator</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::DptDptCFAcceptedCollision</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::DptDptCFAcceptedCollision = o2::aod::DptDptCFAcceptedCollisions::iterator</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::DptDptCFAcceptedTrueCollision</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::DptDptCFAcceptedTrueCollision = o2::aod::DptDptCFAcceptedTrueCollisions::iterator</li>
     </ul>
   </div>
 
