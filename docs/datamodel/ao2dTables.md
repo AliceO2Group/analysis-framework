@@ -1012,6 +1012,13 @@ Click on the labels to display the table details.
         <td>PID hypothesis used during tracking. See the constants in the class PID in PID.h</td>
       </tr>
       <tr>
+        <td>o2::aod::track::IsPVContributor</td>
+        <td>D</td>
+        <td>isPVContributor</td>
+        <td>bool</td>
+        <td>Has this track contributed to the collision vertex fit</td>
+      </tr>
+      <tr>
         <td>o2::aod::track::HasITS</td>
         <td>D</td>
         <td>hasITS</td>
@@ -1266,6 +1273,13 @@ Click on the labels to display the table details.
         <td>pidForTracking</td>
         <td>uint32_t</td>
         <td>PID hypothesis used during tracking. See the constants in the class PID in PID.h</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::IsPVContributor</td>
+        <td>D</td>
+        <td>isPVContributor</td>
+        <td>bool</td>
+        <td>Has this track contributed to the collision vertex fit</td>
       </tr>
       <tr>
         <td>o2::aod::track::HasITS</td>
