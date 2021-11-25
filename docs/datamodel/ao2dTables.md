@@ -8,7 +8,8 @@ title: AO2D tables
 
 The tables which are extracted from the AO2D files are declared in <a href="https://github.com/AliceO2Group/AliceO2/blob/dev/Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/AnalysisDataModel.h</a> and listed below. They are available by default when using an AO2D file as input to an analysis work flow.
 
-Click on the labels to display the table details.
+Click on the labels to display the table content. Click buttons to 
+<button class="openTables">show</button> / <button class="closeTables">close</button> all tables.
 
 <!-- Block with AO2D tables -->
 

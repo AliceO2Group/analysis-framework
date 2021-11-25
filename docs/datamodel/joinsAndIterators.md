@@ -5,6 +5,9 @@ title: Joins and iterators
 
 The data model provides in addition to the set of tables also some predefined joines which are listed below.
 
+Click on the labels to display the definitions. Click buttons to 
+<button class="openTables">show</button> / <button class="closeTables">close</button> all definitions.
+
 <!-- Block with joins and iterators -->
 
 <a name="usings"></a>

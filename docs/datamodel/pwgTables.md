@@ -6,8 +6,8 @@ title: PWG tables
 <a name="PWGs"></a>
 # List of tables defined by PWG specific tasks.
 
-
-Click on the labels to display the table details.
+Click on the labels to display the table content. Click buttons to 
+<button class="openTables">show</button> / <button class="closeTables">close</button> all tables.
 
 <!-- Block with PWG tables -->
 
