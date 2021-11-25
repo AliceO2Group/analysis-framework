@@ -51,7 +51,7 @@ The download itself happens with the following command:
 ```bash
 jcachemgr --cache-dir $CACHE_DIR pull --out wn.xml --parallel=8 --limit=50 /alice/data/2021/OCT/505637/apass1/AOD AO2D.root
 ```
-which would download 50 files of type `AO2D.root` from `/alice/data/2021/OCT/505637/apass1/AOD`
+which would download at maximum 50 files of type `AO2D.root` from `/alice/data/2021/OCT/505637/apass1/AOD`
 
 When the command terminates it creates a `wn.xml` which contains the list of files. This is the input to a Grid job. If you want to get a text file list from this to use as input for O2, the following line does it for you:
 ```bash
