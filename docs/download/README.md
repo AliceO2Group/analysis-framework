@@ -42,6 +42,10 @@ pip install click humanfriendly cachier
 export CACHE_DIR=$HOME/jalien-cache
 mkdir $CACHE_DIR
 ```
+* Enter the environment:
+```bash
+alienv enter xjalienfs/latest-release,ROOT/latest
+```
 
 The download itself happens with the following command:
 ```bash
@@ -49,7 +53,7 @@ jcachemgr --cache-dir $CACHE_DIR pull --out wn.xml --parallel=8 --limit=50 /alic
 ```
 which would download 50 files of type `AO2D.root` from `/alice/data/2021/OCT/505637/apass1`
 
-When the command terminates it creates a wn.xml which contains the list of files. This is the input to a Grid job. If you want to get a text file list from this to use as input for O2, the following line does it for you:
+When the command terminates it creates a `wn.xml` which contains the list of files. This is the input to a Grid job. If you want to get a text file list from this to use as input for O2, the following line does it for you:
 ```bash
 sed -rn 's/.*turl="([^"]*)".*/\1/p' wn.xml > input.txt
 ```
