@@ -6,7 +6,7 @@ title: PWG tables
 <a name="PWGs"></a>
 # List of tables defined by PWG specific tasks.
 
-Click on the labels to display the table content. Click buttons to 
+Click on the labels to display the table content. Click buttons to
 <button class="openTables">show</button> / <button class="closeTables">close</button> all tables.
 
 <!-- Block with PWG tables -->
@@ -7960,20 +7960,6 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <td></td>
         <td>isSelProng</td>
         <td>int</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::hf_seltrack::DCAPrim0</td>
-        <td></td>
-        <td>dcaPrim0</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::hf_seltrack::DCAPrim1</td>
-        <td></td>
-        <td>dcaPrim1</td>
-        <td>float</td>
         <td></td>
       </tr>
       <tr>
