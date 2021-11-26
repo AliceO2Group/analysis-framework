@@ -5,7 +5,7 @@ title: Joins and iterators
 
 The data model provides in addition to the set of tables also some predefined joines which are listed below.
 
-Click on the labels to display the definitions. Click buttons to 
+Click on the labels to display the definitions. Click buttons to
 <button class="openTables">show</button> / <button class="closeTables">close</button> all definitions.
 
 <!-- Block with joins and iterators -->
@@ -546,6 +546,13 @@ Click on the labels to display the definitions. Click buttons to
     </ul>
   </div>
 
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::BigTracksExtended</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::BigTracksExtended = soa::Join<o2::aod::BigTracks, o2::aod::TracksExtended></li>
+    </ul>
+  </div>
+
   <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::BigTracksMC</button>
   <div class="panel">
     <ul>
@@ -557,6 +564,13 @@ Click on the labels to display the definitions. Click buttons to
   <div class="panel">
     <ul>
         <li>o2::aod::BigTracksPID = soa::Join<o2::aod::BigTracks, o2::aod::pidTPCFullEl, o2::aod::pidTPCFullMu, o2::aod::pidTPCFullPi, o2::aod::pidTPCFullKa, o2::aod::pidTPCFullPr, o2::aod::pidTOFFullEl, o2::aod::pidTOFFullMu, o2::aod::pidTOFFullPi, o2::aod::pidTOFFullKa, o2::aod::pidTOFFullPr></li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::BigTracksPIDExtended</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::BigTracksPIDExtended = soa::Join<o2::aod::BigTracksPID, o2::aod::TracksExtended></li>
     </ul>
   </div>
 
@@ -801,7 +815,7 @@ Click on the labels to display the definitions. Click buttons to
   <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::analysis::hf_cuts_d0_topik::Trks</button>
   <div class="panel">
     <ul>
-        <li>o2::analysis::hf_cuts_d0_topik::Trks = soa::Join<o2::analysis::hf_cuts_d0_topik::aod::BigTracksPID, o2::analysis::hf_cuts_d0_topik::aod::RICHTracksIndex, o2::analysis::hf_cuts_d0_topik::aod::McTrackLabels></li>
+        <li>o2::analysis::hf_cuts_d0_topik::Trks = soa::Join<o2::analysis::hf_cuts_d0_topik::aod::BigTracksPIDExtended, o2::analysis::hf_cuts_d0_topik::aod::RICHTracksIndex, o2::analysis::hf_cuts_d0_topik::aod::McTrackLabels></li>
     </ul>
   </div>
 
@@ -809,6 +823,13 @@ Click on the labels to display the definitions. Click buttons to
   <div class="panel">
     <ul>
         <li>o2::analysis::hf_cuts_jpsi_toee::TracksPID = soa::Join<o2::analysis::hf_cuts_jpsi_toee::aod::BigTracksPID, o2::analysis::hf_cuts_jpsi_toee::aod::HfTrackIndexALICE3PID></li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::analysis::hf_cuts_jpsi_toee::ExtendedTracksPID</button>
+  <div class="panel">
+    <ul>
+        <li>o2::analysis::hf_cuts_jpsi_toee::ExtendedTracksPID = soa::Join<o2::analysis::hf_cuts_jpsi_toee::TracksPID, o2::analysis::hf_cuts_jpsi_toee::aod::TracksExtended></li>
     </ul>
   </div>
 
