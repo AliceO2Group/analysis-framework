@@ -5,7 +5,7 @@ title: Downloading AO2D
 
 
 
-# Downloading AO2D from LEGO train conversion
+## Downloading AO2D from LEGO train conversion
 
 If you need a single input files from a conversion train, please take them from the train test, by:
 
@@ -20,7 +20,7 @@ If you need a single input files from a conversion train, please take them from 
 
 * You can also click on processing progress and then follow the output directories to download a larger AO2D.root. All this is only suitable for manual downloading of a few files. For everything else see the next item:
 
-# Downloading AO2D from the Grid
+## Downloading AO2D from the Grid
 
 You can use the jalien cache manager for this which is the tool which downloads files to Hyperloop. To get this up on your local box, you need a few steps:
 
