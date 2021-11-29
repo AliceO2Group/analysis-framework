@@ -364,6 +364,20 @@ Click on the labels to display the definitions. Click buttons to
     </ul>
   </div>
 
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::trackPropagated</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::trackPropagated = o2::aod::tracksPropagated::iterator</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::trackParPropagated</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::trackParPropagated = o2::aod::tracksParPropagated::iterator</li>
+    </ul>
+  </div>
+
   <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::CFCollision</button>
   <div class="panel">
     <ul>

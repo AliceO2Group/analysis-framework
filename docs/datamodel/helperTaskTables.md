@@ -315,8 +315,15 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
         <td>o2::aod::evsel::FoundFT0</td>
         <td></td>
         <td>foundFT0</td>
-        <td>int64_t</td>
+        <td>int32_t</td>
         <td>FT0 entry index in FT0s table (-1 if doesn't exist)</td>
+      </tr>
+      <tr>
+        <td>o2::aod::evsel::FoundFV0</td>
+        <td></td>
+        <td>foundFV0</td>
+        <td>int32_t</td>
+        <td>FV0 entry index in FV0A table (-1 if doesn't exist)</td>
       </tr>
     </table>
   </div>
@@ -437,8 +444,15 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
         <td>o2::aod::evsel::FoundFT0</td>
         <td></td>
         <td>foundFT0</td>
-        <td>int64_t</td>
+        <td>int32_t</td>
         <td>FT0 entry index in FT0s table (-1 if doesn't exist)</td>
+      </tr>
+      <tr>
+        <td>o2::aod::evsel::FoundFV0</td>
+        <td></td>
+        <td>foundFV0</td>
+        <td>int32_t</td>
+        <td>FV0 entry index in FV0A table (-1 if doesn't exist)</td>
       </tr>
     </table>
   </div>
@@ -598,6 +612,13 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
         <td>int</td>
         <td></td>
       </tr>
+      <tr>
+        <td>o2::aod::mult::MultTPC</td>
+        <td></td>
+        <td>multTPC</td>
+        <td>int</td>
+        <td></td>
+      </tr>
     </table>
   </div>
 
@@ -634,6 +655,246 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
         <td>timestamp</td>
         <td>uint64_t</td>
         <td>Timestamp of a BC in ms (epoch style)</td>
+      </tr>
+    </table>
+  </div>
+
+</div>
+
+####  o2-analysis-track-propagation
+Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/TableProducer//trackPropagation.cxx" target="_blank">trackPropagation.cxx</a>
+<div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::tracksPropagated</button>
+  <div class="panel">
+    <div>
+       commonly used track parameters, propagated to the primary vertex
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master/Common/DataModel/TrackPropagation.h" target="_blank">Common/DataModel/TrackPropagation.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::trackPropagated = o2::aod::tracksPropagated::iterator</li>
+      </ul>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::soa::Index</td>
+        <td>GI</td>
+        <td>globalIndex</td>
+        <td>int64_t</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::CollisionId</td>
+        <td>I</td>
+        <td>collisionId</td>
+        <td>int32</td>
+        <td>Collision to which this track belongs</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::TrackType</td>
+        <td></td>
+        <td>trackType</td>
+        <td>uint8_t</td>
+        <td>Type of track. See enum TrackTypeEnum</td>
+      </tr>
+      <tr>
+        <td>o2::aod::trackpropagated::Sign</td>
+        <td></td>
+        <td>sign</td>
+        <td>int8_t</td>
+        <td>sign of the track's charge</td>
+      </tr>
+      <tr>
+        <td>o2::aod::trackpropagated::Pt</td>
+        <td></td>
+        <td>pt</td>
+        <td>float</td>
+        <td>track transverse momentum GeV/c</td>
+      </tr>
+      <tr>
+        <td>o2::aod::trackpropagated::Phi</td>
+        <td></td>
+        <td>phi</td>
+        <td>float</td>
+        <td>track phi</td>
+      </tr>
+      <tr>
+        <td>o2::aod::trackpropagated::Eta</td>
+        <td></td>
+        <td>eta</td>
+        <td>float</td>
+        <td>track eta</td>
+      </tr>
+      <tr>
+        <td>o2::aod::trackpropagated::Px</td>
+        <td>D</td>
+        <td>px</td>
+        <td>float</td>
+        <td>x-component of the track momentum GeV/c</td>
+      </tr>
+      <tr>
+        <td>o2::aod::trackpropagated::Py</td>
+        <td>D</td>
+        <td>py</td>
+        <td>float</td>
+        <td>y-component of the track momentum GeV/c</td>
+      </tr>
+      <tr>
+        <td>o2::aod::trackpropagated::Pz</td>
+        <td>D</td>
+        <td>pz</td>
+        <td>float</td>
+        <td>z-component of the track momentum GeV/c</td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::tracksParPropagated</button>
+  <div class="panel">
+    <div>
+       additional track parameters, propagated to the primary vertex
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master/Common/DataModel/TrackPropagation.h" target="_blank">Common/DataModel/TrackPropagation.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::trackParPropagated = o2::aod::tracksParPropagated::iterator</li>
+      </ul>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::track::X</td>
+        <td></td>
+        <td>x</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::Alpha</td>
+        <td></td>
+        <td>alpha</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::Y</td>
+        <td></td>
+        <td>y</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::Z</td>
+        <td></td>
+        <td>z</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::Snp</td>
+        <td></td>
+        <td>snp</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::Tgl</td>
+        <td></td>
+        <td>tgl</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::Signed1Pt</td>
+        <td></td>
+        <td>signed1Pt</td>
+        <td>float</td>
+        <td>(sign of charge)/Pt in c/GeV. Use pt() and sign() instead</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::Px</td>
+        <td>D</td>
+        <td>px</td>
+        <td>float</td>
+        <td>Momentum in x-direction in GeV/c</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::Py</td>
+        <td>D</td>
+        <td>py</td>
+        <td>float</td>
+        <td>Momentum in y-direction in GeV/c</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::Pz</td>
+        <td>D</td>
+        <td>pz</td>
+        <td>float</td>
+        <td>Momentum in z-direction in GeV/c</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::Sign</td>
+        <td>D</td>
+        <td>sign</td>
+        <td>short</td>
+        <td>Charge: positive: 1, negative: -1</td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::TracksExtended</button>
+  <div class="panel">
+    <div>
+
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master/Common/DataModel/TrackSelectionTables.h" target="_blank">Common/DataModel/TrackSelectionTables.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::BigTracksExtended = soa::Join<o2::aod::BigTracks, o2::aod::TracksExtended></li>
+        <li>o2::aod::BigTracksPIDExtended = soa::Join<o2::aod::BigTracksPID, o2::aod::TracksExtended></li>
+      </ul>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::track::DcaXY</td>
+        <td></td>
+        <td>dcaXY</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::DcaZ</td>
+        <td></td>
+        <td>dcaZ</td>
+        <td>float</td>
+        <td></td>
       </tr>
     </table>
   </div>
