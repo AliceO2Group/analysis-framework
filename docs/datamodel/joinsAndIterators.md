@@ -364,17 +364,17 @@ Click on the labels to display the definitions. Click buttons to
     </ul>
   </div>
 
-  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::trackPropagated</button>
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::TrackPropagated</button>
   <div class="panel">
     <ul>
-        <li>o2::aod::trackPropagated = o2::aod::tracksPropagated::iterator</li>
+        <li>o2::aod::TrackPropagated = o2::aod::TracksPropagated::iterator</li>
     </ul>
   </div>
 
-  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::trackParPropagated</button>
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::TrackParPropagated</button>
   <div class="panel">
     <ul>
-        <li>o2::aod::trackParPropagated = o2::aod::tracksParPropagated::iterator</li>
+        <li>o2::aod::TrackParPropagated = o2::aod::TracksParPropagated::iterator</li>
     </ul>
   </div>
 

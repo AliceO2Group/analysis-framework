@@ -665,7 +665,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
 Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/TableProducer//trackPropagation.cxx" target="_blank">trackPropagation.cxx</a>
 <div>
 
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::tracksPropagated</button>
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::TracksPropagated</button>
   <div class="panel">
     <div>
        commonly used track parameters, propagated to the primary vertex
@@ -675,7 +675,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
     </div>
     <div>Is used in:
       <ul>
-        <li>o2::aod::trackPropagated = o2::aod::tracksPropagated::iterator</li>
+        <li>o2::aod::TrackPropagated = o2::aod::TracksPropagated::iterator</li>
       </ul>
     </div>
     <table class=DataModel>
@@ -759,7 +759,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
     </table>
   </div>
 
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::tracksParPropagated</button>
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::TracksParPropagated</button>
   <div class="panel">
     <div>
        additional track parameters, propagated to the primary vertex
@@ -769,7 +769,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
     </div>
     <div>Is used in:
       <ul>
-        <li>o2::aod::trackParPropagated = o2::aod::tracksParPropagated::iterator</li>
+        <li>o2::aod::TrackParPropagated = o2::aod::TracksParPropagated::iterator</li>
       </ul>
     </div>
     <table class=DataModel>
