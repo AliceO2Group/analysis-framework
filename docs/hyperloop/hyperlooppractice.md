@@ -48,6 +48,12 @@ You can get to the _All Analyses_ page by using the main menu, or by the link in
 ##### <a name="editwagon"></a> 3. Edit a wagon:
 
 *  You can edit a wagon by clicking on the _Wagon_ name in the _My Analyses_ page. There are different tabs: Wagon settings, Configuration, Testing Statistics.
+*  By clicking on the top-left corner, you will be redirected to a read-only view of the wagon, that can be shared with colleagues and support. The top right corner history symbol leads to the _Wagon changelog_ page, displaying a detailed comparison of the wagon configuration at different timestamps.
+
+ <div align="center">
+<img src="../images/wagonShortcuts.png" width="80%">
+</div>
+
 *  In _Wagon settings_ you can modify the wagon name, work flow name, and select wagon's dependencies. The dependencies offered are wagons from the same _Analysis_ or from [_Service wagons_](#servicewagons).
 
 <div align="center">
@@ -59,6 +65,8 @@ You can get to the _All Analyses_ page by using the main menu, or by the link in
 <div align="center">
 <img src="../images/wagonConfig.png" width="70%">
 </div>
+
+* The wagon configuration supports a variety of parameter types defined in task as _Configurable_ including: arrays, matrices, labelled matrices and histogram binning. The _Variable-length arrays_ allow the user to add/remove elements in the _Base_ wagon, and the change will be propagated in all the subwagons.
   
 * If you need to run the same workflow, but modify one (or more) of the parameter's value, you can use a subwagon instead of creating a new wagon. In order to create a subwagon, type the name of the new subwagon, the name has to be unique within the wagon, and type the value of at least one parameter in the configuration. The configuration of a subwagon will be kept the same as the _Base_ and overwrite the parameters that are different. When there are subwagons activated, the wagon's _Base_ will not run. NOTE: subwagon submission is at present not yet supported, but will come soon.
 
