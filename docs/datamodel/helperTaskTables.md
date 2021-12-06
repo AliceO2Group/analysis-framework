@@ -1332,32 +1332,6 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
 Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/TableProducer/PID//pidTOF.cxx" target="_blank">pidTOF.cxx</a>
 <div>
 
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::TOFSignal</button>
-  <div class="panel">
-    <div>
-       Table of the TOF signal
-    </div>
-    <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master/Common/Core/PID/PIDResponse.h" target="_blank">Common/Core/PID/PIDResponse.h</a>
-    </div>
-    <table class=DataModel>
-      <tr>
-        <th>Name</th>
-        <th></th>
-        <th>Getter</th>
-        <th>Type</th>
-        <th>Comment</th>
-      </tr>
-      <tr>
-        <td>o2::aod::pidtofsignal::TOFSignal</td>
-        <td></td>
-        <td>tofSignal</td>
-        <td>float</td>
-        <td>TOF signal from track time</td>
-      </tr>
-    </table>
-  </div>
-
   <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::pidTOFEl</button>
   <div class="panel">
     <div>
@@ -1690,6 +1664,13 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
         <td>Difference between signal and expected for electron</td>
       </tr>
       <tr>
+        <td>o2::aod::pidtof::TOFExpSignalEl</td>
+        <td>D</td>
+        <td>tofExpSignalEl</td>
+        <td>float</td>
+        <td>Expected time for electron</td>
+      </tr>
+      <tr>
         <td>o2::aod::pidtof::TOFExpSigmaEl</td>
         <td></td>
         <td>tofExpSigmaEl</td>
@@ -1733,6 +1714,13 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
         <td>tofExpSignalDiffMu</td>
         <td>float</td>
         <td>Difference between signal and expected for muon</td>
+      </tr>
+      <tr>
+        <td>o2::aod::pidtof::TOFExpSignalMu</td>
+        <td>D</td>
+        <td>tofExpSignalMu</td>
+        <td>float</td>
+        <td>Expected time for muon</td>
       </tr>
       <tr>
         <td>o2::aod::pidtof::TOFExpSigmaMu</td>
@@ -1780,6 +1768,13 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
         <td>Difference between signal and expected for pion</td>
       </tr>
       <tr>
+        <td>o2::aod::pidtof::TOFExpSignalPi</td>
+        <td>D</td>
+        <td>tofExpSignalPi</td>
+        <td>float</td>
+        <td>Expected time for pion</td>
+      </tr>
+      <tr>
         <td>o2::aod::pidtof::TOFExpSigmaPi</td>
         <td></td>
         <td>tofExpSigmaPi</td>
@@ -1823,6 +1818,13 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
         <td>tofExpSignalDiffKa</td>
         <td>float</td>
         <td>Difference between signal and expected for kaon</td>
+      </tr>
+      <tr>
+        <td>o2::aod::pidtof::TOFExpSignalKa</td>
+        <td>D</td>
+        <td>tofExpSignalKa</td>
+        <td>float</td>
+        <td>Expected time for kaon</td>
       </tr>
       <tr>
         <td>o2::aod::pidtof::TOFExpSigmaKa</td>
@@ -1870,6 +1872,13 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
         <td>Difference between signal and expected for proton</td>
       </tr>
       <tr>
+        <td>o2::aod::pidtof::TOFExpSignalPr</td>
+        <td>D</td>
+        <td>tofExpSignalPr</td>
+        <td>float</td>
+        <td>Expected time for proton</td>
+      </tr>
+      <tr>
         <td>o2::aod::pidtof::TOFExpSigmaPr</td>
         <td></td>
         <td>tofExpSigmaPr</td>
@@ -1908,6 +1917,13 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
         <td>tofExpSignalDiffDe</td>
         <td>float</td>
         <td>Difference between signal and expected for deuteron</td>
+      </tr>
+      <tr>
+        <td>o2::aod::pidtof::TOFExpSignalDe</td>
+        <td>D</td>
+        <td>tofExpSignalDe</td>
+        <td>float</td>
+        <td>Expected time for deuteron</td>
       </tr>
       <tr>
         <td>o2::aod::pidtof::TOFExpSigmaDe</td>
@@ -1950,6 +1966,13 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
         <td>Difference between signal and expected for triton</td>
       </tr>
       <tr>
+        <td>o2::aod::pidtof::TOFExpSignalTr</td>
+        <td>D</td>
+        <td>tofExpSignalTr</td>
+        <td>float</td>
+        <td>Expected time for triton</td>
+      </tr>
+      <tr>
         <td>o2::aod::pidtof::TOFExpSigmaTr</td>
         <td></td>
         <td>tofExpSigmaTr</td>
@@ -1990,6 +2013,13 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
         <td>Difference between signal and expected for helium3</td>
       </tr>
       <tr>
+        <td>o2::aod::pidtof::TOFExpSignalHe</td>
+        <td>D</td>
+        <td>tofExpSignalHe</td>
+        <td>float</td>
+        <td>Expected time for helium3</td>
+      </tr>
+      <tr>
         <td>o2::aod::pidtof::TOFExpSigmaHe</td>
         <td></td>
         <td>tofExpSigmaHe</td>
@@ -2028,6 +2058,13 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
         <td>tofExpSignalDiffAl</td>
         <td>float</td>
         <td>Difference between signal and expected for alpha</td>
+      </tr>
+      <tr>
+        <td>o2::aod::pidtof::TOFExpSignalAl</td>
+        <td>D</td>
+        <td>tofExpSignalAl</td>
+        <td>float</td>
+        <td>Expected time for alpha</td>
       </tr>
       <tr>
         <td>o2::aod::pidtof::TOFExpSigmaAl</td>
