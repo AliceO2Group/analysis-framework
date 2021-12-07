@@ -47,7 +47,13 @@ You can get to the _All Analyses_ page by using the main menu, or by the link in
 
 ##### <a name="editwagon"></a> 3. Edit a wagon:
 
-*  You can edit a wagon by clicking on the _Wagon_ name in the _My Analyses_ page. There are different tabs: Wagon settings, Configuration, Testing Statistics.
+*  You can edit a wagon by clicking on the _Wagon_ name in the _My Analyses_ page. There are different tabs: Wagon settings, Configuration, Test Statistics.
+*  By clicking on the top-left corner, you will be redirected to a read-only view of the wagon, that can be shared with colleagues and support. The top right corner history symbol leads to the [_Wagon **History**_](#wagonhistory) page, which will display the state evolution of the wagon.
+
+ <div align="center">
+<img src="../images/wagonShortcuts.png" width="80%">
+</div>
+
 *  In _Wagon settings_ you can modify the wagon name, work flow name, and select wagon's dependencies. The dependencies offered are wagons from the same _Analysis_ or from [_Service wagons_](#servicewagons).
 
 <div align="center">
@@ -59,6 +65,16 @@ You can get to the _All Analyses_ page by using the main menu, or by the link in
 <div align="center">
 <img src="../images/wagonConfig.png" width="70%">
 </div>
+
+* The wagon configuration supports a variety of parameter types defined in task as _Configurable_ including: arrays, matrices, labelled matrices and histogram binning. The _Variable-length arrays_ allow the user to add/remove elements in the _Base_ wagon, and the change will be propagated in all the subwagons.
+
+<div align="center">
+<img src="../images/wagonConf1.png" width="80%">
+</div>
+
+<div align="center">
+<img src="../images/variableWidth.png" width="80%">
+</div>
   
 * If you need to run the same workflow, but modify one (or more) of the parameter's value, you can use a subwagon instead of creating a new wagon. In order to create a subwagon, type the name of the new subwagon, the name has to be unique within the wagon, and type the value of at least one parameter in the configuration. The configuration of a subwagon will be kept the same as the _Base_ and overwrite the parameters that are different. When there are subwagons activated, the wagon's _Base_ will not run. NOTE: subwagon submission is at present not yet supported, but will come soon.
 
@@ -69,7 +85,7 @@ You can get to the _All Analyses_ page by using the main menu, or by the link in
 * In order to update the derived data configuration with the latest version of the workflow, click on the button `↻ sync` in _Derived data_. By synchronizing the derived data, the tables which no longer belong to the workflow will be removed, and the values of the tables will be updated.
 
 <div align="center">
-<img src="../images/deriveddata.png" width="70%">
+<img src="../images/derivedDataEx.png" width="70%">
 </div>
 
 * _Test Statistics_ contains three graphs that display different metrics following the tests this wagon was part of. The first graph plots the _PSS Memory_ corresponding to each test run. The second one diplays the _CPU Time_, _Wall time_ and _Throughput_ along the test runs for this wagon. Finally, the third graph shows the _Output size_ at each test run.
@@ -84,11 +100,16 @@ You can get to the _All Analyses_ page by using the main menu, or by the link in
 <img src="../images/datasetDropdown.png" width="70%">
 </div>
 
-* By clicking on the bullets representing the metric value at any of the test runs plotted, the user will open a new tab with the wagon test page. Likewise, in the upper-left corner, there is a link to the [_Wagon **History**_](#wagonhistory) page, which will display the state evolution of the wagon.
-
+* By clicking on the bullets representing the metric value at any of the test runs plotted, the user will open a new tab displaying a read-only view of the wagon test output. 
 
 <div align="center">
-<img src="../images/bullets.png" width="70%">
+<img src="../images/testStatsGraphs.png" width="90%">
+</div>
+
+* In order to zoom into the graph, the user needs to click and drag over the are of interest, which will automatically show the zoomed-in graph portion. By double-clicking, it will zoom out and show the entire graph.
+
+<div align="center">
+<img src="../images/zooming.png" width="90%">
 </div>
 
 
@@ -217,7 +238,49 @@ When creating or enabling wagons, you can use a pull request instead of a packag
   <div align="center">
     <img src="../images/testGraphsDevice.png" width="70%">
   </div>
+  
+## <a name="notifications"></a>Notifications
+* There are different types of notifications that an user receives, each related to a specific topic. A warning notification is not necessarly requesting action to be taken, but can just point out a certain information about user activity or result.
 
+### <a name="infoNotification"></a>Informative notification
+
+* This type of notification lets the user know about automatic or consequent updates.
+
+#### <a name="infoWagonDisabled"></a>Disabled wagon
+
+* Local tests are cleaned if the wagons are not submitted in a period of 4 weeks. The user is notified that the respective wagons are automatically disabled.
+
+#### <a name="datasetChanged"></a>Dataset changed
+
+* This notification lets the user know about an update made to one of the datasets included in his analyses. The notification message contains a link to the history of the dataset that has been modified, as well as a link to the analysis this dataset is included in. In the history view of the dataset, the user can check the changes that have been made since the creation of the dataset, and also open the dataset read-only view by cliking on the corresponding timestamp / time of update.
+
+<div align="center">
+    <img src="../images/datasetChanged.png" width="90%">
+</div>
+
+### <a name="successNotification"></a>Success notification
+
+* This notifications inform the user about processes or updates that were successful.
+
+#### <a name="datasetEnabled"></a>Dataset enabled / disabled
+
+* Notifies the user when a dataset has been successfully enabled or disabled.
+
+#### <a name="trainrunAdded"></a>Train run added into dataset
+
+* Informs the user when a train run has been successfully added into a dataset. The notification message includes a direct link to the dataset history that will open in a new tab, as well as a link to the analysis that includes the dataset.
+
+<div align="center">
+  <img src="../images/trainrunAdded.png" width="90%">
+</div>
+
+#### <a name="runlistUpdated"></a>Runlist updated
+
+* The user is informed When the runlist of a dataset is modified. This notification contains direct links to the dataset read-only view, dataset history and the respective analysis.
+
+<div align="center">
+  <img src="../images/runlistUpdate.png" width="90%">
+</div>
 
 ## <a name="legoexpert"></a>For the Run 2 LEGO train expert. What has changed?
 
