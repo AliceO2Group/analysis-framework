@@ -9966,6 +9966,20 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <td></td>
       </tr>
       <tr>
+        <td>o2::aod::hf_cand::Chi2PCA</td>
+        <td></td>
+        <td>chi2PCA</td>
+        <td>float</td>
+        <td>sum of (non-weighted) distances of the secondary vertex to its prongs</td>
+      </tr>
+      <tr>
+        <td>o2::aod::full::NSigmaTOFBachPi</td>
+        <td></td>
+        <td>nSigmaTOFBachPi</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
         <td>o2::aod::hf_cand::ImpactParameter0</td>
         <td></td>
         <td>impactParameter0</td>
@@ -9990,6 +10004,125 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <td>o2::aod::hf_cand::ErrorImpactParameter1</td>
         <td></td>
         <td>errorImpactParameter1</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::full::ImpactParameterProduct</td>
+        <td></td>
+        <td>impactParameterProduct</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::full::XicM</td>
+        <td></td>
+        <td>xicM</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::full::XicCt</td>
+        <td></td>
+        <td>xicCt</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::full::XicY</td>
+        <td></td>
+        <td>xicY</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::full::XicE</td>
+        <td></td>
+        <td>xicE</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::full::XicEta</td>
+        <td></td>
+        <td>xicEta</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::full::XicCPA</td>
+        <td></td>
+        <td>xicCPA</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::full::XicCPAXY</td>
+        <td></td>
+        <td>xicCPAXY</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::full::XicChi2PCA</td>
+        <td></td>
+        <td>xicChi2PCA</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::full::XicDecayLength</td>
+        <td></td>
+        <td>xicDecayLength</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::full::XicDecayLengthXY</td>
+        <td></td>
+        <td>xicDecayLengthXY</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::full::XicDecayLengthNormalised</td>
+        <td></td>
+        <td>xicDecayLengthNormalised</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::full::NSigmaTOFTrk1Pr</td>
+        <td></td>
+        <td>nSigmaTOFTrk1Pr</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::full::NSigmaTOFTrk1Pi</td>
+        <td></td>
+        <td>nSigmaTOFTrk1Pi</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::full::NSigmaTOFTrk2Ka</td>
+        <td></td>
+        <td>nSigmaTOFTrk2Ka</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::full::NSigmaTOFTrk3Pr</td>
+        <td></td>
+        <td>nSigmaTOFTrk3Pr</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::full::NSigmaTOFTrk3Pi</td>
+        <td></td>
+        <td>nSigmaTOFTrk3Pi</td>
         <td>float</td>
         <td></td>
       </tr>
