@@ -48,12 +48,54 @@ title: Operator Documentation
 
   * The metric can be selected from the upper-left dropdown, and the graph will change accordingly.
   * The user can choose to plot the metric data per device, by checking the _Per Device_ near the dropdown.
+
+  <div align="center">
+    <img src="../images/testGraphsPerDevice.png" width="70%">
+  </div>
+
+  * In order to plot the highest ten graphs, that means the graphs with the highest average, the user can click the **Show top 10 largest** checkbox.
   
   <div align="center">
-    <img src="../images/testGraphsDevice.png" width="70%">
+    <img src="../images/graphLargest.png" width="70%">
+  </div>
+  
+  * The user can zoom into the graph by clicking and dragging the mouse along the area of interest. For zooming out, the user must double-click on the graph.
+
+  <div align="center">
+    <img src="../images/graphZoom.png" width="70%">
+  </div>
+  
+   <div align="center">
+    <img src="../images/graphZoom2.png" width="70%">
   </div>
   
 ## <a name="datasets"></a>Datasets
 
-## <a name="dpgrunlist"></a>DPG Runlist
+* Displays all the datasets available. The operator can add, remove, activate or deactivate a dataset. Likewise, by clicking the edit icon, the operator is able to modify the dataset in the Edit Dataset page.
+
+  <div align="center">
+    <img src="../images/datasetsPage.png" width="70%">
+  </div>
+
+* The runlists will be received programtically from the DPG.
+
+## <a name="dpgrunlist"></a>DPG Runlists
+
+* This page displayes all the DPG runlists created for the datasets. The operator can add, edit or remove a runlist.
+
+ <div align="center">
+    <img src="../images/DPGrunlists.png" width="70%">
+  </div>
+  
+* Clicking on the the edit icon will lead to the edit view, where the operator can modify the list of runs for the DPG runlist.
+
+ <div align="center">
+    <img src="../images/editRunlist.png" width="70%">
+  </div>
+  
+* DPG experts can create a new runlist by clikcing the _Add runlist_ button. In order to create the list of runs, the correct data type, anchor, tag and production must be selected.
+
+ <div align="center">
+    <img src="../images/addRunlist.png" width="70%">
+  </div>
 
