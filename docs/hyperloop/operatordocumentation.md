@@ -6,6 +6,7 @@ title: Operator Documentation
 ## <a name="dashboard"></a>Dashboard
 
 * The Dashboard displays the current state of the system by showing a number of status parameters related to wagons, trains and grid jobs. Additionally, the user can see the summary of the last week: average completion time, number of finished trains and wagon tests. 
+* Below, a display of the grid jobs state during the previous week is displayed, for every site.
 
 <div align="center">
 <img src="../images/dashboard.png" width="90%">
@@ -20,6 +21,12 @@ title: Operator Documentation
 * Trains are composed per dataset. Only wagons which have a test status of success `🌟` or warning `❗️` can be composed in a train.
 * By default, wagons that were enabled at most one week ago are shown. In order to display all enabled wagons, click on `off` in the _Enabled_ column.
 * In order to compose a train, click `☑️` in the _Compose_ column. The package tag will be automatically chosen, and other wagons that can be included in the train run are signalized with 🟢, and the ones which are not compatible with 🔴. All wagons that are compatible can be automatically chosen by clicking on `✅ Select all compatible wagons`, or by selecting them one by one.
+* `☑️ automatic composition`: Train composition schedule is defined in the dataset settings. If the dataset has a defined schedule, the trains will be automatically composed at the specified time if the tests have finished without a warning.
+
+<div align="center">
+<img src="../images/automaticComposition.png" width="90%">
+</div>
+
 * If a wagon has _Derived data_ tables activated, it will be signalized with the icon 🗂️ in the _Test status_ column. 
 * `☑️ slow train`: If enabled, the express train features are disabled. This means that you may have up to 2% more jobs which finish but the train run may take several days more.
 * `☑️ derived data`: If enabled, this train produces derived data to be used for further analysis. The results will not be merged and can be used as input for future train runs.
@@ -28,6 +35,17 @@ title: Operator Documentation
 * Finally, after defining the configuration, click on `Compose 🚂` to compose a train. After composing a train run, the wagons selected cannot be selected for a different train run unless the current train run is [decomposed](#decompose). After the train run is [submitted](#submit), the wagons will be disabled. 
 * If a user changes a configuration between train composition and submission, the new configuration is not taken into account. The train runs with the wagons and dataset configuration corresponding to the time at which it was _created_.
 * The train will be automatically tested, and its progress can be followed in the _Train Runs_ table, or in the [**Train Runs**](#trainruns) page by clicking on the TRAIN_ID link.
+
+### <a name="stagedsubmission"></a>Staged Submission
+
+* Linked datasets are subsets of a big dataset
+* First, a train run needs to be _Done_ on a smaller linked dataset before being run on a bigger dataset
+* Any user who is part of the analysis can **request a long train**
+* Approval from the participating analyses PWGs conveners is required in order to submit a long train 
+
+<div align="center">
+<img src="../images/requestLongTrain.png" width="90%">
+</div>
 
 ## <a name="trainruns"></a>Train Runs
 * For a user, the _Train Runs_ page displays a read view only of all train runs available in the system.
@@ -67,7 +85,21 @@ title: Operator Documentation
   
    <div align="center">
     <img src="../images/graphZoom2.png" width="70%">
+   </div>
+  
+## <a name="trainswithissues"></a>Trains with issues
+
+* This page displays the list of train runs that are in state _submitted_ but could not be merged due to specific problems:
+  * More than 30% of the jobs have errors 
+  * The Analysis job has all jobs in a final state, but there is no merging job
+  * There is a merging job which is in a final state, but there is no final merge job
+  * There is a final merge job in final state, but the merging is not declared as _done_ in the database
+
+  <div align="center">
+    <img src="../images/trainsWithIssues.png" width="70%">
   </div>
+  
+* The operator must analyse this cases and decide upon resubmitting some of the jobs, launching the final merging submission where the errors are not significant, or killing the train when there are too many errors.
   
 ## <a name="datasets"></a>Datasets
 
@@ -81,13 +113,13 @@ title: Operator Documentation
 
 ## <a name="dpgrunlist"></a>DPG Runlists
 
-* This page displayes all the DPG runlists created for the datasets. The operator can add, edit or remove a runlist.
+* This page is dedicated to the DPG experts and displayes all the DPG runlists created for the datasets. The DPG expert can add, edit or remove a runlist.
 
  <div align="center">
     <img src="../images/DPGrunlists.png" width="80%">
   </div>
   
-* Clicking on the the edit icon will lead to the edit view, where the operator can modify the list of runs for the DPG runlist.
+* Clicking on the the edit icon will lead to the edit view, where the DPG expert can change the list of runs.
 
  <div align="center">
     <img src="../images/editRunlist.png" width="70%">
