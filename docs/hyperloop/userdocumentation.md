@@ -228,8 +228,28 @@ When creating or enabling wagons, you can use a pull request instead of a packag
 
   * The metric can be selected from the upper-left dropdown, and the graph will change accordingly.
   * The user can choose to plot the metric data per device, by checking the _Per Device_ near the dropdown.
+
+  <div align="center">
+    <img src="../images/testGraphsPerDevice.png" width="70%">
+  </div>
+
+  * In order to plot the highest ten graphs, that means the graphs with the highest average, the user can click the **Show top 10 largest** checkbox.
   
   <div align="center">
-    <img src="../images/testGraphsDevice.png" width="70%">
+    <img src="../images/graphLargest.png" width="70%">
   </div>
+  
+  * The user can zoom into the graph by clicking and dragging the mouse along the area of interest. For zooming out, the user must double-click on the graph.
+
+  <div align="center">
+    <img src="../images/graphZoom.png" width="70%">
+  </div>
+  
+   <div align="center">
+    <img src="../images/graphZoom2.png" width="70%">
+  </div>
+
+
+  
+  
   
