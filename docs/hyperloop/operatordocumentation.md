@@ -8,7 +8,7 @@ title: Operator Documentation
 * The Dashboard displays the current state of the system by showing a number of status parameters related to wagons, trains and grid jobs. Additionally, the user can see the summary of the last week: average completion time, number of finished trains and wagon tests. 
 
 <div align="center">
-<img src="../images/dashboard.png" width="70%">
+<img src="../images/dashboard.png" width="90%">
 </div>
 
 * By clicking the number of wagons waiting to be included in a train, the user can directly open the [_Train Submission_](#trainsubmission). Similarly, a link to the [_Train Runs_](#trainruns) is available by clicking the number of trains to be submitted to the grid, the number of running tests, or the number of finished trains.
@@ -74,7 +74,7 @@ title: Operator Documentation
 * Displays all the datasets available. The operator can add, remove, activate or deactivate a dataset. Likewise, by clicking the edit icon, the operator is able to modify the dataset in the Edit Dataset page.
 
   <div align="center">
-    <img src="../images/datasetsPage.png" width="70%">
+    <img src="../images/datasetsPage.png" width="90%">
   </div>
 
 * The runlists will be received programtically from the DPG.
@@ -84,7 +84,7 @@ title: Operator Documentation
 * This page displayes all the DPG runlists created for the datasets. The operator can add, edit or remove a runlist.
 
  <div align="center">
-    <img src="../images/DPGrunlists.png" width="70%">
+    <img src="../images/DPGrunlists.png" width="80%">
   </div>
   
 * Clicking on the the edit icon will lead to the edit view, where the operator can modify the list of runs for the DPG runlist.
