@@ -56,23 +56,3 @@ The views available in the Hyperloop framework are:
 <div align="center">
 <img src="../images/performanceGraphs.png" width="100%">
 </div>
-
-## <a name="joinanalysis"></a> Creating or joining an analysis
-
-The Analyses to which a user belongs to, is defined through a <a href="https://alice.its.cern.ch/jira/secure/Dashboard.jspa" target="_blank">JIRA</a> ticket.
-In the JIRA page, create an issue by clicking on the button `Create`, and fill the information with the following parameters:
-
-* In _Project_ select your PWG. 
-* In _Issue Type_ select _Analysis_.
-* In _Summary_ write the name of your _Analysis_.
-* In _Components_ select your PAG.
-* In _Run 3 analysis_ choose `Yes`.
-* In _Analyzers_ select all the users that will be part of this analysis. All the analyzers will have writing permits to all components in the analysis.
-* (Optional) In _Description_ give a brief description of the analysis.
-The rest of the parameters are not relevant for the Hyperloop train system.
-
-After all the parameters have been set, click on `Create` and your _Analysis_ will be available in the _My Analyses_ and _All Analyses_ page.
-
-<img src="../images/comparisonwithjira.png" width="100%">
-
-The synchronization from JIRA to the Hyperloop train system can take up to 30 minutes.
