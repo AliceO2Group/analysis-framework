@@ -123,7 +123,7 @@ You can get to the _All Analyses_ page by using the main menu, or by the link in
 
 * On the right side of the page, the user can select two timestamps in order to compare the state of the wagon between the two by clicking _Compare_. This will lead to [_Compare Wagons_](#comparewagons) page. You can cancel your current selection by clicking _Unselect all_.
 
-##### <a name="comparewagons"></a> 5. Compare two wagons:
+##### <a name="comparewagons"></a> 5. Compare wagon at different timestamps:
 
 * In the _Compare Wagons_ view, we can analyse the state of a wagon at two different timestamps. The _Wagon settings_ tab shows the changes regarding the name, workflow and dependencies and/or the common features between the two. By clicking on one of the dependencies, a new tab will open showing the comparison between the same two timestamps for the wagon clicked. 
 
@@ -131,6 +131,15 @@ You can get to the _All Analyses_ page by using the main menu, or by the link in
 
 <div align="center">
 <img src="../images/compareWagons.png" width="70%">
+</div>
+
+##### <a name="clonewagon"></a>6. Compare individual wagons:
+
+* The user is able to compare a wagon with any of their individual wagons. 
+* Using the _My Analyses_ page, click on the button `🆚` to compare the wagon. A list of all your wagons will be displayed. Once you select the desired wagon, this will open the comparison view in a new tab. This has a similar structure to the different timstamps comparison.
+
+<div align="center">
+<img src="../images/compareUserWagons.png" width="70%">
 </div>
 
 ## <a name="joinanalysis"></a> Creating or joining an analysis
