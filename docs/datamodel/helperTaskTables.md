@@ -312,18 +312,25 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
         <td>Event selection decision based on TVX</td>
       </tr>
       <tr>
-        <td>o2::aod::evsel::FoundFT0</td>
-        <td></td>
-        <td>foundFT0</td>
-        <td>int32_t</td>
+        <td>o2::aod::evsel::FoundBCId</td>
+        <td>I</td>
+        <td>foundBCId</td>
+        <td>int</td>
+        <td>BC entry index in BCs table (-1 if doesn't exist)</td>
+      </tr>
+      <tr>
+        <td>o2::aod::evsel::FoundFT0Id</td>
+        <td>I</td>
+        <td>foundFT0Id</td>
+        <td>int</td>
         <td>FT0 entry index in FT0s table (-1 if doesn't exist)</td>
       </tr>
       <tr>
-        <td>o2::aod::evsel::FoundFV0</td>
-        <td></td>
-        <td>foundFV0</td>
-        <td>int32_t</td>
-        <td>FV0 entry index in FV0A table (-1 if doesn't exist)</td>
+        <td>o2::aod::evsel::FoundFV0Id</td>
+        <td>I</td>
+        <td>foundFV0Id</td>
+        <td>int</td>
+        <td>FV0 entry index in FV0As table (-1 if doesn't exist)</td>
       </tr>
     </table>
   </div>
@@ -441,18 +448,18 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
         <td>Number of SPD clusters in two layers</td>
       </tr>
       <tr>
-        <td>o2::aod::evsel::FoundFT0</td>
-        <td></td>
-        <td>foundFT0</td>
-        <td>int32_t</td>
+        <td>o2::aod::evsel::FoundFT0Id</td>
+        <td>I</td>
+        <td>foundFT0Id</td>
+        <td>int</td>
         <td>FT0 entry index in FT0s table (-1 if doesn't exist)</td>
       </tr>
       <tr>
-        <td>o2::aod::evsel::FoundFV0</td>
-        <td></td>
-        <td>foundFV0</td>
-        <td>int32_t</td>
-        <td>FV0 entry index in FV0A table (-1 if doesn't exist)</td>
+        <td>o2::aod::evsel::FoundFV0Id</td>
+        <td>I</td>
+        <td>foundFV0Id</td>
+        <td>int</td>
+        <td>FV0 entry index in FV0As table (-1 if doesn't exist)</td>
       </tr>
     </table>
   </div>

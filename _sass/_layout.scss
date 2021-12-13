@@ -71,6 +71,6 @@
 
 @include breakpoint(xl) {
   .content-wrap {
-    max-width: $width-xl - $theme-menu-width;
+    max-width: 80%;
   }
 }
