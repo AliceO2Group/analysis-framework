@@ -67,17 +67,21 @@ title: Operator Documentation
   * The metric can be selected from the upper-left dropdown, and the graph will change accordingly.
   * The user can choose to plot the metric data per device, by checking the _Per Device_ near the dropdown.
 
+
   <div align="center">
     <img src="../images/testGraphsPerDevice.png" width="70%">
   </div>
 
+
   * In order to plot the highest ten graphs, that means the graphs with the highest average, the user can click the **Show top 10 largest** checkbox.
+  
   
   <div align="center">
     <img src="../images/graphLargest.png" width="70%">
   </div>
   
   * The user can zoom into the graph by clicking and dragging the mouse along the area of interest. For zooming out, the user must double-click on the graph.
+
 
   <div align="center">
     <img src="../images/graphZoom.png" width="70%">
@@ -87,6 +91,7 @@ title: Operator Documentation
     <img src="../images/graphZoom2.png" width="70%">
    </div>
   
+  
 ## <a name="trainswithissues"></a>Trains with issues
 
 * This page displays the list of train runs that are in state _submitted_ but could not be merged due to specific problems:
@@ -95,18 +100,20 @@ title: Operator Documentation
   * There is a merging job which is in a final state, but there is no final merge job
   * There is a final merge job in final state, but the merging is not declared as _done_ in the database
 
+
   <div align="center">
     <img src="../images/trainsWithIssues.png" width="70%">
   </div>
+  
   
 * The operator must analyse this cases and decide upon resubmitting some of the jobs, launching the final merging submission where the errors are not significant, or killing the train when there are too many errors.
   
 ## <a name="datasets"></a>Datasets
 
-* Displays all the datasets available. The operator can add, remove, activate or deactivate a dataset. Likewise, by clicking the edit icon, the operator is able to modify the dataset in the Edit Dataset page.
+* Displays all the datasets available. The operator can add, remove, activate or deactivate a dataset. Likewise, by clicking the `📝` button, the operator is able to modify the dataset in the Edit Dataset page.
 
   <div align="center">
-    <img src="../images/datasetsPage.png" width="90%">
+    <img src="../images/datasetsPage.png" width="100%">
   </div>
 
 * The runlists will be received programtically from the DPG.
@@ -116,16 +123,16 @@ title: Operator Documentation
 * This page is dedicated to the DPG experts and displayes all the DPG runlists created for the datasets. The DPG expert can add, edit or remove a runlist.
 
  <div align="center">
-    <img src="../images/DPGrunlists.png" width="80%">
+    <img src="../images/DPGrunlists.png" width="100%">
   </div>
   
-* Clicking on the the edit icon will lead to the edit view, where the DPG expert can change the list of runs.
+* Clicking on the the `📝` button will lead to the edit view, where the DPG expert can change the list of runs.
 
  <div align="center">
     <img src="../images/editRunlist.png" width="70%">
   </div>
   
-* DPG experts can create a new runlist by clikcing the _Add runlist_ button. In order to create the list of runs, the correct data type, anchor, tag and production must be selected.
+* DPG experts can create a new runlist by clikcing the **+Add runlist** button. In order to create the list of runs, the correct data type, anchor, tag and production must be selected.
 
  <div align="center">
     <img src="../images/addRunlist.png" width="70%">
