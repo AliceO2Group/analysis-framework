@@ -5,7 +5,7 @@ title: Basic concept
 
 ## Concept
 
-The Hyperloop framework is a tool to run and manage analysis trains on AliEn. It is based on the concept of the LEGO train system used during Run 2. It builds on the O2 analysis framework, O2 DPL, MonALISA and LPM. If you are a Run 2 train expert, and you don't have much time, you can just jump to this section: [_Run 2 LEGO train expert_](hyperlooppractice.md#legoexpert). 
+The Hyperloop framework is a tool to run and manage analysis trains on AliEn. It is based on the concept of the LEGO train system used during Run 2. It builds on the O2 analysis framework, O2 DPL, MonALISA and LPM. If you are a Run 2 train expert, and you don't have much time, you can just jump to this section: [_Run 2 LEGO train expert_](#legoexpert). 
 
 In order to run trains on the Grid, the code has to be contained in an AliEn package. Therefore, the train uses the regularly deployed O2Physics tags. 
 Hyperloop supports Run 3 data and converted Run 2 data. 
@@ -20,18 +20,18 @@ Hyperloop provides a web interface for users and operators which allows to:
 * study the resource consumption of the train for each wagon
 
 The views available in the Hyperloop framework are:
-* [My Analyses](hyperlooppractice.md#myanalyses)
-* [All Analyses](hyperlooppractice.md#allanalyses)
-* [Dashboard](hyperlooppractice.md#dashboard)
-* [Train Submission](hyperlooppractice.md#trainsubmission)
-* [Train Runs](hyperlooppractice.md#trainruns)
+* [My Analyses](userdocumentation.md#myanalyses)
+* [All Analyses](userdocumentation.md#allanalyses)
+* [Dashboard](operatordocumentation.md#dashboard)
+* [Train Submission](operatordocumentation.md#trainsubmission)
+* [Train Runs](operatordocumentation.md#trainruns)
 * For a user, the **Datasets** page displays a read view only of all the datasets available in the system. For a train operator, the **Datasets** page allows creation, configuration and deletion of datasets. 
 * For the DPG experts, the **DPG Runlists** page allows creation, configuration and deletion of runlists. For the users it offers a read only view of all DPG runlists available in the system.
 
 ## <a name="legoexpert"></a>For the Run 2 LEGO train expert. What has changed?
 
 * There are different webpages for users and train operators: 
-  1. **My Analyses**, the user will see only _Analyses_ where the user belongs to, this is [defined through JIRA](hyperloopintro.md#joinanalysis). The user has writing permits to all elements in this webpage. 
+  1. **My Analyses**, the user will see only _Analyses_ where the user belongs to, this is [defined through JIRA](userdocumentation.md#joinanalysis). The user has writing permits to all elements in this webpage. 
   2. **All Analyses** is a read only view of all the _Analyses_ available in the system. The only action permitted is [cloning a wagon](#clonewagon). 
   3. **Train Submission** is a webpage designed for operators. It displays only datasets which have enabled wagons, allowing train composition. Submitting, modifying and killing a train is also allowed.
   4. **Train Runs** is a webpage designed for operators. It displays all train runs available in the system. The actions permitted are submitting, modifying and killing a train.
