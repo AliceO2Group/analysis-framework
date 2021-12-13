@@ -101,5 +101,5 @@ title: Notifications
     <img src="../images/inconsistentParameters.png" width="90%">
   </div>
 
-* If the **wagon is enabled with an older tag**, the configuration might not match (hence the notification). If the old tag is needed, then syncing is not an option because this will set the package to the latest one. Therefore, the wagon configuration has to be modified as needed. The user can take as a reference "full_config.json" in the test output, which shows the configuration the test is being run with, and compare it to the wagon configuration.
+* If the **wagon is enabled with an older tag**, the configuration might not match (hence the notification). If the old tag is needed, then syncing is not an option because this will set the package to the latest one. Therefore, the wagon configuration has to be modified as needed. The user can take as a reference _full_config.json_ in the test output, which shows the configuration the test is being run with, and compare it to the wagon configuration.
 
