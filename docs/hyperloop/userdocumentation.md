@@ -1,6 +1,6 @@
 ---
 sort: 2
-title: Practical considerations
+title: User Documentation
 ---
 
 ## <a name="myanalyses"></a>My Analyses
@@ -123,7 +123,7 @@ You can get to the _All Analyses_ page by using the main menu, or by the link in
 
 * On the right side of the page, the user can select two timestamps in order to compare the state of the wagon between the two by clicking _Compare_. This will lead to [_Compare Wagons_](#comparewagons) page. You can cancel your current selection by clicking _Unselect all_.
 
-##### <a name="comparewagons"></a> 5. Compare two wagons:
+##### <a name="comparewagons"></a> 5. Compare wagon at different timestamps:
 
 * In the _Compare Wagons_ view, we can analyse the state of a wagon at two different timestamps. The _Wagon settings_ tab shows the changes regarding the name, workflow and dependencies and/or the common features between the two. By clicking on one of the dependencies, a new tab will open showing the comparison between the same two timestamps for the wagon clicked. 
 
@@ -132,6 +132,35 @@ You can get to the _All Analyses_ page by using the main menu, or by the link in
 <div align="center">
 <img src="../images/compareWagons.png" width="70%">
 </div>
+
+##### <a name="clonewagon"></a>6. Compare individual wagons:
+
+* The user is able to compare a wagon with any of their individual wagons. 
+* Using the _My Analyses_ page, click on the button `🆚` to compare the wagon. A list of all your wagons will be displayed. Once you select the desired wagon, this will open the comparison view in a new tab. This has a similar structure to the different timstamps comparison.
+
+<div align="center">
+<img src="../images/compareUserWagons.png" width="70%">
+</div>
+
+## <a name="joinanalysis"></a> Creating or joining an analysis
+
+The Analyses to which a user belongs to, is defined through a <a href="https://alice.its.cern.ch/jira/secure/Dashboard.jspa" target="_blank">JIRA</a> ticket.
+In the JIRA page, create an issue by clicking on the button `Create`, and fill the information with the following parameters:
+
+* In _Project_ select your PWG. 
+* In _Issue Type_ select _Analysis_.
+* In _Summary_ write the name of your _Analysis_.
+* In _Components_ select your PAG.
+* In _Run 3 analysis_ choose `Yes`.
+* In _Analyzers_ select all the users that will be part of this analysis. All the analyzers will have writing permits to all components in the analysis.
+* (Optional) In _Description_ give a brief description of the analysis.
+The rest of the parameters are not relevant for the Hyperloop train system.
+
+After all the parameters have been set, click on `Create` and your _Analysis_ will be available in the _My Analyses_ and _All Analyses_ page.
+
+<img src="../images/comparisonwithjira.png" width="100%">
+
+The synchronization from JIRA to the Hyperloop train system can take up to 30 minutes.
 
 ### <a name="enabledatasets"></a>Enabling datasets
 
@@ -189,32 +218,6 @@ When creating or enabling wagons, you can use a pull request instead of a packag
 * There is a read only view of all analyses available in the system. 
 * Wagons from any analysis available in the system can be cloned `🧬` to a user's analysis.
 
-## <a name="dashboard"></a>Dashboard
-
-* The Dashboard displays the current state of the system by showing a number of status parameters related to wagons, trains and grid jobs. Additionally, the user can see the summary of the last week: average completion time, number of finished trains and wagon tests. 
-
-<div align="center">
-<img src="../images/dashboard.png" width="70%">
-</div>
-
-* By clicking the number of wagons waiting to be included in a train, the user can directly open the [_Train Submission_](#trainsubmission). Similarly, a link to the [_Train Runs_](#trainruns) is available by clicking the number of trains to be submitted to the grid, the number of running tests, or the number of finished trains.
-
-## <a name="trainsubmission"></a>Train Submission
-* For a user, the _Train Submission_ page displays a read view only of datasets which have enabled wagons.
-* For a train operator, the  _Train Submission_ page displays only datasets which have enabled wagons, and allows train composition, as well as submitting, modifying and killing a train.
-### <a name="trainsubmission"></a>Train Composition
-* Trains are composed per dataset. Only wagons which have a test status of success `🌟` or warning `❗️` can be composed in a train.
-* By default, wagons that were enabled at most one week ago are shown. In order to display all enabled wagons, click on `off` in the _Enabled_ column.
-* In order to compose a train, click `☑️` in the _Compose_ column. The package tag will be automatically chosen, and other wagons that can be included in the train run are signalized with 🟢, and the ones which are not compatible with 🔴. All wagons that are compatible can be automatically chosen by clicking on `✅ Select all compatible wagons`, or by selecting them one by one.
-* If a wagon has _Derived data_ tables activated, it will be signalized with the icon 🗂️ in the _Test status_ column. 
-* `☑️ slow train`: If enabled, the express train features are disabled. This means that you may have up to 2% more jobs which finish but the train run may take several days more.
-* `☑️ derived data`: If enabled, this train produces derived data to be used for further analysis. The results will not be merged and can be used as input for future train runs.
-* `☑️ automatic submission`: If enabled will submit the train automatically after the test is done and succeds `🌟`.
-* `Target`: Sets the facility/cores where the train will be run.
-* Finally, after defining the configuration, click on `Compose 🚂` to compose a train. After composing a train run, the wagons selected cannot be selected for a different train run unless the current train run is [decomposed](#decompose). After the train run is [submitted](#submit), the wagons will be disabled. 
-* If a user changes a configuration between train composition and submission, the new configuration is not taken into account. The train runs with the wagons and dataset configuration corresponding to the time at which it was _created_.
-* The train will be automatically tested, and its progress can be followed in the _Train Runs_ table, or in the [**Train Runs**](#trainruns) page by clicking on the TRAIN_ID link.
-
 ## <a name="trainruns"></a>Train Runs
 * For a user, the _Train Runs_ page displays a read view only of all train runs available in the system.
 * For a train operator, the _Train Runs_ page displays all trains available in the system, and allows submitting, modifying and killing a train.
@@ -234,79 +237,28 @@ When creating or enabling wagons, you can use a pull request instead of a packag
 
   * The metric can be selected from the upper-left dropdown, and the graph will change accordingly.
   * The user can choose to plot the metric data per device, by checking the _Per Device_ near the dropdown.
+
+  <div align="center">
+    <img src="../images/testGraphsPerDevice.png" width="70%">
+  </div>
+
+  * In order to plot the highest ten graphs, that means the graphs with the highest average, the user can click the **Show top 10 largest** checkbox.
   
   <div align="center">
-    <img src="../images/testGraphsDevice.png" width="70%">
+    <img src="../images/graphLargest.png" width="70%">
   </div>
   
-## <a name="notifications"></a>Notifications
-* There are different types of notifications that an user receives, each related to a specific topic. A warning notification is not necessarly requesting action to be taken, but can just point out a certain information about user activity or result.
+  * The user can zoom into the graph by clicking and dragging the mouse along the area of interest. For zooming out, the user must double-click on the graph.
 
-### <a name="infoNotification"></a>Informative notification
+  <div align="center">
+    <img src="../images/graphZoom.png" width="70%">
+  </div>
+  
+   <div align="center">
+    <img src="../images/graphZoom2.png" width="70%">
+  </div>
 
-* This type of notification lets the user know about automatic or consequent updates.
 
-#### <a name="infoWagonDisabled"></a>Disabled wagon
-
-* Local tests are cleaned if the wagons are not submitted in a period of 4 weeks. The user is notified that the respective wagons are automatically disabled.
-
-#### <a name="datasetChanged"></a>Dataset changed
-
-* This notification lets the user know about an update made to one of the datasets included in his analyses. The notification message contains a link to the history of the dataset that has been modified, as well as a link to the analysis this dataset is included in. In the history view of the dataset, the user can check the changes that have been made since the creation of the dataset, and also open the dataset read-only view by cliking on the corresponding timestamp / time of update.
-
-<div align="center">
-    <img src="../images/datasetChanged.png" width="90%">
-</div>
-
-### <a name="successNotification"></a>Success notification
-
-* This notifications inform the user about processes or updates that were successful.
-
-#### <a name="datasetEnabled"></a>Dataset enabled / disabled
-
-* Notifies the user when a dataset has been successfully enabled or disabled.
-
-#### <a name="trainrunAdded"></a>Train run added into dataset
-
-* Informs the user when a train run has been successfully added into a dataset. The notification message includes a direct link to the dataset history that will open in a new tab, as well as a link to the analysis that includes the dataset.
-
-<div align="center">
-  <img src="../images/trainrunAdded.png" width="90%">
-</div>
-
-#### <a name="runlistUpdated"></a>Runlist updated
-
-* The user is informed When the runlist of a dataset is modified. This notification contains direct links to the dataset read-only view, dataset history and the respective analysis.
-
-<div align="center">
-  <img src="../images/runlistUpdate.png" width="90%">
-</div>
-
-## <a name="legoexpert"></a>For the Run 2 LEGO train expert. What has changed?
-
-* There are different webpages for users and train operators: 
-  1. **My Analyses**, the user will see only _Analyses_ where the user belongs to, this is [defined through JIRA](hyperloopintro.md#joinanalysis). The user has writing permits to all elements in this webpage. 
-  2. **All Analyses** is a read only view of all the _Analyses_ available in the system. The only action permitted is [cloning a wagon](#clonewagon). 
-  3. **Train Submission** is a webpage designed for operators. It displays only datasets which have enabled wagons, allowing train composition. Submitting, modifying and killing a train is also allowed.
-  4. **Train Runs** is a webpage designed for operators. It displays all train runs available in the system. The actions permitted are submitting, modifying and killing a train.
-  5. **Datasets**, for the users, it is a read only view of all the _Datasets_ available in the system. For the train operators, it allows creation,configuration and deletion of _Datasets_. The _Datasets_ are directly created from runlists already defined in the _DPG Runlists_ webpage instead of copying from a text file in the twiki page like the LEGO trains. 
-  6. **DPG Runlists** is a webpage designed for the DPG. For the DPG experts, it allows creation, configuration and deletion of runlists, instead of defining them in a twiki page. For the users it offers a read only view of all DPG runlists available in the system.
-  7. **Dashboard** provides a summary of the current state of the system by displaying a set of status parameters. The user can check information such as the number of ongoing tests, the number running trains and the current grid jobs. Moreover, an overview of the previous week is presented.
-
-* There is a history feature for wagons and datasets. You can access it by clicking on the button `📜` available inside of a wagon/dataset view. A detailed view of what has been created/updated/removed from the wagon/dataset is shown, as well as the username and the time when the change was made.
-<div align="center">
-<img src="../images/datasetHistory.png" width="100%">
-</div>
-
-* There are automated notifications. These notifications are created per user, and display changes made to tools, like _Datasets_, that are being used by the user. They are displayed per _Analysis_ in the _My Analyses_ page, or globally in the button `🔔` which can be found on the top menu.
-
-* There is an impersonation feature `🕵` that can be used by experts in order to help users if they have a problem with the UI.
-
-* When [enabling a wagon](#enablewagon) in a dataset the user can choose whether to enable it with a fixed package tag, latest package tag or a [pull request](#pullrequest).
-
-* After [enabling a wagon](#enablewagon) in a dataset, the wagon is automatically tested, and the user can follow the test status (`⌛️`,`⏳`,`❗️`,`🌟`,`💣`) in the _My Analyses_ page.
-
-* **Performance Graphs** page allows the user to upload his own local metrics file, and then generate the test graphs specific to that file. You produce a local _performanceMetrics.json_ by running the o2 workflow with the argument _--resources-monitoring 2_ which, in this example, produces monitoring information every 2 seconds. These are the same type of graphs produced in the _Test Graphs_ tab of the train run. This page can be accessed at: <a href="https://alimonitor.cern.ch/hyperloop/performance-graphs" target="_blank">https://alimonitor.cern.ch/hyperloop/performance-graphs</a>.
-<div align="center">
-<img src="../images/performanceGraphs.png" width="100%">
-</div>
+  
+  
+  
