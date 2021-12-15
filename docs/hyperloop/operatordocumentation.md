@@ -168,7 +168,7 @@ title: Operator Documentation
     <img src="../images/addDatasetProduction.png" width="60%">
   </div>
 
-## <a name="dpgrunlist"></a>DPG Runlists
+## <a name="dpgrunlists"></a>DPG Runlists
 
 * This page is dedicated to the DPG experts and displayes all the DPG runlists created for the datasets. The DPG expert can add, edit or remove a runlist.
 
