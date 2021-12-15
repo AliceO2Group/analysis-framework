@@ -118,6 +118,56 @@ title: Operator Documentation
 
 * The runlists will be received programtically from the DPG.
 
+## <a name="editdataset"></a>Edit Dataset
+
+* Allows the operator to update the dataset properties. The operator update the name and description of the dataset, and can activate or deactivate it by clicking the `❌`/`✅` button.
+
+<div align="center">
+    <img src="../images/editDatasetOptions.png" width="100%">
+  </div>
+
+* In the **Options** box, you can add linked datasets to the current dataset, which will be used for the [**staged submission**][#stagedsubmission].
+* In the **Analysis Facility Staging**, the user is able to stage or unstage the data to the available targets. 
+  * Choose a target from the dropdown list, and the staging process will start once clicking the _Save all changes_ button at the top right of the page. 
+  * You can hover over the stagin percentage to get a detailed status of the process. By clicking on the percentage, you will be lead to a new tab where you can see the elaborate overview of the transfer requests.
+  * To unstage the data to a specific target, click the _Unstage_ button. The unstaging process will start once clicking the _Save all changes_ button.
+
+  <div align="center">
+    <img src="../images/editDatasetStaging.png" width="100%">
+  </div>
+
+* In the **Automatic Composition** box, the user is able to enable the automatic composition. Choose the composition type, the maximal CPU time that can be consumed and the maximum number of trains that can be composed per week for an analysis.
+
+  <div align="center">
+    <img src="../images/automaticComposition2.png" width="100%">
+  </div>
+  
+* Choose the days and times at which the trains should be composed.
+
+  <div align="center">
+    <img src="../images/automaticComposition3.png" width="100%">
+  </div>
+
+* For RUN 2 data, the operator can add or change a conversion train run.
+
+  <div align="center">
+    <img src="../images/addTrainRun.png" width="100%">
+  </div>
+  
+* For RUN 3 data and MC, the operator can add or update a production. You can add runs to be exluded from the list of runs. 
+
+<div align="center">
+    <img src="../images/changeDatasetProduction.png" width="100%">
+  </div>
+
+* The mergelist defines which runs are merged into one file at the end of the train running. The operator can add or update a mergelist in the dataset.
+
+* In order to create a new production, click on the _+ Production_ button. After choosing the collision type, anchor and MC Tag, select the runlist defined by the DPG and click _+Add_.
+
+<div align="center">
+    <img src="../images/addDatasetProduction.png" width="100%">
+  </div>
+
 ## <a name="dpgrunlist"></a>DPG Runlists
 
 * This page is dedicated to the DPG experts and displayes all the DPG runlists created for the datasets. The DPG expert can add, edit or remove a runlist.
