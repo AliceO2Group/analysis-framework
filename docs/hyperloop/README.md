@@ -28,10 +28,12 @@ Hyperloop provides a web interface for users and operators which allows to:
 * study the resource consumption of the train for each wagon
 
 The views available in the Hyperloop framework are:
-* [My Analyses](userdocumentation.md#myanalyses)
-* [All Analyses](userdocumentation.md#allanalyses)
-* [Dashboard](operatordocumentation.md#dashboard)
-* [Train Submission](operatordocumentation.md#trainsubmission)
-* [Train Runs](operatordocumentation.md#trainruns)
+* [My Analyses](userdocumentation.md#myanalyses): <a href="https://alimonitor.cern.ch/hyperloop/" target="_blank">https://alimonitor.cern.ch/hyperloop/</a>
+* [All Analyses](userdocumentation.md#allanalyses): <a href="https://alimonitor.cern.ch/hyperloop/all-analyses" target="_blank">https://alimonitor.cern.ch/hyperloop/all-analyses</a>
+* [Dashboard](operatordocumentation.md#dashboard): <a href="https://alimonitor.cern.ch/hyperloop/dashboard" target="_blank">https://alimonitor.cern.ch/hyperloop/dashboard</a>
+* [Train Submission](operatordocumentation.md#trainsubmission): <a href="https://alimonitor.cern.ch/hyperloop/train-submission" target="_blank">https://alimonitor.cern.ch/hyperloop/train-submission</a>
+* [Train Runs](operatordocumentation.md#trainruns): <a href="https://alimonitor.cern.ch/hyperloop/train-runs" target="_blank">https://alimonitor.cern.ch/hyperloop/train-runs</a>
+* [Datasets](operatordocumentation.md#datasets): <a href="https://alimonitor.cern.ch/hyperloop/datasets" target="_blank">https://alimonitor.cern.ch/hyperloop/datasets</a>
+* [DPG Runlists](operatordocumentation.md#dpgrunlists): <a href="https://alimonitor.cern.ch/hyperloop/runlists" target="_blank">https://alimonitor.cern.ch/hyperloop/runlists</a>
 * For a user, the **Datasets** page displays a read view only of all the datasets available in the system. For a train operator, the **Datasets** page allows creation, configuration and deletion of datasets. 
 * For the DPG experts, the **DPG Runlists** page allows creation, configuration and deletion of runlists. For the users it offers a read only view of all DPG runlists available in the system.
