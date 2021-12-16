@@ -30,7 +30,7 @@ title: Operator Documentation
 * If a wagon has _Derived data_ tables activated, it will be signalized with the icon 🗂️ in the _Test status_ column. 
 * `☑️ slow train`: If enabled, the express train features are disabled. This means that you may have up to 2% more jobs which finish but the train run may take several days more.
 * `☑️ derived data`: If enabled, this train produces derived data to be used for further analysis. The results will not be merged and can be used as input for future train runs.
-* `☑️ automatic submission`: If enabled will submit the train automatically after the test is done and succeds `🌟`.
+* `☑️ automatic submission`: If enabled will submit the train automatically after the test is done and succeeds `🌟`.
 * `Target`: Sets the facility/cores where the train will be run.
 * Finally, after defining the configuration, click on `Compose 🚂` to compose a train. After composing a train run, the wagons selected cannot be selected for a different train run unless the current train run is [decomposed](#decompose). After the train run is [submitted](#submit), the wagons will be disabled. 
 * If a user changes a configuration between train composition and submission, the new configuration is not taken into account. The train runs with the wagons and dataset configuration corresponding to the time at which it was _created_.
@@ -40,7 +40,8 @@ title: Operator Documentation
 
 * Linked datasets are subsets of a big dataset
 * First, a train run needs to be _Done_ on a smaller linked dataset before being run on a bigger dataset
-* Any user who is part of the analysis can **request a long train**
+* Any user who is part of the analysis can **request a long train**, by going on the train result to the _Request long train_ tab
+* Choose the dataset, target and wagons you want to include and click the _Compose and request approval_ button.
 * Approval from the participating analyses PWGs conveners is required in order to submit a long train 
 
 <div align="center">
@@ -80,7 +81,7 @@ title: Operator Documentation
     <img src="../images/graphLargest.png" width="70%">
   </div>
   
-  * The user can zoom into the graph by clicking and dragging the mouse along the area of interest. For zooming out, the user must double-click on the graph.
+  * The user can zoom into the graph by clicking and dragging the mouse along the area of interest. For zooming out, the user can double-click on the graph.
 
 
   <div align="center">
@@ -110,13 +111,13 @@ title: Operator Documentation
   
 ## <a name="datasets"></a>Datasets
 
-* Displays all the datasets available. The operator can add, remove, activate or deactivate a dataset. Likewise, by clicking the `📝` button, the operator is able to modify the dataset in the Edit Dataset page.
+* Displays all the datasets available. The operator can add, remove, activate or deactivate a dataset. Likewise, by clicking the `📝` button, the operator is able to modify the dataset in the [**Edit Dataset**](#editdataset) page.
 
   <div align="center">
     <img src="../images/datasetsPage.png" width="100%">
   </div>
 
-* The runlists will be received programtically from the DPG.
+* The runlists will be received programmatically from the DPG.
 
 ## <a name="editdataset"></a>Edit Dataset
 
@@ -126,7 +127,7 @@ title: Operator Documentation
     <img src="../images/editDatasetOptions.png" width="70%">
   </div>
 
-* In the **Options** box, you can add linked datasets to the current dataset, which will be used for the [**staged submission**][#stagedsubmission].
+* In the **Options** box, you can add linked datasets to the current dataset, which will be used for the [**staged submission**](#stagedsubmission).
 * In the **Analysis Facility Staging**, the user is able to stage or unstage the data to the available targets displayed in the dropdown.
   * Choose a target from the dropdown list, and you will be notified of the amount of data required for the staging process. Confirm by clicking OK. The staging process will start once clicking the _Save all changes_ button at the top right of the page. 
   * You can hover over the staging percentage to get a detailed status of the staging progress. By clicking on the percentage, you will be lead to a new tab where you can see the elaborate overview of the transfer requests on MonALISA.
@@ -140,6 +141,7 @@ title: Operator Documentation
   * _Scheduled_: If within schedule, trains will be composed with the compatible wagons in the dataset, regardless of the occupation in target memory.
   * _Train full_: The train will be composed only if the compatible wagons add up to at least 75% of the target memory.
   * _Scheduled and train full_: The train will be composed if it is within schedule. If not in schedule, the train will only be composed if the compatible wagons occupy at least 75% of the target memory.
+* For all these cases, the trains will only be composed if the tests finished without a warning.
 
   <div align="center">
     <img src="../images/automaticComposition2.png" width="80%">
@@ -165,7 +167,7 @@ title: Operator Documentation
 
 * The mergelist defines which runs are merged into one file at the end of the train running. The operator can add or update a mergelist in the dataset.
 
-* In order to create a new production, click on the _+ Production_ button. After choosing the collision type, anchor and MC Tag, select the runlist defined by the DPG and click _+Add_. If no runlist is available, contact the DPG specialists.
+* In order to create a new production, click on the _+ Production_ button. After choosing the collision type, anchor and MC Tag, select the runlist defined by the DPG and click _+Add_. If no runlist is available, contact the DPG specialists for creating one.
 
 <div align="center">
     <img src="../images/addDatasetProduction.png" width="60%">
@@ -173,7 +175,7 @@ title: Operator Documentation
 
 ## <a name="dpgrunlists"></a>DPG Runlists
 
-* This page is dedicated to the DPG experts and displayes all the DPG runlists created for the datasets. The DPG expert can add, edit or remove a runlist.
+* This page is dedicated to the DPG experts and displays all the DPG runlists created for the datasets. The DPG expert can add, edit or remove a runlist.
 
  <div align="center">
     <img src="../images/DPGrunlists.png" width="100%">
