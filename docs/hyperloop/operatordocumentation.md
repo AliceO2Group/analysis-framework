@@ -161,7 +161,7 @@ title: Operator Documentation
     <img src="../images/addTrainRun.png" width="70%">
   </div>
   
-* For RUN 3 data and MC, the operator can add or remove a production. In order to create a new production, click on the _+ Production_ button. After choosing the collision type, anchor and MC Tag, select the runlist defined by the DPG and click _+Add_. If no runlist is available, contact the DPG specialists for creating one.
+* For RUN 3 data and MC, the operator can add or remove a production. In order to create a new production, click on the _+Production_ button. After choosing the collision type, anchor and MC Tag, select the runlist defined by the DPG and click _+Add_. If no runlist is available, contact the DPG specialists for creating one.
   
   <div align="center">
     <img src="../images/addDatasetProduction.png" width="60%">
@@ -174,11 +174,12 @@ title: Operator Documentation
   </div>
   
 * Within the dataset production you can update the list of runs to be excluded.
-* The mergelist defines which runs are merged into one file at the end of the train running. The operator can add, update, activate or deactivate a mergelist in the dataset. 
 
-<div align="center">
+  <div align="center">
     <img src="../images/changeDatasetProduction.png" width="60%">
   </div>
+
+* The mergelist defines which runs are merged into one file at the end of the train running. The operator can add, update, activate or deactivate a mergelist in the dataset. 
 
 
 ## <a name="dpgrunlists"></a>DPG Runlists
