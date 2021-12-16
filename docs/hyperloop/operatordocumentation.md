@@ -119,7 +119,7 @@ title: Operator Documentation
 
 * The runlists will be received programmatically from the DPG.
 
-## <a name="editdataset"></a>Edit Dataset
+### <a name="editdataset"></a>Edit Dataset
 
 * Allows the operator to update the dataset properties. Firstly, the operator can update the name and description of the dataset, and activate or deactivate it by clicking the `❌` / `✅` button. In order to save the changes you made, click the _Save all changes_ button.
 
@@ -127,7 +127,7 @@ title: Operator Documentation
     <img src="../images/editDatasetOptions.png" width="70%">
   </div>
 
-* In the **Options** box, you can add linked datasets to the current dataset, which will be used for the [**staged submission**](#stagedsubmission).
+* In the **Options** box, you can add linked datasets to the current dataset, which will be used for the [**staged submission**](#stagedsubmission). Enabling _Run final merging over all runs in this dataset_ will merge all the runs of all the productions during the final merging.
 * In the **Analysis Facility Staging**, the user is able to stage or unstage the data to the available targets displayed in the dropdown.
   * Choose a target from the dropdown list, and you will be notified of the amount of data required for the staging process. Confirm by clicking OK. The staging process will start once clicking the _Save all changes_ button at the top right of the page. 
   * You can hover over the staging percentage to get a detailed status of the staging progress. By clicking on the percentage, you will be lead to a new tab where you can see the elaborate overview of the transfer requests on MonALISA.
@@ -141,37 +141,45 @@ title: Operator Documentation
   * _Scheduled_: If within schedule, trains will be composed with the compatible wagons in the dataset, regardless of the occupation in target memory.
   * _Train full_: The train will be composed only if the compatible wagons add up to at least 75% of the target memory.
   * _Scheduled and train full_: The train will be composed if it is within schedule. If not in schedule, the train will only be composed if the compatible wagons occupy at least 75% of the target memory.
-* For all these cases, the trains will only be composed if the tests finished without a warning.
+* For all these cases, the trains will only be composed if the tests finished without a warning and if they do not store derived data.
 
   <div align="center">
-    <img src="../images/automaticComposition2.png" width="80%">
+    <img src="../images/automaticComposition3.png" width="80%">
   </div>
   
 * Choose the days and times at which the trains should be composed.
 
   <div align="center">
-    <img src="../images/automaticComposition3.png" width="80%">
+    <img src="../images/automaticComposition2.png" width="80%">
   </div>
+  
+### Deciding on data to be processed depends on the dataset type
 
-* For RUN 2 data, the operator can add or change a conversion train run.
+* For RUN 2 data, the operator can add or remove a [**RUN 2 conversion train run**](https://alimonitor.cern.ch/trains/train.jsp?train_id=132#runs).
 
   <div align="center">
     <img src="../images/addTrainRun.png" width="70%">
   </div>
   
-* For RUN 3 data and MC, the operator can add or update a production. You can add runs to be exluded from the list of runs. 
+* For RUN 3 data and MC, the operator can add or update a production. In order to create a new production, click on the _+ Production_ button. After choosing the collision type, anchor and MC Tag, select the runlist defined by the DPG and click _+Add_. If no runlist is available, contact the DPG specialists for creating one.
+  
+  <div align="center">
+    <img src="../images/addDatasetProduction.png" width="60%">
+  </div>
+
+* For derived data, you can add or remove a production. Create a production by selecting _Data_, choose the desired _Period_ and select the required _Derived train_ from the dropdown list.
+
+ <div align="center">
+    <img src="../images/datasetDerivedData.png" width="60%">
+  </div>
+  
+* Within the dataset production you can update the list of runs to be excluded.
+* The mergelist defines which runs are merged into one file at the end of the train running. The operator can add, update, activate or deactivate a mergelist in the dataset. 
 
 <div align="center">
     <img src="../images/changeDatasetProduction.png" width="60%">
   </div>
 
-* The mergelist defines which runs are merged into one file at the end of the train running. The operator can add or update a mergelist in the dataset.
-
-* In order to create a new production, click on the _+ Production_ button. After choosing the collision type, anchor and MC Tag, select the runlist defined by the DPG and click _+Add_. If no runlist is available, contact the DPG specialists for creating one.
-
-<div align="center">
-    <img src="../images/addDatasetProduction.png" width="60%">
-  </div>
 
 ## <a name="dpgrunlists"></a>DPG Runlists
 
@@ -187,7 +195,7 @@ title: Operator Documentation
     <img src="../images/editRunlist.png" width="70%">
   </div>
   
-* DPG experts can create a new runlist by clikcing the **+Add runlist** button. In order to create the list of runs, the correct data type, anchor, tag and production must be selected.
+* DPG experts can create a new runlist by clicking the **+Add runlist** button. In order to create the list of runs, the correct data type, anchor, tag and production must be selected.
 
  <div align="center">
     <img src="../images/addRunlist.png" width="70%">
