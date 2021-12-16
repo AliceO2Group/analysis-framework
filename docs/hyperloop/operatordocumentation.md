@@ -136,7 +136,10 @@ title: Operator Documentation
     <img src="../images/editDatasetStaging.png" width="80%">
   </div>
 
-* In the **Automatic Composition** box, the user is able to enable the automatic composition. Choose the composition type, the maximum CPU time that can be consumed and the maximum number of trains that can be composed per week for an analysis.
+* In the **Automatic Composition** box, the user is able to enable the automatic train composition. Choose the composition type, the maximum CPU time that can be consumed and the maximum number of trains that can be composed per week for an analysis.
+  * _Scheduled_: If within schedule, trains will be composed with the compatible wagons in the dataset, regardless of the occupation in target memory.
+  * _Train full_: The train will be composed only if the compatible wagons add up to at least 75% of the target memory.
+  * _Scheduled and train full_: The train will be composed if it is within schedule. If not in schedule, the train will only be composed if the compatible wagons occupy at least 75% of the target memory.
 
   <div align="center">
     <img src="../images/automaticComposition2.png" width="80%">
