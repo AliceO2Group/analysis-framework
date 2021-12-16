@@ -161,7 +161,7 @@ title: Operator Documentation
     <img src="../images/addTrainRun.png" width="70%">
   </div>
   
-* For RUN 3 data and MC, the operator can add or update a production. In order to create a new production, click on the _+ Production_ button. After choosing the collision type, anchor and MC Tag, select the runlist defined by the DPG and click _+Add_. If no runlist is available, contact the DPG specialists for creating one.
+* For RUN 3 data and MC, the operator can add or remove a production. In order to create a new production, click on the _+ Production_ button. After choosing the collision type, anchor and MC Tag, select the runlist defined by the DPG and click _+Add_. If no runlist is available, contact the DPG specialists for creating one.
   
   <div align="center">
     <img src="../images/addDatasetProduction.png" width="60%">
