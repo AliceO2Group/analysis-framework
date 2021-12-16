@@ -2521,6 +2521,13 @@ For better overview the tables are grouped into the following categories: | [Gen
         <th>Comment</th>
       </tr>
       <tr>
+        <td>o2::soa::Index</td>
+        <td>GI</td>
+        <td>globalIndex</td>
+        <td>int64_t</td>
+        <td></td>
+      </tr>
+      <tr>
         <td>o2::aod::ambiguous::TrackId</td>
         <td>I</td>
         <td>trackId</td>
@@ -2560,6 +2567,13 @@ For better overview the tables are grouped into the following categories: | [Gen
         <th>Comment</th>
       </tr>
       <tr>
+        <td>o2::soa::Index</td>
+        <td>GI</td>
+        <td>globalIndex</td>
+        <td>int64_t</td>
+        <td></td>
+      </tr>
+      <tr>
         <td>o2::aod::ambiguous::MFTTrackId</td>
         <td>I</td>
         <td>mfttrackId</td>
@@ -2597,6 +2611,13 @@ For better overview the tables are grouped into the following categories: | [Gen
         <th>Getter</th>
         <th>Type</th>
         <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::soa::Index</td>
+        <td>GI</td>
+        <td>globalIndex</td>
+        <td>int64_t</td>
+        <td></td>
       </tr>
       <tr>
         <td>o2::aod::ambiguous::FwdTrackId</td>
@@ -3808,13 +3829,6 @@ For better overview the tables are grouped into the following categories: | [Gen
         <td>Production time</td>
       </tr>
       <tr>
-        <td>o2::aod::mcparticle::Phi</td>
-        <td>D</td>
-        <td>phi</td>
-        <td>float</td>
-        <td>Phi</td>
-      </tr>
-      <tr>
         <td>o2::aod::mcparticle::ProducedByGenerator</td>
         <td>D</td>
         <td>producedByGenerator</td>
@@ -3848,6 +3862,13 @@ For better overview the tables are grouped into the following categories: | [Gen
         <td>isPhysicalPrimary</td>
         <td>bool</td>
         <td>True if particle is considered a physical primary according to the ALICE definition</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::Phi</td>
+        <td>E</td>
+        <td>phi</td>
+        <td>float</td>
+        <td>Phi in the range [0, 2pi)</td>
       </tr>
       <tr>
         <td>o2::aod::mcparticle::Eta</td>
@@ -4022,13 +4043,6 @@ For better overview the tables are grouped into the following categories: | [Gen
         <td>vt</td>
         <td>float</td>
         <td>Production time</td>
-      </tr>
-      <tr>
-        <td>o2::aod::mcparticle::Phi</td>
-        <td>D</td>
-        <td>phi</td>
-        <td>float</td>
-        <td>Phi</td>
       </tr>
       <tr>
         <td>o2::aod::mcparticle::ProducedByGenerator</td>
