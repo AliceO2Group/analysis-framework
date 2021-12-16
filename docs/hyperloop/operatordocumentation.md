@@ -5,7 +5,7 @@ title: Operator Documentation
 
 ## <a name="dashboard"></a>Dashboard
 
-* The Dashboard displays the current state of the system by showing a number of status parameters related to wagons, trains and grid jobs. Additionally, the user can see the summary of the last week: average completion time, number of finished trains and wagon tests. 
+* The <a href="https://alimonitor.cern.ch/hyperloop/dashboard" target="_blank">**Dashboard**</a> displays the current state of the system by showing a number of status parameters related to wagons, trains and grid jobs. Additionally, the user can see the summary of the last week: average completion time, number of finished trains and wagon tests. 
 * Below, a display of the grid jobs state during the previous week is displayed, for every site.
 
 <div align="center">
@@ -15,7 +15,7 @@ title: Operator Documentation
 * By clicking the number of wagons waiting to be included in a train, the user can directly open the [_Train Submission_](#trainsubmission). Similarly, a link to the [_Train Runs_](#trainruns) is available by clicking the number of trains to be submitted to the grid, the number of running tests, or the number of finished trains.
 
 ## <a name="trainsubmission"></a>Train Submission
-* For a user, the _Train Submission_ page displays a read view only of datasets which have enabled wagons.
+* For a user, the <a href="https://alimonitor.cern.ch/hyperloop/train-submission" target="_blank">**Train Submission**</a> page displays a read view only of datasets which have enabled wagons.
 * For a train operator, the  _Train Submission_ page displays only datasets which have enabled wagons, and allows train composition, as well as submitting, modifying and killing a train.
 ### <a name="trainsubmission"></a>Train Composition
 * Trains are composed per dataset. Only wagons which have a test status of success `🌟` or warning `❗️` can be composed in a train.
@@ -49,7 +49,7 @@ title: Operator Documentation
 </div>
 
 ## <a name="trainruns"></a>Train Runs
-* For a user, the _Train Runs_ page displays a read view only of all train runs available in the system.
+* For a user, the <a href="https://alimonitor.cern.ch/hyperloop/train-runs" target="_blank">**Train Runs**</a> page displays a read view only of all train runs available in the system.
 * For a train operator, the _Train Runs_ page displays all trains available in the system, and allows submitting, modifying and killing a train.
 * The train run detail can be accessed by clicking on the TRAIN_ID, or with the url <a href="https://alimonitor.cern.ch/hyperloop/train-run/TRAIN_ID" target="_blank">https://alimonitor.cern.ch/hyperloop/train-run/TRAIN_ID</a>.
 * The actions allowed in a train run:
@@ -111,7 +111,7 @@ title: Operator Documentation
   
 ## <a name="datasets"></a>Datasets
 
-* Displays all the datasets available. The operator can add, remove, activate or deactivate a dataset. Likewise, by clicking the `📝` button, the operator is able to modify the dataset in the [**Edit Dataset**](#editdataset) page.
+* The <a href="https://alimonitor.cern.ch/hyperloop/datasets" target="_blank">**Datasets**</a> page displays all the datasets available. The operator can add, remove, activate or deactivate a dataset. Likewise, by clicking the `📝` button, the operator is able to modify the dataset in the [**Edit Dataset**](#editdataset) page.
 
   <div align="center">
     <img src="../images/datasetsPage.png" width="100%">
@@ -184,7 +184,7 @@ title: Operator Documentation
 
 ## <a name="dpgrunlists"></a>DPG Runlists
 
-* This page is dedicated to the DPG experts and displays all the DPG runlists created for the datasets. The DPG expert can add, edit or remove a runlist.
+* The <a href="https://alimonitor.cern.ch/hyperloop/runlists" target="_blank">**DPG Runlists**</a> page is dedicated to the DPG experts and displays all the DPG runlists created for the datasets. The DPG expert can add, edit or remove a runlist.
 
  <div align="center">
     <img src="../images/DPGrunlists.png" width="100%">
