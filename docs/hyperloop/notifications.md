@@ -1,16 +1,27 @@
 ---
-sort: 3
+sort: 2
 title: Notifications
 ---
 
 ## <a name="notifications"></a>Notifications
-* There are different types of notifications that the user receives, each related to a specific topic. A notification does not necessarly request an action to be taken, but informs the user aboout a specific element, and depending on the situation, the user can decide the possible next steps.
+* There are different types of notifications that the user receives, each related to a specific topic. A notification does not necessarly request an action to be taken, but informs the user about a specific element, and depending on the situation, the user can decide the possible next steps.
+* The notifications can be seen in the _My Analyses_ page and in the _Notifications_ page, by clicking `🔔` in the menu bar.
+
+<div align="center">
+    <img src="../images/notificationsMyAnalyses.png" width="90%">
+</div>
+
+* The user can click the `✖️` button to remove a notification. In order to remove all the notifications, go to the Notifications page, and click the `❌`_Dismiss all_ button.
+
+<div align="center">
+    <img src="../images/allNotifications.png" width="90%">
+</div>
 
 ### <a name="datasetNotifications"></a>Dataset notifications
 
 #### <a name="datasetChanged"></a>Dataset changed
 
-* Notifies the user that an update has been made to one of the datasets included in his analyses. The notification message contains a link to the history of the dataset that has been modified, as well as a link to the analysis this dataset is included in. The update here indicates that:
+* Notifies the user that an update has been made to one of the datasets included in his or her analyses. The notification message contains a link to the history of the dataset that has been modified, as well as a link to the analysis this dataset is included in. The update here indicates that:
   * The name or discription of the dataset has changed
   * The dataset has been staged or unstaged to a target
   * A linked dataset had been added or removed
@@ -28,18 +39,18 @@ title: Notifications
     <img src="../images/datasetActivation.png" width="90%">
 </div>
 
-#### <a name="productionAdded"></a>Production added 
+#### <a name="productionAdded"></a>Production added or removed
 
-* Informs the user that a production has been successfully created for the dataset.
+* For RUN 3 data and MC, the user is informed if the production has been successfully added to or removed from the dataset.
 
 <div align="center">
     <img src="../images/productionAdded.png" width="90%">
 </div>
 
 
-#### <a name="trainrunAdded"></a>Train run added into / removed from dataset
+#### <a name="trainrunAdded"></a>Conversion train run added into / removed from dataset
 
-* Informs the user that a train run has been added to the dataset production.
+* For RUN 2 data, the user is notified when a conversion train run has been added to or removed from the dataset.
 
 <div align="center">
   <img src="../images/trainrunAdded.png" width="90%">
@@ -59,7 +70,7 @@ title: Notifications
 
 #### <a name="mergelistUpdate"></a>Mergelist updated
 
-* The user is informed when a mergelist has been modified, added to or removed from the dataset production.
+* The mergelist defines which runs are merged into one file at the end of the train running. The user is informed when a mergelist has been modified, added to or removed from the dataset production. 
 
 <div align="center">
   <img src="../images/mergelistUpdate.png" width="90%">
@@ -69,21 +80,25 @@ title: Notifications
 
 #### <a name="infoWagonDisabled"></a>Disabled wagon
 
-* Informs the user when a wagon has been disabled in different circumstances: 
+Informs the user when a wagon has been disabled in different circumstances: 
 
   * Local tests are cleaned if the wagons are not submitted in a period of 4 weeks. The user is notified that the respective wagons are automatically disabled.
   
-  * Other wagons have the same derived data output.
-
-  <div align="center">
-    <img src="../images/wagonDisabled.png" width="90%">
-  </div>
-  
-  * The wagon has derived data and there are wagons that have the same workflows.
+  * When a wagon with derived data output is enabled, the test cannot start if the wagon and his dependencies share the same workflow. As a result, the wagon is disabled and the user is notified about the wagons which share the same task
+    * The notification format is: The wagon _"wagon_name"_ was disabled in _"dataset_name"_. There is derived data. The following wagons have the same workflows {_wagon1_, _wagon2_: _common_workflow_},...,{_wagonX_, _wagonY_: _common_workflow_}
 
   <div align="center">
     <img src="../images/wagonDisabled1.png" width="90%">
   </div>
+  
+  * If the wagon task produces derived data and no wagons have common workflows, the derived data outputs are examined. If the wagon and its dependencies have common derived data outputs, the user is notified.
+
+    * The notification format is:  The wagon _"wagon_name"_ was disabled in _"dataset_name"_. The following wagons have the same derived data outputs {_wagon1_, _wagon2_: _common_derived_data_},...,{_wagonX_, _wagonY_: _common_derived_data_}
+
+  <div align="center">
+    <img src="../images/wagonDisabled.png" width="90%">
+  </div>
+ 
 
 #### <a name="inconsistentParameters"></a>Inconsistent parameters
 
