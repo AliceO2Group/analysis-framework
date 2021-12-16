@@ -3,8 +3,8 @@ sort: 1
 title: User Documentation
 ---
 
-## <a name="myanalyses"></a>My Analyses
-* _My Analyses_ is a personalized webpage which displays all the analyses where the user belongs to. 
+## <a name="myanalyses"></a>My Analyses 
+* <a href="https://alimonitor.cern.ch/hyperloop/" target="_blank">**My Analyses**</a> is a personalized webpage which displays all the analyses where the user belongs to. 
 * The analyses display can be expanded/collapsed and reordered with the buttons `✚/-`,`⇧` and `⇩`, or by dragging and dropping. This configuration is saved per user.
 * The user can add/remove, configure and enable/disable wagons in this page.
 * The user can add/remove datasets per analysis.
@@ -176,6 +176,7 @@ The synchronization from JIRA to the Hyperloop train system can take up to 30 mi
 *  Inside of _Enable dataset_ you can search for an active dataset by filtering by data type, collision system, anchor and period. And add it to your analysis by clicking on the button `✚ Add to analysis`. Or you can click the button `ℹ️ All datasets` to be redirected to the [**Datasets**](#datasets) page.
 
 #### 2. <a name="datasets"></a> Using the _Datasets_ page:
+* The <a href="https://alimonitor.cern.ch/hyperloop/datasets" target="_blank">**Datasets**</a> page displays all the datasets available.
 *  You can browse and click on the _Dataset_ you want to add to your analysis.
 <div align="center">
 <img src="../images/enableDatasetDatasetsPage.png" width="80%">
@@ -215,11 +216,11 @@ When creating or enabling wagons, you can use a pull request instead of a packag
 
 ## <a name="allanalyses"></a>All Analyses
 
-* There is a read only view of all analyses available in the system. 
+* <a href="https://alimonitor.cern.ch/hyperloop/all-analyses" target="_blank">**All Analyses**</a> is a read only view of all analyses available in the system. 
 * Wagons from any analysis available in the system can be cloned `🧬` to a user's analysis.
 
 ## <a name="trainruns"></a>Train Runs
-* For a user, the _Train Runs_ page displays a read view only of all train runs available in the system.
+* For a user, the <a href="https://alimonitor.cern.ch/hyperloop/train-runs" target="_blank">**Train Runs**</a> page displays a read view only of all train runs available in the system.
 * For a train operator, the _Train Runs_ page displays all trains available in the system, and allows submitting, modifying and killing a train.
 * The train run detail can be accessed by clicking on the TRAIN_ID, or with the url <a href="https://alimonitor.cern.ch/hyperloop/train-run/TRAIN_ID" target="_blank">https://alimonitor.cern.ch/hyperloop/train-run/TRAIN_ID</a>.
 * The actions allowed in a train run:

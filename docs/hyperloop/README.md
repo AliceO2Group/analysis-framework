@@ -28,12 +28,10 @@ Hyperloop provides a web interface for users and operators which allows to:
 * study the resource consumption of the train for each wagon
 
 The views available in the Hyperloop framework are:
-* [My Analyses](userdocumentation.md#myanalyses): <a href="https://alimonitor.cern.ch/hyperloop/" target="_blank">`🔗`</a>
-* [All Analyses](userdocumentation.md#allanalyses): <a href="https://alimonitor.cern.ch/hyperloop/all-analyses" target="_blank">`🔗`</a>
-* [Dashboard](operatordocumentation.md#dashboard): <a href="https://alimonitor.cern.ch/hyperloop/dashboard" target="_blank">`🔗`</a>
-* [Train Submission](operatordocumentation.md#trainsubmission): <a href="https://alimonitor.cern.ch/hyperloop/train-submission" target="_blank">`🔗`</a>
-* [Train Runs](operatordocumentation.md#trainruns): <a href="https://alimonitor.cern.ch/hyperloop/train-runs" target="_blank">`🔗`</a>
-* [Datasets](operatordocumentation.md#datasets): <a href="https://alimonitor.cern.ch/hyperloop/datasets" target="_blank">`🔗`</a>
-* [DPG Runlists](operatordocumentation.md#dpgrunlists): <a href="https://alimonitor.cern.ch/hyperloop/runlists" target="_blank">`🔗`</a>
-* For a user, the **Datasets** page displays a read view only of all the datasets available in the system. For a train operator, the **Datasets** page allows creation, configuration and deletion of datasets. 
-* For the DPG experts, the **DPG Runlists** page allows creation, configuration and deletion of runlists. For the users it offers a read only view of all DPG runlists available in the system.
+* [My Analyses](userdocumentation.md#myanalyses): Personalized webpage which displays all the analyses where the user belongs to.
+* [All Analyses](userdocumentation.md#allanalyses): Displays all the analyses available in the system.
+* [Dashboard](operatordocumentation.md#dashboard): Presents an overview of the current state of the system, as well as a summary from the previous week.
+* [Train Submission](operatordocumentation.md#trainsubmission): Used by operators to compose and submit trains.
+* [Train Runs](operatordocumentation.md#trainruns): Displays all the train runs in the system.
+* [Datasets](operatordocumentation.md#datasets): Displays all the datasets available and allows the operator to create, configure and delete datasets.
+* [DPG Runlists](operatordocumentation.md#dpgrunlists): Displays all the DPG runlists available in the system. This page is used by DPG experts to create, configure and delete runlists.

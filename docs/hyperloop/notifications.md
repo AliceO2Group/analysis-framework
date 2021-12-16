@@ -3,7 +3,7 @@ sort: 2
 title: Notifications
 ---
 
-## <a name="notifications"></a>Notifications
+## <a name="notifications"></a>Introduction
 * There are different types of notifications that the user receives, each related to a specific topic. A notification does not necessarly request an action to be taken, but informs the user about a specific element, and depending on the situation, the user can decide the possible next steps.
 * The notifications can be seen in the _My Analyses_ page and in the _Notifications_ page, by clicking `🔔` in the menu bar.
 
@@ -17,9 +17,7 @@ title: Notifications
     <img src="../images/allNotifications.png" width="90%">
 </div>
 
-### <a name="datasetNotifications"></a>Dataset notifications
-
-#### <a name="datasetChanged"></a>Dataset changed
+## <a name="datasetChanged"></a>Dataset changed
 
 * Notifies the user that an update has been made to one of the datasets included in his or her analyses. The notification message contains a link to the history of the dataset that has been modified, as well as a link to the analysis this dataset is included in. The update here indicates that:
   * The name or discription of the dataset has changed
@@ -31,7 +29,7 @@ title: Notifications
     <img src="../images/datasetChanged.png" width="90%">
 </div>
 
-#### <a name="datasetActivated"></a>Dataset activated / deactivated
+## <a name="datasetActivated"></a>Dataset activated / deactivated
 
 * Notifies the user when a dataset has been successfully activated or deactivated.
 
@@ -39,7 +37,7 @@ title: Notifications
     <img src="../images/datasetActivation.png" width="90%">
 </div>
 
-#### <a name="productionAdded"></a>Production added or removed
+## <a name="productionAdded"></a>Production added or removed
 
 * For RUN 3 data and MC, the user is informed if the production has been successfully added to or removed from the dataset.
 
@@ -48,7 +46,7 @@ title: Notifications
 </div>
 
 
-#### <a name="trainrunAdded"></a>Conversion train run added into / removed from dataset
+## <a name="trainrunAdded"></a>Conversion train run added into / removed from dataset
 
 * For RUN 2 data, the user is notified when a conversion train run has been added to or removed from the dataset.
 
@@ -60,7 +58,7 @@ title: Notifications
   <img src="../images/trainrunRemoved.png" width="90%">
 </div>
 
-#### <a name="runlistUpdated"></a>Runlist updated
+## <a name="runlistUpdated"></a>Runlist updated
 
 * The user is informed when a run has been added to or removed from the dataset runlist. This change is usually done by the DPG experts.
 
@@ -68,7 +66,7 @@ title: Notifications
   <img src="../images/runlistUpdated.png" width="90%">
 </div>
 
-#### <a name="mergelistUpdate"></a>Mergelist updated
+## <a name="mergelistUpdate"></a>Mergelist updated
 
 * The mergelist defines which runs are merged into one file at the end of the train running. The user is informed when a mergelist has been modified, added to or removed from the dataset production. 
 
@@ -76,9 +74,7 @@ title: Notifications
   <img src="../images/mergelistUpdate.png" width="90%">
 </div>
 
-### <a name="wagonNotifications"></a>Wagon notifications
-
-#### <a name="infoWagonDisabled"></a>Disabled wagon
+## <a name="infoWagonDisabled"></a>Disabled wagon
 
 Informs the user when a wagon has been disabled in different circumstances: 
 
@@ -100,7 +96,7 @@ Informs the user when a wagon has been disabled in different circumstances:
   </div>
  
 
-#### <a name="inconsistentParameters"></a>Inconsistent parameters
+## <a name="inconsistentParameters"></a>Inconsistent parameters
 
 * Hyperloop makes a comparison between the wagon configuration and the configuration defined in O2 for the package tag selected for the wagon. If they do not coincide, the user will be informed about the mismatch. The comparison is case sensitive, therefore a Configurable will not match if its name does not contain the identical lowercase / uppercase combination.
 

@@ -5,7 +5,7 @@ title: Operator Documentation
 
 ## <a name="dashboard"></a>Dashboard
 
-* The Dashboard displays the current state of the system by showing a number of status parameters related to wagons, trains and grid jobs. Additionally, the user can see the summary of the last week: average completion time, number of finished trains and wagon tests. 
+* The <a href="https://alimonitor.cern.ch/hyperloop/dashboard" target="_blank">**Dashboard**</a> displays the current state of the system by showing a number of status parameters related to wagons, trains and grid jobs. Additionally, the user can see the summary of the last week: average completion time, number of finished trains and wagon tests. 
 * Below, a display of the grid jobs state during the previous week is displayed, for every site.
 
 <div align="center">
@@ -15,7 +15,7 @@ title: Operator Documentation
 * By clicking the number of wagons waiting to be included in a train, the user can directly open the [_Train Submission_](#trainsubmission). Similarly, a link to the [_Train Runs_](#trainruns) is available by clicking the number of trains to be submitted to the grid, the number of running tests, or the number of finished trains.
 
 ## <a name="trainsubmission"></a>Train Submission
-* For a user, the _Train Submission_ page displays a read view only of datasets which have enabled wagons.
+* For a user, the <a href="https://alimonitor.cern.ch/hyperloop/train-submission" target="_blank">**Train Submission**</a> page displays a read view only of datasets which have enabled wagons.
 * For a train operator, the  _Train Submission_ page displays only datasets which have enabled wagons, and allows train composition, as well as submitting, modifying and killing a train.
 ### <a name="trainsubmission"></a>Train Composition
 * Trains are composed per dataset. Only wagons which have a test status of success `🌟` or warning `❗️` can be composed in a train.
@@ -49,7 +49,7 @@ title: Operator Documentation
 </div>
 
 ## <a name="trainruns"></a>Train Runs
-* For a user, the _Train Runs_ page displays a read view only of all train runs available in the system.
+* For a user, the <a href="https://alimonitor.cern.ch/hyperloop/train-runs" target="_blank">**Train Runs**</a> page displays a read view only of all train runs available in the system.
 * For a train operator, the _Train Runs_ page displays all trains available in the system, and allows submitting, modifying and killing a train.
 * The train run detail can be accessed by clicking on the TRAIN_ID, or with the url <a href="https://alimonitor.cern.ch/hyperloop/train-run/TRAIN_ID" target="_blank">https://alimonitor.cern.ch/hyperloop/train-run/TRAIN_ID</a>.
 * The actions allowed in a train run:
@@ -111,7 +111,7 @@ title: Operator Documentation
   
 ## <a name="datasets"></a>Datasets
 
-* Displays all the datasets available. The operator can add, remove, activate or deactivate a dataset. Likewise, by clicking the `📝` button, the operator is able to modify the dataset in the [**Edit Dataset**](#editdataset) page.
+* The <a href="https://alimonitor.cern.ch/hyperloop/datasets" target="_blank">**Datasets**</a> page displays all the datasets available. The operator can add, remove, activate or deactivate a dataset. Likewise, by clicking the `📝` button, the operator is able to modify the dataset in the [**Edit Dataset**](#editdataset) page.
 
   <div align="center">
     <img src="../images/datasetsPage.png" width="100%">
@@ -119,7 +119,7 @@ title: Operator Documentation
 
 * The runlists will be received programmatically from the DPG.
 
-## <a name="editdataset"></a>Edit Dataset
+### <a name="editdataset"></a>Edit Dataset
 
 * Allows the operator to update the dataset properties. Firstly, the operator can update the name and description of the dataset, and activate or deactivate it by clicking the `❌` / `✅` button. In order to save the changes you made, click the _Save all changes_ button.
 
@@ -127,7 +127,7 @@ title: Operator Documentation
     <img src="../images/editDatasetOptions.png" width="70%">
   </div>
 
-* In the **Options** box, you can add linked datasets to the current dataset, which will be used for the [**staged submission**](#stagedsubmission).
+* In the **Options** box, you can add linked datasets to the current dataset, which will be used for the [**staged submission**](#stagedsubmission). Enabling _Run final merging over all runs in this dataset_ will merge all the runs of all the productions during the final merging.
 * In the **Analysis Facility Staging**, the user is able to stage or unstage the data to the available targets displayed in the dropdown.
   * Choose a target from the dropdown list, and you will be notified of the amount of data required for the staging process. Confirm by clicking OK. The staging process will start once clicking the _Save all changes_ button at the top right of the page. 
   * You can hover over the staging percentage to get a detailed status of the staging progress. By clicking on the percentage, you will be lead to a new tab where you can see the elaborate overview of the transfer requests on MonALISA.
@@ -141,41 +141,50 @@ title: Operator Documentation
   * _Scheduled_: If within schedule, trains will be composed with the compatible wagons in the dataset, regardless of the occupation in target memory.
   * _Train full_: The train will be composed only if the compatible wagons add up to at least 75% of the target memory.
   * _Scheduled and train full_: The train will be composed if it is within schedule. If not in schedule, the train will only be composed if the compatible wagons occupy at least 75% of the target memory.
-* For all these cases, the trains will only be composed if the tests finished without a warning.
+* For all these cases, the trains will only be composed if the tests finished without a warning and if they do not store derived data.
 
   <div align="center">
-    <img src="../images/automaticComposition2.png" width="80%">
+    <img src="../images/automaticComposition3.png" width="80%">
   </div>
   
 * Choose the days and times at which the trains should be composed.
 
   <div align="center">
-    <img src="../images/automaticComposition3.png" width="80%">
+    <img src="../images/automaticComposition2.png" width="80%">
   </div>
+  
+### Deciding on data to be processed depends on the dataset type
 
-* For RUN 2 data, the operator can add or change a conversion train run.
+* For RUN 2 data, the operator can add or remove a [**RUN 2 conversion train run**](https://alimonitor.cern.ch/trains/train.jsp?train_id=132#runs).
 
   <div align="center">
     <img src="../images/addTrainRun.png" width="70%">
   </div>
   
-* For RUN 3 data and MC, the operator can add or update a production. You can add runs to be exluded from the list of runs. 
-
-<div align="center">
-    <img src="../images/changeDatasetProduction.png" width="60%">
-  </div>
-
-* The mergelist defines which runs are merged into one file at the end of the train running. The operator can add or update a mergelist in the dataset.
-
-* In order to create a new production, click on the _+ Production_ button. After choosing the collision type, anchor and MC Tag, select the runlist defined by the DPG and click _+Add_. If no runlist is available, contact the DPG specialists for creating one.
-
-<div align="center">
+* For RUN 3 data and MC, the operator can add or remove a production. In order to create a new production, click on the _+Production_ button. After choosing the collision type, anchor and MC Tag, select the runlist defined by the DPG and click _+Add_. If no runlist is available, contact the DPG specialists for creating one.
+  
+  <div align="center">
     <img src="../images/addDatasetProduction.png" width="60%">
   </div>
 
+* For derived data, you can add or remove a production. Create a production by selecting _Data_, choose the desired _Period_ and select the required _Derived train_ from the dropdown list.
+
+ <div align="center">
+    <img src="../images/datasetDerivedData.png" width="60%">
+  </div>
+  
+* Within the dataset production you can update the list of runs to be excluded.
+
+  <div align="center">
+    <img src="../images/changeDatasetProduction.png" width="60%">
+  </div>
+
+* The mergelist defines which runs are merged into one file at the end of the train running. The operator can add, update, activate or deactivate a mergelist in the dataset. 
+
+
 ## <a name="dpgrunlists"></a>DPG Runlists
 
-* This page is dedicated to the DPG experts and displays all the DPG runlists created for the datasets. The DPG expert can add, edit or remove a runlist.
+* The <a href="https://alimonitor.cern.ch/hyperloop/runlists" target="_blank">**DPG Runlists**</a> page is dedicated to the DPG experts and displays all the DPG runlists created for the datasets. The DPG expert can add, edit or remove a runlist.
 
  <div align="center">
     <img src="../images/DPGrunlists.png" width="100%">
@@ -187,7 +196,7 @@ title: Operator Documentation
     <img src="../images/editRunlist.png" width="70%">
   </div>
   
-* DPG experts can create a new runlist by clikcing the **+Add runlist** button. In order to create the list of runs, the correct data type, anchor, tag and production must be selected.
+* DPG experts can create a new runlist by clicking the **+Add runlist** button. In order to create the list of runs, the correct data type, anchor, tag and production must be selected.
 
  <div align="center">
     <img src="../images/addRunlist.png" width="70%">
