@@ -2679,8 +2679,15 @@ For better overview the tables are grouped into the following categories: | [Gen
         <td>o2::aod::fv0a::Amplitude</td>
         <td></td>
         <td>amplitude</td>
-        <td>float[48]</td>
-        <td>Amplitudes per cell</td>
+        <td>std::vector<float></td>
+        <td>Amplitudes of non-zero channels. The channel IDs are given in Channel (at the same index)</td>
+      </tr>
+      <tr>
+        <td>o2::aod::fv0a::Channel</td>
+        <td></td>
+        <td>channel</td>
+        <td>std::vector<uint8_t></td>
+        <td>Channel IDs which had non-zero amplitudes. There are at maximum 48 channels.</td>
       </tr>
       <tr>
         <td>o2::aod::fv0a::Time</td>
@@ -2739,29 +2746,43 @@ For better overview the tables are grouped into the following categories: | [Gen
         <td>o2::aod::ft0::AmplitudeA</td>
         <td></td>
         <td>amplitudeA</td>
-        <td>float[96]</td>
+        <td>std::vector<float></td>
+        <td>Amplitudes of non-zero channels on the A-side. The channel IDs are given in ChannelA (at the same index)</td>
+      </tr>
+      <tr>
+        <td>o2::aod::ft0::ChannelA</td>
         <td></td>
+        <td>channelA</td>
+        <td>std::vector<uint8_t></td>
+        <td>Channel IDs on the A side which had non-zero amplitudes. There are at maximum 96 channels.</td>
       </tr>
       <tr>
         <td>o2::aod::ft0::AmplitudeC</td>
         <td></td>
         <td>amplitudeC</td>
-        <td>float[112]</td>
+        <td>std::vector<float></td>
+        <td>Amplitudes of non-zero channels on the C-side. The channel IDs are given in ChannelC (at the same index)</td>
+      </tr>
+      <tr>
+        <td>o2::aod::ft0::ChannelC</td>
         <td></td>
+        <td>channelC</td>
+        <td>std::vector<uint8_t></td>
+        <td>Channel IDs on the C side which had non-zero amplitudes. There are at maximum 112 channels.</td>
       </tr>
       <tr>
         <td>o2::aod::ft0::TimeA</td>
         <td></td>
         <td>timeA</td>
         <td>float</td>
-        <td></td>
+        <td>Average A-side time</td>
       </tr>
       <tr>
         <td>o2::aod::ft0::TimeC</td>
         <td></td>
         <td>timeC</td>
         <td>float</td>
-        <td></td>
+        <td>Average C-side time</td>
       </tr>
       <tr>
         <td>o2::aod::ft0::TriggerMask</td>
@@ -3098,8 +3119,15 @@ For better overview the tables are grouped into the following categories: | [Gen
         <td>o2::aod::fv0c::Amplitude</td>
         <td></td>
         <td>amplitude</td>
-        <td>float[32]</td>
-        <td>Amplitudes per cell</td>
+        <td>std::vector<float></td>
+        <td>Amplitudes of non-zero channels. The channel IDs are given in Channel (at the same index)</td>
+      </tr>
+      <tr>
+        <td>o2::aod::fv0a::Channel</td>
+        <td></td>
+        <td>channel</td>
+        <td>std::vector<uint8_t></td>
+        <td>Channel IDs which had non-zero amplitudes. There are at maximum 48 channels.</td>
       </tr>
       <tr>
         <td>o2::aod::fv0c::Time</td>
