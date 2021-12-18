@@ -2615,6 +2615,34 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGDQ
         <td>bool</td>
         <td>True if particle produced by the generator (==TMCProcess::kPrimary); False if by the transport code</td>
       </tr>
+      <tr>
+        <td>o2::aod::mcparticle::FromBackgroundEvent</td>
+        <td>D</td>
+        <td>fromBackgroundEvent</td>
+        <td>bool</td>
+        <td>Particle from background event</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::GetGenStatusCode</td>
+        <td>D</td>
+        <td>getGenStatusCode</td>
+        <td>int</td>
+        <td>The status code put by the generator, or -1 if a particle produced during transport</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::GetProcess</td>
+        <td>D</td>
+        <td>getProcess</td>
+        <td>int</td>
+        <td>The VMC physics code (as int) that generated this particle (see header TMCProcess.h in ROOT)</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::IsPhysicalPrimary</td>
+        <td>D</td>
+        <td>isPhysicalPrimary</td>
+        <td>bool</td>
+        <td>True if particle is considered a physical primary according to the ALICE definition</td>
+      </tr>
     </table>
   </div>
 
