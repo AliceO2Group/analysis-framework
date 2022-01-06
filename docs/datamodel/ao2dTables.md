@@ -4761,6 +4761,45 @@ For better overview the tables are grouped into the following categories: | [Gen
     </table>
   </div>
 
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::Origins</button>
+  <div class="panel">
+    <div>
+       Table which contains the IDs of all dataframes merged into this dataframe
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev/Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::Origin = o2::aod::Origins::iterator</li>
+      </ul>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::soa::Index</td>
+        <td>GI</td>
+        <td>globalIndex</td>
+        <td>int64_t</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::origin::DataframeID</td>
+        <td></td>
+        <td>dataframeID</td>
+        <td>uint64_t</td>
+        <td>Data frame ID (what is usually found in directory name in the AO2D.root, i.e. DF_XXX)</td>
+      </tr>
+    </table>
+  </div>
+
 </div>
 </div>
 <!-- Block with AO2D tables -->
