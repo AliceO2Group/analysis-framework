@@ -210,6 +210,13 @@ Click on the labels to display the definitions. Click buttons to
     </ul>
   </div>
 
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::Origin</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::Origin = o2::aod::Origins::iterator</li>
+    </ul>
+  </div>
+
   <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::Run2BCInfo</button>
   <div class="panel">
     <ul>
