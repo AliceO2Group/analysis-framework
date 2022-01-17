@@ -7,8 +7,9 @@ title: PWGHF
 
 ## Get started! 
 
-HF O2 hackaton: https://indico.cern.ch/event/1101005/
-ZOOM recordings of the hackathon (includes introduction to O2, O2 HF, tutorials..): https://videos.cern.ch/deposit/project/cbe4869a27f749b7b45ea66577ca8a9f
+[link to indico page of the HF O2 hackaton](https://indico.cern.ch/event/1101005/)
+
+[ZOOM recordings of the hackathon (includes introduction to O2, O2 HF, tutorials..)](https://videos.cern.ch/deposit/project/cbe4869a27f749b7b45ea66577ca8a9f)
 
 ## Contact
 
