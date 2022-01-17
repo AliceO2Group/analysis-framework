@@ -3309,7 +3309,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <td>o2::aod::hf_cand::PVectorProng0</td>
         <td>D</td>
         <td>pVectorProng0</td>
-        <td>array<float,3></td>
+        <td>array&lt;float,3&gt;</td>
         <td></td>
       </tr>
       <tr>
@@ -3337,7 +3337,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <td>o2::aod::hf_cand::PVectorProng1</td>
         <td>D</td>
         <td>pVectorProng1</td>
-        <td>array<float,3></td>
+        <td>array&lt;float,3&gt;</td>
         <td></td>
       </tr>
       <tr>
@@ -3498,7 +3498,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <td>o2::aod::hf_cand::PVector</td>
         <td>D</td>
         <td>pVector</td>
-        <td>array<float,3></td>
+        <td>array&lt;float,3&gt;</td>
         <td></td>
       </tr>
       <tr>
@@ -3799,7 +3799,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <td>o2::aod::hf_cand::PVectorProng0</td>
         <td>D</td>
         <td>pVectorProng0</td>
-        <td>array<float,3></td>
+        <td>array&lt;float,3&gt;</td>
         <td></td>
       </tr>
       <tr>
@@ -3827,7 +3827,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <td>o2::aod::hf_cand::PVectorProng1</td>
         <td>D</td>
         <td>pVectorProng1</td>
-        <td>array<float,3></td>
+        <td>array&lt;float,3&gt;</td>
         <td></td>
       </tr>
       <tr>
@@ -4009,7 +4009,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <td>o2::aod::hf_cand::PVectorProng2</td>
         <td>D</td>
         <td>pVectorProng2</td>
-        <td>array<float,3></td>
+        <td>array&lt;float,3&gt;</td>
         <td></td>
       </tr>
       <tr>
@@ -4044,7 +4044,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <td>o2::aod::hf_cand::PVector</td>
         <td>D</td>
         <td>pVector</td>
-        <td>array<float,3></td>
+        <td>array&lt;float,3&gt;</td>
         <td></td>
       </tr>
       <tr>
@@ -4359,7 +4359,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <td>o2::aod::hf_cand::PVectorProng0</td>
         <td>D</td>
         <td>pVectorProng0</td>
-        <td>array<float,3></td>
+        <td>array&lt;float,3&gt;</td>
         <td></td>
       </tr>
       <tr>
@@ -4387,7 +4387,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <td>o2::aod::hf_cand::PVectorProng1</td>
         <td>D</td>
         <td>pVectorProng1</td>
-        <td>array<float,3></td>
+        <td>array&lt;float,3&gt;</td>
         <td></td>
       </tr>
       <tr>
@@ -4548,7 +4548,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <td>o2::aod::hf_cand::PVector</td>
         <td>D</td>
         <td>pVector</td>
-        <td>array<float,3></td>
+        <td>array&lt;float,3&gt;</td>
         <td></td>
       </tr>
       <tr>
@@ -4828,7 +4828,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <td>o2::aod::hf_cand::PVectorProng0</td>
         <td>D</td>
         <td>pVectorProng0</td>
-        <td>array<float,3></td>
+        <td>array&lt;float,3&gt;</td>
         <td></td>
       </tr>
       <tr>
@@ -4856,7 +4856,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <td>o2::aod::hf_cand::PVectorProng1</td>
         <td>D</td>
         <td>pVectorProng1</td>
-        <td>array<float,3></td>
+        <td>array&lt;float,3&gt;</td>
         <td></td>
       </tr>
       <tr>
@@ -5115,7 +5115,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <td>o2::aod::hf_cand::PVector</td>
         <td>D</td>
         <td>pVector</td>
-        <td>array<float,3></td>
+        <td>array&lt;float,3&gt;</td>
         <td></td>
       </tr>
       <tr>
@@ -5444,7 +5444,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <td>o2::aod::hf_cand::PVectorProng0</td>
         <td>D</td>
         <td>pVectorProng0</td>
-        <td>array<float,3></td>
+        <td>array&lt;float,3&gt;</td>
         <td></td>
       </tr>
       <tr>
@@ -5472,7 +5472,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <td>o2::aod::hf_cand::PVectorProng1</td>
         <td>D</td>
         <td>pVectorProng1</td>
-        <td>array<float,3></td>
+        <td>array&lt;float,3&gt;</td>
         <td></td>
       </tr>
       <tr>
@@ -5619,7 +5619,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <td>o2::aod::hf_cand::PVector</td>
         <td>D</td>
         <td>pVector</td>
-        <td>array<float,3></td>
+        <td>array&lt;float,3&gt;</td>
         <td></td>
       </tr>
       <tr>
@@ -5927,7 +5927,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <td>o2::aod::hf_cand::PVectorProng0</td>
         <td>D</td>
         <td>pVectorProng0</td>
-        <td>array<float,3></td>
+        <td>array&lt;float,3&gt;</td>
         <td></td>
       </tr>
       <tr>
@@ -5955,7 +5955,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <td>o2::aod::hf_cand::PVectorProng1</td>
         <td>D</td>
         <td>pVectorProng1</td>
-        <td>array<float,3></td>
+        <td>array&lt;float,3&gt;</td>
         <td></td>
       </tr>
       <tr>
@@ -6102,7 +6102,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <td>o2::aod::hf_cand::PVector</td>
         <td>D</td>
         <td>pVector</td>
-        <td>array<float,3></td>
+        <td>array&lt;float,3&gt;</td>
         <td></td>
       </tr>
       <tr>
@@ -6403,7 +6403,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <td>o2::aod::hf_cand::PVectorProng0</td>
         <td>D</td>
         <td>pVectorProng0</td>
-        <td>array<float,3></td>
+        <td>array&lt;float,3&gt;</td>
         <td></td>
       </tr>
       <tr>
@@ -6431,7 +6431,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <td>o2::aod::hf_cand::PVectorProng1</td>
         <td>D</td>
         <td>pVectorProng1</td>
-        <td>array<float,3></td>
+        <td>array&lt;float,3&gt;</td>
         <td></td>
       </tr>
       <tr>
@@ -6599,7 +6599,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <td>o2::aod::hf_cand::PVectorProng2</td>
         <td>D</td>
         <td>pVectorProng2</td>
-        <td>array<float,3></td>
+        <td>array&lt;float,3&gt;</td>
         <td></td>
       </tr>
       <tr>
@@ -6634,7 +6634,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <td>o2::aod::hf_cand::PVector</td>
         <td>D</td>
         <td>pVector</td>
-        <td>array<float,3></td>
+        <td>array&lt;float,3&gt;</td>
         <td></td>
       </tr>
       <tr>
@@ -6942,7 +6942,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <td>o2::aod::hf_cand::PVectorProng0</td>
         <td>D</td>
         <td>pVectorProng0</td>
-        <td>array<float,3></td>
+        <td>array&lt;float,3&gt;</td>
         <td></td>
       </tr>
       <tr>
@@ -6970,7 +6970,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <td>o2::aod::hf_cand::PVectorProng1</td>
         <td>D</td>
         <td>pVectorProng1</td>
-        <td>array<float,3></td>
+        <td>array&lt;float,3&gt;</td>
         <td></td>
       </tr>
       <tr>
@@ -7117,7 +7117,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <td>o2::aod::hf_cand::PVector</td>
         <td>D</td>
         <td>pVector</td>
-        <td>array<float,3></td>
+        <td>array&lt;float,3&gt;</td>
         <td></td>
       </tr>
       <tr>
