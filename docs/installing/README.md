@@ -107,3 +107,7 @@ For example (note the missing o2-):
 ```bash
 ninja install O2Physicsexe-analysis-cf-correlations
 ```
+
+```danger
+This only builds O2Physics. If you have updated O2 or alidist, you first need to do a full build with aliBuild. Then enter the environment again before using ninja.
+```
