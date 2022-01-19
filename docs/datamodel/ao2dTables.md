@@ -3142,166 +3142,6 @@ For better overview the tables are grouped into the following categories: | [Gen
 </div>
 <h4 id="cat_Strangeness">Strangeness</h4>
 <div>
-
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::TransientV0s</button>
-  <div class="panel">
-    <div>
-       In-memory V0 table
-    </div>
-    <div>
-      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev/Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
-    </div>
-    <div>Is used in:
-      <ul>
-        <li>o2::aod::V0s = soa::Join<o2::aod::TransientV0s, o2::aod::StoredV0s></li>
-        <li>o2::aod::V0 = soa::Join<o2::aod::TransientV0s, o2::aod::StoredV0s>::iterator</li>
-      </ul>
-    </div>
-    <table class=DataModel>
-      <tr>
-        <th>Name</th>
-        <th></th>
-        <th>Getter</th>
-        <th>Type</th>
-        <th>Comment</th>
-      </tr>
-      <tr>
-        <td>o2::aod::v0::CollisionId</td>
-        <td>I</td>
-        <td>collisionId</td>
-        <td>int32</td>
-        <td>Collision index</td>
-      </tr>
-    </table>
-  </div>
-
-
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::StoredV0s</button>
-  <div class="panel">
-    <div>
-       On disk V0 table
-    </div>
-    <div>
-      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev/Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
-    </div>
-    <div>Is used in:
-      <ul>
-        <li>o2::aod::V0s = soa::Join<o2::aod::TransientV0s, o2::aod::StoredV0s></li>
-        <li>o2::aod::V0 = soa::Join<o2::aod::TransientV0s, o2::aod::StoredV0s>::iterator</li>
-      </ul>
-    </div>
-    <table class=DataModel>
-      <tr>
-        <th>Name</th>
-        <th></th>
-        <th>Getter</th>
-        <th>Type</th>
-        <th>Comment</th>
-      </tr>
-      <tr>
-        <td>o2::soa::Index</td>
-        <td>GI</td>
-        <td>globalIndex</td>
-        <td>int64_t</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::v0::PosTrackId</td>
-        <td>I</td>
-        <td>posTrackId</td>
-        <td>int</td>
-        <td>Positive track</td>
-      </tr>
-      <tr>
-        <td>o2::aod::v0::NegTrackId</td>
-        <td>I</td>
-        <td>negTrackId</td>
-        <td>int</td>
-        <td>Negative track</td>
-      </tr>
-    </table>
-  </div>
-
-
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::TransientCascades</button>
-  <div class="panel">
-    <div>
-       In-memory cascade table
-    </div>
-    <div>
-      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev/Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
-    </div>
-    <div>Is used in:
-      <ul>
-        <li>o2::aod::Cascades = soa::Join<o2::aod::TransientCascades, o2::aod::StoredCascades></li>
-        <li>o2::aod::Cascade = soa::Join<o2::aod::TransientCascades, o2::aod::StoredCascades>::iterator</li>
-      </ul>
-    </div>
-    <table class=DataModel>
-      <tr>
-        <th>Name</th>
-        <th></th>
-        <th>Getter</th>
-        <th>Type</th>
-        <th>Comment</th>
-      </tr>
-      <tr>
-        <td>o2::aod::cascade::CollisionId</td>
-        <td>I</td>
-        <td>collisionId</td>
-        <td>int32</td>
-        <td>Collision index</td>
-      </tr>
-    </table>
-  </div>
-
-
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::StoredCascades</button>
-  <div class="panel">
-    <div>
-       On disk cascade table
-    </div>
-    <div>
-      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev/Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
-    </div>
-    <div>Is used in:
-      <ul>
-        <li>o2::aod::Cascades = soa::Join<o2::aod::TransientCascades, o2::aod::StoredCascades></li>
-        <li>o2::aod::Cascade = soa::Join<o2::aod::TransientCascades, o2::aod::StoredCascades>::iterator</li>
-      </ul>
-    </div>
-    <table class=DataModel>
-      <tr>
-        <th>Name</th>
-        <th></th>
-        <th>Getter</th>
-        <th>Type</th>
-        <th>Comment</th>
-      </tr>
-      <tr>
-        <td>o2::soa::Index</td>
-        <td>GI</td>
-        <td>globalIndex</td>
-        <td>int64_t</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::cascade::V0Id</td>
-        <td>I</td>
-        <td>v0Id</td>
-        <td>int32</td>
-        <td>V0 index</td>
-      </tr>
-      <tr>
-        <td>o2::aod::cascade::BachelorId</td>
-        <td>I</td>
-        <td>bachelorId</td>
-        <td>int</td>
-        <td>Bachelor track index</td>
-      </tr>
-    </table>
-  </div>
-
 </div>
 <h4 id="cat_Indices">Indices</h4>
 <div>
@@ -4757,6 +4597,194 @@ For better overview the tables are grouped into the following categories: | [Gen
         <td>triggerMask</td>
         <td>uint8_t</td>
         <td></td>
+      </tr>
+    </table>
+  </div>
+
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::V0s_000</button>
+  <div class="panel">
+    <div>
+       Run 2 V0 table (version 000)
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev/Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::soa::Index</td>
+        <td>GI</td>
+        <td>globalIndex</td>
+        <td>int64_t</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::v0::PosTrackId</td>
+        <td>I</td>
+        <td>posTrackId</td>
+        <td>int</td>
+        <td>Positive track</td>
+      </tr>
+      <tr>
+        <td>o2::aod::v0::NegTrackId</td>
+        <td>I</td>
+        <td>negTrackId</td>
+        <td>int</td>
+        <td>Negative track</td>
+      </tr>
+    </table>
+  </div>
+
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::V0s_001</button>
+  <div class="panel">
+    <div>
+       Run 3 V0 table (version 001)
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev/Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::V0s = o2::aod::V0s_001</li>
+      </ul>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::soa::Index</td>
+        <td>GI</td>
+        <td>globalIndex</td>
+        <td>int64_t</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::v0::CollisionId</td>
+        <td>I</td>
+        <td>collisionId</td>
+        <td>int32</td>
+        <td>Collision index</td>
+      </tr>
+      <tr>
+        <td>o2::aod::v0::PosTrackId</td>
+        <td>I</td>
+        <td>posTrackId</td>
+        <td>int</td>
+        <td>Positive track</td>
+      </tr>
+      <tr>
+        <td>o2::aod::v0::NegTrackId</td>
+        <td>I</td>
+        <td>negTrackId</td>
+        <td>int</td>
+        <td>Negative track</td>
+      </tr>
+    </table>
+  </div>
+
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::Cascades_000</button>
+  <div class="panel">
+    <div>
+       Run 2 cascade table
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev/Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::soa::Index</td>
+        <td>GI</td>
+        <td>globalIndex</td>
+        <td>int64_t</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::cascade::V0Id</td>
+        <td>I</td>
+        <td>v0Id</td>
+        <td>int32</td>
+        <td>V0 index</td>
+      </tr>
+      <tr>
+        <td>o2::aod::cascade::BachelorId</td>
+        <td>I</td>
+        <td>bachelorId</td>
+        <td>int</td>
+        <td>Bachelor track index</td>
+      </tr>
+    </table>
+  </div>
+
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::Cascades_001</button>
+  <div class="panel">
+    <div>
+       Run 3 cascade table
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev/Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::Cascades = o2::aod::Cascades_001</li>
+      </ul>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::soa::Index</td>
+        <td>GI</td>
+        <td>globalIndex</td>
+        <td>int64_t</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::cascade::CollisionId</td>
+        <td>I</td>
+        <td>collisionId</td>
+        <td>int32</td>
+        <td>Collision index</td>
+      </tr>
+      <tr>
+        <td>o2::aod::cascade::V0Id</td>
+        <td>I</td>
+        <td>v0Id</td>
+        <td>int32</td>
+        <td>V0 index</td>
+      </tr>
+      <tr>
+        <td>o2::aod::cascade::BachelorId</td>
+        <td>I</td>
+        <td>bachelorId</td>
+        <td>int</td>
+        <td>Bachelor track index</td>
       </tr>
     </table>
   </div>

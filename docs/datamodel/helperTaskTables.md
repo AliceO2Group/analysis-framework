@@ -996,18 +996,17 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
 Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/TableProducer//weakDecayIndices.cxx" target="_blank">weakDecayIndices.cxx</a>
 <div>
 
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::TransientV0s</button>
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::V0s_001</button>
   <div class="panel">
     <div>
-       In-memory V0 table
+       Run 3 V0 table (version 001)
     </div>
     <div>
       Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master/" target="_blank"></a>
     </div>
     <div>Is used in:
       <ul>
-        <li>o2::aod::V0s = soa::Join<o2::aod::TransientV0s, o2::aod::StoredV0s></li>
-        <li>o2::aod::V0 = soa::Join<o2::aod::TransientV0s, o2::aod::StoredV0s>::iterator</li>
+        <li>o2::aod::V0s = o2::aod::V0s_001</li>
       </ul>
     </div>
     <table class=DataModel>
@@ -1017,6 +1016,13 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
         <th>Getter</th>
         <th>Type</th>
         <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::soa::Index</td>
+        <td>GI</td>
+        <td>globalIndex</td>
+        <td>int64_t</td>
+        <td></td>
       </tr>
       <tr>
         <td>o2::aod::v0::CollisionId</td>
@@ -1025,21 +1031,34 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
         <td>int32</td>
         <td>Collision index</td>
       </tr>
+      <tr>
+        <td>o2::aod::v0::PosTrackId</td>
+        <td>I</td>
+        <td>posTrackId</td>
+        <td>int</td>
+        <td>Positive track</td>
+      </tr>
+      <tr>
+        <td>o2::aod::v0::NegTrackId</td>
+        <td>I</td>
+        <td>negTrackId</td>
+        <td>int</td>
+        <td>Negative track</td>
+      </tr>
     </table>
   </div>
 
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::TransientCascades</button>
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::Cascades_001</button>
   <div class="panel">
     <div>
-       In-memory cascade table
+       Run 3 cascade table
     </div>
     <div>
       Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master/" target="_blank"></a>
     </div>
     <div>Is used in:
       <ul>
-        <li>o2::aod::Cascades = soa::Join<o2::aod::TransientCascades, o2::aod::StoredCascades></li>
-        <li>o2::aod::Cascade = soa::Join<o2::aod::TransientCascades, o2::aod::StoredCascades>::iterator</li>
+        <li>o2::aod::Cascades = o2::aod::Cascades_001</li>
       </ul>
     </div>
     <table class=DataModel>
@@ -1051,11 +1070,32 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
         <th>Comment</th>
       </tr>
       <tr>
+        <td>o2::soa::Index</td>
+        <td>GI</td>
+        <td>globalIndex</td>
+        <td>int64_t</td>
+        <td></td>
+      </tr>
+      <tr>
         <td>o2::aod::cascade::CollisionId</td>
         <td>I</td>
         <td>collisionId</td>
         <td>int32</td>
         <td>Collision index</td>
+      </tr>
+      <tr>
+        <td>o2::aod::cascade::V0Id</td>
+        <td>I</td>
+        <td>v0Id</td>
+        <td>int32</td>
+        <td>V0 index</td>
+      </tr>
+      <tr>
+        <td>o2::aod::cascade::BachelorId</td>
+        <td>I</td>
+        <td>bachelorId</td>
+        <td>int</td>
+        <td>Bachelor track index</td>
       </tr>
     </table>
   </div>

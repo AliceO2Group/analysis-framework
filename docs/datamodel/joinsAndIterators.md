@@ -185,28 +185,28 @@ Click on the labels to display the definitions. Click buttons to
   <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::V0s</button>
   <div class="panel">
     <ul>
-        <li>o2::aod::V0s = soa::Join<o2::aod::TransientV0s, o2::aod::StoredV0s></li>
+        <li>o2::aod::V0s = o2::aod::V0s_001</li>
     </ul>
   </div>
 
   <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::V0</button>
   <div class="panel">
     <ul>
-        <li>o2::aod::V0 = soa::Join<o2::aod::TransientV0s, o2::aod::StoredV0s>::iterator</li>
+        <li>o2::aod::V0 = soa::Join<>::iterator</li>
     </ul>
   </div>
 
   <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::Cascades</button>
   <div class="panel">
     <ul>
-        <li>o2::aod::Cascades = soa::Join<o2::aod::TransientCascades, o2::aod::StoredCascades></li>
+        <li>o2::aod::Cascades = o2::aod::Cascades_001</li>
     </ul>
   </div>
 
   <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::Cascade</button>
   <div class="panel">
     <ul>
-        <li>o2::aod::Cascade = soa::Join<o2::aod::TransientCascades, o2::aod::StoredCascades>::iterator</li>
+        <li>o2::aod::Cascade = soa::Join<>::iterator</li>
     </ul>
   </div>
 
