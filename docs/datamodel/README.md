@@ -27,8 +27,8 @@ In the table listings on the following pages, the letter in brackets behind the 
 
 And similar for the columns:
 
-- D: dynamic column
-- E: expression column
+- D: dynamic column, calculated when the column is requested, not cached and therefore to be avoided in loops
+- E: expression column, calculated when the table is requested, only once, and therefore can be used in loops
 - GI: global index
 - I: index column
 - else: normal column
