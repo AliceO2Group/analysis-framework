@@ -223,13 +223,13 @@ When creating or enabling wagons, you can use a pull request instead of a packag
 * For a user, the <a href="https://alimonitor.cern.ch/hyperloop/train-runs" target="_blank">**Train Runs**</a> page displays a read view only of all train runs available in the system.
 
 <div align="center">
-   <img src="../images/trainRunsPage.png" width="80%">
+   <img src="../images/trainRunsPage.png" width="70%">
 </div>
 
 * To compare two trains, select them in the Compare column and click Compare. This will open a new tab displaying the differences between the two trains.
 
  <div align="center">
-    <img src="../images/compareTrains.png" width="80%">
+    <img src="../images/compareTrains.png" width="70%">
  </div>
  
 * The train run result can be accessed by clicking on the TRAIN_ID, or with the url <a href="https://alimonitor.cern.ch/hyperloop/train-run/TRAIN_ID" target="_blank">https://alimonitor.cern.ch/hyperloop/train-run/TRAIN_ID</a>.
@@ -286,7 +286,7 @@ When creating or enabling wagons, you can use a pull request instead of a packag
 * Click the **IO Statistics** button to be redirected to the site activity information.
 
 <div align="center">
-   <img src="../images/submittedJobs2.png" width="80%">
+   <img src="../images/submittedJobs2.png" width="70%">
 </div>
 
 * Click the **Stack trace** button to be redirected to the stack trace information in MonALISA.
