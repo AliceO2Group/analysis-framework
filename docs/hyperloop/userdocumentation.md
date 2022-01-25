@@ -60,31 +60,26 @@ You can get to the _All Analyses_ page by using the main menu, or by the link in
 <img src="../images/wagonSettings.png" width="70%">
 </div>
 
-* In _Configuration_ the wagon configuration corresponding to the workflow will be available in the _Base_. The configuration is divided per _Task_, hence if you need to add a new parameter, you will need add it in the following order: task, parameter and value.
+* In _Configuration_ the wagon configuration corresponding to the workflow will be available in the _Base_. The configuration is divided per _Task_, hence if you need to add a new parameter, you will need add it in the following order: task, parameter and value. 
+* The wagon configuration supports a variety of parameter types defined in task as _Configurable_ including: primitive type parameters, fixed-length arrays, variable-length arrays, matrices, labelled matrices and histogram binning. 
 
 <div align="center">
 <img src="../images/detailedConfiguration.png" width="70%">
 </div>
 
-* The wagon configuration supports a variety of parameter types defined in task as _Configurable_ including: arrays, matrices, labelled matrices and histogram binning. The _Variable-length arrays_ allow the user to add/remove elements in the _Base_ wagon, and the change will be propagated in all the subwagons.
+* The _Variable-length arrays_ allow the user to add/remove elements in the _Base_ wagon, and the change will be propagated in all the subwagons.
 
-<div align="center">
-<img src="../images/wagonConf1.png" width="80%">
-</div>
-
-<div align="center">
-<img src="../images/variableWidth.png" width="80%">
-</div>
+* There are three options for _histogram binning_:
+  * _Fixed width_: Enter the number of bins, minimal and maximal value.
+  * _Variable width_: Enter a comma-separated list of bin edges.
+  * _Inherit from base_: This option is available for subwagons only and, if selected, the axis configuration will be the same as in the Base.
   
 * If you need to run the same workflow, but modify one (or more) of the parameter's value, you can use a subwagon instead of creating a new wagon. In order to create a subwagon, type the name of the new subwagon, the name has to be unique within the wagon, and type the value of at least one parameter in the configuration. The configuration of a subwagon will be kept the same as the _Base_ and overwrite only the parameters that you provide. 
 
 * The subwagons added to the wagon will be represented with an automatically assigned suffix in _AnalysisResults.root_. Here you can see an example where we have added two subwagons called _smalleta_ and _verysmalleta_.
 
 <div align="center">
-<img src="../images/subwagonSuffix2.png" width="80%">
-</div>
-<div align="center">
-<img src="../images/subwagonSuffix.png" width="80%">
+<img src="../images/subwagonSuffix1.png" width="80%">
 </div>
 
 * In order to update the base and subwagon configuration with the latest version of the workflow, click on the button `↻ sync` in _Configuration_. By synchronizing the configuration, the parameters which no longer belong to the workflow will be removed, and the values of the wagon's _Base_ will be updated as well if they have not been modified by the user.
@@ -106,13 +101,13 @@ You can get to the _All Analyses_ page by using the main menu, or by the link in
 * Depending on the datasets this wagon is using, the user is able to choose the _Dataset_ on which the metrics mentioned above are plotted, from the upper-left dropdown. In case no tests were run on the chosen dataset, a message will appear stating this.
 
 <div align="center">
-<img src="../images/datasetDropdown.png" width="70%">
+<img src="../images/datasetDropdown.png" width="60%">
 </div>
 
 * By clicking on the bullets representing the metric value at any of the test runs plotted, the user will open a new tab displaying a read-only view of the wagon test output. 
 
 <div align="center">
-<img src="../images/testStatsGraphs.png" width="90%">
+<img src="../images/testStatsGraphs.png" width="70%">
 </div>
 
 * In order to zoom into the graph, the user needs to click and drag over the are of interest, which will automatically show the zoomed-in graph portion. By double-clicking, it will zoom out and show the entire graph.
