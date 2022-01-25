@@ -51,38 +51,58 @@ title: Operator Documentation
 ## <a name="trainruns"></a>Train Runs
 * For a user, the <a href="https://alimonitor.cern.ch/hyperloop/train-runs" target="_blank">**Train Runs**</a> page displays a read view only of all train runs available in the system.
 * For a train operator, the _Train Runs_ page displays all trains available in the system, and allows submitting, modifying and killing a train.
+* To compare two trains, select them in the Compare column and click Compare. This will open a new tab displaying the differences between the two trains.
+ <div align="center">
+    <img src="../images/compareTrains.png" width="70%">
+ </div>
 * The train run detail can be accessed by clicking on the TRAIN_ID, or with the url <a href="https://alimonitor.cern.ch/hyperloop/train-run/TRAIN_ID" target="_blank">https://alimonitor.cern.ch/hyperloop/train-run/TRAIN_ID</a>.
+* <div align="center">
+   <img src="../images/trainRunsPage.png" width="70%">
+</div>
+
 * The actions allowed in a train run:
   * Adding a _comment_.
   * <a name="decompose"></a>Decomposing a train run by clicking on `Decompose ☠️`. When decomposing a train run, the wagons in it will be allowed to be composed in a new train run.
   * <a name="submit"></a>Submitting a train run. Only train runs which test status is success `🌟` or warning `❗️` can be submitted. By default, the train run is submitted to the _Grid - single core_, but a different target can be chosen. To submit a train run, click on `Submit 🚂`.
   * <a name="submitfinalmerge"></a>When a dataset has activate final merge, a button `Submit final merge` appears after all the masterjobs are finished successfully.
   * Killing a train by clicking on `Kill ☠️`.
+  * Close a train by clicking `Close ❌` - this will stop further activity, but will keep the jobs running.
   * Cloning a train in the tab `Clone`. When cloning a train, the wagons and dataset configuration used will be the same as of the original train. Other settings can be changed: package tag, target facility, slow train, derived data, automatic submission.
-* In the _Test Graphs_ tab, the user can plot the available metrics for the specific _Train run_. By hovering over the graph, the corresponding values are displayed in a dynamic window, stating the value for each participating wagon.
+
+### <a name="trainresult"></a>Train Run Result
+
+* The _General_ tab displays the summary of the train's progress, direct links to dataset and participating wagon configuration, as well as direct links to the test output and the speedscope profiling of the task.
+
+<div align="center">
+   <img src="../images/trainResult.png" width="70%">
+</div>
+
+* The _Test results_ tab shows the performance metrics per device (reader, workflows, writer), along with the expected resources. You can use the interactive graphs (per device) to zoom into the area of interest (click and drag) or zoom out (double-click).
+
+<div align="center">
+   <img src="../images/testResults.png" width="70%">
+</div>
+
+* In the _Test Graphs_ tab, you can plot the available metrics for the specific _Train run_. By hovering over the graph, the corresponding values are displayed in a dynamic window, stating the value for each participating wagon.
 
   <div align="center">
     <img src="../images/testGraphs.png" width="70%">
   </div>
 
   * The metric can be selected from the upper-left dropdown, and the graph will change accordingly.
-  * The user can choose to plot the metric data per device, by checking the _Per Device_ near the dropdown.
-
+  * To plot the metric data per device, select the _Per Device_ checkbox near the dropdown.
 
   <div align="center">
     <img src="../images/testGraphsPerDevice.png" width="70%">
   </div>
 
-
-  * In order to plot the highest ten graphs, that means the graphs with the highest average, the user can click the **Show top 10 largest** checkbox.
-  
+  * In order to plot the highest ten graphs, that means the graphs with the highest average, click the **Show top 10 largest** checkbox.
   
   <div align="center">
     <img src="../images/graphLargest.png" width="70%">
   </div>
   
-  * The user can zoom into the graph by clicking and dragging the mouse along the area of interest. For zooming out, the user can double-click on the graph.
-
+  * You can zoom into the graph by clicking and dragging the mouse along the area of interest. For zooming out, double-click on the graph.
 
   <div align="center">
     <img src="../images/graphZoom.png" width="70%">
@@ -90,7 +110,68 @@ title: Operator Documentation
   
    <div align="center">
     <img src="../images/graphZoom2.png" width="70%">
-   </div>
+  </div>
+
+* In _Submitted jobs_, you can see the summary of the master jobs, along with links to the **IO Statistics** and **Stack trace**.
+
+<div align="center">
+   <img src="../images/submittedJobs1.png" width="70%">
+</div>
+
+* Click the **IO Statistics** button to be redirected to the site activity information.
+
+<div align="center">
+   <img src="../images/submittedJobs2.png" width="70%">
+</div>
+
+* Click the **Stack trace** button to be redirected to the stack trace information in MonALISA. Here you can see a summary of failures of your jobs.
+  
+<div align="center">
+   <img src="../images/submittedJobs3.png" width="90%">
+</div> 
+
+* This information is collected when the masterjobs have finished from all ERROR_V jobs. Some information is already available while the train is running but make sure to check again when the train is in a final state. Common errors are grouped and counted. This allows you to investigate failures and debug them using the provided stack trace.
+
+* The _Grid statistics_ tab presents a summary of the jobs performance and plots the Files/Job, CPU time/Job and Wall time/Job statitics.
+
+<div align="center">
+   <img src="../images/gridStats.png" width="70%">
+</div> 
+
+* _Merged output_ displays the jobs status after submitting the train. The mergelists are defined in the dataset settings.
+
+<div align="center">
+   <img src="../images/mergedOutput.png" width="80%">
+</div> 
+
+* When the final merge is started manually by the operator, some of the runs may not be merged. You can copy the list of merged runs or the total list of runs by clicking on the (red) number.
+* Here you can also track the submission process, and debug issues that may have taken place.
+
+<div align="center">
+   <img src="../images/mergedOutput1.png" width="90%">
+</div> 
+
+* You can use the _Clone train_ tab to clone the train. The cloned train will have **the same wagon timestamp** of the original train, with the **current dataset configuration**. This means that if the users have changed the wagon configuration in the meanwhile, this is not taken into account (this is different from the LEGO trains).
+* Other settings can be modified: package tag, target facility, slow train option, derived data, automatic submission.
+
+<div align="center">
+   <img src="../images/cloneTrain.png" width="70%">
+</div> 
+
+* The _Request long train_ tab allows users to request a long train after the train ran on a linked dataset. Linked datasets are subsets of a big dataset (_set up in the Dataset settings_). First, a train run needs to be **Done on a smaller linked dataset** before being run on a bigger dataset.
+* Any user who is part of the analysis can request a long train. Approval from the participating analyses PWGs conveners is required in order to submit a long train. Train operators or admins can also approve a long train, but it is usually done by the PWG. 
+
+<div align="center">
+   <img src="../images/requestLongTrain.png" width="70%">
+</div> 
+
+* Once the long train is approved:
+  * If Automatic Submission is enabled and the train test finished without memory warning and within the CPU time limit, the train is submitted
+  * Otherwise the Submit button is enabled and the operator can submit the train
+  
+   <div align="center">
+    <img src="../images/longTrainApproved.png" width="80%">
+   </div> 
   
   
 ## <a name="trainswithissues"></a>Trains with issues
