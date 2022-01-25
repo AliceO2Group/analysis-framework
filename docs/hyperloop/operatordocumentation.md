@@ -65,8 +65,8 @@ title: Operator Documentation
   * <a name="decompose"></a>Decomposing a train run by clicking on `Decompose ☠️`. When decomposing a train run, the wagons in it will be allowed to be composed in a new train run.
   * <a name="submit"></a>Submitting a train run. Only train runs which test status is success `🌟` or warning `❗️` can be submitted. By default, the train run is submitted to the _Grid - single core_, but a different target can be chosen. To submit a train run, click on `Submit 🚂`.
   * <a name="submitfinalmerge"></a>When a dataset has activate final merge, a button `Submit final merge` appears after all the masterjobs are finished successfully.
-  * Killing a train by clicking on `Kill ☠️`.
-  * Close a train by clicking `Close ❌` - this will stop further activity, but will keep the jobs running.
+  * Killing a train by clicking on `Kill ☠️`. This will stop all running jobs.
+  * Closing a train by clicking `Close ❌`. This will stop further activity, but will keep the jobs running.
   * Cloning a train in the tab `Clone`. When cloning a train, the wagons and dataset configuration used will be the same as of the original train. Other settings can be changed: package tag, target facility, slow train, derived data, automatic submission.
 
 ### <a name="trainresult"></a>Train Run Result
