@@ -63,7 +63,7 @@ You can get to the _All Analyses_ page by using the main menu, or by the link in
 * In _Configuration_ the wagon configuration corresponding to the workflow will be available in the _Base_. The configuration is divided per _Task_, hence if you need to add a new parameter, you will need add it in the following order: task, parameter and value.
 
 <div align="center">
-<img src="../images/wagonConfig.png" width="70%">
+<img src="../images/detailedConfiguration.png" width="70%">
 </div>
 
 * The wagon configuration supports a variety of parameter types defined in task as _Configurable_ including: arrays, matrices, labelled matrices and histogram binning. The _Variable-length arrays_ allow the user to add/remove elements in the _Base_ wagon, and the change will be propagated in all the subwagons.
@@ -77,6 +77,15 @@ You can get to the _All Analyses_ page by using the main menu, or by the link in
 </div>
   
 * If you need to run the same workflow, but modify one (or more) of the parameter's value, you can use a subwagon instead of creating a new wagon. In order to create a subwagon, type the name of the new subwagon, the name has to be unique within the wagon, and type the value of at least one parameter in the configuration. The configuration of a subwagon will be kept the same as the _Base_ and overwrite only the parameters that you provide. 
+
+* The subwagons added to the wagon will be represented with an automatically assigned suffix in _AnalysisResults.root_. Here you can see an example where we have added two subwagons called _smalleta_ and _verysmalleta_.
+
+<div align="center">
+<img src="../images/subwagonSuffix2.png" width="80%">
+</div>
+<div align="center">
+<img src="../images/subwagonSuffix.png" width="80%">
+</div>
 
 * In order to update the base and subwagon configuration with the latest version of the workflow, click on the button `↻ sync` in _Configuration_. By synchronizing the configuration, the parameters which no longer belong to the workflow will be removed, and the values of the wagon's _Base_ will be updated as well if they have not been modified by the user.
 
@@ -289,11 +298,13 @@ When creating or enabling wagons, you can use a pull request instead of a packag
    <img src="../images/submittedJobs2.png" width="70%">
 </div>
 
-* Click the **Stack trace** button to be redirected to the stack trace information in MonALISA.
+* Click the **Stack trace** button to be redirected to the stack trace information in MonALISA. Here you can see a summary of failures of your jobs.
   
 <div align="center">
    <img src="../images/submittedJobs3.png" width="90%">
 </div> 
+
+* This information is collected when the masterjobs have finished from all ERROR_V jobs. Some information is already available while the train is running but make sure to check again when the train is in a final state. Common errors are grouped and counted. This allows you to investigate failures and debug them using the provided stack trace.
 
 * The _Grid statistics_ tab presents a summary of the jobs performance and plots the Files/Job, CPU time/Job and Wall time/Job statitics.
 
@@ -307,18 +318,11 @@ When creating or enabling wagons, you can use a pull request instead of a packag
    <img src="../images/mergedOutput.png" width="80%">
 </div> 
 
-* When the final merge is started manually by the operator, some of the runs may not be merged. You can copy the list of merged runs or the total list of runs on the (red) number.
+* When the final merge is started manually by the operator, some of the runs may not be merged. You can copy the list of merged runs or the total list of runs by clicking on the (red) number.
 * Here you can also track the submission process, and debug issues that may have taken place.
 
 <div align="center">
    <img src="../images/mergedOutput1.png" width="90%">
-</div> 
-
-* You can use the _Clone train_ tab to clone the train. The cloned train will have **the same wagon timestamp** of the original train, with the **current dataset configuration**. This means that if the users have changed the wagon configuration in the meanwhile, this is not taken into account (this is different from the LEGO trains).
-* Other settings can be modified: package tag, target facility, slow train option, derived data, automatic submission.
-
-<div align="center">
-   <img src="../images/cloneTrain.png" width="70%">
 </div> 
 
 * The _Request long train_ tab allows users to request a long train after the train ran on a linked dataset. Linked datasets are subsets of a big dataset (_set up in the Dataset settings_). First, a train run needs to be **Done on a smaller linked dataset** before being run on a bigger dataset.
