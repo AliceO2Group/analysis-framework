@@ -64,7 +64,7 @@ You can get to the _All Analyses_ page by using the main menu, or by the link in
 * The wagon configuration supports a variety of parameter types defined in task as _Configurable_ including: primitive type parameters, fixed-length arrays, variable-length arrays, matrices, labelled matrices and histogram binning. 
 
 <div align="center">
-<img src="../images/detailedConfiguration.png" width="70%">
+<img src="../images/detailedConf.png" width="70%">
 </div>
 
 * The _Variable-length arrays_ allow the user to add/remove elements in the _Base_ wagon, and the change will be propagated in all the subwagons.
