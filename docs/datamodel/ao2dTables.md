@@ -1539,6 +1539,20 @@ For better overview the tables are grouped into the following categories: | [Gen
         <td>Track chi^2</td>
       </tr>
       <tr>
+        <td>o2::aod::fwdtrack::TrackTime</td>
+        <td></td>
+        <td>trackTime</td>
+        <td>float</td>
+        <td>Estimated time of the track in ns wrt collision().bc() or ambiguoustrack.bcSlice()[0]</td>
+      </tr>
+      <tr>
+        <td>o2::aod::fwdtrack::TrackTimeRes</td>
+        <td></td>
+        <td>trackTimeRes</td>
+        <td>float</td>
+        <td>Resolution of the track time in ns</td>
+      </tr>
+      <tr>
         <td>o2::aod::fwdtrack::Pt</td>
         <td>E</td>
         <td>pt</td>
@@ -1676,6 +1690,20 @@ For better overview the tables are grouped into the following categories: | [Gen
         <td>chi2</td>
         <td>float</td>
         <td>Track chi^2</td>
+      </tr>
+      <tr>
+        <td>o2::aod::fwdtrack::TrackTime</td>
+        <td></td>
+        <td>trackTime</td>
+        <td>float</td>
+        <td>Estimated time of the track in ns wrt collision().bc() or ambiguoustrack.bcSlice()[0]</td>
+      </tr>
+      <tr>
+        <td>o2::aod::fwdtrack::TrackTimeRes</td>
+        <td></td>
+        <td>trackTimeRes</td>
+        <td>float</td>
+        <td>Resolution of the track time in ns</td>
       </tr>
     </table>
   </div>
