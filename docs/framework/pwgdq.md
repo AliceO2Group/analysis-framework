@@ -55,6 +55,8 @@ Mattermost channel: [O2-DQ Analysis Framework Alpha](https://mattermost.web.cern
 * [`TableMakerMC.cxx`](https://github.com/AliceO2Group/O2Physics/blob/master/PWGDQ/TableProducer/tableMakerMC.cxx) Create skimmed data tables for DQ analysis from central barrel MC AODs (MUON tables to be added). This contains a task which produces skimmed data tables with selected reconstructed and generator level event information, and barrel track reconstructed and generated information. The generator level particles are selected using the MCSignal class (see below for details). 
 * [`dqEfficiency.cxx`](https://github.com/AliceO2Group/O2Physics/blob/master/PWGDQ/Tasks/dqEfficiency.cxx) Analysis task for processing O2::DQ MC skimmed AODs.
 * [`v0selector.cxx`](https://github.com/AliceO2Group/O2Physics/blob/master/PWGDQ/Tasks/v0selector.cxx) Select barrel tracks which belong to clean V0 and cascade topologies. This code loops over a V0Data table and produces some standard analysis output for select clean V0 sample.
+* [`dileptonMuMu.cxx`](https://github.com/AliceO2Group/O2Physics/blob/master/PWGDQ/Tasks/dileptonMuMu.cxx) It refers to The dimuon analysis task. It’s a derivative of the tableReader, but with muon only informations.  takes tracks flaged as « muon » and creates Pairs calculating mass, rapidity, pT.
+* [`dileptonEE.cxx`](https://github.com/AliceO2Group/O2Physics/blob/master/PWGDQ/Tasks/dileptonEE.cxx) It refers to The dielectron analysis task. It’s a derivative of the tableReader, but with electron only informations.  takes tracks flaged as « electron » and creates Pairs calculating mass, rapidity, pT.
 
     
 ## AliHyperloop
