@@ -63,7 +63,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGCF
         <td>o2::aod::dptdptfilter::DptDptCFCollisionAccepted</td>
         <td></td>
         <td>collisionaccepted</td>
-        <td>bool</td>
+        <td>uint8_t</td>
         <td>If the collision/event has been accepted or not</td>
       </tr>
       <tr>
@@ -122,7 +122,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGCF
         <td>o2::aod::dptdptfilter::DptDptCFCollisionAccepted</td>
         <td></td>
         <td>collisionaccepted</td>
-        <td>bool</td>
+        <td>uint8_t</td>
         <td>If the collision/event has been accepted or not</td>
       </tr>
       <tr>
@@ -162,14 +162,14 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGCF
         <td>o2::aod::dptdptfilter::TrackacceptedAsOne</td>
         <td></td>
         <td>trackacceptedasone</td>
-        <td>bool</td>
+        <td>uint8_t</td>
         <td>Track accepted as type one</td>
       </tr>
       <tr>
         <td>o2::aod::dptdptfilter::TrackacceptedAsTwo</td>
         <td></td>
         <td>trackacceptedastwo</td>
-        <td>bool</td>
+        <td>uint8_t</td>
         <td>Track accepted as type two</td>
       </tr>
       <tr>
@@ -223,14 +223,14 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGCF
         <td>o2::aod::dptdptfilter::TrackacceptedAsOne</td>
         <td></td>
         <td>trackacceptedasone</td>
-        <td>bool</td>
+        <td>uint8_t</td>
         <td>Track accepted as type one</td>
       </tr>
       <tr>
         <td>o2::aod::dptdptfilter::TrackacceptedAsTwo</td>
         <td></td>
         <td>trackacceptedastwo</td>
-        <td>bool</td>
+        <td>uint8_t</td>
         <td>Track accepted as type two</td>
       </tr>
       <tr>
@@ -8223,6 +8223,370 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <td></td>
         <td>xicToPKPiFlag</td>
         <td>uint8_t</td>
+        <td></td>
+      </tr>
+    </table>
+  </div>
+
+</div>
+
+####  o2-analysis-hf-tree-creator-chic-tojpsigamma
+Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer//HFTreeCreatorChicToJpsiGamma.cxx" target="_blank">HFTreeCreatorChicToJpsiGamma.cxx</a>
+<div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::HfCandChicFull</button>
+  <div class="panel">
+    <div>
+
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master/PWGHF/TableProducer/HFTreeCreatorChicToJpsiGamma.cxx" target="_blank">PWGHF/TableProducer/HFTreeCreatorChicToJpsiGamma.cxx</a>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::&zwnj;collision::BCId</td>
+        <td>I</td>
+        <td>bcId</td>
+        <td>int32</td>
+        <td>Most probably BC to where this collision has occured</td>
+      </tr>
+      <tr>
+        <td>o2::aod::&zwnj;collision::NumContrib</td>
+        <td></td>
+        <td>numContrib</td>
+        <td>uint16_t</td>
+        <td>Number of tracks used for the vertex</td>
+      </tr>
+      <tr>
+        <td>o2::aod::&zwnj;collision::PosX</td>
+        <td></td>
+        <td>posX</td>
+        <td>float</td>
+        <td>X Vertex position in cm</td>
+      </tr>
+      <tr>
+        <td>o2::aod::&zwnj;collision::PosY</td>
+        <td></td>
+        <td>posY</td>
+        <td>float</td>
+        <td>Y Vertex position in cm</td>
+      </tr>
+      <tr>
+        <td>o2::aod::&zwnj;collision::PosZ</td>
+        <td></td>
+        <td>posZ</td>
+        <td>float</td>
+        <td>Z Vertex position in cm</td>
+      </tr>
+      <tr>
+        <td>o2::aod::full::ImpactParameterNormalised0</td>
+        <td></td>
+        <td>impactParameterNormalised0</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::full::RSecondaryVertex</td>
+        <td></td>
+        <td>rSecondaryVertex</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::full::DecayLength</td>
+        <td></td>
+        <td>decayLength</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::full::DecayLengthXY</td>
+        <td></td>
+        <td>decayLengthXY</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::full::PtProng0</td>
+        <td></td>
+        <td>ptProng0</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::full::PProng0</td>
+        <td></td>
+        <td>pProng0</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::full::PtProng1</td>
+        <td></td>
+        <td>ptProng1</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::full::PProng1</td>
+        <td></td>
+        <td>pProng1</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::full::Alpha</td>
+        <td></td>
+        <td>alpha</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::full::Qt</td>
+        <td></td>
+        <td>qt</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_cand::Chi2PCA</td>
+        <td></td>
+        <td>chi2PCA</td>
+        <td>float</td>
+        <td>sum of (non-weighted) distances of the secondary vertex to its prongs</td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_cand::ImpactParameter0</td>
+        <td></td>
+        <td>impactParameter0</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::full::CandidateSelFlag</td>
+        <td></td>
+        <td>candidateSelFlag</td>
+        <td>int8_t</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::full::M</td>
+        <td></td>
+        <td>m</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::full::Pt</td>
+        <td></td>
+        <td>pt</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::full::P</td>
+        <td></td>
+        <td>p</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::full::CPA</td>
+        <td></td>
+        <td>cpa</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::full::CPAXY</td>
+        <td></td>
+        <td>cpaXY</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::full::Ct</td>
+        <td></td>
+        <td>ct</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::full::Eta</td>
+        <td></td>
+        <td>eta</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::full::Phi</td>
+        <td></td>
+        <td>phi</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::full::Y</td>
+        <td></td>
+        <td>y</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_cand_chic::JpsiToMuMuMass</td>
+        <td></td>
+        <td>jpsiToMuMuMass</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::full::MCflag</td>
+        <td></td>
+        <td>mcflag</td>
+        <td>int8_t</td>
+        <td></td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::HfCandChicFullEvents</button>
+  <div class="panel">
+    <div>
+
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master/PWGHF/TableProducer/HFTreeCreatorChicToJpsiGamma.cxx" target="_blank">PWGHF/TableProducer/HFTreeCreatorChicToJpsiGamma.cxx</a>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::&zwnj;collision::BCId</td>
+        <td>I</td>
+        <td>bcId</td>
+        <td>int32</td>
+        <td>Most probably BC to where this collision has occured</td>
+      </tr>
+      <tr>
+        <td>o2::aod::&zwnj;collision::NumContrib</td>
+        <td></td>
+        <td>numContrib</td>
+        <td>uint16_t</td>
+        <td>Number of tracks used for the vertex</td>
+      </tr>
+      <tr>
+        <td>o2::aod::&zwnj;collision::PosX</td>
+        <td></td>
+        <td>posX</td>
+        <td>float</td>
+        <td>X Vertex position in cm</td>
+      </tr>
+      <tr>
+        <td>o2::aod::&zwnj;collision::PosY</td>
+        <td></td>
+        <td>posY</td>
+        <td>float</td>
+        <td>Y Vertex position in cm</td>
+      </tr>
+      <tr>
+        <td>o2::aod::&zwnj;collision::PosZ</td>
+        <td></td>
+        <td>posZ</td>
+        <td>float</td>
+        <td>Z Vertex position in cm</td>
+      </tr>
+      <tr>
+        <td>o2::aod::full::IsEventReject</td>
+        <td></td>
+        <td>isEventReject</td>
+        <td>int</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::full::RunNumber</td>
+        <td></td>
+        <td>runNumber</td>
+        <td>int</td>
+        <td></td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::HfCandChicFullParticles</button>
+  <div class="panel">
+    <div>
+
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master/PWGHF/TableProducer/HFTreeCreatorChicToJpsiGamma.cxx" target="_blank">PWGHF/TableProducer/HFTreeCreatorChicToJpsiGamma.cxx</a>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::&zwnj;collision::BCId</td>
+        <td>I</td>
+        <td>bcId</td>
+        <td>int32</td>
+        <td>Most probably BC to where this collision has occured</td>
+      </tr>
+      <tr>
+        <td>o2::aod::full::Pt</td>
+        <td></td>
+        <td>pt</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::full::Eta</td>
+        <td></td>
+        <td>eta</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::full::Phi</td>
+        <td></td>
+        <td>phi</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::full::Y</td>
+        <td></td>
+        <td>y</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_cand_chic::JpsiToMuMuMass</td>
+        <td></td>
+        <td>jpsiToMuMuMass</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::full::MCflag</td>
+        <td></td>
+        <td>mcflag</td>
+        <td>int8_t</td>
         <td></td>
       </tr>
     </table>
