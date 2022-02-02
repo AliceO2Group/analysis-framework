@@ -192,7 +192,7 @@ Click on the labels to display the definitions. Click buttons to
   <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::V0</button>
   <div class="panel">
     <ul>
-        <li>o2::aod::V0 = soa::Join<>::iterator</li>
+        <li>o2::aod::V0 = o2::aod::V0s::iterator</li>
     </ul>
   </div>
 
@@ -206,7 +206,7 @@ Click on the labels to display the definitions. Click buttons to
   <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::Cascade</button>
   <div class="panel">
     <ul>
-        <li>o2::aod::Cascade = soa::Join<>::iterator</li>
+        <li>o2::aod::Cascade = o2::aod::Cascades::iterator</li>
     </ul>
   </div>
 
@@ -228,6 +228,13 @@ Click on the labels to display the definitions. Click buttons to
   <div class="panel">
     <ul>
         <li>o2::aod::McCollision = o2::aod::McCollisions::iterator</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::McParticles</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::McParticles = o2::aod::McParticles_001</li>
     </ul>
   </div>
 
