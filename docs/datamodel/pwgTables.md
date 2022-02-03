@@ -7970,11 +7970,6 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
     <div>
       Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master/PWGHF/DataModel/HFSecondaryVertex.h" target="_blank">PWGHF/DataModel/HFSecondaryVertex.h</a>
     </div>
-    <div>Is used in:
-      <ul>
-        <li>o2::aod::BigTracks = soa::Join<o2::aod::Tracks, o2::aod::TracksCov, o2::aod::TracksExtra, o2::aod::HFSelTrack></li>
-      </ul>
-    </div>
     <table class=DataModel>
       <tr>
         <th>Name</th>
