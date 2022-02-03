@@ -267,7 +267,7 @@ For better overview the tables are grouped into the following categories: | [Gen
         <li>o2::aod::Track = o2::aod::Tracks::iterator</li>
         <li>o2::aod::FullTracks = soa::Join<o2::aod::Tracks, o2::aod::TracksExtra></li>
         <li>o2::aod::FullTrack = soa::Join<o2::aod::Tracks, o2::aod::TracksExtra>::iterator</li>
-        <li>o2::aod::BigTracks = soa::Join<o2::aod::Tracks, o2::aod::TracksCov, o2::aod::TracksExtra, o2::aod::HFSelTrack></li>
+        <li>o2::aod::BigTracks = soa::Join<o2::aod::Tracks, o2::aod::TracksCov, o2::aod::TracksExtra></li>
       </ul>
     </div>
     <table class=DataModel>
@@ -424,7 +424,7 @@ For better overview the tables are grouped into the following categories: | [Gen
     <div>Is used in:
       <ul>
         <li>o2::aod::TrackCov = o2::aod::TracksCov::iterator</li>
-        <li>o2::aod::BigTracks = soa::Join<o2::aod::Tracks, o2::aod::TracksCov, o2::aod::TracksExtra, o2::aod::HFSelTrack></li>
+        <li>o2::aod::BigTracks = soa::Join<o2::aod::Tracks, o2::aod::TracksCov, o2::aod::TracksExtra></li>
       </ul>
     </div>
     <table class=DataModel>
@@ -667,7 +667,7 @@ For better overview the tables are grouped into the following categories: | [Gen
         <li>o2::aod::TrackExtra = o2::aod::TracksExtra::iterator</li>
         <li>o2::aod::FullTracks = soa::Join<o2::aod::Tracks, o2::aod::TracksExtra></li>
         <li>o2::aod::FullTrack = soa::Join<o2::aod::Tracks, o2::aod::TracksExtra>::iterator</li>
-        <li>o2::aod::BigTracks = soa::Join<o2::aod::Tracks, o2::aod::TracksCov, o2::aod::TracksExtra, o2::aod::HFSelTrack></li>
+        <li>o2::aod::BigTracks = soa::Join<o2::aod::Tracks, o2::aod::TracksCov, o2::aod::TracksExtra></li>
       </ul>
     </div>
     <table class=DataModel>

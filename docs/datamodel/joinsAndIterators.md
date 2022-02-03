@@ -570,7 +570,7 @@ Click on the labels to display the definitions. Click buttons to
   <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::BigTracks</button>
   <div class="panel">
     <ul>
-        <li>o2::aod::BigTracks = soa::Join<o2::aod::Tracks, o2::aod::TracksCov, o2::aod::TracksExtra, o2::aod::HFSelTrack></li>
+        <li>o2::aod::BigTracks = soa::Join<o2::aod::Tracks, o2::aod::TracksCov, o2::aod::TracksExtra></li>
     </ul>
   </div>
 
@@ -997,28 +997,28 @@ Click on the labels to display the definitions. Click buttons to
   <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::analysis::hf_cuts_single_track::MY_TYPE1</button>
   <div class="panel">
     <ul>
-        <li>o2::analysis::hf_cuts_single_track::MY_TYPE1 = soa::Join<o2::analysis::hf_cuts_single_track::aod::Tracks, o2::analysis::hf_cuts_single_track::aod::TracksCov, o2::analysis::hf_cuts_single_track::aod::TracksExtra, o2::analysis::hf_cuts_single_track::aod::TracksExtended, o2::analysis::hf_cuts_single_track::aod::TrackSelection, o2::analysis::hf_cuts_single_track::aod::McTrackLabels></li>
+        <li>o2::analysis::hf_cuts_single_track::MY_TYPE1 = soa::Join<o2::analysis::hf_cuts_single_track::aod::BigTracks, o2::analysis::hf_cuts_single_track::aod::TracksExtended, o2::analysis::hf_cuts_single_track::aod::TrackSelection, o2::analysis::hf_cuts_single_track::aod::McTrackLabels></li>
     </ul>
   </div>
 
   <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::analysis::hf_cuts_single_track::MyTracks</button>
   <div class="panel">
     <ul>
-        <li>o2::analysis::hf_cuts_single_track::MyTracks = soa::Join<o2::analysis::hf_cuts_single_track::aod::FullTracks, o2::analysis::hf_cuts_single_track::aod::TracksCov, o2::analysis::hf_cuts_single_track::aod::HFSelTrack, o2::analysis::hf_cuts_single_track::aod::TracksExtended, o2::analysis::hf_cuts_single_track::aod::McTrackLabels></li>
+        <li>o2::analysis::hf_cuts_single_track::MyTracks = soa::Join<o2::analysis::hf_cuts_single_track::aod::BigTracks, o2::analysis::hf_cuts_single_track::aod::HFSelTrack, o2::analysis::hf_cuts_single_track::aod::TracksExtended, o2::analysis::hf_cuts_single_track::aod::McTrackLabels></li>
     </ul>
   </div>
 
   <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::analysis::hf_cuts_single_track::MY_TYPE1</button>
   <div class="panel">
     <ul>
-        <li>o2::analysis::hf_cuts_single_track::MY_TYPE1 = soa::Join<o2::analysis::hf_cuts_single_track::aod::Tracks, o2::analysis::hf_cuts_single_track::aod::TracksCov, o2::analysis::hf_cuts_single_track::aod::TracksExtra, o2::analysis::hf_cuts_single_track::aod::TracksExtended, o2::analysis::hf_cuts_single_track::aod::TrackSelection></li>
+        <li>o2::analysis::hf_cuts_single_track::MY_TYPE1 = soa::Join<o2::analysis::hf_cuts_single_track::aod::BigTracks, o2::analysis::hf_cuts_single_track::aod::TracksExtended, o2::analysis::hf_cuts_single_track::aod::TrackSelection></li>
     </ul>
   </div>
 
   <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::analysis::hf_cuts_single_track::MyTracks</button>
   <div class="panel">
     <ul>
-        <li>o2::analysis::hf_cuts_single_track::MyTracks = soa::Join<o2::analysis::hf_cuts_single_track::aod::FullTracks, o2::analysis::hf_cuts_single_track::aod::TracksCov, o2::analysis::hf_cuts_single_track::aod::HFSelTrack, o2::analysis::hf_cuts_single_track::aod::TracksExtended></li>
+        <li>o2::analysis::hf_cuts_single_track::MyTracks = soa::Join<o2::analysis::hf_cuts_single_track::aod::BigTracks, o2::analysis::hf_cuts_single_track::aod::HFSelTrack, o2::analysis::hf_cuts_single_track::aod::TracksExtended></li>
     </ul>
   </div>
 
