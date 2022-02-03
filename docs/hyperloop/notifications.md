@@ -45,9 +45,6 @@ title: Notifications
     <img src="../images/productionAdded.png" width="90%">
 </div>
 
-
-## <a name="trainrunAdded"></a>Conversion train run added into / removed from dataset
-
 * For RUN 2 data, the user is notified when a conversion train run has been added to or removed from the dataset.
 
 <div align="center">
@@ -57,6 +54,8 @@ title: Notifications
 <div align="center">
   <img src="../images/trainrunRemoved.png" width="90%">
 </div>
+
+* For derived data, a notification is sent when a Hyperloop train that produced derived data has been added or removed.
 
 ## <a name="runlistUpdated"></a>Runlist updated
 
