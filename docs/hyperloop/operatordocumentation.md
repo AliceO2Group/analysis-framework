@@ -52,11 +52,14 @@ title: Operator Documentation
 * For a user, the <a href="https://alimonitor.cern.ch/hyperloop/train-runs" target="_blank">**Train Runs**</a> page displays a read view only of all train runs available in the system.
 * For a train operator, the _Train Runs_ page displays all trains available in the system, and allows submitting, modifying and killing a train.
 * To compare two trains, select them in the Compare column and click Compare. This will open a new tab displaying the differences between the two trains.
+
  <div align="center">
     <img src="../images/compareTrains.png" width="70%">
  </div>
+ 
 * The train run detail can be accessed by clicking on the TRAIN_ID, or with the url <a href="https://alimonitor.cern.ch/hyperloop/train-run/TRAIN_ID" target="_blank">https://alimonitor.cern.ch/hyperloop/train-run/TRAIN_ID</a>.
-* <div align="center">
+
+<div align="center">
    <img src="../images/trainRunsPage.png" width="70%">
 </div>
 
@@ -71,19 +74,19 @@ title: Operator Documentation
 
 ### <a name="trainresult"></a>Train Run Result
 
-* The _General_ tab displays the summary of the train's progress, direct links to dataset and participating wagon configuration, as well as direct links to the test output and the speedscope profiling of the task.
+* <a name="traingeneral"></a>The _General_ tab displays the summary of the train's progress, direct links to dataset and participating wagon configuration, as well as direct links to the test output and the speedscope profiling of the task.
 
 <div align="center">
    <img src="../images/trainResult.png" width="70%">
 </div>
 
-* The _Test results_ tab shows the performance metrics per device (reader, workflows, writer), along with the expected resources. You can use the interactive graphs (per device) to zoom into the area of interest (click and drag) or zoom out (double-click).
+* <a name="traintestresults"></a>The _Test results_ tab shows the performance metrics per device (reader, workflows, writer), along with the expected resources. You can use the interactive graphs (per device) to zoom into the area of interest (click and drag) or zoom out (double-click).
 
 <div align="center">
    <img src="../images/testResults.png" width="70%">
 </div>
 
-* In the _Test Graphs_ tab, you can plot the available metrics for the specific _Train run_. By hovering over the graph, the corresponding values are displayed in a dynamic window, stating the value for each participating wagon.
+* <a name="traintestgraphs"></a>In the _Test Graphs_ tab, you can plot the available metrics for the specific _Train run_. By hovering over the graph, the corresponding values are displayed in a dynamic window, stating the value for each participating wagon.
 
   <div align="center">
     <img src="../images/testGraphs.png" width="70%">
@@ -112,7 +115,7 @@ title: Operator Documentation
     <img src="../images/graphZoom2.png" width="70%">
   </div>
 
-* In _Submitted jobs_, you can see the summary of the master jobs, along with links to the **IO Statistics** and **Stack trace**.
+* <a name="trainsubmittedjobs"></a>In _Submitted jobs_, you can see the summary of the master jobs, along with links to the **IO Statistics** and **Stack trace**.
 
 <div align="center">
    <img src="../images/submittedJobs1.png" width="70%">
@@ -132,13 +135,13 @@ title: Operator Documentation
 
 * This information is collected when the masterjobs have finished from all ERROR_V jobs. Some information is already available while the train is running but make sure to check again when the train is in a final state. Common errors are grouped and counted. This allows you to investigate failures and debug them using the provided stack trace.
 
-* The _Grid statistics_ tab presents a summary of the jobs performance and plots the Files/Job, CPU time/Job and Wall time/Job statitics.
+* <a name="traingridstats"></a>The _Grid statistics_ tab presents a summary of the jobs performance and plots the Files/Job, CPU time/Job and Wall time/Job statitics.
 
 <div align="center">
    <img src="../images/gridStats.png" width="70%">
 </div> 
 
-* _Merged output_ displays the jobs status after submitting the train. The mergelists are defined in the dataset settings.
+* <a name="trainmergedoutput"></a>_Merged output_ displays the jobs status after submitting the train. The mergelists are defined in the dataset settings.
 
 <div align="center">
    <img src="../images/mergedOutput.png" width="80%">
@@ -151,14 +154,14 @@ title: Operator Documentation
    <img src="../images/mergedOutput1.png" width="90%">
 </div> 
 
-* You can use the _Clone train_ tab to clone the train. The cloned train will have **the same wagon timestamp** of the original train, with the **current dataset configuration**. This means that if the users have changed the wagon configuration in the meanwhile, this is not taken into account (this is different from the LEGO trains).
+* <a name="trainclonetab"></a>You can use the _Clone train_ tab to clone the train. The cloned train will have **the same wagon timestamp** of the original train, with the **current dataset configuration**. This means that if the users have changed the wagon configuration in the meanwhile, this is not taken into account (this is different from the LEGO trains).
 * Other settings can be modified: package tag, target facility, slow train option, derived data, automatic submission.
 
 <div align="center">
    <img src="../images/cloneTrain.png" width="70%">
 </div> 
 
-* The _Request long train_ tab allows users to request a long train after the train ran on a linked dataset. Linked datasets are subsets of a big dataset (_set up in the Dataset settings_). First, a train run needs to be **Done on a smaller linked dataset** before being run on a bigger dataset.
+* <a name="trainlongrequest"></a>The _Request long train_ tab allows users to request a long train after the train ran on a linked dataset. Linked datasets are subsets of a big dataset (_set up in the Dataset settings_). First, a train run needs to be **Done on a smaller linked dataset** before being run on a bigger dataset.
 * Any user who is part of the analysis can request a long train. Approval from the participating analyses PWGs conveners is required in order to submit a long train. Train operators or admins can also approve a long train, but it is usually done by the PWG. 
 
 <div align="center">
@@ -208,8 +211,8 @@ title: Operator Documentation
     <img src="../images/editDatasetOptions.png" width="70%">
   </div>
 
-* In the **Options** box, you can add linked datasets to the current dataset, which will be used for the [**staged submission**](#stagedsubmission). Enabling _Run final merging over all runs in this dataset_ will merge all the runs of all the productions during the final merging.
-* In the **Analysis Facility Staging**, the user is able to stage or unstage the data to the available targets displayed in the dropdown.
+* <a name="datasetoptions"></a>In the **Options** box, you can add linked datasets to the current dataset, which will be used for the [**staged submission**](#stagedsubmission). Enabling _Run final merging over all runs in this dataset_ will merge all the runs of all the productions during the final merging.
+* <a name="datasetstaging"></a>In the **Analysis Facility Staging**, the user is able to stage or unstage the data to the available targets displayed in the dropdown.
   * Choose a target from the dropdown list, and you will be notified of the amount of data required for the staging process. Confirm by clicking OK. The staging process will start once clicking the _Save all changes_ button at the top right of the page. 
   * You can hover over the staging percentage to get a detailed status of the staging progress. By clicking on the percentage, you will be lead to a new tab where you can see the elaborate overview of the transfer requests on MonALISA.
   * To unstage the data to a specific target, click the _Unstage_ button. The unstaging process will start once clicking _Save all changes_.
@@ -218,7 +221,7 @@ title: Operator Documentation
     <img src="../images/editDatasetStaging.png" width="80%">
   </div>
 
-* In the **Automatic Composition** box, the user is able to enable the automatic train composition. Choose the composition type, the maximum CPU time that can be consumed and the maximum number of trains that can be composed per week for an analysis.
+* <a name="automaticcomposition"></a>In the **Automatic Composition** box, the user is able to enable the automatic train composition. Choose the composition type, the maximum CPU time that can be consumed and the maximum number of trains that can be composed per week for an analysis.
   * _Scheduled_: If within schedule, trains will be composed with the compatible wagons in the dataset, regardless of the occupation in target memory.
   * _Train full_: The train will be composed only if the compatible wagons add up to at least 75% of the target memory.
   * _Scheduled and train full_: The train will be composed if it is within schedule. If not in schedule, the train will only be composed if the compatible wagons occupy at least 75% of the target memory.
@@ -234,7 +237,7 @@ title: Operator Documentation
     <img src="../images/automaticComposition2.png" width="80%">
   </div>
   
-### Deciding on data to be processed depends on the dataset type
+### <a name="datasetproduction"></a>Deciding on data to be processed depends on the dataset type
 
 * For RUN 2 data, the operator can add or remove a [**RUN 2 conversion train run**](https://alimonitor.cern.ch/trains/train.jsp?train_id=132#runs).
 
