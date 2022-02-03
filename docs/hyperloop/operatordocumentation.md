@@ -212,7 +212,7 @@ title: Operator Documentation
   </div>
 
 * <a name="datasetoptions"></a>In the **Options** box, you can add linked datasets to the current dataset, which will be used for the [**staged submission**](#stagedsubmission). Enabling _Run final merging over all runs in this dataset_ will merge all the runs of all the productions during the final merging.
-* <a name="datasetstaging"></a>In the **Analysis Facility Staging**, the user is able to stage or unstage the data to the available targets displayed in the dropdown.
+* <a name="datasetstaging"></a>In the **Analysis Facility Staging**, the operator is able to stage or unstage the data to the available targets displayed in the dropdown.
   * Choose a target from the dropdown list, and you will be notified of the amount of data required for the staging process. Confirm by clicking OK. The staging process will start once clicking the _Save all changes_ button at the top right of the page. 
   * You can hover over the staging percentage to get a detailed status of the staging progress. By clicking on the percentage, you will be lead to a new tab where you can see the elaborate overview of the transfer requests on MonALISA.
   * To unstage the data to a specific target, click the _Unstage_ button. The unstaging process will start once clicking _Save all changes_.
@@ -221,7 +221,7 @@ title: Operator Documentation
     <img src="../images/editDatasetStaging.png" width="80%">
   </div>
 
-* <a name="automaticcomposition"></a>In the **Automatic Composition** box, the user is able to enable the automatic train composition. Choose the composition type, the maximum CPU time that can be consumed and the maximum number of trains that can be composed per week for an analysis.
+* <a name="automaticcomposition"></a>In the **Automatic Composition** box, the operator is able to enable the automatic train composition. Choose the composition type, the maximum CPU time that can be consumed and the maximum number of trains that can be composed per week for an analysis.
   * _Scheduled_: If within schedule, trains will be composed with the compatible wagons in the dataset, regardless of the occupation in target memory.
   * _Train full_: The train will be composed only if the compatible wagons add up to at least 75% of the target memory.
   * _Scheduled and train full_: The train will be composed if it is within schedule. If not in schedule, the train will only be composed if the compatible wagons occupy at least 75% of the target memory.
