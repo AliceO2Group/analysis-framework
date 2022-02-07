@@ -12,9 +12,9 @@ title: Operator Documentation
 <img src="../images/dashboard.png" width="90%">
 </div>
 
-* By clicking the number of wagons waiting to be included in a train, the user can directly open the [_Train Submission_](#trainsubmission). Similarly, a link to the [_Train Runs_](#trainruns) is available by clicking the number of trains to be submitted to the grid, the number of running tests, or the number of finished trains.
+* By clicking the number of wagons waiting to be included in a train, the user can directly open the [_Train Submission_](#trainsubmission). Similarly, a link to the [_Train Runs_](#train-runs) is available by clicking the number of trains to be submitted to the grid, the number of running tests, or the number of finished trains.
 
-## <a name="trainsubmission"></a>Train Submission
+## <a name="train-submission"></a>Train Submission
 * For a user, the <a href="https://alimonitor.cern.ch/hyperloop/train-submission" target="_blank">**Train Submission**</a> page displays a read view only of datasets which have enabled wagons.
 * For a train operator, the  _Train Submission_ page displays only datasets which have enabled wagons, and allows train composition, as well as submitting, modifying and killing a train.
 ### <a name="trainsubmission"></a>Train Composition
@@ -34,7 +34,7 @@ title: Operator Documentation
 * `Target`: Sets the facility/cores where the train will be run.
 * Finally, after defining the configuration, click on `Compose 🚂` to compose a train. After composing a train run, the wagons selected cannot be selected for a different train run unless the current train run is [decomposed](#decompose). After the train run is [submitted](#submit), the wagons will be disabled. 
 * If a user changes a configuration between train composition and submission, the new configuration is not taken into account. The train runs with the wagons and dataset configuration corresponding to the time at which it was _created_.
-* The train will be automatically tested, and its progress can be followed in the _Train Runs_ table, or in the [**Train Runs**](#trainruns) page by clicking on the TRAIN_ID link.
+* The train will be automatically tested, and its progress can be followed in the _Train Runs_ table, or in the [**Train Runs**](#train-runs) page by clicking on the TRAIN_ID link.
 
 ### <a name="stagedsubmission"></a>Staged Submission
 
@@ -48,10 +48,10 @@ title: Operator Documentation
 <img src="../images/requestLongTrain.png" width="90%">
 </div>
 
-## <a name="trainruns"></a>Train Runs
+## <a name="train-runs"></a>Train Runs
 * For a user, the <a href="https://alimonitor.cern.ch/hyperloop/train-runs" target="_blank">**Train Runs**</a> page displays a read view only of all train runs available in the system.
 * For a train operator, the _Train Runs_ page displays all trains available in the system, and allows submitting, modifying and killing a train.
-* To compare two trains, select them in the Compare column and click Compare. This will open a new tab displaying the differences between the two trains.
+* <a name="train-comparison"></a>To compare two trains, select them in the Compare column and click Compare. This will open a new tab displaying the differences between the two trains.
 
  <div align="center">
     <img src="../images/compareTrains.png" width="70%">
@@ -72,7 +72,7 @@ title: Operator Documentation
   * Closing a train by clicking `Close ❌`. This will stop further activity, but will keep the jobs running.
   * Cloning a train in the tab `Clone`. When cloning a train, the wagons and dataset configuration used will be the same as of the original train. Other settings can be changed: package tag, target facility, slow train, derived data, automatic submission.
 
-### <a name="trainresult"></a>Train Run Result
+### <a name="train-run"></a>Train Run Result
 
 * <a name="traingeneral"></a>The _General_ tab displays the summary of the train's progress, direct links to dataset and participating wagon configuration, as well as direct links to the test output and the speedscope profiling of the task.
 
@@ -141,6 +141,12 @@ title: Operator Documentation
    <img src="../images/gridStats.png" width="70%">
 </div> 
 
+* <a name="trainderived"></a>If the train is run as a derived data production and there are activated tables, the Derived data tab will be showed. This displays the tables which are produced by the task and saved to the output.
+
+<div align="center">
+   <img src="../images/trainModalDerived.png" width="70%">
+</div>
+
 * <a name="trainmergedoutput"></a>_Merged output_ displays the jobs status after submitting the train. The mergelists are defined in the dataset settings.
 
 <div align="center">
@@ -161,7 +167,7 @@ title: Operator Documentation
    <img src="../images/cloneTrain.png" width="70%">
 </div> 
 
-* <a name="trainlongrequest"></a>The _Request long train_ tab allows users to request a long train after the train ran on a linked dataset. Linked datasets are subsets of a big dataset (_set up in the Dataset settings_). First, a train run needs to be **Done on a smaller linked dataset** before being run on a bigger dataset.
+* <a name="longTrain"></a>The _Request long train_ tab allows users to request a long train after the train ran on a linked dataset. Linked datasets are subsets of a big dataset (_set up in the Dataset settings_). First, a train run needs to be **Done on a smaller linked dataset** before being run on a bigger dataset.
 * Any user who is part of the analysis can request a long train. Approval from the participating analyses PWGs conveners is required in order to submit a long train. Train operators or admins can also approve a long train, but it is usually done by the PWG. 
 
 <div align="center">
@@ -177,7 +183,7 @@ title: Operator Documentation
    </div> 
   
   
-## <a name="trainswithissues"></a>Trains with issues
+## <a name="trains-with-issues"></a>Trains with issues
 
 * This page displays the list of train runs that are in state _submitted_ but could not be merged due to specific problems:
   * More than 30% of the jobs have errors 
@@ -195,7 +201,16 @@ title: Operator Documentation
   
 ## <a name="datasets"></a>Datasets
 
-* The <a href="https://alimonitor.cern.ch/hyperloop/datasets" target="_blank">**Datasets**</a> page displays all the datasets available. The operator can add, remove, activate or deactivate a dataset. Likewise, by clicking the `📝` button, the operator is able to modify the dataset in the [**Edit Dataset**](#editdataset) page.
+* The <a href="https://alimonitor.cern.ch/hyperloop/datasets" target="_blank">**Datasets**</a> page displays all the datasets available. The operator can add, remove, activate or deactivate a dataset. 
+
+*  The user can browse and click on the _Dataset_ they want to add to their analysis.
+<div align="center">
+<img src="../images/enableDatasetDatasetsPage.png" width="80%">
+</div>
+
+* <a name="view-dataset"></a>Inside of the _Dataset_ view page, click on the button `✚ Add dataset to analysis`. It will display a list of all the analyses you belong to. Select the _Analysis_ you want to add the dataset to, and click on `💾 Save`.
+
+* By clicking the `📝` button, the operator is able to modify the dataset in the [**Edit Dataset**](#edit-dataset) page.
 
   <div align="center">
     <img src="../images/datasetsPage.png" width="100%">
@@ -203,7 +218,7 @@ title: Operator Documentation
 
 * The runlists will be received programmatically from the DPG.
 
-### <a name="editdataset"></a>Edit Dataset
+### <a name="edit-dataset"></a>Edit Dataset
 
 * Allows the operator to update the dataset properties. Firstly, the operator can update the name and description of the dataset, and activate or deactivate it by clicking the `❌` / `✅` button. In order to save the changes you made, click the _Save all changes_ button.
 
@@ -266,7 +281,7 @@ title: Operator Documentation
 * The mergelist defines which runs are merged into one file at the end of the train running. The operator can add, update, activate or deactivate a mergelist in the dataset. 
 
 
-## <a name="dpgrunlists"></a>DPG Runlists
+## <a name="runlists"></a>DPG Runlists
 
 * The <a href="https://alimonitor.cern.ch/hyperloop/runlists" target="_blank">**DPG Runlists**</a> page is dedicated to the DPG experts and displays all the DPG runlists created for the datasets. The DPG expert can add, edit or remove a runlist.
 
