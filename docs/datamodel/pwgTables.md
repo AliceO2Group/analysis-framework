@@ -390,7 +390,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGCF
         <td></td>
         <td>trackType</td>
         <td>uint8_t</td>
-        <td>Type of track. See enum TrackTypeEnum</td>
+        <td>Type of track. See enum TrackTypeEnum. This cannot be used to decide which detector has contributed to this track. Use hasITS, hasTPC, etc.</td>
       </tr>
     </table>
   </div>
@@ -3415,14 +3415,14 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <td>I</td>
         <td>index0Id</td>
         <td>int</td>
-        <td>Pointer into Tracks</td>
+        <td>Index to first prong</td>
       </tr>
       <tr>
         <td>o2::aod::hf_track_index::Index1Id</td>
         <td>I</td>
         <td>index1Id</td>
         <td>int</td>
-        <td>Pointer into Tracks</td>
+        <td>Index to second prong</td>
       </tr>
       <tr>
         <td>o2::aod::hf_track_index::HFflag</td>
@@ -3940,21 +3940,21 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <td>I</td>
         <td>index0Id</td>
         <td>int</td>
-        <td>Pointer into Tracks</td>
+        <td>Index to first prong</td>
       </tr>
       <tr>
         <td>o2::aod::hf_track_index::Index1Id</td>
         <td>I</td>
         <td>index1Id</td>
         <td>int</td>
-        <td>Pointer into Tracks</td>
+        <td>Index to second prong</td>
       </tr>
       <tr>
         <td>o2::aod::hf_track_index::Index2Id</td>
         <td>I</td>
         <td>index2Id</td>
         <td>int</td>
-        <td>Pointer into Tracks</td>
+        <td>Index to third prong</td>
       </tr>
       <tr>
         <td>o2::aod::hf_track_index::HFflag</td>
@@ -4472,7 +4472,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <td>I</td>
         <td>index1Id</td>
         <td>int</td>
-        <td>Pointer into Tracks</td>
+        <td>Index to second prong</td>
       </tr>
       <tr>
         <td>o2::aod::hf_track_index::HFflag</td>
@@ -4934,14 +4934,14 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <td>I</td>
         <td>index0Id</td>
         <td>int</td>
-        <td>Pointer into Tracks</td>
+        <td>Index to first prong</td>
       </tr>
       <tr>
-        <td>o2::aod::hf_track_index::IndexV0Id</td>
+        <td>o2::aod::hf_track_index::V0Id</td>
         <td>I</td>
-        <td>indexV0Id</td>
-        <td>int</td>
-        <td>Pointer into aod</td>
+        <td>v0Id</td>
+        <td>int32</td>
+        <td>Index to V0 prong</td>
       </tr>
       <tr>
         <td>o2::aod::hf_track_index::HFflag</td>
@@ -6040,7 +6040,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <td>I</td>
         <td>index1Id</td>
         <td>int</td>
-        <td>Pointer into Tracks</td>
+        <td>Index to second prong</td>
       </tr>
       <tr>
         <td>o2::aod::hf_track_index::HFflag</td>
@@ -6551,14 +6551,14 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <td>I</td>
         <td>index1Id</td>
         <td>int</td>
-        <td>Pointer into Tracks</td>
+        <td>Index to second prong</td>
       </tr>
       <tr>
         <td>o2::aod::hf_track_index::Index2Id</td>
         <td>I</td>
         <td>index2Id</td>
         <td>int</td>
-        <td>Pointer into Tracks</td>
+        <td>Index to third prong</td>
       </tr>
       <tr>
         <td>o2::aod::hf_track_index::HFflag</td>
@@ -7055,7 +7055,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <td>I</td>
         <td>index1Id</td>
         <td>int</td>
-        <td>Pointer into Tracks</td>
+        <td>Index to second prong</td>
       </tr>
       <tr>
         <td>o2::aod::hf_track_index::HFflag</td>
@@ -8009,10 +8009,10 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
     </table>
   </div>
 
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::HfTrackIndexProng2</button>
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::Hf2Prong</button>
   <div class="panel">
     <div>
-
+       Table for HF 2 prong candidates
     </div>
     <div>
       Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master/PWGHF/DataModel/HFSecondaryVertex.h" target="_blank">PWGHF/DataModel/HFSecondaryVertex.h</a>
@@ -8026,18 +8026,25 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <th>Comment</th>
       </tr>
       <tr>
+        <td>o2::soa::Index</td>
+        <td>GI</td>
+        <td>globalIndex</td>
+        <td>int64_t</td>
+        <td></td>
+      </tr>
+      <tr>
         <td>o2::aod::hf_track_index::Index0Id</td>
         <td>I</td>
         <td>index0Id</td>
         <td>int</td>
-        <td>Pointer into Tracks</td>
+        <td>Index to first prong</td>
       </tr>
       <tr>
         <td>o2::aod::hf_track_index::Index1Id</td>
         <td>I</td>
         <td>index1Id</td>
         <td>int</td>
-        <td>Pointer into Tracks</td>
+        <td>Index to second prong</td>
       </tr>
       <tr>
         <td>o2::aod::hf_track_index::HFflag</td>
@@ -8049,10 +8056,10 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
     </table>
   </div>
 
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::HfTrackIndexCasc</button>
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::HfCascade</button>
   <div class="panel">
     <div>
-
+       Table for HF candidates with a V0
     </div>
     <div>
       Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master/PWGHF/DataModel/HFSecondaryVertex.h" target="_blank">PWGHF/DataModel/HFSecondaryVertex.h</a>
@@ -8066,18 +8073,79 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <th>Comment</th>
       </tr>
       <tr>
+        <td>o2::soa::Index</td>
+        <td>GI</td>
+        <td>globalIndex</td>
+        <td>int64_t</td>
+        <td></td>
+      </tr>
+      <tr>
         <td>o2::aod::hf_track_index::Index0Id</td>
         <td>I</td>
         <td>index0Id</td>
         <td>int</td>
-        <td>Pointer into Tracks</td>
+        <td>Index to first prong</td>
       </tr>
       <tr>
-        <td>o2::aod::hf_track_index::IndexV0Id</td>
+        <td>o2::aod::hf_track_index::V0Id</td>
         <td>I</td>
-        <td>indexV0Id</td>
+        <td>v0Id</td>
+        <td>int32</td>
+        <td>Index to V0 prong</td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_track_index::HFflag</td>
+        <td></td>
+        <td>hfflag</td>
+        <td>uint8_t</td>
+        <td></td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::Hf3Prong</button>
+  <div class="panel">
+    <div>
+       Table for HF 3 prong candidates
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master/PWGHF/DataModel/HFSecondaryVertex.h" target="_blank">PWGHF/DataModel/HFSecondaryVertex.h</a>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::soa::Index</td>
+        <td>GI</td>
+        <td>globalIndex</td>
+        <td>int64_t</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_track_index::Index0Id</td>
+        <td>I</td>
+        <td>index0Id</td>
         <td>int</td>
-        <td>Pointer into aod</td>
+        <td>Index to first prong</td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_track_index::Index1Id</td>
+        <td>I</td>
+        <td>index1Id</td>
+        <td>int</td>
+        <td>Index to second prong</td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_track_index::Index2Id</td>
+        <td>I</td>
+        <td>index2Id</td>
+        <td>int</td>
+        <td>Index to third prong</td>
       </tr>
       <tr>
         <td>o2::aod::hf_track_index::HFflag</td>
@@ -8123,53 +8191,6 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <td>o2::aod::hf_track_index::JpsiToMuMuFlag</td>
         <td></td>
         <td>jpsiToMuMuFlag</td>
-        <td>uint8_t</td>
-        <td></td>
-      </tr>
-    </table>
-  </div>
-
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::HfTrackIndexProng3</button>
-  <div class="panel">
-    <div>
-
-    </div>
-    <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master/PWGHF/DataModel/HFSecondaryVertex.h" target="_blank">PWGHF/DataModel/HFSecondaryVertex.h</a>
-    </div>
-    <table class=DataModel>
-      <tr>
-        <th>Name</th>
-        <th></th>
-        <th>Getter</th>
-        <th>Type</th>
-        <th>Comment</th>
-      </tr>
-      <tr>
-        <td>o2::aod::hf_track_index::Index0Id</td>
-        <td>I</td>
-        <td>index0Id</td>
-        <td>int</td>
-        <td>Pointer into Tracks</td>
-      </tr>
-      <tr>
-        <td>o2::aod::hf_track_index::Index1Id</td>
-        <td>I</td>
-        <td>index1Id</td>
-        <td>int</td>
-        <td>Pointer into Tracks</td>
-      </tr>
-      <tr>
-        <td>o2::aod::hf_track_index::Index2Id</td>
-        <td>I</td>
-        <td>index2Id</td>
-        <td>int</td>
-        <td>Pointer into Tracks</td>
-      </tr>
-      <tr>
-        <td>o2::aod::hf_track_index::HFflag</td>
-        <td></td>
-        <td>hfflag</td>
         <td>uint8_t</td>
         <td></td>
       </tr>

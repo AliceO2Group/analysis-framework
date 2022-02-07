@@ -884,7 +884,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
         <td></td>
         <td>trackType</td>
         <td>uint8_t</td>
-        <td>Type of track. See enum TrackTypeEnum</td>
+        <td>Type of track. See enum TrackTypeEnum. This cannot be used to decide which detector has contributed to this track. Use hasITS, hasTPC, etc.</td>
       </tr>
       <tr>
         <td>o2::aod::trackpropagated::Sign</td>
