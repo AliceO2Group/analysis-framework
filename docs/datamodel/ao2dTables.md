@@ -297,7 +297,7 @@ For better overview the tables are grouped into the following categories: | [Gen
         <td></td>
         <td>trackType</td>
         <td>uint8_t</td>
-        <td>Type of track. See enum TrackTypeEnum</td>
+        <td>Type of track. See enum TrackTypeEnum. This cannot be used to decide which detector has contributed to this track. Use hasITS, hasTPC, etc.</td>
       </tr>
       <tr>
         <td>o2::aod::track::X</td>
@@ -955,7 +955,7 @@ For better overview the tables are grouped into the following categories: | [Gen
         <td></td>
         <td>trackType</td>
         <td>uint8_t</td>
-        <td>Type of track. See enum TrackTypeEnum</td>
+        <td>Type of track. See enum TrackTypeEnum. This cannot be used to decide which detector has contributed to this track. Use hasITS, hasTPC, etc.</td>
       </tr>
       <tr>
         <td>o2::aod::track::X</td>
@@ -2564,10 +2564,10 @@ For better overview the tables are grouped into the following categories: | [Gen
       </tr>
       <tr>
         <td>o2::aod::ambiguous::BCIdSlice</td>
-        <td>GI</td>
-        <td></td>
-        <td>?</td>
-        <td></td>
+        <td>SLI</td>
+        <td>bcIds</td>
+        <td>int32_t</td>
+        <td>BC index (slice for 1 to N entries)</td>
       </tr>
     </table>
   </div>
@@ -2610,10 +2610,10 @@ For better overview the tables are grouped into the following categories: | [Gen
       </tr>
       <tr>
         <td>o2::aod::ambiguous::BCIdSlice</td>
-        <td>GI</td>
-        <td></td>
-        <td>?</td>
-        <td></td>
+        <td>SLI</td>
+        <td>bcIds</td>
+        <td>int32_t</td>
+        <td>BC index (slice for 1 to N entries)</td>
       </tr>
     </table>
   </div>
@@ -2656,10 +2656,10 @@ For better overview the tables are grouped into the following categories: | [Gen
       </tr>
       <tr>
         <td>o2::aod::ambiguous::BCIdSlice</td>
-        <td>GI</td>
-        <td></td>
-        <td>?</td>
-        <td></td>
+        <td>SLI</td>
+        <td>bcIds</td>
+        <td>int32_t</td>
+        <td>BC index (slice for 1 to N entries)</td>
       </tr>
     </table>
   </div>
@@ -2825,6 +2825,80 @@ For better overview the tables are grouped into the following categories: | [Gen
         <td>posZ</td>
         <td>float</td>
         <td>Z position calculated from timeA and timeC in cm</td>
+      </tr>
+    </table>
+  </div>
+
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::FDDs</button>
+  <div class="panel">
+    <div>
+
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev/Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::FDD = o2::aod::FDDs::iterator</li>
+      </ul>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::soa::Index</td>
+        <td>GI</td>
+        <td>globalIndex</td>
+        <td>int64_t</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::fdd::BCId</td>
+        <td>I</td>
+        <td>bcId</td>
+        <td>int32</td>
+        <td>BC index</td>
+      </tr>
+      <tr>
+        <td>o2::aod::fdd::AmplitudeA</td>
+        <td></td>
+        <td>amplitudeA</td>
+        <td>float[4]</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::fdd::AmplitudeC</td>
+        <td></td>
+        <td>amplitudeC</td>
+        <td>float[4]</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::fdd::TimeA</td>
+        <td></td>
+        <td>timeA</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::fdd::TimeC</td>
+        <td></td>
+        <td>timeC</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::fdd::TriggerMask</td>
+        <td></td>
+        <td>triggerMask</td>
+        <td>uint8_t</td>
+        <td></td>
       </tr>
     </table>
   </div>
@@ -3167,9 +3241,264 @@ For better overview the tables are grouped into the following categories: | [Gen
     </table>
   </div>
 
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::HMPIDs</button>
+  <div class="panel">
+    <div>
+       HMPID information
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev/Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::HMPID = o2::aod::HMPIDs::iterator</li>
+      </ul>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::soa::Index</td>
+        <td>GI</td>
+        <td>globalIndex</td>
+        <td>int64_t</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hmpid::TrackId</td>
+        <td>I</td>
+        <td>trackId</td>
+        <td>int32</td>
+        <td>Track index</td>
+      </tr>
+      <tr>
+        <td>o2::aod::hmpid::HMPIDSignal</td>
+        <td></td>
+        <td>hmpidSignal</td>
+        <td>float</td>
+        <td>Signal of the HMPID</td>
+      </tr>
+      <tr>
+        <td>o2::aod::hmpid::HMPIDDistance</td>
+        <td></td>
+        <td>hmpidDistance</td>
+        <td>float</td>
+        <td>Distance between the matched HMPID signal and the propagated track</td>
+      </tr>
+      <tr>
+        <td>o2::aod::hmpid::HMPIDNPhotons</td>
+        <td></td>
+        <td>hmpidNPhotons</td>
+        <td>short</td>
+        <td>Number of detected photons in HMPID</td>
+      </tr>
+      <tr>
+        <td>o2::aod::hmpid::HMPIDQMip</td>
+        <td></td>
+        <td>hmpidQMip</td>
+        <td>short</td>
+        <td>Collected charge in the HMPID</td>
+      </tr>
+    </table>
+  </div>
+
 </div>
 <h4 id="cat_Strangeness">Strangeness</h4>
 <div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::V0s_000</button>
+  <div class="panel">
+    <div>
+       Run 2 V0 table (version 000)
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev/Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::soa::Index</td>
+        <td>GI</td>
+        <td>globalIndex</td>
+        <td>int64_t</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::v0::PosTrackId</td>
+        <td>I</td>
+        <td>posTrackId</td>
+        <td>int</td>
+        <td>Positive track</td>
+      </tr>
+      <tr>
+        <td>o2::aod::v0::NegTrackId</td>
+        <td>I</td>
+        <td>negTrackId</td>
+        <td>int</td>
+        <td>Negative track</td>
+      </tr>
+    </table>
+  </div>
+
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::V0s_001</button>
+  <div class="panel">
+    <div>
+       Run 3 V0 table (version 001)
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev/Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::V0s = o2::aod::V0s_001</li>
+      </ul>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::soa::Index</td>
+        <td>GI</td>
+        <td>globalIndex</td>
+        <td>int64_t</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::v0::CollisionId</td>
+        <td>I</td>
+        <td>collisionId</td>
+        <td>int32</td>
+        <td>Collision index</td>
+      </tr>
+      <tr>
+        <td>o2::aod::v0::PosTrackId</td>
+        <td>I</td>
+        <td>posTrackId</td>
+        <td>int</td>
+        <td>Positive track</td>
+      </tr>
+      <tr>
+        <td>o2::aod::v0::NegTrackId</td>
+        <td>I</td>
+        <td>negTrackId</td>
+        <td>int</td>
+        <td>Negative track</td>
+      </tr>
+    </table>
+  </div>
+
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::Cascades_000</button>
+  <div class="panel">
+    <div>
+       Run 2 cascade table
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev/Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::soa::Index</td>
+        <td>GI</td>
+        <td>globalIndex</td>
+        <td>int64_t</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::cascade::V0Id</td>
+        <td>I</td>
+        <td>v0Id</td>
+        <td>int32</td>
+        <td>V0 index</td>
+      </tr>
+      <tr>
+        <td>o2::aod::cascade::BachelorId</td>
+        <td>I</td>
+        <td>bachelorId</td>
+        <td>int</td>
+        <td>Bachelor track index</td>
+      </tr>
+    </table>
+  </div>
+
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::Cascades_001</button>
+  <div class="panel">
+    <div>
+       Run 3 cascade table
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev/Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::Cascades = o2::aod::Cascades_001</li>
+      </ul>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::soa::Index</td>
+        <td>GI</td>
+        <td>globalIndex</td>
+        <td>int64_t</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::cascade::CollisionId</td>
+        <td>I</td>
+        <td>collisionId</td>
+        <td>int32</td>
+        <td>Collision index</td>
+      </tr>
+      <tr>
+        <td>o2::aod::cascade::V0Id</td>
+        <td>I</td>
+        <td>v0Id</td>
+        <td>int32</td>
+        <td>V0 index</td>
+      </tr>
+      <tr>
+        <td>o2::aod::cascade::BachelorId</td>
+        <td>I</td>
+        <td>bachelorId</td>
+        <td>int</td>
+        <td>Bachelor track index</td>
+      </tr>
+    </table>
+  </div>
+
 </div>
 <h4 id="cat_Indices">Indices</h4>
 <div>
@@ -3567,6 +3896,787 @@ For better overview the tables are grouped into the following categories: | [Gen
         <td>impactParameter</td>
         <td>float</td>
         <td>Impact parameter for A-A</td>
+      </tr>
+    </table>
+  </div>
+
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::McParticles_000 (E)</button>
+  <div class="panel">
+    <div>
+       Basic MC particle properties
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev/Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
+    </div>
+    <div>Extends:
+      <ul>
+         o2::aod::StoredMcParticles_000
+      </ul>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::soa::Index</td>
+        <td>GI</td>
+        <td>globalIndex</td>
+        <td>int64_t</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::McCollisionId</td>
+        <td>I</td>
+        <td>mcCollisionId</td>
+        <td>int32</td>
+        <td>MC collision of this particle</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::PdgCode</td>
+        <td></td>
+        <td>pdgCode</td>
+        <td>int</td>
+        <td>PDG code</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::StatusCode</td>
+        <td></td>
+        <td>statusCode</td>
+        <td>int</td>
+        <td>Generators status code or physics process. Do not use directly. Use dynamic columns getGenStatusCode() or getProcess()</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::Flags</td>
+        <td></td>
+        <td>flags</td>
+        <td>uint8_t</td>
+        <td>ALICE specific flags, see MCParticleFlags. Do not use directly. Use the dynamic columns, e.g. producedByGenerator()</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::Mother0Id</td>
+        <td>SI</td>
+        <td>mother0Id</td>
+        <td>int</td>
+        <td>Track index of the first mother</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::Mother1Id</td>
+        <td>SI</td>
+        <td>mother1Id</td>
+        <td>int</td>
+        <td>Track index of the last mother</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::Daughter0Id</td>
+        <td>SI</td>
+        <td>daughter0Id</td>
+        <td>int</td>
+        <td>Track index of the first daugther</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::Daughter1Id</td>
+        <td>SI</td>
+        <td>daughter1Id</td>
+        <td>int</td>
+        <td>Track index of the last daugther</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::Weight</td>
+        <td></td>
+        <td>weight</td>
+        <td>float</td>
+        <td>MC weight</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::Px</td>
+        <td></td>
+        <td>px</td>
+        <td>float</td>
+        <td>Momentum in x in GeV/c</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::Py</td>
+        <td></td>
+        <td>py</td>
+        <td>float</td>
+        <td>Momentum in y in GeV/c</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::Pz</td>
+        <td></td>
+        <td>pz</td>
+        <td>float</td>
+        <td>Momentum in z in GeV/c</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::E</td>
+        <td></td>
+        <td>e</td>
+        <td>float</td>
+        <td>Energy</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::Vx</td>
+        <td></td>
+        <td>vx</td>
+        <td>float</td>
+        <td>X production vertex in cm</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::Vy</td>
+        <td></td>
+        <td>vy</td>
+        <td>float</td>
+        <td>Y production vertex in cm</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::Vz</td>
+        <td></td>
+        <td>vz</td>
+        <td>float</td>
+        <td>Z production vertex in cm</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::Vt</td>
+        <td></td>
+        <td>vt</td>
+        <td>float</td>
+        <td>Production time</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::ProducedByGenerator</td>
+        <td>D</td>
+        <td>producedByGenerator</td>
+        <td>bool</td>
+        <td>True if particle produced by the generator (==TMCProcess::kPrimary); False if by the transport code</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::FromBackgroundEvent</td>
+        <td>D</td>
+        <td>fromBackgroundEvent</td>
+        <td>bool</td>
+        <td>Particle from background event</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::GetGenStatusCode</td>
+        <td>D</td>
+        <td>getGenStatusCode</td>
+        <td>int</td>
+        <td>The status code put by the generator, or -1 if a particle produced during transport</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::GetProcess</td>
+        <td>D</td>
+        <td>getProcess</td>
+        <td>int</td>
+        <td>The VMC physics code (as int) that generated this particle (see header TMCProcess.h in ROOT)</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::IsPhysicalPrimary</td>
+        <td>D</td>
+        <td>isPhysicalPrimary</td>
+        <td>bool</td>
+        <td>True if particle is considered a physical primary according to the ALICE definition</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::Phi</td>
+        <td>E</td>
+        <td>phi</td>
+        <td>float</td>
+        <td>Phi in the range [0, 2pi)</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::Eta</td>
+        <td>E</td>
+        <td>eta</td>
+        <td>float</td>
+        <td>Pseudorapidity, conditionally defined to avoid FPEs</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::Pt</td>
+        <td>E</td>
+        <td>pt</td>
+        <td>float</td>
+        <td>Transverse momentum in GeV/c</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::P</td>
+        <td>E</td>
+        <td>p</td>
+        <td>float</td>
+        <td>Total momentum in GeV/c</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::Y</td>
+        <td>E</td>
+        <td>y</td>
+        <td>float</td>
+        <td>Particle rapidity, conditionally defined to avoid FPEs</td>
+      </tr>
+    </table>
+  </div>
+
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::McParticles_001 (E)</button>
+  <div class="panel">
+    <div>
+       Basic MC particle properties
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev/Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
+    </div>
+    <div>Extends:
+      <ul>
+         o2::aod::StoredMcParticles_001
+      </ul>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::McParticles = o2::aod::McParticles_001</li>
+      </ul>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::soa::Index</td>
+        <td>GI</td>
+        <td>globalIndex</td>
+        <td>int64_t</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::McCollisionId</td>
+        <td>I</td>
+        <td>mcCollisionId</td>
+        <td>int32</td>
+        <td>MC collision of this particle</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::PdgCode</td>
+        <td></td>
+        <td>pdgCode</td>
+        <td>int</td>
+        <td>PDG code</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::StatusCode</td>
+        <td></td>
+        <td>statusCode</td>
+        <td>int</td>
+        <td>Generators status code or physics process. Do not use directly. Use dynamic columns getGenStatusCode() or getProcess()</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::Flags</td>
+        <td></td>
+        <td>flags</td>
+        <td>uint8_t</td>
+        <td>ALICE specific flags, see MCParticleFlags. Do not use directly. Use the dynamic columns, e.g. producedByGenerator()</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::MothersIds</td>
+        <td>GI</td>
+        <td></td>
+        <td>?</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::DaughtersIdSlice</td>
+        <td>GI</td>
+        <td></td>
+        <td>?</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::Weight</td>
+        <td></td>
+        <td>weight</td>
+        <td>float</td>
+        <td>MC weight</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::Px</td>
+        <td></td>
+        <td>px</td>
+        <td>float</td>
+        <td>Momentum in x in GeV/c</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::Py</td>
+        <td></td>
+        <td>py</td>
+        <td>float</td>
+        <td>Momentum in y in GeV/c</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::Pz</td>
+        <td></td>
+        <td>pz</td>
+        <td>float</td>
+        <td>Momentum in z in GeV/c</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::E</td>
+        <td></td>
+        <td>e</td>
+        <td>float</td>
+        <td>Energy</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::Vx</td>
+        <td></td>
+        <td>vx</td>
+        <td>float</td>
+        <td>X production vertex in cm</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::Vy</td>
+        <td></td>
+        <td>vy</td>
+        <td>float</td>
+        <td>Y production vertex in cm</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::Vz</td>
+        <td></td>
+        <td>vz</td>
+        <td>float</td>
+        <td>Z production vertex in cm</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::Vt</td>
+        <td></td>
+        <td>vt</td>
+        <td>float</td>
+        <td>Production time</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::ProducedByGenerator</td>
+        <td>D</td>
+        <td>producedByGenerator</td>
+        <td>bool</td>
+        <td>True if particle produced by the generator (==TMCProcess::kPrimary); False if by the transport code</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::FromBackgroundEvent</td>
+        <td>D</td>
+        <td>fromBackgroundEvent</td>
+        <td>bool</td>
+        <td>Particle from background event</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::GetGenStatusCode</td>
+        <td>D</td>
+        <td>getGenStatusCode</td>
+        <td>int</td>
+        <td>The status code put by the generator, or -1 if a particle produced during transport</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::GetProcess</td>
+        <td>D</td>
+        <td>getProcess</td>
+        <td>int</td>
+        <td>The VMC physics code (as int) that generated this particle (see header TMCProcess.h in ROOT)</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::IsPhysicalPrimary</td>
+        <td>D</td>
+        <td>isPhysicalPrimary</td>
+        <td>bool</td>
+        <td>True if particle is considered a physical primary according to the ALICE definition</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::Phi</td>
+        <td>E</td>
+        <td>phi</td>
+        <td>float</td>
+        <td>Phi in the range [0, 2pi)</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::Eta</td>
+        <td>E</td>
+        <td>eta</td>
+        <td>float</td>
+        <td>Pseudorapidity, conditionally defined to avoid FPEs</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::Pt</td>
+        <td>E</td>
+        <td>pt</td>
+        <td>float</td>
+        <td>Transverse momentum in GeV/c</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::P</td>
+        <td>E</td>
+        <td>p</td>
+        <td>float</td>
+        <td>Total momentum in GeV/c</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::Y</td>
+        <td>E</td>
+        <td>y</td>
+        <td>float</td>
+        <td>Particle rapidity, conditionally defined to avoid FPEs</td>
+      </tr>
+    </table>
+  </div>
+
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::StoredMcParticles_000</button>
+  <div class="panel">
+    <div>
+       MC particle table, version 000
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev/Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::soa::Index</td>
+        <td>GI</td>
+        <td>globalIndex</td>
+        <td>int64_t</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::McCollisionId</td>
+        <td>I</td>
+        <td>mcCollisionId</td>
+        <td>int32</td>
+        <td>MC collision of this particle</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::PdgCode</td>
+        <td></td>
+        <td>pdgCode</td>
+        <td>int</td>
+        <td>PDG code</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::StatusCode</td>
+        <td></td>
+        <td>statusCode</td>
+        <td>int</td>
+        <td>Generators status code or physics process. Do not use directly. Use dynamic columns getGenStatusCode() or getProcess()</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::Flags</td>
+        <td></td>
+        <td>flags</td>
+        <td>uint8_t</td>
+        <td>ALICE specific flags, see MCParticleFlags. Do not use directly. Use the dynamic columns, e.g. producedByGenerator()</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::Mother0Id</td>
+        <td>SI</td>
+        <td>mother0Id</td>
+        <td>int</td>
+        <td>Track index of the first mother</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::Mother1Id</td>
+        <td>SI</td>
+        <td>mother1Id</td>
+        <td>int</td>
+        <td>Track index of the last mother</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::Daughter0Id</td>
+        <td>SI</td>
+        <td>daughter0Id</td>
+        <td>int</td>
+        <td>Track index of the first daugther</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::Daughter1Id</td>
+        <td>SI</td>
+        <td>daughter1Id</td>
+        <td>int</td>
+        <td>Track index of the last daugther</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::Weight</td>
+        <td></td>
+        <td>weight</td>
+        <td>float</td>
+        <td>MC weight</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::Px</td>
+        <td></td>
+        <td>px</td>
+        <td>float</td>
+        <td>Momentum in x in GeV/c</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::Py</td>
+        <td></td>
+        <td>py</td>
+        <td>float</td>
+        <td>Momentum in y in GeV/c</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::Pz</td>
+        <td></td>
+        <td>pz</td>
+        <td>float</td>
+        <td>Momentum in z in GeV/c</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::E</td>
+        <td></td>
+        <td>e</td>
+        <td>float</td>
+        <td>Energy</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::Vx</td>
+        <td></td>
+        <td>vx</td>
+        <td>float</td>
+        <td>X production vertex in cm</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::Vy</td>
+        <td></td>
+        <td>vy</td>
+        <td>float</td>
+        <td>Y production vertex in cm</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::Vz</td>
+        <td></td>
+        <td>vz</td>
+        <td>float</td>
+        <td>Z production vertex in cm</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::Vt</td>
+        <td></td>
+        <td>vt</td>
+        <td>float</td>
+        <td>Production time</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::ProducedByGenerator</td>
+        <td>D</td>
+        <td>producedByGenerator</td>
+        <td>bool</td>
+        <td>True if particle produced by the generator (==TMCProcess::kPrimary); False if by the transport code</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::FromBackgroundEvent</td>
+        <td>D</td>
+        <td>fromBackgroundEvent</td>
+        <td>bool</td>
+        <td>Particle from background event</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::GetGenStatusCode</td>
+        <td>D</td>
+        <td>getGenStatusCode</td>
+        <td>int</td>
+        <td>The status code put by the generator, or -1 if a particle produced during transport</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::GetProcess</td>
+        <td>D</td>
+        <td>getProcess</td>
+        <td>int</td>
+        <td>The VMC physics code (as int) that generated this particle (see header TMCProcess.h in ROOT)</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::IsPhysicalPrimary</td>
+        <td>D</td>
+        <td>isPhysicalPrimary</td>
+        <td>bool</td>
+        <td>True if particle is considered a physical primary according to the ALICE definition</td>
+      </tr>
+    </table>
+  </div>
+
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::StoredMcParticles_001</button>
+  <div class="panel">
+    <div>
+       MC particle table, version 001
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev/Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::soa::Index</td>
+        <td>GI</td>
+        <td>globalIndex</td>
+        <td>int64_t</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::McCollisionId</td>
+        <td>I</td>
+        <td>mcCollisionId</td>
+        <td>int32</td>
+        <td>MC collision of this particle</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::PdgCode</td>
+        <td></td>
+        <td>pdgCode</td>
+        <td>int</td>
+        <td>PDG code</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::StatusCode</td>
+        <td></td>
+        <td>statusCode</td>
+        <td>int</td>
+        <td>Generators status code or physics process. Do not use directly. Use dynamic columns getGenStatusCode() or getProcess()</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::Flags</td>
+        <td></td>
+        <td>flags</td>
+        <td>uint8_t</td>
+        <td>ALICE specific flags, see MCParticleFlags. Do not use directly. Use the dynamic columns, e.g. producedByGenerator()</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::MothersIds</td>
+        <td>GI</td>
+        <td></td>
+        <td>?</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::DaughtersIdSlice</td>
+        <td>GI</td>
+        <td></td>
+        <td>?</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::Weight</td>
+        <td></td>
+        <td>weight</td>
+        <td>float</td>
+        <td>MC weight</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::Px</td>
+        <td></td>
+        <td>px</td>
+        <td>float</td>
+        <td>Momentum in x in GeV/c</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::Py</td>
+        <td></td>
+        <td>py</td>
+        <td>float</td>
+        <td>Momentum in y in GeV/c</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::Pz</td>
+        <td></td>
+        <td>pz</td>
+        <td>float</td>
+        <td>Momentum in z in GeV/c</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::E</td>
+        <td></td>
+        <td>e</td>
+        <td>float</td>
+        <td>Energy</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::Vx</td>
+        <td></td>
+        <td>vx</td>
+        <td>float</td>
+        <td>X production vertex in cm</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::Vy</td>
+        <td></td>
+        <td>vy</td>
+        <td>float</td>
+        <td>Y production vertex in cm</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::Vz</td>
+        <td></td>
+        <td>vz</td>
+        <td>float</td>
+        <td>Z production vertex in cm</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::Vt</td>
+        <td></td>
+        <td>vt</td>
+        <td>float</td>
+        <td>Production time</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::ProducedByGenerator</td>
+        <td>D</td>
+        <td>producedByGenerator</td>
+        <td>bool</td>
+        <td>True if particle produced by the generator (==TMCProcess::kPrimary); False if by the transport code</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::FromBackgroundEvent</td>
+        <td>D</td>
+        <td>fromBackgroundEvent</td>
+        <td>bool</td>
+        <td>Particle from background event</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::GetGenStatusCode</td>
+        <td>D</td>
+        <td>getGenStatusCode</td>
+        <td>int</td>
+        <td>The status code put by the generator, or -1 if a particle produced during transport</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::GetProcess</td>
+        <td>D</td>
+        <td>getProcess</td>
+        <td>int</td>
+        <td>The VMC physics code (as int) that generated this particle (see header TMCProcess.h in ROOT)</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::IsPhysicalPrimary</td>
+        <td>D</td>
+        <td>isPhysicalPrimary</td>
+        <td>bool</td>
+        <td>True if particle is considered a physical primary according to the ALICE definition</td>
       </tr>
     </table>
   </div>
@@ -4082,335 +5192,6 @@ For better overview the tables are grouped into the following categories: | [Gen
 <h4 id="cat_Others">Others</h4>
 <div>
 
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::HMPIDs</button>
-  <div class="panel">
-    <div>
-       HMPID information
-    </div>
-    <div>
-      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev/Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
-    </div>
-    <div>Is used in:
-      <ul>
-        <li>o2::aod::HMPID = o2::aod::HMPIDs::iterator</li>
-      </ul>
-    </div>
-    <table class=DataModel>
-      <tr>
-        <th>Name</th>
-        <th></th>
-        <th>Getter</th>
-        <th>Type</th>
-        <th>Comment</th>
-      </tr>
-      <tr>
-        <td>o2::soa::Index</td>
-        <td>GI</td>
-        <td>globalIndex</td>
-        <td>int64_t</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::hmpid::TrackId</td>
-        <td>I</td>
-        <td>trackId</td>
-        <td>int32</td>
-        <td>Track index</td>
-      </tr>
-      <tr>
-        <td>o2::aod::hmpid::HMPIDSignal</td>
-        <td></td>
-        <td>hmpidSignal</td>
-        <td>float</td>
-        <td>Signal of the HMPID</td>
-      </tr>
-      <tr>
-        <td>o2::aod::hmpid::HMPIDDistance</td>
-        <td></td>
-        <td>hmpidDistance</td>
-        <td>float</td>
-        <td>Distance between the matched HMPID signal and the propagated track</td>
-      </tr>
-      <tr>
-        <td>o2::aod::hmpid::HMPIDNPhotons</td>
-        <td></td>
-        <td>hmpidNPhotons</td>
-        <td>short</td>
-        <td>Number of detected photons in HMPID</td>
-      </tr>
-      <tr>
-        <td>o2::aod::hmpid::HMPIDQMip</td>
-        <td></td>
-        <td>hmpidQMip</td>
-        <td>short</td>
-        <td>Collected charge in the HMPID</td>
-      </tr>
-    </table>
-  </div>
-
-
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::FDDs</button>
-  <div class="panel">
-    <div>
-
-    </div>
-    <div>
-      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev/Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
-    </div>
-    <div>Is used in:
-      <ul>
-        <li>o2::aod::FDD = o2::aod::FDDs::iterator</li>
-      </ul>
-    </div>
-    <table class=DataModel>
-      <tr>
-        <th>Name</th>
-        <th></th>
-        <th>Getter</th>
-        <th>Type</th>
-        <th>Comment</th>
-      </tr>
-      <tr>
-        <td>o2::soa::Index</td>
-        <td>GI</td>
-        <td>globalIndex</td>
-        <td>int64_t</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::fdd::BCId</td>
-        <td>I</td>
-        <td>bcId</td>
-        <td>int32</td>
-        <td>BC index</td>
-      </tr>
-      <tr>
-        <td>o2::aod::fdd::AmplitudeA</td>
-        <td></td>
-        <td>amplitudeA</td>
-        <td>float[4]</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::fdd::AmplitudeC</td>
-        <td></td>
-        <td>amplitudeC</td>
-        <td>float[4]</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::fdd::TimeA</td>
-        <td></td>
-        <td>timeA</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::fdd::TimeC</td>
-        <td></td>
-        <td>timeC</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::fdd::TriggerMask</td>
-        <td></td>
-        <td>triggerMask</td>
-        <td>uint8_t</td>
-        <td></td>
-      </tr>
-    </table>
-  </div>
-
-
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::V0s_000</button>
-  <div class="panel">
-    <div>
-       Run 2 V0 table (version 000)
-    </div>
-    <div>
-      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev/Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
-    </div>
-    <table class=DataModel>
-      <tr>
-        <th>Name</th>
-        <th></th>
-        <th>Getter</th>
-        <th>Type</th>
-        <th>Comment</th>
-      </tr>
-      <tr>
-        <td>o2::soa::Index</td>
-        <td>GI</td>
-        <td>globalIndex</td>
-        <td>int64_t</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::v0::PosTrackId</td>
-        <td>I</td>
-        <td>posTrackId</td>
-        <td>int</td>
-        <td>Positive track</td>
-      </tr>
-      <tr>
-        <td>o2::aod::v0::NegTrackId</td>
-        <td>I</td>
-        <td>negTrackId</td>
-        <td>int</td>
-        <td>Negative track</td>
-      </tr>
-    </table>
-  </div>
-
-
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::V0s_001</button>
-  <div class="panel">
-    <div>
-       Run 3 V0 table (version 001)
-    </div>
-    <div>
-      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev/Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
-    </div>
-    <div>Is used in:
-      <ul>
-        <li>o2::aod::V0s = o2::aod::V0s_001</li>
-      </ul>
-    </div>
-    <table class=DataModel>
-      <tr>
-        <th>Name</th>
-        <th></th>
-        <th>Getter</th>
-        <th>Type</th>
-        <th>Comment</th>
-      </tr>
-      <tr>
-        <td>o2::soa::Index</td>
-        <td>GI</td>
-        <td>globalIndex</td>
-        <td>int64_t</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::v0::CollisionId</td>
-        <td>I</td>
-        <td>collisionId</td>
-        <td>int32</td>
-        <td>Collision index</td>
-      </tr>
-      <tr>
-        <td>o2::aod::v0::PosTrackId</td>
-        <td>I</td>
-        <td>posTrackId</td>
-        <td>int</td>
-        <td>Positive track</td>
-      </tr>
-      <tr>
-        <td>o2::aod::v0::NegTrackId</td>
-        <td>I</td>
-        <td>negTrackId</td>
-        <td>int</td>
-        <td>Negative track</td>
-      </tr>
-    </table>
-  </div>
-
-
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::Cascades_000</button>
-  <div class="panel">
-    <div>
-       Run 2 cascade table
-    </div>
-    <div>
-      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev/Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
-    </div>
-    <table class=DataModel>
-      <tr>
-        <th>Name</th>
-        <th></th>
-        <th>Getter</th>
-        <th>Type</th>
-        <th>Comment</th>
-      </tr>
-      <tr>
-        <td>o2::soa::Index</td>
-        <td>GI</td>
-        <td>globalIndex</td>
-        <td>int64_t</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::cascade::V0Id</td>
-        <td>I</td>
-        <td>v0Id</td>
-        <td>int32</td>
-        <td>V0 index</td>
-      </tr>
-      <tr>
-        <td>o2::aod::cascade::BachelorId</td>
-        <td>I</td>
-        <td>bachelorId</td>
-        <td>int</td>
-        <td>Bachelor track index</td>
-      </tr>
-    </table>
-  </div>
-
-
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::Cascades_001</button>
-  <div class="panel">
-    <div>
-       Run 3 cascade table
-    </div>
-    <div>
-      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev/Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
-    </div>
-    <div>Is used in:
-      <ul>
-        <li>o2::aod::Cascades = o2::aod::Cascades_001</li>
-      </ul>
-    </div>
-    <table class=DataModel>
-      <tr>
-        <th>Name</th>
-        <th></th>
-        <th>Getter</th>
-        <th>Type</th>
-        <th>Comment</th>
-      </tr>
-      <tr>
-        <td>o2::soa::Index</td>
-        <td>GI</td>
-        <td>globalIndex</td>
-        <td>int64_t</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::cascade::CollisionId</td>
-        <td>I</td>
-        <td>collisionId</td>
-        <td>int32</td>
-        <td>Collision index</td>
-      </tr>
-      <tr>
-        <td>o2::aod::cascade::V0Id</td>
-        <td>I</td>
-        <td>v0Id</td>
-        <td>int32</td>
-        <td>V0 index</td>
-      </tr>
-      <tr>
-        <td>o2::aod::cascade::BachelorId</td>
-        <td>I</td>
-        <td>bachelorId</td>
-        <td>int</td>
-        <td>Bachelor track index</td>
-      </tr>
-    </table>
-  </div>
-
-
   <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::Origins</button>
   <div class="panel">
     <div>
@@ -4445,787 +5226,6 @@ For better overview the tables are grouped into the following categories: | [Gen
         <td>dataframeID</td>
         <td>uint64_t</td>
         <td>Data frame ID (what is usually found in directory name in the AO2D.root, i.e. DF_XXX)</td>
-      </tr>
-    </table>
-  </div>
-
-
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::StoredMcParticles_000</button>
-  <div class="panel">
-    <div>
-       MC particle table, version 000
-    </div>
-    <div>
-      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev/Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
-    </div>
-    <table class=DataModel>
-      <tr>
-        <th>Name</th>
-        <th></th>
-        <th>Getter</th>
-        <th>Type</th>
-        <th>Comment</th>
-      </tr>
-      <tr>
-        <td>o2::soa::Index</td>
-        <td>GI</td>
-        <td>globalIndex</td>
-        <td>int64_t</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::mcparticle::McCollisionId</td>
-        <td>I</td>
-        <td>mcCollisionId</td>
-        <td>int32</td>
-        <td>MC collision of this particle</td>
-      </tr>
-      <tr>
-        <td>o2::aod::mcparticle::PdgCode</td>
-        <td></td>
-        <td>pdgCode</td>
-        <td>int</td>
-        <td>PDG code</td>
-      </tr>
-      <tr>
-        <td>o2::aod::mcparticle::StatusCode</td>
-        <td></td>
-        <td>statusCode</td>
-        <td>int</td>
-        <td>Generators status code or physics process. Do not use directly. Use dynamic columns getGenStatusCode() or getProcess()</td>
-      </tr>
-      <tr>
-        <td>o2::aod::mcparticle::Flags</td>
-        <td></td>
-        <td>flags</td>
-        <td>uint8_t</td>
-        <td>ALICE specific flags, see MCParticleFlags. Do not use directly. Use the dynamic columns, e.g. producedByGenerator()</td>
-      </tr>
-      <tr>
-        <td>o2::aod::mcparticle::Mother0Id</td>
-        <td>SI</td>
-        <td>mother0Id</td>
-        <td>int</td>
-        <td>Track index of the first mother</td>
-      </tr>
-      <tr>
-        <td>o2::aod::mcparticle::Mother1Id</td>
-        <td>SI</td>
-        <td>mother1Id</td>
-        <td>int</td>
-        <td>Track index of the last mother</td>
-      </tr>
-      <tr>
-        <td>o2::aod::mcparticle::Daughter0Id</td>
-        <td>SI</td>
-        <td>daughter0Id</td>
-        <td>int</td>
-        <td>Track index of the first daugther</td>
-      </tr>
-      <tr>
-        <td>o2::aod::mcparticle::Daughter1Id</td>
-        <td>SI</td>
-        <td>daughter1Id</td>
-        <td>int</td>
-        <td>Track index of the last daugther</td>
-      </tr>
-      <tr>
-        <td>o2::aod::mcparticle::Weight</td>
-        <td></td>
-        <td>weight</td>
-        <td>float</td>
-        <td>MC weight</td>
-      </tr>
-      <tr>
-        <td>o2::aod::mcparticle::Px</td>
-        <td></td>
-        <td>px</td>
-        <td>float</td>
-        <td>Momentum in x in GeV/c</td>
-      </tr>
-      <tr>
-        <td>o2::aod::mcparticle::Py</td>
-        <td></td>
-        <td>py</td>
-        <td>float</td>
-        <td>Momentum in y in GeV/c</td>
-      </tr>
-      <tr>
-        <td>o2::aod::mcparticle::Pz</td>
-        <td></td>
-        <td>pz</td>
-        <td>float</td>
-        <td>Momentum in z in GeV/c</td>
-      </tr>
-      <tr>
-        <td>o2::aod::mcparticle::E</td>
-        <td></td>
-        <td>e</td>
-        <td>float</td>
-        <td>Energy</td>
-      </tr>
-      <tr>
-        <td>o2::aod::mcparticle::Vx</td>
-        <td></td>
-        <td>vx</td>
-        <td>float</td>
-        <td>X production vertex in cm</td>
-      </tr>
-      <tr>
-        <td>o2::aod::mcparticle::Vy</td>
-        <td></td>
-        <td>vy</td>
-        <td>float</td>
-        <td>Y production vertex in cm</td>
-      </tr>
-      <tr>
-        <td>o2::aod::mcparticle::Vz</td>
-        <td></td>
-        <td>vz</td>
-        <td>float</td>
-        <td>Z production vertex in cm</td>
-      </tr>
-      <tr>
-        <td>o2::aod::mcparticle::Vt</td>
-        <td></td>
-        <td>vt</td>
-        <td>float</td>
-        <td>Production time</td>
-      </tr>
-      <tr>
-        <td>o2::aod::mcparticle::ProducedByGenerator</td>
-        <td>D</td>
-        <td>producedByGenerator</td>
-        <td>bool</td>
-        <td>True if particle produced by the generator (==TMCProcess::kPrimary); False if by the transport code</td>
-      </tr>
-      <tr>
-        <td>o2::aod::mcparticle::FromBackgroundEvent</td>
-        <td>D</td>
-        <td>fromBackgroundEvent</td>
-        <td>bool</td>
-        <td>Particle from background event</td>
-      </tr>
-      <tr>
-        <td>o2::aod::mcparticle::GetGenStatusCode</td>
-        <td>D</td>
-        <td>getGenStatusCode</td>
-        <td>int</td>
-        <td>The status code put by the generator, or -1 if a particle produced during transport</td>
-      </tr>
-      <tr>
-        <td>o2::aod::mcparticle::GetProcess</td>
-        <td>D</td>
-        <td>getProcess</td>
-        <td>int</td>
-        <td>The VMC physics code (as int) that generated this particle (see header TMCProcess.h in ROOT)</td>
-      </tr>
-      <tr>
-        <td>o2::aod::mcparticle::IsPhysicalPrimary</td>
-        <td>D</td>
-        <td>isPhysicalPrimary</td>
-        <td>bool</td>
-        <td>True if particle is considered a physical primary according to the ALICE definition</td>
-      </tr>
-    </table>
-  </div>
-
-
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::StoredMcParticles_001</button>
-  <div class="panel">
-    <div>
-       MC particle table, version 001
-    </div>
-    <div>
-      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev/Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
-    </div>
-    <table class=DataModel>
-      <tr>
-        <th>Name</th>
-        <th></th>
-        <th>Getter</th>
-        <th>Type</th>
-        <th>Comment</th>
-      </tr>
-      <tr>
-        <td>o2::soa::Index</td>
-        <td>GI</td>
-        <td>globalIndex</td>
-        <td>int64_t</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::mcparticle::McCollisionId</td>
-        <td>I</td>
-        <td>mcCollisionId</td>
-        <td>int32</td>
-        <td>MC collision of this particle</td>
-      </tr>
-      <tr>
-        <td>o2::aod::mcparticle::PdgCode</td>
-        <td></td>
-        <td>pdgCode</td>
-        <td>int</td>
-        <td>PDG code</td>
-      </tr>
-      <tr>
-        <td>o2::aod::mcparticle::StatusCode</td>
-        <td></td>
-        <td>statusCode</td>
-        <td>int</td>
-        <td>Generators status code or physics process. Do not use directly. Use dynamic columns getGenStatusCode() or getProcess()</td>
-      </tr>
-      <tr>
-        <td>o2::aod::mcparticle::Flags</td>
-        <td></td>
-        <td>flags</td>
-        <td>uint8_t</td>
-        <td>ALICE specific flags, see MCParticleFlags. Do not use directly. Use the dynamic columns, e.g. producedByGenerator()</td>
-      </tr>
-      <tr>
-        <td>o2::aod::mcparticle::MothersIds</td>
-        <td>GI</td>
-        <td></td>
-        <td>?</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::mcparticle::DaughtersIdSlice</td>
-        <td>GI</td>
-        <td></td>
-        <td>?</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::mcparticle::Weight</td>
-        <td></td>
-        <td>weight</td>
-        <td>float</td>
-        <td>MC weight</td>
-      </tr>
-      <tr>
-        <td>o2::aod::mcparticle::Px</td>
-        <td></td>
-        <td>px</td>
-        <td>float</td>
-        <td>Momentum in x in GeV/c</td>
-      </tr>
-      <tr>
-        <td>o2::aod::mcparticle::Py</td>
-        <td></td>
-        <td>py</td>
-        <td>float</td>
-        <td>Momentum in y in GeV/c</td>
-      </tr>
-      <tr>
-        <td>o2::aod::mcparticle::Pz</td>
-        <td></td>
-        <td>pz</td>
-        <td>float</td>
-        <td>Momentum in z in GeV/c</td>
-      </tr>
-      <tr>
-        <td>o2::aod::mcparticle::E</td>
-        <td></td>
-        <td>e</td>
-        <td>float</td>
-        <td>Energy</td>
-      </tr>
-      <tr>
-        <td>o2::aod::mcparticle::Vx</td>
-        <td></td>
-        <td>vx</td>
-        <td>float</td>
-        <td>X production vertex in cm</td>
-      </tr>
-      <tr>
-        <td>o2::aod::mcparticle::Vy</td>
-        <td></td>
-        <td>vy</td>
-        <td>float</td>
-        <td>Y production vertex in cm</td>
-      </tr>
-      <tr>
-        <td>o2::aod::mcparticle::Vz</td>
-        <td></td>
-        <td>vz</td>
-        <td>float</td>
-        <td>Z production vertex in cm</td>
-      </tr>
-      <tr>
-        <td>o2::aod::mcparticle::Vt</td>
-        <td></td>
-        <td>vt</td>
-        <td>float</td>
-        <td>Production time</td>
-      </tr>
-      <tr>
-        <td>o2::aod::mcparticle::ProducedByGenerator</td>
-        <td>D</td>
-        <td>producedByGenerator</td>
-        <td>bool</td>
-        <td>True if particle produced by the generator (==TMCProcess::kPrimary); False if by the transport code</td>
-      </tr>
-      <tr>
-        <td>o2::aod::mcparticle::FromBackgroundEvent</td>
-        <td>D</td>
-        <td>fromBackgroundEvent</td>
-        <td>bool</td>
-        <td>Particle from background event</td>
-      </tr>
-      <tr>
-        <td>o2::aod::mcparticle::GetGenStatusCode</td>
-        <td>D</td>
-        <td>getGenStatusCode</td>
-        <td>int</td>
-        <td>The status code put by the generator, or -1 if a particle produced during transport</td>
-      </tr>
-      <tr>
-        <td>o2::aod::mcparticle::GetProcess</td>
-        <td>D</td>
-        <td>getProcess</td>
-        <td>int</td>
-        <td>The VMC physics code (as int) that generated this particle (see header TMCProcess.h in ROOT)</td>
-      </tr>
-      <tr>
-        <td>o2::aod::mcparticle::IsPhysicalPrimary</td>
-        <td>D</td>
-        <td>isPhysicalPrimary</td>
-        <td>bool</td>
-        <td>True if particle is considered a physical primary according to the ALICE definition</td>
-      </tr>
-    </table>
-  </div>
-
-
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::McParticles_000 (E)</button>
-  <div class="panel">
-    <div>
-       Basic MC particle properties
-    </div>
-    <div>
-      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev/Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
-    </div>
-    <div>Extends:
-      <ul>
-         o2::aod::StoredMcParticles_000
-      </ul>
-    </div>
-    <table class=DataModel>
-      <tr>
-        <th>Name</th>
-        <th></th>
-        <th>Getter</th>
-        <th>Type</th>
-        <th>Comment</th>
-      </tr>
-      <tr>
-        <td>o2::soa::Index</td>
-        <td>GI</td>
-        <td>globalIndex</td>
-        <td>int64_t</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::mcparticle::McCollisionId</td>
-        <td>I</td>
-        <td>mcCollisionId</td>
-        <td>int32</td>
-        <td>MC collision of this particle</td>
-      </tr>
-      <tr>
-        <td>o2::aod::mcparticle::PdgCode</td>
-        <td></td>
-        <td>pdgCode</td>
-        <td>int</td>
-        <td>PDG code</td>
-      </tr>
-      <tr>
-        <td>o2::aod::mcparticle::StatusCode</td>
-        <td></td>
-        <td>statusCode</td>
-        <td>int</td>
-        <td>Generators status code or physics process. Do not use directly. Use dynamic columns getGenStatusCode() or getProcess()</td>
-      </tr>
-      <tr>
-        <td>o2::aod::mcparticle::Flags</td>
-        <td></td>
-        <td>flags</td>
-        <td>uint8_t</td>
-        <td>ALICE specific flags, see MCParticleFlags. Do not use directly. Use the dynamic columns, e.g. producedByGenerator()</td>
-      </tr>
-      <tr>
-        <td>o2::aod::mcparticle::Mother0Id</td>
-        <td>SI</td>
-        <td>mother0Id</td>
-        <td>int</td>
-        <td>Track index of the first mother</td>
-      </tr>
-      <tr>
-        <td>o2::aod::mcparticle::Mother1Id</td>
-        <td>SI</td>
-        <td>mother1Id</td>
-        <td>int</td>
-        <td>Track index of the last mother</td>
-      </tr>
-      <tr>
-        <td>o2::aod::mcparticle::Daughter0Id</td>
-        <td>SI</td>
-        <td>daughter0Id</td>
-        <td>int</td>
-        <td>Track index of the first daugther</td>
-      </tr>
-      <tr>
-        <td>o2::aod::mcparticle::Daughter1Id</td>
-        <td>SI</td>
-        <td>daughter1Id</td>
-        <td>int</td>
-        <td>Track index of the last daugther</td>
-      </tr>
-      <tr>
-        <td>o2::aod::mcparticle::Weight</td>
-        <td></td>
-        <td>weight</td>
-        <td>float</td>
-        <td>MC weight</td>
-      </tr>
-      <tr>
-        <td>o2::aod::mcparticle::Px</td>
-        <td></td>
-        <td>px</td>
-        <td>float</td>
-        <td>Momentum in x in GeV/c</td>
-      </tr>
-      <tr>
-        <td>o2::aod::mcparticle::Py</td>
-        <td></td>
-        <td>py</td>
-        <td>float</td>
-        <td>Momentum in y in GeV/c</td>
-      </tr>
-      <tr>
-        <td>o2::aod::mcparticle::Pz</td>
-        <td></td>
-        <td>pz</td>
-        <td>float</td>
-        <td>Momentum in z in GeV/c</td>
-      </tr>
-      <tr>
-        <td>o2::aod::mcparticle::E</td>
-        <td></td>
-        <td>e</td>
-        <td>float</td>
-        <td>Energy</td>
-      </tr>
-      <tr>
-        <td>o2::aod::mcparticle::Vx</td>
-        <td></td>
-        <td>vx</td>
-        <td>float</td>
-        <td>X production vertex in cm</td>
-      </tr>
-      <tr>
-        <td>o2::aod::mcparticle::Vy</td>
-        <td></td>
-        <td>vy</td>
-        <td>float</td>
-        <td>Y production vertex in cm</td>
-      </tr>
-      <tr>
-        <td>o2::aod::mcparticle::Vz</td>
-        <td></td>
-        <td>vz</td>
-        <td>float</td>
-        <td>Z production vertex in cm</td>
-      </tr>
-      <tr>
-        <td>o2::aod::mcparticle::Vt</td>
-        <td></td>
-        <td>vt</td>
-        <td>float</td>
-        <td>Production time</td>
-      </tr>
-      <tr>
-        <td>o2::aod::mcparticle::ProducedByGenerator</td>
-        <td>D</td>
-        <td>producedByGenerator</td>
-        <td>bool</td>
-        <td>True if particle produced by the generator (==TMCProcess::kPrimary); False if by the transport code</td>
-      </tr>
-      <tr>
-        <td>o2::aod::mcparticle::FromBackgroundEvent</td>
-        <td>D</td>
-        <td>fromBackgroundEvent</td>
-        <td>bool</td>
-        <td>Particle from background event</td>
-      </tr>
-      <tr>
-        <td>o2::aod::mcparticle::GetGenStatusCode</td>
-        <td>D</td>
-        <td>getGenStatusCode</td>
-        <td>int</td>
-        <td>The status code put by the generator, or -1 if a particle produced during transport</td>
-      </tr>
-      <tr>
-        <td>o2::aod::mcparticle::GetProcess</td>
-        <td>D</td>
-        <td>getProcess</td>
-        <td>int</td>
-        <td>The VMC physics code (as int) that generated this particle (see header TMCProcess.h in ROOT)</td>
-      </tr>
-      <tr>
-        <td>o2::aod::mcparticle::IsPhysicalPrimary</td>
-        <td>D</td>
-        <td>isPhysicalPrimary</td>
-        <td>bool</td>
-        <td>True if particle is considered a physical primary according to the ALICE definition</td>
-      </tr>
-      <tr>
-        <td>o2::aod::mcparticle::Phi</td>
-        <td>E</td>
-        <td>phi</td>
-        <td>float</td>
-        <td>Phi in the range [0, 2pi)</td>
-      </tr>
-      <tr>
-        <td>o2::aod::mcparticle::Eta</td>
-        <td>E</td>
-        <td>eta</td>
-        <td>float</td>
-        <td>Pseudorapidity, conditionally defined to avoid FPEs</td>
-      </tr>
-      <tr>
-        <td>o2::aod::mcparticle::Pt</td>
-        <td>E</td>
-        <td>pt</td>
-        <td>float</td>
-        <td>Transverse momentum in GeV/c</td>
-      </tr>
-      <tr>
-        <td>o2::aod::mcparticle::P</td>
-        <td>E</td>
-        <td>p</td>
-        <td>float</td>
-        <td>Total momentum in GeV/c</td>
-      </tr>
-      <tr>
-        <td>o2::aod::mcparticle::Y</td>
-        <td>E</td>
-        <td>y</td>
-        <td>float</td>
-        <td>Particle rapidity, conditionally defined to avoid FPEs</td>
-      </tr>
-    </table>
-  </div>
-
-
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::McParticles_001 (E)</button>
-  <div class="panel">
-    <div>
-       Basic MC particle properties
-    </div>
-    <div>
-      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev/Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
-    </div>
-    <div>Extends:
-      <ul>
-         o2::aod::StoredMcParticles_001
-      </ul>
-    </div>
-    <div>Is used in:
-      <ul>
-        <li>o2::aod::McParticles = o2::aod::McParticles_001</li>
-      </ul>
-    </div>
-    <table class=DataModel>
-      <tr>
-        <th>Name</th>
-        <th></th>
-        <th>Getter</th>
-        <th>Type</th>
-        <th>Comment</th>
-      </tr>
-      <tr>
-        <td>o2::soa::Index</td>
-        <td>GI</td>
-        <td>globalIndex</td>
-        <td>int64_t</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::mcparticle::McCollisionId</td>
-        <td>I</td>
-        <td>mcCollisionId</td>
-        <td>int32</td>
-        <td>MC collision of this particle</td>
-      </tr>
-      <tr>
-        <td>o2::aod::mcparticle::PdgCode</td>
-        <td></td>
-        <td>pdgCode</td>
-        <td>int</td>
-        <td>PDG code</td>
-      </tr>
-      <tr>
-        <td>o2::aod::mcparticle::StatusCode</td>
-        <td></td>
-        <td>statusCode</td>
-        <td>int</td>
-        <td>Generators status code or physics process. Do not use directly. Use dynamic columns getGenStatusCode() or getProcess()</td>
-      </tr>
-      <tr>
-        <td>o2::aod::mcparticle::Flags</td>
-        <td></td>
-        <td>flags</td>
-        <td>uint8_t</td>
-        <td>ALICE specific flags, see MCParticleFlags. Do not use directly. Use the dynamic columns, e.g. producedByGenerator()</td>
-      </tr>
-      <tr>
-        <td>o2::aod::mcparticle::MothersIds</td>
-        <td>GI</td>
-        <td></td>
-        <td>?</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::mcparticle::DaughtersIdSlice</td>
-        <td>GI</td>
-        <td></td>
-        <td>?</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::mcparticle::Weight</td>
-        <td></td>
-        <td>weight</td>
-        <td>float</td>
-        <td>MC weight</td>
-      </tr>
-      <tr>
-        <td>o2::aod::mcparticle::Px</td>
-        <td></td>
-        <td>px</td>
-        <td>float</td>
-        <td>Momentum in x in GeV/c</td>
-      </tr>
-      <tr>
-        <td>o2::aod::mcparticle::Py</td>
-        <td></td>
-        <td>py</td>
-        <td>float</td>
-        <td>Momentum in y in GeV/c</td>
-      </tr>
-      <tr>
-        <td>o2::aod::mcparticle::Pz</td>
-        <td></td>
-        <td>pz</td>
-        <td>float</td>
-        <td>Momentum in z in GeV/c</td>
-      </tr>
-      <tr>
-        <td>o2::aod::mcparticle::E</td>
-        <td></td>
-        <td>e</td>
-        <td>float</td>
-        <td>Energy</td>
-      </tr>
-      <tr>
-        <td>o2::aod::mcparticle::Vx</td>
-        <td></td>
-        <td>vx</td>
-        <td>float</td>
-        <td>X production vertex in cm</td>
-      </tr>
-      <tr>
-        <td>o2::aod::mcparticle::Vy</td>
-        <td></td>
-        <td>vy</td>
-        <td>float</td>
-        <td>Y production vertex in cm</td>
-      </tr>
-      <tr>
-        <td>o2::aod::mcparticle::Vz</td>
-        <td></td>
-        <td>vz</td>
-        <td>float</td>
-        <td>Z production vertex in cm</td>
-      </tr>
-      <tr>
-        <td>o2::aod::mcparticle::Vt</td>
-        <td></td>
-        <td>vt</td>
-        <td>float</td>
-        <td>Production time</td>
-      </tr>
-      <tr>
-        <td>o2::aod::mcparticle::ProducedByGenerator</td>
-        <td>D</td>
-        <td>producedByGenerator</td>
-        <td>bool</td>
-        <td>True if particle produced by the generator (==TMCProcess::kPrimary); False if by the transport code</td>
-      </tr>
-      <tr>
-        <td>o2::aod::mcparticle::FromBackgroundEvent</td>
-        <td>D</td>
-        <td>fromBackgroundEvent</td>
-        <td>bool</td>
-        <td>Particle from background event</td>
-      </tr>
-      <tr>
-        <td>o2::aod::mcparticle::GetGenStatusCode</td>
-        <td>D</td>
-        <td>getGenStatusCode</td>
-        <td>int</td>
-        <td>The status code put by the generator, or -1 if a particle produced during transport</td>
-      </tr>
-      <tr>
-        <td>o2::aod::mcparticle::GetProcess</td>
-        <td>D</td>
-        <td>getProcess</td>
-        <td>int</td>
-        <td>The VMC physics code (as int) that generated this particle (see header TMCProcess.h in ROOT)</td>
-      </tr>
-      <tr>
-        <td>o2::aod::mcparticle::IsPhysicalPrimary</td>
-        <td>D</td>
-        <td>isPhysicalPrimary</td>
-        <td>bool</td>
-        <td>True if particle is considered a physical primary according to the ALICE definition</td>
-      </tr>
-      <tr>
-        <td>o2::aod::mcparticle::Phi</td>
-        <td>E</td>
-        <td>phi</td>
-        <td>float</td>
-        <td>Phi in the range [0, 2pi)</td>
-      </tr>
-      <tr>
-        <td>o2::aod::mcparticle::Eta</td>
-        <td>E</td>
-        <td>eta</td>
-        <td>float</td>
-        <td>Pseudorapidity, conditionally defined to avoid FPEs</td>
-      </tr>
-      <tr>
-        <td>o2::aod::mcparticle::Pt</td>
-        <td>E</td>
-        <td>pt</td>
-        <td>float</td>
-        <td>Transverse momentum in GeV/c</td>
-      </tr>
-      <tr>
-        <td>o2::aod::mcparticle::P</td>
-        <td>E</td>
-        <td>p</td>
-        <td>float</td>
-        <td>Total momentum in GeV/c</td>
-      </tr>
-      <tr>
-        <td>o2::aod::mcparticle::Y</td>
-        <td>E</td>
-        <td>y</td>
-        <td>float</td>
-        <td>Particle rapidity, conditionally defined to avoid FPEs</td>
       </tr>
     </table>
   </div>
