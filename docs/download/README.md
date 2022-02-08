@@ -56,5 +56,5 @@ If you need a single input files from a conversion train, please take them from 
 
 * Download the AO2D.root
 
-* You can also click on processing progress and then follow the output directories to download a larger AO2D.root. All this is only suitable for manual downloading of a few files. For everything else see the next item:
+* You can also click on processing progress and then follow the output directories to download a larger AO2D.root. All this is only suitable for manual downloading of a few files. For everything else see the previous item.
 
