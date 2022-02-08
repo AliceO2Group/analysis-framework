@@ -20,10 +20,10 @@ title: Notifications
 ## <a name="datasetChanged"></a>Dataset changed
 
 * Notifies the user that an update has been made to one of the datasets included in his or her analyses. The notification message contains a link to the history of the dataset that has been modified, as well as a link to the analysis this dataset is included in. The update here indicates that:
-  * The name or discription of the dataset has changed
+  * The list of runs to be excluded in a production has been modified
   * The dataset has been staged or unstaged to a target
   * A linked dataset had been added or removed
-  * The automatic composition schedule has been changed
+  * The automatic composition settings have changed, e.g. the schedule
 
 <div align="center">
     <img src="../images/datasetChanged.png" width="90%">
@@ -31,13 +31,13 @@ title: Notifications
 
 ## <a name="datasetActivated"></a>Dataset activated / deactivated
 
-* Notifies the user when a dataset has been successfully activated or deactivated.
+* Notifies the user when a dataset included in his or her analyses has been successfully activated or deactivated.
 
 <div align="center">
     <img src="../images/datasetActivation.png" width="90%">
 </div>
 
-## <a name="productionAdded"></a>Production added or removed
+## <a name="productionAdded"></a>Dataset production added or removed
 
 * For RUN 3 data and MC, the user is informed if the production has been successfully added to or removed from the dataset.
 
@@ -57,9 +57,9 @@ title: Notifications
 
 * For derived data, a notification is sent when a Hyperloop train that produced derived data has been added or removed.
 
-## <a name="runlistUpdated"></a>Runlist updated
+## <a name="runlistUpdated"></a>DPG runlist updated
 
-* The user is informed when a run has been added to or removed from the dataset runlist. This change is usually done by the DPG experts.
+* The user is informed when a run has been added to or removed from the DPG runlist. This change is usually done by the DPG experts.
 
 <div align="center">
   <img src="../images/runlistUpdated.png" width="90%">
@@ -76,6 +76,10 @@ title: Notifications
 ## <a name="infoWagonDisabled"></a>Disabled wagon
 
 Informs the user when a wagon has been disabled in different circumstances: 
+
+  * When the dataset the wagon was enabled for is deactivated.
+  
+  * When the directories corresponding to a dataset production (job types or train runs) are not found.
 
   * Local tests are cleaned if the wagons are not submitted in a period of 4 weeks. The user is notified that the respective wagons are automatically disabled.
 
