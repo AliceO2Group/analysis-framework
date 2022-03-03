@@ -1365,6 +1365,13 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGDQ
         <td>uint32_t</td>
         <td>Local boards on each MID plane (8 bits per plane)</td>
       </tr>
+      <tr>
+        <td>o2::aod::fwdtrack::TrackType</td>
+        <td></td>
+        <td>trackType</td>
+        <td>uint8_t</td>
+        <td>Type of track. See enum ForwardTrackTypeEnum</td>
+      </tr>
     </table>
   </div>
 
@@ -2896,6 +2903,13 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGDQ
         <td>midBoards</td>
         <td>uint32_t</td>
         <td>Local boards on each MID plane (8 bits per plane)</td>
+      </tr>
+      <tr>
+        <td>o2::aod::fwdtrack::TrackType</td>
+        <td></td>
+        <td>trackType</td>
+        <td>uint8_t</td>
+        <td>Type of track. See enum ForwardTrackTypeEnum</td>
       </tr>
     </table>
   </div>
