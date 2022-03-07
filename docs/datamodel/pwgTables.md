@@ -2483,32 +2483,18 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGDQ
         <td>ALICE specific flags, see MCParticleFlags. Do not use directly. Use the dynamic columns, e.g. producedByGenerator()</td>
       </tr>
       <tr>
-        <td>o2::aod::reducedtrackMC::Mother0Id</td>
-        <td>SI</td>
-        <td>mother0Id</td>
-        <td>int</td>
-        <td>Track index of the first mother</td>
+        <td>o2::aod::reducedtrackMC::MothersIds</td>
+        <td>GI</td>
+        <td></td>
+        <td>?</td>
+        <td></td>
       </tr>
       <tr>
-        <td>o2::aod::reducedtrackMC::Mother1Id</td>
-        <td>SI</td>
-        <td>mother1Id</td>
-        <td>int</td>
-        <td>Track index of the last mother</td>
-      </tr>
-      <tr>
-        <td>o2::aod::reducedtrackMC::Daughter0Id</td>
-        <td>SI</td>
-        <td>daughter0Id</td>
-        <td>int</td>
-        <td>Track index of the first daugther</td>
-      </tr>
-      <tr>
-        <td>o2::aod::reducedtrackMC::Daughter1Id</td>
-        <td>SI</td>
-        <td>daughter1Id</td>
-        <td>int</td>
-        <td>Track index of the last daugther</td>
+        <td>o2::aod::reducedtrackMC::DaughtersIdSlice</td>
+        <td>GI</td>
+        <td></td>
+        <td>?</td>
+        <td></td>
       </tr>
       <tr>
         <td>o2::aod::mcparticle::Weight</td>
