@@ -13,6 +13,176 @@ Click on the labels to display the table content. Click buttons to
 
 <!-- Block with helper tasks -->
 
+####  o2-analysis-calo-clusters
+Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/TableProducer//caloClusterProducer.cxx" target="_blank">caloClusterProducer.cxx</a>
+<div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::CaloClusters</button>
+  <div class="panel">
+    <div>
+
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master/Common/DataModel/CaloClusters.h" target="_blank">Common/DataModel/CaloClusters.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::CaloCluster = o2::aod::CaloClusters::iterator</li>
+      </ul>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::soa::Index</td>
+        <td>GI</td>
+        <td>globalIndex</td>
+        <td>int64_t</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::calocluster::CollisionId</td>
+        <td>I</td>
+        <td>collisionId</td>
+        <td>int32</td>
+        <td>Pointer into Collisions</td>
+      </tr>
+      <tr>
+        <td>o2::aod::calocluster::Type</td>
+        <td></td>
+        <td>caloType</td>
+        <td>uint8_t</td>
+        <td>calo type: 0: PHOS, 1: EMCAL</td>
+      </tr>
+      <tr>
+        <td>o2::aod::calocluster::Px</td>
+        <td></td>
+        <td>px</td>
+        <td>float</td>
+        <td>momenta components</td>
+      </tr>
+      <tr>
+        <td>o2::aod::calocluster::Py</td>
+        <td></td>
+        <td>py</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::calocluster::Pz</td>
+        <td></td>
+        <td>pz</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::calocluster::E</td>
+        <td></td>
+        <td>e</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::calocluster::Module</td>
+        <td></td>
+        <td>mod</td>
+        <td>uint8_t</td>
+        <td>module/supermodule number</td>
+      </tr>
+      <tr>
+        <td>o2::aod::calocluster::Ncell</td>
+        <td></td>
+        <td>ncell</td>
+        <td>uint8_t</td>
+        <td>cluster multiplicity</td>
+      </tr>
+      <tr>
+        <td>o2::aod::calocluster::X</td>
+        <td></td>
+        <td>x</td>
+        <td>float</td>
+        <td>cluster global coordinates</td>
+      </tr>
+      <tr>
+        <td>o2::aod::calocluster::Y</td>
+        <td></td>
+        <td>y</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::calocluster::Z</td>
+        <td></td>
+        <td>z</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::calocluster::Time</td>
+        <td></td>
+        <td>time</td>
+        <td>float</td>
+        <td>cluster time (seconds)</td>
+      </tr>
+      <tr>
+        <td>o2::aod::calocluster::NLM</td>
+        <td></td>
+        <td>nlm</td>
+        <td>uint8_t</td>
+        <td>number of local maxima</td>
+      </tr>
+      <tr>
+        <td>o2::aod::calocluster::M02</td>
+        <td></td>
+        <td>m02</td>
+        <td>float</td>
+        <td>smaller dispersion axis</td>
+      </tr>
+      <tr>
+        <td>o2::aod::calocluster::M20</td>
+        <td></td>
+        <td>m20</td>
+        <td>float</td>
+        <td>larger dispersion axis</td>
+      </tr>
+      <tr>
+        <td>o2::aod::calocluster::TrackDist</td>
+        <td></td>
+        <td>trackdist</td>
+        <td>float</td>
+        <td>distance to closest track</td>
+      </tr>
+      <tr>
+        <td>o2::aod::calocluster::TrackIndex</td>
+        <td></td>
+        <td>trackIndex</td>
+        <td>uint8_t</td>
+        <td>index of closest track</td>
+      </tr>
+      <tr>
+        <td>o2::aod::calocluster::FiredTrigger</td>
+        <td></td>
+        <td>firedTrigger</td>
+        <td>uint8_t</td>
+        <td>Matched with trigger tile</td>
+      </tr>
+      <tr>
+        <td>o2::aod::calocluster::DistBad</td>
+        <td></td>
+        <td>distBad</td>
+        <td>float</td>
+        <td>distance to closest bad channel</td>
+      </tr>
+    </table>
+  </div>
+
+</div>
+
 ####  o2-analysis-centrality-table
 Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/TableProducer//centralityTable.cxx" target="_blank">centralityTable.cxx</a>
 <div>
@@ -935,6 +1105,13 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
         <td>float</td>
         <td>z-component of the track momentum GeV/c</td>
       </tr>
+      <tr>
+        <td>o2::aod::trackpropagated::P</td>
+        <td>D</td>
+        <td>p</td>
+        <td>float</td>
+        <td>Momentum GeV/c</td>
+      </tr>
     </table>
   </div>
 
@@ -1571,7 +1748,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
         <td>o2::aod::pidtof_tiny::TOFNSigmaStoreEl</td>
         <td></td>
         <td>tofNSigmaStoreEl</td>
-        <td>int8_t</td>
+        <td>binning::binned_t</td>
         <td>Stored binned nsigma with the TOF detector for electron</td>
       </tr>
       <tr>
@@ -1604,7 +1781,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
         <td>o2::aod::pidtof_tiny::TOFNSigmaStoreMu</td>
         <td></td>
         <td>tofNSigmaStoreMu</td>
-        <td>int8_t</td>
+        <td>binning::binned_t</td>
         <td>Stored binned nsigma with the TOF detector for muon</td>
       </tr>
       <tr>
@@ -1637,7 +1814,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
         <td>o2::aod::pidtof_tiny::TOFNSigmaStorePi</td>
         <td></td>
         <td>tofNSigmaStorePi</td>
-        <td>int8_t</td>
+        <td>binning::binned_t</td>
         <td>Stored binned nsigma with the TOF detector for pion</td>
       </tr>
       <tr>
@@ -1670,7 +1847,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
         <td>o2::aod::pidtof_tiny::TOFNSigmaStoreKa</td>
         <td></td>
         <td>tofNSigmaStoreKa</td>
-        <td>int8_t</td>
+        <td>binning::binned_t</td>
         <td>Stored binned nsigma with the TOF detector for kaon</td>
       </tr>
       <tr>
@@ -1703,7 +1880,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
         <td>o2::aod::pidtof_tiny::TOFNSigmaStorePr</td>
         <td></td>
         <td>tofNSigmaStorePr</td>
-        <td>int8_t</td>
+        <td>binning::binned_t</td>
         <td>Stored binned nsigma with the TOF detector for proton</td>
       </tr>
       <tr>
@@ -1736,7 +1913,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
         <td>o2::aod::pidtof_tiny::TOFNSigmaStoreDe</td>
         <td></td>
         <td>tofNSigmaStoreDe</td>
-        <td>int8_t</td>
+        <td>binning::binned_t</td>
         <td>Stored binned nsigma with the TOF detector for deuteron</td>
       </tr>
       <tr>
@@ -1769,7 +1946,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
         <td>o2::aod::pidtof_tiny::TOFNSigmaStoreTr</td>
         <td></td>
         <td>tofNSigmaStoreTr</td>
-        <td>int8_t</td>
+        <td>binning::binned_t</td>
         <td>Stored binned nsigma with the TOF detector for triton</td>
       </tr>
       <tr>
@@ -1802,7 +1979,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
         <td>o2::aod::pidtof_tiny::TOFNSigmaStoreHe</td>
         <td></td>
         <td>tofNSigmaStoreHe</td>
-        <td>int8_t</td>
+        <td>binning::binned_t</td>
         <td>Stored binned nsigma with the TOF detector for helium3</td>
       </tr>
       <tr>
@@ -1835,7 +2012,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
         <td>o2::aod::pidtof_tiny::TOFNSigmaStoreAl</td>
         <td></td>
         <td>tofNSigmaStoreAl</td>
-        <td>int8_t</td>
+        <td>binning::binned_t</td>
         <td>Stored binned nsigma with the TOF detector for alpha</td>
       </tr>
       <tr>
@@ -2395,7 +2572,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
         <td>o2::aod::pidtpc_tiny::TPCNSigmaStoreEl</td>
         <td></td>
         <td>tpcNSigmaStoreEl</td>
-        <td>int8_t</td>
+        <td>binning::binned_t</td>
         <td>Stored binned nsigma with the TPC detector for electron</td>
       </tr>
       <tr>
@@ -2428,7 +2605,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
         <td>o2::aod::pidtpc_tiny::TPCNSigmaStoreMu</td>
         <td></td>
         <td>tpcNSigmaStoreMu</td>
-        <td>int8_t</td>
+        <td>binning::binned_t</td>
         <td>Stored binned nsigma with the TPC detector for muon</td>
       </tr>
       <tr>
@@ -2461,7 +2638,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
         <td>o2::aod::pidtpc_tiny::TPCNSigmaStorePi</td>
         <td></td>
         <td>tpcNSigmaStorePi</td>
-        <td>int8_t</td>
+        <td>binning::binned_t</td>
         <td>Stored binned nsigma with the TPC detector for pion</td>
       </tr>
       <tr>
@@ -2494,7 +2671,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
         <td>o2::aod::pidtpc_tiny::TPCNSigmaStoreKa</td>
         <td></td>
         <td>tpcNSigmaStoreKa</td>
-        <td>int8_t</td>
+        <td>binning::binned_t</td>
         <td>Stored binned nsigma with the TPC detector for kaon</td>
       </tr>
       <tr>
@@ -2527,7 +2704,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
         <td>o2::aod::pidtpc_tiny::TPCNSigmaStorePr</td>
         <td></td>
         <td>tpcNSigmaStorePr</td>
-        <td>int8_t</td>
+        <td>binning::binned_t</td>
         <td>Stored binned nsigma with the TPC detector for proton</td>
       </tr>
       <tr>
@@ -2560,7 +2737,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
         <td>o2::aod::pidtpc_tiny::TPCNSigmaStoreDe</td>
         <td></td>
         <td>tpcNSigmaStoreDe</td>
-        <td>int8_t</td>
+        <td>binning::binned_t</td>
         <td>Stored binned nsigma with the TPC detector for deuteron</td>
       </tr>
       <tr>
@@ -2593,7 +2770,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
         <td>o2::aod::pidtpc_tiny::TPCNSigmaStoreTr</td>
         <td></td>
         <td>tpcNSigmaStoreTr</td>
-        <td>int8_t</td>
+        <td>binning::binned_t</td>
         <td>Stored binned nsigma with the TPC detector for triton</td>
       </tr>
       <tr>
@@ -2626,7 +2803,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
         <td>o2::aod::pidtpc_tiny::TPCNSigmaStoreHe</td>
         <td></td>
         <td>tpcNSigmaStoreHe</td>
-        <td>int8_t</td>
+        <td>binning::binned_t</td>
         <td>Stored binned nsigma with the TPC detector for helium3</td>
       </tr>
       <tr>
@@ -2659,7 +2836,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
         <td>o2::aod::pidtpc_tiny::TPCNSigmaStoreAl</td>
         <td></td>
         <td>tpcNSigmaStoreAl</td>
-        <td>int8_t</td>
+        <td>binning::binned_t</td>
         <td>Stored binned nsigma with the TPC detector for alpha</td>
       </tr>
       <tr>

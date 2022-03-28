@@ -294,6 +294,13 @@ Click on the labels to display the definitions. Click buttons to
     </ul>
   </div>
 
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::CaloCluster</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::CaloCluster = o2::aod::CaloClusters::iterator</li>
+    </ul>
+  </div>
+
   <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::CentV0M</button>
   <div class="panel">
     <ul>
@@ -578,6 +585,13 @@ Click on the labels to display the definitions. Click buttons to
   <div class="panel">
     <ul>
         <li>o2::aod::DileptonExtra = o2::aod::DileptonsExtra::iterator</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::DimuonAll</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::DimuonAll = o2::aod::DimuonsAll::iterator</li>
     </ul>
   </div>
 

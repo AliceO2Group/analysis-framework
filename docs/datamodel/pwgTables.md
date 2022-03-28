@@ -193,6 +193,13 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGCF
         <td>float</td>
         <td>The track azimuthal angle</td>
       </tr>
+      <tr>
+        <td>o2::aod::dptdptfilter::Sign</td>
+        <td>D</td>
+        <td>sign</td>
+        <td>short</td>
+        <td>Charge: positive: 1, negative: -1</td>
+      </tr>
     </table>
   </div>
 
@@ -253,6 +260,13 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGCF
         <td>phi</td>
         <td>float</td>
         <td>The track azimuthal angle</td>
+      </tr>
+      <tr>
+        <td>o2::aod::dptdptfilter::Sign</td>
+        <td>D</td>
+        <td>sign</td>
+        <td>short</td>
+        <td>Charge: positive: 1, negative: -1</td>
       </tr>
     </table>
   </div>
