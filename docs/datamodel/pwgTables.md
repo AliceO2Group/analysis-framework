@@ -11471,9 +11471,23 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGJE
         <td>Pointer into Collisions</td>
       </tr>
       <tr>
+        <td>o2::aod::emcalcluster::ID</td>
+        <td></td>
+        <td>id</td>
+        <td>int</td>
+        <td></td>
+      </tr>
+      <tr>
         <td>o2::aod::emcalcluster::Energy</td>
         <td></td>
         <td>energy</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::emcalcluster::CoreEnergy</td>
+        <td></td>
+        <td>coreEnergy</td>
         <td>float</td>
         <td></td>
       </tr>
@@ -11496,6 +11510,48 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGJE
         <td></td>
         <td>m02</td>
         <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::emcalcluster::M20</td>
+        <td></td>
+        <td>m20</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::emcalcluster::NCells</td>
+        <td></td>
+        <td>nCells</td>
+        <td>int</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::emcalcluster::Time</td>
+        <td></td>
+        <td>time</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::emcalcluster::IsExotic</td>
+        <td></td>
+        <td>isExotic</td>
+        <td>bool</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::emcalcluster::DistanceToBadChannel</td>
+        <td></td>
+        <td>distanceToBadChannel</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::emcalcluster::NLM</td>
+        <td></td>
+        <td>nlm</td>
+        <td>int</td>
         <td></td>
       </tr>
     </table>
