@@ -73,6 +73,10 @@ title: Notifications
   <img src="../images/mergelistUpdate.png" width="90%">
 </div>
 
+## <a name="linkedDataset"></a>Linked datasets
+
+* When a dataset has linked datasets, it cannot be part of an analysis. If a dataset was part of an analysis, and then the dataset is modified to have linked datasets, then the dataset is removed from the analysis. If there were enabled wagons, they are disabled. 
+
 ## <a name="infoWagonDisabled"></a>Disabled wagon
 
 Informs the user when a wagon has been disabled in different circumstances: 
