@@ -11464,11 +11464,11 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGJE
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::emcalcluster::CollisionId</td>
+        <td>o2::aod::emcalcluster::BCId</td>
         <td>I</td>
-        <td>collisionId</td>
+        <td>bcId</td>
         <td>int32</td>
-        <td>Pointer into Collisions</td>
+        <td>Pointer into BCs</td>
       </tr>
       <tr>
         <td>o2::aod::emcalcluster::ID</td>

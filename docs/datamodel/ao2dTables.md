@@ -2921,7 +2921,7 @@ For better overview the tables are grouped into the following categories: | [Gen
   <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::Calos</button>
   <div class="panel">
     <div>
-
+       Calorimeter cells
     </div>
     <div>
       Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev/Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
@@ -2938,6 +2938,13 @@ For better overview the tables are grouped into the following categories: | [Gen
         <th>Getter</th>
         <th>Type</th>
         <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::soa::Index</td>
+        <td>GI</td>
+        <td>globalIndex</td>
+        <td>int64_t</td>
+        <td></td>
       </tr>
       <tr>
         <td>o2::aod::calo::BCId</td>
@@ -3005,6 +3012,13 @@ For better overview the tables are grouped into the following categories: | [Gen
         <th>Getter</th>
         <th>Type</th>
         <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::soa::Index</td>
+        <td>GI</td>
+        <td>globalIndex</td>
+        <td>int64_t</td>
+        <td></td>
       </tr>
       <tr>
         <td>o2::aod::calotrigger::BCId</td>
