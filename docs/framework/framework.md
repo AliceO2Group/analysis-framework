@@ -687,11 +687,11 @@ Another very useful thing is that inside this file you can provide a list of aod
 
 ### How to give this json file to the workflow
 
-You have to provide the json file to the workflows with the command `--configuration=json://config-file.json`
+You have to provide the json file to the workflows with the command `--configuration json://config-file.json`
 
 For example the above json file is well adapted for the task `o2-analysis-mm-dndeta`, you could run this workflow by typing this command inside the O2Physics environment : 
 
-`o2-analysis-timestamp --configuration=json://config-file.json | o2-analysis-event-selection --configuration=json://config-file.json | o2-analysis-trackextension --configuration=json://config-file.json | o2-analysis-mm-dndeta --configuration=json://config-file.json`
+`o2-analysis-timestamp --configuration json://config-file.json | o2-analysis-event-selection --configuration json://config-file.json | o2-analysis-trackextension --configuration json://config-file.json | o2-analysis-mm-dndeta --configuration json://config-file.json`
 
 *N.B. : You should provide the json file to each workflow separated by a pipe. *
 
