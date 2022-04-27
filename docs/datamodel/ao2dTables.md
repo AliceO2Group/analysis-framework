@@ -2852,11 +2852,6 @@ For better overview the tables are grouped into the following categories: | [Gen
     <div>
       Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev/Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
     </div>
-    <div>Is used in:
-      <ul>
-        <li>o2::aod::FDDs = o2::aod::FDDs_000</li>
-      </ul>
-    </div>
     <table class=DataModel>
       <tr>
         <th>Name</th>
@@ -2925,6 +2920,11 @@ For better overview the tables are grouped into the following categories: | [Gen
     </div>
     <div>
       Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev/Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::FDDs = o2::aod::FDDs_001</li>
+      </ul>
     </div>
     <table class=DataModel>
       <tr>
@@ -5323,123 +5323,6 @@ For better overview the tables are grouped into the following categories: | [Gen
         <td>dataframeID</td>
         <td>uint64_t</td>
         <td>Data frame ID (what is usually found in directory name in the AO2D.root, i.e. DF_XXX)</td>
-      </tr>
-    </table>
-  </div>
-
-
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::Run3MatchedToBCSparseFDD_001 (I)</button>
-  <div class="panel">
-    <div>
-
-    </div>
-    <div>
-      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev/Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
-    </div>
-    <table class=DataModel>
-      <tr>
-        <th>Name</th>
-        <th></th>
-        <th>Getter</th>
-        <th>Type</th>
-        <th>Comment</th>
-      </tr>
-      <tr>
-        <td>o2::aod::indices::BCId</td>
-        <td>I</td>
-        <td>bcId</td>
-        <td>int32</td>
-        <td>Pointer into BCs</td>
-      </tr>
-      <tr>
-        <td>o2::aod::indices::ZdcId</td>
-        <td>I</td>
-        <td>zdcId</td>
-        <td>int32</td>
-        <td>Pointer into Zdcs</td>
-      </tr>
-      <tr>
-        <td>o2::aod::indices::FT0Id</td>
-        <td>I</td>
-        <td>ft0Id</td>
-        <td>int32</td>
-        <td>Pointer into FT0s</td>
-      </tr>
-      <tr>
-        <td>o2::aod::indices::FV0AId</td>
-        <td>I</td>
-        <td>fv0aId</td>
-        <td>int32</td>
-        <td>Pointer into FV0As</td>
-      </tr>
-      <tr>
-        <td>o2::aod::indices_fdd_001::FDD_001Id</td>
-        <td>I</td>
-        <td>fddId</td>
-        <td>int</td>
-        <td>Pointer into FDDs_001</td>
-      </tr>
-    </table>
-  </div>
-
-
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::Run2MatchedToBCSparseFDD_001 (I)</button>
-  <div class="panel">
-    <div>
-
-    </div>
-    <div>
-      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev/Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
-    </div>
-    <table class=DataModel>
-      <tr>
-        <th>Name</th>
-        <th></th>
-        <th>Getter</th>
-        <th>Type</th>
-        <th>Comment</th>
-      </tr>
-      <tr>
-        <td>o2::aod::indices::BCId</td>
-        <td>I</td>
-        <td>bcId</td>
-        <td>int32</td>
-        <td>Pointer into BCs</td>
-      </tr>
-      <tr>
-        <td>o2::aod::indices::ZdcId</td>
-        <td>I</td>
-        <td>zdcId</td>
-        <td>int32</td>
-        <td>Pointer into Zdcs</td>
-      </tr>
-      <tr>
-        <td>o2::aod::indices::FT0Id</td>
-        <td>I</td>
-        <td>ft0Id</td>
-        <td>int32</td>
-        <td>Pointer into FT0s</td>
-      </tr>
-      <tr>
-        <td>o2::aod::indices::FV0AId</td>
-        <td>I</td>
-        <td>fv0aId</td>
-        <td>int32</td>
-        <td>Pointer into FV0As</td>
-      </tr>
-      <tr>
-        <td>o2::aod::indices::FV0CId</td>
-        <td>I</td>
-        <td>fv0cId</td>
-        <td>int32</td>
-        <td>Pointer into FV0Cs</td>
-      </tr>
-      <tr>
-        <td>o2::aod::indices_fdd_001::FDD_001Id</td>
-        <td>I</td>
-        <td>fddId</td>
-        <td>int</td>
-        <td>Pointer into FDDs_001</td>
       </tr>
     </table>
   </div>

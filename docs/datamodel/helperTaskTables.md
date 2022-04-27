@@ -636,6 +636,85 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
 
 </div>
 
+####  o2-analysis-fdd-converter
+Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/TableProducer//fddConverter.cxx" target="_blank">fddConverter.cxx</a>
+<div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::FDDs_001</button>
+  <div class="panel">
+    <div>
+       FDD table, version 001
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master/" target="_blank"></a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::FDDs = o2::aod::FDDs_001</li>
+      </ul>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::soa::Index</td>
+        <td>GI</td>
+        <td>globalIndex</td>
+        <td>int64_t</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::fdd::BCId</td>
+        <td>I</td>
+        <td>bcId</td>
+        <td>int32</td>
+        <td>BC index</td>
+      </tr>
+      <tr>
+        <td>o2::aod::fdd::ChargeA</td>
+        <td></td>
+        <td>chargeA</td>
+        <td>int16_t[8]</td>
+        <td>Amplitude per channel A-side</td>
+      </tr>
+      <tr>
+        <td>o2::aod::fdd::ChargeC</td>
+        <td></td>
+        <td>chargeC</td>
+        <td>int16_t[8]</td>
+        <td>Amplitude per channel C-side</td>
+      </tr>
+      <tr>
+        <td>o2::aod::fdd::TimeA</td>
+        <td></td>
+        <td>timeA</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::fdd::TimeC</td>
+        <td></td>
+        <td>timeC</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::fdd::TriggerMask</td>
+        <td></td>
+        <td>triggerMask</td>
+        <td>uint8_t</td>
+        <td></td>
+      </tr>
+    </table>
+  </div>
+
+</div>
+
 ####  o2-analysis-ft0-corrected-table
 Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/TableProducer//ft0CorrectedTable.cxx" target="_blank">ft0CorrectedTable.cxx</a>
 <div>
@@ -694,6 +773,13 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
         <td>D</td>
         <td>t0CCorrectedValid</td>
         <td>bool</td>
+        <td>Was T0CCorrected computable?</td>
+      </tr>
+      <tr>
+        <td>o2::aod::ft0::T0resolution</td>
+        <td>D</td>
+        <td>t0resolution</td>
+        <td>float</td>
         <td>Was T0CCorrected computable?</td>
       </tr>
     </table>

@@ -178,7 +178,7 @@ Click on the labels to display the definitions. Click buttons to
   <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::FDDs</button>
   <div class="panel">
     <ul>
-        <li>o2::aod::FDDs = o2::aod::FDDs_000</li>
+        <li>o2::aod::FDDs = o2::aod::FDDs_001</li>
     </ul>
   </div>
 
@@ -851,13 +851,6 @@ Click on the labels to display the definitions. Click buttons to
   <div class="panel">
     <ul>
         <li>o2::aod::HybridIntermediateJetConstituentSub = o2::aod::HybridIntermediateJetConstituentsSub::iterator</li>
-    </ul>
-  </div>
-
-  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::indices_fdd_001::FDD_001</button>
-  <div class="panel">
-    <ul>
-        <li>o2::aod::indices_fdd_001::FDD_001 = o2::aod::indices_fdd_001::FDDs_001::iterator</li>
     </ul>
   </div>
 
