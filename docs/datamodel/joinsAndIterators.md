@@ -462,17 +462,10 @@ Click on the labels to display the definitions. Click buttons to
     </ul>
   </div>
 
-  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::FemtoDreamDebugTrack</button>
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::FemtoDreamDebugParticle</button>
   <div class="panel">
     <ul>
-        <li>o2::aod::FemtoDreamDebugTrack = o2::aod::FemtoDreamDebugTracks::iterator</li>
-    </ul>
-  </div>
-
-  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::FemtoDreamDebugV0</button>
-  <div class="panel">
-    <ul>
-        <li>o2::aod::FemtoDreamDebugV0 = o2::aod::FemtoDreamDebugV0s::iterator</li>
+        <li>o2::aod::FemtoDreamDebugParticle = o2::aod::FemtoDreamDebugParticles::iterator</li>
     </ul>
   </div>
 

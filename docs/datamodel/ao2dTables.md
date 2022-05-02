@@ -370,6 +370,13 @@ For better overview the tables are grouped into the following categories: | [Gen
         <td>Momentum in z-direction in GeV/c</td>
       </tr>
       <tr>
+        <td>o2::aod::track::Energy</td>
+        <td>D</td>
+        <td>energy</td>
+        <td>float</td>
+        <td>Track energy, computed under the mass assumption given as input</td>
+      </tr>
+      <tr>
         <td>o2::aod::track::Rapidity</td>
         <td>D</td>
         <td>rapidity</td>
@@ -1033,6 +1040,13 @@ For better overview the tables are grouped into the following categories: | [Gen
         <td>pz</td>
         <td>float</td>
         <td>Momentum in z-direction in GeV/c</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::Energy</td>
+        <td>D</td>
+        <td>energy</td>
+        <td>float</td>
+        <td>Track energy, computed under the mass assumption given as input</td>
       </tr>
       <tr>
         <td>o2::aod::track::Rapidity</td>
