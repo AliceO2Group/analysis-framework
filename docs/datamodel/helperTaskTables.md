@@ -187,7 +187,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
 Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/TableProducer//centralityTable.cxx" target="_blank">centralityTable.cxx</a>
 <div>
 
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::CentV0Ms</button>
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::CentRun2V0Ms</button>
   <div class="panel">
     <div>
        V0M estimated centrality table
@@ -197,7 +197,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
     </div>
     <div>Is used in:
       <ul>
-        <li>o2::aod::CentV0M = o2::aod::CentV0Ms::iterator</li>
+        <li>o2::aod::CentRun2V0M = o2::aod::CentRun2V0Ms::iterator</li>
       </ul>
     </div>
     <table class=DataModel>
@@ -209,9 +209,9 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
         <th>Comment</th>
       </tr>
       <tr>
-        <td>o2::aod::cent::CentEstV0M</td>
+        <td>o2::aod::cent::CentRun2V0M</td>
         <td></td>
-        <td>centV0M</td>
+        <td>centRun2V0M</td>
         <td>float</td>
         <td>Centrality percentile estimated from V0C+V0A multiplicities</td>
       </tr>
@@ -240,7 +240,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
         <th>Comment</th>
       </tr>
       <tr>
-        <td>o2::aod::cent::CentEstRun2SPDTracklets</td>
+        <td>o2::aod::cent::CentRun2SPDTracklets</td>
         <td></td>
         <td>centRun2SPDTracklets</td>
         <td>float</td>
@@ -271,7 +271,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
         <th>Comment</th>
       </tr>
       <tr>
-        <td>o2::aod::cent::CentEstRun2SPDClusters</td>
+        <td>o2::aod::cent::CentRun2SPDClusters</td>
         <td></td>
         <td>centRun2SPDClusters</td>
         <td>float</td>
@@ -302,7 +302,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
         <th>Comment</th>
       </tr>
       <tr>
-        <td>o2::aod::cent::CentEstRun2CL0</td>
+        <td>o2::aod::cent::CentRun2CL0</td>
         <td></td>
         <td>centRun2CL0</td>
         <td>float</td>
@@ -333,7 +333,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
         <th>Comment</th>
       </tr>
       <tr>
-        <td>o2::aod::cent::CentEstRun2CL1</td>
+        <td>o2::aod::cent::CentRun2CL1</td>
         <td></td>
         <td>centRun2CL1</td>
         <td>float</td>
@@ -502,6 +502,13 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
         <td>int</td>
         <td>FV0 entry index in FV0As table (-1 if doesn't exist)</td>
       </tr>
+      <tr>
+        <td>o2::aod::evsel::FoundFDDId</td>
+        <td>I</td>
+        <td>foundFDDId</td>
+        <td>int</td>
+        <td>FDD entry index in FDDs table (-1 if doesn't exist)</td>
+      </tr>
     </table>
   </div>
 
@@ -630,6 +637,13 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
         <td>foundFV0Id</td>
         <td>int</td>
         <td>FV0 entry index in FV0As table (-1 if doesn't exist)</td>
+      </tr>
+      <tr>
+        <td>o2::aod::evsel::FoundFDDId</td>
+        <td>I</td>
+        <td>foundFDDId</td>
+        <td>int</td>
+        <td>FDD entry index in FDDs table (-1 if doesn't exist)</td>
       </tr>
     </table>
   </div>
@@ -985,30 +999,44 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
         <th>Comment</th>
       </tr>
       <tr>
-        <td>o2::aod::mult::MultV0A</td>
+        <td>o2::aod::mult::MultFV0A</td>
         <td></td>
-        <td>multV0A</td>
+        <td>multFV0A</td>
         <td>float</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::mult::MultV0C</td>
+        <td>o2::aod::mult::MultFV0C</td>
         <td></td>
-        <td>multV0C</td>
+        <td>multFV0C</td>
         <td>float</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::mult::MultT0A</td>
+        <td>o2::aod::mult::MultFT0A</td>
         <td></td>
-        <td>multT0A</td>
+        <td>multFT0A</td>
         <td>float</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::mult::MultT0C</td>
+        <td>o2::aod::mult::MultFT0C</td>
         <td></td>
-        <td>multT0C</td>
+        <td>multFT0C</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::mult::MultFDDA</td>
+        <td></td>
+        <td>multFDDA</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::mult::MultFDDC</td>
+        <td></td>
+        <td>multFDDC</td>
         <td>float</td>
         <td></td>
       </tr>
@@ -1027,16 +1055,23 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::mult::MultV0M</td>
+        <td>o2::aod::mult::MultFV0M</td>
         <td>D</td>
-        <td>multV0M</td>
+        <td>multFV0M</td>
         <td>float</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::mult::MultT0M</td>
+        <td>o2::aod::mult::MultFT0M</td>
         <td>D</td>
-        <td>multT0M</td>
+        <td>multFT0M</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::mult::MultFDDM</td>
+        <td>D</td>
+        <td>multFDDM</td>
         <td>float</td>
         <td></td>
       </tr>
@@ -1052,6 +1087,79 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
         <td></td>
         <td>multTPC</td>
         <td>int</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::mult::MultNTracksPV</td>
+        <td></td>
+        <td>multNTracksPV</td>
+        <td>int</td>
+        <td></td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::MultZeqs</button>
+  <div class="panel">
+    <div>
+
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master/Common/DataModel/Multiplicity.h" target="_blank">Common/DataModel/Multiplicity.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::MultZeq = o2::aod::MultZeqs::iterator</li>
+      </ul>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::multZeq::MultZeqFV0A</td>
+        <td></td>
+        <td>multZeqFV0A</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::multZeq::MultZeqFT0A</td>
+        <td></td>
+        <td>multZeqFT0A</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::multZeq::MultZeqFT0C</td>
+        <td></td>
+        <td>multZeqFT0C</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::multZeq::MultZeqFDDA</td>
+        <td></td>
+        <td>multZeqFDDA</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::multZeq::MultZeqFDDC</td>
+        <td></td>
+        <td>multZeqFDDC</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::multZeq::MultZeqNTracksPV</td>
+        <td></td>
+        <td>multZeqNTracksPV</td>
+        <td>float</td>
         <td></td>
       </tr>
     </table>

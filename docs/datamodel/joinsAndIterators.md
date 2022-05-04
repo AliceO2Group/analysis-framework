@@ -308,10 +308,10 @@ Click on the labels to display the definitions. Click buttons to
     </ul>
   </div>
 
-  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::CentV0M</button>
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::CentRun2V0M</button>
   <div class="panel">
     <ul>
-        <li>o2::aod::CentV0M = o2::aod::CentV0Ms::iterator</li>
+        <li>o2::aod::CentRun2V0M = o2::aod::CentRun2V0Ms::iterator</li>
     </ul>
   </div>
 
@@ -368,6 +368,13 @@ Click on the labels to display the definitions. Click buttons to
   <div class="panel">
     <ul>
         <li>o2::aod::Mult = o2::aod::Mults::iterator</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::MultZeq</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::MultZeq = o2::aod::MultZeqs::iterator</li>
     </ul>
   </div>
 
