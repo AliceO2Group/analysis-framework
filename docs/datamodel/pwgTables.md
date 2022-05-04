@@ -320,9 +320,9 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGCF
         <td>Z Vertex position in cm</td>
       </tr>
       <tr>
-        <td>o2::aod::cent::CentEstV0M</td>
+        <td>o2::aod::cent::CentRun2V0M</td>
         <td></td>
-        <td>centV0M</td>
+        <td>centRun2V0M</td>
         <td>float</td>
         <td>Centrality percentile estimated from V0C+V0A multiplicities</td>
       </tr>
@@ -554,9 +554,9 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGDQ
         <td>Trigger aliases bit field</td>
       </tr>
       <tr>
-        <td>o2::aod::cent::CentEstV0M</td>
+        <td>o2::aod::cent::CentRun2V0M</td>
         <td></td>
-        <td>centV0M</td>
+        <td>centRun2V0M</td>
         <td>float</td>
         <td>Centrality percentile estimated from V0C+V0A multiplicities</td>
       </tr>
@@ -1703,9 +1703,9 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGDQ
         <td>Trigger aliases bit field</td>
       </tr>
       <tr>
-        <td>o2::aod::cent::CentEstV0M</td>
+        <td>o2::aod::cent::CentRun2V0M</td>
         <td></td>
-        <td>centV0M</td>
+        <td>centRun2V0M</td>
         <td>float</td>
         <td>Centrality percentile estimated from V0C+V0A multiplicities</td>
       </tr>
