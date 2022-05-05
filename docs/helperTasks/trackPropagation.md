@@ -12,7 +12,7 @@ and O2tracksCov_IU (IU = innermost update). The corresponding O2 data model tabl
 If your task needs tracks at the collision vertex it will fail because it looks for O2tracks and O2tracksCov.
 
 In order to propagate the tracks to the collision vertex, include the task `o2-analysis-track-propagation` into your workflow.
-This task produces the tables Tracks and TracksCov (in order to get the latter, please enable `processCovariance` through the json configuration.
+This task produces the tables Tracks and TracksCov (in order to get the latter, please enable `processCovariance` through the json configuration).
 
 This task is not needed for Run 2 converted data where the tracks are already propagated to the collision vertex.
 
