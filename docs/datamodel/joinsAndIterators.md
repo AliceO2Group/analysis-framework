@@ -42,10 +42,24 @@ Click on the labels to display the definitions. Click buttons to
     </ul>
   </div>
 
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::TrackIU</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::TrackIU = o2::aod::TracksIU::iterator</li>
+    </ul>
+  </div>
+
   <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::TrackCov</button>
   <div class="panel">
     <ul>
         <li>o2::aod::TrackCov = o2::aod::TracksCov::iterator</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::TrackCovIU</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::TrackCovIU = o2::aod::TracksCovIU::iterator</li>
     </ul>
   </div>
 
@@ -410,20 +424,6 @@ Click on the labels to display the definitions. Click buttons to
   <div class="panel">
     <ul>
         <li>o2::aod::CascDataFull = o2::aod::CascDataExt</li>
-    </ul>
-  </div>
-
-  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::TrackPropagated</button>
-  <div class="panel">
-    <ul>
-        <li>o2::aod::TrackPropagated = o2::aod::TracksPropagated::iterator</li>
-    </ul>
-  </div>
-
-  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::TrackParPropagated</button>
-  <div class="panel">
-    <ul>
-        <li>o2::aod::TrackParPropagated = o2::aod::TracksParPropagated::iterator</li>
     </ul>
   </div>
 
