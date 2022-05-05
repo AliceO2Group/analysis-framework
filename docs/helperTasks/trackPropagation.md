@@ -19,7 +19,7 @@ This task is not needed for Run 2 converted data where the tracks are already pr
 The overall table flow is illustrated here:
 
 <div align="center">
-<img src="track_propagation.png" width="60%">
+<img src="prop.png" width="60%">
 </div>
 
 ```
