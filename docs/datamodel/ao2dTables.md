@@ -422,6 +422,169 @@ For better overview the tables are grouped into the following categories: | [Gen
   </div>
 
 
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::TracksIU (E)</button>
+  <div class="panel">
+    <div>
+       Track parameters at inner most update (e.g. ITS) as it comes from the tracking
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev/Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
+    </div>
+    <div>Extends:
+      <ul>
+         o2::aod::StoredTracksIU
+      </ul>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::TrackIU = o2::aod::TracksIU::iterator</li>
+      </ul>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::soa::Index</td>
+        <td>GI</td>
+        <td>globalIndex</td>
+        <td>int64_t</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::CollisionId</td>
+        <td>I</td>
+        <td>collisionId</td>
+        <td>int32</td>
+        <td>Collision to which this track belongs</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::TrackType</td>
+        <td></td>
+        <td>trackType</td>
+        <td>uint8_t</td>
+        <td>Type of track. See enum TrackTypeEnum. This cannot be used to decide which detector has contributed to this track. Use hasITS, hasTPC, etc.</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::X</td>
+        <td></td>
+        <td>x</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::Alpha</td>
+        <td></td>
+        <td>alpha</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::Y</td>
+        <td></td>
+        <td>y</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::Z</td>
+        <td></td>
+        <td>z</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::Snp</td>
+        <td></td>
+        <td>snp</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::Tgl</td>
+        <td></td>
+        <td>tgl</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::Signed1Pt</td>
+        <td></td>
+        <td>signed1Pt</td>
+        <td>float</td>
+        <td>(sign of charge)/Pt in c/GeV. Use pt() and sign() instead</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::Py</td>
+        <td>D</td>
+        <td>py</td>
+        <td>float</td>
+        <td>Momentum in y-direction in GeV/c</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::Px</td>
+        <td>D</td>
+        <td>px</td>
+        <td>float</td>
+        <td>Momentum in x-direction in GeV/c</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::Pz</td>
+        <td>D</td>
+        <td>pz</td>
+        <td>float</td>
+        <td>Momentum in z-direction in GeV/c</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::Rapidity</td>
+        <td>D</td>
+        <td>rapidity</td>
+        <td>float</td>
+        <td>Track rapidity, computed under the mass assumption given as input</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::Sign</td>
+        <td>D</td>
+        <td>sign</td>
+        <td>short</td>
+        <td>Charge: positive: 1, negative: -1</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::Pt</td>
+        <td>E</td>
+        <td>pt</td>
+        <td>float</td>
+        <td>Transverse momentum of the track in GeV/c</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::P</td>
+        <td>E</td>
+        <td>p</td>
+        <td>float</td>
+        <td>Momentum in Gev/c</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::Eta</td>
+        <td>E</td>
+        <td>eta</td>
+        <td>float</td>
+        <td>Pseudorapidity</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::Phi</td>
+        <td>E</td>
+        <td>phi</td>
+        <td>float</td>
+        <td>Phi of the track, in radians within [0, 2pi)</td>
+      </tr>
+    </table>
+  </div>
+
+
   <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::TracksCov (E)</button>
   <div class="panel">
     <div>
@@ -460,6 +623,246 @@ For better overview the tables are grouped into the following categories: | [Gen
         <td>o2::aod::track::SigmaZ</td>
         <td></td>
         <td>sigmaZ</td>
+        <td>float</td>
+        <td>Covariance matrix</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::SigmaSnp</td>
+        <td></td>
+        <td>sigmaSnp</td>
+        <td>float</td>
+        <td>Covariance matrix</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::SigmaTgl</td>
+        <td></td>
+        <td>sigmaTgl</td>
+        <td>float</td>
+        <td>Covariance matrix</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::Sigma1Pt</td>
+        <td></td>
+        <td>sigma1Pt</td>
+        <td>float</td>
+        <td>Covariance matrix</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::RhoZY</td>
+        <td></td>
+        <td>rhoZY</td>
+        <td>int8_t</td>
+        <td>Covariance matrix in compressed form</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::RhoSnpY</td>
+        <td></td>
+        <td>rhoSnpY</td>
+        <td>int8_t</td>
+        <td>Covariance matrix in compressed form</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::RhoSnpZ</td>
+        <td></td>
+        <td>rhoSnpZ</td>
+        <td>int8_t</td>
+        <td>Covariance matrix in compressed form</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::RhoTglY</td>
+        <td></td>
+        <td>rhoTglY</td>
+        <td>int8_t</td>
+        <td>Covariance matrix in compressed form</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::RhoTglZ</td>
+        <td></td>
+        <td>rhoTglZ</td>
+        <td>int8_t</td>
+        <td>Covariance matrix in compressed form</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::RhoTglSnp</td>
+        <td></td>
+        <td>rhoTglSnp</td>
+        <td>int8_t</td>
+        <td>Covariance matrix in compressed form</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::Rho1PtY</td>
+        <td></td>
+        <td>rho1PtY</td>
+        <td>int8_t</td>
+        <td>Covariance matrix in compressed form</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::Rho1PtZ</td>
+        <td></td>
+        <td>rho1PtZ</td>
+        <td>int8_t</td>
+        <td>Covariance matrix in compressed form</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::Rho1PtSnp</td>
+        <td></td>
+        <td>rho1PtSnp</td>
+        <td>int8_t</td>
+        <td>Covariance matrix in compressed form</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::Rho1PtTgl</td>
+        <td></td>
+        <td>rho1PtTgl</td>
+        <td>int8_t</td>
+        <td>Covariance matrix in compressed form</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::CYY</td>
+        <td>E</td>
+        <td>cYY</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::CZY</td>
+        <td>E</td>
+        <td>cZY</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::CZZ</td>
+        <td>E</td>
+        <td>cZZ</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::CSnpY</td>
+        <td>E</td>
+        <td>cSnpY</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::CSnpZ</td>
+        <td>E</td>
+        <td>cSnpZ</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::CSnpSnp</td>
+        <td>E</td>
+        <td>cSnpSnp</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::CTglY</td>
+        <td>E</td>
+        <td>cTglY</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::CTglZ</td>
+        <td>E</td>
+        <td>cTglZ</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::CTglSnp</td>
+        <td>E</td>
+        <td>cTglSnp</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::CTglTgl</td>
+        <td>E</td>
+        <td>cTglTgl</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::C1PtY</td>
+        <td>E</td>
+        <td>c1PtY</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::C1PtZ</td>
+        <td>E</td>
+        <td>c1PtZ</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::C1PtSnp</td>
+        <td>E</td>
+        <td>c1PtSnp</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::C1PtTgl</td>
+        <td>E</td>
+        <td>c1PtTgl</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::C1Pt21Pt2</td>
+        <td>E</td>
+        <td>c1Pt21Pt2</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+    </table>
+  </div>
+
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::TracksCovIU (E)</button>
+  <div class="panel">
+    <div>
+       Track covariance matrix at inner most update (e.g. ITS) as it comes from the tracking
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev/Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
+    </div>
+    <div>Extends:
+      <ul>
+         o2::aod::StoredTracksCovIU
+      </ul>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::TrackCovIU = o2::aod::TracksCovIU::iterator</li>
+      </ul>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::track::SigmaZ</td>
+        <td></td>
+        <td>sigmaZ</td>
+        <td>float</td>
+        <td>Covariance matrix</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::SigmaY</td>
+        <td></td>
+        <td>sigmaY</td>
         <td>float</td>
         <td>Covariance matrix</td>
       </tr>
@@ -1066,6 +1469,131 @@ For better overview the tables are grouped into the following categories: | [Gen
   </div>
 
 
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::StoredTracksIU</button>
+  <div class="panel">
+    <div>
+       On disk version of the track parameters at inner most update (e.g. ITS) as it comes from the tracking
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev/Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::soa::Index</td>
+        <td>GI</td>
+        <td>globalIndex</td>
+        <td>int64_t</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::CollisionId</td>
+        <td>I</td>
+        <td>collisionId</td>
+        <td>int32</td>
+        <td>Collision to which this track belongs</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::TrackType</td>
+        <td></td>
+        <td>trackType</td>
+        <td>uint8_t</td>
+        <td>Type of track. See enum TrackTypeEnum. This cannot be used to decide which detector has contributed to this track. Use hasITS, hasTPC, etc.</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::X</td>
+        <td></td>
+        <td>x</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::Alpha</td>
+        <td></td>
+        <td>alpha</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::Y</td>
+        <td></td>
+        <td>y</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::Z</td>
+        <td></td>
+        <td>z</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::Snp</td>
+        <td></td>
+        <td>snp</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::Tgl</td>
+        <td></td>
+        <td>tgl</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::Signed1Pt</td>
+        <td></td>
+        <td>signed1Pt</td>
+        <td>float</td>
+        <td>(sign of charge)/Pt in c/GeV. Use pt() and sign() instead</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::Py</td>
+        <td>D</td>
+        <td>py</td>
+        <td>float</td>
+        <td>Momentum in y-direction in GeV/c</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::Px</td>
+        <td>D</td>
+        <td>px</td>
+        <td>float</td>
+        <td>Momentum in x-direction in GeV/c</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::Pz</td>
+        <td>D</td>
+        <td>pz</td>
+        <td>float</td>
+        <td>Momentum in z-direction in GeV/c</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::Rapidity</td>
+        <td>D</td>
+        <td>rapidity</td>
+        <td>float</td>
+        <td>Track rapidity, computed under the mass assumption given as input</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::Sign</td>
+        <td>D</td>
+        <td>sign</td>
+        <td>short</td>
+        <td>Charge: positive: 1, negative: -1</td>
+      </tr>
+    </table>
+  </div>
+
+
   <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::StoredTracksCov</button>
   <div class="panel">
     <div>
@@ -1093,6 +1621,131 @@ For better overview the tables are grouped into the following categories: | [Gen
         <td>o2::aod::track::SigmaZ</td>
         <td></td>
         <td>sigmaZ</td>
+        <td>float</td>
+        <td>Covariance matrix</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::SigmaSnp</td>
+        <td></td>
+        <td>sigmaSnp</td>
+        <td>float</td>
+        <td>Covariance matrix</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::SigmaTgl</td>
+        <td></td>
+        <td>sigmaTgl</td>
+        <td>float</td>
+        <td>Covariance matrix</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::Sigma1Pt</td>
+        <td></td>
+        <td>sigma1Pt</td>
+        <td>float</td>
+        <td>Covariance matrix</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::RhoZY</td>
+        <td></td>
+        <td>rhoZY</td>
+        <td>int8_t</td>
+        <td>Covariance matrix in compressed form</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::RhoSnpY</td>
+        <td></td>
+        <td>rhoSnpY</td>
+        <td>int8_t</td>
+        <td>Covariance matrix in compressed form</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::RhoSnpZ</td>
+        <td></td>
+        <td>rhoSnpZ</td>
+        <td>int8_t</td>
+        <td>Covariance matrix in compressed form</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::RhoTglY</td>
+        <td></td>
+        <td>rhoTglY</td>
+        <td>int8_t</td>
+        <td>Covariance matrix in compressed form</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::RhoTglZ</td>
+        <td></td>
+        <td>rhoTglZ</td>
+        <td>int8_t</td>
+        <td>Covariance matrix in compressed form</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::RhoTglSnp</td>
+        <td></td>
+        <td>rhoTglSnp</td>
+        <td>int8_t</td>
+        <td>Covariance matrix in compressed form</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::Rho1PtY</td>
+        <td></td>
+        <td>rho1PtY</td>
+        <td>int8_t</td>
+        <td>Covariance matrix in compressed form</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::Rho1PtZ</td>
+        <td></td>
+        <td>rho1PtZ</td>
+        <td>int8_t</td>
+        <td>Covariance matrix in compressed form</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::Rho1PtSnp</td>
+        <td></td>
+        <td>rho1PtSnp</td>
+        <td>int8_t</td>
+        <td>Covariance matrix in compressed form</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::Rho1PtTgl</td>
+        <td></td>
+        <td>rho1PtTgl</td>
+        <td>int8_t</td>
+        <td>Covariance matrix in compressed form</td>
+      </tr>
+    </table>
+  </div>
+
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::StoredTracksCovIU</button>
+  <div class="panel">
+    <div>
+       On disk version of the TracksCov table at inner most update (e.g. ITS) as it comes from the tracking
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev/Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::track::SigmaZ</td>
+        <td></td>
+        <td>sigmaZ</td>
+        <td>float</td>
+        <td>Covariance matrix</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::SigmaY</td>
+        <td></td>
+        <td>sigmaY</td>
         <td>float</td>
         <td>Covariance matrix</td>
       </tr>
@@ -5302,659 +5955,6 @@ For better overview the tables are grouped into the following categories: | [Gen
 </div>
 <h4 id="cat_Others">Others</h4>
 <div>
-
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::StoredTracksIU</button>
-  <div class="panel">
-    <div>
-       On disk version of the track parameters at inner most update (e.g. ITS) as it comes from the tracking
-    </div>
-    <div>
-      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev/Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
-    </div>
-    <table class=DataModel>
-      <tr>
-        <th>Name</th>
-        <th></th>
-        <th>Getter</th>
-        <th>Type</th>
-        <th>Comment</th>
-      </tr>
-      <tr>
-        <td>o2::soa::Index</td>
-        <td>GI</td>
-        <td>globalIndex</td>
-        <td>int64_t</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::CollisionId</td>
-        <td>I</td>
-        <td>collisionId</td>
-        <td>int32</td>
-        <td>Collision to which this track belongs</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::TrackType</td>
-        <td></td>
-        <td>trackType</td>
-        <td>uint8_t</td>
-        <td>Type of track. See enum TrackTypeEnum. This cannot be used to decide which detector has contributed to this track. Use hasITS, hasTPC, etc.</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::X</td>
-        <td></td>
-        <td>x</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::Alpha</td>
-        <td></td>
-        <td>alpha</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::Y</td>
-        <td></td>
-        <td>y</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::Z</td>
-        <td></td>
-        <td>z</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::Snp</td>
-        <td></td>
-        <td>snp</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::Tgl</td>
-        <td></td>
-        <td>tgl</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::Signed1Pt</td>
-        <td></td>
-        <td>signed1Pt</td>
-        <td>float</td>
-        <td>(sign of charge)/Pt in c/GeV. Use pt() and sign() instead</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::Py</td>
-        <td>D</td>
-        <td>py</td>
-        <td>float</td>
-        <td>Momentum in y-direction in GeV/c</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::Px</td>
-        <td>D</td>
-        <td>px</td>
-        <td>float</td>
-        <td>Momentum in x-direction in GeV/c</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::Pz</td>
-        <td>D</td>
-        <td>pz</td>
-        <td>float</td>
-        <td>Momentum in z-direction in GeV/c</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::Rapidity</td>
-        <td>D</td>
-        <td>rapidity</td>
-        <td>float</td>
-        <td>Track rapidity, computed under the mass assumption given as input</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::Sign</td>
-        <td>D</td>
-        <td>sign</td>
-        <td>short</td>
-        <td>Charge: positive: 1, negative: -1</td>
-      </tr>
-    </table>
-  </div>
-
-
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::TracksIU (E)</button>
-  <div class="panel">
-    <div>
-       Track parameters at inner most update (e.g. ITS) as it comes from the tracking
-    </div>
-    <div>
-      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev/Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
-    </div>
-    <div>Extends:
-      <ul>
-         o2::aod::StoredTracksIU
-      </ul>
-    </div>
-    <div>Is used in:
-      <ul>
-        <li>o2::aod::TrackIU = o2::aod::TracksIU::iterator</li>
-      </ul>
-    </div>
-    <table class=DataModel>
-      <tr>
-        <th>Name</th>
-        <th></th>
-        <th>Getter</th>
-        <th>Type</th>
-        <th>Comment</th>
-      </tr>
-      <tr>
-        <td>o2::soa::Index</td>
-        <td>GI</td>
-        <td>globalIndex</td>
-        <td>int64_t</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::CollisionId</td>
-        <td>I</td>
-        <td>collisionId</td>
-        <td>int32</td>
-        <td>Collision to which this track belongs</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::TrackType</td>
-        <td></td>
-        <td>trackType</td>
-        <td>uint8_t</td>
-        <td>Type of track. See enum TrackTypeEnum. This cannot be used to decide which detector has contributed to this track. Use hasITS, hasTPC, etc.</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::X</td>
-        <td></td>
-        <td>x</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::Alpha</td>
-        <td></td>
-        <td>alpha</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::Y</td>
-        <td></td>
-        <td>y</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::Z</td>
-        <td></td>
-        <td>z</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::Snp</td>
-        <td></td>
-        <td>snp</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::Tgl</td>
-        <td></td>
-        <td>tgl</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::Signed1Pt</td>
-        <td></td>
-        <td>signed1Pt</td>
-        <td>float</td>
-        <td>(sign of charge)/Pt in c/GeV. Use pt() and sign() instead</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::Py</td>
-        <td>D</td>
-        <td>py</td>
-        <td>float</td>
-        <td>Momentum in y-direction in GeV/c</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::Px</td>
-        <td>D</td>
-        <td>px</td>
-        <td>float</td>
-        <td>Momentum in x-direction in GeV/c</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::Pz</td>
-        <td>D</td>
-        <td>pz</td>
-        <td>float</td>
-        <td>Momentum in z-direction in GeV/c</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::Rapidity</td>
-        <td>D</td>
-        <td>rapidity</td>
-        <td>float</td>
-        <td>Track rapidity, computed under the mass assumption given as input</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::Sign</td>
-        <td>D</td>
-        <td>sign</td>
-        <td>short</td>
-        <td>Charge: positive: 1, negative: -1</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::Pt</td>
-        <td>E</td>
-        <td>pt</td>
-        <td>float</td>
-        <td>Transverse momentum of the track in GeV/c</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::P</td>
-        <td>E</td>
-        <td>p</td>
-        <td>float</td>
-        <td>Momentum in Gev/c</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::Eta</td>
-        <td>E</td>
-        <td>eta</td>
-        <td>float</td>
-        <td>Pseudorapidity</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::Phi</td>
-        <td>E</td>
-        <td>phi</td>
-        <td>float</td>
-        <td>Phi of the track, in radians within [0, 2pi)</td>
-      </tr>
-    </table>
-  </div>
-
-
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::StoredTracksCovIU</button>
-  <div class="panel">
-    <div>
-       On disk version of the TracksCov table at inner most update (e.g. ITS) as it comes from the tracking
-    </div>
-    <div>
-      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev/Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
-    </div>
-    <table class=DataModel>
-      <tr>
-        <th>Name</th>
-        <th></th>
-        <th>Getter</th>
-        <th>Type</th>
-        <th>Comment</th>
-      </tr>
-      <tr>
-        <td>o2::aod::track::SigmaZ</td>
-        <td></td>
-        <td>sigmaZ</td>
-        <td>float</td>
-        <td>Covariance matrix</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::SigmaY</td>
-        <td></td>
-        <td>sigmaY</td>
-        <td>float</td>
-        <td>Covariance matrix</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::SigmaSnp</td>
-        <td></td>
-        <td>sigmaSnp</td>
-        <td>float</td>
-        <td>Covariance matrix</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::SigmaTgl</td>
-        <td></td>
-        <td>sigmaTgl</td>
-        <td>float</td>
-        <td>Covariance matrix</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::Sigma1Pt</td>
-        <td></td>
-        <td>sigma1Pt</td>
-        <td>float</td>
-        <td>Covariance matrix</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::RhoZY</td>
-        <td></td>
-        <td>rhoZY</td>
-        <td>int8_t</td>
-        <td>Covariance matrix in compressed form</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::RhoSnpY</td>
-        <td></td>
-        <td>rhoSnpY</td>
-        <td>int8_t</td>
-        <td>Covariance matrix in compressed form</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::RhoSnpZ</td>
-        <td></td>
-        <td>rhoSnpZ</td>
-        <td>int8_t</td>
-        <td>Covariance matrix in compressed form</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::RhoTglY</td>
-        <td></td>
-        <td>rhoTglY</td>
-        <td>int8_t</td>
-        <td>Covariance matrix in compressed form</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::RhoTglZ</td>
-        <td></td>
-        <td>rhoTglZ</td>
-        <td>int8_t</td>
-        <td>Covariance matrix in compressed form</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::RhoTglSnp</td>
-        <td></td>
-        <td>rhoTglSnp</td>
-        <td>int8_t</td>
-        <td>Covariance matrix in compressed form</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::Rho1PtY</td>
-        <td></td>
-        <td>rho1PtY</td>
-        <td>int8_t</td>
-        <td>Covariance matrix in compressed form</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::Rho1PtZ</td>
-        <td></td>
-        <td>rho1PtZ</td>
-        <td>int8_t</td>
-        <td>Covariance matrix in compressed form</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::Rho1PtSnp</td>
-        <td></td>
-        <td>rho1PtSnp</td>
-        <td>int8_t</td>
-        <td>Covariance matrix in compressed form</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::Rho1PtTgl</td>
-        <td></td>
-        <td>rho1PtTgl</td>
-        <td>int8_t</td>
-        <td>Covariance matrix in compressed form</td>
-      </tr>
-    </table>
-  </div>
-
-
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::TracksCovIU (E)</button>
-  <div class="panel">
-    <div>
-       Track covariance matrix at inner most update (e.g. ITS) as it comes from the tracking
-    </div>
-    <div>
-      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev/Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
-    </div>
-    <div>Extends:
-      <ul>
-         o2::aod::StoredTracksCovIU
-      </ul>
-    </div>
-    <div>Is used in:
-      <ul>
-        <li>o2::aod::TrackCovIU = o2::aod::TracksCovIU::iterator</li>
-      </ul>
-    </div>
-    <table class=DataModel>
-      <tr>
-        <th>Name</th>
-        <th></th>
-        <th>Getter</th>
-        <th>Type</th>
-        <th>Comment</th>
-      </tr>
-      <tr>
-        <td>o2::aod::track::SigmaZ</td>
-        <td></td>
-        <td>sigmaZ</td>
-        <td>float</td>
-        <td>Covariance matrix</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::SigmaY</td>
-        <td></td>
-        <td>sigmaY</td>
-        <td>float</td>
-        <td>Covariance matrix</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::SigmaSnp</td>
-        <td></td>
-        <td>sigmaSnp</td>
-        <td>float</td>
-        <td>Covariance matrix</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::SigmaTgl</td>
-        <td></td>
-        <td>sigmaTgl</td>
-        <td>float</td>
-        <td>Covariance matrix</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::Sigma1Pt</td>
-        <td></td>
-        <td>sigma1Pt</td>
-        <td>float</td>
-        <td>Covariance matrix</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::RhoZY</td>
-        <td></td>
-        <td>rhoZY</td>
-        <td>int8_t</td>
-        <td>Covariance matrix in compressed form</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::RhoSnpY</td>
-        <td></td>
-        <td>rhoSnpY</td>
-        <td>int8_t</td>
-        <td>Covariance matrix in compressed form</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::RhoSnpZ</td>
-        <td></td>
-        <td>rhoSnpZ</td>
-        <td>int8_t</td>
-        <td>Covariance matrix in compressed form</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::RhoTglY</td>
-        <td></td>
-        <td>rhoTglY</td>
-        <td>int8_t</td>
-        <td>Covariance matrix in compressed form</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::RhoTglZ</td>
-        <td></td>
-        <td>rhoTglZ</td>
-        <td>int8_t</td>
-        <td>Covariance matrix in compressed form</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::RhoTglSnp</td>
-        <td></td>
-        <td>rhoTglSnp</td>
-        <td>int8_t</td>
-        <td>Covariance matrix in compressed form</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::Rho1PtY</td>
-        <td></td>
-        <td>rho1PtY</td>
-        <td>int8_t</td>
-        <td>Covariance matrix in compressed form</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::Rho1PtZ</td>
-        <td></td>
-        <td>rho1PtZ</td>
-        <td>int8_t</td>
-        <td>Covariance matrix in compressed form</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::Rho1PtSnp</td>
-        <td></td>
-        <td>rho1PtSnp</td>
-        <td>int8_t</td>
-        <td>Covariance matrix in compressed form</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::Rho1PtTgl</td>
-        <td></td>
-        <td>rho1PtTgl</td>
-        <td>int8_t</td>
-        <td>Covariance matrix in compressed form</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::CYY</td>
-        <td>E</td>
-        <td>cYY</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::CZY</td>
-        <td>E</td>
-        <td>cZY</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::CZZ</td>
-        <td>E</td>
-        <td>cZZ</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::CSnpY</td>
-        <td>E</td>
-        <td>cSnpY</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::CSnpZ</td>
-        <td>E</td>
-        <td>cSnpZ</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::CSnpSnp</td>
-        <td>E</td>
-        <td>cSnpSnp</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::CTglY</td>
-        <td>E</td>
-        <td>cTglY</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::CTglZ</td>
-        <td>E</td>
-        <td>cTglZ</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::CTglSnp</td>
-        <td>E</td>
-        <td>cTglSnp</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::CTglTgl</td>
-        <td>E</td>
-        <td>cTglTgl</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::C1PtY</td>
-        <td>E</td>
-        <td>c1PtY</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::C1PtZ</td>
-        <td>E</td>
-        <td>c1PtZ</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::C1PtSnp</td>
-        <td>E</td>
-        <td>c1PtSnp</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::C1PtTgl</td>
-        <td>E</td>
-        <td>c1PtTgl</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::C1Pt21Pt2</td>
-        <td>E</td>
-        <td>c1Pt21Pt2</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-    </table>
-  </div>
-
 
   <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::Origins</button>
   <div class="panel">
