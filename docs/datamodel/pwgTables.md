@@ -11464,95 +11464,231 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGJE
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::emcalcluster::BCId</td>
+        <td>o2::aod::emcalcluster::CollisionId</td>
         <td>I</td>
-        <td>bcId</td>
+        <td>collisionId</td>
         <td>int32</td>
-        <td>Pointer into BCs</td>
+        <td>collisionID used as index for matched clusters</td>
       </tr>
       <tr>
         <td>o2::aod::emcalcluster::ID</td>
         <td></td>
         <td>id</td>
         <td>int</td>
-        <td></td>
+        <td>cluster ID identifying cluster in event</td>
       </tr>
       <tr>
         <td>o2::aod::emcalcluster::Energy</td>
         <td></td>
         <td>energy</td>
         <td>float</td>
-        <td></td>
+        <td>cluster energy (GeV)</td>
       </tr>
       <tr>
         <td>o2::aod::emcalcluster::CoreEnergy</td>
         <td></td>
         <td>coreEnergy</td>
         <td>float</td>
-        <td></td>
+        <td>cluster core energy (GeV)</td>
       </tr>
       <tr>
         <td>o2::aod::emcalcluster::Eta</td>
         <td></td>
         <td>eta</td>
         <td>float</td>
-        <td></td>
+        <td>cluster pseudorapidity (calculated using vertex)</td>
       </tr>
       <tr>
         <td>o2::aod::emcalcluster::Phi</td>
         <td></td>
         <td>phi</td>
         <td>float</td>
-        <td></td>
+        <td>cluster azimuthal angle (calculated using vertex)</td>
       </tr>
       <tr>
         <td>o2::aod::emcalcluster::M02</td>
         <td></td>
         <td>m02</td>
         <td>float</td>
-        <td></td>
+        <td>shower shape long axis</td>
       </tr>
       <tr>
         <td>o2::aod::emcalcluster::M20</td>
         <td></td>
         <td>m20</td>
         <td>float</td>
-        <td></td>
+        <td>shower shape short axis</td>
       </tr>
       <tr>
         <td>o2::aod::emcalcluster::NCells</td>
         <td></td>
         <td>nCells</td>
         <td>int</td>
-        <td></td>
+        <td>number of cells in cluster</td>
       </tr>
       <tr>
         <td>o2::aod::emcalcluster::Time</td>
         <td></td>
         <td>time</td>
         <td>float</td>
-        <td></td>
+        <td>cluster time (ns)</td>
       </tr>
       <tr>
         <td>o2::aod::emcalcluster::IsExotic</td>
         <td></td>
         <td>isExotic</td>
         <td>bool</td>
-        <td></td>
+        <td>flag to mark cluster as exotic</td>
       </tr>
       <tr>
         <td>o2::aod::emcalcluster::DistanceToBadChannel</td>
         <td></td>
         <td>distanceToBadChannel</td>
         <td>float</td>
-        <td></td>
+        <td>distance to bad channel</td>
       </tr>
       <tr>
         <td>o2::aod::emcalcluster::NLM</td>
         <td></td>
         <td>nlm</td>
         <td>int</td>
+        <td>number of local maxima</td>
+      </tr>
+      <tr>
+        <td>o2::aod::emcalcluster::Definition</td>
         <td></td>
+        <td>definition</td>
+        <td>int</td>
+        <td>cluster definition, see EMCALClusterDefinition.h</td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::EMCALAmbiguousClusters</button>
+  <div class="panel">
+    <div>
+
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master/PWGJE/DataModel/EMCALClusters.h" target="_blank">PWGJE/DataModel/EMCALClusters.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::EMCALAmbiguousCluster = o2::aod::EMCALAmbiguousClusters::iterator</li>
+      </ul>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::soa::Index</td>
+        <td>GI</td>
+        <td>globalIndex</td>
+        <td>int64_t</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::emcalcluster::BCId</td>
+        <td>I</td>
+        <td>bcId</td>
+        <td>int32</td>
+        <td>bunch crossing ID used as index for ambiguous clusters</td>
+      </tr>
+      <tr>
+        <td>o2::aod::emcalcluster::ID</td>
+        <td></td>
+        <td>id</td>
+        <td>int</td>
+        <td>cluster ID identifying cluster in event</td>
+      </tr>
+      <tr>
+        <td>o2::aod::emcalcluster::Energy</td>
+        <td></td>
+        <td>energy</td>
+        <td>float</td>
+        <td>cluster energy (GeV)</td>
+      </tr>
+      <tr>
+        <td>o2::aod::emcalcluster::CoreEnergy</td>
+        <td></td>
+        <td>coreEnergy</td>
+        <td>float</td>
+        <td>cluster core energy (GeV)</td>
+      </tr>
+      <tr>
+        <td>o2::aod::emcalcluster::Eta</td>
+        <td></td>
+        <td>eta</td>
+        <td>float</td>
+        <td>cluster pseudorapidity (calculated using vertex)</td>
+      </tr>
+      <tr>
+        <td>o2::aod::emcalcluster::Phi</td>
+        <td></td>
+        <td>phi</td>
+        <td>float</td>
+        <td>cluster azimuthal angle (calculated using vertex)</td>
+      </tr>
+      <tr>
+        <td>o2::aod::emcalcluster::M02</td>
+        <td></td>
+        <td>m02</td>
+        <td>float</td>
+        <td>shower shape long axis</td>
+      </tr>
+      <tr>
+        <td>o2::aod::emcalcluster::M20</td>
+        <td></td>
+        <td>m20</td>
+        <td>float</td>
+        <td>shower shape short axis</td>
+      </tr>
+      <tr>
+        <td>o2::aod::emcalcluster::NCells</td>
+        <td></td>
+        <td>nCells</td>
+        <td>int</td>
+        <td>number of cells in cluster</td>
+      </tr>
+      <tr>
+        <td>o2::aod::emcalcluster::Time</td>
+        <td></td>
+        <td>time</td>
+        <td>float</td>
+        <td>cluster time (ns)</td>
+      </tr>
+      <tr>
+        <td>o2::aod::emcalcluster::IsExotic</td>
+        <td></td>
+        <td>isExotic</td>
+        <td>bool</td>
+        <td>flag to mark cluster as exotic</td>
+      </tr>
+      <tr>
+        <td>o2::aod::emcalcluster::DistanceToBadChannel</td>
+        <td></td>
+        <td>distanceToBadChannel</td>
+        <td>float</td>
+        <td>distance to bad channel</td>
+      </tr>
+      <tr>
+        <td>o2::aod::emcalcluster::NLM</td>
+        <td></td>
+        <td>nlm</td>
+        <td>int</td>
+        <td>number of local maxima</td>
+      </tr>
+      <tr>
+        <td>o2::aod::emcalcluster::Definition</td>
+        <td></td>
+        <td>definition</td>
+        <td>int</td>
+        <td>cluster definition, see EMCALClusterDefinition.h</td>
       </tr>
     </table>
   </div>
