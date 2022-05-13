@@ -14,6 +14,10 @@ If your task needs tracks at the collision vertex it will fail because it looks 
 In order to propagate the tracks to the collision vertex, include the task `o2-analysis-track-propagation` into your workflow.
 This task produces the tables Tracks and TracksCov (in order to get the latter, please enable `processCovariance` through the json configuration).
 
+```note
+This task also prouduces the `TrackExtension` table needed for the `track-selection`, therefore the `track-extension` does not need to be added to the workflow at the same time. 
+```
+
 This task is not needed for Run 2 converted data where the tracks are already propagated to the collision vertex.
 
 The overall table flow is illustrated here:
@@ -22,4 +26,4 @@ The overall table flow is illustrated here:
 <img src="prop.png" width="60%">
 </div>
 
-```
+
