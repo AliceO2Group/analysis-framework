@@ -8,7 +8,7 @@ title: Track Selection
 The track selection in the O2 analysis framework is provided in form of a stand-alone workflow that you can run in front of your analysis: 
 
 ```
-o2-analysis-trackextension | o2-analysis-trackselection | o2-analysis-myTask
+o2-analysis-trackselection | o2-analysis-myTask
 ```
 
 Based on a set of track quality criteria, the track selection workflow produces a filter table that allows you to select good tracks in the following manner:
@@ -25,7 +25,7 @@ void process(soa::Filtered<soa::Join<aod::Tracks, aod::TrackSelection>>::iterato
 
 ```
 
-Some of the track parameters used in the track selection require additional calculation effort and are then stored in a table called ```TracksExtended``` which is produced by the ```trackextension``` task. The quantities contained in this table can also be directly used in the analysis.
+Some of the track parameters used in the track selection require additional calculation effort and are then stored in a table called ```TracksExtended``` which is produced by either the ```o2-analysis-trackextension``` task (Run 2) or ```o2-analysis-track-propagation``` (Run 3). The quantities contained in this table can also be directly used in the analysis.
 For instance if you require the distance of closest approach (dca) to the primary vertex, you do not need to (and should not!) re-calculate it in your task. You can simply obtain it by extending the ``` Tracks ``` table in the following way and then access it directly as a property of the track:
 
 ``` c++
@@ -38,7 +38,7 @@ void process(soa::Filtered<soa::Join<aod::Tracks, aod::TracksExtended, aod::Trac
 Both the definition of TrackSelection and the TracksExtended table can be found here: [`TrackSelectionTables`](https://github.com/AliceO2Group/AliceO2/blob/dev/Analysis/DataModel/include/Analysis/TrackSelectionTables.h).
 If you want to have a look at the track parameters after the selection, you can use the [`trackqa`](https://github.com/AliceO2Group/AliceO2/blob/dev/Analysis/Tasks/trackqa.cxx) task:
 ```
-o2-analysis-trackextension | o2-analysis-trackselection | o2-analysis-trackqa
+o2-analysis-trackselection | o2-analysis-trackqa
 ```
 Currently it will show you only the distributions for globalTracks, but soon the track filter will also be configurable.
 
