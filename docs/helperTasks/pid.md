@@ -63,6 +63,14 @@ O2 tasks dedicated to the filling of the PID tables are called with
     o2-analysis-pid-tof
     ```
 
+    This requires a helper class for the building of the event time information
+
+    ``` bash
+    o2-analysis-pid-tof-base
+    ```
+
+    This can be configured according to needs
+
 * TPC PID Table
 
     ``` bash
@@ -83,3 +91,6 @@ O2 tasks dedicated to the filling of the PID tables are called with
     ``` bash
     o2-analysis-spectra-tpc --aod-file AO2D.root -b | o2-analysis-pid-tpc -b
     ```
+
+### Enabling QA histograms
+* QA histograms should come with the PID tasks, they can be enabled with the option `--add-qa 1` when running locally or with the corresponding QA tasks
