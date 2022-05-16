@@ -22,3 +22,5 @@ o2-analysis-timestamp | o2-analysis-my-analysis ...
 and the table should be found.
 
 If you run on Run 3 data or MC and the missing table is "O2tracks", please refer to the documentation on the [track propagation](../helperTasks/trackPropagation.md).
+
+If the misssing table is `O2tofsignal`, please refer to the documentation on the [TOF PID](../helperTasks/pid.md) requirements.
