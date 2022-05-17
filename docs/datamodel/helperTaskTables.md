@@ -14,7 +14,7 @@ Click on the labels to display the table content. Click buttons to
 <!-- Block with helper tasks -->
 
 ####  o2-analysis-calo-clusters
-Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/TableProducer//caloClusterProducer.cxx" target="_blank">caloClusterProducer.cxx</a>
+Code file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev//../O2Physics/Common/TableProducer//caloClusterProducer.cxx" target="_blank">caloClusterProducer.cxx</a>
 <div>
 
   <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::CaloClusters</button>
@@ -23,7 +23,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
 
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master/Common/DataModel/CaloClusters.h" target="_blank">Common/DataModel/CaloClusters.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev//../O2Physics/Common/DataModel/CaloClusters.h" target="_blank">../O2Physics/Common/DataModel/CaloClusters.h</a>
     </div>
     <div>Is used in:
       <ul>
@@ -184,7 +184,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
 </div>
 
 ####  o2-analysis-centrality-table
-Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/TableProducer//centralityTable.cxx" target="_blank">centralityTable.cxx</a>
+Code file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev//../O2Physics/Common/TableProducer//centralityTable.cxx" target="_blank">centralityTable.cxx</a>
 <div>
 
   <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::CentRun2V0Ms</button>
@@ -193,7 +193,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
        V0M estimated centrality table
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master/Common/DataModel/Centrality.h" target="_blank">Common/DataModel/Centrality.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev//../O2Physics/Common/DataModel/Centrality.h" target="_blank">../O2Physics/Common/DataModel/Centrality.h</a>
     </div>
     <div>Is used in:
       <ul>
@@ -224,7 +224,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
        Run2 SPD tracklets estimated centrality table
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master/Common/DataModel/Centrality.h" target="_blank">Common/DataModel/Centrality.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev//../O2Physics/Common/DataModel/Centrality.h" target="_blank">../O2Physics/Common/DataModel/Centrality.h</a>
     </div>
     <div>Is used in:
       <ul>
@@ -255,7 +255,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
        Run2 SPD clusters estimated centrality table
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master/Common/DataModel/Centrality.h" target="_blank">Common/DataModel/Centrality.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev//../O2Physics/Common/DataModel/Centrality.h" target="_blank">../O2Physics/Common/DataModel/Centrality.h</a>
     </div>
     <div>Is used in:
       <ul>
@@ -286,7 +286,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
        Run2 CL0 estimated centrality table
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master/Common/DataModel/Centrality.h" target="_blank">Common/DataModel/Centrality.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev//../O2Physics/Common/DataModel/Centrality.h" target="_blank">../O2Physics/Common/DataModel/Centrality.h</a>
     </div>
     <div>Is used in:
       <ul>
@@ -317,7 +317,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
        Run2 CL1 estimated centrality table
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master/Common/DataModel/Centrality.h" target="_blank">Common/DataModel/Centrality.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev//../O2Physics/Common/DataModel/Centrality.h" target="_blank">../O2Physics/Common/DataModel/Centrality.h</a>
     </div>
     <div>Is used in:
       <ul>
@@ -345,7 +345,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
 </div>
 
 ####  o2-analysis-event-selection
-Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/TableProducer//eventSelection.cxx" target="_blank">eventSelection.cxx</a>
+Code file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev//../O2Physics/Common/TableProducer//eventSelection.cxx" target="_blank">eventSelection.cxx</a>
 <div>
 
   <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::EvSels</button>
@@ -354,7 +354,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
 
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master/Common/DataModel/EventSelection.h" target="_blank">Common/DataModel/EventSelection.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev//../O2Physics/Common/DataModel/EventSelection.h" target="_blank">../O2Physics/Common/DataModel/EventSelection.h</a>
     </div>
     <div>Is used in:
       <ul>
@@ -518,7 +518,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
 
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master/Common/DataModel/EventSelection.h" target="_blank">Common/DataModel/EventSelection.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev//../O2Physics/Common/DataModel/EventSelection.h" target="_blank">../O2Physics/Common/DataModel/EventSelection.h</a>
     </div>
     <div>Is used in:
       <ul>
@@ -651,7 +651,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
 </div>
 
 ####  o2-analysis-fdd-converter
-Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/TableProducer//fddConverter.cxx" target="_blank">fddConverter.cxx</a>
+Code file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev//../O2Physics/Common/TableProducer//fddConverter.cxx" target="_blank">fddConverter.cxx</a>
 <div>
 
   <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::FDDs_001</button>
@@ -660,7 +660,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
        FDD table, version 001
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master/" target="_blank"></a>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev//Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
     </div>
     <div>Is used in:
       <ul>
@@ -730,7 +730,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
 </div>
 
 ####  o2-analysis-ft0-corrected-table
-Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/TableProducer//ft0CorrectedTable.cxx" target="_blank">ft0CorrectedTable.cxx</a>
+Code file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev//../O2Physics/Common/TableProducer//ft0CorrectedTable.cxx" target="_blank">ft0CorrectedTable.cxx</a>
 <div>
 
   <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::FT0sCorrected</button>
@@ -739,7 +739,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
        Table with corrected FT0 values
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master/Common/DataModel/FT0Corrected.h" target="_blank">Common/DataModel/FT0Corrected.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev//../O2Physics/Common/DataModel/FT0Corrected.h" target="_blank">../O2Physics/Common/DataModel/FT0Corrected.h</a>
     </div>
     <div>Is used in:
       <ul>
@@ -802,7 +802,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
 </div>
 
 ####  o2-analysis-mc-converter
-Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/TableProducer//mcConverter.cxx" target="_blank">mcConverter.cxx</a>
+Code file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev//../O2Physics/Common/TableProducer//mcConverter.cxx" target="_blank">mcConverter.cxx</a>
 <div>
 
   <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::StoredMcParticles_001</button>
@@ -811,7 +811,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
        MC particle table, version 001
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master/" target="_blank"></a>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev//Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
     </div>
     <table class=DataModel>
       <tr>
@@ -974,7 +974,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
 </div>
 
 ####  o2-analysis-multiplicity-table
-Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/TableProducer//multiplicityTable.cxx" target="_blank">multiplicityTable.cxx</a>
+Code file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev//../O2Physics/Common/TableProducer//multiplicityTable.cxx" target="_blank">multiplicityTable.cxx</a>
 <div>
 
   <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::Mults</button>
@@ -983,7 +983,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
 
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master/Common/DataModel/Multiplicity.h" target="_blank">Common/DataModel/Multiplicity.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev//../O2Physics/Common/DataModel/Multiplicity.h" target="_blank">../O2Physics/Common/DataModel/Multiplicity.h</a>
     </div>
     <div>Is used in:
       <ul>
@@ -1105,7 +1105,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
 
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master/Common/DataModel/Multiplicity.h" target="_blank">Common/DataModel/Multiplicity.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev//../O2Physics/Common/DataModel/Multiplicity.h" target="_blank">../O2Physics/Common/DataModel/Multiplicity.h</a>
     </div>
     <div>Is used in:
       <ul>
@@ -1168,7 +1168,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
 </div>
 
 ####  o2-analysis-timestamp
-Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/TableProducer//timestamp.cxx" target="_blank">timestamp.cxx</a>
+Code file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev//../O2Physics/Common/TableProducer//timestamp.cxx" target="_blank">timestamp.cxx</a>
 <div>
 
   <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::Timestamps</button>
@@ -1177,7 +1177,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
        Table which holds the timestamp of a BC
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master/" target="_blank"></a>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev//Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
     </div>
     <div>Is used in:
       <ul>
@@ -1205,7 +1205,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
 </div>
 
 ####  o2-analysis-track-propagation
-Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/TableProducer//trackPropagation.cxx" target="_blank">trackPropagation.cxx</a>
+Code file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev//../O2Physics/Common/TableProducer//trackPropagation.cxx" target="_blank">trackPropagation.cxx</a>
 <div>
 
   <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::StoredTracks</button>
@@ -1214,7 +1214,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
        On disk version of the track parameters at collision vertex
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master/" target="_blank"></a>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev//Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
     </div>
     <table class=DataModel>
       <tr>
@@ -1345,7 +1345,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
        On disk version of the TracksCov table at collision vertex
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master/" target="_blank"></a>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev//Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
     </div>
     <table class=DataModel>
       <tr>
@@ -1469,7 +1469,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
 
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master/Common/DataModel/TrackSelectionTables.h" target="_blank">Common/DataModel/TrackSelectionTables.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev//../O2Physics/Common/DataModel/TrackSelectionTables.h" target="_blank">../O2Physics/Common/DataModel/TrackSelectionTables.h</a>
     </div>
     <div>Is used in:
       <ul>
@@ -1490,14 +1490,14 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
         <td></td>
         <td>dcaXY</td>
         <td>float</td>
-        <td></td>
+        <td>Impact parameter in XY of the track to the primary vertex</td>
       </tr>
       <tr>
         <td>o2::aod::track::DcaZ</td>
         <td></td>
         <td>dcaZ</td>
         <td>float</td>
-        <td></td>
+        <td>Impact parameter in Z of the track to the primary vertex</td>
       </tr>
     </table>
   </div>
@@ -1505,7 +1505,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
 </div>
 
 ####  o2-analysis-trackextension
-Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/TableProducer//trackextension.cxx" target="_blank">trackextension.cxx</a>
+Code file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev//../O2Physics/Common/TableProducer//trackextension.cxx" target="_blank">trackextension.cxx</a>
 <div>
 
   <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::TracksExtended</button>
@@ -1514,7 +1514,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
 
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master/Common/DataModel/TrackSelectionTables.h" target="_blank">Common/DataModel/TrackSelectionTables.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev//../O2Physics/Common/DataModel/TrackSelectionTables.h" target="_blank">../O2Physics/Common/DataModel/TrackSelectionTables.h</a>
     </div>
     <div>Is used in:
       <ul>
@@ -1535,14 +1535,14 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
         <td></td>
         <td>dcaXY</td>
         <td>float</td>
-        <td></td>
+        <td>Impact parameter in XY of the track to the primary vertex</td>
       </tr>
       <tr>
         <td>o2::aod::track::DcaZ</td>
         <td></td>
         <td>dcaZ</td>
         <td>float</td>
-        <td></td>
+        <td>Impact parameter in Z of the track to the primary vertex</td>
       </tr>
     </table>
   </div>
@@ -1550,16 +1550,16 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
 </div>
 
 ####  o2-analysis-trackselection
-Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/TableProducer//trackselection.cxx" target="_blank">trackselection.cxx</a>
+Code file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev//../O2Physics/Common/TableProducer//trackselection.cxx" target="_blank">trackselection.cxx</a>
 <div>
 
   <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::TrackSelection</button>
   <div class="panel">
     <div>
-
+       Stored information on the track selection decision + split dynamic information
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master/Common/DataModel/TrackSelectionTables.h" target="_blank">Common/DataModel/TrackSelectionTables.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev//../O2Physics/Common/DataModel/TrackSelectionTables.h" target="_blank">../O2Physics/Common/DataModel/TrackSelectionTables.h</a>
     </div>
     <table class=DataModel>
       <tr>
@@ -1570,17 +1570,129 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
         <th>Comment</th>
       </tr>
       <tr>
-        <td>o2::aod::track::IsGlobalTrack</td>
-        <td></td>
-        <td>isGlobalTrack</td>
-        <td>uint8_t</td>
-        <td></td>
-      </tr>
-      <tr>
         <td>o2::aod::track::IsGlobalTrackSDD</td>
         <td></td>
         <td>isGlobalTrackSDD</td>
         <td>uint8_t</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::TrackCutFlag</td>
+        <td></td>
+        <td>trackCutFlag</td>
+        <td>TrackSelectionFlags::flagtype</td>
+        <td>Flag with the single cut passed flagged</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::PassedTrackType</td>
+        <td>D</td>
+        <td>passedTrackType</td>
+        <td>bool</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::PassedPtRange</td>
+        <td>D</td>
+        <td>passedPtRange</td>
+        <td>bool</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::PassedEtaRange</td>
+        <td>D</td>
+        <td>passedEtaRange</td>
+        <td>bool</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::PassedTPCNCls</td>
+        <td>D</td>
+        <td>passedTPCNCls</td>
+        <td>bool</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::PassedTPCCrossedRows</td>
+        <td>D</td>
+        <td>passedTPCCrossedRows</td>
+        <td>bool</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::PassedTPCCrossedRowsOverNCls</td>
+        <td>D</td>
+        <td>passedTPCCrossedRowsOverNCls</td>
+        <td>bool</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::PassedTPCChi2NDF</td>
+        <td>D</td>
+        <td>passedTPCChi2NDF</td>
+        <td>bool</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::PassedTPCRefit</td>
+        <td>D</td>
+        <td>passedTPCRefit</td>
+        <td>bool</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::PassedITSNCls</td>
+        <td>D</td>
+        <td>passedITSNCls</td>
+        <td>bool</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::PassedITSChi2NDF</td>
+        <td>D</td>
+        <td>passedITSChi2NDF</td>
+        <td>bool</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::PassedITSRefit</td>
+        <td>D</td>
+        <td>passedITSRefit</td>
+        <td>bool</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::PassedITSHits</td>
+        <td>D</td>
+        <td>passedITSHits</td>
+        <td>bool</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::PassedGoldenChi2</td>
+        <td>D</td>
+        <td>passedGoldenChi2</td>
+        <td>bool</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::PassedDCAxy</td>
+        <td>D</td>
+        <td>passedDCAxy</td>
+        <td>bool</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::PassedDCAz</td>
+        <td>D</td>
+        <td>passedDCAz</td>
+        <td>bool</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::IsGlobalTrack</td>
+        <td>GI</td>
+        <td></td>
+        <td>?</td>
         <td></td>
       </tr>
     </table>
@@ -1589,7 +1701,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
 </div>
 
 ####  o2-analysis-weak-decay-indices
-Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/TableProducer//weakDecayIndices.cxx" target="_blank">weakDecayIndices.cxx</a>
+Code file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev//../O2Physics/Common/TableProducer//weakDecayIndices.cxx" target="_blank">weakDecayIndices.cxx</a>
 <div>
 
   <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::V0s_001</button>
@@ -1598,7 +1710,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
        Run 3 V0 table (version 001)
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master/" target="_blank"></a>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev//Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
     </div>
     <div>Is used in:
       <ul>
@@ -1650,7 +1762,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
        Run 3 cascade table
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master/" target="_blank"></a>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev//Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
     </div>
     <div>Is used in:
       <ul>
@@ -1699,7 +1811,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
 </div>
 
 ####  o2-analysis-pid-bayes
-Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/TableProducer/PID//pidBayes.cxx" target="_blank">pidBayes.cxx</a>
+Code file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev//../O2Physics/Common/TableProducer/PID//pidBayes.cxx" target="_blank">pidBayes.cxx</a>
 <div>
 
   <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::pidBayesEl</button>
@@ -1708,7 +1820,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
        Binned (in percentage) Bayesian probability of having a Electron
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master/Common/Core/PID/PIDResponse.h" target="_blank">Common/Core/PID/PIDResponse.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev//../O2Physics/Common/Core/PID/PIDResponse.h" target="_blank">../O2Physics/Common/Core/PID/PIDResponse.h</a>
     </div>
     <table class=DataModel>
       <tr>
@@ -1734,7 +1846,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
        Binned (in percentage) Bayesian probability of having a Muon
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master/Common/Core/PID/PIDResponse.h" target="_blank">Common/Core/PID/PIDResponse.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev//../O2Physics/Common/Core/PID/PIDResponse.h" target="_blank">../O2Physics/Common/Core/PID/PIDResponse.h</a>
     </div>
     <table class=DataModel>
       <tr>
@@ -1760,7 +1872,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
        Binned (in percentage) Bayesian probability of having a Pion
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master/Common/Core/PID/PIDResponse.h" target="_blank">Common/Core/PID/PIDResponse.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev//../O2Physics/Common/Core/PID/PIDResponse.h" target="_blank">../O2Physics/Common/Core/PID/PIDResponse.h</a>
     </div>
     <table class=DataModel>
       <tr>
@@ -1786,7 +1898,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
        Binned (in percentage) Bayesian probability of having a Kaon
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master/Common/Core/PID/PIDResponse.h" target="_blank">Common/Core/PID/PIDResponse.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev//../O2Physics/Common/Core/PID/PIDResponse.h" target="_blank">../O2Physics/Common/Core/PID/PIDResponse.h</a>
     </div>
     <table class=DataModel>
       <tr>
@@ -1812,7 +1924,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
        Binned (in percentage) Bayesian probability of having a Proton
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master/Common/Core/PID/PIDResponse.h" target="_blank">Common/Core/PID/PIDResponse.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev//../O2Physics/Common/Core/PID/PIDResponse.h" target="_blank">../O2Physics/Common/Core/PID/PIDResponse.h</a>
     </div>
     <table class=DataModel>
       <tr>
@@ -1838,7 +1950,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
        Binned (in percentage) Bayesian probability of having a Deuteron
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master/Common/Core/PID/PIDResponse.h" target="_blank">Common/Core/PID/PIDResponse.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev//../O2Physics/Common/Core/PID/PIDResponse.h" target="_blank">../O2Physics/Common/Core/PID/PIDResponse.h</a>
     </div>
     <table class=DataModel>
       <tr>
@@ -1864,7 +1976,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
        Binned (in percentage) Bayesian probability of having a Triton
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master/Common/Core/PID/PIDResponse.h" target="_blank">Common/Core/PID/PIDResponse.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev//../O2Physics/Common/Core/PID/PIDResponse.h" target="_blank">../O2Physics/Common/Core/PID/PIDResponse.h</a>
     </div>
     <table class=DataModel>
       <tr>
@@ -1890,7 +2002,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
        Binned (in percentage) Bayesian probability of having a Helium3
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master/Common/Core/PID/PIDResponse.h" target="_blank">Common/Core/PID/PIDResponse.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev//../O2Physics/Common/Core/PID/PIDResponse.h" target="_blank">../O2Physics/Common/Core/PID/PIDResponse.h</a>
     </div>
     <table class=DataModel>
       <tr>
@@ -1916,7 +2028,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
        Binned (in percentage) Bayesian probability of having a Alpha
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master/Common/Core/PID/PIDResponse.h" target="_blank">Common/Core/PID/PIDResponse.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev//../O2Physics/Common/Core/PID/PIDResponse.h" target="_blank">../O2Physics/Common/Core/PID/PIDResponse.h</a>
     </div>
     <table class=DataModel>
       <tr>
@@ -1942,7 +2054,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
        Index of the most probable ID and its bayesian probability
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master/Common/Core/PID/PIDResponse.h" target="_blank">Common/Core/PID/PIDResponse.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev//../O2Physics/Common/Core/PID/PIDResponse.h" target="_blank">../O2Physics/Common/Core/PID/PIDResponse.h</a>
     </div>
     <table class=DataModel>
       <tr>
@@ -1972,7 +2084,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
 </div>
 
 ####  o2-analysis-pid-tof
-Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/TableProducer/PID//pidTOF.cxx" target="_blank">pidTOF.cxx</a>
+Code file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev//../O2Physics/Common/TableProducer/PID//pidTOF.cxx" target="_blank">pidTOF.cxx</a>
 <div>
 
   <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::pidTOFEl</button>
@@ -1981,7 +2093,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
        Table of the TOF response with binned Nsigma for electron
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master/Common/Core/PID/PIDResponse.h" target="_blank">Common/Core/PID/PIDResponse.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev//../O2Physics/Common/Core/PID/PIDResponse.h" target="_blank">../O2Physics/Common/Core/PID/PIDResponse.h</a>
     </div>
     <table class=DataModel>
       <tr>
@@ -2014,7 +2126,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
        Table of the TOF response with binned Nsigma for muon
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master/Common/Core/PID/PIDResponse.h" target="_blank">Common/Core/PID/PIDResponse.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev//../O2Physics/Common/Core/PID/PIDResponse.h" target="_blank">../O2Physics/Common/Core/PID/PIDResponse.h</a>
     </div>
     <table class=DataModel>
       <tr>
@@ -2047,7 +2159,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
        Table of the TOF response with binned Nsigma for pion
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master/Common/Core/PID/PIDResponse.h" target="_blank">Common/Core/PID/PIDResponse.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev//../O2Physics/Common/Core/PID/PIDResponse.h" target="_blank">../O2Physics/Common/Core/PID/PIDResponse.h</a>
     </div>
     <table class=DataModel>
       <tr>
@@ -2080,7 +2192,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
        Table of the TOF response with binned Nsigma for kaon
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master/Common/Core/PID/PIDResponse.h" target="_blank">Common/Core/PID/PIDResponse.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev//../O2Physics/Common/Core/PID/PIDResponse.h" target="_blank">../O2Physics/Common/Core/PID/PIDResponse.h</a>
     </div>
     <table class=DataModel>
       <tr>
@@ -2113,7 +2225,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
        Table of the TOF response with binned Nsigma for proton
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master/Common/Core/PID/PIDResponse.h" target="_blank">Common/Core/PID/PIDResponse.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev//../O2Physics/Common/Core/PID/PIDResponse.h" target="_blank">../O2Physics/Common/Core/PID/PIDResponse.h</a>
     </div>
     <table class=DataModel>
       <tr>
@@ -2146,7 +2258,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
        Table of the TOF response with binned Nsigma for deuteron
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master/Common/Core/PID/PIDResponse.h" target="_blank">Common/Core/PID/PIDResponse.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev//../O2Physics/Common/Core/PID/PIDResponse.h" target="_blank">../O2Physics/Common/Core/PID/PIDResponse.h</a>
     </div>
     <table class=DataModel>
       <tr>
@@ -2179,7 +2291,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
        Table of the TOF response with binned Nsigma for triton
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master/Common/Core/PID/PIDResponse.h" target="_blank">Common/Core/PID/PIDResponse.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev//../O2Physics/Common/Core/PID/PIDResponse.h" target="_blank">../O2Physics/Common/Core/PID/PIDResponse.h</a>
     </div>
     <table class=DataModel>
       <tr>
@@ -2212,7 +2324,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
        Table of the TOF response with binned Nsigma for helium3
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master/Common/Core/PID/PIDResponse.h" target="_blank">Common/Core/PID/PIDResponse.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev//../O2Physics/Common/Core/PID/PIDResponse.h" target="_blank">../O2Physics/Common/Core/PID/PIDResponse.h</a>
     </div>
     <table class=DataModel>
       <tr>
@@ -2245,7 +2357,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
        Table of the TOF response with binned Nsigma for alpha
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master/Common/Core/PID/PIDResponse.h" target="_blank">Common/Core/PID/PIDResponse.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev//../O2Physics/Common/Core/PID/PIDResponse.h" target="_blank">../O2Physics/Common/Core/PID/PIDResponse.h</a>
     </div>
     <table class=DataModel>
       <tr>
@@ -2274,8 +2386,73 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
 
 </div>
 
+####  o2-analysis-pid-tof-base
+Code file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev//../O2Physics/Common/TableProducer/PID//pidTOFBase.cxx" target="_blank">pidTOFBase.cxx</a>
+<div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::TOFSignal</button>
+  <div class="panel">
+    <div>
+       Table of the TOF signal
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev//../O2Physics/Common/Core/PID/PIDResponse.h" target="_blank">../O2Physics/Common/Core/PID/PIDResponse.h</a>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::pidtofsignal::TOFSignal</td>
+        <td></td>
+        <td>tofSignal</td>
+        <td>float</td>
+        <td>TOF signal from track time</td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::pidEvTimeFlags</button>
+  <div class="panel">
+    <div>
+       Table of the PID flags for the event time tables
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev//../O2Physics/Common/Core/PID/PIDResponse.h" target="_blank">../O2Physics/Common/Core/PID/PIDResponse.h</a>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::pidflags::TOFFlagsFull</td>
+        <td></td>
+        <td>tofFlagsFull</td>
+        <td>uint8_t</td>
+        <td>Flag for the complementary PID information</td>
+      </tr>
+      <tr>
+        <td>o2::aod::pidflags::IsT0TOF</td>
+        <td>D</td>
+        <td>isT0TOF</td>
+        <td>bool</td>
+        <td>True if the T0 TOF was used to compute the TOF response</td>
+      </tr>
+    </table>
+  </div>
+
+</div>
+
 ####  o2-analysis-pid-tof-full
-Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/TableProducer/PID//pidTOFFull.cxx" target="_blank">pidTOFFull.cxx</a>
+Code file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev//../O2Physics/Common/TableProducer/PID//pidTOFFull.cxx" target="_blank">pidTOFFull.cxx</a>
 <div>
 
   <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::pidTOFFullEl</button>
@@ -2284,7 +2461,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
        Table of the TOF (full) response with expected signal, expected resolution and Nsigma for electron
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master/Common/Core/PID/PIDResponse.h" target="_blank">Common/Core/PID/PIDResponse.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev//../O2Physics/Common/Core/PID/PIDResponse.h" target="_blank">../O2Physics/Common/Core/PID/PIDResponse.h</a>
     </div>
     <div>Is used in:
       <ul>
@@ -2336,7 +2513,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
        Table of the TOF (full) response with expected signal, expected resolution and Nsigma for muon
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master/Common/Core/PID/PIDResponse.h" target="_blank">Common/Core/PID/PIDResponse.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev//../O2Physics/Common/Core/PID/PIDResponse.h" target="_blank">../O2Physics/Common/Core/PID/PIDResponse.h</a>
     </div>
     <div>Is used in:
       <ul>
@@ -2388,7 +2565,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
        Table of the TOF (full) response with expected signal, expected resolution and Nsigma for pion
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master/Common/Core/PID/PIDResponse.h" target="_blank">Common/Core/PID/PIDResponse.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev//../O2Physics/Common/Core/PID/PIDResponse.h" target="_blank">../O2Physics/Common/Core/PID/PIDResponse.h</a>
     </div>
     <div>Is used in:
       <ul>
@@ -2440,7 +2617,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
        Table of the TOF (full) response with expected signal, expected resolution and Nsigma for kaon
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master/Common/Core/PID/PIDResponse.h" target="_blank">Common/Core/PID/PIDResponse.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev//../O2Physics/Common/Core/PID/PIDResponse.h" target="_blank">../O2Physics/Common/Core/PID/PIDResponse.h</a>
     </div>
     <div>Is used in:
       <ul>
@@ -2492,7 +2669,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
        Table of the TOF (full) response with expected signal, expected resolution and Nsigma for proton
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master/Common/Core/PID/PIDResponse.h" target="_blank">Common/Core/PID/PIDResponse.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev//../O2Physics/Common/Core/PID/PIDResponse.h" target="_blank">../O2Physics/Common/Core/PID/PIDResponse.h</a>
     </div>
     <div>Is used in:
       <ul>
@@ -2544,7 +2721,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
        Table of the TOF (full) response with expected signal, expected resolution and Nsigma for deuteron
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master/Common/Core/PID/PIDResponse.h" target="_blank">Common/Core/PID/PIDResponse.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev//../O2Physics/Common/Core/PID/PIDResponse.h" target="_blank">../O2Physics/Common/Core/PID/PIDResponse.h</a>
     </div>
     <table class=DataModel>
       <tr>
@@ -2591,7 +2768,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
        Table of the TOF (full) response with expected signal, expected resolution and Nsigma for triton
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master/Common/Core/PID/PIDResponse.h" target="_blank">Common/Core/PID/PIDResponse.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev//../O2Physics/Common/Core/PID/PIDResponse.h" target="_blank">../O2Physics/Common/Core/PID/PIDResponse.h</a>
     </div>
     <table class=DataModel>
       <tr>
@@ -2638,7 +2815,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
        Table of the TOF (full) response with expected signal, expected resolution and Nsigma for helium3
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master/Common/Core/PID/PIDResponse.h" target="_blank">Common/Core/PID/PIDResponse.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev//../O2Physics/Common/Core/PID/PIDResponse.h" target="_blank">../O2Physics/Common/Core/PID/PIDResponse.h</a>
     </div>
     <table class=DataModel>
       <tr>
@@ -2685,7 +2862,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
        Table of the TOF (full) response with expected signal, expected resolution and Nsigma for alpha
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master/Common/Core/PID/PIDResponse.h" target="_blank">Common/Core/PID/PIDResponse.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev//../O2Physics/Common/Core/PID/PIDResponse.h" target="_blank">../O2Physics/Common/Core/PID/PIDResponse.h</a>
     </div>
     <table class=DataModel>
       <tr>
@@ -2729,7 +2906,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
 </div>
 
 ####  o2-analysis-pid-tof-beta
-Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/TableProducer/PID//pidTOFbeta.cxx" target="_blank">pidTOFbeta.cxx</a>
+Code file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev//../O2Physics/Common/TableProducer/PID//pidTOFbeta.cxx" target="_blank">pidTOFbeta.cxx</a>
 <div>
 
   <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::pidTOFbeta</button>
@@ -2738,7 +2915,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
        Table of the TOF beta
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master/Common/Core/PID/PIDResponse.h" target="_blank">Common/Core/PID/PIDResponse.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev//../O2Physics/Common/Core/PID/PIDResponse.h" target="_blank">../O2Physics/Common/Core/PID/PIDResponse.h</a>
     </div>
     <table class=DataModel>
       <tr>
@@ -2796,7 +2973,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
 </div>
 
 ####  o2-analysis-pid-tpc
-Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/TableProducer/PID//pidTPC.cxx" target="_blank">pidTPC.cxx</a>
+Code file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev//../O2Physics/Common/TableProducer/PID//pidTPC.cxx" target="_blank">pidTPC.cxx</a>
 <div>
 
   <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::pidTPCEl</button>
@@ -2805,7 +2982,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
        Table of the TPC response with binned Nsigma for electron
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master/Common/Core/PID/PIDResponse.h" target="_blank">Common/Core/PID/PIDResponse.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev//../O2Physics/Common/Core/PID/PIDResponse.h" target="_blank">../O2Physics/Common/Core/PID/PIDResponse.h</a>
     </div>
     <table class=DataModel>
       <tr>
@@ -2838,7 +3015,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
        Table of the TPC response with binned Nsigma for muon
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master/Common/Core/PID/PIDResponse.h" target="_blank">Common/Core/PID/PIDResponse.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev//../O2Physics/Common/Core/PID/PIDResponse.h" target="_blank">../O2Physics/Common/Core/PID/PIDResponse.h</a>
     </div>
     <table class=DataModel>
       <tr>
@@ -2871,7 +3048,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
        Table of the TPC response with binned Nsigma for pion
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master/Common/Core/PID/PIDResponse.h" target="_blank">Common/Core/PID/PIDResponse.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev//../O2Physics/Common/Core/PID/PIDResponse.h" target="_blank">../O2Physics/Common/Core/PID/PIDResponse.h</a>
     </div>
     <table class=DataModel>
       <tr>
@@ -2904,7 +3081,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
        Table of the TPC response with binned Nsigma for kaon
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master/Common/Core/PID/PIDResponse.h" target="_blank">Common/Core/PID/PIDResponse.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev//../O2Physics/Common/Core/PID/PIDResponse.h" target="_blank">../O2Physics/Common/Core/PID/PIDResponse.h</a>
     </div>
     <table class=DataModel>
       <tr>
@@ -2937,7 +3114,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
        Table of the TPC response with binned Nsigma for proton
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master/Common/Core/PID/PIDResponse.h" target="_blank">Common/Core/PID/PIDResponse.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev//../O2Physics/Common/Core/PID/PIDResponse.h" target="_blank">../O2Physics/Common/Core/PID/PIDResponse.h</a>
     </div>
     <table class=DataModel>
       <tr>
@@ -2970,7 +3147,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
        Table of the TPC response with binned Nsigma for deuteron
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master/Common/Core/PID/PIDResponse.h" target="_blank">Common/Core/PID/PIDResponse.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev//../O2Physics/Common/Core/PID/PIDResponse.h" target="_blank">../O2Physics/Common/Core/PID/PIDResponse.h</a>
     </div>
     <table class=DataModel>
       <tr>
@@ -3003,7 +3180,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
        Table of the TPC response with binned Nsigma for triton
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master/Common/Core/PID/PIDResponse.h" target="_blank">Common/Core/PID/PIDResponse.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev//../O2Physics/Common/Core/PID/PIDResponse.h" target="_blank">../O2Physics/Common/Core/PID/PIDResponse.h</a>
     </div>
     <table class=DataModel>
       <tr>
@@ -3036,7 +3213,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
        Table of the TPC response with binned Nsigma for helium3
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master/Common/Core/PID/PIDResponse.h" target="_blank">Common/Core/PID/PIDResponse.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev//../O2Physics/Common/Core/PID/PIDResponse.h" target="_blank">../O2Physics/Common/Core/PID/PIDResponse.h</a>
     </div>
     <table class=DataModel>
       <tr>
@@ -3069,7 +3246,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
        Table of the TPC response with binned Nsigma for alpha
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master/Common/Core/PID/PIDResponse.h" target="_blank">Common/Core/PID/PIDResponse.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev//../O2Physics/Common/Core/PID/PIDResponse.h" target="_blank">../O2Physics/Common/Core/PID/PIDResponse.h</a>
     </div>
     <table class=DataModel>
       <tr>
@@ -3099,7 +3276,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
 </div>
 
 ####  o2-analysis-pid-tpc-full
-Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/TableProducer/PID//pidTPCFull.cxx" target="_blank">pidTPCFull.cxx</a>
+Code file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev//../O2Physics/Common/TableProducer/PID//pidTPCFull.cxx" target="_blank">pidTPCFull.cxx</a>
 <div>
 
   <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::pidTPCFullEl</button>
@@ -3108,7 +3285,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
        Table of the TPC (full) response with expected signal, expected resolution and Nsigma for electron
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master/Common/Core/PID/PIDResponse.h" target="_blank">Common/Core/PID/PIDResponse.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev//../O2Physics/Common/Core/PID/PIDResponse.h" target="_blank">../O2Physics/Common/Core/PID/PIDResponse.h</a>
     </div>
     <div>Is used in:
       <ul>
@@ -3153,7 +3330,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
        Table of the TPC (full) response with expected signal, expected resolution and Nsigma for muon
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master/Common/Core/PID/PIDResponse.h" target="_blank">Common/Core/PID/PIDResponse.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev//../O2Physics/Common/Core/PID/PIDResponse.h" target="_blank">../O2Physics/Common/Core/PID/PIDResponse.h</a>
     </div>
     <div>Is used in:
       <ul>
@@ -3198,7 +3375,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
        Table of the TPC (full) response with expected signal, expected resolution and Nsigma for pion
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master/Common/Core/PID/PIDResponse.h" target="_blank">Common/Core/PID/PIDResponse.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev//../O2Physics/Common/Core/PID/PIDResponse.h" target="_blank">../O2Physics/Common/Core/PID/PIDResponse.h</a>
     </div>
     <div>Is used in:
       <ul>
@@ -3243,7 +3420,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
        Table of the TPC (full) response with expected signal, expected resolution and Nsigma for kaon
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master/Common/Core/PID/PIDResponse.h" target="_blank">Common/Core/PID/PIDResponse.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev//../O2Physics/Common/Core/PID/PIDResponse.h" target="_blank">../O2Physics/Common/Core/PID/PIDResponse.h</a>
     </div>
     <div>Is used in:
       <ul>
@@ -3288,7 +3465,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
        Table of the TPC (full) response with expected signal, expected resolution and Nsigma for proton
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master/Common/Core/PID/PIDResponse.h" target="_blank">Common/Core/PID/PIDResponse.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev//../O2Physics/Common/Core/PID/PIDResponse.h" target="_blank">../O2Physics/Common/Core/PID/PIDResponse.h</a>
     </div>
     <div>Is used in:
       <ul>
@@ -3333,7 +3510,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
        Table of the TPC (full) response with expected signal, expected resolution and Nsigma for deuteron
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master/Common/Core/PID/PIDResponse.h" target="_blank">Common/Core/PID/PIDResponse.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev//../O2Physics/Common/Core/PID/PIDResponse.h" target="_blank">../O2Physics/Common/Core/PID/PIDResponse.h</a>
     </div>
     <table class=DataModel>
       <tr>
@@ -3373,7 +3550,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
        Table of the TPC (full) response with expected signal, expected resolution and Nsigma for triton
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master/Common/Core/PID/PIDResponse.h" target="_blank">Common/Core/PID/PIDResponse.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev//../O2Physics/Common/Core/PID/PIDResponse.h" target="_blank">../O2Physics/Common/Core/PID/PIDResponse.h</a>
     </div>
     <table class=DataModel>
       <tr>
@@ -3413,7 +3590,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
        Table of the TPC (full) response with expected signal, expected resolution and Nsigma for helium3
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master/Common/Core/PID/PIDResponse.h" target="_blank">Common/Core/PID/PIDResponse.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev//../O2Physics/Common/Core/PID/PIDResponse.h" target="_blank">../O2Physics/Common/Core/PID/PIDResponse.h</a>
     </div>
     <table class=DataModel>
       <tr>
@@ -3453,7 +3630,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
        Table of the TPC (full) response with expected signal, expected resolution and Nsigma for alpha
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master/Common/Core/PID/PIDResponse.h" target="_blank">Common/Core/PID/PIDResponse.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev//../O2Physics/Common/Core/PID/PIDResponse.h" target="_blank">../O2Physics/Common/Core/PID/PIDResponse.h</a>
     </div>
     <table class=DataModel>
       <tr>
