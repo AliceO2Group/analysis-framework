@@ -31,4 +31,8 @@ And similar for the columns:
 - E: expression column, calculated when the table is requested, only once, and therefore can be used in loops
 - GI: global index
 - I: index column
+- SI: self index column
+- SLI: slice index column
+- SSLI: self slice index column
+- SAI: self array index column
 - else: normal column
