@@ -651,6 +651,34 @@ Click on the labels to display the definitions. Click buttons to
     </ul>
   </div>
 
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::Hf2Prong</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::Hf2Prong = o2::aod::Hf2Prongs::iterator</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::HfCascade</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::HfCascade = o2::aod::HfCascades::iterator</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::Hf3Prong</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::Hf3Prong = o2::aod::Hf3Prongs::iterator</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::HfDstar</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::HfDstar = o2::aod::HfDstars::iterator</li>
+    </ul>
+  </div>
+
   <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::HfCandProng2</button>
   <div class="panel">
     <ul>
