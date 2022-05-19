@@ -1096,6 +1096,13 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
         <td>int</td>
         <td></td>
       </tr>
+      <tr>
+        <td>o2::aod::mult::MultNTracksPVeta1</td>
+        <td></td>
+        <td>multNTracksPVeta1</td>
+        <td>int</td>
+        <td></td>
+      </tr>
     </table>
   </div>
 
