@@ -2498,17 +2498,17 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGDQ
       </tr>
       <tr>
         <td>o2::aod::reducedtrackMC::MothersIds</td>
-        <td>GI</td>
+        <td>SAI</td>
+        <td>mothersIds</td>
         <td></td>
-        <td>?</td>
-        <td></td>
+        <td>Mother tracks (possible empty) array. Iterate over mcParticle.mothers_as<aod::McParticles>())</td>
       </tr>
       <tr>
         <td>o2::aod::reducedtrackMC::DaughtersIdSlice</td>
-        <td>GI</td>
-        <td></td>
-        <td>?</td>
-        <td></td>
+        <td>SSLI</td>
+        <td>daughtersIds</td>
+        <td>int32_t</td>
+        <td>Daughter tracks (possibly empty) slice. Check for non-zero with mcParticle.has_daughters(). Iterate over mcParticle.daughters_as<aod::McParticles>())</td>
       </tr>
       <tr>
         <td>o2::aod::mcparticle::Weight</td>
