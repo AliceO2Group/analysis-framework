@@ -4949,17 +4949,17 @@ For better overview the tables are grouped into the following categories: | [Gen
       </tr>
       <tr>
         <td>o2::aod::mcparticle::MothersIds</td>
-        <td>GI</td>
+        <td>SAI</td>
+        <td>mothersIds</td>
         <td></td>
-        <td>?</td>
-        <td></td>
+        <td>Mother tracks (possible empty) array. Iterate over mcParticle.mothers_as<aod::McParticles>())</td>
       </tr>
       <tr>
         <td>o2::aod::mcparticle::DaughtersIdSlice</td>
-        <td>GI</td>
-        <td></td>
-        <td>?</td>
-        <td></td>
+        <td>SSLI</td>
+        <td>daughtersIds</td>
+        <td>int32_t</td>
+        <td>Daughter tracks (possibly empty) slice. Check for non-zero with mcParticle.has_daughters(). Iterate over mcParticle.daughters_as<aod::McParticles>())</td>
       </tr>
       <tr>
         <td>o2::aod::mcparticle::Weight</td>
@@ -5332,17 +5332,17 @@ For better overview the tables are grouped into the following categories: | [Gen
       </tr>
       <tr>
         <td>o2::aod::mcparticle::MothersIds</td>
-        <td>GI</td>
+        <td>SAI</td>
+        <td>mothersIds</td>
         <td></td>
-        <td>?</td>
-        <td></td>
+        <td>Mother tracks (possible empty) array. Iterate over mcParticle.mothers_as<aod::McParticles>())</td>
       </tr>
       <tr>
         <td>o2::aod::mcparticle::DaughtersIdSlice</td>
-        <td>GI</td>
-        <td></td>
-        <td>?</td>
-        <td></td>
+        <td>SSLI</td>
+        <td>daughtersIds</td>
+        <td>int32_t</td>
+        <td>Daughter tracks (possibly empty) slice. Check for non-zero with mcParticle.has_daughters(). Iterate over mcParticle.daughters_as<aod::McParticles>())</td>
       </tr>
       <tr>
         <td>o2::aod::mcparticle::Weight</td>
