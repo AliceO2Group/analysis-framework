@@ -14,76 +14,19 @@ Obtain mixed event tuples.
   Executable: o2-analysistutorial-event-mixing
 </div>
 
-In event mixing data from one event is combined with data from other events. A prominent example of its application is the estimation of the combinatorial background in invariant mass analyses. Combinatorial background is created when non-correlated tracks of the same event (tracks stemming from the decay of different resonances) are combined. The shape of this background can under some conditions be well reproduced by mixed event combinations, hence combinations of tracks from different events, which by definition can not originate from the same resonance. Often it is required that tracks from in some sense similar events are combined, e.g. events with similar track multiplicity, or events with similar vertex position.
+In event mixing, data from one event is combined with data from other events. A prominent example of its application is the estimation of the combinatorial background in invariant mass analyses. Combinatorial background is created when non-correlated tracks of the same event (tracks stemming from the decay of different resonances) are combined. The shape of this background can under some conditions be well reproduced by mixed event combinations, hence combinations of tracks from different events, which by definition cannot originate from the same resonance. Often it is required that tracks from in some sense similar events are combined, e.g. events with similar track multiplicity, or events with similar vertex position.
 
-To obtain combinations of tracks from distinct sets of tracks [tracks1, tracks2, ...] is rather simple. For this the framework provides the function
+### Combinations of tracks
 
-```cpp
-o2::soa::combinations ('IndexPolicy'(tracks1, tracks2, ...))
-```
-
-which returns tuples of tracks (one track from each set of tracks).
-
-There are several `IndexPolicy` available which are explained [here](../framework/framework.md#getting-combinations).
-
-<a name="hashtask"></a>
-### HashTask
-
-The creation of the distinct sets of tracks needs a bigger effort.
-In the tutorial example the tracks from different collisions with similar vertex positions are combined. In order to sort the collisions according to the vertex position, a hash value is computed for each collision. In this case 6 bins in x and y direction are used between -1.5 and 1.5 mum in both directions. If the vertex lies outside of these bounds the hash value -1 is returned. The hash value assigns a collision to one of these bins.
+To obtain combinations of tracks from distinct track tables [tracks1, tracks2, ...] is rather simple. For this, the framework provides the function:
 
 ```cpp
-namespace o2::aod
-{
-namespace hash
-{
-DECLARE_SOA_COLUMN(Bin, bin, int);
-} // namespace hash
-DECLARE_SOA_TABLE(Hashes, "AOD", "HASH", hash::Bin);
-
-using Hash = Hashes::iterator;
-} // namespace o2::aod
-
-using namespace o2;
-using namespace o2::framework;
-using namespace o2::framework::expressions;
-using namespace o2::soa;
-
-struct HashTask {
-  std::vector<float> xBins{-0.060f, -0.620f, -0.064f, 0.066f, 0.068f, 0.070f, 0.072f};
-  std::vector<float> yBins{-0.300f, -0.301f, -0.320f, 0.330f, 0.340f, 0.350f, 0.360f};
-  Produces<aod::Hashes> hashes;
-
-  // Calculate hash for an element based on 2 properties and their bins.
-  int getHash(std::vector<float> const& xBins, std::vector<float> const& yBins, float colX, float colY)
-  {
-    if (colX < xBins[0] || colY < yBins[0]) {
-      return -1;
-    }
-    for (int i = 1; i < xBins.size(); i++) {
-      if (colX < xBins[i]) {
-        for (int j = 1; j < yBins.size(); j++) {
-          if (colY < yBins[j]) {
-            return i + j * (xBins.size() + 1);
-          }
-        }
-        return -1;
-      }
-    }
-    return -1;
-  }
-
-  // fill the table hashes
-  void process(aod::Collisions const& collisions)
-  {
-    for (auto& collision : collisions) {
-      int hash = getHash(xBins, yBins, collision.posX(), collision.posY());
-      LOGF(info, "Collision: %d (%f, %f, %f) hash: %d", collision.index(), collision.posX(), collision.posY(), collision.posZ(), hash);
-      hashes(hash);
-    }
-  }
-};
+o2::soa::combinations (*CombinationIndexPolicy*(tracks1, tracks2, ...))
 ```
+
+which returns tuples of tracks (one track from each table of tracks).
+
+There are several *CombinationIndexPolicies* available which are explained [here](../framework/framework.md#getting-combinations-pairs-triplets-).
 
 <a name="mixedeventtracks"></a>
 ### MixedEventsTracks
