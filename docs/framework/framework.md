@@ -536,20 +536,27 @@ See also tutorials [Data Selection](../tutorials/dataSelection.md).
 
 
 ## Getting combinations (pairs, triplets, ...)
-To get combinations of distinct tracks, helper functions from `ASoAHelpers.h` can be used. Presently, there are 3 combinations policies available: strictly upper, upper and full. `CombinationsStrictlyUpperPolicy` is applied by default if all tables are of the same type, otherwise `FullIndexPolicy` is applied.
+You can use  helper functions from `ASoAHelpers.h` to get combinations of elements (collisions, tracks, ...). There are 3 basic combinations policies available. Assuming that we want to get pairs of elements from tables with sizes (5, 6):
+
+1. `CombinationsFullIndexPolicy`:<br>
+  Row numbers of elements: (0, 0), ..., (0, 5), (1, 0), ..., (1, 5), ..., (4, 0), ..., (4, 5)
+2. `CombinationsUpperIndexPolicy`:<br>
+  Row numbers of elements: (0, 0), ..., (0, 5), (1, 1), ..., (1, 5), ..., (4, 4), (4, 5)
+  - no repetitions of pairs like (0, 1) and (1, 0)
+3. `CombinationsStrictlyUpperIndexPolicy`:<br>
+  Row numbers of elements: (0, 1), ..., (0, 5), (1, 2), ..., (1, 5), ..., (3, 5)
+  - max position: (table size - distance from the rightmost iterator) = (4, 6), that's why the last pair is (3, 5) and not (4, 5)<br>
+  - no repetitions of pairs like (0, 1) and (1, 0)
+  - no repeated positions within a single tuple, e.g., (0, 0)
+
+`CombinationsStrictlyUpperPolicy` is applied by default if all tables are of the same type, otherwise `FullIndexPolicy` is applied.
 
 ```todo
 Explain difference between policies
 
 `IndexPolicy`:
-- CombinationsIndexPolicyBase
-- CombinationsUpperIndexPolicy
-- CombinationsStrictlyUpperIndexPolicy
-- CombinationsFullIndexPolicy
-- CombinationsBlockIndexPolicyBase
 - CombinationsBlockUpperIndexPolicy
 - CombinationsBlockFullIndexPolicy
-- CombinationsBlockSameIndexPolicyBase
 - CombinationsBlockUpperSameIndexPolicy
 - CombinationsBlockStrictlyUpperSameIndexPolicy
 - CombinationsBlockFullSameIndexPolicy
@@ -560,7 +567,7 @@ combinations(tracks, tracks); // equivalent to combinations(CombinationsStrictly
 combinations(filter, tracks, covs); // equivalent to combinations(CombinationsUpperIndexPolicy(tracks, covs), filter, tracks, covs);
 ```
 
-The number of elements in a combination is deduced from the number of arguments passed to `combinations()` call. For example, to get pairs of tracks from the same source, one must specify `tracks` table twice:
+The number of elements in a combination is deduced from the number of arguments passed to `combinations()` call. For example, to get pairs of tracks from the same source one must specify `tracks` table twice:
 
 ```cpp
 struct MyTask : AnalysisTask {
