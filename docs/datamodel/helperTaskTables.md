@@ -790,6 +790,13 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
         <td>Was T0CCorrected computable?</td>
       </tr>
       <tr>
+        <td>o2::aod::ft0::T0ACValid</td>
+        <td>D</td>
+        <td>t0ACValid</td>
+        <td>bool</td>
+        <td>Was T0AC computable?</td>
+      </tr>
+      <tr>
         <td>o2::aod::ft0::T0resolution</td>
         <td>D</td>
         <td>t0resolution</td>
@@ -1343,6 +1350,13 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
         <td>short</td>
         <td>Charge: positive: 1, negative: -1</td>
       </tr>
+      <tr>
+        <td>o2::soa::Marker</td>
+        <td>GI</td>
+        <td></td>
+        <td>?</td>
+        <td></td>
+      </tr>
     </table>
   </div>
 
@@ -1466,6 +1480,13 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
         <td>rho1PtTgl</td>
         <td>int8_t</td>
         <td>Covariance matrix in compressed form</td>
+      </tr>
+      <tr>
+        <td>o2::soa::Marker</td>
+        <td>GI</td>
+        <td></td>
+        <td>?</td>
+        <td></td>
       </tr>
     </table>
   </div>
@@ -2440,18 +2461,25 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
         <th>Comment</th>
       </tr>
       <tr>
-        <td>o2::aod::pidflags::TOFFlagsFull</td>
+        <td>o2::aod::pidflags::TOFFlags</td>
         <td></td>
-        <td>tofFlagsFull</td>
+        <td>tofFlags</td>
         <td>uint8_t</td>
-        <td>Flag for the complementary PID information</td>
+        <td>Flag for the complementary TOF PID information</td>
       </tr>
       <tr>
-        <td>o2::aod::pidflags::IsT0TOF</td>
+        <td>o2::aod::pidflags::IsEvTimeTOF</td>
         <td>D</td>
-        <td>isT0TOF</td>
+        <td>isEvTimeTOF</td>
         <td>bool</td>
-        <td>True if the T0 TOF was used to compute the TOF response</td>
+        <td>True if the Event Time was computed with the TOF</td>
+      </tr>
+      <tr>
+        <td>o2::aod::pidflags::IsEvTimeT0AC</td>
+        <td>D</td>
+        <td>isEvTimeT0AC</td>
+        <td>bool</td>
+        <td>True if the Event Time was computed with the T0AC</td>
       </tr>
     </table>
   </div>
