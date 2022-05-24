@@ -391,6 +391,13 @@ For better overview the tables are grouped into the following categories: | [Gen
         <td>Charge: positive: 1, negative: -1</td>
       </tr>
       <tr>
+        <td>o2::soa::Marker</td>
+        <td>GI</td>
+        <td></td>
+        <td>?</td>
+        <td></td>
+      </tr>
+      <tr>
         <td>o2::aod::track::Pt</td>
         <td>E</td>
         <td>pt</td>
@@ -519,18 +526,18 @@ For better overview the tables are grouped into the following categories: | [Gen
         <td>(sign of charge)/Pt in c/GeV. Use pt() and sign() instead</td>
       </tr>
       <tr>
-        <td>o2::aod::track::Py</td>
-        <td>D</td>
-        <td>py</td>
-        <td>float</td>
-        <td>Momentum in y-direction in GeV/c</td>
-      </tr>
-      <tr>
         <td>o2::aod::track::Px</td>
         <td>D</td>
         <td>px</td>
         <td>float</td>
         <td>Momentum in x-direction in GeV/c</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::Py</td>
+        <td>D</td>
+        <td>py</td>
+        <td>float</td>
+        <td>Momentum in y-direction in GeV/c</td>
       </tr>
       <tr>
         <td>o2::aod::track::Pz</td>
@@ -552,6 +559,13 @@ For better overview the tables are grouped into the following categories: | [Gen
         <td>sign</td>
         <td>short</td>
         <td>Charge: positive: 1, negative: -1</td>
+      </tr>
+      <tr>
+        <td>o2::soa::Marker</td>
+        <td>GI</td>
+        <td></td>
+        <td>?</td>
+        <td></td>
       </tr>
       <tr>
         <td>o2::aod::track::Pt</td>
@@ -718,6 +732,13 @@ For better overview the tables are grouped into the following categories: | [Gen
         <td>Covariance matrix in compressed form</td>
       </tr>
       <tr>
+        <td>o2::soa::Marker</td>
+        <td>GI</td>
+        <td></td>
+        <td>?</td>
+        <td></td>
+      </tr>
+      <tr>
         <td>o2::aod::track::CYY</td>
         <td>E</td>
         <td>cYY</td>
@@ -853,16 +874,16 @@ For better overview the tables are grouped into the following categories: | [Gen
         <th>Comment</th>
       </tr>
       <tr>
-        <td>o2::aod::track::SigmaZ</td>
+        <td>o2::aod::track::SigmaY</td>
         <td></td>
-        <td>sigmaZ</td>
+        <td>sigmaY</td>
         <td>float</td>
         <td>Covariance matrix</td>
       </tr>
       <tr>
-        <td>o2::aod::track::SigmaY</td>
+        <td>o2::aod::track::SigmaZ</td>
         <td></td>
-        <td>sigmaY</td>
+        <td>sigmaZ</td>
         <td>float</td>
         <td>Covariance matrix</td>
       </tr>
@@ -956,6 +977,13 @@ For better overview the tables are grouped into the following categories: | [Gen
         <td>rho1PtTgl</td>
         <td>int8_t</td>
         <td>Covariance matrix in compressed form</td>
+      </tr>
+      <tr>
+        <td>o2::soa::Marker</td>
+        <td>GI</td>
+        <td></td>
+        <td>?</td>
+        <td></td>
       </tr>
       <tr>
         <td>o2::aod::track::CYY</td>
@@ -1465,6 +1493,13 @@ For better overview the tables are grouped into the following categories: | [Gen
         <td>short</td>
         <td>Charge: positive: 1, negative: -1</td>
       </tr>
+      <tr>
+        <td>o2::soa::Marker</td>
+        <td>GI</td>
+        <td></td>
+        <td>?</td>
+        <td></td>
+      </tr>
     </table>
   </div>
 
@@ -1556,18 +1591,18 @@ For better overview the tables are grouped into the following categories: | [Gen
         <td>(sign of charge)/Pt in c/GeV. Use pt() and sign() instead</td>
       </tr>
       <tr>
-        <td>o2::aod::track::Py</td>
-        <td>D</td>
-        <td>py</td>
-        <td>float</td>
-        <td>Momentum in y-direction in GeV/c</td>
-      </tr>
-      <tr>
         <td>o2::aod::track::Px</td>
         <td>D</td>
         <td>px</td>
         <td>float</td>
         <td>Momentum in x-direction in GeV/c</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::Py</td>
+        <td>D</td>
+        <td>py</td>
+        <td>float</td>
+        <td>Momentum in y-direction in GeV/c</td>
       </tr>
       <tr>
         <td>o2::aod::track::Pz</td>
@@ -1589,6 +1624,13 @@ For better overview the tables are grouped into the following categories: | [Gen
         <td>sign</td>
         <td>short</td>
         <td>Charge: positive: 1, negative: -1</td>
+      </tr>
+      <tr>
+        <td>o2::soa::Marker</td>
+        <td>GI</td>
+        <td></td>
+        <td>?</td>
+        <td></td>
       </tr>
     </table>
   </div>
@@ -1715,6 +1757,13 @@ For better overview the tables are grouped into the following categories: | [Gen
         <td>int8_t</td>
         <td>Covariance matrix in compressed form</td>
       </tr>
+      <tr>
+        <td>o2::soa::Marker</td>
+        <td>GI</td>
+        <td></td>
+        <td>?</td>
+        <td></td>
+      </tr>
     </table>
   </div>
 
@@ -1736,16 +1785,16 @@ For better overview the tables are grouped into the following categories: | [Gen
         <th>Comment</th>
       </tr>
       <tr>
-        <td>o2::aod::track::SigmaZ</td>
+        <td>o2::aod::track::SigmaY</td>
         <td></td>
-        <td>sigmaZ</td>
+        <td>sigmaY</td>
         <td>float</td>
         <td>Covariance matrix</td>
       </tr>
       <tr>
-        <td>o2::aod::track::SigmaY</td>
+        <td>o2::aod::track::SigmaZ</td>
         <td></td>
-        <td>sigmaY</td>
+        <td>sigmaZ</td>
         <td>float</td>
         <td>Covariance matrix</td>
       </tr>
@@ -1839,6 +1888,13 @@ For better overview the tables are grouped into the following categories: | [Gen
         <td>rho1PtTgl</td>
         <td>int8_t</td>
         <td>Covariance matrix in compressed form</td>
+      </tr>
+      <tr>
+        <td>o2::soa::Marker</td>
+        <td>GI</td>
+        <td></td>
+        <td>?</td>
+        <td></td>
       </tr>
     </table>
   </div>
