@@ -536,31 +536,20 @@ See also tutorials [Data Selection](../tutorials/dataSelection.md).
 
 
 ## Getting combinations (pairs, triplets, ...)
-To get combinations of distinct tracks, helper functions from `ASoAHelpers.h` can be used. Presently, there are 3 combinations policies available: strictly upper, upper and full. `CombinationsStrictlyUpperPolicy` is applied by default if all tables are of the same type, otherwise `FullIndexPolicy` is applied.
+You can use  helper functions from `ASoAHelpers.h` to get combinations of elements (collisions, tracks, ...). There are 3 basic combinations policies available. Assuming that we want to get pairs of elements from tables with sizes (5, 6):
 
-```todo
-Explain difference between policies
+1. `CombinationsFullIndexPolicy`:<br>
+  Row numbers of elements: (0, 0), ..., (0, 5), (1, 0), ..., (1, 5), ..., (4, 0), ..., (4, 5)
+2. `CombinationsUpperIndexPolicy`:<br>
+  Row numbers of elements: (0, 0), ..., (0, 5), (1, 1), ..., (1, 5), ..., (4, 4), (4, 5)
+  - no repetitions of pairs like (0, 1) and (1, 0)
+3. `CombinationsStrictlyUpperIndexPolicy`:<br>
+  Row numbers of elements: (0, 1), ..., (0, 5), (1, 2), ..., (1, 5), ..., (3, 5)
+  - max position: (table size - distance from the rightmost iterator) = (4, 6), that's why the last pair is (3, 5) and not (4, 5)<br>
+  - no repetitions of pairs like (0, 1) and (1, 0)
+  - no repeated positions within a single tuple, e.g., (0, 0)
 
-`IndexPolicy`:
-- CombinationsIndexPolicyBase
-- CombinationsUpperIndexPolicy
-- CombinationsStrictlyUpperIndexPolicy
-- CombinationsFullIndexPolicy
-- CombinationsBlockIndexPolicyBase
-- CombinationsBlockUpperIndexPolicy
-- CombinationsBlockFullIndexPolicy
-- CombinationsBlockSameIndexPolicyBase
-- CombinationsBlockUpperSameIndexPolicy
-- CombinationsBlockStrictlyUpperSameIndexPolicy
-- CombinationsBlockFullSameIndexPolicy
-```
-
-```cpp
-combinations(tracks, tracks); // equivalent to combinations(CombinationsStrictlyUpperIndexPolicy(tracks, tracks));
-combinations(filter, tracks, covs); // equivalent to combinations(CombinationsUpperIndexPolicy(tracks, covs), filter, tracks, covs);
-```
-
-The number of elements in a combination is deduced from the number of arguments passed to `combinations()` call. For example, to get pairs of tracks from the same source, one must specify `tracks` table twice:
+The number of elements in a combination is deduced from the number of arguments passed to `combinations()` call. For example, to get pairs of tracks from the same source one must specify `tracks` table twice:
 
 ```cpp
 struct MyTask : AnalysisTask {
@@ -587,25 +576,9 @@ struct MyTask : AnalysisTask {
 };
 ```
 
-One can get combinations of elements with the same value in a given column. Input tables do not need to be the same but each table must contain the column used for categorizing. Additionally, you can specify a value to be skipped for grouping as well as the number of elements to be matched with first element in a combination. Again, full, strictly upper and upper policies are available:
+### Combinations with filters
 
-```cpp
-for (auto& [c0, c1] : combinations(CombinationsBlockStrictlyUpperIndexPolicy("fRunNumber", 3, -1, collisions, collisions))) {
-  // Pairs of collisions with same fRunNumber, max 3 pairs for each element in a given "fRunNumber" bin. Entries with fRunNumber == -1 are skipped.
-}
-for (auto& [c0, t1] : combinations(CombinationsBlockFullIndexPolicy("fX", 200, -1, collisions, tracks)));
-```
-
-For better performance, if the same table is used, `Block{Full,StrictlyUpper,Upper}SameIndex` policies should be preferred. `selfCombinations()` are a shortuct to apply StrictlyUpperSameIndex policy:
-
-```cpp
-for (auto& [c0, c1] : combinations(CombinationsBlockFullSameIndexPolicy("fRunNumber", 3, -1, collisions, collisions)));
-for (auto& [c0, c1] : selfCombinations("fRunNumber", 3, -1, collisions, collisions)) {
-  // same as: combinations(CombinationsBlockStrictlyUpperSameIndexPolicy("fRunNumber", 3, -1, collisions, collisions));
-}
-```
-
-It will be possible to specify a filter for a combination as a whole, and only matching combinations will be then output. Currently, the filter is applied to each element separately. Note that for filter version the input tables are mentioned twice, both in policy constructor and in `combinations()` call itself.
+It is possible to specify a filter in the argument list, and only matching combinations are output. Currently, the filter is applied to each element separately, so it is slower than simple combinations over an already filtered table. Note that for filter version the input tables are mentioned twice, both in the policy constructor and in the `combinations()` call itself.
 
 ```cpp
 struct MyTask : AnalysisTask {
@@ -619,6 +592,88 @@ struct MyTask : AnalysisTask {
   }
 };
 ```
+
+### Block / binned combination policies
+
+Block policies allow for generating tuples of elements according to the binning policy provided  by the user. The binning policy calculates bin numbers for the input elements and groups the elements by bins. Then, the block combinations output tuples of elements from the same bin. Analogously to basic policies, we have full / upper / strictly upper block combinations.
+
+Different tables:
+- CombinationsBlockUpperIndexPolicy
+- CombinationsBlockFullIndexPolicy
+
+Performance-efficient policies for getting tuples of elements from the same table:
+- CombinationsBlockUpperSameIndexPolicy
+- CombinationsBlockFullSameIndexPolicy
+- CombinationsBlockStrictlyUpperSameIndexPolicy
+
+Binning Policy accepts an array of bins (C++ vectors), and a bool specifying whether under- and overflow values should be ignored. If it is set to true, all underflow and overflow values are assigned to a dummy bin `-1`. The first non-underflow bin is 0. If the bool is false, then the values that are underflow in all dimensions are included in the bin 0, the first non-underflow bin is 1, and there are more bins for under- and overflow values from specific dimensions.
+
+Block policies have 2 additional parameters: `outsider` and `categoryNeighbours`.
+
+`Outsider` is the number of a bin that should be ignored. Usually, one uses BinningPolicy with `ignoreOverflows` set to `true`, and then the block policy with `outsider` set to `-1`, so as to obtain block combinations without under- and overflow values.
+
+`CategoryNeighbours` is the number of the consecutive following elements a given element is combined with. For performance reasons, tuples of elements traditionally are not generated over the whole bin, but over several much smaller intervals.<br>
+Example: `categoryNeighbours = 4`, the bin contains elements at rows: 1, 3, 5, 6, 10, 13, 16, 19<br>
+         Strictly upper pairs (different colors mark pairs from different 5-element combinations intervals): <span style="color:blue">(1, 3), ..., (1, 10), (3, 5), ..., (6, 10),</span> <span style="color:green">(3, 5), ..., (10, 13),</span> <span style="color:orange">(5, 6), ..., (13, 16),</span> ...<br>
+Note that some pairs get repeated, e.g., (3, 5).<br>
+To get the behavior without sliding windows, set category neighbours to a very high value.
+
+
+Below, you can see a full example of block combinations in an analysis task:
+
+```cpp
+struct BinnedTrackCombinations {
+  std::vector<double> xBins{VARIABLE_WIDTH, -0.064, -0.062, -0.060, 0.066, 0.068, 0.070, 0.072};
+  std::vector<double> yBins{VARIABLE_WIDTH, -0.320, -0.301, -0.300, 0.330, 0.340, 0.350, 0.360};
+{% raw %}
+  BinningPolicy<aod::track::X, aod::track::Y> trackBinning{{xBins, yBins}, true};
+{% endraw %}
+
+  void process(aod::Tracks const& tracks)
+  {
+    // Strictly upper tracks binned by x and y position
+    for (auto& [t0, t1] : selfCombinations(trackBinning, 5, -1, tracks, tracks)) { ... }
+  }
+};
+```
+
+### Helper functions (shortcuts)
+
+Accepts only the same tables, applies block strictly upper policy:
+```cpp
+selfCombinations(binningPolicy, categoryNeighbours, outsider, tables...)
+// equivalent to combinations(CombinationsBlockStrictlyUpperSameIndexPolicy(binningPolicy, categoryNeighbours, outsider, tables...))
+```
+
+Pairs / triples of block strictly upper combinations from the same table:
+```cpp
+selfPairCombinations(binningPolicy, categoryNeighbours, outsider, table)
+selfTripleCombinations(binningPolicy, categoryNeighbours, outsider, table)
+```
+
+If tables are the same, applies block strictly upper, otherwise block upper policy:
+```cpp
+combinations(binningPolicy, categoryNeighbours, outsider, tables...)
+```
+
+If tables are the same, applies strictly upper, otherwise upper policy:
+```cpp
+combinations(tables...)
+combinations(filter, tables...)
+```
+
+Pairs / triples of strictly upper combinations from the same table:
+```cpp
+pairCombinations(table)
+tripleCombinations(table)
+```
+
+Applies selected combination policy
+```cpp
+combinations(combinationPolicy)
+```
+
+You can see some combinations examples in the <a href="https://github.com/AliceO2Group/O2Physics/blob/master/Tutorials/src/tracksCombinations.cxx" target="_blank">tracksCombinations.cxx</a> tutorial.
 
 ## Configuration in a json file
 
