@@ -1350,13 +1350,6 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
         <td>short</td>
         <td>Charge: positive: 1, negative: -1</td>
       </tr>
-      <tr>
-        <td>o2::soa::Marker</td>
-        <td>GI</td>
-        <td></td>
-        <td>?</td>
-        <td></td>
-      </tr>
     </table>
   </div>
 
@@ -1480,13 +1473,6 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
         <td>rho1PtTgl</td>
         <td>int8_t</td>
         <td>Covariance matrix in compressed form</td>
-      </tr>
-      <tr>
-        <td>o2::soa::Marker</td>
-        <td>GI</td>
-        <td></td>
-        <td>?</td>
-        <td></td>
       </tr>
     </table>
   </div>

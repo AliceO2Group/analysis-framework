@@ -391,13 +391,6 @@ For better overview the tables are grouped into the following categories: | [Gen
         <td>Charge: positive: 1, negative: -1</td>
       </tr>
       <tr>
-        <td>o2::soa::Marker</td>
-        <td>GI</td>
-        <td></td>
-        <td>?</td>
-        <td></td>
-      </tr>
-      <tr>
         <td>o2::aod::track::Pt</td>
         <td>E</td>
         <td>pt</td>
@@ -559,13 +552,6 @@ For better overview the tables are grouped into the following categories: | [Gen
         <td>sign</td>
         <td>short</td>
         <td>Charge: positive: 1, negative: -1</td>
-      </tr>
-      <tr>
-        <td>o2::soa::Marker</td>
-        <td>GI</td>
-        <td></td>
-        <td>?</td>
-        <td></td>
       </tr>
       <tr>
         <td>o2::aod::track::Pt</td>
@@ -730,13 +716,6 @@ For better overview the tables are grouped into the following categories: | [Gen
         <td>rho1PtTgl</td>
         <td>int8_t</td>
         <td>Covariance matrix in compressed form</td>
-      </tr>
-      <tr>
-        <td>o2::soa::Marker</td>
-        <td>GI</td>
-        <td></td>
-        <td>?</td>
-        <td></td>
       </tr>
       <tr>
         <td>o2::aod::track::CYY</td>
@@ -977,13 +956,6 @@ For better overview the tables are grouped into the following categories: | [Gen
         <td>rho1PtTgl</td>
         <td>int8_t</td>
         <td>Covariance matrix in compressed form</td>
-      </tr>
-      <tr>
-        <td>o2::soa::Marker</td>
-        <td>GI</td>
-        <td></td>
-        <td>?</td>
-        <td></td>
       </tr>
       <tr>
         <td>o2::aod::track::CYY</td>
@@ -1493,13 +1465,6 @@ For better overview the tables are grouped into the following categories: | [Gen
         <td>short</td>
         <td>Charge: positive: 1, negative: -1</td>
       </tr>
-      <tr>
-        <td>o2::soa::Marker</td>
-        <td>GI</td>
-        <td></td>
-        <td>?</td>
-        <td></td>
-      </tr>
     </table>
   </div>
 
@@ -1624,13 +1589,6 @@ For better overview the tables are grouped into the following categories: | [Gen
         <td>sign</td>
         <td>short</td>
         <td>Charge: positive: 1, negative: -1</td>
-      </tr>
-      <tr>
-        <td>o2::soa::Marker</td>
-        <td>GI</td>
-        <td></td>
-        <td>?</td>
-        <td></td>
       </tr>
     </table>
   </div>
@@ -1757,13 +1715,6 @@ For better overview the tables are grouped into the following categories: | [Gen
         <td>int8_t</td>
         <td>Covariance matrix in compressed form</td>
       </tr>
-      <tr>
-        <td>o2::soa::Marker</td>
-        <td>GI</td>
-        <td></td>
-        <td>?</td>
-        <td></td>
-      </tr>
     </table>
   </div>
 
@@ -1888,13 +1839,6 @@ For better overview the tables are grouped into the following categories: | [Gen
         <td>rho1PtTgl</td>
         <td>int8_t</td>
         <td>Covariance matrix in compressed form</td>
-      </tr>
-      <tr>
-        <td>o2::soa::Marker</td>
-        <td>GI</td>
-        <td></td>
-        <td>?</td>
-        <td></td>
       </tr>
     </table>
   </div>
