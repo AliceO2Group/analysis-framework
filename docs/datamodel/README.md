@@ -1,38 +1,19 @@
 ---
-sort: 5
-title: The Data Model
+sort: 6
+title: O2Physics
 ---
 
-# The data model
+# O2Physics
 
-The ALICE O2 data model is a collection of tables. This includes tables which are read from the input files [AO2D files](ao2dTables.md) and also such which are created by tasks. To produce some tables with commonly used quantities there exist a set of predefined [helper tasks](../helperTasks/README.md) which can be included in user analysis work flows to produce tables with [commonly used information](helperTaskTables.md)
+All analysis tasks are stored in O2Physics on github: https://github.com/AliceO2Group/O2Physics
 
-The data model also provides a bunch of pre-defined [joins and iterators](joinsAndIterators.md).
+In order to contribute an analysis task:
+* you have to fork the repository
+* commit your changes to your fork
+* make a pull request (PR) to the main repository
 
-### Table relations
+The PR will be tested for formatting and compilation and needs to be approved before it is merged.
 
-Information contained in different tables can be related. E.g. a track belongs to a given collision, or signals in the FIT or Zdc detectors belong to a bunch crossing.
+The approvers are listed in the CODEOWNER file: https://github.com/AliceO2Group/O2Physics/blob/master/CODEOWNERS and are also alerted automatically when you create the PR. If you have files in several directories touched, they each need approval.
 
-Hence the dependent tables need to hold an index which points to a specific row of the master table. For this the dependent table (e.g. table Tracks) has an index column [master]Id (in this case CollisionsId) which points to the related information in table master. See also e.g. master=BCs and dependent=CaloTriggers and many more.
-
-```note
-Be aware that tables can be [joined](../framework/framework.md#processing-related-tables) and be [extended](../framework/framework.md#expression-columns) with extra colums.
-```
-
-In the table listings on the following pages, the letter in brackets behind the table name indicates the type of table:
-
-- E: extended table
-- I: index table
-- else: normal table
-
-And similar for the columns:
-
-- D: dynamic column, calculated when the column is requested, not cached and therefore to be avoided in loops
-- E: expression column, calculated when the table is requested, only once, and therefore can be used in loops
-- GI: global index
-- I: index column
-- SI: self index column
-- SLI: slice index column
-- SSLI: self slice index column
-- SAI: self array index column
-- else: normal column
+Approval works through the github "review code" feature. As github does not allow a code owner to approve their own PR, a workaround using a github action is set up. In this case you have to enable "auto merge" and the alibuild user will approve for you. Note that if you need in addition to yourself also other approvals, they have to approve before you enable auto merge.
