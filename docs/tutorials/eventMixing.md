@@ -14,87 +14,79 @@ Obtain mixed event tuples.
   Executable: o2-analysistutorial-event-mixing
 </div>
 
-In event mixing, data from one event is combined with data from other events. A prominent example of its application is the estimation of the combinatorial background in invariant mass analyses. Combinatorial background is created when non-correlated tracks of the same event (tracks stemming from the decay of different resonances) are combined. The shape of this background can under some conditions be well reproduced by mixed event combinations, hence combinations of tracks from different events, which by definition cannot originate from the same resonance. Often it is required that tracks from in some sense similar events are combined, e.g. events with similar track multiplicity, or events with similar vertex position.
+For a general introduction to combinations and event mixing, check first [here](../framework/eventMixing.md).
 
-### Combinations of tracks
+### MixedEvents
 
-To obtain combinations of tracks from distinct track tables [tracks1, tracks2, ...] is rather simple. For this, the framework provides the function:
-
+Firstly, we define binning of collisions for block combinations:
 ```cpp
-o2::soa::combinations (*CombinationIndexPolicy*(tracks1, tracks2, ...))
+std::vector<double> xBins{VARIABLE_WIDTH, -0.064, -0.062, -0.060, 0.066, 0.068, 0.070, 0.072};
+std::vector<double> yBins{VARIABLE_WIDTH, -0.320, -0.301, -0.300, 0.330, 0.340, 0.350, 0.360};
+using BinningType = BinningPolicy<aod::collision::PosX, aod::collision::PosY>;
+BinningType binningOnPositions{{xBins, yBins}, true};                                    // true is for 'ignore overflows' (true by default)
 ```
 
-which returns tuples of tracks (one track from each table of tracks).
+Then, we define the mixing structure itself:
+```cpp
+SameKindPair<aod::Collisions, aod::Tracks, BinningType> pair{binningOnPositions, 5, -1}; // indicates that 5 events should be mixed and under/overflow (-1) to be ignored
+```
+In this case, only table types and the binning police type need to be passed, as the rest is taken from the defaults.
 
-There are several *CombinationIndexPolicies* available which are explained [here](../framework/framework.md#getting-combinations-pairs-triplets-).
-
-<a name="mixedeventtracks"></a>
-### MixedEventsTracks
-
-We further have to prepare an AnalysisDataProcessorBuilder::GroupSlicer slicer. slicer will be used to access individual collisions and their associated tracks.
+Then, inside your `process()` function, you can directly iterate over mixed event pairs together with two separate track tables which contain tracks from the two different collision in the pair:
 
 ```cpp
-    // grouping of tracks according to collision
-    collisions.bindExternalIndices(&tracks);
-    auto tracksTuple = std::make_tuple(tracks);
-    AnalysisDataProcessorBuilder::GroupSlicer slicer(collisions, tracksTuple);
+for (auto& [c1, tracks1, c2, tracks2] : pair) {
+  LOGF(info, "Mixed event collisions: (%d, %d)", c1.globalIndex(), c2.globalIndex());
+}
 ```
 
-Now we iterate over pairs of collisions [c1, c2] which have equal hash values. The function selfCombinations() is used to create the pairs.
+You might want, for example, to further iterate over the track tables inside the mixing loop:
 
 ```cpp
-    // Strictly upper categorised collisions
-    for (auto& [c1, c2] : selfCombinations("fBin", 5, -1, join(hashes, collisions), join(hashes, collisions))) {
+for (auto& [t1, t2] : combinations(CombinationsFullIndexPolicy(tracks1, tracks2))) {
+  LOGF(info, "Mixed event tracks pair: (%d, %d) from events (%d, %d)", t1.index(), t2.index(), c1.index(), c2.index());
+}
 ```
 
-o2::soa::selfCombinations(fname, n, r, collisions, collisions) provides pairs of collisions which have the same value of column name. However not more than n pairs with the same value of column name are returned and collsions with a name value of r are skipped. In the example case the hash is used to group the collisions (name = Bin) and collisions with hash equal to -1 (r=-1) are not considered.
+### MixedEventsInsideProcess
 
-In the next block of code the entries corresponding to collisions c1 and c2 are looked up in the previously created GroupSlicer slicer.
+This is the same task as above, with the difference that binning policy and `SameKindPair` are declared inside `process()`. This is particularly helpful when your bins are ConfigurableAxes. The standard out-of-process declaration of binning policy and corresponding mixing structure would take only default configurable values.
+
+### Task with different table structures
+
+These tasks demonstrate how mixing works with Filtered and Join.
+
+### MixedEventsDynamicColumns
+
+This is a more realistic example with mixing of collisions binned by z-vertex and multiplicity V0M. As `MultFV0M` is a dynamic column, its type is templated on the contributing column types. Therefore, the binning policy type is:
 
 ```cpp
-      auto it1 = slicer.begin();
-      auto it2 = slicer.begin();
-      for (auto& slice : slicer) {
-        if (slice.groupingElement().index() == c1.index()) {
-          it1 = slice;
-          break;
-        }
-      }
-      for (auto& slice : slicer) {
-        if (slice.groupingElement().index() == c2.index()) {
-          it2 = slice;
-          break;
-        }
-      }
+using BinningType = BinningPolicy<aod::collision::PosZ, aod::mult::MultFV0M<aod::mult::MultFV0A, aod::mult::MultFV0C>>;
 ```
 
-The resulting slices it1 and it2 are used to access the tracks associated to the corresponding collisions.
+The rest of the task is the same as in the basic example.
 
-```cpp
-      auto tracks1 = std::get<soa::Filtered<aod::Tracks>>(it1.associatedTables());
-      tracks1.bindExternalIndices(&collisions);
-      auto tracks2 = std::get<soa::Filtered<aod::Tracks>>(it2.associatedTables());
-      tracks2.bindExternalIndices(&collisions);
-```
+### Tasks with different table kinds
 
-These two sets of tracks, tracks1 and tracks2, contain tracks which belong to
-two different collisions with similar vertex position and are the distinct sets
-of tracks we can provide as input to the o2::soa::combinations which was
-discussed at the very beginning.
+These tasks demonstrate usage of `Pair`, `Triple` and `SameKindTriple` on tracks and V0s.
 
-```cpp
-      for (auto& [t1, t2] : combinations(CombinationsFullIndexPolicy(tracks1, tracks2))) {
-        LOGF(info, "Mixed event tracks pair: (%d, %d) from events (%d, %d)", t1.index(), t2.index(), c1.index(), c2.index());
-      }
-```
+### MixedEventsWithHashTask
 
-<a name="mixedeventpartitionedtracks"></a>
+This task shows how one can use `NoBinningPolicy` in case of bins predefined somewhere else.
+
 ### MixedEventsPartitionedTracks
 
-This task is similar to the [previous](#mixedeventtracks) task, but in addition the tracks are partioned into left and right tracks.
+This is a bit more advanced example which shows how one can further partition the tracks from mixing. As the tracks tables are produced only at the generation of each mixed collision pair, `Partitions` must be declared inside the mixing loop. Additionally, each partition must be bound to a respective table -- `tracks1` or `tracks2`. Then, the corresponding partitioning condition is applied to the selected table.
 
-
-
-
-
-
+```cpp
+for (auto& [c1, tracks1, c2, tracks2] : pair) {
+  Partition<myTracks> leftPhi1 = aod::track::phi < philow;
+  Partition<myTracks> leftPhi2 = aod::track::phi < philow;
+  Partition<myTracks> rightPhi1 = aod::track::phi >= phiup;
+  Partition<myTracks> rightPhi2 = aod::track::phi >= phiup;
+  leftPhi1.bindTable(tracks1);
+  leftPhi2.bindTable(tracks2);
+  rightPhi1.bindTable(tracks1);
+  rightPhi2.bindTable(tracks2);
+}
+```
