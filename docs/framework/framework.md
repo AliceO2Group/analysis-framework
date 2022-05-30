@@ -606,7 +606,13 @@ Performance-efficient policies for getting tuples of elements from the same tabl
 - CombinationsBlockFullSameIndexPolicy
 - CombinationsBlockStrictlyUpperSameIndexPolicy
 
+#### Binning Policy
+
 Binning Policy accepts an array of bins (C++ vectors), and a bool specifying whether under- and overflow values should be ignored. If it is set to true, all underflow and overflow values are assigned to a dummy bin `-1`. The first non-underflow bin is 0. If the bool is false, then the values that are underflow in all dimensions are included in the bin 0, the first non-underflow bin is 1, and there are more bins for under- and overflow values from specific dimensions.
+
+Note that Binning Policy is defined only for 1-, 2-, and 3-dimensional binning. If you want to bin objects based on 4 or more properties, you need to write yourself a class inheriting from Binning Policy with customized `getBin()` function.
+
+Additionally, there is a `NoBinningPolicy` class which can be used in case you already have bin numbers in your data and you do not want to calculate any new bins. This class has an empty constructor templated with the type of the column to consider. It will take one by one the values from that column as bin numbers. There is a tutorial example with `NoBinningPolicy` in <a href="https://github.com/AliceO2Group/O2Physics/blob/master/Tutorials/src/tracksCombinations.cxx" target="_blank">tracksCombinations.cxx</a>.
 
 Block policies have 2 additional parameters: `outsider` and `categoryNeighbours`.
 
