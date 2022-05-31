@@ -23,7 +23,9 @@ Firstly, we define binning of collisions for block combinations:
 std::vector<double> xBins{VARIABLE_WIDTH, -0.064, -0.062, -0.060, 0.066, 0.068, 0.070, 0.072};
 std::vector<double> yBins{VARIABLE_WIDTH, -0.320, -0.301, -0.300, 0.330, 0.340, 0.350, 0.360};
 using BinningType = BinningPolicy<aod::collision::PosX, aod::collision::PosY>;
+{% raw %}
 BinningType binningOnPositions{{xBins, yBins}, true};                                    // true is for 'ignore overflows' (true by default)
+{% endraw %}
 ```
 
 Then, we define the mixing structure itself:
