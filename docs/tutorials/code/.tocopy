@@ -8,7 +8,6 @@ tutfiles=(  \
   "associatedExample.cxx"  \
   "ccdbaccess.cxx"  \
   "collisionTracksIteration.cxx"  \
-  "eventMixing.cxx"  \
   "extendedTables.cxx"  \
   "filters.cxx"  \
   "histogramRegistry.cxx"  \

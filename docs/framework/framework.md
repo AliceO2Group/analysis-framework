@@ -598,13 +598,13 @@ struct MyTask : AnalysisTask {
 Block policies allow for generating tuples of elements according to the binning policy provided  by the user. The binning policy calculates bin numbers for the input elements and groups the elements by bins. Then, the block combinations output tuples of elements from the same bin. Analogously to basic policies, we have full / upper / strictly upper block combinations.
 
 Different tables:
-- CombinationsBlockUpperIndexPolicy
-- CombinationsBlockFullIndexPolicy
+- `CombinationsBlockUpperIndexPolicy`
+- `CombinationsBlockFullIndexPolicy`
 
 Performance-efficient policies for getting tuples of elements from the same table:
-- CombinationsBlockUpperSameIndexPolicy
-- CombinationsBlockFullSameIndexPolicy
-- CombinationsBlockStrictlyUpperSameIndexPolicy
+- `CombinationsBlockUpperSameIndexPolicy`
+- `CombinationsBlockFullSameIndexPolicy`
+- `CombinationsBlockStrictlyUpperSameIndexPolicy`
 
 #### Binning Policy
 

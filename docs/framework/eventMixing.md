@@ -3,6 +3,8 @@ sort: 6
 title: Event mixing
 ---
 
+# Event mixing
+
 In event mixing, data from one event is combined with data from other events. A prominent example of its application is the estimation of the combinatorial background in invariant mass analyses. Combinatorial background is created when non-correlated tracks of the same event (tracks stemming from the decay of different resonances) are combined. The shape of this background can under some conditions be well reproduced by mixed event combinations, hence combinations of tracks from different events, which by definition cannot originate from the same resonance. Often it is required that tracks from in some sense similar events are combined, e.g. events with similar track multiplicity, or events with similar vertex position.
 
 ## Combinations of tracks
@@ -10,7 +12,7 @@ In event mixing, data from one event is combined with data from other events. A 
 To obtain combinations of tracks from distinct track tables [tracks1, tracks2, ...] is rather simple. For this, the framework provides the function:
 
 ```cpp
-o2::soa::combinations (*CombinationIndexPolicy*(tracks1, tracks2, ...))
+o2::soa::combinations (CombinationIndexPolicy(tracks1, tracks2, ...))
 ```
 
 which returns tuples of tracks (one track from each table of tracks).
@@ -24,7 +26,7 @@ There are several *CombinationIndexPolicies* available which are explained [here
 - outsider
 - category neighbours (equivalent to the number of other collisions to mix with)
 
-You can consult a detailed description of these parameters in the [block combinations section](../framework/framework.md#block-binned-combination-policies).
+You can consult a detailed description of these parameters in the [block combinations section](../framework/framework.md#block--binned-combination-policies).
 
 The `GroupedCombinationsGenerator` general constructor is defined as:
 
