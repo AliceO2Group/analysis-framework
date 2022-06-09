@@ -349,6 +349,13 @@ For better overview the tables are grouped into the following categories: | [Gen
         <td>(sign of charge)/Pt in c/GeV. Use pt() and sign() instead</td>
       </tr>
       <tr>
+        <td>o2::aod::track::IsWithinBeamPipe</td>
+        <td>D</td>
+        <td>isWithinBeamPipe</td>
+        <td>bool</td>
+        <td>Is the track within the beam pipe (= successfully propagated to a collision vertex)</td>
+      </tr>
+      <tr>
         <td>o2::aod::track::Px</td>
         <td>D</td>
         <td>px</td>
@@ -517,6 +524,13 @@ For better overview the tables are grouped into the following categories: | [Gen
         <td>signed1Pt</td>
         <td>float</td>
         <td>(sign of charge)/Pt in c/GeV. Use pt() and sign() instead</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::IsWithinBeamPipe</td>
+        <td>D</td>
+        <td>isWithinBeamPipe</td>
+        <td>bool</td>
+        <td>Is the track within the beam pipe (= successfully propagated to a collision vertex)</td>
       </tr>
       <tr>
         <td>o2::aod::track::Px</td>
@@ -1424,6 +1438,13 @@ For better overview the tables are grouped into the following categories: | [Gen
         <td>(sign of charge)/Pt in c/GeV. Use pt() and sign() instead</td>
       </tr>
       <tr>
+        <td>o2::aod::track::IsWithinBeamPipe</td>
+        <td>D</td>
+        <td>isWithinBeamPipe</td>
+        <td>bool</td>
+        <td>Is the track within the beam pipe (= successfully propagated to a collision vertex)</td>
+      </tr>
+      <tr>
         <td>o2::aod::track::Px</td>
         <td>D</td>
         <td>px</td>
@@ -1554,6 +1575,13 @@ For better overview the tables are grouped into the following categories: | [Gen
         <td>signed1Pt</td>
         <td>float</td>
         <td>(sign of charge)/Pt in c/GeV. Use pt() and sign() instead</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::IsWithinBeamPipe</td>
+        <td>D</td>
+        <td>isWithinBeamPipe</td>
+        <td>bool</td>
+        <td>Is the track within the beam pipe (= successfully propagated to a collision vertex)</td>
       </tr>
       <tr>
         <td>o2::aod::track::Px</td>
