@@ -1,6 +1,6 @@
 ---
-sort: 6
-title: Event mixing
+sort: 4
+title: Event Mixing
 ---
 
 # Event mixing
