@@ -42,7 +42,7 @@ defineDataProcessing() {
 Define minimum requirements for a complet task
 ```
 
-See also tutorial [Analysis Task](../tutorials/analysistask).
+See also tutorial [Analysis Task](../tutorials/analysistask.md).
 
 ## Processing data
 
@@ -138,7 +138,7 @@ struct MyTask : AnalysisTask {
 }
 ```
 
-See also tutorials [Track Iteration](../tutorials/trackIteration) and [Table Combinations](../tutorials/tableCombinations).
+See also tutorials [Track Iteration](../tutorials/trackIteration.md) and [Table Combinations](../tutorials/tableCombinations.md).
 
 <a name="configurables"></a>
 ## Configurables
@@ -173,7 +173,7 @@ struct MyTask {
 
 Configurables can be set on the command line. For each configurable a command line option is provided. When using the --help option the name of the Configurable, its default value, and the help string are displayed.
 
-For a practical example see e.g. the tutorial [configurableObjects.cxx](../tutorials/otherTutorials).
+For a practical example see e.g. the tutorial [configurableObjects.cxx](../tutorials/otherTutorials.md).
 
 <a name="configurableaxis"></a>
 ### ConfigurableAxis
@@ -239,7 +239,7 @@ The `etaphi` object is a functor that will effectively act as a cursor which all
 etaphi(track::Phi(calculatePhi(track), track::Eta(calculateEta(track)));
 ```
 
-See also tutorial [Creating Tables](../tutorials/creatingTables).
+See also tutorial [Creating Tables](../tutorials/creatingTables.md).
 
 ### Adding dynamic columns to a data type
 
@@ -280,7 +280,7 @@ struct MyTask : AnalysisTask {
 - Complete list of column and table declarations
 ```
 
-See also tutorial [Extending Tables](../tutorials/extendedTables).
+See also tutorial [Extending Tables](../tutorials/extendedTables.md).
 
 
 ### Executing a finalization method, post run
@@ -423,8 +423,8 @@ std::shared_ptr<T>& get(const H& histName)
 Again HIST("histname") must be provided as argument to get the histogram with name = histname.
 
 Practical examples of histogram manipulations in O2 can be found in the
-tutorials [Histograms](../tutorials/histograms) and [Histogram
-Registry](../tutorials/histogramRegistry).
+tutorials [Histograms](../tutorials/histograms.md) and [Histogram
+Registry](../tutorials/histogramRegistry.md).
 
 
 ## Filtering and partitioning data
@@ -800,7 +800,7 @@ struct CollisionsCombinationsTask {
 };
 ```
 
-A full example can be found in the tutorial [Event Mixing](../tutorials/eventMixing) section.
+A full example can be found in the tutorial [Event Mixing](../tutorials/eventMixing.md) section.
 
 
 ## Saving tables to file
@@ -1093,7 +1093,7 @@ The following json-file could be used to read these tables:
 of the various InputDescriptors are corresponding to each other.
   3. The regular expression fileregex is evaluated with the c++ Regular expressions library. Thus check there for the proper syntax of regexes.
   
-See also tutorial [Table IO](../tutorials/tablesIO).  
+See also tutorial [Table IO](../tutorials/tablesIO.md).  
 
 
 ### Possible ideas
