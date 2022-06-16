@@ -5,43 +5,43 @@ title: PWGHF
 
 # Heavy-flavour (HF) analysis framework
 
-## Get started! 
+## Get started!
 
-[link to indico page of the HF O2 hackaton](https://indico.cern.ch/event/1101005/)
-
-[ZOOM recordings of the hackathon (includes introduction to O2, O2 HF, tutorials..)](https://videos.cern.ch/deposit/project/cbe4869a27f749b7b45ea66577ca8a9f)
+See the materials from the [HF O2 hackathon](https://indico.cern.ch/event/1101005/)
+(includes introduction to O2, O2 HF, tutorials,...) and watch the
+[Zoom recordings of the sessions](https://videos.cern.ch/deposit/project/cbe4869a27f749b7b45ea66577ca8a9f).
 
 ## Contact
 
-Coordinators: Gian Michele Innocenti, Francesco Prino, Vít Kučera
+Coordinators: Francesco Prino, Vít Kučera
 
 Mattermost channel: [hf-o2-analysis-challenge](https://mattermost.web.cern.ch/alice/channels/hf-o2-analysis-challenge)
 
 
 ## Code
 
-* Tasks used by the heavy-flavour analysis framework are in the
+- Tasks used by the heavy-flavour analysis framework are in the
 [`PWGHF`](https://github.com/AliceO2Group/O2Physics/tree/master/PWGHF) directory.
-* Tables produced by skimming and candidate creators are defined in
+- Tables produced by skimming and candidate creators are defined in
 [`HFSecondaryVertex.h`](https://github.com/AliceO2Group/O2Physics/blob/master/PWGHF/DataModel/HFSecondaryVertex.h).
-* Tables produced by candidate selectors are defined in
+- Tables produced by candidate selectors are defined in
 [`HFCandidateSelectionTables.h`](https://github.com/AliceO2Group/O2Physics/blob/master/PWGHF/DataModel/HFCandidateSelectionTables.h).
-* Default parameters used in the selection of single tracks, track-index skims and candidates are defined in
+- Default parameters used in the selection of single tracks, track-index skims and candidates are defined in
 [`HFSelectorCuts.h`](https://github.com/AliceO2Group/O2Physics/blob/master/PWGHF/Core/HFSelectorCuts.h).
-* Secondary-vertex reconstruction algorithms are implemented in the
+- Secondary-vertex reconstruction algorithms are implemented in the
 [`DCAFitterN`](https://github.com/AliceO2Group/AliceO2/blob/dev/Detectors/Vertexing/include/DetectorsVertexing/DCAFitterN.h) class.
-* Functions for calculations of kinematic quantities and for MC matching are implemented in the
+- Functions for calculations of kinematic quantities and for MC matching are implemented in the
 [`RecoDecay`](https://github.com/AliceO2Group/O2Physics/blob/master/Common/Core/RecoDecay.h) class.
-* Selection of tracks based on the particle identification (PID) detectors is performed via the
+- Selection of tracks based on the particle identification (PID) detectors is performed via the
 [`TrackSelectorPID`](https://github.com/AliceO2Group/O2Physics/blob/master/Common/Core/TrackSelectorPID.h) class.
-* Code for easy running of the HF tasks and output processing can be found in the
+- Code for easy running of the HF tasks and output processing can be found in the
 [Run3Analysisvalidation](https://github.com/AliceO2Group/Run3Analysisvalidation) repository.
-  * Analysis code for postprocessing of the task output is collected in the
+  - Analysis code for postprocessing of the task output is collected in the
   [`FirstAnalysis`](https://github.com/AliceO2Group/Run3Analysisvalidation/tree/master/FirstAnalysis) directory.
 
 ## AliHyperloop
 
-[JIRA tickets](https://alice.its.cern.ch/jira/browse/PWGHF-291?jql=project%20%3D%20PWGHF%20AND%20issuetype%20%3D%20Analysis%20AND%20component%20%3D%20PWG-HF)
+[JIRA tickets](https://alice.its.cern.ch/jira/browse/PWGHF-269?jql=project%20%3D%20PWGHF%20AND%20issuetype%20%3D%20Analysis%20AND%20component%20%3D%20PWG-HF)
 of the HF analyses on [AliHyperloop](https://alimonitor.cern.ch/hyperloop/):
 
 ## Framework structure
@@ -50,7 +50,7 @@ Simplified graph of the workflows and tasks involved in a single HF analysis is 
 Individual components are decribed in the next section below.
 
 <div align="center">
-<img src="../images/pwghf_graph.svg" width="100%" alt="PWGHF analysis framework">
+<img src="../images/pwghf_graph.svg" width="800px" alt="PWGHF analysis framework">
 </div>
 
 ## Framework components
@@ -170,3 +170,64 @@ Workflow | File | Type
 `o2-analysis-hf-tree-creator-lc-topkpi` | `HFTreeCreatorLcToPKPi.cxx` | Λ<sub>c</sub><sup>±</sup> → p(bar) K<sup>∓</sup> π<sup>±</sup>
 `o2-analysis-hf-tree-creator-x-tojpsipipi` | `HFTreeCreatorXToJpsiPiPi.cxx` | X(3872) → J/ψ π<sup>±</sup> π<sup>∓</sup>
 `o2-analysis-hf-tree-creator-xicc-topkpipi` | `HFTreeCreatorXiccToPKPiPi.cxx` | Ξ<sub>cc</sub><sup>±±</sup> → Ξ<sub>c</sub><sup>±</sup> π<sup>±</sup>
+
+## Contribute
+
+### Code development guidelines
+
+- Follow the [O2 coding guidelines](https://github.com/AliceO2Group/CodingGuidelines)
+    (especially the [naming](https://rawgit.com/AliceO2Group/CodingGuidelines/master/naming_formatting.html)
+    and [commenting](https://rawgit.com/AliceO2Group/CodingGuidelines/master/comments_guidelines.html) rules).
+- If your changes consist of several independent steps, keep them separate in several commits.
+- Give your commits meaningful titles.
+    - If needed, add more details in the commit message (separated by a blank line from the commit title).
+- Keep your feature branch up to date with the upstream main branch.
+- Test your code before making a pull request.
+    - Propagate your changes into the Run3Analysisvalidation configuration.
+    - Check that your branch compiles.
+    - Check that your code works and runs without errors and warnings.
+        - Make sure your code is compatible with the expected input (Run 2/3/5, real/MC data, p–p/Pb–Pb).
+        - Check that your changes do not alter unexpectedly the control plots produced by the validation framework.
+    - Make sure your tasks can be fully configured from Run3Analysisvalidation and AliHyperloop.
+
+#### Naming conventions
+
+Use the `<object><attribute>` (or `<general><specific>`) naming scheme, so that names of the same kind of objects start with same string and the different attributes follow.
+This scheme makes names more readable, searchable and sortable.
+
+Example:
+
+    ptTrackMin, etaTrackMax, trackPos, trackNeg
+
+is more readable and sortable than
+
+    minTrackPt, maxTrackEta, posTrack, negTrack
+
+- Names of task configurables follow the same conventions as
+    [names of variables](https://rawgit.com/AliceO2Group/CodingGuidelines/master/naming_formatting.html#Variable_Names).
+- Names of histograms start with `h` and follow the same conventions as names of variables.
+    - Names of histograms of MC variables have the following suffixes:
+        - `Gen` - generator level quantity of a signal particle
+        - `GenSig` - generator level quantity of a reconstructed signal candidate
+        - `RecSig` - reconstruction level quantity of a reconstructed signal candidate
+        - `RecBg` - reconstruction level quantity of a reconstructed background candidate
+
+The device name of a task is automatically generated from the name of the corresponding `struct` by replacing uppercase letters with lowercase letters preceded with a hyphen unless defined explicitly using `TaskName`, which should be avoided if not necessary.
+
+### Pull requests (PR)
+
+- Create one PR per feature (i.e. do not mix big unrelated code changes).
+- Give your PR a short meaningful title.
+    - Add the “PWGHF: ” prefix in the title of your PR.
+        (It allows to search for PWGHF-related PRs in the commit history of the main branch.)
+        - Note: If your PR has only one commit, add the prefix also in the commit title
+            (because that is the title that will appear in the history after merging).
+- Give further useful details about your changes in the PR description.
+    - Add links to all related PRs (e.g. O2Physics, O2, AliPhysics, Run3Analysisvalidation) in the PR description.
+
+#### PR review
+
+- When you implement changes during the review, push them into your branch as new separate commits (with meaningful titles).
+- Do not amend, squash or rebase existing commits in the PR. It would break the links between the code and the review comments.
+    - If you need to update your branch with the changes in the main branch, use `merge` instead of `rebase` to preserve the commit history.
+- Fix formatting issues by merging the PRs created automatically by the CI tests in your fork repository.
