@@ -504,6 +504,13 @@ Click on the labels to display the definitions. Click buttons to
     </ul>
   </div>
 
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::ReducedEventQvector</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::ReducedEventQvector = o2::aod::ReducedEventsQvector::iterator</li>
+    </ul>
+  </div>
+
   <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::ReducedMCEvent</button>
   <div class="panel">
     <ul>
