@@ -1345,18 +1345,11 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGDQ
         <td>MCH-MFT Machine Learning Matching Score for GlobalMuonTracks</td>
       </tr>
       <tr>
-        <td>o2::aod::fwdtrack::MFTTrackId</td>
-        <td>I</td>
-        <td>matchMFTTrackId</td>
-        <td>int32</td>
-        <td>ID of matching MFT track for GlobalMuonTracks and GlobalForwardTracks</td>
-      </tr>
-      <tr>
-        <td>o2::aod::fwdtrack::MCHTrackId</td>
+        <td>o2::aod::reducedmuon::MCHTrackId</td>
         <td>SI</td>
         <td>matchMCHTrackId</td>
         <td>int</td>
-        <td>Index of matching MCH track for GlobalMuonTracks and GlobalForwardTracks</td>
+        <td></td>
       </tr>
       <tr>
         <td>o2::aod::fwdtrack::MCHBitMap</td>
@@ -2870,18 +2863,11 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGDQ
         <td>MCH-MFT Machine Learning Matching Score for GlobalMuonTracks</td>
       </tr>
       <tr>
-        <td>o2::aod::fwdtrack::MFTTrackId</td>
-        <td>I</td>
-        <td>matchMFTTrackId</td>
-        <td>int32</td>
-        <td>ID of matching MFT track for GlobalMuonTracks and GlobalForwardTracks</td>
-      </tr>
-      <tr>
-        <td>o2::aod::fwdtrack::MCHTrackId</td>
+        <td>o2::aod::reducedmuon::MCHTrackId</td>
         <td>SI</td>
         <td>matchMCHTrackId</td>
         <td>int</td>
-        <td>Index of matching MCH track for GlobalMuonTracks and GlobalForwardTracks</td>
+        <td></td>
       </tr>
       <tr>
         <td>o2::aod::fwdtrack::MCHBitMap</td>
