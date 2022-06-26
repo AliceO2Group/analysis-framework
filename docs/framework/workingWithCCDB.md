@@ -16,6 +16,8 @@ The CCDB can be accessed via a web interface at <a href="http://alice-ccdb.cern.
 
 - Upload CCDB via the command:
   o2-ccdb-upload -f <file> --key <key_name> --path <path_out> --meta "Description=Foo;Author=Person1;Uploader=Person2"
+  
+Only people with special service wagons (e.g. Centrality) have write access. For standard analyzers the web site [https://alimonitor.cern.ch/ccdb/upload.jsp](https://alimonitor.cern.ch/ccdb/upload.jsp) has to be used (see also the efficiencyGlobal.cxx example).
 
 ```todo
 - writing objects to CCDB
