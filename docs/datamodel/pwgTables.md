@@ -324,7 +324,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGCF
         <td></td>
         <td>centRun2V0M</td>
         <td>float</td>
-        <td>Centrality percentile estimated from V0C+V0A multiplicities</td>
+        <td>Run2 Centrality percentile estimated from V0C+V0A multiplicities</td>
       </tr>
       <tr>
         <td>o2::aod::timestamp::Timestamp</td>
@@ -558,7 +558,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGDQ
         <td></td>
         <td>centRun2V0M</td>
         <td>float</td>
-        <td>Centrality percentile estimated from V0C+V0A multiplicities</td>
+        <td>Run2 Centrality percentile estimated from V0C+V0A multiplicities</td>
       </tr>
     </table>
   </div>
@@ -1700,7 +1700,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGDQ
         <td></td>
         <td>centRun2V0M</td>
         <td>float</td>
-        <td>Centrality percentile estimated from V0C+V0A multiplicities</td>
+        <td>Run2 Centrality percentile estimated from V0C+V0A multiplicities</td>
       </tr>
     </table>
   </div>

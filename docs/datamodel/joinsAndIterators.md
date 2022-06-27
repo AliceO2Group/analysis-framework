@@ -357,6 +357,34 @@ Click on the labels to display the definitions. Click buttons to
     </ul>
   </div>
 
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::CentFV0A</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::CentFV0A = o2::aod::CentFV0As::iterator</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::CentFT0M</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::CentFT0M = o2::aod::CentFT0Ms::iterator</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::CentFDDM</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::CentFDDM = o2::aod::CentFDDMs::iterator</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::CentNTPV</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::CentNTPV = o2::aod::CentNTPVs::iterator</li>
+    </ul>
+  </div>
+
   <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::EvSel</button>
   <div class="panel">
     <ul>

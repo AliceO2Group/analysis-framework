@@ -190,7 +190,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
   <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::CentRun2V0Ms</button>
   <div class="panel">
     <div>
-       V0M estimated centrality table
+       Run2 V0M estimated centrality table
     </div>
     <div>
       Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/DataModel/Centrality.h" target="_blank">Common/DataModel/Centrality.h</a>
@@ -213,7 +213,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
         <td></td>
         <td>centRun2V0M</td>
         <td>float</td>
-        <td>Centrality percentile estimated from V0C+V0A multiplicities</td>
+        <td>Run2 Centrality percentile estimated from V0C+V0A multiplicities</td>
       </tr>
     </table>
   </div>
@@ -338,6 +338,130 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
         <td>centRun2CL1</td>
         <td>float</td>
         <td>Run2 centrality percentile estimated from CL1 multiplicity</td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::CentFV0As</button>
+  <div class="panel">
+    <div>
+       Run3 FV0A estimated centrality table
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/DataModel/Centrality.h" target="_blank">Common/DataModel/Centrality.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::CentFV0A = o2::aod::CentFV0As::iterator</li>
+      </ul>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::cent::CentFV0A</td>
+        <td></td>
+        <td>centFV0A</td>
+        <td>float</td>
+        <td>Run3 Centrality percentile estimated from FV0A multiplicities</td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::CentFT0Ms</button>
+  <div class="panel">
+    <div>
+       Run3 FT0M estimated centrality table
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/DataModel/Centrality.h" target="_blank">Common/DataModel/Centrality.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::CentFT0M = o2::aod::CentFT0Ms::iterator</li>
+      </ul>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::cent::CentFT0M</td>
+        <td></td>
+        <td>centFT0M</td>
+        <td>float</td>
+        <td>Run3 centrality percentile estimated from FT0A+FT0C multiplicities</td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::CentFDDMs</button>
+  <div class="panel">
+    <div>
+       Run3 FDDM estimated centrality table
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/DataModel/Centrality.h" target="_blank">Common/DataModel/Centrality.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::CentFDDM = o2::aod::CentFDDMs::iterator</li>
+      </ul>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::cent::CentFDDM</td>
+        <td></td>
+        <td>centFDDM</td>
+        <td>float</td>
+        <td>Run3 centrality percentile estimated from FDDA+FDDC multiplicity</td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::CentNTPVs</button>
+  <div class="panel">
+    <div>
+       Run3 NTPV estimated centrality table
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/DataModel/Centrality.h" target="_blank">Common/DataModel/Centrality.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::CentNTPV = o2::aod::CentNTPVs::iterator</li>
+      </ul>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::cent::CentNTPV</td>
+        <td></td>
+        <td>centNTPV</td>
+        <td>float</td>
+        <td>Run3 centrality percentile estimated from the number of tracks contributing to the PV</td>
       </tr>
     </table>
   </div>
