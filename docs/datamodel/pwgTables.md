@@ -7925,6 +7925,176 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
 
 </div>
 
+####  o2-analysis-hf-pvrefit-skim-converted
+Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer//HFPvRefitSkimConverted.cxx" target="_blank">HFPvRefitSkimConverted.cxx</a>
+<div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::HfPvRefitProng2</button>
+  <div class="panel">
+    <div>
+
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/DataModel/HFSecondaryVertex.h" target="_blank">PWGHF/DataModel/HFSecondaryVertex.h</a>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_pvrefit_cand_prong2::PvRefitX</td>
+        <td></td>
+        <td>pvRefitX</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_pvrefit_cand_prong2::PvRefitY</td>
+        <td></td>
+        <td>pvRefitY</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_pvrefit_cand_prong2::PvRefitZ</td>
+        <td></td>
+        <td>pvRefitZ</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_pvrefit_cand_prong2::PvRefitSigmaX2</td>
+        <td></td>
+        <td>pvRefitSigmaX2</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_pvrefit_cand_prong2::PvRefitSigmaXY</td>
+        <td></td>
+        <td>pvRefitSigmaXY</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_pvrefit_cand_prong2::PvRefitSigmaY2</td>
+        <td></td>
+        <td>pvRefitSigmaY2</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_pvrefit_cand_prong2::PvRefitSigmaXZ</td>
+        <td></td>
+        <td>pvRefitSigmaXZ</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_pvrefit_cand_prong2::PvRefitSigmaYZ</td>
+        <td></td>
+        <td>pvRefitSigmaYZ</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_pvrefit_cand_prong2::PvRefitSigmaZ2</td>
+        <td></td>
+        <td>pvRefitSigmaZ2</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::HfPvRefitProng3</button>
+  <div class="panel">
+    <div>
+
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/DataModel/HFSecondaryVertex.h" target="_blank">PWGHF/DataModel/HFSecondaryVertex.h</a>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_pvrefit_cand_prong3::PvRefitX</td>
+        <td></td>
+        <td>pvRefitX</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_pvrefit_cand_prong3::PvRefitY</td>
+        <td></td>
+        <td>pvRefitY</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_pvrefit_cand_prong3::PvRefitZ</td>
+        <td></td>
+        <td>pvRefitZ</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_pvrefit_cand_prong3::PvRefitSigmaX2</td>
+        <td></td>
+        <td>pvRefitSigmaX2</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_pvrefit_cand_prong3::PvRefitSigmaXY</td>
+        <td></td>
+        <td>pvRefitSigmaXY</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_pvrefit_cand_prong3::PvRefitSigmaY2</td>
+        <td></td>
+        <td>pvRefitSigmaY2</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_pvrefit_cand_prong3::PvRefitSigmaXZ</td>
+        <td></td>
+        <td>pvRefitSigmaXZ</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_pvrefit_cand_prong3::PvRefitSigmaYZ</td>
+        <td></td>
+        <td>pvRefitSigmaYZ</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_pvrefit_cand_prong3::PvRefitSigmaZ2</td>
+        <td></td>
+        <td>pvRefitSigmaZ2</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+    </table>
+  </div>
+
+</div>
+
 ####  o2-analysis-hf-track-index-skims-creator
 Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer//HFTrackIndexSkimsCreator.cxx" target="_blank">HFTrackIndexSkimsCreator.cxx</a>
 <div>
