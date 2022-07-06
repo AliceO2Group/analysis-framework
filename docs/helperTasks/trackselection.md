@@ -12,12 +12,12 @@ o2-analysis-trackselection | o2-analysis-myTask
 ```
 
 Based on a set of track quality criteria, the track selection workflow produces a flag.
-Based on this decision, track tables can be filtered e.g. by requiring global tracks (with cuts on pT and eta) in the following manner:
+Provided that the user uses the standard supported `o2-analysis-trackselection` track tables can be filtered, e.g. by requiring global tracks (with cuts on pT and eta), in the following manner:
 
 ``` c++
 #include "Analysis/TrackSelectionTables.h"
    ...
-
+// NB: this only works provided that you use the supported task o2-analysis-trackselection to perform the track selection
 Filter filter1 = requireTrackCutInFilter(TrackSelectionFlags::kTPCNCls); // General filter, defined using flags
 Filter filter2 = requireQualityTracksInFilter();                         // Predefined filter, for kQualityTracks tracks
 Filter filter3 = requirePrimaryTracksInFilter();                         // Predefined filter, for kPrimaryTracks tracks
@@ -33,6 +33,7 @@ void process(soa::Filtered<soa::Join<aod::Tracks, aod::TrackSelection>>::iterato
 }
 
 ```
+
 
 In general it is advised to use the filter decisions only in the filter expressions, so the framework can optimize the processing.
 However, if really needed you can also access the filtering decisions in the following way:
