@@ -9,50 +9,46 @@ Here are described the PID working principles in O2 as well as how to get PID in
 
 ## Introduction
 
-PID is handled in O2 via the reimplementation of base classes found in [`Analysis/DataModel/include/PIDBase/`](https://github.com/AliceO2Group/AliceO2/tree/dev/Analysis/DataModel/include/PIDBase).
+PID is handled in O2 via the reimplementation of base classes found in [`Common/Core/PID/`](https://github.com/AliceO2Group/O2Physics/tree/master/Common/Core/PID).
 
-The parametrization of the expected detector response (e.g. signal, resolution, separation) is handled in the classes derived from [`Analysis/DataModel/include/PIDBase/ParamBase.h`](https://github.com/AliceO2Group/AliceO2/tree/dev/Analysis/DataModel/include/PIDBase/ParamBase.h).
-Examples of these derived classes can be found in [`Analysis/DataModel/include/PID/BetheBloch.h`](https://github.com/AliceO2Group/AliceO2/tree/dev/Analysis/DataModel/include/PID/BetheBloch.h), in this example the base class is specialized to implement BetheBloch parametrization for the expected signals.
+The parametrization of the expected detector response (e.g. signal, resolution, separation) is handled in the classes derived from [`Common/Core/PID/ParamBase.h`](https://github.com/AliceO2Group/O2Physics/tree/master/Common/Core/PID/ParamBase.h).
+Examples of these derived classes can be found in [`PIDTOF.h`](https://github.com/AliceO2Group/O2Physics/blob/master/Common/Core/PID/PIDTOF.h), in this example the the TOF resolution response is implemented.
 
-The parametrization objects are used in the classed derived from [`Analysis/DataModel/include/PIDBase/DetectorResponse.h`](https://github.com/AliceO2Group/AliceO2/tree/dev/Analysis/DataModel/include/PIDBase/DetectorResponse.h) for each detector/device.
-These are the interface between the user and the parametrization and give expected detector response (signal, resolution, separation) for each particle species index (as defined in [`DataFormats/Reconstruction/include/ReconstructionDataFormats/PID.h`](https://github.com/AliceO2Group/AliceO2/tree/dev/DataFormats/Reconstruction/include/ReconstructionDataFormats/PID.h)).
-Examples of these derived classes can be found in [`Analysis/DataModel/include/PID/PIDTOF.h`](https://github.com/AliceO2Group/AliceO2/tree/dev/Analysis/DataModel/include/PID/PIDTOF.h), in this example the base class is specialized to implement the TOF detector response.
-In order to ensure the versatility of the PID framework objects derived from [`DetectorResponse.h`](https://github.com/AliceO2Group/AliceO2/tree/dev/Analysis/DataModel/include/PIDBase/DetectorResponse.h) are not expected to change significantly as the main physical meaning of the response is contained in the parametrization objects.
-The parametrization can be loaded from a local file or from CCDB depending on the needs (e.g. different periods, different parametrization et cetera).
-
-The interface between the detector and the Analysis Framework is fully enclosed in [`Analysis/DataModel/include/PID/PIDResponse.h`](https://github.com/AliceO2Group/AliceO2/tree/dev/Analysis/DataModel/include/PIDBase/DetectorResponse.h).
+The interface between the detector and the Analysis Framework is fully enclosed in [`DetectorResponse.h`](https://github.com/AliceO2Group/O2Physics/tree/master/Common/Core/PID/DetectorResponse.h).
 Here are defined the tables for the PID.
 
-The filling of the PID tables is delegated to dedicated tasks in [`Analysis/Tasks/`](https://github.com/AliceO2Group/AliceO2/tree/dev/Analysis/Tasks)
-Examples of these tasks can be found in [`Analysis/Tasks/pidTOF.cxx`](https://github.com/AliceO2Group/AliceO2/tree/dev/Analysis/Tasks/pidTOF.cxx) and [`Analysis/Tasks/pidTPC.cxx`](https://github.com/AliceO2Group/AliceO2/tree/dev/Analysis/Tasks/pidTPC.cxx) for TOF and TPC tables respectively.
+The filling of the PID tables is delegated to dedicated tasks in [`Common/TableProducer/PID/`](https://github.com/AliceO2Group/O2Physics/tree/master/Common/TableProducer/PID)
+Examples of these tasks can be found in [`pidTOF.cxx`](https://github.com/AliceO2Group/O2Physics/tree/master/Common/TableProducer/PID/pidTOF.cxx) and [`pidTPC.cxx`](https://github.com/AliceO2Group/O2Physics/tree/master/Common/TableProducer/PID/pidTPC.cxx) for TOF and TPC tables respectively.
 
 
 ## Usage in tasks
 
-Tables for PID values in O2 are defined in [`Analysis/DataModel/include/PID/PIDResponse.h`](https://github.com/AliceO2Group/AliceO2/tree/dev/Analysis/DataModel/include/PIDBase/DetectorResponse.h).
+Tables for PID values in O2 are defined in [`PIDResponse.h`](https://github.com/AliceO2Group/O2Physics/blob/master/Common/DataModel/PIDResponse.h).
 You can include it in your task with:
 
 ``` c++
-#include "PID/PIDResponse.h"
+#include "Common/DataModel/PIDResponse.h"
+... 
+
 ```
 
-In the process functions you can join the table to add the PID information to the track.
+In the process functions you can join the table to add the PID (per particle mass hypothesis) information to the track.
 
 * For the TOF PID as:
 
     ``` c++
-    void process(aod::Collision const& collision, soa::Join<aod::Tracks, aod::TracksExtra, aod::pidRespTOF> const& tracks)
+    void process(aod::Collision const& collision, soa::Join<aod::Tracks, aod::TracksExtra, aod::pidTOFEl> const& tracks)
     ```
 
 * For the TPC PID as:
 
     ``` c++
-    void process(aod::Collision const& collision, soa::Join<aod::Tracks, aod::TracksExtra, aod::pidRespTPC> const& tracks)
+    void process(aod::Collision const& collision, soa::Join<aod::Tracks, aod::TracksExtra, aod::pidTPCEl> const& tracks)
     ```
-* For both TPC and TOF PID as:
+* For both TOF and TPC PID as:
 
     ``` c++
-    void process(aod::Collision const& collision, soa::Join<aod::Tracks, aod::TracksExtra, aod::pidRespTPC, aod::pidRespTOF> const& tracks)
+    void process(aod::Collision const& collision, soa::Join<aod::Tracks, aod::TracksExtra, aod::pidTOFEl, aod::pidTPCEl> const& tracks)
     ```
 
 ### Task for PID spectra (and to fill PID tables!)
@@ -78,14 +74,14 @@ O2 tasks dedicated to the filling of the PID tables are called with
     ```
 
 ### Example of tasks that use the PID tables (and how to run them)
-* TOF PID task [`Analysis/Tasks/pidTOF.cxx`](https://github.com/AliceO2Group/AliceO2/tree/dev/Analysis/Tasks/pidTOF.cxx)
+* TOF PID task [`pidTOF.cxx`](https://github.com/AliceO2Group/O2Physics/tree/master/Common/TableProducer/PID/pidTOF.cxx)
     You can run the TOF spectra task with:
 
     ``` bash
-    o2-analysis-spectra-tof --aod-file AO2D.root -b | o2-analysis-pid-tof -b
+    o2-analysis-spectra-tof --aod-file AO2D.root -b | o2-analysis-pid-tof -b | o2-analysis-pid-tof-base -b
     ```
 
-* TPC PID task [`Analysis/Tasks/pidTPC.cxx`](https://github.com/AliceO2Group/AliceO2/tree/dev/Analysis/Tasks/pidTPC.cxx)
+* TPC PID task [`pidTPC.cxx`](https://github.com/AliceO2Group/O2Physics/tree/master/Common/TableProducer/PID/pidTPC.cxx)
     You can run the TPC spectra task with:
 
     ``` bash
@@ -93,4 +89,10 @@ O2 tasks dedicated to the filling of the PID tables are called with
     ```
 
 ### Enabling QA histograms
-* QA histograms should come with the PID tasks, they can be enabled with the option `--add-qa 1` when running locally or with the corresponding QA tasks
+* QA histograms should come with the PID tasks, they can be enabled with the option `--add-qa 1` when running locally or with the corresponding QA tasks as in:
+    ``` bash
+    ... | o2-analysis-pid-tof -b --add-qa 1
+
+    ... | o2-analysis-pid-tpc -b --add-qa 1
+    ```
+
