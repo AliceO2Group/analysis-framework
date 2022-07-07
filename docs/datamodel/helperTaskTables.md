@@ -1834,7 +1834,42 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
         <td></td>
       </tr>
       <tr>
+        <td>o2::aod::track::IsQualityTrack</td>
+        <td>D</td>
+        <td>isQualityTrack</td>
+        <td>bool</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::IsPrimaryTrack</td>
+        <td>D</td>
+        <td>isPrimaryTrack</td>
+        <td>bool</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::IsInAcceptanceTrack</td>
+        <td>D</td>
+        <td>isInAcceptanceTrack</td>
+        <td>bool</td>
+        <td></td>
+      </tr>
+      <tr>
         <td>o2::aod::track::IsGlobalTrack</td>
+        <td>D</td>
+        <td>isGlobalTrack</td>
+        <td>bool</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::IsGlobalTrackWoPtEta</td>
+        <td>D</td>
+        <td>isGlobalTrackWoPtEta</td>
+        <td>bool</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::IsGlobalTrackWoDCA</td>
         <td>GI</td>
         <td></td>
         <td>?</td>
