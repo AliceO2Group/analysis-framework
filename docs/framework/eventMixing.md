@@ -22,7 +22,7 @@ There are several *CombinationIndexPolicies* available which are explained [here
 ## Event mixing
 
 `GroupedCombinationsGenerator` which generates mixed event pairs is a generalization of block combination policies. Therefore, it accepts the same parameters:
-- Binning Policy
+- binning policy
 - outsider
 - category neighbours (equivalent to the number of other collisions to mix with)
 
