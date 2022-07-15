@@ -681,6 +681,7 @@ combinations(combinationPolicy)
 
 You can see some combinations examples in the <a href="https://github.com/AliceO2Group/O2Physics/blob/master/Tutorials/src/tracksCombinations.cxx" target="_blank">tracksCombinations.cxx</a> tutorial.
 
+
 ## Configuration in a json file
 
 json files can be used to specify what needs to be written (see at the end of this section), but they can also be used to give some information about the configuration to the workflow. For example you can put the values of the configurables inside a json file. 
@@ -755,52 +756,6 @@ For example the above json file is well adapted for the task `o2-analysis-mm-dnd
 `o2-analysis-timestamp --configuration json://config-file.json | o2-analysis-event-selection --configuration json://config-file.json | o2-analysis-trackextension --configuration json://config-file.json | o2-analysis-mm-dndeta --configuration json://config-file.json`
 
 *N.B. : You should provide the json file to each workflow separated by a pipe. *
-
-
-
-## Event mixing
-> **Separate docs for specific analysis details?**
-
-Block combinations can be used to obtain tracks from mixed events. First, one needs to calculate hash to associate each collision with proper bins:
-
-```cpp
-struct HashTask {
-  std::vector<float> xBins{-1.5f, -1.0f, -0.5f, 0.0f, 0.5f, 1.0f, 1.5f};
-  std::vector<float> yBins{-1.5f, -1.0f, -0.5f, 0.0f, 0.5f, 1.0f, 1.5f};
-  Produces<aod::Hashes> hashes;
-
-  void process(aod::Collisions const& collisions)
-  {
-    for (auto& collision : collisions) {
-      hashes(getHash(xBins, yBins, collision.posX(), collision.posY()));
-    }
-  }
-};
-```
-
-Then, the following task is actually processing mixed-event data:
-
-```cpp
-struct CollisionsCombinationsTask {
-  void process(aod::Hashes const& hashes, aod::Collisions& collisions, soa::Filtered<aod::Tracks>& tracks)
-  {
-    // Strictly upper pairs of collisions with the same hash,
-    // max 5 elements paired with each element from the same `fBin`(hash).
-    // Entries with `fBin` == -1 are skipped.
-    for (auto& [c1, c2] : selfCombinations("fBin", 5, -1, join(hashes, collisions), join(hashes, collisions))) {
-
-      // Grouping and slicing of tracks needs to be hardcoded here for now
-      ...
-
-      // All pairs of tracks from mixed events c1 and c2
-      for (auto& [t1, t2] : combinations(CombinationsFullIndexPolicy(tracks1, tracks2))) {
-      }
-    }
-  }
-};
-```
-
-A full example can be found in the tutorial [Event Mixing](../tutorials/eventMixing.md) section.
 
 
 ## Saving tables to file
