@@ -606,9 +606,16 @@ Performance-efficient policies for getting tuples of elements from the same tabl
 - `CombinationsBlockFullSameIndexPolicy`
 - `CombinationsBlockStrictlyUpperSameIndexPolicy`
 
-#### Binning Policy
+#### Binning policies
 
-Binning Policy accepts an array of bins (C++ vectors), and a bool specifying whether under- and overflow values should be ignored. If it is set to true, all underflow and overflow values are assigned to a dummy bin `-1`. The first non-underflow bin is 0. If the bool is false, then the values that are underflow in all dimensions are included in the bin 0, the first non-underflow bin is 1, and there are more bins for under- and overflow values from specific dimensions.
+There are 2 binning policies:
+- `FlexibleBinningPolicy`
+- `ColumnBinningPolicy`
+together with the base class `BinningPolicyBase` which contains methods for calculating bins for given data.
+
+`FlexibleBinningPolicy` can be defined by both table columns and lambda functions while `ColumnBinningPolicy` accepts only columns. The column policy is used in varioux examples in the <a href="https://github.com/AliceO2Group/O2Physics/blob/master/Tutorials/src/eventMixing.cxx" target="_blank">event mixing tutorial</a>, while the last task of the tutorial depicts how to utilize flexible binning.
+
+Besides these differences, a binning policy accepts an array of bins (C++ vectors), and a bool specifying whether under- and overflow values should be ignored. If it is set to true, all underflow and overflow values are assigned to a dummy bin `-1`. The first non-underflow bin is 0. If the bool is false, then the values that are underflow in all dimensions are included in the bin 0, the first non-underflow bin is 1, and there are more bins for under- and overflow values from specific dimensions.
 
 Note that Binning Policy is defined only for 1-, 2-, and 3-dimensional binning. If you want to bin objects based on 4 or more properties, you need to write yourself a class inheriting from Binning Policy with customized `getBin()` function.
 
