@@ -606,9 +606,16 @@ Performance-efficient policies for getting tuples of elements from the same tabl
 - `CombinationsBlockFullSameIndexPolicy`
 - `CombinationsBlockStrictlyUpperSameIndexPolicy`
 
-#### Binning Policy
+#### Binning policies
 
-Binning Policy accepts an array of bins (C++ vectors), and a bool specifying whether under- and overflow values should be ignored. If it is set to true, all underflow and overflow values are assigned to a dummy bin `-1`. The first non-underflow bin is 0. If the bool is false, then the values that are underflow in all dimensions are included in the bin 0, the first non-underflow bin is 1, and there are more bins for under- and overflow values from specific dimensions.
+There are 2 binning policies:
+- `FlexibleBinningPolicy`
+- `ColumnBinningPolicy`
+together with the base class `BinningPolicyBase` which contains methods for calculating bins for given data.
+
+`FlexibleBinningPolicy` can be defined by both table columns and lambda functions while `ColumnBinningPolicy` accepts only columns. The column policy is used in varioux examples in the <a href="https://github.com/AliceO2Group/O2Physics/blob/master/Tutorials/src/eventMixing.cxx" target="_blank">event mixing tutorial</a>, while the last task of the tutorial depicts how to utilize flexible binning.
+
+Besides these differences, a binning policy accepts an array of bins (C++ vectors), and a bool specifying whether under- and overflow values should be ignored. If it is set to true, all underflow and overflow values are assigned to a dummy bin `-1`. The first non-underflow bin is 0. If the bool is false, then the values that are underflow in all dimensions are included in the bin 0, the first non-underflow bin is 1, and there are more bins for under- and overflow values from specific dimensions.
 
 Note that Binning Policy is defined only for 1-, 2-, and 3-dimensional binning. If you want to bin objects based on 4 or more properties, you need to write yourself a class inheriting from Binning Policy with customized `getBin()` function.
 
@@ -680,6 +687,7 @@ combinations(combinationPolicy)
 ```
 
 You can see some combinations examples in the <a href="https://github.com/AliceO2Group/O2Physics/blob/master/Tutorials/src/tracksCombinations.cxx" target="_blank">tracksCombinations.cxx</a> tutorial.
+
 
 ## Configuration in a json file
 
@@ -755,52 +763,6 @@ For example the above json file is well adapted for the task `o2-analysis-mm-dnd
 `o2-analysis-timestamp --configuration json://config-file.json | o2-analysis-event-selection --configuration json://config-file.json | o2-analysis-trackextension --configuration json://config-file.json | o2-analysis-mm-dndeta --configuration json://config-file.json`
 
 *N.B. : You should provide the json file to each workflow separated by a pipe. *
-
-
-
-## Event mixing
-> **Separate docs for specific analysis details?**
-
-Block combinations can be used to obtain tracks from mixed events. First, one needs to calculate hash to associate each collision with proper bins:
-
-```cpp
-struct HashTask {
-  std::vector<float> xBins{-1.5f, -1.0f, -0.5f, 0.0f, 0.5f, 1.0f, 1.5f};
-  std::vector<float> yBins{-1.5f, -1.0f, -0.5f, 0.0f, 0.5f, 1.0f, 1.5f};
-  Produces<aod::Hashes> hashes;
-
-  void process(aod::Collisions const& collisions)
-  {
-    for (auto& collision : collisions) {
-      hashes(getHash(xBins, yBins, collision.posX(), collision.posY()));
-    }
-  }
-};
-```
-
-Then, the following task is actually processing mixed-event data:
-
-```cpp
-struct CollisionsCombinationsTask {
-  void process(aod::Hashes const& hashes, aod::Collisions& collisions, soa::Filtered<aod::Tracks>& tracks)
-  {
-    // Strictly upper pairs of collisions with the same hash,
-    // max 5 elements paired with each element from the same `fBin`(hash).
-    // Entries with `fBin` == -1 are skipped.
-    for (auto& [c1, c2] : selfCombinations("fBin", 5, -1, join(hashes, collisions), join(hashes, collisions))) {
-
-      // Grouping and slicing of tracks needs to be hardcoded here for now
-      ...
-
-      // All pairs of tracks from mixed events c1 and c2
-      for (auto& [t1, t2] : combinations(CombinationsFullIndexPolicy(tracks1, tracks2))) {
-      }
-    }
-  }
-};
-```
-
-A full example can be found in the tutorial [Event Mixing](../tutorials/eventMixing.md) section.
 
 
 ## Saving tables to file
