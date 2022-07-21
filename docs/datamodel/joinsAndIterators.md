@@ -1113,6 +1113,13 @@ Click on the labels to display the definitions. Click buttons to
     </ul>
   </div>
 
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::analysis::hf_cuts_lc_topkpi::TrksPID</button>
+  <div class="panel">
+    <ul>
+        <li>o2::analysis::hf_cuts_lc_topkpi::TrksPID = soa::Join<o2::analysis::hf_cuts_lc_topkpi::aod::BigTracksPID, o2::analysis::hf_cuts_lc_topkpi::aod::pidBayesPi, o2::analysis::hf_cuts_lc_topkpi::aod::pidBayesKa, o2::analysis::hf_cuts_lc_topkpi::aod::pidBayesPr, o2::analysis::hf_cuts_lc_topkpi::aod::pidBayes></li>
+    </ul>
+  </div>
+
   <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::analysis::hf_cuts_lc_topkpi::Trks</button>
   <div class="panel">
     <ul>
