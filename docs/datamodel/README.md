@@ -15,6 +15,10 @@ Information contained in different tables can be related. E.g. a track belongs t
 
 Hence the dependent tables need to hold an index which points to a specific row of the master table. For this the dependent table (e.g. table Tracks) has an index column [master]Id (in this case CollisionsId) which points to the related information in table master. See also e.g. master=BCs and dependent=CaloTriggers and many more.
 
+```goal
+For **each** index in a table, there is a method to get the corresponding object. For example in the table aod::Tracks there is an index collisionId. So if you have an object aod::Track called track, you can directly access the collision of this track by calling track.collision(). You can also check before doing so that the track you are interested in has a collision, by using the templated function **.has_smthg()**, in this example using track.has_collision(), which returns a boolean . The type of the object track.collision() is o2::aod::Collision. This is true for every index in every table, so calling for instance collision.bc() gives you the bc of the collision you are working on. You can then call for example collision.bc().globalBC() .
+```
+
 ```note
 Be aware that tables can be [joined](../framework/framework.md#processing-related-tables) and be [extended](../framework/framework.md#expression-columns) with extra colums.
 ```
