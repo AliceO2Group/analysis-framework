@@ -1092,6 +1092,13 @@ Click on the labels to display the definitions. Click buttons to
     </ul>
   </div>
 
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::hf_cand_lb::TracksExtendedPID</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::hf_cand_lb::TracksExtendedPID = soa::Join<o2::aod::BigTracksPID, o2::aod::HfTrackIndexALICE3PID></li>
+    </ul>
+  </div>
+
   <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::analysis::hf_cuts_d0_topik::Trks</button>
   <div class="panel">
     <ul>
