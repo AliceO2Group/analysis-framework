@@ -25,7 +25,7 @@ To loop over all available tracks contained in the input files subscribe to the 
 void process(Track const& track)
 {
   // process the track `track` of type `Track`
-  LOGF (INFO, "Momentum: %f",track.p());
+  LOGF(info, "Momentum: %f",track.p());
 }
 ```
 
