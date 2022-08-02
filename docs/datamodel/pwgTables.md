@@ -12604,6 +12604,141 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGJE
     </table>
   </div>
 
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::EMCALClusterCells</button>
+  <div class="panel">
+    <div>
+
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGJE/DataModel/EMCALClusters.h" target="_blank">PWGJE/DataModel/EMCALClusters.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::EMCALClusterCell = o2::aod::EMCALClusterCells::iterator</li>
+      </ul>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::soa::Index</td>
+        <td>GI</td>
+        <td>globalIndex</td>
+        <td>int64_t</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::emcalclustercell::EMCALClusterId</td>
+        <td>I</td>
+        <td>emcalclusterId</td>
+        <td>int32</td>
+        <td>linked to EMCalClusters table</td>
+      </tr>
+      <tr>
+        <td>o2::aod::emcalclustercell::CaloId</td>
+        <td>I</td>
+        <td>caloId</td>
+        <td>int32</td>
+        <td>linked to calo cells</td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::EMCALAmbiguousClusterCells</button>
+  <div class="panel">
+    <div>
+
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGJE/DataModel/EMCALClusters.h" target="_blank">PWGJE/DataModel/EMCALClusters.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::EMCALAmbiguousClusterCell = o2::aod::EMCALAmbiguousClusterCells::iterator</li>
+      </ul>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::soa::Index</td>
+        <td>GI</td>
+        <td>globalIndex</td>
+        <td>int64_t</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::emcalclustercell::EMCALAmbiguousClusterId</td>
+        <td>I</td>
+        <td>emcalambiguousclusterId</td>
+        <td>int32</td>
+        <td>linked to EMCalAmbiguousClusters table</td>
+      </tr>
+      <tr>
+        <td>o2::aod::emcalclustercell::CaloId</td>
+        <td>I</td>
+        <td>caloId</td>
+        <td>int32</td>
+        <td>linked to calo cells</td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::EMCALMatchedTracks</button>
+  <div class="panel">
+    <div>
+
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGJE/DataModel/EMCALClusters.h" target="_blank">PWGJE/DataModel/EMCALClusters.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::EMCALMatchedTrack = o2::aod::EMCALMatchedTracks::iterator</li>
+      </ul>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::soa::Index</td>
+        <td>GI</td>
+        <td>globalIndex</td>
+        <td>int64_t</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::emcalclustercell::EMCALClusterId</td>
+        <td>I</td>
+        <td>emcalclusterId</td>
+        <td>int32</td>
+        <td>linked to EMCalClusters table</td>
+      </tr>
+      <tr>
+        <td>o2::aod::emcalmatchedtrack::TrackId</td>
+        <td>I</td>
+        <td>trackId</td>
+        <td>int32</td>
+        <td>linked to Track table only for tracks that were matched</td>
+      </tr>
+    </table>
+  </div>
+
 </div>
 
 ####  o2-analysis-je-jet-finder
