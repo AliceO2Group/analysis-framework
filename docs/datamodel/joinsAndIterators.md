@@ -455,6 +455,20 @@ Click on the labels to display the definitions. Click buttons to
     </ul>
   </div>
 
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::McV0Label</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::McV0Label = o2::aod::McV0Labels::iterator</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::McCascLabel</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::McCascLabel = o2::aod::McCascLabels::iterator</li>
+    </ul>
+  </div>
+
   <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::CFCollision</button>
   <div class="panel">
     <ul>
@@ -501,6 +515,20 @@ Click on the labels to display the definitions. Click buttons to
   <div class="panel">
     <ul>
         <li>o2::aod::FemtoDreamDebugParticle = o2::aod::FemtoDreamDebugParticles::iterator</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::FemtoDreamParticleMC</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::FemtoDreamParticleMC = o2::aod::FemtoDreamParticlesMC::iterator</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::FemtoDreamDebugParticleMC</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::FemtoDreamDebugParticleMC = o2::aod::FemtoDreamParticlesMC::iterator</li>
     </ul>
   </div>
 
