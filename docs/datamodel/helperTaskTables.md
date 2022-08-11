@@ -3521,6 +3521,13 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
         <th>Comment</th>
       </tr>
       <tr>
+        <td>o2::aod::pidtpc::TPCExpSignalEl</td>
+        <td>D</td>
+        <td>tpcExpSignalEl</td>
+        <td>float</td>
+        <td>Expected signal with the TPC detector for electron</td>
+      </tr>
+      <tr>
         <td>o2::aod::pidtpc::TPCExpSignalDiffEl</td>
         <td>D</td>
         <td>tpcExpSignalDiffEl</td>
@@ -3564,6 +3571,13 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
         <th>Getter</th>
         <th>Type</th>
         <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::pidtpc::TPCExpSignalMu</td>
+        <td>D</td>
+        <td>tpcExpSignalMu</td>
+        <td>float</td>
+        <td>Expected signal with the TPC detector for muon</td>
       </tr>
       <tr>
         <td>o2::aod::pidtpc::TPCExpSignalDiffMu</td>
@@ -3611,6 +3625,13 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
         <th>Comment</th>
       </tr>
       <tr>
+        <td>o2::aod::pidtpc::TPCExpSignalPi</td>
+        <td>D</td>
+        <td>tpcExpSignalPi</td>
+        <td>float</td>
+        <td>Expected signal with the TPC detector for pion</td>
+      </tr>
+      <tr>
         <td>o2::aod::pidtpc::TPCExpSignalDiffPi</td>
         <td>D</td>
         <td>tpcExpSignalDiffPi</td>
@@ -3654,6 +3675,13 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
         <th>Getter</th>
         <th>Type</th>
         <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::pidtpc::TPCExpSignalKa</td>
+        <td>D</td>
+        <td>tpcExpSignalKa</td>
+        <td>float</td>
+        <td>Expected signal with the TPC detector for kaon</td>
       </tr>
       <tr>
         <td>o2::aod::pidtpc::TPCExpSignalDiffKa</td>
@@ -3701,6 +3729,13 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
         <th>Comment</th>
       </tr>
       <tr>
+        <td>o2::aod::pidtpc::TPCExpSignalPr</td>
+        <td>D</td>
+        <td>tpcExpSignalPr</td>
+        <td>float</td>
+        <td>Expected signal with the TPC detector for proton</td>
+      </tr>
+      <tr>
         <td>o2::aod::pidtpc::TPCExpSignalDiffPr</td>
         <td>D</td>
         <td>tpcExpSignalDiffPr</td>
@@ -3739,6 +3774,13 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
         <th>Getter</th>
         <th>Type</th>
         <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::pidtpc::TPCExpSignalDe</td>
+        <td>D</td>
+        <td>tpcExpSignalDe</td>
+        <td>float</td>
+        <td>Expected signal with the TPC detector for deuteron</td>
       </tr>
       <tr>
         <td>o2::aod::pidtpc::TPCExpSignalDiffDe</td>
@@ -3781,6 +3823,13 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
         <th>Comment</th>
       </tr>
       <tr>
+        <td>o2::aod::pidtpc::TPCExpSignalTr</td>
+        <td>D</td>
+        <td>tpcExpSignalTr</td>
+        <td>float</td>
+        <td>Expected signal with the TPC detector for triton</td>
+      </tr>
+      <tr>
         <td>o2::aod::pidtpc::TPCExpSignalDiffTr</td>
         <td>D</td>
         <td>tpcExpSignalDiffTr</td>
@@ -3821,6 +3870,13 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
         <th>Comment</th>
       </tr>
       <tr>
+        <td>o2::aod::pidtpc::TPCExpSignalHe</td>
+        <td>D</td>
+        <td>tpcExpSignalHe</td>
+        <td>float</td>
+        <td>Expected signal with the TPC detector for helium3</td>
+      </tr>
+      <tr>
         <td>o2::aod::pidtpc::TPCExpSignalDiffHe</td>
         <td>D</td>
         <td>tpcExpSignalDiffHe</td>
@@ -3859,6 +3915,13 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
         <th>Getter</th>
         <th>Type</th>
         <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::pidtpc::TPCExpSignalAl</td>
+        <td>D</td>
+        <td>tpcExpSignalAl</td>
+        <td>float</td>
+        <td>Expected signal with the TPC detector for alpha</td>
       </tr>
       <tr>
         <td>o2::aod::pidtpc::TPCExpSignalDiffAl</td>

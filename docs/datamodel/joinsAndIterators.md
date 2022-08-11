@@ -987,6 +987,90 @@ Click on the labels to display the definitions. Click buttons to
     </ul>
   </div>
 
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::HFJet</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::HFJet = o2::aod::HFJets::iterator</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::MatchedHFJet</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::MatchedHFJet = o2::aod::MatchedHFJets::iterator</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::HFJetConstituent</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::HFJetConstituent = o2::aod::HFJetConstituents::iterator</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::HFJetConstituentSub</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::HFJetConstituentSub = o2::aod::HFJetConstituentsSub::iterator</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::MCParticleLevelHFJet</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::MCParticleLevelHFJet = o2::aod::MCParticleLevelHFJets::iterator</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::MatchedMCParticleLevelHFJet</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::MatchedMCParticleLevelHFJet = o2::aod::MatchedMCParticleLevelHFJets::iterator</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::MCParticleLevelHFJetConstituent</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::MCParticleLevelHFJetConstituent = o2::aod::MCParticleLevelHFJetConstituents::iterator</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::MCParticleLevelHFJetConstituentSub</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::MCParticleLevelHFJetConstituentSub = o2::aod::MCParticleLevelHFJetConstituentsSub::iterator</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::MCDetectorLevelHFJet</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::MCDetectorLevelHFJet = o2::aod::MCDetectorLevelHFJets::iterator</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::MatchedMCDetectorLevelHFJet</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::MatchedMCDetectorLevelHFJet = o2::aod::MatchedMCDetectorLevelHFJets::iterator</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::MCDetectorLevelHFJetConstituent</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::MCDetectorLevelHFJetConstituent = o2::aod::MCDetectorLevelHFJetConstituents::iterator</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::MCDetectorLevelHFJetConstituentSub</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::MCDetectorLevelHFJetConstituentSub = o2::aod::MCDetectorLevelHFJetConstituentsSub::iterator</li>
+    </ul>
+  </div>
+
   <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::pid::pidvar_t</button>
   <div class="panel">
     <ul>
