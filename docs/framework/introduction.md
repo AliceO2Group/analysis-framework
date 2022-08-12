@@ -59,6 +59,12 @@ Tasks come with command line options. To display the available options use &#820
 Compiled tasks can be combined to entire workflows in which inputs for a task
 are either contained in the input AOD file or are produced by other tasks in the
 workflow.
+
+A simple example is the histogram tutorial which you can run (on Run 2 converted data) with:
+```
+o2-analysistutorial-histograms --aod-file AO2D.root -b
+```
+
 Single task executables are combined with the pipe ( &#124; ) operator, e.g.
 
 ```
