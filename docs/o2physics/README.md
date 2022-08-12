@@ -26,3 +26,9 @@ Each folder (PWG or PAG) has the following structure:
 * .../DataModel --> headers which define derived data tables (intermediate or persistent)
 * .../TableProducer --> Tasks which produce tables (defined in DataModel)
 * .../Tasks --> analysis tasks
+
+## Adding your own task to O2Physics
+
+* Place your cxx file into PWGXX/Tasks. Adapt the task itself and the workflow definition at the end of the file.
+* Add the analysis to the CMakeLists.txt by cloning one of the existing o2_add_executable blocks. Pay attention to the naming convention of the executables.
+* Recompile as usual, and an executable containing your analysis workflow will be created. 
