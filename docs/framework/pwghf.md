@@ -1,5 +1,5 @@
 ---
-sort: 5
+sort: 8
 title: PWGHF
 ---
 
@@ -21,7 +21,7 @@ Mattermost channel: [hf-o2-analysis-challenge](https://mattermost.web.cern.ch/al
 ## Code
 
 - Tasks used by the heavy-flavour analysis framework are in the
-[`PWGHF`](https://github.com/AliceO2Group/O2Physics/tree/master/PWGHF) directory.
+[`PWG-HF`](https://github.com/AliceO2Group/O2Physics/tree/master/PWGHF) directory.
 - Tables produced by skimming and candidate creators are defined in
 [`HFSecondaryVertex.h`](https://github.com/AliceO2Group/O2Physics/blob/master/PWGHF/DataModel/HFSecondaryVertex.h).
 - Tables produced by candidate selectors are defined in
