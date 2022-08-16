@@ -1,6 +1,6 @@
 ---
 sort: 8
-title: PWGHF
+title: PWG-HF
 ---
 
 # Heavy-flavour (HF) analysis framework
