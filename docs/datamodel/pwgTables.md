@@ -320,11 +320,11 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGCF
         <td>Z Vertex position in cm</td>
       </tr>
       <tr>
-        <td>o2::aod::cent::CentRun2V0M</td>
+        <td>o2::aod::cfcollision::Multiplicity</td>
         <td></td>
-        <td>centRun2V0M</td>
+        <td>multiplicity</td>
         <td>float</td>
-        <td>Run2 Centrality percentile estimated from V0C+V0A multiplicities</td>
+        <td>Centrality/multiplicity value</td>
       </tr>
       <tr>
         <td>o2::aod::timestamp::Timestamp</td>
@@ -369,35 +369,35 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGCF
         <td>I</td>
         <td>cfCollisionId</td>
         <td>int32</td>
-        <td>Pointer into CFCollisions</td>
+        <td>Index to collision</td>
       </tr>
       <tr>
         <td>o2::aod::cftrack::Pt</td>
         <td></td>
         <td>pt</td>
         <td>float</td>
-        <td></td>
+        <td>pT (GeV/c)</td>
       </tr>
       <tr>
         <td>o2::aod::cftrack::Eta</td>
         <td></td>
         <td>eta</td>
         <td>float</td>
-        <td></td>
+        <td>Pseudorapidity</td>
       </tr>
       <tr>
         <td>o2::aod::cftrack::Phi</td>
         <td></td>
         <td>phi</td>
         <td>float</td>
-        <td></td>
+        <td>Phi angle</td>
       </tr>
       <tr>
         <td>o2::aod::cftrack::Sign</td>
         <td></td>
         <td>sign</td>
         <td>int8_t</td>
-        <td></td>
+        <td>Sign (positive, negative)</td>
       </tr>
       <tr>
         <td>o2::aod::track::TrackType</td>
