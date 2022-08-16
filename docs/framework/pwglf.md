@@ -1,6 +1,6 @@
 ---
 sort: 10
-title: PWGLF
+title: PWG-LF
 ---
 
 # Light-flavour (LF) analysis framework
