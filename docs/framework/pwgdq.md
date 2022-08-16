@@ -1,6 +1,6 @@
 ---
 sort: 6
-title: PWGDQ
+title: PWG-DQ
 ---
 
 ## Get started! 
@@ -20,7 +20,7 @@ Mattermost channel: [O2-DQ Analysis Framework Alpha](https://mattermost.web.cern
 ## Code
 
 * Tasks used by the dileptons-quarkonia analysis framework are in the
-[`PWGDQ`](https://github.com/AliceO2Group/O2Physics/tree/master/PWGDQ) directory.
+[`PWG-DQ`](https://github.com/AliceO2Group/O2Physics/tree/master/PWGDQ) directory.
 * Class to handle analysis variables are defined in
 [`VarManager.h`](https://github.com/AliceO2Group/O2Physics/blob/master/PWGDQ/Core/VarManager.h).
 * Class to define and fill histograms are defined in
