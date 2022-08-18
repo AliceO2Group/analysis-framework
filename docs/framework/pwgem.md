@@ -7,10 +7,9 @@ title: PWG-EM
 
 ## Get started!
 
-## Contact 
+## Contact
 
 ## Code
 
 - The codebase can be found in the
-[`PWG-EM`](https://github.com/AliceO2Group/O2Physics/tree/master/PWGEM) directory.
-.h).
+[`PWGEM`](https://github.com/AliceO2Group/O2Physics/tree/master/PWGEM) directory.

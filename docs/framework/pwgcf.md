@@ -3,14 +3,13 @@ sort: 5
 title: PWG-CF
 ---
 
-# Correlations and fluctiations (CF) analysis framework
+# Correlations and fluctuations (CF) analysis framework
 
 ## Get started!
 
-## Contact 
+## Contact
 
 ## Code
 
 - The codebase can be found in the
-[`PWG-CF`](https://github.com/AliceO2Group/O2Physics/tree/master/PWGCF) directory.
-.h).
+[`PWGCF`](https://github.com/AliceO2Group/O2Physics/tree/master/PWGCF) directory.

@@ -7,10 +7,9 @@ title: PWG-JE
 
 ## Get started!
 
-## Contact 
+## Contact
 
 ## Code
 
 - The codebase can be found in the
-[`PWG-LF`](https://github.com/AliceO2Group/O2Physics/tree/master/PWGJE) directory.
-.h).
+[`PWGJE`](https://github.com/AliceO2Group/O2Physics/tree/master/PWGJE) directory.

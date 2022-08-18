@@ -7,10 +7,9 @@ title: PWG-UD
 
 ## Get started!
 
-## Contact 
+## Contact
 
 ## Code
 
 - The codebase can be found in the
-[`PWG-UD`](https://github.com/AliceO2Group/O2Physics/tree/master/PWGUD) directory.
-.h).
+[`PWGUD`](https://github.com/AliceO2Group/O2Physics/tree/master/PWGUD) directory.
