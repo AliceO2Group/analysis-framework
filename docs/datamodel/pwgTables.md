@@ -4945,101 +4945,101 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
       </tr>
       <tr>
         <td>o2::aod::v0data::X</td>
+        <td>GI</td>
         <td></td>
-        <td>x</td>
-        <td>float</td>
-        <td>decay position X</td>
+        <td>?</td>
+        <td></td>
       </tr>
       <tr>
         <td>o2::aod::v0data::Y</td>
+        <td>GI</td>
         <td></td>
-        <td>y</td>
-        <td>float</td>
-        <td>decay position Y</td>
+        <td>?</td>
+        <td></td>
       </tr>
       <tr>
         <td>o2::aod::v0data::Z</td>
+        <td>GI</td>
         <td></td>
-        <td>z</td>
-        <td>float</td>
-        <td>decay position Z</td>
+        <td>?</td>
+        <td></td>
       </tr>
       <tr>
         <td>o2::aod::v0data::PosTrackId</td>
-        <td>I</td>
-        <td>posTrackId</td>
-        <td>int</td>
-        <td>Pointer into Tracks</td>
+        <td>GI</td>
+        <td></td>
+        <td>?</td>
+        <td></td>
       </tr>
       <tr>
         <td>o2::aod::v0data::NegTrackId</td>
-        <td>I</td>
-        <td>negTrackId</td>
-        <td>int</td>
-        <td>Pointer into Tracks</td>
+        <td>GI</td>
+        <td></td>
+        <td>?</td>
+        <td></td>
       </tr>
       <tr>
         <td>o2::aod::v0data::PxPos</td>
+        <td>GI</td>
         <td></td>
-        <td>pxpos</td>
-        <td>float</td>
-        <td>positive track px at min</td>
+        <td>?</td>
+        <td></td>
       </tr>
       <tr>
         <td>o2::aod::v0data::PyPos</td>
+        <td>GI</td>
         <td></td>
-        <td>pypos</td>
-        <td>float</td>
-        <td>positive track py at min</td>
+        <td>?</td>
+        <td></td>
       </tr>
       <tr>
         <td>o2::aod::v0data::PzPos</td>
+        <td>GI</td>
         <td></td>
-        <td>pzpos</td>
-        <td>float</td>
-        <td>positive track pz at min</td>
+        <td>?</td>
+        <td></td>
       </tr>
       <tr>
         <td>o2::aod::v0data::PxNeg</td>
+        <td>GI</td>
         <td></td>
-        <td>pxneg</td>
-        <td>float</td>
-        <td>negative track px at min</td>
+        <td>?</td>
+        <td></td>
       </tr>
       <tr>
         <td>o2::aod::v0data::PyNeg</td>
+        <td>GI</td>
         <td></td>
-        <td>pyneg</td>
-        <td>float</td>
-        <td>negative track py at min</td>
+        <td>?</td>
+        <td></td>
       </tr>
       <tr>
         <td>o2::aod::v0data::PzNeg</td>
+        <td>GI</td>
         <td></td>
-        <td>pzneg</td>
-        <td>float</td>
-        <td>negative track pz at min</td>
+        <td>?</td>
+        <td></td>
       </tr>
       <tr>
         <td>o2::aod::v0data::DCAV0Daughters</td>
+        <td>GI</td>
         <td></td>
-        <td>dcaV0daughters</td>
-        <td>float</td>
-        <td>DCA between V0 daughters</td>
+        <td>?</td>
+        <td></td>
       </tr>
       <tr>
         <td>o2::aod::v0data::DCAPosToPV</td>
+        <td>GI</td>
         <td></td>
-        <td>dcapostopv</td>
-        <td>float</td>
-        <td>DCA positive prong to PV</td>
+        <td>?</td>
+        <td></td>
       </tr>
       <tr>
         <td>o2::aod::v0data::DCANegToPV</td>
+        <td>GI</td>
         <td></td>
-        <td>dcanegtopv</td>
-        <td>float</td>
-        <td>DCA negative prong to PV</td>
+        <td>?</td>
+        <td></td>
       </tr>
       <tr>
         <td>o2::aod::hf_cand_prong2::M</td>
@@ -5197,38 +5197,38 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
       </tr>
       <tr>
         <td>o2::aod::v0data::V0Radius</td>
-        <td>D</td>
-        <td>v0radius</td>
-        <td>float</td>
-        <td>V0 decay radius (2D, centered at zero)</td>
+        <td>GI</td>
+        <td></td>
+        <td>?</td>
+        <td></td>
       </tr>
       <tr>
         <td>o2::aod::v0data::V0CosPA</td>
-        <td>D</td>
-        <td>v0cosPA</td>
-        <td>float</td>
-        <td>V0 CosPA</td>
+        <td>GI</td>
+        <td></td>
+        <td>?</td>
+        <td></td>
       </tr>
       <tr>
         <td>o2::aod::v0data::MLambda</td>
-        <td>D</td>
-        <td>mLambda</td>
-        <td>float</td>
-        <td>mass under lambda hypothesis</td>
+        <td>GI</td>
+        <td></td>
+        <td>?</td>
+        <td></td>
       </tr>
       <tr>
         <td>o2::aod::v0data::MAntiLambda</td>
-        <td>D</td>
-        <td>mAntiLambda</td>
-        <td>float</td>
-        <td>mass under antilambda hypothesis</td>
+        <td>GI</td>
+        <td></td>
+        <td>?</td>
+        <td></td>
       </tr>
       <tr>
         <td>o2::aod::v0data::MK0Short</td>
-        <td>D</td>
-        <td>mK0Short</td>
-        <td>float</td>
-        <td>mass under K0short hypothesis</td>
+        <td>GI</td>
+        <td></td>
+        <td>?</td>
+        <td></td>
       </tr>
     </table>
   </div>
