@@ -21,7 +21,7 @@ Mattermost channel: [hf-o2-analysis-challenge](https://mattermost.web.cern.ch/al
 ## Code
 
 - Tasks used by the heavy-flavour analysis framework are in the
-[`PWG-HF`](https://github.com/AliceO2Group/O2Physics/tree/master/PWGHF) directory.
+[`PWGHF`](https://github.com/AliceO2Group/O2Physics/tree/master/PWGHF) directory.
 - Tables produced by skimming and candidate creators are defined in
 [`HFSecondaryVertex.h`](https://github.com/AliceO2Group/O2Physics/blob/master/PWGHF/DataModel/HFSecondaryVertex.h).
 - Tables produced by candidate selectors are defined in
@@ -47,7 +47,7 @@ of the HF analyses on [AliHyperloop](https://alimonitor.cern.ch/hyperloop/):
 ## Framework structure
 
 Simplified graph of the workflows and tasks involved in a single HF analysis is shown in the following picture.
-Individual components are decribed in the next section below.
+Individual components are described in the next section below.
 
 <div align="center">
 <img src="../images/pwghf_graph.svg" width="800px" alt="PWGHF analysis framework">
