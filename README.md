@@ -1,4 +1,4 @@
-# ALICE O2 Analysis Framework
+# ALICE O2 Analysis Framework Documentation
 
 These pages document everything you need to know about doing Run 3 analysis in ALICE. In order to be up to speed you need to learn about:
 * Installation of the O2 framework
