@@ -1,6 +1,6 @@
 ---
 sort: 9
-title: Support and troubleshooting
+title: <i class="fa-solid fa-comments"></i>&nbsp;Support and troubleshooting
 ---
 
 # Support and troubleshooting

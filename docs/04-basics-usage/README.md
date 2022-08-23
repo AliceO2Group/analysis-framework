@@ -1,6 +1,6 @@
 ---
 sort: 4
-title: Running an analysis
+title: <i class="fa-solid fa-terminal"></i>&nbsp;Running an analysis
 ---
 
 # Using the framework: running an analysis
