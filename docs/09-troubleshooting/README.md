@@ -1,6 +1,6 @@
 ---
 sort: 9
-title: 9. Support and troubleshooting
+title: Support and troubleshooting
 ---
 
 # Support and troubleshooting

@@ -1,6 +1,6 @@
 ---
 sort: 5
-title: 5. Using hyperloop for analysis
+title: Using hyperloop for analysis
 ---
 
 # Hyperloop system

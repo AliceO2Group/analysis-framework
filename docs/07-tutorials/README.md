@@ -1,6 +1,6 @@
 ---
 sort: 7
-title: 7. Examples and tutorials
+title: Examples and tutorials
 ---
 
 # Examples and tutorials

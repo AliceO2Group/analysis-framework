@@ -1,6 +1,6 @@
 ---
 sort: 2
-title: 2. Getting started
+title: Getting started
 ---
 
 # Getting started
