@@ -1,6 +1,6 @@
 ---
 sort: 7
-title: <i class="fa fa-file-code-o fa-fw" style="color:IndianRed;"></i>&nbsp;Examples and tutorials
+title: 7. <i class="fa fa-file-code-o fa-fw" style="color:IndianRed;"></i>&nbsp;Examples and tutorials
 ---
 
 # Examples and tutorials

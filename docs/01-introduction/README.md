@@ -1,6 +1,6 @@
 ---
 sort: 1
-title: Introduction
+title: 1. Introduction
 ---
 
 # Introduction
