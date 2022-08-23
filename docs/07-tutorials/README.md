@@ -1,11 +1,11 @@
 ---
-sort: 9
+sort: 8
 title: Tutorials
 ---
 
 # Tutorials
 
-There is a number of example tasks available at the AliceO2 software repository
+There are a number of example tasks available at the AliceO2 software repository
 on github.com under
 [O2Physics/Tutorials/src/](https://github.com/AliceO2Group/O2Physics/tree/master/Tutorials/src/).
 It is ready-to-use code which you can run or copy to your own tasks and modify
