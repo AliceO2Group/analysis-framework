@@ -1,8 +1,9 @@
 ---
 sort: 11
-title: Appendix: Data table reference
+title: Appendix: data table reference
 ---
 
-# Appendix: Data table reference
+# Appendix: data table reference
+
 
 Documentation being created
