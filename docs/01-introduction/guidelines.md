@@ -1,5 +1,5 @@
 ---
-title: Contributing
+title: Documentation writing guidelines
 ---
 
 # Guidelines for writing documentation
