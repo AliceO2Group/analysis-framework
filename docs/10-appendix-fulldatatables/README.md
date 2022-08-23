@@ -1,8 +1,8 @@
 ---
 sort: 10
-title: <i class="fa fa-table fa-fw"></i> Appendix&#58; data table reference
+title: &nbsp;<i class="fa fa-table fa-fw" style="color:red;"></i> Appendix&#58; data table reference
 ---
 
-# <i class="fa fa-table fa-fw"> Appendix: data table reference
+# Appendix: data table reference
 
-etc <i class="fa fa-table fa-fw"> 
+etc 

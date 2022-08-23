@@ -1,6 +1,6 @@
 ---
 sort: 5
-title: <i class="fa fa-globe fa-fw"></i>&nbsp;Using hyperloop for analysis
+title: &nbsp;<i class="fa fa-globe fa-fw" style="color:red;"></i>&nbsp;Using hyperloop for analysis
 ---
 
 # Hyperloop system
