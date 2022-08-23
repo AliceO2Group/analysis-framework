@@ -3,7 +3,7 @@ sort: 5
 title: Using hyperloop for analysis
 ---
 
-# <i class="fa-regular fa-globe"></i>&nbsp;Hyperloop system
+# Hyperloop system
 
 The hyperloop train system is used to submit your analysis in a train to the Grid.
 
