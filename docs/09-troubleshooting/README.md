@@ -1,6 +1,6 @@
 ---
 sort: 9
-title: <i class="fa fa-var-comments"></i>&nbsp;Support and troubleshooting
+title: <i class="fa fa-var-comments fa-fw"></i>&nbsp;Support and troubleshooting
 ---
 
 # Support and troubleshooting

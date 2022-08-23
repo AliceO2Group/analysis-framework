@@ -1,6 +1,6 @@
 ---
 sort: 7
-title: <i class="fa fa-var-file-code-o"></i>&nbsp;Examples and tutorials
+title: <i class="fa fa-var-file-code-o fa-fw"></i>&nbsp;Examples and tutorials
 ---
 
 # Examples and tutorials

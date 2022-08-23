@@ -1,6 +1,6 @@
 ---
 sort: 2
-title: <i class="fa fa-var-play"></i>&nbsp;Getting started
+title: <i class="fa fa-var-play fa-fw"></i>&nbsp;Getting started
 ---
 
 # Getting started
