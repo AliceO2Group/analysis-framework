@@ -1,6 +1,6 @@
 ---
 sort: 6
-title: &nbsp;<i class="fa fa-cubes fa-fw" style="color:red;"></i>&nbsp;Advanced features and PWG specifics
+title: <i class="fa fa-cubes fa-fw" style="color:red;"></i>&nbsp;Advanced features and PWG specifics
 ---
 
 # Advanced features and PWG specifics

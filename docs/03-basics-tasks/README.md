@@ -1,6 +1,6 @@
 ---
 sort: 3
-title: &nbsp;<i class="fa fa-code fa-fw" style="color:red;"></i>&nbsp;Writing an analysis task
+title: <i class="fa fa-code fa-fw" style="color:red;"></i>&nbsp;Writing an analysis task
 ---
 
 # Writing an analysis task
