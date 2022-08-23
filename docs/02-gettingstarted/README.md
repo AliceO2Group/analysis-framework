@@ -1,6 +1,6 @@
 ---
 sort: 2
-title: Getting started
+title: <i class="fa-solid fa-play"></i>&nbsp;Getting started
 ---
 
 # Getting started

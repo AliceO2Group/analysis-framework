@@ -1,6 +1,6 @@
 ---
 sort: 7
-title: Examples and tutorials
+title: <i class="fa-solid fa-file-code"></i>&nbsp;Examples and tutorials
 ---
 
 # Examples and tutorials
