@@ -1,5 +1,6 @@
-<div class="navigation-top d-flex justify-content-start; font-size:13px; font-style:italic; font-weight:bold; color:#273746">
+<div class="navigation-top d-flex justify-content-center; font-size:13px; font-style:italic; font-weight:bold; color:#273746">
     You're viewing this repository file:
+    &nbsp
     <ul class="breadcrumb" role="navigation" aria-label="breadcrumbs navigation">
         <li class="breadcrumb-item">
             <a class="no-underline" href="{{ site.baseurl }}/" title="{{ docs.source.path }}">
@@ -28,6 +29,7 @@
                 {%- endfor -%}
         {%- endcase -%}
     </ul>
+    &nbsp
     <a class="edit" href="{% github_edit_link %}" title="{{ __.edit | default: 'Edit on GitHub'}}" rel="noreferrer" target="_blank">
         <i class="fa fa-edit"></i>
     </a>
