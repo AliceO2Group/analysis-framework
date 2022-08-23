@@ -1,6 +1,6 @@
 ---
 sort: 9
-title: FAQ
+title: Frequently asked questions (FAQ)
 ---
 
 # Frequently asked questions

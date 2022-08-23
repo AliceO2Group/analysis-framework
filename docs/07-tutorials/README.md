@@ -1,9 +1,9 @@
 ---
 sort: 8
-title: Tutorials
+title: Examples and tutorials
 ---
 
-# Tutorials
+# Examples and tutorials
 
 There are a number of example tasks available at the AliceO2 software repository
 on github.com under
