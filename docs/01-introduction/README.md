@@ -1,6 +1,6 @@
 ---
 sort: 1
-title: <i class="fa-solid fa-door-open"></i>&nbsp;Introduction
+title: Introduction
 ---
 
 # Introduction
