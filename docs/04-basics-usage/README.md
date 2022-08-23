@@ -1,5 +1,5 @@
 ---
-sort: 05
+sort: 4
 title: Running an analysis
 ---
 

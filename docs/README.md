@@ -1,5 +1,5 @@
 ---
-sort: 01
+sort: 0
 title: ALICE O2 Analysis Framework
 ---
 

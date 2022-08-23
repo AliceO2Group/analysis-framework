@@ -1,5 +1,5 @@
 ---
-sort: 04
+sort: 3
 title: Writing an analysis task
 ---
 

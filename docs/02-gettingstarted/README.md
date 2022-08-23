@@ -1,5 +1,5 @@
 ---
-sort: 03
+sort: 2
 title: Getting started
 ---
 

@@ -1,5 +1,5 @@
 ---
-sort: 09
+sort: 8
 title: Frequently asked questions (FAQ)
 ---
 
