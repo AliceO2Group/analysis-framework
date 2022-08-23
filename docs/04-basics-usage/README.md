@@ -1,8 +1,8 @@
 ---
 sort: 4
-title: <i class="fa-solid fa-terminal"></i>&nbsp;Running an analysis
+title: Running an analysis
 ---
 
-# Using the framework: running an analysis
+# <i class="fa-solid fa-terminal"></i>&nbsp;Using the framework: running an analysis
 
 Documentation being created

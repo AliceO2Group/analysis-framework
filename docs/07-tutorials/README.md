@@ -1,9 +1,9 @@
 ---
 sort: 7
-title: <i class="fa-solid fa-file-code"></i>&nbsp;Examples and tutorials
+title: Examples and tutorials
 ---
 
-# Examples and tutorials
+# <i class="fa-solid fa-file-code"></i>&nbsp;Examples and tutorials
 
 There are a number of example tasks available at the AliceO2 software repository
 on github.com under
