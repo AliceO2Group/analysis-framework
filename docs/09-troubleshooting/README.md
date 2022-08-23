@@ -1,6 +1,6 @@
 ---
 sort: 9
-title: <i class="fa fa-comments fa-fw" style="color:red;"></i>&nbsp;Support and troubleshooting
+title: <i class="fa fa-comments fa-fw" style="color:IndianRed;"></i>&nbsp;Support and troubleshooting
 ---
 
 # Support and troubleshooting
