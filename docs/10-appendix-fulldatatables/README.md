@@ -1,8 +1,8 @@
 ---
 sort: 10
-title: Data table reference
+title: Appendix&#58; data table reference
 ---
 
-# Data table reference
+# Appendix: data table reference
 
 etc
