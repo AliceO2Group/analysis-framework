@@ -3,6 +3,6 @@ sort: 1
 title: Getting started
 ---
 
-# Getting started</p>
+# Getting started
 
 Documentation being created

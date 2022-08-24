@@ -15,7 +15,7 @@ paul.buhler@cern.ch">docadmin</a> and we will be happy to add it.
 Process functions are basic construction elements that, by definition, tell the framework about data subscriptions. 
 Therefore, to vary data subscriptions, multiple process functions have to be defined. However, the content of the 
 process function itself can be basically a single template-based function or method so that the processing code doesn't
-necessarily need to be duplicated. For an example, please check  
+necessarily need to be duplicated. For an example, please check
 [cascadeanalysis.cxx](https://github.com/AliceO2Group/O2Physics/blob/master/PWGLF/Tasks/cascadeanalysis.cxx) or 
 [correlations.cxx](https://github.com/AliceO2Group/O2Physics/blob/master/PWGCF/Tasks/correlations.cxx).
 
