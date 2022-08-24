@@ -8,6 +8,8 @@ title: Frequently asked questions (FAQ)
 This document lists a number of questions that have been asked by the community. If you think you have a relevant question to add, please don't hesitate to contact <a href = "mailto:
 paul.buhler@cern.ch">docadmin</a> and we will be happy to add it. 
 
+WILL BE EXPANDED
+
 ## Task writing
 
 ### Having multiple process functions with different subscriptions leads to code duplication which can be error prone. Can this be avoided? 
