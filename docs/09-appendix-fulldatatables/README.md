@@ -1,5 +1,5 @@
 ---
-sort: 10
+sort: 9
 title: Appendix&#58; data table reference
 ---
 
