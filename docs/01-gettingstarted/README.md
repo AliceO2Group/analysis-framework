@@ -1,6 +1,6 @@
 ---
 sort: 0
-title: Index
+title: Getting started
 ---
 
 # Git basics
