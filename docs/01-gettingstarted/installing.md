@@ -1,11 +1,7 @@
 ---
-sort: 0
-title: Index
+sort: 2
+title: Installing O2 and O2Physics
 ---
-
-# Git basics
-
-Documentation being created
 
 # Installing O2 and O2Physics
 
