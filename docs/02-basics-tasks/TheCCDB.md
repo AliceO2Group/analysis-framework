@@ -1,6 +1,6 @@
 ---
 sort: 8
-title: The CCDB: calibration data
+title: The CCDB&#58; calibration data
 ---
 
-# The CCDB: calibration data 
+# The CCDB&#58; calibration data 

@@ -1,9 +1,9 @@
 ---
 sort: 7
-title: Combining data: pairs, triplets and beyond
+title: Combining data&#58; pairs, triplets and beyond
 ---
 
-# Combining data: pairs, triplets and beyond
+# Combining data&#58; pairs, triplets and beyond
 
 You can use  helper functions from `ASoAHelpers.h` to get combinations of elements (collisions, tracks, ...). There are 3 basic combinations policies available. Assuming that we want to get pairs of elements from tables with sizes (5, 6):
 
