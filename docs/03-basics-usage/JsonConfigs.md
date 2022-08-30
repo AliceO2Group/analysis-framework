@@ -1,11 +1,12 @@
 ---
 sort: 2
-title: Running an analysis
+title: Using json configuration files
 ---
 
 # Using json configuration files
 
-json files can be used to specify what needs to be written (see at the end of this section), but they can also be used to give some information about the configuration to the workflow. For example you can put the values of the configurables inside a json file. 
+Files of `json` type can be used to pass along configuration parameters to the various workflows 
+that one wishes to execute. 
 
 ## Example of json file
 
