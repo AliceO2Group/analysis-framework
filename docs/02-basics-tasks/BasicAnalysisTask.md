@@ -1,5 +1,5 @@
 ---
-sort: 2
+sort: 3
 title: The basic structure of an analysis task
 ---
 
@@ -48,7 +48,8 @@ See also tutorial [Analysis Task](../tutorials/analysistask.md).
 Sometimes it's handy to perform an action when all the data has been processed, for example executing a fit on a histogram we filled during the processing. This can be done by implementing the `postRun` method.
 ```
 
-### Creating histograms
+<a name="creatinghistograms"></a>
+## Creating histograms
 
 Typically, in analysis, histograms have to be declared and filled with relevant information. 
 You can do so by using the `Histogram` helper:
@@ -64,7 +65,7 @@ struct MyTask : AnalysisTask {
 ```
 
 <a name="histogramregistry"></a>
-## Histogram Registry
+## The histogram Registry
 
 The histogram registry is a class to create and manage histograms in a consistent and optimized way.
 
@@ -132,7 +133,8 @@ They differ in the way the axis bins are defined. In the first version a vector 
 
 By-the-way, there is in fact a third version of the AxisSpec constructor, which is similar to the first version, but takes as first argument a ConfigurableAxis (= [Configurable](#configurables)&lt;std::vector&lt;double&gt;&gt;) instead of a std::vector&lt;double&gt;. 
 
-### Adding histograms
+<a name="addinghistograms"></a>
+## Adding histograms
 
 A HistogramRegistry can be created together with the histograms it contains. It can however also be created empty and the histograms can be added later with the add method of which there a three versions.
 
@@ -151,7 +153,8 @@ void add(char const* const name,
          bool callSumw2 = false);
 ```
 
-### Filling histograms
+<a name="fillinghistograms"></a>
+## Filling histograms
 
 HistogramRegistry has a fill method to update the histograms. There are two versions and both are templated.
 
@@ -172,7 +175,8 @@ positionAndWeight is a comma separated list of values to fill into the histogram
 
 The second variant of fill method allows to copy filtered values from a table into a histogram.
 
-### Accessing histograms
+<a name="accessinghistograms"></a>
+## Accessing histograms
 
 The get method allows to access a histogram contained in a HistogramRegistry.
 

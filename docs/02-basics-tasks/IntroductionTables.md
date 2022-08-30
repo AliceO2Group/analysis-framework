@@ -1,5 +1,5 @@
 ---
-sort: 1
+sort: 2
 title: Introduction to data format: tables
 ---
 
@@ -11,7 +11,7 @@ Tables can be read from the input files [AO2D files](ao2dTables.md) and or they 
 
 The data model also provides a bunch of pre-defined [joins and iterators](joinsAndIterators.md).
 
-### Table relations
+## Table relations
 
 Information contained in different tables can be related. E.g. a track belongs to a given collision, or signals in the FIT or Zdc detectors belong to a bunch crossing.
 

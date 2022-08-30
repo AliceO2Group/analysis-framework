@@ -1,13 +1,13 @@
 ---
-sort: 4
+sort: 6
 title: Creating new tables
 ---
 
-# Creating new collections
+# Creating new tables
 
 In order to create new collections of objects, you need two things. First of all you need to define a data type for it, then you need to specify that your analysis task will create such an object. Notice that in a given workflow, only one task is allowed to create a given type of object.
 
-### Introducing a new data type
+## Introducing a new data type
 
 In order to define the data type you need to use `DEFINE_SOA_COLUMN` and `DEFINE_SOA_TABLE` helpers, defined in `ASoA.h`. Assuming you want to extend the standard AOD format you will also need `Framework/AnalysisDataModel.h`. For example, to define an extra table where to define phi and eta, you first need to define the two columns:
 
@@ -35,7 +35,7 @@ DECLARE_SOA_TABLE(EtaPhi, "AOD", "ETAPHI",
 
 Notice that tables are actually just a collections of columns.
 
-### Creating objects for a new data type
+## Creating objects for a new data type
 
 Once you have the new data type defined, you can have a task producing it, by using the `Produces` helper:
 
@@ -57,7 +57,7 @@ etaphi(track::Phi(calculatePhi(track), track::Eta(calculateEta(track)));
 
 See also tutorial [Creating Tables](../tutorials/creatingTables.md).
 
-### Adding dynamic columns to a data type
+## Adding dynamic columns to a data type
 
 Sometimes columns are not backed by actual persistent data, but they are merely
 derived from it. For example you might want to have different representations
@@ -78,7 +78,7 @@ DECLARE_SOA_TABLE(Point, "MISC", "POINT", X, Y, (R2<X,Y>));
 Notice how the dynamic column is defined as a stand alone column and binds to X and Y
 only when you attach it as part of a table.
 
-### Expression columns
+## Expression columns
 
 # Creating new columns in a declarative way
 

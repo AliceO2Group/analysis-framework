@@ -1,5 +1,5 @@
 ---
-sort: 6
+sort: 7
 title: Combining data: pairs, triplets and beyond
 ---
 
@@ -45,7 +45,7 @@ struct MyTask : AnalysisTask {
 };
 ```
 
-### Combinations with filters
+## Combinations with filters
 
 It is possible to specify a filter in the argument list, and only matching combinations are output. Currently, the filter is applied to each element separately, so it is slower than simple combinations over an already filtered table. Note that for filter version the input tables are mentioned twice, both in the policy constructor and in the `combinations()` call itself.
 
@@ -62,7 +62,7 @@ struct MyTask : AnalysisTask {
 };
 ```
 
-### Block / binned combination policies
+## Block / binned combination policies
 
 Block policies allow for generating tuples of elements according to the binning policy provided  by the user. The binning policy calculates bin numbers for the input elements and groups the elements by bins. Then, the block combinations output tuples of elements from the same bin. Analogously to basic policies, we have full / upper / strictly upper block combinations.
 
@@ -75,7 +75,7 @@ Performance-efficient policies for getting tuples of elements from the same tabl
 - `CombinationsBlockFullSameIndexPolicy`
 - `CombinationsBlockStrictlyUpperSameIndexPolicy`
 
-#### Binning policies
+### Binning policies
 
 There are 2 binning policies:
 - `FlexibleBinningPolicy`
@@ -119,7 +119,7 @@ struct BinnedTrackCombinations {
 };
 ```
 
-### Helper functions (shortcuts)
+## Helper functions (shortcuts)
 
 Accepts only the same tables, applies block strictly upper policy:
 ```cpp
