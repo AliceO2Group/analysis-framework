@@ -24,7 +24,7 @@ optimize the processing. To do so, we provide two helpers: `Filter` and
 
 *Note: Filters cannot be used on dynamic columns.*
 
-### Upfront filtering
+## Upfront filtering
 
 The most common kind of filtering is when you process objects only if one of its
 properties passes a certain criteria. This can be specified with the `Filter` helper.
@@ -61,7 +61,7 @@ struct MyTask : AnalysisTask {
 will process all the collisions which have at least one track with `pt > 1`.
 
 
-### Partitioning your inputs
+## Partitioning your inputs
 
 Filtering is not the only kind of conditional processing one wants to do. Sometimes you need to divide your data in two or more partitions. This is done via the `Partition` helper:
 
@@ -84,11 +84,11 @@ struct MyTask : AnalysisTask {
 
 i.e. `Filter` is applied to the objects before passing them to the `process` method, while `Select` objects can be used to do further reduction inside the `process` method itself. 
 
-### Filtering and partitioning together
+## Filtering and partitioning together
 
 Of course it should be possible to filter and partition data in the same task. The way this works is that multiple `Filter`s are logically ANDed together and then they will get anded with the OR of all the `Select` specified selections.
 
-### Configuring filters
+## Configuring filters
 
 One of the features of the current framework is the ability to customize on the fly cuts and selection. The idea is to allow that by having a `configurable("mnemonic-name-of-the-parameter")` helper which can be used to refer to configurable options. The previous example will then become:
 
