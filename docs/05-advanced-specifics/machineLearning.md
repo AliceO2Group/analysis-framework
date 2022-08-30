@@ -1,9 +1,9 @@
 ---
 sort: 2
-title: Machine Learning in O2Physics
+title: Machine Learning
 ---
 
-# Machine learning in O2Physics
+# Machine learning
 
 ## Get started!
 
