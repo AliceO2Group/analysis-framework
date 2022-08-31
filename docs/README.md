@@ -7,4 +7,4 @@ title: Documentation home
 
 Welcome to the documentation page of the O2 analysis framework! Please use the links below to navigate quickly to the content you're looking for. 
 
-{% include {{site.baseurl}}/templates/toctreeh.liquid %}
+{% include {{site.baseurl}}/_includes/templates/toctreeh.liquid %}
