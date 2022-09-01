@@ -10,8 +10,12 @@
 
 <div class="d-flex flex-row">
 {%- for item in workdir_files %}
-<div class="p-2">[{{ item.title | default: item.name }}]({{ item.url | relative_url }})</div>
+<div class="p-2"><a href="{{ item.url | relative_url }}">{{ item.title | default: item.name }}</a></div>
 {%- endfor -%}
 </div>
 
 {%- for workdir in workdir_dirs %}{% include common/core/_list.liquid %}{% endfor -%}
+
+
+
+
