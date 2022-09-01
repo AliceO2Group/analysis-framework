@@ -6,7 +6,7 @@
 {%- assign size_p1 = size | plus: 1 -%}
 
 {%- assign dir = site_pages | where: "url", workdir | first %}
-{% include common/rest/tabs.liquid size=size %}- [{{ dir.title | default: dir.url }}]({{ dir.url | relative_url }})
+<div class="p-0">[{{ dir.title | default: dir.url }}]({{ dir.url | relative_url }})</div>
 
 <div class="d-flex flex-column">
 {%- for item in workdir_files %}

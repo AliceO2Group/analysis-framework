@@ -8,5 +8,7 @@
 {%- endfor -%}
 
 {%- if include.all -%}
-    {%- for workdir in workdir_dirs %}{% include common/core/_hlist.liquid %}{% endfor -%}
+<div class="d-flex flex-row">
+{%- for workdir in workdir_dirs %}{% include common/core/_hlist.liquid %}{% endfor -%}
+</div>
 {%- endif -%}
