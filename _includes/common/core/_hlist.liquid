@@ -7,9 +7,9 @@
 
 {%- assign dir = site_pages | where: "url", workdir | first %}
 
-<h1 style="font-size:150%"><a href="{{ dir.url | relative_url }}">{{ dir.title | default: dir.url }}</a></h1>
+<h1 style="font-size:120%"><a href="{{ dir.url | relative_url }}">{{ dir.title | default: dir.url }}</a></h1>
 
-{%- for item in workdir_files %}&#124; <a href="{{ item.url | relative_url }}">{{ item.title | default: item.name }}</a> {%- endfor -%}
+{%- for item in workdir_files %} &#124; <a href="{{ item.url | relative_url }}">{{ item.title | default: item.name }}</a> {%- endfor -%}
 &#124;
 
 {%- for workdir in workdir_dirs %}{% include common/core/_list.liquid %}{% endfor -%}
