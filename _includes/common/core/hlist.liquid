@@ -1,5 +1,5 @@
 {%- include common/rest/site_pages.liquid -%}
-{%- include common/rest/workdir.liquid workdir=page.dir -%}
+{%- include common/rest/workdir.liquid workdir={{site.baseurl}}/docs -%}
 
 {%- for item in workdir_files %}
 - [{{ item.title | default: item.name }}]({{ item.url | relative_url }})
