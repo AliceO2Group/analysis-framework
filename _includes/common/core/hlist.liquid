@@ -2,7 +2,9 @@
 {%- include common/rest/workdir.liquid workdir=page.dir -%}
 
 {%- for item in workdir_files %}
-- [{{ item.title | default: item.name }}]({{ item.url | relative_url }})
+<div class="d-flex flex-row">
+<div class="p-1">[{{ item.title | default: item.name }}]({{ item.url | relative_url }})</div>
+</div>
 {%- endfor -%}
 
 {%- if include.all -%}
