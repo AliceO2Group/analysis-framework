@@ -5,11 +5,13 @@ title: Using hyperloop for analysis
 
 # Hyperloop system
 
-The hyperloop train system is used to submit your analysis in a train to the Grid.
+The Hyperloop train system is used to submit your analysis in a train to the Grid.
 
 ## Preconditions
 
+* Login to [Mattermost](https://mattermost.web.cern.ch) and (if not already done) join the restricted team ALICE (top menu, select join restricted teams). Then join the support channels on Mattermost: [O2 Analysis](https://mattermost.web.cern.ch/alice/channels/o2-analysis) and [O2 Hyperloop Operation](https://mattermost.web.cern.ch/alice/channels/o2-hyperloop-operation).
 * Make sure that you have a <a href="https://alice-doc.github.io/alice-analysis-tutorial/start/cert.html" target="_blank">valid AliEn certificate</a> installed in your browser. If you can access <a href="https://alimonitor.cern.ch/hyperloop/" target="_blank">https://alimonitor.cern.ch/hyperloop/</a> without getting "access denied", then everything is fine.
+* Check if your AliEn username corresponds to the CERN login. The latter is for example the username you use for logging into the mail server or into lxplus.cern.ch. You can check your AliEn username by going to the file catalog browser <a href="https://alimonitor.cern.ch/catalogue/" target="_blank">here</a>. Check the folder path or the string "Welcome <username>".
 
 ## Concept
 
