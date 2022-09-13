@@ -1,9 +1,9 @@
 ---
-sort: 9
-title: Appendix&#58; data model reference
+sort: 2
+title: The data format&#58; interconnected tables
 ---
 
-# Appendix: data model reference
+# The data format&#58; interconnected tables
 
 The ALICE O2 data model is a collection of tables. Each table can be seen as a collection of objects, where each column represents a property of the objects, and each row is an object. When the users write their analysis, they need to provide at least two things: a query which selects rows of one or more tables and a function which gets invoked on the results of the query. When specifying the query, the users can perform typical database operations between them. For example, they can only select rows matching a given query, or they can put two tables one on the side of the other and select the rows of the resulting table in what it's called a "join".
 
@@ -11,7 +11,7 @@ Tables can be read from the input files [AO2D files](ao2dTables.md) and or they 
 
 The data model also provides a bunch of pre-defined [joins and iterators](joinsAndIterators.md).
 
-### Table relations
+## Table relations
 
 Information contained in different tables can be related. E.g. a track belongs to a given collision, or signals in the FIT or Zdc detectors belong to a bunch crossing.
 
@@ -25,21 +25,8 @@ For **each** index in a table, there is a method to get the corresponding object
 Be aware that tables can be [joined](../framework/framework.md#processing-related-tables) and be [extended](../framework/framework.md#expression-columns) with extra colums.
 ```
 
-In the table listings on the following pages, the letter in brackets behind the table name indicates the type of table:
-
-- E: extended table
-- I: index table
-- else: normal table
-
-And similar for the columns:
-
-- D: dynamic column, calculated when the column is requested, not cached and therefore to be avoided in loops
-- E: expression column, calculated when the table is requested, only once, and therefore can be used in loops
-- GI: global index
-- I: index column
-- SI: self index column
-- SLI: slice index column
-- SSLI: self slice index column
-- SAI: self array index column
-- else: normal column
- 
+In order to process the data, analysis task objects have to be written and have to subscribe to tables - i.e., they
+have to tell the framework that a certain table is of interest and will be processed by the task. 
+In what folows, we will explain the basics regarding analysis tasks and the subscription to data. 
+If you are interested in a reference guide that covers all the basic content of the tables that
+are currently in O2Physics, please refer to the automatically generated [Appendix: Data model reference](../09-appendix-fulldatatables/).

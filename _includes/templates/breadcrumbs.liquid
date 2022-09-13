@@ -1,4 +1,6 @@
-<div class="navigation-top d-flex flex-justify-between">
+<div class="center d-flex justify-content-center" style="font-size:13px; font-style:italic; font-weight:bold; color:#273746">
+    You're viewing:
+    &nbsp
     <ul class="breadcrumb" role="navigation" aria-label="breadcrumbs navigation">
         <li class="breadcrumb-item">
             <a class="no-underline" href="{{ site.baseurl }}/" title="{{ docs.source.path }}">
@@ -27,15 +29,14 @@
                 {%- endfor -%}
         {%- endcase -%}
     </ul>
+    &nbsp
     <a class="edit" href="{% github_edit_link %}" title="{{ __.edit | default: 'Edit on GitHub'}}" rel="noreferrer" target="_blank">
         <i class="fa fa-edit"></i>
     </a>
 </div>
-<div style="margin-top:10px;display:inline-block;margin-left:1em; font-size:13px; font-style:italic; font-weight:bold; color:#273746">
-  This is the main
-information source for data analysists working with the O2 Analysis Framework.
-Please send your suggestions for updates and improvements to <a href = "mailto:
-paul.buhler@cern.ch">Docadmin</a>. If you wish to contribute then please follow
+<div style="margin-top:10px;display:inline-block; font-size:13px; font-style:italic; font-weight:bold; color:#273746">
+Feel like information is missing? Please send your suggestions for updates and improvements to <a href = "mailto:
+paul.buhler@cern.ch">docadmin</a>. If you wish to contribute, you're very welcome! Please follow
 the instructions <a
 href="https://aliceo2group.github.io/analysis-framework/docs/introduction/guidelines.html">here</a>.
 </div>

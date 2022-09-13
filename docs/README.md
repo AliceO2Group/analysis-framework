@@ -1,8 +1,10 @@
 ---
-sort: 1
-title: ALICE O2 Analysis Framework
+sort: 0
+title: Documentation home
 ---
 
-# ALICE O2 Analysis Framework
+# O2 Analysis Framework Documentation
 
-{% include list.liquid all=true %}
+Welcome to the documentation page of the O2 analysis framework! Please use the links below to navigate quickly to the content you're looking for. 
+
+{% include horizontalcontents.html %}
