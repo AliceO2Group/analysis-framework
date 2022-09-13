@@ -8,7 +8,7 @@ title: Frequently asked questions (FAQ)
 This document lists a number of questions that have been asked by the community. If you think you have a relevant question to add, please don't hesitate to contact <a href = "mailto:
 paul.buhler@cern.ch">docadmin</a> and we will be happy to add it. 
 
-WILL BE EXPANDED
+WILL BE EXPANDED - WORK IN PROGRESS
 
 ## Task writing
 
@@ -20,9 +20,5 @@ process function itself can be a single template-based function or method so tha
 necessarily need to be duplicated. For an example, please check
 [cascadeanalysis.cxx](https://github.com/AliceO2Group/O2Physics/blob/master/PWGLF/Tasks/cascadeanalysis.cxx) or 
 [correlations.cxx](https://github.com/AliceO2Group/O2Physics/blob/master/PWGCF/Tasks/correlations.cxx).
-
-## Executing an analysis 
-
-### Can I use my own grid account and quota to run on more data than on my laptop or private machine? 
 
 
