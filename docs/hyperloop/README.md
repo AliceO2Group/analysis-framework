@@ -5,7 +5,7 @@ title: Hyperloop system
 
 # Hyperloop system
 
-The hyperloop train system is used to submit your analysis in a train to the Grid.
+The Hyperloop train system is used to submit your analysis in a train to the Grid.
 
 ## Preconditions
 
