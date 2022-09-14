@@ -536,7 +536,7 @@ At the moment there are two 'FilterBits' available in the TrackSelection table, 
  | require ITS refit                                    | true                                         | true                                         |
  | max DCA to vertex z                                  | 2.0                                          | 2.0                                          |
  | max DCA to vertex xy                                 | 0.0105 * 0.035 / p<sub>T</sub><sup>1.1</sup> | 0.0105 * 0.035 / p<sub>T</sub><sup>1.1</sup> |
- | cluster requirement ITS                              | at least one hit in SPD                      | no hit in SPD and hit in first SDD layer     |
+ | cluster requirement ITS                              | at least one hit in SPD (*)                  | no hit in SPD and hit in first SDD layer     |
  | p<sub>T</sub> range                                  | 0.1 - 1e10                                   | 0.1 - 1e10                                   |
  | &eta; range                                          | -0.8 - 0.8                                   | -0.8 - 0.8                                   |
 
@@ -581,6 +581,12 @@ mySelection = myTrackSelection();
 // in process()
 bool isSelected = mySelection.IsSelected(track)
 ```
+
+(*) The default set of global-track selections requires at least 1 hit between the two innermost ITS layers (function `getGlobalTrackSelection` in [`TrackSelectionDefaults.h`](https://github.com/AliceO2Group/O2Physics/blob/master/Common/Core/TrackSelectionDefaults.h)). This is a Run 1, 2 refuse when the SPD was equipped. The same set of global-track selections, but with different ITS requirements are available in [`trackselection.cxx`](https://github.com/AliceO2Group/O2Physics/blob/master/Common/TableProducer/trackselection.cxx). This is possible thanks to the `getGlobalTrackSelectionITSMatch` in [`TrackSelectionDefaults.h`](https://github.com/AliceO2Group/O2Physics/blob/master/Common/Core/TrackSelectionDefaults.h), which can be enabled with different ITS requirements via the integer configurable `itsMatching` in [`trackselection.cxx`](https://github.com/AliceO2Group/O2Physics/blob/master/Common/TableProducer/trackselection.cxx). The available configurations are the following:
+* `itsMatching == 0`: at least one hit between the two innermost ITS layers (default);
+* `itsMatching == 1`: at least one hit among the three innermost ITS layers (`Run3ITSibAny`);
+* `itsMatching == 2`: at least one hit among all the ITS layers (`Run3ITSallAny`);
+* `itsMatching == 3`: one hit on all the ITS layers (`Run3ITSall7Layers`);
 
 ### Remarks
 Please note that this documentation only represents the status quo of the track selection implementation and many things can and will change. 
