@@ -301,6 +301,27 @@ Click on the labels to display the definitions. Click buttons to
     </ul>
   </div>
 
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::HepMCXSection</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::HepMCXSection = o2::aod::HepMCXSections::iterator</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::HepMCPdfInfo</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::HepMCPdfInfo = o2::aod::HepMCPdfInfos::iterator</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::HepMCHeavyIon</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::HepMCHeavyIon = o2::aod::HepMCHeavyIons::iterator</li>
+    </ul>
+  </div>
+
   <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::CollisionMatchedRun2Sparse</button>
   <div class="panel">
     <ul>
@@ -417,55 +438,6 @@ Click on the labels to display the definitions. Click buttons to
   <div class="panel">
     <ul>
         <li>o2::aod::MultZeq = o2::aod::MultZeqs::iterator</li>
-    </ul>
-  </div>
-
-  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::V0Data</button>
-  <div class="panel">
-    <ul>
-        <li>o2::aod::V0Data = o2::aod::V0Datas::iterator</li>
-    </ul>
-  </div>
-
-  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::V0sLinked</button>
-  <div class="panel">
-    <ul>
-        <li>o2::aod::V0sLinked = soa::Join<o2::aod::V0s, o2::aod::V0DataLink></li>
-    </ul>
-  </div>
-
-  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::V0Linked</button>
-  <div class="panel">
-    <ul>
-        <li>o2::aod::V0Linked = soa::Join<o2::aod::V0s, o2::aod::V0DataLink>::iterator</li>
-    </ul>
-  </div>
-
-  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::CascDataOrigin</button>
-  <div class="panel">
-    <ul>
-        <li>o2::aod::CascDataOrigin = o2::aod::CascData</li>
-    </ul>
-  </div>
-
-  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::CascDataFull</button>
-  <div class="panel">
-    <ul>
-        <li>o2::aod::CascDataFull = o2::aod::CascDataExt</li>
-    </ul>
-  </div>
-
-  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::McV0Label</button>
-  <div class="panel">
-    <ul>
-        <li>o2::aod::McV0Label = o2::aod::McV0Labels::iterator</li>
-    </ul>
-  </div>
-
-  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::McCascLabel</button>
-  <div class="panel">
-    <ul>
-        <li>o2::aod::McCascLabel = o2::aod::McCascLabels::iterator</li>
     </ul>
   </div>
 
