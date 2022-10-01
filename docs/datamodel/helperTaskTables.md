@@ -932,6 +932,45 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
 
 </div>
 
+####  o2-analysis-fwdtrackextension
+Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/TableProducer//fwdtrackextension.cxx" target="_blank">fwdtrackextension.cxx</a>
+<div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::FwdTracksDCA</button>
+  <div class="panel">
+    <div>
+       DCA information for the forward track
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/DataModel/TrackSelectionTables.h" target="_blank">Common/DataModel/TrackSelectionTables.h</a>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::fwdtrack::FwdDcaX</td>
+        <td></td>
+        <td>fwdDcaX</td>
+        <td>float</td>
+        <td>Impact parameter in X of forward track to the primary vertex</td>
+      </tr>
+      <tr>
+        <td>o2::aod::fwdtrack::FwdDcaY</td>
+        <td></td>
+        <td>fwdDcaY</td>
+        <td>float</td>
+        <td>Impact parameter in Y of forward track to the primary vertex</td>
+      </tr>
+    </table>
+  </div>
+
+</div>
+
 ####  o2-analysis-mc-converter
 Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/TableProducer//mcConverter.cxx" target="_blank">mcConverter.cxx</a>
 <div>

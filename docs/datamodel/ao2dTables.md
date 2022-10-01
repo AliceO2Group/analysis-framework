@@ -5486,7 +5486,6 @@ For better overview the tables are grouped into the following categories: | [Gen
       <ul>
         <li>o2::aod::McTrackLabel = o2::aod::McTrackLabels::iterator</li>
         <li>o2::aod::BigTracksMC = soa::Join<o2::aod::BigTracks, o2::aod::McTrackLabels></li>
-        <li>o2::aod::hf_cand_casc::MyBigTracks = soa::Join<o2::aod::BigTracksPID, o2::aod::McTrackLabels></li>
       </ul>
     </div>
     <table class=DataModel>
@@ -5943,7 +5942,7 @@ For better overview the tables are grouped into the following categories: | [Gen
         <td></td>
         <td>nwoundedNCollisions</td>
         <td>int</td>
-        <td>Number of Nwounded-N collisons</td>
+        <td>Number of Nwounded-N collisions</td>
       </tr>
       <tr>
         <td>o2::aod::hepmcheavyion::NwoundedNwoundedCollisions</td>

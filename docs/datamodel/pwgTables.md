@@ -277,10 +277,142 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGCF
 Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGCF/TableProducer//filterCorrelations.cxx" target="_blank">filterCorrelations.cxx</a>
 <div>
 
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::CFMcCollisions</button>
+  <div class="panel">
+    <div>
+       Reduced MC collision table
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGCF/DataModel/CorrelationsDerived.h" target="_blank">PWGCF/DataModel/CorrelationsDerived.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::CFMcCollision = o2::aod::CFMcCollisions::iterator</li>
+      </ul>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::soa::Index</td>
+        <td>GI</td>
+        <td>globalIndex</td>
+        <td>int64_t</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::mccollision::PosZ</td>
+        <td></td>
+        <td>posZ</td>
+        <td>float</td>
+        <td>Z vertex position in cm</td>
+      </tr>
+      <tr>
+        <td>o2::aod::cfmccollision::Multiplicity</td>
+        <td></td>
+        <td>multiplicity</td>
+        <td>float</td>
+        <td>Centrality/multiplicity value</td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::CFMcParticles</button>
+  <div class="panel">
+    <div>
+       Reduced MC particle table
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGCF/DataModel/CorrelationsDerived.h" target="_blank">PWGCF/DataModel/CorrelationsDerived.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::CFMcParticle = o2::aod::CFMcParticles::iterator</li>
+      </ul>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::soa::Index</td>
+        <td>GI</td>
+        <td>globalIndex</td>
+        <td>int64_t</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::cfmcparticle::CFMcCollisionId</td>
+        <td>I</td>
+        <td>cfMcCollisionId</td>
+        <td>int32</td>
+        <td>Index to reduced MC collision</td>
+      </tr>
+      <tr>
+        <td>o2::aod::cfmcparticle::Pt</td>
+        <td></td>
+        <td>pt</td>
+        <td>float</td>
+        <td>pT (GeV/c)</td>
+      </tr>
+      <tr>
+        <td>o2::aod::cfmcparticle::Eta</td>
+        <td></td>
+        <td>eta</td>
+        <td>float</td>
+        <td>Pseudorapidity</td>
+      </tr>
+      <tr>
+        <td>o2::aod::cfmcparticle::Phi</td>
+        <td></td>
+        <td>phi</td>
+        <td>float</td>
+        <td>Phi angle</td>
+      </tr>
+      <tr>
+        <td>o2::aod::cfmcparticle::Sign</td>
+        <td></td>
+        <td>sign</td>
+        <td>int8_t</td>
+        <td>Sign (positive, negative)</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::PdgCode</td>
+        <td></td>
+        <td>pdgCode</td>
+        <td>int</td>
+        <td>PDG code</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::Flags</td>
+        <td></td>
+        <td>flags</td>
+        <td>uint8_t</td>
+        <td>ALICE specific flags, see MCParticleFlags. Do not use directly. Use the dynamic columns, e.g. producedByGenerator()</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::IsPhysicalPrimary</td>
+        <td>D</td>
+        <td>isPhysicalPrimary</td>
+        <td>bool</td>
+        <td>True if particle is considered a physical primary according to the ALICE definition</td>
+      </tr>
+    </table>
+  </div>
+
   <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::CFCollisions</button>
   <div class="panel">
     <div>
-
+       Reduced collision table
     </div>
     <div>
       Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGCF/DataModel/CorrelationsDerived.h" target="_blank">PWGCF/DataModel/CorrelationsDerived.h</a>
@@ -304,6 +436,13 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGCF
         <td>globalIndex</td>
         <td>int64_t</td>
         <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::cfcollision::CFMcCollisionId</td>
+        <td>I</td>
+        <td>cfMcCollisionId</td>
+        <td>int32</td>
+        <td>Index to reduced MC collision</td>
       </tr>
       <tr>
         <td>o2::aod::bc::RunNumber</td>
@@ -339,7 +478,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGCF
   <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::CFTracks</button>
   <div class="panel">
     <div>
-
+       Reduced track table
     </div>
     <div>
       Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGCF/DataModel/CorrelationsDerived.h" target="_blank">PWGCF/DataModel/CorrelationsDerived.h</a>
@@ -370,6 +509,13 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGCF
         <td>cfCollisionId</td>
         <td>int32</td>
         <td>Index to collision</td>
+      </tr>
+      <tr>
+        <td>o2::aod::cftrack::CFMcParticleId</td>
+        <td>I</td>
+        <td>cfMCParticleId</td>
+        <td>int32</td>
+        <td>Index to MC particle</td>
       </tr>
       <tr>
         <td>o2::aod::cftrack::Pt</td>
@@ -703,6 +849,13 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGDQ
         <td>o2::aod::reducedtrack::Sign</td>
         <td></td>
         <td>sign</td>
+        <td>int</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::reducedtrack::IsAmbiguous</td>
+        <td></td>
+        <td>isAmbiguous</td>
         <td>int</td>
         <td></td>
       </tr>
@@ -1244,6 +1397,13 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGDQ
         <td></td>
       </tr>
       <tr>
+        <td>o2::aod::reducedmuon::IsAmbiguous</td>
+        <td></td>
+        <td>isAmbiguous</td>
+        <td>int</td>
+        <td></td>
+      </tr>
+      <tr>
         <td>o2::aod::reducedmuon::Px</td>
         <td>D</td>
         <td>px</td>
@@ -1378,6 +1538,20 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGDQ
         <td>trackType</td>
         <td>uint8_t</td>
         <td>Type of track. See enum ForwardTrackTypeEnum</td>
+      </tr>
+      <tr>
+        <td>o2::aod::reducedmuon::FwdDcaX</td>
+        <td></td>
+        <td>fwdDcaX</td>
+        <td>float</td>
+        <td>Impact parameter in X of forward track to the primary vertex</td>
+      </tr>
+      <tr>
+        <td>o2::aod::reducedmuon::FwdDcaY</td>
+        <td></td>
+        <td>fwdDcaY</td>
+        <td>float</td>
+        <td>Impact parameter in Y of forward track to the primary vertex</td>
       </tr>
     </table>
   </div>
@@ -1963,6 +2137,13 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGDQ
         <td>o2::aod::reducedtrack::Sign</td>
         <td></td>
         <td>sign</td>
+        <td>int</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::reducedtrack::IsAmbiguous</td>
+        <td></td>
+        <td>isAmbiguous</td>
         <td>int</td>
         <td></td>
       </tr>
@@ -2762,6 +2943,13 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGDQ
         <td></td>
       </tr>
       <tr>
+        <td>o2::aod::reducedmuon::IsAmbiguous</td>
+        <td></td>
+        <td>isAmbiguous</td>
+        <td>int</td>
+        <td></td>
+      </tr>
+      <tr>
         <td>o2::aod::reducedmuon::Px</td>
         <td>D</td>
         <td>px</td>
@@ -2896,6 +3084,20 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGDQ
         <td>trackType</td>
         <td>uint8_t</td>
         <td>Type of track. See enum ForwardTrackTypeEnum</td>
+      </tr>
+      <tr>
+        <td>o2::aod::reducedmuon::FwdDcaX</td>
+        <td></td>
+        <td>fwdDcaX</td>
+        <td>float</td>
+        <td>Impact parameter in X of forward track to the primary vertex</td>
+      </tr>
+      <tr>
+        <td>o2::aod::reducedmuon::FwdDcaY</td>
+        <td></td>
+        <td>fwdDcaY</td>
+        <td>float</td>
+        <td>Impact parameter in Y of forward track to the primary vertex</td>
       </tr>
     </table>
   </div>
@@ -5225,6 +5427,13 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
       </tr>
       <tr>
         <td>o2::aod::v0data::MK0Short</td>
+        <td>GI</td>
+        <td></td>
+        <td>?</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::v0data::MGamma</td>
         <td>GI</td>
         <td></td>
         <td>?</td>
@@ -7578,6 +7787,45 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <td>o2::aod::hf_selcandidate_dplus::IsSelDplusToPiKPi</td>
         <td></td>
         <td>isSelDplusToPiKPi</td>
+        <td>int</td>
+        <td></td>
+      </tr>
+    </table>
+  </div>
+
+</div>
+
+####  o2-analysis-hf-ds-tokkpi-candidate-selector
+Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer//HFDsToKKPiCandidateSelector.cxx" target="_blank">HFDsToKKPiCandidateSelector.cxx</a>
+<div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::HFSelDsToKKPiCandidate</button>
+  <div class="panel">
+    <div>
+
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/DataModel/HFCandidateSelectionTables.h" target="_blank">PWGHF/DataModel/HFCandidateSelectionTables.h</a>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_selcandidate_ds::IsSelDsToKKPi</td>
+        <td></td>
+        <td>isSelDsToKKPi</td>
+        <td>int</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_selcandidate_ds::IsSelDsToPiKK</td>
+        <td></td>
+        <td>isSelDsToPiKK</td>
         <td>int</td>
         <td></td>
       </tr>

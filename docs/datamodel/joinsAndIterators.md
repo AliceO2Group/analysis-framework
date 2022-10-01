@@ -441,6 +441,20 @@ Click on the labels to display the definitions. Click buttons to
     </ul>
   </div>
 
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::CFMcCollision</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::CFMcCollision = o2::aod::CFMcCollisions::iterator</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::CFMcParticle</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::CFMcParticle = o2::aod::CFMcParticles::iterator</li>
+    </ul>
+  </div>
+
   <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::CFCollision</button>
   <div class="panel">
     <ul>
@@ -1197,13 +1211,6 @@ Click on the labels to display the definitions. Click buttons to
     </ul>
   </div>
 
-  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::hf_cand_casc::MyBigTracks</button>
-  <div class="panel">
-    <ul>
-        <li>o2::aod::hf_cand_casc::MyBigTracks = soa::Join<o2::aod::BigTracksPID, o2::aod::McTrackLabels></li>
-    </ul>
-  </div>
-
   <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::hf_cand_lb::TracksExtendedPID</button>
   <div class="panel">
     <ul>
@@ -1243,6 +1250,20 @@ Click on the labels to display the definitions. Click buttons to
   <div class="panel">
     <ul>
         <li>o2::analysis::hf_cuts_lc_topkpi::Trks = soa::Join<o2::analysis::hf_cuts_lc_topkpi::aod::BigTracksPID, o2::analysis::hf_cuts_lc_topkpi::aod::Tracks, o2::analysis::hf_cuts_lc_topkpi::aod::RICHTracksIndex, o2::analysis::hf_cuts_lc_topkpi::aod::McTrackLabels, o2::analysis::hf_cuts_lc_topkpi::aod::TracksExtra></li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::analysis::hf_cuts_lc_tok0sp::MyBigTracks</button>
+  <div class="panel">
+    <ul>
+        <li>o2::analysis::hf_cuts_lc_tok0sp::MyBigTracks = soa::Join<o2::analysis::hf_cuts_lc_tok0sp::aod::BigTracksPID, o2::analysis::hf_cuts_lc_tok0sp::aod::McTrackLabels></li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::analysis::hf_cuts_lc_tok0sp::MyBigTracks</button>
+  <div class="panel">
+    <ul>
+        <li>o2::analysis::hf_cuts_lc_tok0sp::MyBigTracks = o2::analysis::hf_cuts_lc_tok0sp::aod::BigTracksPID</li>
     </ul>
   </div>
 
