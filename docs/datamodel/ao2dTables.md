@@ -6317,6 +6317,67 @@ For better overview the tables are grouped into the following categories: | [Gen
 <h4 id="cat_Others">Others</h4>
 <div>
 
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::Decays3Body</button>
+  <div class="panel">
+    <div>
+       Run 2 cascade table
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev//Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::Decays3Body = o2::aod::Decays3Body</li>
+        <li>o2::aod::Decay3Body = o2::aod::Decays3Body::iterator</li>
+      </ul>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::soa::Index</td>
+        <td>GI</td>
+        <td>globalIndex</td>
+        <td>int64_t</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::decay3body::CollisionId</td>
+        <td>I</td>
+        <td>collisionId</td>
+        <td>int32</td>
+        <td>Collision index</td>
+      </tr>
+      <tr>
+        <td>o2::aod::decay3body::Track0Id</td>
+        <td>I</td>
+        <td>track0Id</td>
+        <td>int</td>
+        <td>Track 0 index</td>
+      </tr>
+      <tr>
+        <td>o2::aod::decay3body::Track1Id</td>
+        <td>I</td>
+        <td>track1Id</td>
+        <td>int</td>
+        <td>Track 1 index</td>
+      </tr>
+      <tr>
+        <td>o2::aod::decay3body::Track2Id</td>
+        <td>I</td>
+        <td>track2Id</td>
+        <td>int</td>
+        <td>Track 2 index</td>
+      </tr>
+    </table>
+  </div>
+
+
   <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::Origins</button>
   <div class="panel">
     <div>

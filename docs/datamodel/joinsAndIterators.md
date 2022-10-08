@@ -231,6 +231,20 @@ Click on the labels to display the definitions. Click buttons to
     </ul>
   </div>
 
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::Decays3Body</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::Decays3Body = o2::aod::Decays3Body</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::Decay3Body</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::Decay3Body = o2::aod::Decays3Body::iterator</li>
+    </ul>
+  </div>
+
   <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::Origin</button>
   <div class="panel">
     <ul>
@@ -795,6 +809,13 @@ Click on the labels to display the definitions. Click buttons to
   <div class="panel">
     <ul>
         <li>o2::aod::HfCandLb = o2::aod::HfCandLbExt</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::HfCandB0</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::HfCandB0 = o2::aod::HfCandB0Ext</li>
     </ul>
   </div>
 
