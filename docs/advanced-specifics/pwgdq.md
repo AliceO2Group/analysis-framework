@@ -5,7 +5,10 @@ title: PWG-DQ
 
 ## Get started! 
 
-[link to indico page of the Hands-On session for O2 DQ (7/12/21)](https://indico.cern.ch/event/1098200/)
+[link to indico page of the Hands-On session :]
+1. O2 DQ (7/12/21)(https://indico.cern.ch/event/1098200/)
+2. O2 DQ (April 2022) https://indico.cern.ch/event/1150382/
+3. O2 tutorial (Oct 2022) https://indico.cern.ch/event/1200252/timetable/?view=standard
 
 [ZOOM recordings of the first part of the session](https://indico.cern.ch/event/1098200/sessions/419561/attachments/2362418/4033057/videoPlenarySession.mp4)
 
