@@ -156,3 +156,16 @@ combinations(combinationPolicy)
 ```
 
 You can see some combinations examples in the <a href="https://github.com/AliceO2Group/O2Physics/blob/master/Tutorials/src/tracksCombinations.cxx" target="_blank">tracksCombinations.cxx</a> tutorial.
+
+## Weighted combinations
+
+You might need to calculate weights for your event mixing. You can get useful variables:
+- `currentWindowNeighbours()` -- the number of other collisions to pair with; it is smaller if we are at the end of the bin or sliding window
+- bool `isNewWindow()` – true only for the first pair from each sliding window
+
+**NOTE:** The same number of `currentWindowNeighbours` is returned for all kinds of block combinations but the interpretation is different:
+- Strictly upper: the first element will is paired with exactly `currentWindowNeighbours` other elements.
+- Upper: the first element is paired with `currentWindowNeighbours + 1` elements, including itself.
+- Full: `currentWindowNeighbours + 1` pairs with the first element in the first position (`c1`) + there are other combinations with the first element at other positions.
+
+Code examples: [event mixing test](https://github.com/AliceO2Group/O2Physics/blob/a3a74f1dee11194ba5107ecd6c4013571c176cd7/Tutorials/src/eventMixingValidation.cxx#L121), [Jan Fiete's correlations](https://github.com/AliceO2Group/O2Physics/blob/143b6ca8cc15b217ccf56df63115f308964ae05a/PWGCF/Tasks/correlations.cxx#L421).
