@@ -284,15 +284,43 @@ title: Operator Documentation
 
 * Accessed from the Datasets view, this page summarizes the derived data available in Hyperloop. The information displayed can be grouped by Dataset, Analysis or PWG (use the upper buttons to switch between the views).
 
+<div align="center">
+ <img src="../images/derivedDataAccess.png" width="70%">
+</div>
+
+<div align="center">
+ <img src="../images/derivedDataGrouping.png" width="80%">
+</div>
+
 * Make use of the available filters of the table to search for the derived data of interest. Expand or collapse groups to focus on a specific derived data or use the Expand all / Collapse all button to expand / collapse all groups.
 
 * By clicking on the derived data train number, this will open the Train result view (the same one accessed from pages such as Train runs or Trains with issues). You can schedule derived data for deletion by clicking on the **Delete** button in the train view or in the Delete column of the table. The deletion will only be available if the derived data is not used in any datasets or if the datasets using this derived data are not activated. In case these conditions are not met, you can ask the analyzers if the derived data can be removed from the active datasets or must be kept.
 
+<div align="center">
+ <img src="../images/derivedDataDelete.png" width="90%">
+</div>
+
+<div align="center">
+ <img src="../images/derivedDataNoDelete.png" width="50%">
+</div>
+
 * To see all the datasets in which a derived data is used, click **See dependent datasets** button in the Train view (right next to the Delete button). This will redirect you to a new tab displaying the **Datasets** page, filtered to show all the datasets (activatd or not) which are using the derived data. To see specifically only the activated or deactivated datasets dependent on this derived data, use the activated / deactivated buttons inside the In datasets column of the table. This will open the same Datasets page, but filtered depending on the datasets' activated state.
+
+<div align="center">
+ <img src="../images/deriveDataDependent.png" width="80%">
+</div>
 
 * Click on the name within the Analysis column to be redirected to a new tab showing a read-only view of the analysis within which the derived data was created.
 
+<div align="center">
+ <img src="../images/derivedDataAnalysis.png" width="80%">
+</div>
+
 * The total size of the derived data in Hyperloop is displayed below the table, on the right side. Keep in mind that that is the total size of all derived data and it is not affected by the filtering of the table.
+
+<div align="center">
+ <img src="../images/derivedDataSize.png" width="80%">
+</div>
 
 ## <a name="runlists"></a>DPG Runlists
 
