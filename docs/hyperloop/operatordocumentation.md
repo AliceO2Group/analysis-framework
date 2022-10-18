@@ -288,7 +288,7 @@ title: Operator Documentation
 
 ## <a name="deriveddatapage"></a>Derived Data
 
-* Accessed from the Datasets view, this page summarizes the derived data available in Hyperloop. The information displayed can be grouped by Dataset, Analysis or PWG (use the upper buttons to switch between the views).
+* Accessed from the **Datasets** view, this page summarizes the derived data available in Hyperloop. The information displayed can be grouped by Dataset, Analysis or PWG (use the upper buttons to switch between the views).
 
 <div align="center">
  <img src="../images/derivedDataAccess.png" width="70%">
@@ -327,6 +327,21 @@ title: Operator Documentation
 <div align="center">
  <img src="../images/derivedDataSize.png" width="80%">
 </div>
+
+## <a name="stagingstatusapage"></a>Staging status
+
+* Accessed from the **Datasets** view, this page displays the staging status of all the datasets in Hyperloop. Use it to follow up the staging progress of datasets and catch any issues that might have blocked it.
+
+<div align="center">
+ <img src="../images/stagingStatusPage.png" width="80%">
+</div>
+
+* Click on the staging percentage in the right-most column to view the detailed staging progress in a new tab.
+
+<div align="center">
+ <img src="../images/stagingProcess.png" width="80%">
+</div>
+
 
 ## <a name="runlists"></a>DPG Runlists
 
