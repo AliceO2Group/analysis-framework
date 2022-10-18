@@ -12,6 +12,12 @@ title: Operator Documentation
 <img src="../images/dashboard.png" width="90%">
 </div>
 
+* By default, the dashboard displays the last week summary on the lower section of the page. Use the interval selection tool to select the period of time that you are interested in: either select one from the left menu (e.g. last 3 months, last year), or choose the start and end date of the interval. Click **Save** to update the dashboard.
+
+<div align="center">
+<img src="../images/dashboardSelection.png" width="90%">
+</div>
+
 * By clicking the number of wagons waiting to be included in a train, the user can directly open the [_Train Submission_](#trainsubmission). Similarly, a link to the [_Train Runs_](#train-runs) is available by clicking the number of trains to be submitted to the grid, the number of running tests, or the number of finished trains.
 
 ## <a name="train-submission"></a>Train Submission
@@ -279,6 +285,62 @@ title: Operator Documentation
   </div>
 
 * The mergelist defines which runs are merged into one file at the end of the train running. The operator can add, update, activate or deactivate a mergelist in the dataset. 
+
+## <a name="deriveddatapage"></a>Derived Data
+
+* Accessed from the **Datasets** view, this page summarizes the derived data available in Hyperloop. The information displayed can be grouped by Dataset, Analysis or PWG (use the upper buttons to switch between the views).
+
+<div align="center">
+ <img src="../images/derivedDataAccess.png" width="70%">
+</div>
+
+<div align="center">
+ <img src="../images/derivedDataGrouping.png" width="80%">
+</div>
+
+* Make use of the available filters of the table to search for the derived data of interest. Expand or collapse groups to focus on a specific derived data or use the Expand all/Collapse all button to expand/collapse all groups.
+
+* By clicking on the derived data train number, this will open the Train result view (the same one accessed from pages such as Train runs or Trains with issues). You can schedule derived data for deletion by clicking on the **Delete** button in the train view or in the Delete column of the table. The deletion will only be available if the derived data is not used in any datasets or if the datasets using this derived data are not activated. In case these conditions are not met, you can ask the analyzers if the derived data is still needed for the activated datasets or they can be removed.
+
+<div align="center">
+ <img src="../images/derivedDataDelete.png" width="90%">
+</div>
+
+<div align="center">
+ <img src="../images/derivedDataNoDelete.png" width="50%">
+</div>
+
+* To see all the datasets in which a derived data is used, click **See dependent datasets** button in the Train result view (right next to the Delete button). This will redirect you to a new tab displaying the **Datasets** page, filtered to show all the datasets (activatd or not) which are using the derived data. To see specifically only the activated or deactivated datasets dependent on this derived data, use the activated / deactivated buttons inside the In datasets column of the table. This will open the same Datasets page, but filtered depending on the datasets' activated state.
+
+<div align="center">
+ <img src="../images/deriveDataDependent.png" width="80%">
+</div>
+
+* Click on the name within the Analysis column to be redirected to a new tab showing a read-only view of the analysis within which the derived data was created.
+
+<div align="center">
+ <img src="../images/derivedDataAnalysis.png" width="80%">
+</div>
+
+* The total size of the derived data in Hyperloop is displayed below the table, on the right side. Keep in mind that this is the total size of all derived data and it is not affected by the filtering of the table.
+
+<div align="center">
+ <img src="../images/derivedDataSize.png" width="60%">
+</div>
+
+## <a name="stagingstatusapage"></a>Staging status
+
+* Accessed from the **Datasets** view, this page displays the staging status of all the datasets in Hyperloop for which a staging process was initiated. Use it to follow up the progress and check if the staging is completed, ongoing, or if there are any issues. 
+
+<div align="center">
+ <img src="../images/stagingStatusPage.png" width="70%">
+</div>
+
+* Click on the staging percentage in the right-most column to view the detailed staging progress in a new tab: this shows the status of each transfer request.
+
+<div align="center">
+ <img src="../images/stagingProcess.png" width="60%">
+</div>
 
 
 ## <a name="runlists"></a>DPG Runlists
