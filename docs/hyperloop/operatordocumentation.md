@@ -330,13 +330,13 @@ title: Operator Documentation
 
 ## <a name="stagingstatusapage"></a>Staging status
 
-* Accessed from the **Datasets** view, this page displays the staging status of all the datasets in Hyperloop. Use it to follow up the staging progress of datasets and catch any issues that might have blocked it.
+* Accessed from the **Datasets** view, this page displays the staging status of all the datasets in Hyperloop. Use it to follow up the staging progress of datasets and check if the process has finished or if there are any issues. 
 
 <div align="center">
  <img src="../images/stagingStatusPage.png" width="80%">
 </div>
 
-* Click on the staging percentage in the right-most column to view the detailed staging progress in a new tab.
+* Click on the staging percentage in the right-most column to view the detailed staging progress in a new tab: this show the progress of each transfer request.
 
 <div align="center">
  <img src="../images/stagingProcess.png" width="80%">
