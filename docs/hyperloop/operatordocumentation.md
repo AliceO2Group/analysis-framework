@@ -12,6 +12,12 @@ title: Operator Documentation
 <img src="../images/dashboard.png" width="90%">
 </div>
 
+* By default, the dashboard displays the last week summary on the lower section of the page. Use the interval selection tool to select the period of time that you are interested in: either select one from the left menu (e.g. last 3 months, last year), or choose the start and end date of the interval. Click **Save** to update the dashboard.
+
+<div align="center">
+<img src="../images/dashboardSelection.png" width="90%">
+</div>
+
 * By clicking the number of wagons waiting to be included in a train, the user can directly open the [_Train Submission_](#trainsubmission). Similarly, a link to the [_Train Runs_](#train-runs) is available by clicking the number of trains to be submitted to the grid, the number of running tests, or the number of finished trains.
 
 ## <a name="train-submission"></a>Train Submission
