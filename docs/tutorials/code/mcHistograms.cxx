@@ -66,10 +66,10 @@ struct CTask {
     // access MC truth information with mcCollision() and mcParticle() methods
     LOGF(info, "vtx-z (data) = %f | vtx-z (MC) = %f", collision.posZ(), collision.mcCollision().posZ());
     for (auto& track : tracks) {
-      //if (track.trackType() != 0)
-      //  continue;
-      //if (track.labelMask() != 0)
-      //  continue;
+      // if (track.trackType() != 0)
+      //   continue;
+      // if (track.labelMask() != 0)
+      //   continue;
       etaDiff->Fill(track.mcParticle().eta() - track.eta());
       auto delta = track.mcParticle().phi() - track.phi();
       if (delta > M_PI) {
@@ -79,7 +79,7 @@ struct CTask {
         delta += 2 * M_PI;
       }
       phiDiff->Fill(delta);
-      //LOGF(info, "eta: %.2f %.2f \t phi: %.2f %.2f | %d", track.mcParticle().eta(), track.eta(), track.mcParticle().phi(), track.phi(), track.mcParticle().index());
+      // LOGF(info, "eta: %.2f %.2f \t phi: %.2f %.2f | %d", track.mcParticle().eta(), track.eta(), track.mcParticle().phi(), track.phi(), track.mcParticle().index());
     }
   }
 };
