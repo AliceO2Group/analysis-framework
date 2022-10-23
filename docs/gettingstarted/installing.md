@@ -15,7 +15,7 @@ Follow the instructions <a href="https://alice-doc.github.io/alice-analysis-tuto
 ## Prepare your source code
 
 We assume your work area is `~/alice`.
-Start with a clean shell where you are not in an `alienv` environment. 
+Start with a clean shell where you are not in an `alienv` environment.
 Create the directory and move to it (all the following commands need to be executed in this folder):
 
 ```bash
@@ -43,7 +43,7 @@ aliDoctor O2Physics --defaults o2
 ```
 
 aliDoctor will warn you that some packages have to be built as they could not be found from the
-system. 
+system.
 
 ## Build and rebuild
 

@@ -9,7 +9,7 @@ In the analysis framework, all analysis tasks are written in a specific format t
 then gets converted into a processor within Data Processing Layer (<a
 href="https://aliceo2group.github.io/quickstart/fair-dpl.html#data-processing-layer-dpl"
 target="_blank">DPL</a>). This allows for a convenient way of taking advantage of
-the features of DPL without having to write a full processor manually: the only 
+the features of DPL without having to write a full processor manually: the only
 requirement is to follow a recipe for writing a task, similarly to what was done in AliPhysics.
 A task is defined with
 
@@ -36,7 +36,7 @@ defineDataProcessing() {
 
 > **Implementation details**: `AnalysisTask` is simply a `struct`. Since `struct` default inheritance policy is `public`, we can omit specifying it when declaring MyTask.
 >
-> `AnalysisTask` will not actually provide any virtual method, as the `adaptAnalysis` helper relies on template argument matching to discover the properties of the task. It will come clear in the next paragraph how this allow is used to avoid the proliferation of data subscription methods.   
+> `AnalysisTask` will not actually provide any virtual method, as the `adaptAnalysis` helper relies on template argument matching to discover the properties of the task. It will come clear in the next paragraph how this allow is used to avoid the proliferation of data subscription methods.
 
 ```todo
 Define minimum requirements for a complet task
@@ -51,7 +51,7 @@ Sometimes it's handy to perform an action when all the data has been processed, 
 <a name="creatinghistograms"></a>
 ## Creating histograms
 
-Typically, in analysis, histograms have to be declared and filled with relevant information. 
+Typically, in analysis, histograms have to be declared and filled with relevant information.
 You can do so by using the `Histogram` helper:
 
 ```cpp
@@ -129,9 +129,9 @@ AxisSpec(int nBins,
          std::optional<std::string> name = std::nullopt)
 ```
 
-They differ in the way the axis bins are defined. In the first version a vector of bin edges is provided, which allows for bins of differnt widths, whereas in the second case the edges of the equally wide bins are computed with the provided number of bins and the range of the axis, defined by binMin and binMax.
+They differ in the way the axis bins are defined. In the first version a vector of bin edges is provided, which allows for bins of different widths, whereas in the second case the edges of the equally wide bins are computed with the provided number of bins and the range of the axis, defined by binMin and binMax.
 
-By-the-way, there is in fact a third version of the AxisSpec constructor, which is similar to the first version, but takes as first argument a ConfigurableAxis (= [Configurable](#configurables)&lt;std::vector&lt;double&gt;&gt;) instead of a std::vector&lt;double&gt;. 
+By-the-way, there is in fact a third version of the AxisSpec constructor, which is similar to the first version, but takes as first argument a ConfigurableAxis (= [Configurable](#configurables)&lt;std::vector&lt;double&gt;&gt;) instead of a std::vector&lt;double&gt;.
 
 <a name="addinghistograms"></a>
 ## Adding histograms

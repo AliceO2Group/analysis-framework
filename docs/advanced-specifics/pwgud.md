@@ -5,9 +5,9 @@ title: PWG-UD
 
 # Ultra-peripheral collisions and diffraction (UD) analysis framework
 
-## Get started!
+## Get started
 
-## Contact 
+## Contact
 
 ## Code
 

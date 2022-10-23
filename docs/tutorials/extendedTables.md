@@ -108,7 +108,7 @@ DECLARE_SOA_EXTENDED_TABLE_USER(ExTable, Tracks, "EXTABLE",
 
 using namespace o2;
 using namespace o2::framework;
-``` 
+```
 
 DynTable is a table with a few dynamic columns and has to be created and filled using Produces and the fill function. ExTable is an extended table and needes to be filled with the Helper function `Spawns`. Spawns causes the expression columns to be computed.
 

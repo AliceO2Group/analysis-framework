@@ -11,12 +11,12 @@ You can use  helper functions from `ASoAHelpers.h` to get combinations of elemen
   Row numbers of elements: (0, 0), ..., (0, 5), (1, 0), ..., (1, 5), ..., (4, 0), ..., (4, 5)
 2. `CombinationsUpperIndexPolicy`:<br>
   Row numbers of elements: (0, 0), ..., (0, 5), (1, 1), ..., (1, 5), ..., (4, 4), (4, 5)
-  - no repetitions of pairs like (0, 1) and (1, 0)
+- no repetitions of pairs like (0, 1) and (1, 0)
 3. `CombinationsStrictlyUpperIndexPolicy`:<br>
   Row numbers of elements: (0, 1), ..., (0, 5), (1, 2), ..., (1, 5), ..., (3, 5)
-  - max position: (table size - distance from the rightmost iterator) = (4, 6), that's why the last pair is (3, 5) and not (4, 5)<br>
-  - no repetitions of pairs like (0, 1) and (1, 0)
-  - no repeated positions within a single tuple, e.g., (0, 0)
+- max position: (table size - distance from the rightmost iterator) = (4, 6), that's why the last pair is (3, 5) and not (4, 5)<br>
+- no repetitions of pairs like (0, 1) and (1, 0)
+- no repeated positions within a single tuple, e.g., (0, 0)
 
 The number of elements in a combination is deduced from the number of arguments passed to `combinations()` call. For example, to get pairs of tracks from the same source one must specify `tracks` table twice:
 

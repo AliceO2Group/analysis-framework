@@ -11,22 +11,22 @@ The timestamp task is needed to fill the table [Timestamps](../datamodel/helperT
 
 Since the Timestamps table has an entry per bunch crossing it can be joined with table BC. The join is defined by o2::aod::BCsWithTimestamps (see list of defined [joins and iterators](../datamodel/joinsAndIterators.html#list-of-defined-joins-and-iterators)).
 
-## Event selection 
+## Event selection
 
 Table of contents:
-  * [Concept](#concept)
-  * [Basic usage in user tasks](#basic-usage-in-user-tasks)
-  * [Trigger aliases](#trigger-aliases)
-  * [Event selection criteria](#event-selection-criteria)
-  * [Event selection decisions](#event-selection-decisions)
-  * [Found bunch crossings](#found-bunch-crossings)
-  * [Configurables](#configurables)
-  * [Remarks](#remarks)
+* [Concept](#concept)
+* [Basic usage in user tasks](#basic-usage-in-user-tasks)
+* [Trigger aliases](#trigger-aliases)
+* [Event selection criteria](#event-selection-criteria)
+* [Event selection decisions](#event-selection-decisions)
+* [Found bunch crossings](#found-bunch-crossings)
+* [Configurables](#configurables)
+* [Remarks](#remarks)
 
 ### Concept
 
 The main purpose of the event selection framework in O2 is to provide tools to select triggered events and reject pileup, beam-gas and poor quality collisions.
-Event selection in O2 is based on the concept of derived tables created in dedicated tasks from available AOD contents. 
+Event selection in O2 is based on the concept of derived tables created in dedicated tasks from available AOD contents.
 _o2-analysis-event-selection_ executable produces two in-memory tables described in [EventSelection.h](https://github.com/AliceO2Group/O2Physics/blob/master/Common/DataModel/EventSelection.h):
 * ```EvSels``` table joinable with ```Collisions``` table. To be used in analyses based on loops over ```Collisions```, i.e. majority of ALICE analyses.
 * ```BcSels``` table joinable with ```BCs``` table. To be used in analyses based on loops over ```BCs``` table such as muon arm UPCs, luminosity monitoring etc.
@@ -43,7 +43,7 @@ In addition ```EvSels``` table contains additional info:
 * event selection decisions (in ```EvSels``` table only), i.e. logical combinations of various offline event selection criteria, see [Event selection decisions](#event-selection-decisions) section. For example, _sel7_ is based on beam-beam decisions in V0A and V0C with additional background, pileup and quality checks
 * indices to found bunch crossings and corresponding FT0 and FV0 entries (in ```EvSels``` table only), see [Found bunch crossings](#found-bunch-crossings) section.
 
-```BcSels``` and ```EvSels``` tables are produced by _BcSelectionTask_ and _EventSelectionTask_, respectively, see [`Common/TableProducer/eventSelection.cxx`](https://github.com/AliceO2Group/O2Physics/blob/master/Common/TableProducer/eventSelection.cxx). 
+```BcSels``` and ```EvSels``` tables are produced by _BcSelectionTask_ and _EventSelectionTask_, respectively, see [`Common/TableProducer/eventSelection.cxx`](https://github.com/AliceO2Group/O2Physics/blob/master/Common/TableProducer/eventSelection.cxx).
 There are separate process functions for Run 2 and Run 3 in both tasks. One has to use _--process-run 2_ or _--process-run 3_ configurables in json files to switch between these process functions, see [Configurables](#configurables) section for more details.
 
 ### Basic usage in user tasks
@@ -65,14 +65,14 @@ In general, one has to follow the following steps:
     ```
     Bypass this check if you analyse MC or continuous Run3 data.
 * apply further offline selection criteria:
-    * for Run 2 data and MC:
+  * for Run 2 data and MC:
       ``` c++
       if (!col.sel7()) {
         return;
       }
       ```
 
-    * for Run 3 data and MC:
+  * for Run 3 data and MC:
       ``` c++
       if (!col.sel8()) {
         return;
@@ -86,18 +86,18 @@ In general, one has to follow the following steps:
     ```
   This workflow works for Run 2 data. Special settings are required for MC and Run 3 data, see [Configurables](#configurables) section.
   
-  _o2-analysis-timestamp_ task [`Common/TableProducer/timestamp.cxx`](https://github.com/AliceO2Group/O2Physics/blob/master/Common/TableProducer/timestamp.cxx) is required to create per-event timestamps necessary to access relevant CCDB objects in the event selection task. 
+  _o2-analysis-timestamp_ task [`Common/TableProducer/timestamp.cxx`](https://github.com/AliceO2Group/O2Physics/blob/master/Common/TableProducer/timestamp.cxx) is required to create per-event timestamps necessary to access relevant CCDB objects in the event selection task.
 
 
 ### Trigger aliases
 
-Direct selection on trigger class names in O2 is rather complicated. In contrast to Run 2 AODs, there is no way to get the list of fired classes in a string-like format. Instead one has to check bits corresponding to trigger class ids either in ```triggerMask``` column in ```BCs``` table or ```triggerMaskNext50``` in ```Run2BCInfos``` table (for Run 2 if the trigger class id is larger than 50). This approach is complicated since trigger class ids for the same class vary from run to run. 
+Direct selection on trigger class names in O2 is rather complicated. In contrast to Run 2 AODs, there is no way to get the list of fired classes in a string-like format. Instead one has to check bits corresponding to trigger class ids either in ```triggerMask``` column in ```BCs``` table or ```triggerMaskNext50``` in ```Run2BCInfos``` table (for Run 2 if the trigger class id is larger than 50). This approach is complicated since trigger class ids for the same class vary from run to run.
 
 To simplify trigger checks, we use trigger alias approach. Fired trigger classes are mapped to trigger alias bits in the ```alias``` array of ```BcSels``` and ```EvSels``` tables. Aliases have at least two advantages:
 * several classes based on similar logic can be grouped together into one alias (see _kINT7_ for example)
-* alias bits do not change from run to run in contrast to trigger class ids 
+* alias bits do not change from run to run in contrast to trigger class ids
 
-The list of available trigger alises can be found in [`Common/CCDB/TriggerAliases.h`](https://github.com/AliceO2Group/O2Physics/blob/master/Common/CCDB/TriggerAliases.h). The mapping between trigger classes (and their indices) and trigger aliases is stored in [`CCDB`](http://alice-ccdb.cern.ch/browse/EventSelection/TriggerAliases) run-by-run in dedicated _TriggerAliases_ objects. 
+The list of available trigger alises can be found in [`Common/CCDB/TriggerAliases.h`](https://github.com/AliceO2Group/O2Physics/blob/master/Common/CCDB/TriggerAliases.h). The mapping between trigger classes (and their indices) and trigger aliases is stored in [`CCDB`](http://alice-ccdb.cern.ch/browse/EventSelection/TriggerAliases) run-by-run in dedicated _TriggerAliases_ objects.
 Current mapping can be checked in [upload_trigger_aliases.C](https://github.com/AliceO2Group/O2Physics/blob/master/Common/CCDB/macros/upload_trigger_aliases.C#L24) macro:
 ``` c++
   mAliases[kINT7] = "CINT7-B-NOPF-CENT,CV0L7-B-NOPF-CENT,CINT7-B-NOPF-CENTNOTRD,CINT7ZAC-B-NOPF-CENTNOPMD";
@@ -183,7 +183,7 @@ Offline event selection decisions (e.g. sel7) are constructed based on a subsamp
 * checks for pA system are similar to pp but in addition they include no beam-gas in ZNA:
 ``` c++
     selectionBarrel[kNoBGZNA] = 1;
-``` 
+```
 * checks for Ap system are similar to pp but in addition they include no beam-gas in ZNC:
 ``` c++
     selectionBarrel[kNoBGZNC] = 1;
@@ -207,7 +207,7 @@ Besides, there are special settings for some run ranges, e.g. we remove checks o
 ```
 These special settings are stored in CCDB. One can find relevant details in [upload_event_selection_params.C](https://github.com/AliceO2Group/O2Physics/blob/master/Common/CCDB/macros/upload_event_selection_params.C) macro.
 
-Finaly, it is worth mentioning that out-of-bunch pileup cuts as well as ZDC timing checks are disabled in MC
+Finally, it is worth mentioning that out-of-bunch pileup cuts as well as ZDC timing checks are disabled in MC
 [eventSelection.cxx#L265](https://github.com/AliceO2Group/O2Physics/blob/master/Common/TableProducer/eventSelection.cxx#L265):
 ``` c++
     if (isMC) {
@@ -252,7 +252,7 @@ if (collision.has_foundFT0()) {
   int triggersignals = ft0.triggerMask();
 }
 ```
-If bunch crossing with FT0 entries is not found, _foundBC_ and _foundFT0_ indices are set to -1 therefore one has to check ```collision.has_foundBC()``` or ```collision.has_foundFT0()``` before accessing corresponding info. 
+If bunch crossing with FT0 entries is not found, _foundBC_ and _foundFT0_ indices are set to -1 therefore one has to check ```collision.has_foundBC()``` or ```collision.has_foundFT0()``` before accessing corresponding info.
 
 ### Configurables
 
@@ -286,13 +286,13 @@ In the case of Run 3 processing, one has to set ```processRun2=false``` and ```p
         "processRun3": "true"
     },
 ```
-One can set other configurables in the json file. This json file has to be provided using ```--configuration``` option: 
+One can set other configurables in the json file. This json file has to be provided using ```--configuration``` option:
   ``` bash
   o2-analysis-timestamp -b | o2-analysis-event-selection --configuration json://config.json -b
   ```
 
 ### Remarks
-* One has to apply offline selections in O2 explicitely in contrast to AliPhysics where these selections were applied together with trigger alias selection. 
+* One has to apply offline selections in O2 explicitly in contrast to AliPhysics where these selections were applied together with trigger alias selection.
 * EvSel table might be also useful in user tasks relying on beam-beam and beam-gas decisions in forward detectors, e.g. in UPC tasks.
 * Trigger class aliases for Run 3 are not available yet (pilot beam data taking was focused on continuous readout)
 
@@ -301,10 +301,10 @@ One can set other configurables in the json file. This json file has to be provi
 ### Concept
 
 The multiplicity and centrality selection in O2 is based on the concept of derived tables created in dedicated tasks from available AOD contents:
-* _o2-analysis-multiplicity-table_ task [`Analysis/Tasks/multiplicityTable.cxx`](https://github.com/AliceO2Group/AliceO2/blob/dev/Analysis/Tasks/multiplicityTable.cxx) stores relevant multiplicity values (V0A, V0C, ZNA, ZNC) and their dynamic sums (V0M) in [`Mults`](https://github.com/AliceO2Group/AliceO2/blob/dev/Analysis/DataModel/include/Analysis/Multiplicity.h) table joinable wih _Collisions_ table.
+* _o2-analysis-multiplicity-table_ task [`Analysis/Tasks/multiplicityTable.cxx`](https://github.com/AliceO2Group/AliceO2/blob/dev/Analysis/Tasks/multiplicityTable.cxx) stores relevant multiplicity values (V0A, V0C, ZNA, ZNC) and their dynamic sums (V0M) in [`Mults`](https://github.com/AliceO2Group/AliceO2/blob/dev/Analysis/DataModel/include/Analysis/Multiplicity.h) table joinable with _Collisions_ table.
 * _o2-analysis-multiplicity-qa_ task [`Analysis/Tasks/multiplicityQa.cxx`](https://github.com/AliceO2Group/AliceO2/blob/dev/Analysis/Tasks/multiplicityQa.cxx) creates multiplicity distributions in minimum bias triggers necessary for centrality calibration.
-* _o2-analysis-centrality-table_ task [`Analysis/Tasks/centralityTable.cxx`](https://github.com/AliceO2Group/AliceO2/blob/dev/Analysis/Tasks/centralityTable.cxx) takes multiplicity values from the [`Mults`](https://github.com/AliceO2Group/AliceO2/blob/dev/Analysis/DataModel/include/Analysis/Multiplicity.h) table and stores centrality values in [`Cents`](https://github.com/AliceO2Group/AliceO2/blob/dev/Analysis/DataModel/include/Analysis/Centrality.h) table joinable with _Collisions_ table. Relevant cumulative multiplicity distributions are stored in [CCDB](http://ccdb-test.cern.ch:8080/browse/Multiplicity/CumMultV0M). At the moment, centrality calibration objects are available only for LHC15o. The centrality calibration relies on 90% anchor points but doesn't take into account vertex dependence yet. The difference with AliPhysics centrality calibration doesn't exceed 0.5%. 
-* _o2-analysis-centrality-qa_ task [`Analysis/Tasks/centralityQa.cxx`](https://github.com/AliceO2Group/AliceO2/blob/dev/Analysis/Tasks/centralityQa.cxx) creates centrality distributions for minimum bias triggers and can be used for control and QA purposes. 
+* _o2-analysis-centrality-table_ task [`Analysis/Tasks/centralityTable.cxx`](https://github.com/AliceO2Group/AliceO2/blob/dev/Analysis/Tasks/centralityTable.cxx) takes multiplicity values from the [`Mults`](https://github.com/AliceO2Group/AliceO2/blob/dev/Analysis/DataModel/include/Analysis/Multiplicity.h) table and stores centrality values in [`Cents`](https://github.com/AliceO2Group/AliceO2/blob/dev/Analysis/DataModel/include/Analysis/Centrality.h) table joinable with _Collisions_ table. Relevant cumulative multiplicity distributions are stored in [CCDB](http://ccdb-test.cern.ch:8080/browse/Multiplicity/CumMultV0M). At the moment, centrality calibration objects are available only for LHC15o. The centrality calibration relies on 90% anchor points but doesn't take into account vertex dependence yet. The difference with AliPhysics centrality calibration doesn't exceed 0.5%.
+* _o2-analysis-centrality-qa_ task [`Analysis/Tasks/centralityQa.cxx`](https://github.com/AliceO2Group/AliceO2/blob/dev/Analysis/Tasks/centralityQa.cxx) creates centrality distributions for minimum bias triggers and can be used for control and QA purposes.
 
 Note that _o2-analysis-multiplicity-qa_ and _o2-analysis-centrality-qa_ tasks rely on the minimum bias trigger selection therefore one has to run event selection in stack with these tasks, see [here](evsel.md) for more details.
 
@@ -325,7 +325,7 @@ One can check _o2-analysis-centrality-qa_ task for example usage: [`Analysis/Tas
     if (!col.alias()[kINT7])
       return;
     ```
-    Bypass this check if you analyse MC or future continuous Run3 data. 
+    Bypass this check if you analyse MC or future continuous Run3 data.
 * apply further offline selection criteria:
     ``` c++
     if (!col.sel7())
@@ -341,7 +341,7 @@ One can check _o2-analysis-centrality-qa_ task for example usage: [`Analysis/Tas
     ``` bash
     o2-analysis-timestamp --aod-file AO2D.root -b | o2-analysis-event-selection -b | o2-analysis-mulitplicity-table -b | o2-analysis-centrality-table -b | o2-analysis-user-task -b
     ```
-    _o2-analysis-timestamp_ task [`Analysis/Tasks/timestamp.cxx`](https://github.com/AliceO2Group/AliceO2/blob/dev/Analysis/Tasks/timestamp.cxx) is required to create per-event timestamps necessary to access relevant CCDB objects in the event selection and/or centrality tasks. 
+    _o2-analysis-timestamp_ task [`Analysis/Tasks/timestamp.cxx`](https://github.com/AliceO2Group/AliceO2/blob/dev/Analysis/Tasks/timestamp.cxx) is required to create per-event timestamps necessary to access relevant CCDB objects in the event selection and/or centrality tasks.
 
 ## Particle identification
 
@@ -438,7 +438,7 @@ O2 tasks dedicated to the filling of the PID tables are called with
 
 ## Track Selection
 
-The track selection in the O2 analysis framework is provided in form of a stand-alone workflow that you can run in front of your analysis: 
+The track selection in the O2 analysis framework is provided in form of a stand-alone workflow that you can run in front of your analysis:
 
 ```
 o2-analysis-trackselection | o2-analysis-myTask
@@ -527,7 +527,7 @@ o2-analysis-trackselection | o2-analysis-qa-event-track | ...
 At the moment there are two 'FilterBits' available in the TrackSelection table, which are defined as follows:
 
  | Cuts                                                 | globalTrack                                  | globalTrackSDD                               |
- | ---------------------------------------------------- | -------------------------------------------- | -------------------------------------------- |
+ |------------------------------------------------------|----------------------------------------------|----------------------------------------------|
  | min number of crossed rows TPC                       | 70                                           | 70                                           |
  | min ratio of crossed rows over findable clusters TPC | 0.8                                          | 0.8                                          |
  | max chi2 per cluster TPC                             | 4.0                                          | 4.0                                          |
@@ -589,14 +589,14 @@ bool isSelected = mySelection.IsSelected(track)
 * `itsMatching == 3`: one hit on all the ITS layers (`Run3ITSall7Layers`);
 
 ### Remarks
-Please note that this documentation only represents the status quo of the track selection implementation and many things can and will change. 
+Please note that this documentation only represents the status quo of the track selection implementation and many things can and will change.
 In particular the cut values will most likely change with the 'new' detector in Run 3 and some of the legacy cuts will be removed or only available for converted Run 2 data.
 In case of questions or suggestions don't hesitate to contact us.
 
 ## Track Propagation
 
-The Run 3 AO2D stores the tracks at the point of innermost update. For a track with ITS this is the 
-innermost (or second innermost) ITS layer. For a track without ITS, this is the TPC inner wall or 
+The Run 3 AO2D stores the tracks at the point of innermost update. For a track with ITS this is the
+innermost (or second innermost) ITS layer. For a track without ITS, this is the TPC inner wall or
 for loopers in the TPC even a radius beyond that. In the AO2D.root the trees are therefore called O2tracks_IU
 and O2tracksCov_IU (IU = innermost update). The corresponding O2 data model tables are TracksIU and TracksCovIU, respectively.
 If your task needs tracks at the collision vertex it will fail because it looks for O2tracks and O2tracksCov.

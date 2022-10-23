@@ -5,9 +5,9 @@ title: PWG-CF
 
 # Correlations and fluctuations (CF) analysis framework
 
-## Get started!
+## Get started
 
-## Contact 
+## Contact
 
 ## Code
 

@@ -81,27 +81,27 @@ title: Notifications
 
 Informs the user when a wagon has been disabled in different circumstances:
 
-  * When the dataset the wagon was enabled for is deactivated.
+* When the dataset the wagon was enabled for is deactivated.
 
-  * When the directories corresponding to a dataset production (job types or train runs) are not found.
+* When the directories corresponding to a dataset production (job types or train runs) are not found.
 
-  * Local tests are cleaned if the wagons are not submitted in a period of 4 weeks. The user is notified that the respective wagons are automatically disabled.
+* Local tests are cleaned if the wagons are not submitted in a period of 4 weeks. The user is notified that the respective wagons are automatically disabled.
 
 <div align="center">
   <img src="../images/testCleaned.png" width="90%">
 </div>
 
-  * When a wagon with derived data output is enabled, the test cannot start if the wagon and its dependencies share the same workflow. As a result, the wagon is disabled and the user is notified about the wagons which share the same task.
+* When a wagon with derived data output is enabled, the test cannot start if the wagon and its dependencies share the same workflow. As a result, the wagon is disabled and the user is notified about the wagons which share the same task.
 
-    * The notification format is: The wagon _"wagon_name"_ was disabled in _"dataset_name"_. There is derived data. The following wagons have the same workflows {_wagon1_, _wagon2_: _common_workflow_},...,{_wagonX_, _wagonY_: _common_workflow_}
+  * The notification format is: The wagon _"wagon_name"_ was disabled in _"dataset_name"_. There is derived data. The following wagons have the same workflows {_wagon1_, _wagon2_: _common_workflow_},...,{_wagonX_, _wagonY_: _common_workflow_}
 
   <div align="center">
     <img src="../images/wagonDisabled1.png" width="90%">
   </div>
 
-  * If among the wagon and its dependencies there are identical derived data outputs, the test cannot start, and the wagon is disabled.
+* If among the wagon and its dependencies there are identical derived data outputs, the test cannot start, and the wagon is disabled.
 
-    * The notification format is:  The wagon _"wagon_name"_ was disabled in _"dataset_name"_. The following wagons have the same derived data outputs {_wagon1_, _wagon2_: _common_derived_data_},...,{_wagonX_, _wagonY_: _common_derived_data_}
+  * The notification format is:  The wagon _"wagon_name"_ was disabled in _"dataset_name"_. The following wagons have the same derived data outputs {_wagon1_, _wagon2_: _common_derived_data_},...,{_wagonX_, _wagonY_: _common_derived_data_}
 
   <div align="center">
     <img src="../images/wagonDisabled.png" width="90%">

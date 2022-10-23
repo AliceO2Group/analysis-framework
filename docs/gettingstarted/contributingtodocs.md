@@ -6,7 +6,7 @@ title: Editing this documentation
 # Guidelines for writing documentation
 
 The source of this documentation consists of <a
-href="https://www.markdownguide.org/" target="_blank">markdown</a> files which 
+href="https://www.markdownguide.org/" target="_blank">markdown</a> files which
 are located at this GitHub <a href="https://github.com/AliceO2Group/analysis-framework/"
 target="_blank">repository</a> under the directory **docs**. You contribute by forking that repository, making changes to it and proposing them through a pull request (like you contribute code to O2Physics).
 
@@ -54,14 +54,14 @@ docs/
 ```
 
 The documentation files (including the READMEs) contain a header as shown below
-```markdown 
+```markdown
 ---
 sort: n
 title: MyTitle
 ---
 ```
 
-n determines the sequence the items appear in the menu. If n is not provided the items are sorted alphabetically. The title is displayed as item name in the menu. When adding new files don't forget to adjust the sorting information of all affected files. 
+n determines the sequence the items appear in the menu. If n is not provided the items are sorted alphabetically. The title is displayed as item name in the menu. When adding new files don't forget to adjust the sorting information of all affected files.
 
 ### Headers
 

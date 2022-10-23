@@ -41,7 +41,7 @@ target="_blank">ALICEO2 code repository</a>.
   Source: <a href="https://github.com/AliceO2Group/O2Physics/blob/master/Tutorials/src/extendedColumns.cxx" target="_blank">extendedColumns.cxx</a><br>
   Executable: o2-analysistutorial-extended-columns
   <div class="indBox">
-    Expression column are declared with a recipe to compute its values. The column is automatically computed when added to an existing table with the soa::Extend operator. 
+    Expression column are declared with a recipe to compute its values. The column is automatically computed when added to an existing table with the soa::Extend operator.
   </div>
 </div>
 
@@ -127,7 +127,7 @@ target="_blank">ALICEO2 code repository</a>.
   Source: <a href="https://github.com/AliceO2Group/O2Physics/blob/master/Tutorials/src/muonIteration.cxx" target="_blank">muonIteration.cxx</a><br>
   Executable: o2-analysistutorial-muon-iteration
   <div class="indBox">
-    This tutorial shows how to use tables MatchedBCCollisionsExclusive and MatchedBCCollisionsSparse to access the Muons belonging to a given collision. 
+    This tutorial shows how to use tables MatchedBCCollisionsExclusive and MatchedBCCollisionsSparse to access the Muons belonging to a given collision.
   </div>
 </div>
 
@@ -163,6 +163,6 @@ target="_blank">ALICEO2 code repository</a>.
   Source: <a href="https://github.com/AliceO2Group/O2Physics/blob/master/Tutorials/src/ZDCVZeroIteration.cxx" target="_blank">ZDCVZeroIteration.cxx</a><br>
   Executable: o2-analysistutorial-zdc-vzero-iteration
   <div class="indBox">
-    This tutorial shows how to use tables CollisionMatchedRun2Sparse and Run2MatchedExclusive to access ZDC and Fv0 information from Run2 data. 
+    This tutorial shows how to use tables CollisionMatchedRun2Sparse and Run2MatchedExclusive to access ZDC and Fv0 information from Run2 data.
   </div>
 </div>

@@ -19,7 +19,7 @@ Learn how to access the tracks and their measured quantities.
 
 Information about the tracks is contained in the tables `Tracks`, `TracksCov`, and `TracksExtra`. The respective iterators are defined as `Track`, `TrackCov`, and `TrackExtra`.
 
-To loop over all available tracks contained in the input files subscribe to the iterator `Track`. 
+To loop over all available tracks contained in the input files subscribe to the iterator `Track`.
 
 ```cpp
 void process(Track const& track)
@@ -32,7 +32,7 @@ void process(Track const& track)
 In this case the variable `track` inside the process function is of type `Track`
 which has a number of data members. Here we access the momentum P and print it
 out. For a comprehensive list of data items included in the O2 data model see
-[The Data Model](../datamodel/) section of these documentation pages. 
+[The Data Model](../datamodel/) section of these documentation pages.
 
 The `Tracks` table only contains part of the available track information. In order to simultaneously access information of several tables, the tables can be joined using `soa::Join<>`.
 
@@ -46,7 +46,7 @@ void process(soa::Join<aod::Track, aod::TrackExtra> const& joinedTrack)
 }
 ```
 
-In this way also all three track tables could be joined. However, for this one can use the abbreviation `FullTrack`, which is a predefined join of all three track tables. A list of predefined joins is available in [The Data Model](../datamodel/joinsAndIterators.md) section of these documentation pages). 
+In this way also all three track tables could be joined. However, for this one can use the abbreviation `FullTrack`, which is a predefined join of all three track tables. A list of predefined joins is available in [The Data Model](../datamodel/joinsAndIterators.md) section of these documentation pages).
 
 ```cpp
 void process(aod::fullTrack const& fullTrack)

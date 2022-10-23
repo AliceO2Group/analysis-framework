@@ -20,7 +20,7 @@ However this has the disadvantage that the filtering will be done for every
 task which has similar or more restrictive conditions. By declaring your
 filters upfront you can not only simplify your code, but allow the framework to
 optimize the processing. To do so, we provide two helpers: `Filter` and
-`Partition`. 
+`Partition`.
 
 *Note: Filters cannot be used on dynamic columns.*
 
@@ -82,7 +82,7 @@ struct MyTask : AnalysisTask {
 };
 ```
 
-i.e. `Filter` is applied to the objects before passing them to the `process` method, while `Select` objects can be used to do further reduction inside the `process` method itself. 
+i.e. `Filter` is applied to the objects before passing them to the `process` method, while `Select` objects can be used to do further reduction inside the `process` method itself.
 
 ## Filtering and partitioning together
 

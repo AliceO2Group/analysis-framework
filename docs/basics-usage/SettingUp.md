@@ -7,7 +7,7 @@ title: Setting up an execution
 
 All user executables have the prefix o2-analysis- and end with xx-taskname,
 where xx is the PWG abbreviation (lower case) and taskname the name of the task
-as defined in the respective CMakeLists.txt file. 
+as defined in the respective CMakeLists.txt file.
 
 Tasks come with command line options. To display the available options use &#8208;&#8208;help. The following table lists the most commonly used options:
 

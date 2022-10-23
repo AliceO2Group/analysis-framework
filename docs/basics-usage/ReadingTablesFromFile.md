@@ -12,7 +12,7 @@ The internal-dpl-aod-reader reads trees from root files and provides them as arr
 
 ### --aod-file
 
-aod-file takes a string as option value, which either is the name of the input root file or, if starting with an `@`-character, is an ASCII-file which contains a list of input files. 
+aod-file takes a string as option value, which either is the name of the input root file or, if starting with an `@`-character, is an ASCII-file which contains a list of input files.
 
 ```csh
 --aod-file AnalysisResults_0.root

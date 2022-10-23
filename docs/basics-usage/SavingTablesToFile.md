@@ -125,14 +125,14 @@ This hierarchy of the options is summarized in the following table. The columns 
 
 <a name="priorities"></a>
 
-| parameter\option | keep | resfile | ntfmerge | json | default |
-|--------------|:----:|:--------:|:--------:|----------:|:-------:|
-| `default file name` | - | 1.    | -        | 2.        | 3. (AnalysisResults_trees)|
-| `ntfmerge`   | -    | -        |  1.      | 2.        | 3. (1)  |
-| `tablename`  | 1.   | -        | -        | 2.        | -       |
-| `tree`       | 1.   | -        | -        | 2.        | 3. (`O2tablename`) |
-| `columns`    | 1.   | -        | -        | 2.        | 3. (all columns)     |
-| `file`       | 1.   | 2.       | -        | 3.        | 4. (`default file name`)|
+| parameter\option    | keep | resfile | ntfmerge | json |          default           |
+|---------------------|:----:|:-------:|:--------:|-----:|:--------------------------:|
+| `default file name` |  -   |   1.    |    -     |   2. | 3. (AnalysisResults_trees) |
+| `ntfmerge`          |  -   |    -    |    1.    |   2. |           3. (1)           |
+| `tablename`         |  1.  |    -    |    -     |   2. |             -              |
+| `tree`              |  1.  |    -    |    -     |   2. |     3. (`O2tablename`)     |
+| `columns`           |  1.  |    -    |    -     |   2. |      3. (all columns)      |
+| `file`              |  1.  |   2.    |    -     |   3. |  4. (`default file name`)  |
 
 
 ## Valid example command line options

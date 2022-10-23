@@ -5,9 +5,9 @@ title: PWG-MM
 
 # Monte carlo and minimum-bias (MM) analysis framework
 
-## Get started!
+## Get started
 
-## Contact 
+## Contact
 
 ## Code
 

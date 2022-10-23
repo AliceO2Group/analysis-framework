@@ -13,7 +13,7 @@ Click on the labels to display the table content. Click buttons to
 
 <!-- Block with helper tasks -->
 
-####  o2-analysis-calo-clusters
+#### o2-analysis-calo-clusters
 Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/TableProducer//caloClusterProducer.cxx" target="_blank">caloClusterProducer.cxx</a>
 <div>
 
@@ -183,7 +183,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
 
 </div>
 
-####  o2-analysis-centrality-table
+#### o2-analysis-centrality-table
 Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/TableProducer//centralityTable.cxx" target="_blank">centralityTable.cxx</a>
 <div>
 
@@ -468,7 +468,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
 
 </div>
 
-####  o2-analysis-event-selection
+#### o2-analysis-event-selection
 Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/TableProducer//eventSelection.cxx" target="_blank">eventSelection.cxx</a>
 <div>
 
@@ -774,7 +774,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
 
 </div>
 
-####  o2-analysis-fdd-converter
+#### o2-analysis-fdd-converter
 Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/TableProducer//fddConverter.cxx" target="_blank">fddConverter.cxx</a>
 <div>
 
@@ -853,7 +853,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
 
 </div>
 
-####  o2-analysis-ft0-corrected-table
+#### o2-analysis-ft0-corrected-table
 Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/TableProducer//ft0CorrectedTable.cxx" target="_blank">ft0CorrectedTable.cxx</a>
 <div>
 
@@ -932,7 +932,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
 
 </div>
 
-####  o2-analysis-fwdtrackextension
+#### o2-analysis-fwdtrackextension
 Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/TableProducer//fwdtrackextension.cxx" target="_blank">fwdtrackextension.cxx</a>
 <div>
 
@@ -971,7 +971,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
 
 </div>
 
-####  o2-analysis-mc-converter
+#### o2-analysis-mc-converter
 Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/TableProducer//mcConverter.cxx" target="_blank">mcConverter.cxx</a>
 <div>
 
@@ -1143,7 +1143,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
 
 </div>
 
-####  o2-analysis-multiplicity-table
+#### o2-analysis-multiplicity-table
 Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/TableProducer//multiplicityTable.cxx" target="_blank">multiplicityTable.cxx</a>
 <div>
 
@@ -1344,7 +1344,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
 
 </div>
 
-####  o2-analysis-timestamp
+#### o2-analysis-timestamp
 Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/TableProducer//timestamp.cxx" target="_blank">timestamp.cxx</a>
 <div>
 
@@ -1381,7 +1381,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
 
 </div>
 
-####  o2-analysis-track-propagation
+#### o2-analysis-track-propagation
 Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/TableProducer//trackPropagation.cxx" target="_blank">trackPropagation.cxx</a>
 <div>
 
@@ -1688,7 +1688,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
 
 </div>
 
-####  o2-analysis-trackextension
+#### o2-analysis-trackextension
 Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/TableProducer//trackextension.cxx" target="_blank">trackextension.cxx</a>
 <div>
 
@@ -1733,7 +1733,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
 
 </div>
 
-####  o2-analysis-trackselection
+#### o2-analysis-trackselection
 Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/TableProducer//trackselection.cxx" target="_blank">trackselection.cxx</a>
 <div>
 
@@ -1919,7 +1919,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
 
 </div>
 
-####  o2-analysis-weak-decay-indices
+#### o2-analysis-weak-decay-indices
 Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/TableProducer//weakDecayIndices.cxx" target="_blank">weakDecayIndices.cxx</a>
 <div>
 
@@ -2029,7 +2029,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
 
 </div>
 
-####  o2-analysis-pid-bayes
+#### o2-analysis-pid-bayes
 Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/TableProducer/PID//pidBayes.cxx" target="_blank">pidBayes.cxx</a>
 <div>
 
@@ -2302,7 +2302,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
 
 </div>
 
-####  o2-analysis-pid-tof
+#### o2-analysis-pid-tof
 Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/TableProducer/PID//pidTOF.cxx" target="_blank">pidTOF.cxx</a>
 <div>
 
@@ -2605,7 +2605,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
 
 </div>
 
-####  o2-analysis-pid-tof-base
+#### o2-analysis-pid-tof-base
 Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/TableProducer/PID//pidTOFBase.cxx" target="_blank">pidTOFBase.cxx</a>
 <div>
 
@@ -2691,7 +2691,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
 
 </div>
 
-####  o2-analysis-pid-tof-full
+#### o2-analysis-pid-tof-full
 Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/TableProducer/PID//pidTOFFull.cxx" target="_blank">pidTOFFull.cxx</a>
 <div>
 
@@ -3145,7 +3145,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
 
 </div>
 
-####  o2-analysis-pid-tof-beta
+#### o2-analysis-pid-tof-beta
 Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/TableProducer/PID//pidTOFbeta.cxx" target="_blank">pidTOFbeta.cxx</a>
 <div>
 
@@ -3238,7 +3238,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
 
 </div>
 
-####  o2-analysis-pid-tpc
+#### o2-analysis-pid-tpc
 Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/TableProducer/PID//pidTPC.cxx" target="_blank">pidTPC.cxx</a>
 <div>
 
@@ -3541,7 +3541,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
 
 </div>
 
-####  o2-analysis-pid-tpc-full
+#### o2-analysis-pid-tpc-full
 Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/TableProducer/PID//pidTPCFull.cxx" target="_blank">pidTPCFull.cxx</a>
 <div>
 

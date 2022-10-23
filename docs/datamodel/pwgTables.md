@@ -4,7 +4,7 @@ title: PWG tables
 ---
 
 <a name="PWGs"></a>
-# List of tables defined by PWG specific tasks.
+# List of tables defined by PWG specific tasks
 
 Click on the labels to display the table content. Click buttons to
 <button class="openTables">show</button> / <button class="closeTables">close</button> all tables.
@@ -13,7 +13,7 @@ Click on the labels to display the table content. Click buttons to
 
 ## PWG-CF
 
-####  o2-analysis-cf-dptdpt-filter
+#### o2-analysis-cf-dptdpt-filter
 Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGCF/TableProducer//dptdptfilter.cxx" target="_blank">dptdptfilter.cxx</a>
 <div>
 
@@ -50,7 +50,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGCF
         <td>I</td>
         <td>bcId</td>
         <td>int32</td>
-        <td>Most probably BC to where this collision has occured</td>
+        <td>Most probably BC to where this collision has occurred</td>
       </tr>
       <tr>
         <td>o2::aod::&zwnj;collision::PosZ</td>
@@ -109,7 +109,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGCF
         <td>I</td>
         <td>bcId</td>
         <td>int32</td>
-        <td>Most probably BC to where this collision has occured</td>
+        <td>Most probably BC to where this collision has occurred</td>
       </tr>
       <tr>
         <td>o2::aod::mccollision::PosZ</td>
@@ -273,7 +273,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGCF
 
 </div>
 
-####  o2-analysis-cf-filter-correlations
+#### o2-analysis-cf-filter-correlations
 Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGCF/TableProducer//filterCorrelations.cxx" target="_blank">filterCorrelations.cxx</a>
 <div>
 
@@ -559,7 +559,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGCF
 
 ## PWG-DQ
 
-####  o2-analysis-dq-table-maker
+#### o2-analysis-dq-table-maker
 Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGDQ/TableProducer//tableMaker.cxx" target="_blank">tableMaker.cxx</a>
 <div>
 
@@ -1729,7 +1729,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGDQ
 
 </div>
 
-####  o2-analysis-dq-table-maker-mc
+#### o2-analysis-dq-table-maker-mc
 Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGDQ/TableProducer//tableMakerMC.cxx" target="_blank">tableMakerMC.cxx</a>
 <div>
 
@@ -3322,7 +3322,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGDQ
 
 ## PWG-HF
 
-####  o2-analysis-hf-b0-todpi-candidate-selector
+#### o2-analysis-hf-b0-todpi-candidate-selector
 Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer//HFB0ToDPiCandidateSelector.cxx" target="_blank">HFB0ToDPiCandidateSelector.cxx</a>
 <div>
 
@@ -3354,7 +3354,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
 
 </div>
 
-####  o2-analysis-hf-bplus-tod0pi-candidate-selector
+#### o2-analysis-hf-bplus-tod0pi-candidate-selector
 Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer//HFBPlusToD0PiCandidateSelector.cxx" target="_blank">HFBPlusToD0PiCandidateSelector.cxx</a>
 <div>
 
@@ -3386,7 +3386,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
 
 </div>
 
-####  o2-analysis-hf-candidate-creator-2prong
+#### o2-analysis-hf-candidate-creator-2prong
 Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer//HFCandidateCreator2Prong.cxx" target="_blank">HFCandidateCreator2Prong.cxx</a>
 <div>
 
@@ -3876,7 +3876,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
 
 </div>
 
-####  o2-analysis-hf-candidate-creator-3prong
+#### o2-analysis-hf-candidate-creator-3prong
 Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer//HFCandidateCreator3Prong.cxx" target="_blank">HFCandidateCreator3Prong.cxx</a>
 <div>
 
@@ -4443,7 +4443,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
 
 </div>
 
-####  o2-analysis-hf-candidate-creator-b0
+#### o2-analysis-hf-candidate-creator-b0
 Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer//HFCandidateCreatorB0.cxx" target="_blank">HFCandidateCreatorB0.cxx</a>
 <div>
 
@@ -4933,7 +4933,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
 
 </div>
 
-####  o2-analysis-hf-candidate-creator-bplus
+#### o2-analysis-hf-candidate-creator-bplus
 Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer//HFCandidateCreatorBPlus.cxx" target="_blank">HFCandidateCreatorBPlus.cxx</a>
 <div>
 
@@ -5402,7 +5402,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
 
 </div>
 
-####  o2-analysis-hf-candidate-creator-cascade
+#### o2-analysis-hf-candidate-creator-cascade
 Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer//HFCandidateCreatorCascade.cxx" target="_blank">HFCandidateCreatorCascade.cxx</a>
 <div>
 
@@ -6018,7 +6018,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
 
 </div>
 
-####  o2-analysis-hf-candidate-creator-chic
+#### o2-analysis-hf-candidate-creator-chic
 Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer//HFCandidateCreatorChic.cxx" target="_blank">HFCandidateCreatorChic.cxx</a>
 <div>
 
@@ -6501,7 +6501,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
 
 </div>
 
-####  o2-analysis-hf-candidate-creator-lb
+#### o2-analysis-hf-candidate-creator-lb
 Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer//HFCandidateCreatorLb.cxx" target="_blank">HFCandidateCreatorLb.cxx</a>
 <div>
 
@@ -6977,7 +6977,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
 
 </div>
 
-####  o2-analysis-hf-candidate-creator-x
+#### o2-analysis-hf-candidate-creator-x
 Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer//HFCandidateCreatorX.cxx" target="_blank">HFCandidateCreatorX.cxx</a>
 <div>
 
@@ -7516,7 +7516,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
 
 </div>
 
-####  o2-analysis-hf-candidate-creator-xicc
+#### o2-analysis-hf-candidate-creator-xicc
 Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer//HFCandidateCreatorXicc.cxx" target="_blank">HFCandidateCreatorXicc.cxx</a>
 <div>
 
@@ -7992,7 +7992,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
 
 </div>
 
-####  o2-analysis-hf-chic-tojpsigamma-candidate-selector
+#### o2-analysis-hf-chic-tojpsigamma-candidate-selector
 Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer//HFChicToJpsiGammaCandidateSelector.cxx" target="_blank">HFChicToJpsiGammaCandidateSelector.cxx</a>
 <div>
 
@@ -8031,7 +8031,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
 
 </div>
 
-####  o2-analysis-hf-d0-candidate-selector
+#### o2-analysis-hf-d0-candidate-selector
 Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer//HFD0CandidateSelector.cxx" target="_blank">HFD0CandidateSelector.cxx</a>
 <div>
 
@@ -8098,7 +8098,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
 
 </div>
 
-####  o2-analysis-hf-d0-candidate-selector-alice3-barrel
+#### o2-analysis-hf-d0-candidate-selector-alice3-barrel
 Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer//HFD0CandidateSelectorALICE3Barrel.cxx" target="_blank">HFD0CandidateSelectorALICE3Barrel.cxx</a>
 <div>
 
@@ -8172,7 +8172,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
 
 </div>
 
-####  o2-analysis-hf-d0-candidate-selector-alice3-forward
+#### o2-analysis-hf-d0-candidate-selector-alice3-forward
 Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer//HFD0CandidateSelectorALICE3Forward.cxx" target="_blank">HFD0CandidateSelectorALICE3Forward.cxx</a>
 <div>
 
@@ -8218,7 +8218,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
 
 </div>
 
-####  o2-analysis-hf-d0-candidate-selector-parametrized-pid
+#### o2-analysis-hf-d0-candidate-selector-parametrized-pid
 Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer//HFD0CandidateSelectorparametrizedPID.cxx" target="_blank">HFD0CandidateSelectorparametrizedPID.cxx</a>
 <div>
 
@@ -8285,7 +8285,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
 
 </div>
 
-####  o2-analysis-hf-dplus-topikpi-candidate-selector
+#### o2-analysis-hf-dplus-topikpi-candidate-selector
 Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer//HFDplusToPiKPiCandidateSelector.cxx" target="_blank">HFDplusToPiKPiCandidateSelector.cxx</a>
 <div>
 
@@ -8317,7 +8317,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
 
 </div>
 
-####  o2-analysis-hf-ds-tokkpi-candidate-selector
+#### o2-analysis-hf-ds-tokkpi-candidate-selector
 Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer//HFDsToKKPiCandidateSelector.cxx" target="_blank">HFDsToKKPiCandidateSelector.cxx</a>
 <div>
 
@@ -8356,7 +8356,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
 
 </div>
 
-####  o2-analysis-hf-jpsi-candidate-selector
+#### o2-analysis-hf-jpsi-candidate-selector
 Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer//HFJpsiCandidateSelector.cxx" target="_blank">HFJpsiCandidateSelector.cxx</a>
 <div>
 
@@ -8444,7 +8444,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
 
 </div>
 
-####  o2-analysis-hf-lb-tolcpi-candidate-selector
+#### o2-analysis-hf-lb-tolcpi-candidate-selector
 Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer//HFLbToLcPiCandidateSelector.cxx" target="_blank">HFLbToLcPiCandidateSelector.cxx</a>
 <div>
 
@@ -8476,7 +8476,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
 
 </div>
 
-####  o2-analysis-hf-lc-candidate-selector
+#### o2-analysis-hf-lc-candidate-selector
 Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer//HFLcCandidateSelector.cxx" target="_blank">HFLcCandidateSelector.cxx</a>
 <div>
 
@@ -8515,7 +8515,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
 
 </div>
 
-####  o2-analysis-hf-lc-candidate-selector-alice3
+#### o2-analysis-hf-lc-candidate-selector-alice3
 Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer//HFLcCandidateSelectorALICE3.cxx" target="_blank">HFLcCandidateSelectorALICE3.cxx</a>
 <div>
 
@@ -8596,7 +8596,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
 
 </div>
 
-####  o2-analysis-hf-lc-candidate-selector-parametrized-pid
+#### o2-analysis-hf-lc-candidate-selector-parametrized-pid
 Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer//HFLcCandidateSelectorparametrizedPID.cxx" target="_blank">HFLcCandidateSelectorparametrizedPID.cxx</a>
 <div>
 
@@ -8663,7 +8663,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
 
 </div>
 
-####  o2-analysis-hf-lc-tok0sp-candidate-selector
+#### o2-analysis-hf-lc-tok0sp-candidate-selector
 Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer//HFLcK0sPCandidateSelector.cxx" target="_blank">HFLcK0sPCandidateSelector.cxx</a>
 <div>
 
@@ -8695,7 +8695,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
 
 </div>
 
-####  o2-analysis-hf-pvrefit-skim-converted
+#### o2-analysis-hf-pvrefit-skim-converted
 Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer//HFPvRefitSkimConverted.cxx" target="_blank">HFPvRefitSkimConverted.cxx</a>
 <div>
 
@@ -8865,7 +8865,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
 
 </div>
 
-####  o2-analysis-hf-track-index-skims-creator
+#### o2-analysis-hf-track-index-skims-creator
 Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer//HFTrackIndexSkimsCreator.cxx" target="_blank">HFTrackIndexSkimsCreator.cxx</a>
 <div>
 
@@ -9447,7 +9447,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
 
 </div>
 
-####  o2-analysis-hf-tree-creator-bplus-tod0pi
+#### o2-analysis-hf-tree-creator-bplus-tod0pi
 Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer//HFTreeCreatorBplusToD0Pi.cxx" target="_blank">HFTreeCreatorBplusToD0Pi.cxx</a>
 <div>
 
@@ -9911,7 +9911,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <td>I</td>
         <td>bcId</td>
         <td>int32</td>
-        <td>Most probably BC to where this collision has occured</td>
+        <td>Most probably BC to where this collision has occurred</td>
       </tr>
       <tr>
         <td>o2::aod::&zwnj;collision::NumContrib</td>
@@ -9979,7 +9979,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <td>I</td>
         <td>bcId</td>
         <td>int32</td>
-        <td>Most probably BC to where this collision has occured</td>
+        <td>Most probably BC to where this collision has occurred</td>
       </tr>
       <tr>
         <td>o2::aod::full::Pt</td>
@@ -10021,7 +10021,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
 
 </div>
 
-####  o2-analysis-hf-tree-creator-chic-tojpsigamma
+#### o2-analysis-hf-tree-creator-chic-tojpsigamma
 Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer//HFTreeCreatorChicToJpsiGamma.cxx" target="_blank">HFTreeCreatorChicToJpsiGamma.cxx</a>
 <div>
 
@@ -10046,7 +10046,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <td>I</td>
         <td>bcId</td>
         <td>int32</td>
-        <td>Most probably BC to where this collision has occured</td>
+        <td>Most probably BC to where this collision has occurred</td>
       </tr>
       <tr>
         <td>o2::aod::&zwnj;collision::NumContrib</td>
@@ -10268,7 +10268,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <td>I</td>
         <td>bcId</td>
         <td>int32</td>
-        <td>Most probably BC to where this collision has occured</td>
+        <td>Most probably BC to where this collision has occurred</td>
       </tr>
       <tr>
         <td>o2::aod::&zwnj;collision::NumContrib</td>
@@ -10336,7 +10336,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <td>I</td>
         <td>bcId</td>
         <td>int32</td>
-        <td>Most probably BC to where this collision has occured</td>
+        <td>Most probably BC to where this collision has occurred</td>
       </tr>
       <tr>
         <td>o2::aod::full::Pt</td>
@@ -10385,7 +10385,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
 
 </div>
 
-####  o2-analysis-hf-tree-creator-d0-tokpi
+#### o2-analysis-hf-tree-creator-d0-tokpi
 Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer//HFTreeCreatorD0ToKPi.cxx" target="_blank">HFTreeCreatorD0ToKPi.cxx</a>
 <div>
 
@@ -10410,7 +10410,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <td>I</td>
         <td>bcId</td>
         <td>int32</td>
-        <td>Most probably BC to where this collision has occured</td>
+        <td>Most probably BC to where this collision has occurred</td>
       </tr>
       <tr>
         <td>o2::aod::&zwnj;collision::NumContrib</td>
@@ -10807,7 +10807,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <td>I</td>
         <td>bcId</td>
         <td>int32</td>
-        <td>Most probably BC to where this collision has occured</td>
+        <td>Most probably BC to where this collision has occurred</td>
       </tr>
       <tr>
         <td>o2::aod::&zwnj;collision::NumContrib</td>
@@ -10875,7 +10875,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <td>I</td>
         <td>bcId</td>
         <td>int32</td>
-        <td>Most probably BC to where this collision has occured</td>
+        <td>Most probably BC to where this collision has occurred</td>
       </tr>
       <tr>
         <td>o2::aod::full::Pt</td>
@@ -10917,7 +10917,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
 
 </div>
 
-####  o2-analysis-hf-tree-creator-lb-tolcpi
+#### o2-analysis-hf-tree-creator-lb-tolcpi
 Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer//HFTreeCreatorLbToLcPi.cxx" target="_blank">HFTreeCreatorLbToLcPi.cxx</a>
 <div>
 
@@ -11397,7 +11397,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
 
 </div>
 
-####  o2-analysis-hf-tree-creator-lc-topkpi
+#### o2-analysis-hf-tree-creator-lc-topkpi
 Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer//HFTreeCreatorLcToPKPi.cxx" target="_blank">HFTreeCreatorLcToPKPi.cxx</a>
 <div>
 
@@ -11422,7 +11422,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <td>I</td>
         <td>bcId</td>
         <td>int32</td>
-        <td>Most probably BC to where this collision has occured</td>
+        <td>Most probably BC to where this collision has occurred</td>
       </tr>
       <tr>
         <td>o2::aod::&zwnj;collision::NumContrib</td>
@@ -11938,7 +11938,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <td>I</td>
         <td>bcId</td>
         <td>int32</td>
-        <td>Most probably BC to where this collision has occured</td>
+        <td>Most probably BC to where this collision has occurred</td>
       </tr>
       <tr>
         <td>o2::aod::&zwnj;collision::NumContrib</td>
@@ -12006,7 +12006,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <td>I</td>
         <td>bcId</td>
         <td>int32</td>
-        <td>Most probably BC to where this collision has occured</td>
+        <td>Most probably BC to where this collision has occurred</td>
       </tr>
       <tr>
         <td>o2::aod::full::Pt</td>
@@ -12048,7 +12048,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
 
 </div>
 
-####  o2-analysis-hf-tree-creator-x-tojpsipipi
+#### o2-analysis-hf-tree-creator-x-tojpsipipi
 Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer//HFTreeCreatorXToJpsiPiPi.cxx" target="_blank">HFTreeCreatorXToJpsiPiPi.cxx</a>
 <div>
 
@@ -12073,7 +12073,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <td>I</td>
         <td>bcId</td>
         <td>int32</td>
-        <td>Most probably BC to where this collision has occured</td>
+        <td>Most probably BC to where this collision has occurred</td>
       </tr>
       <tr>
         <td>o2::aod::&zwnj;collision::NumContrib</td>
@@ -12379,7 +12379,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <td>I</td>
         <td>bcId</td>
         <td>int32</td>
-        <td>Most probably BC to where this collision has occured</td>
+        <td>Most probably BC to where this collision has occurred</td>
       </tr>
       <tr>
         <td>o2::aod::&zwnj;collision::NumContrib</td>
@@ -12447,7 +12447,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <td>I</td>
         <td>bcId</td>
         <td>int32</td>
-        <td>Most probably BC to where this collision has occured</td>
+        <td>Most probably BC to where this collision has occurred</td>
       </tr>
       <tr>
         <td>o2::aod::full::Pt</td>
@@ -12489,7 +12489,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
 
 </div>
 
-####  o2-analysis-hf-tree-creator-xicc-topkpipi
+#### o2-analysis-hf-tree-creator-xicc-topkpipi
 Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer//HFTreeCreatorXiccToPKPiPi.cxx" target="_blank">HFTreeCreatorXiccToPKPiPi.cxx</a>
 <div>
 
@@ -12890,7 +12890,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <td>I</td>
         <td>bcId</td>
         <td>int32</td>
-        <td>Most probably BC to where this collision has occured</td>
+        <td>Most probably BC to where this collision has occurred</td>
       </tr>
       <tr>
         <td>o2::aod::&zwnj;collision::NumContrib</td>
@@ -12958,7 +12958,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <td>I</td>
         <td>bcId</td>
         <td>int32</td>
-        <td>Most probably BC to where this collision has occured</td>
+        <td>Most probably BC to where this collision has occurred</td>
       </tr>
       <tr>
         <td>o2::aod::full::Pt</td>
@@ -13000,7 +13000,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
 
 </div>
 
-####  o2-analysis-hf-x-tojpsipipi-candidate-selector
+#### o2-analysis-hf-x-tojpsipipi-candidate-selector
 Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer//HFXToJpsiPiPiCandidateSelector.cxx" target="_blank">HFXToJpsiPiPiCandidateSelector.cxx</a>
 <div>
 
@@ -13039,7 +13039,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
 
 </div>
 
-####  o2-analysis-hf-xic-topkpi-candidate-selector
+#### o2-analysis-hf-xic-topkpi-candidate-selector
 Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer//HFXicToPKPiCandidateSelector.cxx" target="_blank">HFXicToPKPiCandidateSelector.cxx</a>
 <div>
 
@@ -13078,7 +13078,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
 
 </div>
 
-####  o2-analysis-hf-xicc-topkpipi-candidate-selector
+#### o2-analysis-hf-xicc-topkpipi-candidate-selector
 Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer//HFXiccToPKPiPiCandidateSelector.cxx" target="_blank">HFXiccToPKPiPiCandidateSelector.cxx</a>
 <div>
 
@@ -13112,7 +13112,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
 
 ## PWG-JE
 
-####  o2-analysis-je-emcal-correction-task
+#### o2-analysis-je-emcal-correction-task
 Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGJE/TableProducer//emcalCorrectionTask.cxx" target="_blank">emcalCorrectionTask.cxx</a>
 <div>
 
@@ -13511,7 +13511,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGJE
 
 </div>
 
-####  o2-analysis-je-jet-finder
+#### o2-analysis-je-jet-finder
 Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGJE/TableProducer//jetfinder.cxx" target="_blank">jetfinder.cxx</a>
 <div>
 
@@ -14713,7 +14713,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGJE
 
 </div>
 
-####  o2-analysis-je-jet-finder-hf
+#### o2-analysis-je-jet-finder-hf
 Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGJE/TableProducer//jetfinderhf.cxx" target="_blank">jetfinderhf.cxx</a>
 <div>
 
@@ -15241,7 +15241,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGJE
 
 </div>
 
-####  o2-analysis-je-jet-matching
+#### o2-analysis-je-jet-matching
 Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGJE/TableProducer//jetmatching.cxx" target="_blank">jetmatching.cxx</a>
 <div>
 
@@ -15399,7 +15399,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGJE
 
 </div>
 
-####  o2-analysis-je-jet-matching-hf
+#### o2-analysis-je-jet-matching-hf
 Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGJE/TableProducer//jetmatchinghf.cxx" target="_blank">jetmatchinghf.cxx</a>
 <div>
 
@@ -15457,7 +15457,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGJE
 
 </div>
 
-####  o2-analysis-je-jet-skimmer
+#### o2-analysis-je-jet-skimmer
 Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGJE/TableProducer//jetskimming.cxx" target="_blank">jetskimming.cxx</a>
 <div>
 

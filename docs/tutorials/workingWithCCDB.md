@@ -35,7 +35,7 @@ Service<o2::ccdb::BasicCCDBManager> ccdb;
 ```
 
 The BasicCCDBManager has to be initialized first. In this example this happens in the init function. With the setCreatedNotAfter() method an upper time limit for the retrieved object is set.
- 
+
 ```cpp
 void init(o2::framework::InitContext&)
 {
@@ -48,7 +48,7 @@ void init(o2::framework::InitContext&)
 }
 ```
 
-In the process function we loop over BCs and the associated Collisions. The CCDB object for a given timestamp is retrieved with the templated method 
+In the process function we loop over BCs and the associated Collisions. The CCDB object for a given timestamp is retrieved with the templated method
 getForTimeStamp<T>(path,timestamp). In this case the object qc/TOF/TOFTaskCompressed/hDiagnostic of type TH2F is accessed.
 
 

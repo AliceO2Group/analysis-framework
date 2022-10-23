@@ -3,7 +3,7 @@ sort: 3
 title: Table Combinations
 ---
 
-# Processing information from multiple tables 
+# Processing information from multiple tables
 
 
 ```goal

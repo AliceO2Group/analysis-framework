@@ -5,8 +5,8 @@ title: Machine Learning
 
 # Machine learning
 
-## Get started!
+## Get started
 
-## Contact 
+## Contact
 
 ## Code

@@ -3,8 +3,8 @@ sort: 1
 title: User Documentation
 ---
 
-## <a name="my-analyses"></a>My Analyses 
-* <a href="https://alimonitor.cern.ch/hyperloop/" target="_blank">**My Analyses**</a> is a personalized webpage which displays all the analyses where the user belongs to. 
+## <a name="my-analyses"></a>My Analyses
+* <a href="https://alimonitor.cern.ch/hyperloop/" target="_blank">**My Analyses**</a> is a personalized webpage which displays all the analyses where the user belongs to.
 * The analyses display can be expanded/collapsed and reordered with the buttons `✚/-`,`⇧` and `⇩`, or by dragging and dropping. This configuration is saved per user.
 * The user can add/remove, configure and enable/disable wagons in this page.
 * The user can add/remove datasets per analysis.
@@ -12,13 +12,13 @@ title: User Documentation
 
 ### <a name="servicewagons"></a>Service wagons
 
-The _Service wagons_ are wagons which are dependencies to other wagons. They are created by experts, and you can add it as a dependency to your wagon in [edit wagon](#editwagon). 
+The _Service wagons_ are wagons which are dependencies to other wagons. They are created by experts, and you can add it as a dependency to your wagon in [edit wagon](#editwagon).
 
 * For the users, in the _My Analyses_ page, there is a read only view of the _Service Analyses_ available on the top of the page.
 * For the experts, if you need to create _Service wagons_, you need to have an analysis with the project type _O2 Hyperloop Service Wagons (OHSW)_ which can be [created in JIRA](#joinanalysis). Once the analysis is created, you can [add a new wagon](#addwagon) inside of the analysis available in _My Analyses_.
 
 ### Adding and configuring a wagon to an analysis
-##### 1. <a name="addwagon"></a>Adding a new wagon:
+##### 1. <a name="addwagon"></a>Adding a new wagon
 Using the _My Analyses_ page, inside of the _Analysis_ you want to add the wagon to, click on `✚ Add new wagon`.
 
 <div align="center">
@@ -26,14 +26,14 @@ Using the _My Analyses_ page, inside of the _Analysis_ you want to add the wagon
 </div>
 
 There are 2 parameters required to create a new wagon:
-*  Name: The _newWagonName_ has to be unique within an _Analysis_, and it only accepts alphanumerical characters, no spaces.
-*  Work flow name: You can either select from a list of _workflow_Names_ from an existing package tag. Or create a _workflow_Name_ which belongs to a [pull request](#pullrequest).
+* Name: The _newWagonName_ has to be unique within an _Analysis_, and it only accepts alphanumerical characters, no spaces.
+* Work flow name: You can either select from a list of _workflow_Names_ from an existing package tag. Or create a _workflow_Name_ which belongs to a [pull request](#pullrequest).
 
 By clicking on `💾 Save` the wagon will be added, and you will be redirected to [_Edit **Wagon**_](#editwagon) where you can modify the wagon's configuration.
 
-##### 2. <a name="clonewagon"></a>Cloning a wagon:
+##### 2. <a name="clonewagon"></a>Cloning a wagon
 
-*  Using the _My Analyses_ page, click on the button `🧬` to clone a wagon. 
+* Using the _My Analyses_ page, click on the button `🧬` to clone a wagon.
 
 <div align="center">
 <img src="../images/cloneWagon.png" width="70%">
@@ -41,14 +41,14 @@ By clicking on `💾 Save` the wagon will be added, and you will be redirected t
 
 A list of _Analyses_ you belong to will be displayed. You have to select the _Analysis_ where you want to clone the _Wagon_ to, and name the _NewWagon_ (the wagon name has to be unique within _Analysis_). By clicking on `🧬 Clone`, a new wagon will be added with the same configuration as the _Wagon_ including subwagons and derived data.
 
-*  Using the _All Analyses_ page:
+* Using the _All Analyses_ page:
 
 You can get to the _All Analyses_ page by using the main menu, or by the link in _My Analyses_ page: `(or clone wagon from other analysis)`. In the _All Analyses_ page, a read only view of all the analyses available in the system will be displayed. Browse and click on the _Analysis_ you want to clone the wagon from, and follow the procedure mentioned above.
 
-##### <a name="editwagon"></a> 3. Edit a wagon:
+##### <a name="editwagon"></a> 3. Edit a wagon
 
-*  You can edit a wagon by clicking on the _Wagon_ name in the _My Analyses_ page. There are different tabs: Wagon settings, Configuration, Test Statistics.
-*  <a name="view-wagon">By clicking on the top-left corner, you will be redirected to a read-only view of the wagon, that can be shared with colleagues and support. The top right corner history symbol leads to the [_Wagon **History**_](#wagonhistory) page, which will display the state evolution of the wagon.
+* You can edit a wagon by clicking on the _Wagon_ name in the _My Analyses_ page. There are different tabs: Wagon settings, Configuration, Test Statistics.
+* <a name="view-wagon">By clicking on the top-left corner, you will be redirected to a read-only view of the wagon, that can be shared with colleagues and support. The top right corner history symbol leads to the [_Wagon **History**_](#wagonhistory) page, which will display the state evolution of the wagon.
 
  <div align="center">
 <img src="../images/wagonShortcuts.png" width="80%">
@@ -60,8 +60,8 @@ You can get to the _All Analyses_ page by using the main menu, or by the link in
 <img src="../images/wagonSettings.png" width="70%">
 </div>
 
-* <a name="wagonconfiguration"></a>In _Configuration_ the wagon configuration corresponding to the workflow will be available in the _Base_. The configuration is divided per _Task_, hence if you need to add a new parameter, you will need add it in the following order: task, parameter and value. 
-* The wagon configuration supports a variety of parameter types defined in task as _Configurable_ including: primitive type parameters, fixed-length arrays, variable-length arrays, matrices, labelled matrices and histogram binning. 
+* <a name="wagonconfiguration"></a>In _Configuration_ the wagon configuration corresponding to the workflow will be available in the _Base_. The configuration is divided per _Task_, hence if you need to add a new parameter, you will need add it in the following order: task, parameter and value.
+* The wagon configuration supports a variety of parameter types defined in task as _Configurable_ including: primitive type parameters, fixed-length arrays, variable-length arrays, matrices, labelled matrices and histogram binning.
 
 <div align="center">
 <img src="../images/detailedConf.png" width="70%">
@@ -74,7 +74,7 @@ You can get to the _All Analyses_ page by using the main menu, or by the link in
   * _Variable width_: Enter a comma-separated list of bin edges.
   * _Inherit from base_: This option is available for subwagons only and, if selected, the axis configuration will be the same as in the Base.
   
-* If you need to run the same workflow, but modify one (or more) of the parameter's value, you can use a subwagon instead of creating a new wagon. In order to create a subwagon, type the name of the new subwagon, the name has to be unique within the wagon, and type the value of at least one parameter in the configuration. The configuration of a subwagon will be kept the same as the _Base_ and overwrite only the parameters that you provide. 
+* If you need to run the same workflow, but modify one (or more) of the parameter's value, you can use a subwagon instead of creating a new wagon. In order to create a subwagon, type the name of the new subwagon, the name has to be unique within the wagon, and type the value of at least one parameter in the configuration. The configuration of a subwagon will be kept the same as the _Base_ and overwrite only the parameters that you provide.
 
 * The subwagons added to the wagon will be represented with an automatically assigned suffix in _AnalysisResults.root_. Here you can see an example where we have added two subwagons called _smalleta_ and _verysmalleta_.
 
@@ -104,7 +104,7 @@ You can get to the _All Analyses_ page by using the main menu, or by the link in
 <img src="../images/datasetDropdown.png" width="60%">
 </div>
 
-* By clicking on the bullets representing the metric value at any of the test runs plotted, the user will open a new tab displaying a read-only view of the wagon test output. 
+* By clicking on the bullets representing the metric value at any of the test runs plotted, the user will open a new tab displaying a read-only view of the wagon test output.
 
 <div align="center">
 <img src="../images/testStatsGraphs.png" width="70%">
@@ -117,7 +117,7 @@ You can get to the _All Analyses_ page by using the main menu, or by the link in
 </div>
 
 
-##### <a name="wagonhistory"></a> 4. Wagon History:
+##### <a name="wagonhistory"></a> 4. Wagon History
 
 * In the _Wagon History_ page, there is a summary of the wagon's state from the creation until the last update. By clicking on the _+_ symbol, one can expand the information, showing the subwagons' details and the derived data at each timestamp.
 
@@ -127,9 +127,9 @@ You can get to the _All Analyses_ page by using the main menu, or by the link in
 
 * On the right side of the page, the user can select two timestamps in order to compare the state of the wagon between the two by clicking _Compare_. This will lead to [_Compare Wagons_](#comparewagons) page. You can cancel your current selection by clicking _Unselect all_.
 
-##### <a name="compare-wagons"></a> 5. Compare wagon at different timestamps:
+##### <a name="compare-wagons"></a> 5. Compare wagon at different timestamps
 
-* In the _Compare Wagons_ view, we can analyse the state of a wagon at two different timestamps. The _Wagon settings_ tab shows the changes regarding the name, workflow and dependencies and/or the common features between the two. By clicking on one of the dependencies, a new tab will open showing the comparison between the same two timestamps for the wagon clicked. 
+* In the _Compare Wagons_ view, we can analyse the state of a wagon at two different timestamps. The _Wagon settings_ tab shows the changes regarding the name, workflow and dependencies and/or the common features between the two. By clicking on one of the dependencies, a new tab will open showing the comparison between the same two timestamps for the wagon clicked.
 
 * The Derived data tab reflects the differences concerning the derived data at the two timestamps.
 
@@ -137,9 +137,9 @@ You can get to the _All Analyses_ page by using the main menu, or by the link in
 <img src="../images/compareWagons.png" width="70%">
 </div>
 
-##### <a name="compare-arb-wagons"></a>6. Compare individual wagons:
+##### <a name="compare-arb-wagons"></a>6. Compare individual wagons
 
-* The user is able to compare a wagon with any of their individual wagons. 
+* The user is able to compare a wagon with any of their individual wagons.
 * Using the _My Analyses_ page, click on the button `🆚` to compare the wagon. A list of all your wagons will be displayed. Once you select the desired wagon, this will open the comparison view in a new tab. This has a similar structure to the different timstamps comparison.
 
 <div align="center">
@@ -151,7 +151,7 @@ You can get to the _All Analyses_ page by using the main menu, or by the link in
 The Analyses to which a user belongs to, is defined through a <a href="https://alice.its.cern.ch/jira/secure/Dashboard.jspa" target="_blank">JIRA</a> ticket.
 In the JIRA page, create an issue by clicking on the button `Create`, and fill the information with the following parameters:
 
-* In _Project_ select your PWG. 
+* In _Project_ select your PWG.
 * In _Issue Type_ select _Analysis_.
 * In _Summary_ write the name of your _Analysis_.
 * In _Components_ select your PAG.
@@ -168,20 +168,20 @@ The synchronization from JIRA to the Hyperloop train system can take up to 30 mi
 
 ### <a name="enabledatasets"></a>Enabling datasets
 
-#### 1. Using the _My Analyses_ page:
+#### 1. Using the _My Analyses_ page
 
-*  Inside of an analysis, click on the button `Datasets and Settings 📝`. 
+* Inside of an analysis, click on the button `Datasets and Settings 📝`.
 
 <div align="center">
 <img src="../images/datasetandsettings.png" width="50%">
 </div>
 
-*  There is a list of _Enabled datasets in **Analysis**_. You can disable a dataset for that analysis by clicking on the button `❌`.
-*  Inside of _Enable dataset_ you can search for an active dataset by filtering by data type, collision system, anchor and period. And add it to your analysis by clicking on the button `✚ Add to analysis`. Or you can click the button `ℹ️ All datasets` to be redirected to the [**Datasets**](#datasets) page.
+* There is a list of _Enabled datasets in **Analysis**_. You can disable a dataset for that analysis by clicking on the button `❌`.
+* Inside of _Enable dataset_ you can search for an active dataset by filtering by data type, collision system, anchor and period. And add it to your analysis by clicking on the button `✚ Add to analysis`. Or you can click the button `ℹ️ All datasets` to be redirected to the [**Datasets**](#datasets) page.
 
-#### 2. <a name="datasets"></a> Using the _Datasets_ page:
+#### 2. <a name="datasets"></a> Using the _Datasets_ page
 * The <a href="https://alimonitor.cern.ch/hyperloop/datasets" target="_blank">**Datasets**</a> page displays all the datasets available.
-*  You can browse and click on the _Dataset_ you want to add to your analysis.
+* You can browse and click on the _Dataset_ you want to add to your analysis.
 <div align="center">
 <img src="../images/enableDatasetDatasetsPage.png" width="80%">
 </div>
@@ -203,24 +203,19 @@ You can enable a wagon in the _My Analyses_ page. Inside of the _Analysis_ there
   After choosing the package tag to be used, click on the button `❌` to enable your wagon in a dataset, the icon will change from `❌` to `✅`. If you hover over `✅` you can see the information about the enabled wagon: package tag, time and username. If you need to disable a wagon in a dataset, click on the button `✅`. After enabled, the wagon will be automatically tested and you can follow the progress of the [test](#wagontest) on the button next to `✅`: `⌛️` queued,`⏳` ongoing,`🌟` done, `❗️` warning and `💣` failed.
   
   If a wagon has dependencies, there is no need to enable the dependencies as well. The wagon's dependencies will be automatically tested by the system as well.
- 
+
 ### <a name="wagon-test"></a>Wagon tests
 * The wagon test can be accessed in the _My Analyses_ page by clicking on the buttons: `⏳`,`🌟`, `❗️` or `💣`.
-* If the TEST_ID is known, it can be directly accessed using the url <a href="https://alimonitor.cern.ch/hyperloop/wagon-test/TEST_ID" target="_blank">https://alimonitor.cern.ch/hyperloop/wagon-test/TEST_ID</a>. 
+* If the TEST_ID is known, it can be directly accessed using the url <a href="<https://alimonitor.cern.ch/hyperloop/wagon-test/TEST_ID>" target="_blank">https://alimonitor.cern.ch/hyperloop/wagon-test/TEST_ID</a>.
 * Inside of a wagon test, the test configuration, results, graphs and statistics are displayed.
- 
-* <a name="testgeneral"></a> The General tab displays the summary of the wagon test, direct links to dataset and participating wagon configuration, as well as direct links to the test output and the <a href="https://johnysswlab.com/speedscope-visualize-what-your-program-is-doing-and-where-it-is-spending-time/" target="_blank">speedscope</a> profiling of the task. The test output can be accessed by clicking on the buttons: `⏳`,`🌟`, `❗️` or `💣`, or the link `(test output)`. Additionally, you can use the `(browse)` button to open the content of AnalysisResults.root in the web browser.
 
- <div align="center">
-   <img src="../images/testOutputBrowse.png" width="80%">
-</div>
- 
+* <a name="testgeneral"></a> The General tab displays the summary of the wagon test, direct links to dataset and participating wagon configuration, as well as direct links to the test output and the <a href="https://johnysswlab.com/speedscope-visualize-what-your-program-is-doing-and-where-it-is-spending-time/" target="_blank">speedscope</a> profiling of the task. The test output can be accessed by clicking on the buttons: `⏳`,`🌟`, `❗️` or `💣`, or the link `(test output)`.
 * If a wagon test has failed, one can study the failure source by clicking the test output button. This will open in a new tab the list of files that can be used to track the possible issues that led to the failure.
- 
+
 <div align="center">
    <img src="../images/debugFailedTest.png" width="70%">
 </div>
- 
+
 * You can analyse:
   * Full configuration
   * Performance metrics
@@ -229,27 +224,19 @@ You can enable a wagon in the _My Analyses_ page. Inside of the _Analysis_ there
   * Standard output
   * Test results tab
 
-* <a name="testresults"></a>The _Test_ tab displays the performance metrics and interactive graphs. This is split in three subtabs: Full Test, Per Wagon and Graphs.
- 
-* The _Full test_ tab shows the performance metrics for the full test and plots the proportional set size on a responsive graph that can be zoomed in (click and drag) and out (double click). The table on the right side of the graph summarizes the resources used, including information such as the PSS memory and private memory, as well as the expected resources.
- 
+* <a name="testresults"></a>The Test results tab shows the performance metrics per device (reader, workflows, writer), along with the expected resources. You can use the interactive graphs (per device) to zoom into the area of interest (click and drag) or zoom out (double-click).
+
 <div align="center">
    <img src="../images/wagonTestResults.png" width="70%">
 </div>
- 
-* The _Per Wagon_ tab displays the metrics per device (reader, workflows and writer), offering the same type of responsive graph for the monitoring of the PSS memory. To access / hide the graphs, click on the icon next to the device names. Additionally, you can check the number of calls to CCDB per device in the right-most column.
- 
+
+* <a name="testgraphs"></a>The Test Graphs tab, plots the available metrics for the specific wagon test. You can choose the metric of interest from the dropdown, zoom into the graph (click and drag) and zoom out (double-click).
+
 <div align="center">
-   <img src="../images/testResultsPerWagon.png" width="70%">
+   <img src="../images/testGraphs.png" width="70%"> //already there
 </div>
 
-* <a name="testgraphs"></a>The _Graphs_ tab plots the available metrics for the specific wagon test. You can choose the metric of interest from the upper-left dropdown, which will update the graph accordingly. To plot the metric data per device, select the `Per device` checkbox. If you want to plot only the highest ten graphs, that means the graphs with the highest average, then click the `Show top 10 largest` checkbox.
- 
-<div align="center">
-   <img src="../images/testGraphs.png" width="70%">
-</div>
- 
-* To zoom into the graph, click and drag over the area of interest, and release. Double click on the graph to zoom out. 
+* If you only want to see the top 10 graph with the highest average, check the Show top 10 largest box.
 
 * Whenever a wagon configuration is changed, if there are enabled wagons (including wagons that depend on it), then the test is automatically reset and a new test is launched. However, if the enabled wagon was already composed in a train, the train will run with the wagons and dataset configuration of the time at which the train was created.
 
@@ -262,7 +249,7 @@ When creating or enabling wagons, you can use a pull request instead of a packag
 
 ## <a name="all-analyses"></a>All Analyses
 
-* <a href="https://alimonitor.cern.ch/hyperloop/all-analyses" target="_blank">**All Analyses**</a> is a read only view of all analyses available in the system. <a name="view-analysis">Click on the analysis name to be redirected to a read-only view of the analysis. 
+* <a href="https://alimonitor.cern.ch/hyperloop/all-analyses" target="_blank">**All Analyses**</a> is a read only view of all analyses available in the system. <a name="view-analysis">Click on the analysis name to be redirected to a read-only view of the analysis.
 * Wagons from any analysis available in the system can be cloned `🧬` to a user's analysis.
 
 ## <a name="train-runs"></a>Train Runs
@@ -273,8 +260,8 @@ When creating or enabling wagons, you can use a pull request instead of a packag
  <div align="center">
     <img src="../images/compareTrains.png" width="70%">
  </div>
- 
-* The train run result can be accessed by clicking on the TRAIN_ID, or with the url <a href="https://alimonitor.cern.ch/hyperloop/train-run/TRAIN_ID" target="_blank">https://alimonitor.cern.ch/hyperloop/train-run/TRAIN_ID</a>.
+
+* The train run result can be accessed by clicking on the TRAIN_ID, or with the url <a href="<https://alimonitor.cern.ch/hyperloop/train-run/TRAIN_ID>" target="_blank">https://alimonitor.cern.ch/hyperloop/train-run/TRAIN_ID</a>.
 
 <div align="center">
    <img src="../images/trainRunsPage.png" width="70%">
@@ -282,49 +269,46 @@ When creating or enabling wagons, you can use a pull request instead of a packag
 
 ### <a name="train-run"></a>Train Run Result
 
-* The _General_ tab displays the summary of the train's progress, direct links to dataset and participating wagon configuration, as well as direct links to the test output and the <a href="https://johnysswlab.com/speedscope-visualize-what-your-program-is-doing-and-where-it-is-spending-time/" target="_blank">speedscope</a> profiling of the task. Additionally, you can use the `(browse)` button to open the content of AnalysisResults.root in the web browser.
+* The _General_ tab displays the summary of the train's progress, direct links to dataset and participating wagon configuration, as well as direct links to the test output and the <a href="https://johnysswlab.com/speedscope-visualize-what-your-program-is-doing-and-where-it-is-spending-time/" target="_blank">speedscope</a> profiling of the task.
 
 <div align="center">
    <img src="../images/trainResult.png" width="70%">
 </div>
 
-* <a name="traintestresults"></a>The _Test_ tab displays the performance metrics and interactive graphs. This is split in three subtabs: Full Test, Per Wagon and Graphs.
-* The _Full test_ tab shows the performance metrics for the full test and plots the proportional set size on a responsive graph that can be zoomed in (click and drag) and out (double click). The table on the right side of the graph summarizes the resources used, including information such as the PSS memory and private memory, as well as the expected resources.
+* <a name="traintestresults"></a>The _Test results_ tab shows the performance metrics per device (reader, workflows, writer), along with the expected resources. You can use the interactive graphs (per device) to zoom into the area of interest (click and drag) or zoom out (double-click).
 
 <div align="center">
-   <img src="../images/testResults.png" width="60%">
+   <img src="../images/testResults.png" width="70%">
 </div>
 
-* The _Per Wagon_ tab displays the metrics per device (reader, workflows and writer), offering the same type of responsive graph for the monitoring of the PSS memory. To access / hide the graphs, click on the icon next to the device names. Additionally, you can check the number of calls to CCDB per device in the right-most column.
- 
-<div align="center">
-   <img src="../images/trainTestResultsPerWagon.png" width="60%">
-</div>
- 
-* <a name="traintestgraphs"></a>In the _Graphs_ tab, you can plot the available metrics for the specific _Train run_. By hovering over the graph, the corresponding values are displayed in a dynamic window, stating the value for each participating wagon.
+* <a name="traintestgraphs"></a>In the _Test Graphs_ tab, the user can plot the available metrics for the specific _Train run_. By hovering over the graph, the corresponding values are displayed in a dynamic window, stating the value for each participating wagon.
 
   <div align="center">
-    <img src="../images/trainTestGraphs.png" width="60%">
+    <img src="../images/testGraphs.png" width="70%">
   </div>
 
-* You can choose the metric of interest from the upper-left dropdown, which will update the graph accordingly. To plot the metric data per device, select the `Per device` checkbox.
+  * The metric can be selected from the upper-left dropdown, and the graph will change accordingly.
+  * The user can choose to plot the metric data per device, by checking the _Per Device_ near the dropdown.
 
-<div align="center">
- <img src="../images/testGraphsPerDevice.png" width="60%">
-</div>
+  <div align="center">
+    <img src="../images/testGraphsPerDevice.png" width="70%">
+  </div>
 
-* In order to plot the highest ten graphs, that means the graphs with the highest average, click the **Show top 10 largest** checkbox.
+  * In order to plot the highest ten graphs, that means the graphs with the highest average, the user can click the **Show top 10 largest** checkbox.
+  
+  <div align="center">
+    <img src="../images/graphLargest.png" width="70%">
+  </div>
+  
+  * The user can zoom into the graph by clicking and dragging the mouse along the area of interest. For zooming out, the user must double-click on the graph.
 
-<div align="center">
-  <img src="../images/graphLargest.png" width="60%">
-</div>
-
-* To zoom into the graph, click and drag over the area of interest, and release. Double click on the graph to zoom out.
-
-<div align="center">
-  <img src="../images/graphZoom.png" width="45%">
-  <img src="../images/graphZoom2.png" width="45%">
-</div>
+  <div align="center">
+    <img src="../images/graphZoom.png" width="70%">
+  </div>
+  
+   <div align="center">
+    <img src="../images/graphZoom2.png" width="70%">
+  </div>
 
 * <a name="trainsubmittedjobs"></a>In _Submitted jobs_, you can see the summary of the master jobs, along with links to the **IO Statistics** and **Stack trace**.
 
@@ -342,7 +326,7 @@ When creating or enabling wagons, you can use a pull request instead of a packag
   
 <div align="center">
    <img src="../images/submittedJobs3.png" width="90%">
-</div> 
+</div>
 
 * This information is collected when the masterjobs have finished from all ERROR_V jobs. Some information is already available while the train is running but make sure to check again when the train is in a final state. Common errors are grouped and counted. This allows you to investigate failures and debug them using the provided stack trace.
 
@@ -350,7 +334,7 @@ When creating or enabling wagons, you can use a pull request instead of a packag
 
 <div align="center">
    <img src="../images/gridStats.png" width="70%">
-</div> 
+</div>
 
 * <a name="trainderived"></a>If the train is run as a derived data production and there are activated tables, the Derived data tab will be showed. This displays the tables which are produced by the task and saved to the output.
 
@@ -362,21 +346,21 @@ When creating or enabling wagons, you can use a pull request instead of a packag
 
 <div align="center">
    <img src="../images/mergedOutput.png" width="80%">
-</div> 
+</div>
 
 * When the final merge is started manually by the operator, some of the runs may not be merged. You can copy the list of merged runs or the total list of runs by clicking on the (red) number.
 * Here you can also track the submission process, and debug issues that may have taken place.
 
 <div align="center">
    <img src="../images/mergedOutput1.png" width="90%">
-</div> 
+</div>
 
 * <a name="longTrain"></a>The _Request long train_ tab allows users to request a long train after the train ran on a linked dataset. Linked datasets are subsets of a big dataset (_set up in the Dataset settings_). First, a train run needs to be **Done on a smaller linked dataset** before being run on a bigger dataset.
-* Any user who is part of the analysis can request a long train. Approval from the participating analyses PWGs conveners is required in order to submit a long train. 
+* Any user who is part of the analysis can request a long train. Approval from the participating analyses PWGs conveners is required in order to submit a long train.
 
 <div align="center">
    <img src="../images/requestLongTrain.png" width="70%">
-</div> 
+</div>
 
 * Once the long train is approved:
   * If Automatic Submission is enabled and the train test finished without memory warning and within the CPU time limit, the train is submitted
@@ -384,7 +368,7 @@ When creating or enabling wagons, you can use a pull request instead of a packag
   
    <div align="center">
     <img src="../images/longTrainApproved.png" width="80%">
-   </div> 
+   </div>
   
   
   

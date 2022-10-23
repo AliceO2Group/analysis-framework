@@ -5,9 +5,9 @@ title: PWG-JE
 
 # Jet (JE) analysis framework
 
-## Get started!
+## Get started
 
-## Contact 
+## Contact
 
 ## Code
 

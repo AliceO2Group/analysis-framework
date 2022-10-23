@@ -52,4 +52,4 @@ By default, they assume:
 - `T1 = int`,
 - `GroupingPolicy` = CombinationsBlockStrictlyUpperSameIndexPolicy`.
 
-You can see various usage examples in the [event mixing tutorial](../tutorials/eventMixing.md). 
+You can see various usage examples in the [event mixing tutorial](../tutorials/eventMixing.md).

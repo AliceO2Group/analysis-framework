@@ -3,7 +3,7 @@ sort: 6
 title: Creating Tables
 ---
 
-# Declaration and production of tables 
+# Declaration and production of tables
 
 
 ```goal
@@ -35,7 +35,7 @@ All methods have a `Name` and `Description` argument. The argument Name is used 
       </b>
       <div>
         Declares a table of type `Name` with the columns specified in the argument list. The columns are specified as a comma separated list of column types. Only columns, dynamic columns, and index columns are accepted.
-        
+
         <table style="width:100%">
           <tr>
             <th> Method </th>
@@ -127,7 +127,7 @@ Tables are basically collections of columns. The O2 framework provides the metho
 `Name` and `Getter` are the common arguments of all methods. Name is used to
 define the type of the column which is `namespace::Name` where namespace is the
 namespace the column is declared in. Getter is the method which allows to access
-a column (tab.pt() e.g. gives access to an element of the column which was declared with a Getter value of pt). 
+a column (tab.pt() e.g. gives access to an element of the column which was declared with a Getter value of pt).
 
 <div>
 
@@ -139,7 +139,7 @@ a column (tab.pt() e.g. gives access to an element of the column which was decla
       </b>
       <div>
         Declares a column of type `Name`. The elements are of type `Type`. The column is given the label "f`Label`" which is used within the framework to identify the column.
-        
+
         <table style="width:100%">
           <tr>
             <th> Method </th>
@@ -176,8 +176,8 @@ a column (tab.pt() e.g. gives access to an element of the column which was decla
       DECLARE_SOA_EXPRESSION_COLUMN_FULL (Name, Getter, Type, char* Label, Expression);
       </b>
       <div>
-        Same as DECLARE_SOA_COLUMN_FULL but here the column element values are computed according to the expression `Expression`. Expression columns can be used to extend an exising table (see tutorial <a href="extendedTables.html">Extending Tables</a>).
-        
+        Same as DECLARE_SOA_COLUMN_FULL but here the column element values are computed according to the expression `Expression`. Expression columns can be used to extend an existing table (see tutorial <a href="extendedTables.html">Extending Tables</a>).
+
         <table style="width:100%">
           <tr>
             <th> Method </th>
@@ -220,7 +220,7 @@ a column (tab.pt() e.g. gives access to an element of the column which was decla
       </b>
       <div>
         Declares the index column `Name`Id to the existing table `Table`s (binding table). The column elements are of type `Type`. `Suffix` can be used to distinguish several index columns to the same table. The column label which is used within the framework to identify the column is set to fIndex`Table``Suffix`. If `Suffix` is not empty it must start with an underscore! `Table` must have a o2::soa::Index column!
-        
+
         <table style="width:100%">
           <tr>
             <th> Method </th>
@@ -282,8 +282,8 @@ a column (tab.pt() e.g. gives access to an element of the column which was decla
       DECLARE_SOA_DYNAMIC_COLUMN (Name, Getter, ...);
       </b>
       <div>
-        Declares a column of type `Name`. The column elements are dynamically computed with the lambda provided as third argument to the declaration. This also determines the type of the elements. Dynamic columns can be attached to exising tables (see tutorial <a href="extendedTables.html">Extending Tables</a>).
-        
+        Declares a column of type `Name`. The column elements are dynamically computed with the lambda provided as third argument to the declaration. This also determines the type of the elements. Dynamic columns can be attached to existing tables (see tutorial <a href="extendedTables.html">Extending Tables</a>).
+
         <table style="width:100%">
           <tr>
             <th> Method </th>
@@ -315,7 +315,7 @@ This tutorial demonstrates the creation and filling of normal tables. The usage 
 <a name="produceetaphi"></a>
 ### ProduceEtaPhi
 
-In order to avoid naming conflicts between different tasks it is advisable to declare new columns in subspaces of the namespace o2::aod and the new tables in namespace o2::aod. 
+In order to avoid naming conflicts between different tasks it is advisable to declare new columns in subspaces of the namespace o2::aod and the new tables in namespace o2::aod.
 
 ```cpp
 // declare columns in a sub-namespace of o2::aod

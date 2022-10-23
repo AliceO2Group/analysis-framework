@@ -47,7 +47,7 @@ columns available they are joined with the related tables. Hence
 soa::Join<aod::Tracks, aod::McTrackLabels> const& tracks
 ```
 
-is needed to relate the reconstructed Tracks information with the corresponding MC truth McParticles information and 
+is needed to relate the reconstructed Tracks information with the corresponding MC truth McParticles information and
 
 ```cpp
 soa::Join<aod::Collisions, aod::McCollisionLabels>

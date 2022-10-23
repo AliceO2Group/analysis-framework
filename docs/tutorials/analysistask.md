@@ -59,7 +59,7 @@ A task is a basic block of an analysis program. It it a struct and has an init a
 
 Several tasks can be put together to form a workflow (using defineDataProcessing()). Workflows on the other hand can be chained - the output of one workflow is piped to the input of the other workflow.
 
-This is discussed in more detail in the [Data Processing ](../framework/framework.md) section of these documentation pages.
+This is discussed in more detail in the [Data Processing](../framework/framework.md) section of these documentation pages.
 
 So this is kind of a workflow skeleton
 

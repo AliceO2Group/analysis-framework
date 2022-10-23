@@ -39,7 +39,7 @@ struct MyTask : AnalysisTask {
 
 This has the advantage that you might be able to benefit from vectorization / parallelization.
 
-> **Implementation notes**: as mentioned before, the arguments of the process method are inspected using template argument matching. This way the system knows at compile time what data types are requested by a given `process` method and can create the relevant DPL data descriptions. 
+> **Implementation notes**: as mentioned before, the arguments of the process method are inspected using template argument matching. This way the system knows at compile time what data types are requested by a given `process` method and can create the relevant DPL data descriptions.
 >
 > The distinction between `Tracks` and `Track` above is simply that one refers to the whole collection, while the second is an alias to `Tracks::iterator`.  Notice that we assume that each collection is of type `o2::soa::Table` which carries meta data about the dataOrigin and dataDescription to be used by DPL to subscribe to the associated data stream.
 
@@ -65,7 +65,7 @@ void process(o2::aod::Collection const& collision, o2::aod::Track const& track) 
 
 Also in this case the advantage is that your code might be up for parallelization and vectorization.
 
-Notice that you are not limited to two different collections, but you could specify more. E.g.: 
+Notice that you are not limited to two different collections, but you could specify more. E.g.:
 
 ```cpp
 void process(o2::aod::Collection const& collision, o2::aod::V0 const& v0, o2::aod::Tracks const& tracks) {
