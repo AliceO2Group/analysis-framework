@@ -5,7 +5,7 @@ title: Operator Documentation
 
 ## <a name="dashboard"></a>Dashboard
 
-* The <a href="https://alimonitor.cern.ch/hyperloop/dashboard" target="_blank">**Dashboard**</a> displays the current state of the system by showing a number of status parameters related to wagons, trains and grid jobs. Additionally, the user can see the summary of the last week: average completion time, number of finished trains and wagon tests.
+* The [**Dashboard**](https://alimonitor.cern.ch/hyperloop/dashboard) displays the current state of the system by showing a number of status parameters related to wagons, trains and grid jobs. Additionally, the user can see the summary of the last week: average completion time, number of finished trains and wagon tests.
 * Below, a display of the grid jobs state during the previous week is displayed, for every site.
 
 <div align="center">
@@ -21,7 +21,7 @@ title: Operator Documentation
 * By clicking the number of wagons waiting to be included in a train, the user can directly open the [_Train Submission_](#trainsubmission). Similarly, a link to the [_Train Runs_](#train-runs) is available by clicking the number of trains to be submitted to the grid, the number of running tests, or the number of finished trains.
 
 ## <a name="train-submission"></a>Train Submission
-* For a user, the <a href="https://alimonitor.cern.ch/hyperloop/train-submission" target="_blank">**Train Submission**</a> page displays a read view only of datasets which have enabled wagons.
+* For a user, the [**Train Submission**](https://alimonitor.cern.ch/hyperloop/train-submission) page displays a read view only of datasets which have enabled wagons.
 * For a train operator, the  _Train Submission_ page displays only datasets which have enabled wagons, and allows train composition, as well as submitting, modifying and killing a train.
 ### <a name="trainsubmission"></a>Train Composition
 * Trains are composed per dataset. Only wagons which have a test status of success `🌟` or warning `❗️` can be composed in a train.
@@ -55,7 +55,7 @@ title: Operator Documentation
 </div>
 
 ## <a name="train-runs"></a>Train Runs
-* For a user, the <a href="https://alimonitor.cern.ch/hyperloop/train-runs" target="_blank">**Train Runs**</a> page displays a read view only of all train runs available in the system.
+* For a user, the [**Train Runs**](https://alimonitor.cern.ch/hyperloop/train-runs) page displays a read view only of all train runs available in the system.
 * For a train operator, the _Train Runs_ page displays all trains available in the system, and allows submitting, modifying and killing a train.
 * <a name="train-comparison"></a>To compare two trains, select them in the Compare column and click Compare. This will open a new tab displaying the differences between the two trains.
 
@@ -63,7 +63,7 @@ title: Operator Documentation
     <img src="../images/compareTrains.png" width="70%">
  </div>
 
-* The train run detail can be accessed by clicking on the TRAIN_ID, or with the url <a href="<https://alimonitor.cern.ch/hyperloop/train-run/TRAIN_ID>" target="_blank">https://alimonitor.cern.ch/hyperloop/train-run/TRAIN_ID</a>.
+* The train run detail can be accessed by clicking on the TRAIN_ID, or with the url <https://alimonitor.cern.ch/hyperloop/train-run/TRAIN_ID>.
 
 <div align="center">
    <img src="../images/trainRunsPage.png" width="70%">
@@ -106,17 +106,17 @@ title: Operator Documentation
   </div>
 
   * In order to plot the highest ten graphs, that means the graphs with the highest average, click the **Show top 10 largest** checkbox.
-  
+
   <div align="center">
     <img src="../images/graphLargest.png" width="70%">
   </div>
-  
+
   * You can zoom into the graph by clicking and dragging the mouse along the area of interest. For zooming out, double-click on the graph.
 
   <div align="center">
     <img src="../images/graphZoom.png" width="70%">
   </div>
-  
+
    <div align="center">
     <img src="../images/graphZoom2.png" width="70%">
   </div>
@@ -134,7 +134,7 @@ title: Operator Documentation
 </div>
 
 * Click the **Stack trace** button to be redirected to the stack trace information in MonALISA. Here you can see a summary of failures of your jobs.
-  
+
 <div align="center">
    <img src="../images/submittedJobs3.png" width="90%">
 </div>
@@ -183,12 +183,12 @@ title: Operator Documentation
 * Once the long train is approved:
   * If Automatic Submission is enabled and the train test finished without memory warning and within the CPU time limit, the train is submitted
   * Otherwise the Submit button is enabled and the operator can submit the train
-  
+
    <div align="center">
     <img src="../images/longTrainApproved.png" width="80%">
    </div>
-  
-  
+
+
 ## <a name="trains-with-issues"></a>Trains with issues
 
 * This page displays the list of train runs that are in state _submitted_ but could not be merged due to specific problems:
@@ -201,13 +201,13 @@ title: Operator Documentation
   <div align="center">
     <img src="../images/trainsWithIssues.png" width="70%">
   </div>
-  
-  
+
+
 * The operator must analyse this cases and decide upon resubmitting some of the jobs, launching the final merging submission where the errors are not significant, or killing the train when there are too many errors.
-  
+
 ## <a name="datasets"></a>Datasets
 
-* The <a href="https://alimonitor.cern.ch/hyperloop/datasets" target="_blank">**Datasets**</a> page displays all the datasets available. The operator can add, remove, activate or deactivate a dataset.
+* The [**Datasets**](https://alimonitor.cern.ch/hyperloop/datasets) page displays all the datasets available. The operator can add, remove, activate or deactivate a dataset.
 
 * The user can browse and click on the _Dataset_ they want to add to their analysis.
 <div align="center">
@@ -251,13 +251,13 @@ title: Operator Documentation
   <div align="center">
     <img src="../images/automaticComposition3.png" width="80%">
   </div>
-  
+
 * Choose the days and times at which the trains should be composed.
 
   <div align="center">
     <img src="../images/automaticComposition2.png" width="80%">
   </div>
-  
+
 ### <a name="datasetproduction"></a>Deciding on data to be processed depends on the dataset type
 
 * For RUN 2 data, the operator can add or remove a [**RUN 2 conversion train run**](https://alimonitor.cern.ch/trains/train.jsp?train_id=132#runs).
@@ -265,9 +265,9 @@ title: Operator Documentation
   <div align="center">
     <img src="../images/addTrainRun.png" width="70%">
   </div>
-  
+
 * For RUN 3 data and MC, the operator can add or remove a production. In order to create a new production, click on the _+Production_ button. After choosing the collision type, anchor and MC Tag, select the runlist defined by the DPG and click _+Add_. If no runlist is available, contact the DPG specialists for creating one.
-  
+
   <div align="center">
     <img src="../images/addDatasetProduction.png" width="60%">
   </div>
@@ -277,7 +277,7 @@ title: Operator Documentation
  <div align="center">
     <img src="../images/datasetDerivedData.png" width="60%">
   </div>
-  
+
 * Within the dataset production you can update the list of runs to be excluded.
 
   <div align="center">
@@ -345,21 +345,20 @@ title: Operator Documentation
 
 ## <a name="runlists"></a>DPG Runlists
 
-* The <a href="https://alimonitor.cern.ch/hyperloop/runlists" target="_blank">**DPG Runlists**</a> page is dedicated to the DPG experts and displays all the DPG runlists created for the datasets. The DPG expert can add, edit or remove a runlist.
+* The [**DPG Runlists**](https://alimonitor.cern.ch/hyperloop/runlists) page is dedicated to the DPG experts and displays all the DPG runlists created for the datasets. The DPG expert can add, edit or remove a runlist.
 
  <div align="center">
     <img src="../images/DPGrunlists.png" width="100%">
   </div>
-  
+
 * Clicking on the the `📝` button will lead to the edit view, where the DPG expert can change the list of runs.
 
  <div align="center">
     <img src="../images/editRunlist.png" width="70%">
   </div>
-  
+
 * DPG experts can create a new runlist by clicking the **+Add runlist** button. In order to create the list of runs, the correct data type, anchor, tag and production must be selected.
 
  <div align="center">
     <img src="../images/addRunlist.png" width="70%">
   </div>
-

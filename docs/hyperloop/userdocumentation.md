@@ -4,7 +4,7 @@ title: User Documentation
 ---
 
 ## <a name="my-analyses"></a>My Analyses
-* <a href="https://alimonitor.cern.ch/hyperloop/" target="_blank">**My Analyses**</a> is a personalized webpage which displays all the analyses where the user belongs to.
+* [**My Analyses**](https://alimonitor.cern.ch/hyperloop/) is a personalized webpage which displays all the analyses where the user belongs to.
 * The analyses display can be expanded/collapsed and reordered with the buttons `✚/-`,`⇧` and `⇩`, or by dragging and dropping. This configuration is saved per user.
 * The user can add/remove, configure and enable/disable wagons in this page.
 * The user can add/remove datasets per analysis.
@@ -50,7 +50,7 @@ You can get to the _All Analyses_ page by using the main menu, or by the link in
 * You can edit a wagon by clicking on the _Wagon_ name in the _My Analyses_ page. There are different tabs: Wagon settings, Configuration, Test Statistics.
 * <a name="view-wagon">By clicking on the top-left corner, you will be redirected to a read-only view of the wagon, that can be shared with colleagues and support. The top right corner history symbol leads to the [_Wagon **History**_](#wagonhistory) page, which will display the state evolution of the wagon.
 
- <div align="center">
+<div align="center">
 <img src="../images/wagonShortcuts.png" width="80%">
 </div>
 
@@ -73,7 +73,7 @@ You can get to the _All Analyses_ page by using the main menu, or by the link in
   * _Fixed width_: Enter the number of bins, minimal and maximal value.
   * _Variable width_: Enter a comma-separated list of bin edges.
   * _Inherit from base_: This option is available for subwagons only and, if selected, the axis configuration will be the same as in the Base.
-  
+
 * If you need to run the same workflow, but modify one (or more) of the parameter's value, you can use a subwagon instead of creating a new wagon. In order to create a subwagon, type the name of the new subwagon, the name has to be unique within the wagon, and type the value of at least one parameter in the configuration. The configuration of a subwagon will be kept the same as the _Base_ and overwrite only the parameters that you provide.
 
 * The subwagons added to the wagon will be represented with an automatically assigned suffix in _AnalysisResults.root_. Here you can see an example where we have added two subwagons called _smalleta_ and _verysmalleta_.
@@ -148,7 +148,7 @@ You can get to the _All Analyses_ page by using the main menu, or by the link in
 
 ## <a name="joinanalysis"></a> Creating or joining an analysis
 
-The Analyses to which a user belongs to, is defined through a <a href="https://alice.its.cern.ch/jira/secure/Dashboard.jspa" target="_blank">JIRA</a> ticket.
+The Analyses to which a user belongs to, is defined through a [JIRA](https://alice.its.cern.ch/jira/secure/Dashboard.jspa) ticket.
 In the JIRA page, create an issue by clicking on the button `Create`, and fill the information with the following parameters:
 
 * In _Project_ select your PWG.
@@ -180,7 +180,7 @@ The synchronization from JIRA to the Hyperloop train system can take up to 30 mi
 * Inside of _Enable dataset_ you can search for an active dataset by filtering by data type, collision system, anchor and period. And add it to your analysis by clicking on the button `✚ Add to analysis`. Or you can click the button `ℹ️ All datasets` to be redirected to the [**Datasets**](#datasets) page.
 
 #### 2. <a name="datasets"></a> Using the _Datasets_ page
-* The <a href="https://alimonitor.cern.ch/hyperloop/datasets" target="_blank">**Datasets**</a> page displays all the datasets available.
+* The [**Datasets**](https://alimonitor.cern.ch/hyperloop/datasets) page displays all the datasets available.
 * You can browse and click on the _Dataset_ you want to add to your analysis.
 <div align="center">
 <img src="../images/enableDatasetDatasetsPage.png" width="80%">
@@ -195,21 +195,21 @@ You can enable a wagon in the _My Analyses_ page. Inside of the _Analysis_ there
   1. Latest package tag: You can select a package tag with the option `or newer`. This means that your wagon can be tested and composed in a train with the package tag chosen or the latest package tag available.
   2. Fixed package tag: You can select a package tag and disable the option `or newer`. This means that your wagon can be tested and composed in a train with that package tag only.
   3. Pull request: Select the option `☑️ Future tag based on pull request`. There will be a list of the latest merged/unmerger pull requests available with their corresponding description. By choosing a pull request, your wagon will be tested as soon as the pull request is merged in a package tag. Then your wagon will be composed in a train with the latest package tag available.
-  
+
  <div align="center">
 <img src="../images/enablewagon.png" width="70%">
 </div>
 
   After choosing the package tag to be used, click on the button `❌` to enable your wagon in a dataset, the icon will change from `❌` to `✅`. If you hover over `✅` you can see the information about the enabled wagon: package tag, time and username. If you need to disable a wagon in a dataset, click on the button `✅`. After enabled, the wagon will be automatically tested and you can follow the progress of the [test](#wagontest) on the button next to `✅`: `⌛️` queued,`⏳` ongoing,`🌟` done, `❗️` warning and `💣` failed.
-  
+
   If a wagon has dependencies, there is no need to enable the dependencies as well. The wagon's dependencies will be automatically tested by the system as well.
 
 ### <a name="wagon-test"></a>Wagon tests
 * The wagon test can be accessed in the _My Analyses_ page by clicking on the buttons: `⏳`,`🌟`, `❗️` or `💣`.
-* If the TEST_ID is known, it can be directly accessed using the url <a href="<https://alimonitor.cern.ch/hyperloop/wagon-test/TEST_ID>" target="_blank">https://alimonitor.cern.ch/hyperloop/wagon-test/TEST_ID</a>.
+* If the TEST_ID is known, it can be directly accessed using the url <https://alimonitor.cern.ch/hyperloop/wagon-test/TEST_ID>.
 * Inside of a wagon test, the test configuration, results, graphs and statistics are displayed.
 
-* <a name="testgeneral"></a> The General tab displays the summary of the wagon test, direct links to dataset and participating wagon configuration, as well as direct links to the test output and the <a href="https://johnysswlab.com/speedscope-visualize-what-your-program-is-doing-and-where-it-is-spending-time/" target="_blank">speedscope</a> profiling of the task. The test output can be accessed by clicking on the buttons: `⏳`,`🌟`, `❗️` or `💣`, or the link `(test output)`.
+* <a name="testgeneral"></a> The General tab displays the summary of the wagon test, direct links to dataset and participating wagon configuration, as well as direct links to the test output and the [speedscope](https://johnysswlab.com/speedscope-visualize-what-your-program-is-doing-and-where-it-is-spending-time/) profiling of the task. The test output can be accessed by clicking on the buttons: `⏳`,`🌟`, `❗️` or `💣`, or the link `(test output)`.
 * If a wagon test has failed, one can study the failure source by clicking the test output button. This will open in a new tab the list of files that can be used to track the possible issues that led to the failure.
 
 <div align="center">
@@ -249,11 +249,11 @@ When creating or enabling wagons, you can use a pull request instead of a packag
 
 ## <a name="all-analyses"></a>All Analyses
 
-* <a href="https://alimonitor.cern.ch/hyperloop/all-analyses" target="_blank">**All Analyses**</a> is a read only view of all analyses available in the system. <a name="view-analysis">Click on the analysis name to be redirected to a read-only view of the analysis.
+* [**All Analyses**](https://alimonitor.cern.ch/hyperloop/all-analyses) is a read only view of all analyses available in the system. <a name="view-analysis">Click on the analysis name to be redirected to a read-only view of the analysis.
 * Wagons from any analysis available in the system can be cloned `🧬` to a user's analysis.
 
 ## <a name="train-runs"></a>Train Runs
-* For a user, the <a href="https://alimonitor.cern.ch/hyperloop/train-runs" target="_blank">**Train Runs**</a> page displays a read view only of all train runs available in the system.
+* For a user, the [**Train Runs**](https://alimonitor.cern.ch/hyperloop/train-runs) page displays a read view only of all train runs available in the system.
 
 * <a name="train-comparison"></a>To compare two trains, select them in the Compare column and click Compare. This will open a new tab displaying the differences between the two trains.
 
@@ -261,7 +261,7 @@ When creating or enabling wagons, you can use a pull request instead of a packag
     <img src="../images/compareTrains.png" width="70%">
  </div>
 
-* The train run result can be accessed by clicking on the TRAIN_ID, or with the url <a href="<https://alimonitor.cern.ch/hyperloop/train-run/TRAIN_ID>" target="_blank">https://alimonitor.cern.ch/hyperloop/train-run/TRAIN_ID</a>.
+* The train run result can be accessed by clicking on the TRAIN_ID, or with the url <https://alimonitor.cern.ch/hyperloop/train-run/TRAIN_ID>.
 
 <div align="center">
    <img src="../images/trainRunsPage.png" width="70%">
@@ -269,7 +269,7 @@ When creating or enabling wagons, you can use a pull request instead of a packag
 
 ### <a name="train-run"></a>Train Run Result
 
-* The _General_ tab displays the summary of the train's progress, direct links to dataset and participating wagon configuration, as well as direct links to the test output and the <a href="https://johnysswlab.com/speedscope-visualize-what-your-program-is-doing-and-where-it-is-spending-time/" target="_blank">speedscope</a> profiling of the task.
+* The _General_ tab displays the summary of the train's progress, direct links to dataset and participating wagon configuration, as well as direct links to the test output and the [speedscope](https://johnysswlab.com/speedscope-visualize-what-your-program-is-doing-and-where-it-is-spending-time/) profiling of the task.
 
 <div align="center">
    <img src="../images/trainResult.png" width="70%">
@@ -295,17 +295,17 @@ When creating or enabling wagons, you can use a pull request instead of a packag
   </div>
 
   * In order to plot the highest ten graphs, that means the graphs with the highest average, the user can click the **Show top 10 largest** checkbox.
-  
+
   <div align="center">
     <img src="../images/graphLargest.png" width="70%">
   </div>
-  
+
   * The user can zoom into the graph by clicking and dragging the mouse along the area of interest. For zooming out, the user must double-click on the graph.
 
   <div align="center">
     <img src="../images/graphZoom.png" width="70%">
   </div>
-  
+
    <div align="center">
     <img src="../images/graphZoom2.png" width="70%">
   </div>
@@ -323,7 +323,7 @@ When creating or enabling wagons, you can use a pull request instead of a packag
 </div>
 
 * Click the **Stack trace** button to be redirected to the stack trace information in MonALISA. Here you can see a summary of failures of your jobs.
-  
+
 <div align="center">
    <img src="../images/submittedJobs3.png" width="90%">
 </div>
@@ -365,10 +365,7 @@ When creating or enabling wagons, you can use a pull request instead of a packag
 * Once the long train is approved:
   * If Automatic Submission is enabled and the train test finished without memory warning and within the CPU time limit, the train is submitted
   * Otherwise the Submit button is enabled and the operator can submit the train
-  
+
    <div align="center">
     <img src="../images/longTrainApproved.png" width="80%">
    </div>
-  
-  
-  
