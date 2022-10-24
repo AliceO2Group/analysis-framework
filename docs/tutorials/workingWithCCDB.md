@@ -62,7 +62,7 @@ void process(aod::BCsWithTimestamps::iterator const& bc, aod::Collisions const& 
   if (collisions.size() == 0) {
     return;
   }
-  
+
   LOGF(info, "Getting object %s for run number %i from timestamp=%llu", path.value.data(), bc.runNumber(), bc.timestamp());
   // retrieve object for given timestamp
   auto obj = ccdb->getForTimeStamp<TH2F>(path.value, bc.timestamp());

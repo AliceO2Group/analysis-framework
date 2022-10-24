@@ -79,15 +79,15 @@ An example file is shown in the highlighted field below. The relevant
 information is contained in a json object OutputDirector. The
 OutputDirector can include three different items:
 
-  1. resfile is a string and corresponds to the aod-writer-resfile command line option  
-  2. ntfmerge is an integer and corresponds to the aod-writer-ntfmerge command line option  
+  1. resfile is a string and corresponds to the aod-writer-resfile command line option
+  2. ntfmerge is an integer and corresponds to the aod-writer-ntfmerge command line option
   3. OutputDescriptors is an array of objects and corresponds to the aod-writer-keep command line option. The objects are equivalent to the DataOuputDescriptors of the aod-writer-keep option and are composed of 4 items which correspond to the 4 items of a DataOuputDescriptor.
-  
-     a. `table` is a string  
-     b. `treename` is a string  
-     c. `columns` is an array of strings  
-     d. `filename` is a string  
-  
+
+     a. `table` is a string
+     b. `treename` is a string
+     c. `columns` is an array of strings
+     d. `filename` is a string
+
 Example json file for the internal-dpl-aod-writer:
 
 ```csh
@@ -143,7 +143,7 @@ This hierarchy of the options is summarized in the following table. The columns 
 ```csh
 --aod-writer-keep AOD/UNO/0
  # save all columns of table 'UNO' to TTree O2'uno' in file AnalysisResults_tree.root
-  
+
 --aod-writer-keep AOD/UNO/0::c2/c4:unoresults
  # save columns 'c2' and 'c4' of table 'UNO' to TTree O2'uno' in file unoresults.root
 

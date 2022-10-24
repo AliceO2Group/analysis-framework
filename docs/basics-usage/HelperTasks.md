@@ -102,7 +102,7 @@ In general, one has to follow the following steps:
     ```
 
   This workflow works for Run 2 data. Special settings are required for MC and Run 3 data, see [Configurables](#configurables) section.
-  
+
   _o2-analysis-timestamp_ task [`Common/TableProducer/timestamp.cxx`](https://github.com/AliceO2Group/O2Physics/blob/master/Common/TableProducer/timestamp.cxx) is required to create per-event timestamps necessary to access relevant CCDB objects in the event selection task.
 
 ### Trigger aliases
@@ -214,7 +214,7 @@ Offline event selection decisions (e.g. sel7) are constructed based on a subsamp
     selectionBarrel[kNoBGZNC] = 1;
 ```
 
-* default checks for AA are much simpler compared to pp since hadronic pileup is at per-mile level and can be ignored in the first approximation. Default checks include beam-beam timing in V0A, V0C, ZNA and ZNC detectors and a couple of quality checks.  
+* default checks for AA are much simpler compared to pp since hadronic pileup is at per-mile level and can be ignored in the first approximation. Default checks include beam-beam timing in V0A, V0C, ZNA and ZNC detectors and a couple of quality checks.
 
 ``` c++
     selectionBarrel[kIsBBV0A] = 1;
@@ -430,7 +430,7 @@ You can include it in your task with:
 
 ``` c++
 #include "Common/DataModel/PIDResponse.h"
-... 
+...
 
 ```
 
@@ -456,7 +456,7 @@ In the process functions you can join the table to add the PID (per particle mas
 
 ### Task for PID spectra (and to fill PID tables!)
 
-O2 tasks dedicated to the filling of the PID tables are called with  
+O2 tasks dedicated to the filling of the PID tables are called with
 
 * TOF PID Table
 
@@ -673,7 +673,7 @@ In order to propagate the tracks to the collision vertex, include the task `o2-a
 This task produces the tables Tracks and TracksCov (in order to get the latter, please enable `processCovariance` through the json configuration).
 
 ```note
-This task also produces the `TrackExtended` table needed for `o2-analysis-track-selection`, therefore `o2-analysis-trackextension` does not need to be added to the workflow at the same time. 
+This task also produces the `TrackExtended` table needed for `o2-analysis-track-selection`, therefore `o2-analysis-trackextension` does not need to be added to the workflow at the same time.
 ```
 
 This task is not needed for Run 2 converted data where the tracks are already propagated to the collision vertex.

@@ -13,7 +13,7 @@ Learn how add new columns to existing tables, use dynamic and expression columns
   source: <a href="https://github.com/AliceO2Group/O2Physics/blob/master/Tutorials/src/extendedTables.cxx" target="_blank">extendedTables.cxx</a><br>
   Executable: o2-analysistutorial-extended-tables
 </div>
-  
+
 <a name="extendtable"></a>
 
 ### ExtendTable
@@ -41,7 +41,7 @@ struct ExtendTable {
     // add expression column o2::aod::extension::P2exp to table
     // o2::aod::Tracks
     auto table_extension = soa::Extend<aod::Tracks, aod::extension::P2exp>(tracks);
-    
+
 ```
 
 Note that the argument of the Extend function (here track) is a table object and needs to include all information required to fill the new table.
@@ -139,7 +139,7 @@ table ExTable is Spawned in task SpawnDynamicColumns before it can be consumed i
 // loop over the joined table <ExTable, DynTable>
 struct ProcessExtendedTables {
   using allinfo = soa::Join<aod::ExTable,aod::DynTable>;
-  
+
   void process(aod::Collision const&, allinfo const& tracks)
   {
     for (auto& row : tracks) {

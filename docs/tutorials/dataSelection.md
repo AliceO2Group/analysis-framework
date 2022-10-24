@@ -96,7 +96,7 @@ struct PartitionOutside {
   .
   .
   .
-  
+
   // all defined filters are applied
   using myTracks = soa::Filtered<aod::Tracks>;
 
@@ -108,7 +108,7 @@ struct PartitionOutside {
   // partitions are created and provided within the process function
   void process(aod::Collision const& collision, myTracks const& tracks)
   {
-    
+
     // all defined partitions are available
     LOGF(INFO, "Collision: %d [N = %d] [left phis = %d] [mid phis = %d] [right phis = %d]",
          collision.globalIndex(), tracks.size(), leftPhi.size(), midPhi.size(), rightPhi.size());
@@ -143,11 +143,11 @@ struct PartitionInside {
   void process(aod::Collisions const& collisions, aod::Tracks& tracks)
   {
     for (auto& c : collisions) {
-      
+
       // create the partition groupedTracks
       Partition<aod::Tracks> groupedTracks = aod::track::collisionId == c.globalIndex();
       groupedTracks.bindTable(tracks);
-      
+
       // loop over the partition groupedTracks
       for (auto& t : groupedTracks) {
         LOGF(INFO, "collision global index: %d grouped track collision id: %d", c.globalIndex(), t.collisionId());

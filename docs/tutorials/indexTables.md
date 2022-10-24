@@ -46,7 +46,7 @@ struct ConsumeColExtra {
   // use collisions with > 10 tracks only
   using myCol = soa::Join<aod::Collisions, aod::CollisionsExtra>;
   expressions::Filter multfilter = aod::collision::mult > 10;
-  
+
   // group tracks according to collision
   void process(soa::Filtered<myCol>::iterator const& col, aod::Tracks const& tracks)
   {

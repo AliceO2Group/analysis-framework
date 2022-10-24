@@ -73,12 +73,12 @@ void process(aod::Tracks const& tracks)
 
   // `tracks` is of type `o2::aod::Tracks`
   // and contains all tracks of a data frame
-  
+
   // to loop over the tracks do
   for (auto track : tracks) {
-  
+
     // process the track
-    
+
   }
 }
 ```

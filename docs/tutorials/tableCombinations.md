@@ -30,7 +30,7 @@ Using the full power of the task's process method this can be done without expli
 
 ```cpp
 struct TracksPerCollision {
-  
+
   void process(aod::Collision const&, aod::Tracks const& tracks)
   {
     // `tracks` contains tracks belonging to`collision`
@@ -48,7 +48,7 @@ By the way, add a collision variable in the argument list of process to have acc
 
 ```cpp
 struct TracksPerCollision {
-  
+
   void process(aod::Collision const& collision, aod::Tracks const& tracks)
   {
     LOGF(info, "The collision time:   %f", collision.collisionTime());

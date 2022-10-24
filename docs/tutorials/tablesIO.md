@@ -6,7 +6,7 @@ title: Table IO
 # Reading and saving tables to root files
 
 ```goal
-Learn how to customize the reading of tables from root files. Write tables selectively according to your choice. 
+Learn how to customize the reading of tables from root files. Write tables selectively according to your choice.
 
 ```
 

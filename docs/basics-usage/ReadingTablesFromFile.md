@@ -34,18 +34,18 @@ three items:
   1. `resfiles` is a string or an array of strings and corresponds to the aod-file command line option. As the aod-file option it can specify a single input file or, when the option value starts with a `@`-character, an ASCII file with a list of input files. In addition resfiles can be an array of strings which contains a list of input files.
   2. `fileregex` is a regex string which is used to select the input files from the file list specified by resfiles.
   3. `InputDescriptors` is an array of objects, the so called `DataInputDescriptors`, which are composed of 4 items.
-  
-     a. `table` is a string and specifies the table to fill. table needs to be provided in the format "AOD/tablename/0", where tablename is the name of the table as defined in the workflow definition.  
-     b. `treename` is a string and specifies the tree which is to be used to fill table  
-     c. `resfiles` is either a string or an array of strings. It specifies a list of possible input files (see discussion of resfiles above).  
-     d. `fileregex` is a regular expression string which is used to select the input files from the file list specified by resfiles  
+
+     a. `table` is a string and specifies the table to fill. table needs to be provided in the format "AOD/tablename/0", where tablename is the name of the table as defined in the workflow definition.
+     b. `treename` is a string and specifies the tree which is to be used to fill table
+     c. `resfiles` is either a string or an array of strings. It specifies a list of possible input files (see discussion of resfiles above).
+     d. `fileregex` is a regular expression string which is used to select the input files from the file list specified by resfiles
 
 The information contained in a DataInputDescriptor instructs the internal-dpl-aod-reader to fill table `table` with the values from the tree `treename` in the files which are defined by `resfiles` and which names match the regex `fileregex`.
 
 Of the four items of a DataInputDescriptor, table is the only required information. If one of the other items is missing its value will be set as follows:
 
-  1. treename is set to `O2tablename`, where TABLENAME is the name of the respective table.  
-  2. resfiles is set to resfiles of the InputDirector (1. item of the InputDirector). If that is missing, then the value of the aod-file option is used. If that is missing, then "AnalysisResults.root" is used.  
+  1. treename is set to `O2tablename`, where TABLENAME is the name of the respective table.
+  2. resfiles is set to resfiles of the InputDirector (1. item of the InputDirector). If that is missing, then the value of the aod-file option is used. If that is missing, then "AnalysisResults.root" is used.
   3. fileregex is set to fileregex of the InputDirector (2. item of the InputDirector). If that is missing, then ".*" is used.
 
 Example json file for the internal-dpl-aod-reader
@@ -112,7 +112,7 @@ The following json-file could be used to read these tables:
 ```
 
   2. In this case several tables need to be provided. All tables can be read from files tableResults_x.root, except for one table, namely tableA, which is saved as tree treeA in files tableAResults_x.root.
-  
+
 ```csh
   # file resfiles.txt lists all tableResults_x.root and tableAResults_x.root files.
 
@@ -135,8 +135,8 @@ The following json-file could be used to read these tables:
   2. The internal-dpl-aod-reader loops over the selected input files in the order as they are listed. It is the duty of the user to make sure that the order is correct and that the order in the file lists
 of the various InputDescriptors are corresponding to each other.
   3. The regular expression fileregex is evaluated with the c++ Regular expressions library. Thus check there for the proper syntax of regexes.
-  
-See also tutorial [Table IO](../tutorials/tablesIO.md).  
+
+See also tutorial [Table IO](../tutorials/tablesIO.md).
 
 ### Possible ideas
 
@@ -146,5 +146,5 @@ even be used to specify if a given dynamic column should be precalculated (or no
 ```cpp
 for (auto twoD : points.reshuffle<point::X, point::Y, Cached<point::R>>()) {
 ...
-} 
+}
 ```

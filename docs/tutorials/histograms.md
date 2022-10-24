@@ -13,7 +13,7 @@ Learn how to create, fill, and save histograms.
   source: <a href="https://github.com/AliceO2Group/O2Physics/blob/master/Tutorials/src/histograms.cxx" target="_blank">histograms.cxx</a><br>
   Executable: o2-analysistutorial-histograms
 </div>
-  
+
 <a name="roothistograms"></a>
 
 ### RootHistograms
@@ -25,7 +25,7 @@ target="_blank">chapter Histograms</a>).
 
 ```cpp
 struct RootHistograms {
-  
+
   // normal creation of a histogram
   TH1F* phiH = new TH1F("phiA", "phiA", 100, 0., 2. * M_PI);
 
@@ -54,9 +54,9 @@ target="_blank">TNamed Class</a>).
 
 ```cpp
 struct OutputObjects {
-  
+
   // histogram created with OutputObj<TH1F>
-  OutputObj<TH1F> phiB{TH1F("phiB", "phiB", 100, 0., 2. * M_PI, 
+  OutputObj<TH1F> phiB{TH1F("phiB", "phiB", 100, 0., 2. * M_PI,
                        OutputObjHandlingPolicy::QAObjects)};
 
   void process(aod::Tracks const& tracks)
@@ -91,7 +91,7 @@ HistogramRegistry is an other method to work with histograms in a flexible way. 
 
 ```cpp
 struct HistRegistry {
-  
+
   // histogram defined with HistogramRegistry
   HistogramRegistry registry {
     "registry",

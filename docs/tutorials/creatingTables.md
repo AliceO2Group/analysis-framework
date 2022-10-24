@@ -89,7 +89,7 @@ All methods have a `Name` and `Description` argument. The argument Name is used 
             <td>  </td>
           </tr>
        </table>
-        
+
       </div>
     </div>
   </div>
@@ -154,7 +154,7 @@ a column (tab.pt() e.g. gives access to an element of the column which was decla
             <td> Column element. </td>
           </tr>
         </table>
-        
+
       </div>
     </div>
   </div>
@@ -197,7 +197,7 @@ a column (tab.pt() e.g. gives access to an element of the column which was decla
             <td> `Expression`. </td>
           </tr>
         </table>
-        
+
       </div>
     </div>
   </div>
@@ -260,7 +260,7 @@ a column (tab.pt() e.g. gives access to an element of the column which was decla
             <td> Binding table. </td>
           </tr>
         </table>
-        
+
       </div>
     </div>
   </div>
@@ -303,7 +303,7 @@ a column (tab.pt() e.g. gives access to an element of the column which was decla
             <td> Dynamic column element computed with input columns t. </td>
           </tr>
         </table>
-        
+
       </div>
     </div>
   </div>

@@ -17,7 +17,7 @@ target="_blank">ALICEO2 code repository</a>.
     The most probable BC associated to a collision is the one closest in time to the collision time, which is determined from the tracks forming the collision vertex. Within the uncertainty of the collision time there might howvere be more than on BC. This tutorial shows how to find all BC which are within the uncertainty range of the collision time.
   </div>
 </div>
-  
+
 <div style="margin-bottom:5mm">
   Source: <a href="https://github.com/AliceO2Group/O2Physics/blob/master/Tutorials/src/configurableObjects.cxx" target="_blank">configurableObjects.cxx</a>, <a href="https://github.com/AliceO2Group/O2Physics/blob/master/Tutorials/src/configurableCut.cxx" target="_blank">configurableCut.cxx</a>, <a href="https://github.com/AliceO2Group/O2Physics/blob/master/Tutorials/include/Analysis/configurableCut.h" target="_blank">configurableCut.h</a>, <a href="https://github.com/AliceO2Group/O2Physics/blob/master/Tutorials/src/configurableCut.json" target="_blank">configurableCut.json</a><br>
   Executable: o2-analysistutorial-configurable-objects
