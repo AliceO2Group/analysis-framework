@@ -4,6 +4,7 @@ title: Notifications
 ---
 
 ## <a name="notifications"></a>Introduction
+
 * There are different types of notifications that the user receives, each related to a specific topic. A notification does not necessarily request an action to be taken, but informs the user about a specific element, and depending on the situation, the user can decide the possible next steps.
 * The notifications can be seen in the _My Analyses_ page and in the _Notifications_ page, by clicking `🔔` in the menu bar.
 
@@ -106,7 +107,6 @@ Informs the user when a wagon has been disabled in different circumstances:
   <div align="center">
     <img src="../images/wagonDisabled.png" width="90%">
   </div>
-
 
 ## <a name="inconsistentParameters"></a>Inconsistent parameters
 

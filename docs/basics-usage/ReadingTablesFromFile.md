@@ -48,8 +48,8 @@ Of the four items of a DataInputDescriptor, table is the only required informati
   2. resfiles is set to resfiles of the InputDirector (1. item of the InputDirector). If that is missing, then the value of the aod-file option is used. If that is missing, then "AnalysisResults.root" is used.  
   3. fileregex is set to fileregex of the InputDirector (2. item of the InputDirector). If that is missing, then ".*" is used.
 
-
 Example json file for the internal-dpl-aod-reader
+
 ```csh
 {
   "InputDirector": {
@@ -137,7 +137,6 @@ of the various InputDescriptors are corresponding to each other.
   3. The regular expression fileregex is evaluated with the c++ Regular expressions library. Thus check there for the proper syntax of regexes.
   
 See also tutorial [Table IO](../tutorials/tablesIO.md).  
-
 
 ### Possible ideas
 

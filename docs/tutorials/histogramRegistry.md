@@ -26,6 +26,7 @@ The HistogramRegistry and its functionality is described in detail [here](../fra
 The tutorial example demonstrates some of the functionality and the variaty of histogram types which can be used with histogramRegistry.
 
 <a name="etaphihistograms"></a>
+
 ### EtaPhiHistograms
 
 In this task the histograms eta and phi are initialized together with the declaration of the histogramRegistry. Both histograms are of type TH1F.
@@ -56,6 +57,7 @@ In order to access a histogram included in a histogramRegistry the histogram poi
 ```
 
 <a name="filteredhistograms"></a>
+
 ### FilteredHistograms
 
 The histogramRegistry comes with its own fill method. This takes tables as input and allows to apply filters.
@@ -74,11 +76,13 @@ struct FilteredHistograms {
 ```
 
 <a name="dimensiontest"></a>
+
 ### DimensionTest
 
 Demonstration of the various types of supported histograms. Histograms can be specified as part of the declaration of the HistogramRegistry, but can also be added later.
 
 <a name="realisticexample"></a>
+
 ### RealisticExample
 
 The characteristics of a histogram is declared as HistogramConfigSpec, which on its part contains a set of axes declarations (AxisSpec).  Declared HistogramConfigSpecs and AxisSpecs can be reused to define different histograms. addClone is an other method to replicate single histograms or entire groups of histograms. Histogram and axes declaration are typically in the init() function.
@@ -107,7 +111,3 @@ The characteristics of a histogram is declared as HistogramConfigSpec, which on 
     .
   }
 ```
-
-
-
-

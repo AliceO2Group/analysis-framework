@@ -8,6 +8,7 @@ title: The O2Physics repository structure
 All analysis tasks are stored in O2Physics on github: <https://github.com/AliceO2Group/O2Physics>
 
 In order to contribute an analysis task:
+
 * you have to fork the repository
 * commit your changes to your fork
 * make a pull request (PR) to the main repository

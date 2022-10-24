@@ -4,6 +4,7 @@ title: User Documentation
 ---
 
 ## <a name="my-analyses"></a>My Analyses
+
 * [**My Analyses**](https://alimonitor.cern.ch/hyperloop/) is a personalized webpage which displays all the analyses where the user belongs to.
 * The analyses display can be expanded/collapsed and reordered with the buttons `✚/-`,`⇧` and `⇩`, or by dragging and dropping. This configuration is saved per user.
 * The user can add/remove, configure and enable/disable wagons in this page.
@@ -18,7 +19,9 @@ The _Service wagons_ are wagons which are dependencies to other wagons. They are
 * For the experts, if you need to create _Service wagons_, you need to have an analysis with the project type _O2 Hyperloop Service Wagons (OHSW)_ which can be [created in JIRA](#joinanalysis). Once the analysis is created, you can [add a new wagon](#addwagon) inside of the analysis available in _My Analyses_.
 
 ### Adding and configuring a wagon to an analysis
+
 ##### 1. <a name="addwagon"></a>Adding a new wagon
+
 Using the _My Analyses_ page, inside of the _Analysis_ you want to add the wagon to, click on `✚ Add new wagon`.
 
 <div align="center">
@@ -26,6 +29,7 @@ Using the _My Analyses_ page, inside of the _Analysis_ you want to add the wagon
 </div>
 
 There are 2 parameters required to create a new wagon:
+
 * Name: The _newWagonName_ has to be unique within an _Analysis_, and it only accepts alphanumerical characters, no spaces.
 * Work flow name: You can either select from a list of _workflow_Names_ from an existing package tag. Or create a _workflow_Name_ which belongs to a [pull request](#pullrequest).
 
@@ -116,7 +120,6 @@ You can get to the _All Analyses_ page by using the main menu, or by the link in
 <img src="../images/zooming.png" width="90%">
 </div>
 
-
 ##### <a name="wagonhistory"></a> 4. Wagon History
 
 * In the _Wagon History_ page, there is a summary of the wagon's state from the creation until the last update. By clicking on the _+_ symbol, one can expand the information, showing the subwagons' details and the derived data at each timestamp.
@@ -180,8 +183,10 @@ The synchronization from JIRA to the Hyperloop train system can take up to 30 mi
 * Inside of _Enable dataset_ you can search for an active dataset by filtering by data type, collision system, anchor and period. And add it to your analysis by clicking on the button `✚ Add to analysis`. Or you can click the button `ℹ️ All datasets` to be redirected to the [**Datasets**](#datasets) page.
 
 #### 2. <a name="datasets"></a> Using the _Datasets_ page
+
 * The [**Datasets**](https://alimonitor.cern.ch/hyperloop/datasets) page displays all the datasets available.
 * You can browse and click on the _Dataset_ you want to add to your analysis.
+
 <div align="center">
 <img src="../images/enableDatasetDatasetsPage.png" width="80%">
 </div>
@@ -205,6 +210,7 @@ You can enable a wagon in the _My Analyses_ page. Inside of the _Analysis_ there
   If a wagon has dependencies, there is no need to enable the dependencies as well. The wagon's dependencies will be automatically tested by the system as well.
 
 ### <a name="wagon-test"></a>Wagon tests
+
 * The wagon test can be accessed in the _My Analyses_ page by clicking on the buttons: `⏳`,`🌟`, `❗️` or `💣`.
 * If the TEST_ID is known, it can be directly accessed using the url <https://alimonitor.cern.ch/hyperloop/wagon-test/TEST_ID>.
 * Inside of a wagon test, the test configuration, results, graphs and statistics are displayed.
@@ -253,6 +259,7 @@ When creating or enabling wagons, you can use a pull request instead of a packag
 * Wagons from any analysis available in the system can be cloned `🧬` to a user's analysis.
 
 ## <a name="train-runs"></a>Train Runs
+
 * For a user, the [**Train Runs**](https://alimonitor.cern.ch/hyperloop/train-runs) page displays a read view only of all train runs available in the system.
 
 * <a name="train-comparison"></a>To compare two trains, select them in the Compare column and click Compare. This will open a new tab displaying the differences between the two trains.

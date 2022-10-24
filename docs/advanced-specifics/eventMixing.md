@@ -22,6 +22,7 @@ There are several *CombinationIndexPolicies* available which are explained [here
 ## Event mixing
 
 `GroupedCombinationsGenerator` which generates mixed event pairs is a generalization of block combination policies. Therefore, it accepts the same parameters:
+
 - binning policy
 - outsider
 - category neighbours (equivalent to the number of other collisions to mix with)
@@ -38,17 +39,20 @@ GroupedCombinationsGenerator(const BP& binningPolicy, int catNeighbours, const T
 This is a more general functionality which potentially could be used for other applications beyond event mixing. However, to simplify this tutorial, let's assume our `grouping` table is the table of collisions, and the `associated` are tables of structures like tracks and V0s.
 
 `GroupedCombinationsGenerator` therefore requires:
+
 - `T1`: type of an outsider value as well as the value itself as a parameter,
 - `GroupingPolicy`: type of a *BlockCombinationIndexPolicies* which specifies how collision pairs will be generated (strictly upper, upper or full block combinations)i,
 - `BP`: type of a binning policy applied to the block combinations of collisions as well as the policy instance,
 - input grouping (collisions) and associated (tracks, V0s) tables and their types.
 
 To simplify the code, there are helper shortcuts defined for the most common use cases:
+
 - `Pair` used for generating mixed-event pairs with potentially different associated tables (e.g., tracks and V0s),
 - `SameKindPair` for mixed-event pairs with the same associated tables (e.g., tracks-tracks),
 - `Triple` and `SameKindTriple` defined analogously.
 
 By default, they assume:
+
 - `T1 = int`,
 - `GroupingPolicy` = CombinationsBlockStrictlyUpperSameIndexPolicy`.
 

@@ -17,18 +17,19 @@ Learn how to associate information from distinct tables through index columns an
 Related information can be contained in different tables. And in order to associate this informations index columns and index tables are used.
 
 <a name="ProduceEtaPhi"></a>
+
 ### ProduceEtaPhi, ProduceColExtra, and ConsumeEtaPhi
 
 The tutorial example starts with the declaration and production of three tables, EtaPhi and CollisionsExtra, which are normal tables, and HMPIDTracksIndex, an index table.
 
 The index table HMPIDTracksIndex contains for each row of table Tracks the row number of table HMPIDs with the related HMPID information.
 
-
 ```cpp
 DECLARE_SOA_INDEX_TABLE_USER(HMPIDTracksIndex, Tracks, "HMPIDTRKIDX", indices::TrackId, indices::HMPIDId);
 ```
 
 <a name="consumecolextra"></a>
+
 ### ConsumeColExtra
 
 In task ConsumeColExtra the basic usage of indices is demonstrated. Tracks are
@@ -61,6 +62,7 @@ struct ConsumeColExtra {
 ```
 
 <a name="partitioncolextra"></a>
+
 ### PartitionColExtra
 
 Index columns allow to easily select e.g. all tracks belonging to a given collision using the sliceBy() method (see also [DECLARE_SOA_TABLE](creatingTables.md#declareTables)). groupedTracks contains only tracks which belong to Collision col.
@@ -70,6 +72,7 @@ auto groupedTracks = tracks.sliceBy(aod::track::collisionId, col.globalIndex());
 ```
 
 <a name="hmpidtask"></a>
+
 ### BuildHmpidIndex and ConsumeHmpidIndex
 
 Builds&lt;T&gt; is used to prepare an index column of type T. This has to be performed
@@ -97,6 +100,3 @@ for (auto& track : tracks) {
   }
 }
 ```
-
-
-

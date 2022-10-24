@@ -30,8 +30,8 @@ By default the writing of e.g. histograms created in a task also happens without
 
 This tutorial demonstrates how to customize the reading and writing of tables from and to root files.
 
-
 <a name="writing"></a>
+
 ### Customized writing
 
 The writing of tables to file is customized by command line options. The option --aod-writer-keep allows to specify which columns of which table are saved to which tree in which file.
@@ -93,6 +93,7 @@ o2-analysistutorial-tablio-write --aod-file AO2D.root --aod-writer-json writer.j
 With the following json file both tables of the example are saved to file EtaPtRanges.root, table MinMaxPt to tree O2ptrange and table MinMaxEta to tree O2etarange.
 
 `writer.json`:
+
 ```json
 {
   "OutputDirector": {
@@ -123,6 +124,7 @@ With the following json file both tables of the example are saved to file EtaPtR
 ```
 
 <a name="reading"></a>
+
 ### Customized reading
 
 Now that we have saved data to a file we would like to read it in an other task for further processing.
@@ -186,6 +188,7 @@ o2-analysistutorial-tableio-read --aod-file @resultFiles.txt --aod-reader-json r
 ```
 
 `reader.json`
+
 ```json
 {
   "InputDirector": {
@@ -207,6 +210,7 @@ o2-analysistutorial-tableio-read --aod-file @resultFiles.txt --aod-reader-json r
 ```
 
 `resultFiles.txt`
+
 ```txt
 AnalysisResults_trees.root
 TemporaryResults_trees.root

@@ -6,6 +6,7 @@ title: PWG-DQ
 ## Get started
 
 [link to indico page of the Hands-On session :]
+
 1. O2 DQ (7/12/21)(<https://indico.cern.ch/event/1098200/>)
 2. O2 DQ (April 2022) <https://indico.cern.ch/event/1150382/>
 3. O2 tutorial (Oct 2022) <https://indico.cern.ch/event/1200252/timetable/?view=standard>
@@ -52,6 +53,7 @@ Mattermost channel: [O2-DQ Analysis Framework Alpha](https://mattermost.web.cern
   [`FirstAnalysis`](https://github.com/AliceO2Group/Run3Analysisvalidation/tree/master/FirstAnalysis) directory.
   
 ## Existing Workflows
+
 * [`TableMaker.cxx`](https://github.com/AliceO2Group/O2Physics/blob/master/PWGDQ/TableProducer/tableMaker.cxx) Create skimmed data tables for DQ analysis from central barrel and muon AODs. This contains a task which produces skimmed data tables with selected event information, barrel track and muon track information.
 * [`TableReader.cxx`](https://github.com/AliceO2Group/O2Physics/blob/master/PWGDQ/Tasks/tableReader.cxx) Analyze DQ skimmed data tables. This workflow runs a few tasks: event selection, barrel track selection, muon track selection, jpsi candidate creation and selection, jpsi + track combination (invariant mass, correlations, etc)
 * [`filterPP.cxx`](https://github.com/AliceO2Group/O2Physics/blob/master/PWGDQ/Tasks/filterPP.cxx) Produces a decision table for pp collisions. The decisions require that at least a selected pair (or just two tracks) exists for a given event. Currently up to 64 simultaneous decisions can be made, to facilitate studies for optimizing cuts. it computes multiple event-wise decisions based on “high-level” triggers, e.g. at least one dielectron / dimuon in the event
@@ -61,13 +63,13 @@ Mattermost channel: [O2-DQ Analysis Framework Alpha](https://mattermost.web.cern
 * [`dileptonMuMu.cxx`](https://github.com/AliceO2Group/O2Physics/blob/master/PWGDQ/Tasks/dileptonMuMu.cxx) It refers to The dimuon analysis task. It’s a derivative of the tableReader, but with muon only informations.  takes tracks flaged as « muon » and creates Pairs calculating mass, rapidity, pT.
 * [`dileptonEE.cxx`](https://github.com/AliceO2Group/O2Physics/blob/master/PWGDQ/Tasks/dileptonEE.cxx) It refers to The dielectron analysis task. It’s a derivative of the tableReader, but with electron only informations.  takes tracks flaged as « electron » and creates Pairs calculating mass, rapidity, pT.
 
-
 ## AliHyperloop
 
 [JIRA tickets](https://alice.its.cern.ch/jira/browse/PWGDQ-57?jql=project%20%3D%20PWGDQ%20AND%20issuetype%20%3D%20Analysis)
 of the DQ analyses on [AliHyperloop](https://alimonitor.cern.ch/hyperloop/):
 
 ## DQ Data Model
+
 Simplified graph of the data model involved in a single DQ analysis is shown in the following picture.
 
 <div align="center">
@@ -75,6 +77,7 @@ Simplified graph of the data model involved in a single DQ analysis is shown in 
 </div>
 
 ## DQ Skimmed Data Model
+
 Simplified graph of the skimmed data model involved in a single DQ analysis is shown in the following picture.
 
 <div align="center">
@@ -82,6 +85,7 @@ Simplified graph of the skimmed data model involved in a single DQ analysis is s
 </div>
 
 ## TableMaker Workflow
+
 Simplified graph of the TableMaker workflow involved in a single DQ analysis is shown in the following picture.
 
 <div align="center">
@@ -89,6 +93,7 @@ Simplified graph of the TableMaker workflow involved in a single DQ analysis is 
 </div>
 
 ## TableMakerMC Workflow
+
 Simplified graph of the TableMakerMC workflow involved in a single DQ analysis is shown in the following picture.
 
 <div align="center">
@@ -96,6 +101,7 @@ Simplified graph of the TableMakerMC workflow involved in a single DQ analysis i
 </div>
 
 ## TableReader Workflow
+
 Simplified graph of the TableReader workflow involved in a single DQ analysis is shown in the following picture.
 
 <div align="center">
@@ -103,9 +109,9 @@ Simplified graph of the TableReader workflow involved in a single DQ analysis is
 </div>
 
 ## DQEfficiency WorkfFlow
+
 Simplified graph of the DQEfficiency workflow involved in a single DQ analysis is shown in the following picture.
 
 <div align="center">
 <img src="../images/DQEff.png" width="100%" alt="DQEfficiency WorkfFlow">
 </div>
-

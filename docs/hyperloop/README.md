@@ -30,6 +30,7 @@ Hyperloop provides a web interface for users and operators which allows to:
 * study the resource consumption of the train for each wagon
 
 The views available in the Hyperloop framework are:
+
 * [My Analyses](userdocumentation.md#myanalyses): Personalized webpage which displays all the analyses where the user belongs to.
 * [All Analyses](userdocumentation.md#allanalyses): Displays all the analyses available in the system.
 * [Dashboard](operatordocumentation.md#dashboard): Presents an overview of the current state of the system, as well as a summary from the previous week.

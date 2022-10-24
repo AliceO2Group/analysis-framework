@@ -22,6 +22,7 @@ Create the directory and move to it (all the following commands need to be execu
 mkdir -p ~/alice
 cd ~/alice
 ```
+
 Download O2 and O2Physics (note the `--defaults o2`):
 
 ```bash
@@ -85,6 +86,7 @@ alienv enter O2Physics/latest ninja/latest
 ```
 
 Go to the build directory
+
 ```bash
 cd sw/BUILD/O2Physics-latest/O2Physics
 ```
@@ -94,16 +96,21 @@ You can now rebuild a specific directory with
 ```bash
 ninja install <your-analysis-directory>/all
 ```
+
 For example:
+
 ```bash
 ninja install PWGCF/Tasks/all
 ```
 
 A specific executable can be built with
+
 ```bash
 ninja install O2Physicsexe-<target>
 ```
+
 For example (note the missing o2-):
+
 ```bash
 ninja install O2Physicsexe-analysis-cf-correlations
 ```

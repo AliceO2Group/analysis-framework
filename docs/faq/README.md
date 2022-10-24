@@ -20,5 +20,3 @@ process function itself can be a single template-based function or method so tha
 necessarily need to be duplicated. For an example, please check
 [cascadeanalysis.cxx](https://github.com/AliceO2Group/O2Physics/blob/master/PWGLF/Tasks/cascadeanalysis.cxx) or
 [correlations.cxx](https://github.com/AliceO2Group/O2Physics/blob/master/PWGCF/Tasks/correlations.cxx).
-
-

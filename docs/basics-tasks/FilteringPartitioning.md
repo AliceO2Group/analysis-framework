@@ -16,6 +16,7 @@ struct MyTask : AnalysisTask {
   }
 };
 ```
+
 However this has the disadvantage that the filtering will be done for every
 task which has similar or more restrictive conditions. By declaring your
 filters upfront you can not only simplify your code, but allow the framework to
@@ -59,7 +60,6 @@ struct MyTask : AnalysisTask {
 ```
 
 will process all the collisions which have at least one track with `pt > 1`.
-
 
 ## Partitioning your inputs
 

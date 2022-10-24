@@ -11,9 +11,12 @@ You can use  helper functions from `ASoAHelpers.h` to get combinations of elemen
   Row numbers of elements: (0, 0), ..., (0, 5), (1, 0), ..., (1, 5), ..., (4, 0), ..., (4, 5)
 2. `CombinationsUpperIndexPolicy`:<br>
   Row numbers of elements: (0, 0), ..., (0, 5), (1, 1), ..., (1, 5), ..., (4, 4), (4, 5)
+
 - no repetitions of pairs like (0, 1) and (1, 0)
+
 3. `CombinationsStrictlyUpperIndexPolicy`:<br>
   Row numbers of elements: (0, 1), ..., (0, 5), (1, 2), ..., (1, 5), ..., (3, 5)
+
 - max position: (table size - distance from the rightmost iterator) = (4, 6), that's why the last pair is (3, 5) and not (4, 5)<br>
 - no repetitions of pairs like (0, 1) and (1, 0)
 - no repeated positions within a single tuple, e.g., (0, 0)
@@ -67,10 +70,12 @@ struct MyTask : AnalysisTask {
 Block policies allow for generating tuples of elements according to the binning policy provided  by the user. The binning policy calculates bin numbers for the input elements and groups the elements by bins. Then, the block combinations output tuples of elements from the same bin. Analogously to basic policies, we have full / upper / strictly upper block combinations.
 
 Different tables:
+
 - `CombinationsBlockUpperIndexPolicy`
 - `CombinationsBlockFullIndexPolicy`
 
 Performance-efficient policies for getting tuples of elements from the same table:
+
 - `CombinationsBlockUpperSameIndexPolicy`
 - `CombinationsBlockFullSameIndexPolicy`
 - `CombinationsBlockStrictlyUpperSameIndexPolicy`
@@ -78,6 +83,7 @@ Performance-efficient policies for getting tuples of elements from the same tabl
 ### Binning policies
 
 There are 2 binning policies:
+
 - `FlexibleBinningPolicy`
 - `ColumnBinningPolicy`
 together with the base class `BinningPolicyBase` which contains methods for calculating bins for given data.
@@ -100,7 +106,6 @@ Example: `categoryNeighbours = 4`, the bin contains elements at rows: 1, 3, 5, 6
 Note that some pairs get repeated, e.g., (3, 5).<br>
 To get the behavior without sliding windows, set category neighbours to a very high value.
 
-
 Below, you can see a full example of block combinations in an analysis task:
 
 ```cpp
@@ -122,35 +127,41 @@ struct BinnedTrackCombinations {
 ## Helper functions (shortcuts)
 
 Accepts only the same tables, applies block strictly upper policy:
+
 ```cpp
 selfCombinations(binningPolicy, categoryNeighbours, outsider, tables...)
 // equivalent to combinations(CombinationsBlockStrictlyUpperSameIndexPolicy(binningPolicy, categoryNeighbours, outsider, tables...))
 ```
 
 Pairs / triples of block strictly upper combinations from the same table:
+
 ```cpp
 selfPairCombinations(binningPolicy, categoryNeighbours, outsider, table)
 selfTripleCombinations(binningPolicy, categoryNeighbours, outsider, table)
 ```
 
 If tables are the same, applies block strictly upper, otherwise block upper policy:
+
 ```cpp
 combinations(binningPolicy, categoryNeighbours, outsider, tables...)
 ```
 
 If tables are the same, applies strictly upper, otherwise upper policy:
+
 ```cpp
 combinations(tables...)
 combinations(filter, tables...)
 ```
 
 Pairs / triples of strictly upper combinations from the same table:
+
 ```cpp
 pairCombinations(table)
 tripleCombinations(table)
 ```
 
 Applies selected combination policy
+
 ```cpp
 combinations(combinationPolicy)
 ```
@@ -160,10 +171,12 @@ You can see some combinations examples in the <a href="https://github.com/AliceO
 ## Weighted combinations
 
 You might need to calculate weights for your event mixing. You can get useful variables:
+
 - `currentWindowNeighbours()` -- the number of other collisions to pair with; it is smaller if we are at the end of the bin or sliding window
 - bool `isNewWindow()` – true only for the first pair from each sliding window
 
 **NOTE:** The same number of `currentWindowNeighbours` is returned for all kinds of block combinations but the interpretation is different:
+
 - Strictly upper: the first element will is paired with exactly `currentWindowNeighbours` other elements.
 - Upper: the first element is paired with `currentWindowNeighbours + 1` elements, including itself.
 - Full: `currentWindowNeighbours + 1` pairs with the first element in the first position (`c1`) + there are other combinations with the first element at other positions.

@@ -21,14 +21,16 @@ are either contained in the input AOD file or are produced by other tasks in the
 workflow.
 
 A simple example is the histogram tutorial which you can run (on Run 2 converted data) with:
+
 ```
 o2-analysistutorial-histograms --aod-file AO2D.root
 ```
+
 In case you try the same on Run 3 data or MC, you also need the [track propagation task](../helperTasks/trackPropagation.md):
+
 ```
 o2-analysis-timestamp | o2-analysis-track-propagation | o2-analysistutorial-histograms --aod-file AO2D.root
 ```
-
 
 Single task executables are combined with the pipe ( &#124; ) operator, e.g.
 

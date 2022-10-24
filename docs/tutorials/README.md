@@ -18,9 +18,11 @@ In each of the following sections one of these tutorial codes will be discussed 
 More in-depth information about analysis tasks can be found in the [Analysis Framework](../framework/framework.md) section of these documentation pages.
 
 To run a tutorial analysis do
+
 ```csh
 o2-analysistutorial-* --aod-file AO2D.root
 ```
 
 ### List of tutorials
+
 {% include list.liquid all=true %}

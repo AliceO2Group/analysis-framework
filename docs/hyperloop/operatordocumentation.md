@@ -21,9 +21,12 @@ title: Operator Documentation
 * By clicking the number of wagons waiting to be included in a train, the user can directly open the [_Train Submission_](#trainsubmission). Similarly, a link to the [_Train Runs_](#train-runs) is available by clicking the number of trains to be submitted to the grid, the number of running tests, or the number of finished trains.
 
 ## <a name="train-submission"></a>Train Submission
+
 * For a user, the [**Train Submission**](https://alimonitor.cern.ch/hyperloop/train-submission) page displays a read view only of datasets which have enabled wagons.
 * For a train operator, the  _Train Submission_ page displays only datasets which have enabled wagons, and allows train composition, as well as submitting, modifying and killing a train.
+
 ### <a name="trainsubmission"></a>Train Composition
+
 * Trains are composed per dataset. Only wagons which have a test status of success `🌟` or warning `❗️` can be composed in a train.
 * By default, wagons that were enabled at most one week ago are shown. In order to display all enabled wagons, click on `off` in the _Enabled_ column.
 * In order to compose a train, click `☑️` in the _Compose_ column. The package tag will be automatically chosen, and other wagons that can be included in the train run are signalized with 🟢, and the ones which are not compatible with 🔴. All wagons that are compatible can be automatically chosen by clicking on `✅ Select all compatible wagons`, or by selecting them one by one.
@@ -55,6 +58,7 @@ title: Operator Documentation
 </div>
 
 ## <a name="train-runs"></a>Train Runs
+
 * For a user, the [**Train Runs**](https://alimonitor.cern.ch/hyperloop/train-runs) page displays a read view only of all train runs available in the system.
 * For a train operator, the _Train Runs_ page displays all trains available in the system, and allows submitting, modifying and killing a train.
 * <a name="train-comparison"></a>To compare two trains, select them in the Compare column and click Compare. This will open a new tab displaying the differences between the two trains.
@@ -188,7 +192,6 @@ title: Operator Documentation
     <img src="../images/longTrainApproved.png" width="80%">
    </div>
 
-
 ## <a name="trains-with-issues"></a>Trains with issues
 
 * This page displays the list of train runs that are in state _submitted_ but could not be merged due to specific problems:
@@ -197,11 +200,9 @@ title: Operator Documentation
   * There is a merging job which is in a final state, but there is no final merge job
   * There is a final merge job in final state, but the merging is not declared as _done_ in the database
 
-
   <div align="center">
     <img src="../images/trainsWithIssues.png" width="70%">
   </div>
-
 
 * The operator must analyse this cases and decide upon resubmitting some of the jobs, launching the final merging submission where the errors are not significant, or killing the train when there are too many errors.
 
@@ -210,6 +211,7 @@ title: Operator Documentation
 * The [**Datasets**](https://alimonitor.cern.ch/hyperloop/datasets) page displays all the datasets available. The operator can add, remove, activate or deactivate a dataset.
 
 * The user can browse and click on the _Dataset_ they want to add to their analysis.
+
 <div align="center">
 <img src="../images/enableDatasetDatasetsPage.png" width="80%">
 </div>
@@ -341,7 +343,6 @@ title: Operator Documentation
 <div align="center">
  <img src="../images/stagingProcess.png" width="60%">
 </div>
-
 
 ## <a name="runlists"></a>DPG Runlists
 

@@ -17,7 +17,6 @@ Coordinators: Francesco Prino, Vít Kučera
 
 Mattermost channel: [hf-o2-analysis-challenge](https://mattermost.web.cern.ch/alice/channels/hf-o2-analysis-challenge)
 
-
 ## Code
 
 - Tasks used by the heavy-flavour analysis framework are in the

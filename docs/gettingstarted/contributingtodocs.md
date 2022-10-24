@@ -54,6 +54,7 @@ docs/
 ```
 
 The documentation files (including the READMEs) contain a header as shown below
+
 ```markdown
 ---
 sort: n
@@ -67,11 +68,9 @@ n determines the sequence the items appear in the menu. If n is not provided the
 
 Any level of header can be used. Be aware, that it is the level 2 headers which are included in the site menu.
 
-
 ### Links
 
 There are two methods to provide links to local and external pages.
-
 
 #### Links to local files or anchors
 
@@ -99,7 +98,6 @@ For links to external pages use the html syntax which can be used in html as wel
 
 In contrast to the local case this method opens the linked page in a new window (target="_blank") instead of the current one.
 
-
 ### Highlighting text
 
 Markdown provides several methods to highlight text.
@@ -107,7 +105,6 @@ Markdown provides several methods to highlight text.
 In order to highlight blocks of code use fenced code blocks. Fenced code blocks are marked by two lines with three back ticks ```` ``` ```` before and after the text to display in a box. In order to have the syntax of the code highlighted you can specify a language next to the back ticks before the fenced code block, e.g. ```` ```json ````.
 
 In addition to languages other specifications of fenced blocks are available. Use these to emphasize specific information. The available flavors are listed below.
-
 
 ```note
 note
@@ -134,4 +131,3 @@ instruction
 
 Additional types of fenced blocks can be added by making the required changes in files **_layouts/tasks/shortcodes.liquid**, **_sass/core/toasts.scss**, and **_sass/_variables.scss** and adding a corresponding code file in **./_includes/shortcodes/**. See at fontawesome.com for suitable icons.
 ```
-
