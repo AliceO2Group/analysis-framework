@@ -23,9 +23,9 @@ Mattermost channel: [hf-o2-analysis-challenge](https://mattermost.web.cern.ch/al
 - Tasks used by the heavy-flavour analysis framework are in the
 [`PWGHF`](https://github.com/AliceO2Group/O2Physics/tree/master/PWGHF) directory.
 - Tables produced by skimming and candidate creators are defined in
-[`HFSecondaryVertex.h`](https://github.com/AliceO2Group/O2Physics/blob/master/PWGHF/DataModel/HFSecondaryVertex.h).
+[`CandidateReconstructionTables.h`](https://github.com/AliceO2Group/O2Physics/blob/master/PWGHF/DataModel/CandidateReconstructionTables.h).
 - Tables produced by candidate selectors are defined in
-[`HFCandidateSelectionTables.h`](https://github.com/AliceO2Group/O2Physics/blob/master/PWGHF/DataModel/HFCandidateSelectionTables.h).
+[`CandidateSelectionTables.h`](https://github.com/AliceO2Group/O2Physics/blob/master/PWGHF/DataModel/CandidateSelectionTables.h).
 - Default parameters used in the selection of single tracks, track-index skims and candidates are defined in
 [`HFSelectorCuts.h`](https://github.com/AliceO2Group/O2Physics/blob/master/PWGHF/Core/HFSelectorCuts.h).
 - Secondary-vertex reconstruction algorithms are implemented in the
