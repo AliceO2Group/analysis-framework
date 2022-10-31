@@ -59,7 +59,7 @@ Individual components are decribed in the next section below.
 
 Workflow | File | Type
 --- | --- | ---
-`o2-analysis-hf-track-index-skims-creator` | `trackIndexSkimCreator.cxx` | direct 2/3-prong and cascade decays
+`o2-analysis-hf-track-index-skim-creator` | `trackIndexSkimCreator.cxx` | direct 2/3-prong and cascade decays
 
 #### Track and event selection
 
@@ -111,15 +111,15 @@ Derived tables with MC flags used for the estimation of the signal efficiencies 
 
 Workflow | File | Type
 --- | --- | ---
-`o2-analysis-hf-d0-candidate-selector` | `candidateSelectorD0.cxx` | D<sup>0</sup>(bar) → π<sup>±</sup> K<sup>∓</sup>
-`o2-analysis-hf-jpsi-candidate-selector` | `candidateSelectorJpsi.cxx` | J/ψ → e<sup>+</sup> e<sup>−</sup>/μ<sup>+</sup> μ<sup>−</sup>
-`o2-analysis-hf-x-tojpsipipi-candidate-selector` | `candidateSelectorXToJpsiPiPi.cxx` | X(3872) → J/ψ π<sup>±</sup> π<sup>∓</sup>
-`o2-analysis-hf-dplus-topikpi-candidate-selector` | `candidateSelectorDplusToPiKPi.cxx` | D<sup>±</sup> → π<sup>±</sup> K<sup>∓</sup> π<sup>±</sup>
-`o2-analysis-hf-lc-candidate-selector` | `candidateSelectorLc.cxx` | Λ<sub>c</sub><sup>±</sup> → p(bar) K<sup>∓</sup> π<sup>±</sup>
-`o2-analysis-hf-lc-tok0sp-candidate-selector` | `candidateSelectorLcK0sP.cxx` | Λ<sub>c</sub><sup>±</sup> → p(bar) K<sub>S</sub><sup>0</sup>
-`o2-analysis-hf-xic-topkpi-candidate-selector` | `candidateSelectorXicToPKPi.cxx` | Ξ<sub>c</sub><sup>±</sup> → p(bar) K<sup>∓</sup> π<sup>±</sup>
-`o2-analysis-hf-xicc-topkpipi-candidate-selector` | `candidateSelectorXiccToPKPiPi.cxx` | Ξ<sub>cc</sub><sup>±±</sup> → Ξ<sub>c</sub><sup>±</sup> π<sup>±</sup>
-`o2-analysis-hf-bplus-tod0pi-candidate-selector` | `candidateSelectorBplusToD0Pi.cxx` | B<sup>±</sup> → D<sup>0</sup>(bar) π<sup>±</sup>
+`o2-analysis-hf-candidate-selector-d0` | `candidateSelectorD0.cxx` | D<sup>0</sup>(bar) → π<sup>±</sup> K<sup>∓</sup>
+`o2-analysis-hf-candidate-selector-jpsi` | `candidateSelectorJpsi.cxx` | J/ψ → e<sup>+</sup> e<sup>−</sup>/μ<sup>+</sup> μ<sup>−</sup>
+`o2-analysis-hf-candidate-selector-x-to-jpsi-pi-pi` | `candidateSelectorXToJpsiPiPi.cxx` | X(3872) → J/ψ π<sup>±</sup> π<sup>∓</sup>
+`o2-analysis-hf-candidate-selector-dplus-to-pi-k-pi` | `candidateSelectorDplusToPiKPi.cxx` | D<sup>±</sup> → π<sup>±</sup> K<sup>∓</sup> π<sup>±</sup>
+`o2-analysis-hf-candidate-selector-lc` | `candidateSelectorLc.cxx` | Λ<sub>c</sub><sup>±</sup> → p(bar) K<sup>∓</sup> π<sup>±</sup>
+`o2-analysis-hf-candidate-selector-lc-to-k0s-p` | `candidateSelectorLcK0sP.cxx` | Λ<sub>c</sub><sup>±</sup> → p(bar) K<sub>S</sub><sup>0</sup>
+`o2-analysis-hf-candidate-selector-xic-to-p-k-pi` | `candidateSelectorXicToPKPi.cxx` | Ξ<sub>c</sub><sup>±</sup> → p(bar) K<sup>∓</sup> π<sup>±</sup>
+`o2-analysis-hf-candidate-selector-xicc-to-p-k-pi-pi` | `candidateSelectorXiccToPKPiPi.cxx` | Ξ<sub>cc</sub><sup>±±</sup> → Ξ<sub>c</sub><sup>±</sup> π<sup>±</sup>
+`o2-analysis-hf-candidate-selector-bplus-to-d0-pi` | `candidateSelectorBplusToD0Pi.cxx` | B<sup>±</sup> → D<sup>0</sup>(bar) π<sup>±</sup>
 
 In a dedicated selector task, tailored for each decay channel, accurate analysis level selection criteria
 based on decay topology and PID are applied to the reconstructed candidates.
@@ -134,14 +134,14 @@ Workflow | File | Type
 `o2-analysis-hf-task-jpsi` | `taskJpsi.cxx` | J/ψ → e<sup>+</sup> e<sup>−</sup>/μ<sup>+</sup> μ<sup>−</sup>
 `o2-analysis-hf-task-dplus` | `taskDplus.cxx` | D<sup>±</sup> → π<sup>±</sup> K<sup>∓</sup> π<sup>±</sup>
 `o2-analysis-hf-task-lc` | `taskLc.cxx` | Λ<sub>c</sub><sup>±</sup> → p(bar) K<sup>∓</sup> π<sup>±</sup>
-`o2-analysis-hf-task-lc-tok0sp` | `taskLcK0sP.cxx` | Λ<sub>c</sub><sup>±</sup> → p(bar) K<sub>S</sub><sup>0</sup>
+`o2-analysis-hf-task-lc-to-k0s-p` | `taskLcK0sP.cxx` | Λ<sub>c</sub><sup>±</sup> → p(bar) K<sub>S</sub><sup>0</sup>
 `o2-analysis-hf-task-xic` | `taskXic.cxx` | Ξ<sub>c</sub><sup>±</sup> → p(bar) K<sup>∓</sup> π<sup>±</sup>
 `o2-analysis-hf-task-xicc` | `taskXicc.cxx` | Ξ<sub>cc</sub><sup>±±</sup> → Ξ<sub>c</sub><sup>±</sup> π<sup>±</sup>
 `o2-analysis-hf-task-bplus` | `taskBplus.cxx` | B<sup>±</sup> → D<sup>0</sup>(bar) π<sup>±</sup>
 `o2-analysis-hf-task-x` | `taskX.cxx` | X(3872) → J/ψ π<sup>±</sup> π<sup>∓</sup>
-`o2-analysis-hf-hf-correlator-d0d0bar` | `correlatorD0D0bar.cxx` | D<sup>0</sup>–D<sup>0</sup>bar correlations
-`o2-analysis-hf-hf-correlator-dplusdminus` | `correlatorDplusDminus.cxx` | D<sup>+</sup>–D<sup>−</sup> correlations
-`o2-analysis-hf-task-correlation-ddbar` | `taskCorrelationDDbar.cxx` | D<sup>0</sup>–D<sup>0</sup>bar, D<sup>+</sup>–D<sup>−</sup> correlations
+`o2-analysis-hf-hf-correlator-d0-d0bar` | `correlatorD0D0bar.cxx` | D<sup>0</sup>–D<sup>0</sup>bar correlations
+`o2-analysis-hf-hf-correlator-dplus-dminus` | `correlatorDplusDminus.cxx` | D<sup>+</sup>–D<sup>−</sup> correlations
+`o2-analysis-hf-task-correlation-d-dbar` | `taskCorrelationDDbar.cxx` | D<sup>0</sup>–D<sup>0</sup>bar, D<sup>+</sup>–D<sup>−</sup> correlations
 
 #### Real-data analysis
 
@@ -155,9 +155,9 @@ For MC events, histograms with quantities of generated MC particles and MC-match
 
 Workflow | File | Type
 --- | --- | ---
-`o2-analysis-hf-mc-validation` | `taskMcValidation.cxx` | validation of HF MC distributions
-`o2-analysis-qa-rejection` | `taskQaPidRejection.cxx` | PID selection performance
-`o2-analysis-hf-sel-optimisation` | `taskSelOptimisation.cxx` | preselection optimisation
+`o2-analysis-hf-task-mc-validation` | `taskMcValidation.cxx` | validation of HF MC distributions
+`o2-analysis-task-qa-pid-rejection` | `taskQaPidRejection.cxx` | PID selection performance
+`o2-analysis-hf-task-sel-optimisation` | `taskSelOptimisation.cxx` | preselection optimisation
 
 ### Tree creation
 
@@ -166,10 +166,10 @@ post-processing with external tools, e.g. for optimisation with Machine Learning
 
 Workflow | File | Type
 --- | --- | ---
-`o2-analysis-hf-tree-creator-d0-tokpi` | `treeCreatorD0ToKPi.cxx` | D<sup>0</sup>(bar) → π<sup>±</sup> K<sup>∓</sup>
-`o2-analysis-hf-tree-creator-lc-topkpi` | `treeCreatorLcToPKPi.cxx` | Λ<sub>c</sub><sup>±</sup> → p(bar) K<sup>∓</sup> π<sup>±</sup>
-`o2-analysis-hf-tree-creator-x-tojpsipipi` | `treeCreatorXToJpsiPiPi.cxx` | X(3872) → J/ψ π<sup>±</sup> π<sup>∓</sup>
-`o2-analysis-hf-tree-creator-xicc-topkpipi` | `treeCreatorXiccToPKPiPi.cxx` | Ξ<sub>cc</sub><sup>±±</sup> → Ξ<sub>c</sub><sup>±</sup> π<sup>±</sup>
+`o2-analysis-hf-tree-creator-d0-to-k-pi` | `treeCreatorD0ToKPi.cxx` | D<sup>0</sup>(bar) → π<sup>±</sup> K<sup>∓</sup>
+`o2-analysis-hf-tree-creator-lc-to-p-k-pi` | `treeCreatorLcToPKPi.cxx` | Λ<sub>c</sub><sup>±</sup> → p(bar) K<sup>∓</sup> π<sup>±</sup>
+`o2-analysis-hf-tree-creator-x-to-jpsi-pi-pi` | `treeCreatorXToJpsiPiPi.cxx` | X(3872) → J/ψ π<sup>±</sup> π<sup>∓</sup>
+`o2-analysis-hf-tree-creator-xicc-to-p-k-pi-pi` | `treeCreatorXiccToPKPiPi.cxx` | Ξ<sub>cc</sub><sup>±±</sup> → Ξ<sub>c</sub><sup>±</sup> π<sup>±</sup>
 
 ## Contribute
 

@@ -3322,7 +3322,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGDQ
 
 ## PWG-HF
 
-####  o2-analysis-hf-b0-todpi-candidate-selector
+####  o2-analysis-hf-candidate-selector-b0-to-d-pi
 Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer//candidateSelectorB0ToDPi.cxx" target="_blank">candidateSelectorB0ToDPi.cxx</a>
 <div>
 
@@ -3354,7 +3354,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
 
 </div>
 
-####  o2-analysis-hf-bplus-tod0pi-candidate-selector
+####  o2-analysis-hf-candidate-selector-bplus-to-d0-pi
 Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer//candidateSelectorBplusToD0Pi.cxx" target="_blank">candidateSelectorBplusToD0Pi.cxx</a>
 <div>
 
@@ -7992,7 +7992,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
 
 </div>
 
-####  o2-analysis-hf-chic-tojpsigamma-candidate-selector
+####  o2-analysis-hf-candidate-selector-chic-to-jpsi-gamma
 Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer//candidateSelectorChicToJpsiGamma.cxx" target="_blank">candidateSelectorChicToJpsiGamma.cxx</a>
 <div>
 
@@ -8031,7 +8031,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
 
 </div>
 
-####  o2-analysis-hf-d0-candidate-selector
+####  o2-analysis-hf-candidate-selector-d0
 Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer//candidateSelectorD0.cxx" target="_blank">candidateSelectorD0.cxx</a>
 <div>
 
@@ -8098,7 +8098,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
 
 </div>
 
-####  o2-analysis-hf-d0-candidate-selector-alice3-barrel
+####  o2-analysis-hf-candidate-selector-d0-alice3-barrel
 Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer//candidateSelectorD0Alice3Barrel.cxx" target="_blank">candidateSelectorD0Alice3Barrel.cxx</a>
 <div>
 
@@ -8172,7 +8172,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
 
 </div>
 
-####  o2-analysis-hf-d0-candidate-selector-alice3-forward
+####  o2-analysis-hf-candidate-selector-d0-alice3-forward
 Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer//candidateSelectorD0Alice3Forward.cxx" target="_blank">candidateSelectorD0Alice3Forward.cxx</a>
 <div>
 
@@ -8218,7 +8218,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
 
 </div>
 
-####  o2-analysis-hf-d0-candidate-selector-parametrized-pid
+####  o2-analysis-hf-candidate-selector-d0-parametrized-pid
 Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer//candidateSelectorD0ParametrizedPid.cxx" target="_blank">candidateSelectorD0ParametrizedPid.cxx</a>
 <div>
 
@@ -8285,7 +8285,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
 
 </div>
 
-####  o2-analysis-hf-dplus-topikpi-candidate-selector
+####  o2-analysis-hf-candidate-selector-dplus-to-pi-k-pi
 Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer//candidateSelectorDplusToPiKPi.cxx" target="_blank">candidateSelectorDplusToPiKPi.cxx</a>
 <div>
 
@@ -8317,7 +8317,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
 
 </div>
 
-####  o2-analysis-hf-ds-tokkpi-candidate-selector
+####  o2-analysis-hf-candidate-selector-ds-to-k-k-pi
 Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer//candidateSelectorDsToKKPi.cxx" target="_blank">candidateSelectorDsToKKPi.cxx</a>
 <div>
 
@@ -8356,7 +8356,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
 
 </div>
 
-####  o2-analysis-hf-jpsi-candidate-selector
+####  o2-analysis-hf-candidate-selector-jpsi
 Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer//candidateSelectorJpsi.cxx" target="_blank">candidateSelectorJpsi.cxx</a>
 <div>
 
@@ -8444,7 +8444,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
 
 </div>
 
-####  o2-analysis-hf-lb-tolcpi-candidate-selector
+####  o2-analysis-hf-candidate-selector-lb-to-lc-pi
 Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer//candidateSelectorLbToLcPi.cxx" target="_blank">candidateSelectorLbToLcPi.cxx</a>
 <div>
 
@@ -8476,7 +8476,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
 
 </div>
 
-####  o2-analysis-hf-lc-candidate-selector
+####  o2-analysis-hf-candidate-selector-lc
 Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer//candidateSelectorLc.cxx" target="_blank">candidateSelectorLc.cxx</a>
 <div>
 
@@ -8515,7 +8515,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
 
 </div>
 
-####  o2-analysis-hf-lc-candidate-selector-alice3
+####  o2-analysis-hf-candidate-selector-lc-alice3
 Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer//candidateSelectorLcAlice3.cxx" target="_blank">candidateSelectorLcAlice3.cxx</a>
 <div>
 
@@ -8596,7 +8596,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
 
 </div>
 
-####  o2-analysis-hf-lc-candidate-selector-parametrized-pid
+####  o2-analysis-hf-candidate-selector-lc-parametrized-pid
 Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer//candidateSelectorLcParametrizedPid.cxx" target="_blank">candidateSelectorLcParametrizedPid.cxx</a>
 <div>
 
@@ -8663,7 +8663,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
 
 </div>
 
-####  o2-analysis-hf-lc-tok0sp-candidate-selector
+####  o2-analysis-hf-candidate-selector-lc-to-k0s-p
 Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer//candidateSelectorLcK0sP.cxx" target="_blank">candidateSelectorLcK0sP.cxx</a>
 <div>
 
@@ -8695,8 +8695,8 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
 
 </div>
 
-####  o2-analysis-hf-pvrefit-skim-converted
-Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer//refitPVDummy.cxx" target="_blank">refitPVDummy.cxx</a>
+####  o2-analysis-hf-refit-pv-dummy
+Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer//refitPvDummy.cxx" target="_blank">refitPvDummy.cxx</a>
 <div>
 
   <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::HfPvRefitProng2</button>
@@ -8865,7 +8865,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
 
 </div>
 
-####  o2-analysis-hf-track-index-skims-creator
+####  o2-analysis-hf-track-index-skim-creator
 Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer//trackIndexSkimCreator.cxx" target="_blank">trackIndexSkimCreator.cxx</a>
 <div>
 
@@ -9447,7 +9447,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
 
 </div>
 
-####  o2-analysis-hf-tree-creator-bplus-tod0pi
+####  o2-analysis-hf-tree-creator-bplus-to-d0-pi
 Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer//treeCreatorBplusToD0Pi.cxx" target="_blank">treeCreatorBplusToD0Pi.cxx</a>
 <div>
 
@@ -10021,7 +10021,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
 
 </div>
 
-####  o2-analysis-hf-tree-creator-chic-tojpsigamma
+####  o2-analysis-hf-tree-creator-chic-to-jpsi-gamma
 Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer//treeCreatorChicToJpsiGamma.cxx" target="_blank">treeCreatorChicToJpsiGamma.cxx</a>
 <div>
 
@@ -10385,7 +10385,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
 
 </div>
 
-####  o2-analysis-hf-tree-creator-d0-tokpi
+####  o2-analysis-hf-tree-creator-d0-to-k-pi
 Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer//treeCreatorD0ToKPi.cxx" target="_blank">treeCreatorD0ToKPi.cxx</a>
 <div>
 
@@ -10917,7 +10917,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
 
 </div>
 
-####  o2-analysis-hf-tree-creator-lb-tolcpi
+####  o2-analysis-hf-tree-creator-lb-to-lc-pi
 Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer//treeCreatorLbToLcPi.cxx" target="_blank">treeCreatorLbToLcPi.cxx</a>
 <div>
 
@@ -11397,7 +11397,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
 
 </div>
 
-####  o2-analysis-hf-tree-creator-lc-topkpi
+####  o2-analysis-hf-tree-creator-lc-to-p-k-pi
 Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer//treeCreatorLcToPKPi.cxx" target="_blank">treeCreatorLcToPKPi.cxx</a>
 <div>
 
@@ -12048,7 +12048,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
 
 </div>
 
-####  o2-analysis-hf-tree-creator-x-tojpsipipi
+####  o2-analysis-hf-tree-creator-x-to-jpsi-pi-pi
 Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer//treeCreatorXToJpsiPiPi.cxx" target="_blank">treeCreatorXToJpsiPiPi.cxx</a>
 <div>
 
@@ -12489,7 +12489,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
 
 </div>
 
-####  o2-analysis-hf-tree-creator-xicc-topkpipi
+####  o2-analysis-hf-tree-creator-xicc-to-p-k-pi-pi
 Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer//treeCreatorXiccToPKPiPi.cxx" target="_blank">treeCreatorXiccToPKPiPi.cxx</a>
 <div>
 
@@ -13000,7 +13000,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
 
 </div>
 
-####  o2-analysis-hf-x-tojpsipipi-candidate-selector
+####  o2-analysis-hf-candidate-selector-x-to-jpsi-pi-pi
 Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer//candidateSelectorXToJpsiPiPi.cxx" target="_blank">candidateSelectorXToJpsiPiPi.cxx</a>
 <div>
 
@@ -13039,7 +13039,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
 
 </div>
 
-####  o2-analysis-hf-xic-topkpi-candidate-selector
+####  o2-analysis-hf-candidate-selector-xic-to-p-k-pi
 Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer//candidateSelectorXicToPKPi.cxx" target="_blank">candidateSelectorXicToPKPi.cxx</a>
 <div>
 
@@ -13078,7 +13078,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
 
 </div>
 
-####  o2-analysis-hf-xicc-topkpipi-candidate-selector
+####  o2-analysis-hf-candidate-selector-xicc-to-p-k-pi-pi
 Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer//candidateSelectorXiccToPKPiPi.cxx" target="_blank">candidateSelectorXiccToPKPiPi.cxx</a>
 <div>
 
