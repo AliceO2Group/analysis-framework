@@ -161,6 +161,13 @@ Click on the labels to display the definitions. Click buttons to
     </ul>
   </div>
 
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::CPVCluster</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::CPVCluster = o2::aod::CPVClusters::iterator</li>
+    </ul>
+  </div>
+
   <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::Zdc</button>
   <div class="panel">
     <ul>
