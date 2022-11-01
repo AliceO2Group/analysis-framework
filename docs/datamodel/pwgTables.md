@@ -8664,7 +8664,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
 </div>
 
 ####  o2-analysis-hf-candidate-selector-lc-to-k0s-p
-Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer//candidateSelectorLcK0sP.cxx" target="_blank">candidateSelectorLcK0sP.cxx</a>
+Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer//candidateSelectorLcToK0sP.cxx" target="_blank">candidateSelectorLcToK0sP.cxx</a>
 <div>
 
   <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::HFSelLcK0sPCandidate</button>

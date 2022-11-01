@@ -116,7 +116,7 @@ Workflow | File | Type
 `o2-analysis-hf-candidate-selector-x-to-jpsi-pi-pi` | `candidateSelectorXToJpsiPiPi.cxx` | X(3872) → J/ψ π<sup>±</sup> π<sup>∓</sup>
 `o2-analysis-hf-candidate-selector-dplus-to-pi-k-pi` | `candidateSelectorDplusToPiKPi.cxx` | D<sup>±</sup> → π<sup>±</sup> K<sup>∓</sup> π<sup>±</sup>
 `o2-analysis-hf-candidate-selector-lc` | `candidateSelectorLc.cxx` | Λ<sub>c</sub><sup>±</sup> → p(bar) K<sup>∓</sup> π<sup>±</sup>
-`o2-analysis-hf-candidate-selector-lc-to-k0s-p` | `candidateSelectorLcK0sP.cxx` | Λ<sub>c</sub><sup>±</sup> → p(bar) K<sub>S</sub><sup>0</sup>
+`o2-analysis-hf-candidate-selector-lc-to-k0s-p` | `candidateSelectorLcToK0sP.cxx` | Λ<sub>c</sub><sup>±</sup> → p(bar) K<sub>S</sub><sup>0</sup>
 `o2-analysis-hf-candidate-selector-xic-to-p-k-pi` | `candidateSelectorXicToPKPi.cxx` | Ξ<sub>c</sub><sup>±</sup> → p(bar) K<sup>∓</sup> π<sup>±</sup>
 `o2-analysis-hf-candidate-selector-xicc-to-p-k-pi-pi` | `candidateSelectorXiccToPKPiPi.cxx` | Ξ<sub>cc</sub><sup>±±</sup> → Ξ<sub>c</sub><sup>±</sup> π<sup>±</sup>
 `o2-analysis-hf-candidate-selector-bplus-to-d0-pi` | `candidateSelectorBplusToD0Pi.cxx` | B<sup>±</sup> → D<sup>0</sup>(bar) π<sup>±</sup>
@@ -134,7 +134,7 @@ Workflow | File | Type
 `o2-analysis-hf-task-jpsi` | `taskJpsi.cxx` | J/ψ → e<sup>+</sup> e<sup>−</sup>/μ<sup>+</sup> μ<sup>−</sup>
 `o2-analysis-hf-task-dplus` | `taskDplus.cxx` | D<sup>±</sup> → π<sup>±</sup> K<sup>∓</sup> π<sup>±</sup>
 `o2-analysis-hf-task-lc` | `taskLc.cxx` | Λ<sub>c</sub><sup>±</sup> → p(bar) K<sup>∓</sup> π<sup>±</sup>
-`o2-analysis-hf-task-lc-to-k0s-p` | `taskLcK0sP.cxx` | Λ<sub>c</sub><sup>±</sup> → p(bar) K<sub>S</sub><sup>0</sup>
+`o2-analysis-hf-task-lc-to-k0s-p` | `taskLcToK0sP.cxx` | Λ<sub>c</sub><sup>±</sup> → p(bar) K<sub>S</sub><sup>0</sup>
 `o2-analysis-hf-task-xic` | `taskXic.cxx` | Ξ<sub>c</sub><sup>±</sup> → p(bar) K<sup>∓</sup> π<sup>±</sup>
 `o2-analysis-hf-task-xicc` | `taskXicc.cxx` | Ξ<sub>cc</sub><sup>±±</sup> → Ξ<sub>c</sub><sup>±</sup> π<sup>±</sup>
 `o2-analysis-hf-task-bplus` | `taskBplus.cxx` | B<sup>±</sup> → D<sup>0</sup>(bar) π<sup>±</sup>
