@@ -6317,6 +6317,94 @@ For better overview the tables are grouped into the following categories: | [Gen
 <h4 id="cat_Others">Others</h4>
 <div>
 
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::CPVClusters</button>
+  <div class="panel">
+    <div>
+       CPV clusters
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev//Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::CPVCluster = o2::aod::CPVClusters::iterator</li>
+      </ul>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::soa::Index</td>
+        <td>GI</td>
+        <td>globalIndex</td>
+        <td>int64_t</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::cpvcluster::BCId</td>
+        <td>I</td>
+        <td>bcId</td>
+        <td>int32</td>
+        <td>BC index</td>
+      </tr>
+      <tr>
+        <td>o2::aod::cpvcluster::PosX</td>
+        <td></td>
+        <td>posX</td>
+        <td>float</td>
+        <td>X position in cm</td>
+      </tr>
+      <tr>
+        <td>o2::aod::cpvcluster::PosZ</td>
+        <td></td>
+        <td>posZ</td>
+        <td>float</td>
+        <td>Z position in cm</td>
+      </tr>
+      <tr>
+        <td>o2::aod::cpvcluster::Amplitude</td>
+        <td></td>
+        <td>amplitude</td>
+        <td>float</td>
+        <td>Signal amplitude</td>
+      </tr>
+      <tr>
+        <td>o2::aod::cpvcluster::ClusterStatus</td>
+        <td></td>
+        <td>clusterStatus</td>
+        <td>uint8_t</td>
+        <td>8 bits packed cluster status (bits 0-4 = pads mult, bits 5-6 = (module number - 2), bit 7 = isUnfolded)</td>
+      </tr>
+      <tr>
+        <td>o2::aod::cpvcluster::PadMult</td>
+        <td>D</td>
+        <td>padMult</td>
+        <td>uint8_t</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::cpvcluster::ModuleNumber</td>
+        <td>D</td>
+        <td>moduleNumber</td>
+        <td>uint8_t</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::cpvcluster::IsUnfolded</td>
+        <td>D</td>
+        <td>isUnfolded</td>
+        <td>bool</td>
+        <td></td>
+      </tr>
+    </table>
+  </div>
+
+
   <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::Decays3Body</button>
   <div class="panel">
     <div>
