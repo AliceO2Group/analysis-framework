@@ -4100,6 +4100,94 @@ For better overview the tables are grouped into the following categories: | [Gen
     </table>
   </div>
 
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::CPVClusters</button>
+  <div class="panel">
+    <div>
+       CPV clusters
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev//Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::CPVCluster = o2::aod::CPVClusters::iterator</li>
+      </ul>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::soa::Index</td>
+        <td>GI</td>
+        <td>globalIndex</td>
+        <td>int64_t</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::cpvcluster::BCId</td>
+        <td>I</td>
+        <td>bcId</td>
+        <td>int32</td>
+        <td>BC index</td>
+      </tr>
+      <tr>
+        <td>o2::aod::cpvcluster::PosX</td>
+        <td></td>
+        <td>posX</td>
+        <td>float</td>
+        <td>X position in cm</td>
+      </tr>
+      <tr>
+        <td>o2::aod::cpvcluster::PosZ</td>
+        <td></td>
+        <td>posZ</td>
+        <td>float</td>
+        <td>Z position in cm</td>
+      </tr>
+      <tr>
+        <td>o2::aod::cpvcluster::Amplitude</td>
+        <td></td>
+        <td>amplitude</td>
+        <td>float</td>
+        <td>Signal amplitude</td>
+      </tr>
+      <tr>
+        <td>o2::aod::cpvcluster::ClusterStatus</td>
+        <td></td>
+        <td>clusterStatus</td>
+        <td>uint8_t</td>
+        <td>8 bits packed cluster status (bits 0-4 = pads mult, bits 5-6 = (module number - 2), bit 7 = isUnfolded)</td>
+      </tr>
+      <tr>
+        <td>o2::aod::cpvcluster::PadMult</td>
+        <td>D</td>
+        <td>padMult</td>
+        <td>uint8_t</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::cpvcluster::ModuleNumber</td>
+        <td>D</td>
+        <td>moduleNumber</td>
+        <td>uint8_t</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::cpvcluster::IsUnfolded</td>
+        <td>D</td>
+        <td>isUnfolded</td>
+        <td>bool</td>
+        <td></td>
+      </tr>
+    </table>
+  </div>
+
 </div>
 <h4 id="cat_Strangeness">Strangeness</h4>
 <div>
@@ -4287,6 +4375,67 @@ For better overview the tables are grouped into the following categories: | [Gen
         <td>bachelorId</td>
         <td>int</td>
         <td>Bachelor track index</td>
+      </tr>
+    </table>
+  </div>
+
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::Decays3Body</button>
+  <div class="panel">
+    <div>
+       Run 2 cascade table
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev//Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::Decays3Body = o2::aod::Decays3Body</li>
+        <li>o2::aod::Decay3Body = o2::aod::Decays3Body::iterator</li>
+      </ul>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::soa::Index</td>
+        <td>GI</td>
+        <td>globalIndex</td>
+        <td>int64_t</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::decay3body::CollisionId</td>
+        <td>I</td>
+        <td>collisionId</td>
+        <td>int32</td>
+        <td>Collision index</td>
+      </tr>
+      <tr>
+        <td>o2::aod::decay3body::Track0Id</td>
+        <td>I</td>
+        <td>track0Id</td>
+        <td>int</td>
+        <td>Track 0 index</td>
+      </tr>
+      <tr>
+        <td>o2::aod::decay3body::Track1Id</td>
+        <td>I</td>
+        <td>track1Id</td>
+        <td>int</td>
+        <td>Track 1 index</td>
+      </tr>
+      <tr>
+        <td>o2::aod::decay3body::Track2Id</td>
+        <td>I</td>
+        <td>track2Id</td>
+        <td>int</td>
+        <td>Track 2 index</td>
       </tr>
     </table>
   </div>
@@ -4597,6 +4746,74 @@ For better overview the tables are grouped into the following categories: | [Gen
         <td>fddId</td>
         <td>int32</td>
         <td>Pointer into FDDs</td>
+      </tr>
+    </table>
+  </div>
+
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::MatchedBCCollisionsExclusiveMulti (I)</button>
+  <div class="panel">
+    <div>
+
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev//Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::indices::BCId</td>
+        <td>I</td>
+        <td>bcId</td>
+        <td>int32</td>
+        <td>Pointer into BCs</td>
+      </tr>
+      <tr>
+        <td>o2::aod::indices::CollisionIds</td>
+        <td>GI</td>
+        <td></td>
+        <td>?</td>
+        <td></td>
+      </tr>
+    </table>
+  </div>
+
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::MatchedBCCollisionsSparseMulti (I)</button>
+  <div class="panel">
+    <div>
+
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev//Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::indices::BCId</td>
+        <td>I</td>
+        <td>bcId</td>
+        <td>int32</td>
+        <td>Pointer into BCs</td>
+      </tr>
+      <tr>
+        <td>o2::aod::indices::CollisionIds</td>
+        <td>GI</td>
+        <td></td>
+        <td>?</td>
+        <td></td>
       </tr>
     </table>
   </div>
@@ -6317,155 +6534,6 @@ For better overview the tables are grouped into the following categories: | [Gen
 <h4 id="cat_Others">Others</h4>
 <div>
 
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::CPVClusters</button>
-  <div class="panel">
-    <div>
-       CPV clusters
-    </div>
-    <div>
-      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev//Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
-    </div>
-    <div>Is used in:
-      <ul>
-        <li>o2::aod::CPVCluster = o2::aod::CPVClusters::iterator</li>
-      </ul>
-    </div>
-    <table class=DataModel>
-      <tr>
-        <th>Name</th>
-        <th></th>
-        <th>Getter</th>
-        <th>Type</th>
-        <th>Comment</th>
-      </tr>
-      <tr>
-        <td>o2::soa::Index</td>
-        <td>GI</td>
-        <td>globalIndex</td>
-        <td>int64_t</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::cpvcluster::BCId</td>
-        <td>I</td>
-        <td>bcId</td>
-        <td>int32</td>
-        <td>BC index</td>
-      </tr>
-      <tr>
-        <td>o2::aod::cpvcluster::PosX</td>
-        <td></td>
-        <td>posX</td>
-        <td>float</td>
-        <td>X position in cm</td>
-      </tr>
-      <tr>
-        <td>o2::aod::cpvcluster::PosZ</td>
-        <td></td>
-        <td>posZ</td>
-        <td>float</td>
-        <td>Z position in cm</td>
-      </tr>
-      <tr>
-        <td>o2::aod::cpvcluster::Amplitude</td>
-        <td></td>
-        <td>amplitude</td>
-        <td>float</td>
-        <td>Signal amplitude</td>
-      </tr>
-      <tr>
-        <td>o2::aod::cpvcluster::ClusterStatus</td>
-        <td></td>
-        <td>clusterStatus</td>
-        <td>uint8_t</td>
-        <td>8 bits packed cluster status (bits 0-4 = pads mult, bits 5-6 = (module number - 2), bit 7 = isUnfolded)</td>
-      </tr>
-      <tr>
-        <td>o2::aod::cpvcluster::PadMult</td>
-        <td>D</td>
-        <td>padMult</td>
-        <td>uint8_t</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::cpvcluster::ModuleNumber</td>
-        <td>D</td>
-        <td>moduleNumber</td>
-        <td>uint8_t</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::cpvcluster::IsUnfolded</td>
-        <td>D</td>
-        <td>isUnfolded</td>
-        <td>bool</td>
-        <td></td>
-      </tr>
-    </table>
-  </div>
-
-
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::Decays3Body</button>
-  <div class="panel">
-    <div>
-       Run 2 cascade table
-    </div>
-    <div>
-      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev//Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
-    </div>
-    <div>Is used in:
-      <ul>
-        <li>o2::aod::Decays3Body = o2::aod::Decays3Body</li>
-        <li>o2::aod::Decay3Body = o2::aod::Decays3Body::iterator</li>
-      </ul>
-    </div>
-    <table class=DataModel>
-      <tr>
-        <th>Name</th>
-        <th></th>
-        <th>Getter</th>
-        <th>Type</th>
-        <th>Comment</th>
-      </tr>
-      <tr>
-        <td>o2::soa::Index</td>
-        <td>GI</td>
-        <td>globalIndex</td>
-        <td>int64_t</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::decay3body::CollisionId</td>
-        <td>I</td>
-        <td>collisionId</td>
-        <td>int32</td>
-        <td>Collision index</td>
-      </tr>
-      <tr>
-        <td>o2::aod::decay3body::Track0Id</td>
-        <td>I</td>
-        <td>track0Id</td>
-        <td>int</td>
-        <td>Track 0 index</td>
-      </tr>
-      <tr>
-        <td>o2::aod::decay3body::Track1Id</td>
-        <td>I</td>
-        <td>track1Id</td>
-        <td>int</td>
-        <td>Track 1 index</td>
-      </tr>
-      <tr>
-        <td>o2::aod::decay3body::Track2Id</td>
-        <td>I</td>
-        <td>track2Id</td>
-        <td>int</td>
-        <td>Track 2 index</td>
-      </tr>
-    </table>
-  </div>
-
-
   <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::Origins</button>
   <div class="panel">
     <div>
@@ -6500,74 +6568,6 @@ For better overview the tables are grouped into the following categories: | [Gen
         <td>dataframeID</td>
         <td>uint64_t</td>
         <td>Data frame ID (what is usually found in directory name in the AO2D.root, i.e. DF_XXX)</td>
-      </tr>
-    </table>
-  </div>
-
-
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::MatchedBCCollisionsExclusiveMulti (I)</button>
-  <div class="panel">
-    <div>
-
-    </div>
-    <div>
-      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev//Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
-    </div>
-    <table class=DataModel>
-      <tr>
-        <th>Name</th>
-        <th></th>
-        <th>Getter</th>
-        <th>Type</th>
-        <th>Comment</th>
-      </tr>
-      <tr>
-        <td>o2::aod::indices::BCId</td>
-        <td>I</td>
-        <td>bcId</td>
-        <td>int32</td>
-        <td>Pointer into BCs</td>
-      </tr>
-      <tr>
-        <td>o2::aod::indices::CollisionIds</td>
-        <td>GI</td>
-        <td></td>
-        <td>?</td>
-        <td></td>
-      </tr>
-    </table>
-  </div>
-
-
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::MatchedBCCollisionsSparseMulti (I)</button>
-  <div class="panel">
-    <div>
-
-    </div>
-    <div>
-      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev//Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
-    </div>
-    <table class=DataModel>
-      <tr>
-        <th>Name</th>
-        <th></th>
-        <th>Getter</th>
-        <th>Type</th>
-        <th>Comment</th>
-      </tr>
-      <tr>
-        <td>o2::aod::indices::BCId</td>
-        <td>I</td>
-        <td>bcId</td>
-        <td>int32</td>
-        <td>Pointer into BCs</td>
-      </tr>
-      <tr>
-        <td>o2::aod::indices::CollisionIds</td>
-        <td>GI</td>
-        <td></td>
-        <td>?</td>
-        <td></td>
       </tr>
     </table>
   </div>

@@ -2679,6 +2679,13 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
         <td>bool</td>
         <td>True if the Event Time was computed with the T0AC</td>
       </tr>
+      <tr>
+        <td>o2::aod::pidflags::IsEvTimeTOFT0AC</td>
+        <td>D</td>
+        <td>isEvTimeTOFT0AC</td>
+        <td>bool</td>
+        <td>True if the Event Time was computed with the TOF and T0AC</td>
+      </tr>
     </table>
   </div>
 
