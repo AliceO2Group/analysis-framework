@@ -209,7 +209,14 @@ You can enable a wagon in the _My Analyses_ page. Inside of the _Analysis_ there
 * If the TEST_ID is known, it can be directly accessed using the url <a href="https://alimonitor.cern.ch/hyperloop/wagon-test/TEST_ID" target="_blank">https://alimonitor.cern.ch/hyperloop/wagon-test/TEST_ID</a>. 
 * Inside of a wagon test, the test configuration, results, graphs and statistics are displayed.
  
-* <a name="testgeneral"></a> The General tab displays the summary of the wagon test, direct links to dataset and participating wagon configuration, as well as direct links to the test output and the <a href="https://johnysswlab.com/speedscope-visualize-what-your-program-is-doing-and-where-it-is-spending-time/" target="_blank">speedscope</a> profiling of the task. The test output can be accessed by clicking on the buttons: `⏳`,`🌟`, `❗️` or `💣`, or the link `(test output)`.
+* <a name="testgeneral"></a> The General tab displays the summary of the wagon test, direct links to dataset and participating wagon configuration, as well as direct links to the test output and the <a href="https://johnysswlab.com/speedscope-visualize-what-your-program-is-doing-and-where-it-is-spending-time/" target="_blank">speedscope</a> profiling of the task. The test output can be accessed by clicking on the buttons: `⏳`,`🌟`, `❗️` or `💣`, or the link `(test output)`. 
+ 
+ * You can use the `(browse)` button to open the content of AnalysisResults.root in the web browser. Additionally, clicking the `Speedscope` button will open the Speedscope view of the profiling of your tasks in a new tab (Speedscope is a web tool to display the profiling determined using Linux perf).
+
+<div align="center">
+   <img src="../images/testOutputBrowse.png" width="80%">
+</div>
+ 
 * If a wagon test has failed, one can study the failure source by clicking the test output button. This will open in a new tab the list of files that can be used to track the possible issues that led to the failure.
  
 <div align="center">
@@ -224,19 +231,27 @@ You can enable a wagon in the _My Analyses_ page. Inside of the _Analysis_ there
   * Standard output
   * Test results tab
 
-* <a name="testresults"></a>The Test results tab shows the performance metrics per device (reader, workflows, writer), along with the expected resources. You can use the interactive graphs (per device) to zoom into the area of interest (click and drag) or zoom out (double-click).
-
+* <a name="testresults"></a>The _Test_ tab displays the performance metrics and interactive graphs. This is split in three subtabs: Full Test, Per Wagon and Graphs.
+ 
+* The _Full test_ tab shows the performance metrics for the full test and plots the proportional set size on a responsive graph that can be zoomed in (click and drag) and out (double click). The table on the right side of the graph summarizes the resources used, including information such as the PSS memory and private memory, as well as the expected resources.
+ 
 <div align="center">
    <img src="../images/wagonTestResults.png" width="70%">
 </div>
-
-* <a name="testgraphs"></a>The Test Graphs tab, plots the available metrics for the specific wagon test. You can choose the metric of interest from the dropdown, zoom into the graph (click and drag) and zoom out (double-click).
-
+ 
+* The _Per Wagon_ tab displays the metrics per device (reader, workflows and writer), offering the same type of responsive graph for the monitoring of the PSS memory. To access / hide the graphs, click on the icon next to the device names. Additionally, you can check the number of calls to CCDB per device in the right-most column.
+ 
 <div align="center">
-   <img src="../images/testGraphs.png" width="70%"> //already there
+   <img src="../images/testResultsPerWagon.png" width="70%">
 </div>
 
-* If you only want to see the top 10 graph with the highest average, check the Show top 10 largest box.
+* <a name="testgraphs"></a>The _Graphs_ tab plots the available metrics for the specific wagon test. You can choose the metric of interest from the upper-left dropdown, which will update the graph accordingly. To plot the metric data per device, select the `Per device` checkbox. If you want to plot only the highest ten graphs, that means the graphs with the highest average, the click the `Show top 10 largest` checkbox.
+ 
+<div align="center">
+   <img src="../images/testGraphs.png" width="70%">
+</div>
+ 
+* To zoom into the graph, click and drag over the area of interest, and release. Double click on the graph to zoom out. 
 
 * Whenever a wagon configuration is changed, if there are enabled wagons (including wagons that depend on it), then the test is automatically reset and a new test is launched. However, if the enabled wagon was already composed in a train, the train will run with the wagons and dataset configuration of the time at which the train was created.
 
@@ -269,46 +284,49 @@ When creating or enabling wagons, you can use a pull request instead of a packag
 
 ### <a name="train-run"></a>Train Run Result
 
-* The _General_ tab displays the summary of the train's progress, direct links to dataset and participating wagon configuration, as well as direct links to the test output and the <a href="https://johnysswlab.com/speedscope-visualize-what-your-program-is-doing-and-where-it-is-spending-time/" target="_blank">speedscope</a> profiling of the task.
+* The _General_ tab displays the summary of the train's progress, direct links to dataset and participating wagon configuration, as well as direct links to the test output and the <a href="https://johnysswlab.com/speedscope-visualize-what-your-program-is-doing-and-where-it-is-spending-time/" target="_blank">speedscope</a> profiling of the task. Additionally, you can use the `(browse)` button to open the content of AnalysisResults.root in the web browser.
 
 <div align="center">
    <img src="../images/trainResult.png" width="70%">
 </div>
 
-* <a name="traintestresults"></a>The _Test results_ tab shows the performance metrics per device (reader, workflows, writer), along with the expected resources. You can use the interactive graphs (per device) to zoom into the area of interest (click and drag) or zoom out (double-click).
+* <a name="traintestresults"></a>The _Test_ tab displays the performance metrics and interactive graphs. This is split in three subtabs: Full Test, Per Wagon and Graphs.
+* The _Full test_ tab shows the performance metrics for the full test and plots the proportional set size on a responsive graph that can be zoomed in (click and drag) and out (double click). The table on the right side of the graph summarizes the resources used, including information such as the PSS memory and private memory, as well as the expected resources.
 
 <div align="center">
-   <img src="../images/testResults.png" width="70%">
+   <img src="../images/testResults.png" width="60%">
 </div>
 
+* The _Per Wagon_ tab displays the metrics per device (reader, workflows and writer), offering the same type of responsive graph for the monitoring of the PSS memory. To access / hide the graphs, click on the icon next to the device names. Additionally, you can check the number of calls to CCDB per device in the right-most column.
+ 
+<div align="center">
+   <img src="../images/trainTestResultsPerWagon.png" width="60%">
+</div>
+ 
 * <a name="traintestgraphs"></a>In the _Test Graphs_ tab, the user can plot the available metrics for the specific _Train run_. By hovering over the graph, the corresponding values are displayed in a dynamic window, stating the value for each participating wagon.
 
   <div align="center">
-    <img src="../images/testGraphs.png" width="70%">
+    <img src="../images/trainTestGraphs.png" width="60%">
   </div>
 
-  * The metric can be selected from the upper-left dropdown, and the graph will change accordingly.
-  * The user can choose to plot the metric data per device, by checking the _Per Device_ near the dropdown.
+* You can choose the metric of interest from the upper-left dropdown, which will update the graph accordingly. To plot the metric data per device, select the `Per device` checkbox.
 
-  <div align="center">
-    <img src="../images/testGraphsPerDevice.png" width="70%">
-  </div>
+<div align="center">
+ <img src="../images/testGraphsPerDevice.png" width="60%">
+</div>
 
-  * In order to plot the highest ten graphs, that means the graphs with the highest average, the user can click the **Show top 10 largest** checkbox.
-  
-  <div align="center">
-    <img src="../images/graphLargest.png" width="70%">
-  </div>
-  
-  * The user can zoom into the graph by clicking and dragging the mouse along the area of interest. For zooming out, the user must double-click on the graph.
+* In order to plot the highest ten graphs, that means the graphs with the highest average, the user can click the **Show top 10 largest** checkbox.
 
-  <div align="center">
-    <img src="../images/graphZoom.png" width="70%">
-  </div>
-  
-   <div align="center">
-    <img src="../images/graphZoom2.png" width="70%">
-  </div>
+<div align="center">
+  <img src="../images/graphLargest.png" width="60%">
+</div>
+
+* To zoom into the graph, click and drag over the area of interest, and release. Double click on the graph to zoom out.
+
+<div align="center">
+  <img src="../images/graphZoom.png" width="45%">
+  <img src="../images/graphZoom2.png" width="45%">
+</div>
 
 * <a name="trainsubmittedjobs"></a>In _Submitted jobs_, you can see the summary of the master jobs, along with links to the **IO Statistics** and **Stack trace**.
 
