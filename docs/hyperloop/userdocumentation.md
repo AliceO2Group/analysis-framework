@@ -209,11 +209,9 @@ You can enable a wagon in the _My Analyses_ page. Inside of the _Analysis_ there
 * If the TEST_ID is known, it can be directly accessed using the url <a href="https://alimonitor.cern.ch/hyperloop/wagon-test/TEST_ID" target="_blank">https://alimonitor.cern.ch/hyperloop/wagon-test/TEST_ID</a>. 
 * Inside of a wagon test, the test configuration, results, graphs and statistics are displayed.
  
-* <a name="testgeneral"></a> The General tab displays the summary of the wagon test, direct links to dataset and participating wagon configuration, as well as direct links to the test output and the <a href="https://johnysswlab.com/speedscope-visualize-what-your-program-is-doing-and-where-it-is-spending-time/" target="_blank">speedscope</a> profiling of the task. The test output can be accessed by clicking on the buttons: `⏳`,`🌟`, `❗️` or `💣`, or the link `(test output)`. 
- 
- * You can use the `(browse)` button to open the content of AnalysisResults.root in the web browser. Additionally, clicking the `Speedscope` button will open the Speedscope view of the profiling of your tasks in a new tab (Speedscope is a web tool to display the profiling determined using Linux perf).
+* <a name="testgeneral"></a> The General tab displays the summary of the wagon test, direct links to dataset and participating wagon configuration, as well as direct links to the test output and the <a href="https://johnysswlab.com/speedscope-visualize-what-your-program-is-doing-and-where-it-is-spending-time/" target="_blank">speedscope</a> profiling of the task. The test output can be accessed by clicking on the buttons: `⏳`,`🌟`, `❗️` or `💣`, or the link `(test output)`. Additionally, you can use the `(browse)` button to open the content of AnalysisResults.root in the web browser.
 
-<div align="center">
+ <div align="center">
    <img src="../images/testOutputBrowse.png" width="80%">
 </div>
  
@@ -245,7 +243,7 @@ You can enable a wagon in the _My Analyses_ page. Inside of the _Analysis_ there
    <img src="../images/testResultsPerWagon.png" width="70%">
 </div>
 
-* <a name="testgraphs"></a>The _Graphs_ tab plots the available metrics for the specific wagon test. You can choose the metric of interest from the upper-left dropdown, which will update the graph accordingly. To plot the metric data per device, select the `Per device` checkbox. If you want to plot only the highest ten graphs, that means the graphs with the highest average, the click the `Show top 10 largest` checkbox.
+* <a name="testgraphs"></a>The _Graphs_ tab plots the available metrics for the specific wagon test. You can choose the metric of interest from the upper-left dropdown, which will update the graph accordingly. To plot the metric data per device, select the `Per device` checkbox. If you want to plot only the highest ten graphs, that means the graphs with the highest average, then click the `Show top 10 largest` checkbox.
  
 <div align="center">
    <img src="../images/testGraphs.png" width="70%">
