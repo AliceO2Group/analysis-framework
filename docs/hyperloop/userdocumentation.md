@@ -303,7 +303,7 @@ When creating or enabling wagons, you can use a pull request instead of a packag
    <img src="../images/trainTestResultsPerWagon.png" width="60%">
 </div>
  
-* <a name="traintestgraphs"></a>In the _Test Graphs_ tab, the user can plot the available metrics for the specific _Train run_. By hovering over the graph, the corresponding values are displayed in a dynamic window, stating the value for each participating wagon.
+* <a name="traintestgraphs"></a>In the _Graphs_ tab, you can plot the available metrics for the specific _Train run_. By hovering over the graph, the corresponding values are displayed in a dynamic window, stating the value for each participating wagon.
 
   <div align="center">
     <img src="../images/trainTestGraphs.png" width="60%">
@@ -315,7 +315,7 @@ When creating or enabling wagons, you can use a pull request instead of a packag
  <img src="../images/testGraphsPerDevice.png" width="60%">
 </div>
 
-* In order to plot the highest ten graphs, that means the graphs with the highest average, the user can click the **Show top 10 largest** checkbox.
+* In order to plot the highest ten graphs, that means the graphs with the highest average, click the **Show top 10 largest** checkbox.
 
 <div align="center">
   <img src="../images/graphLargest.png" width="60%">
