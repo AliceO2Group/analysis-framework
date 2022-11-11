@@ -80,46 +80,49 @@ title: Operator Documentation
 
 ### <a name="train-run"></a>Train Run Result
 
-* <a name="traingeneral"></a>The _General_ tab displays the summary of the train's progress, direct links to dataset and participating wagon configuration, as well as direct links to the test output and the speedscope profiling of the task.
+* The _General_ tab displays the summary of the train's progress, direct links to dataset and participating wagon configuration, as well as direct links to the test output and the <a href="https://johnysswlab.com/speedscope-visualize-what-your-program-is-doing-and-where-it-is-spending-time/" target="_blank">speedscope</a> profiling of the task. Additionally, you can use the `(browse)` button to open the content of AnalysisResults.root in the web browser.
 
 <div align="center">
    <img src="../images/trainResult.png" width="70%">
 </div>
 
-* <a name="traintestresults"></a>The _Test results_ tab shows the performance metrics per device (reader, workflows, writer), along with the expected resources. You can use the interactive graphs (per device) to zoom into the area of interest (click and drag) or zoom out (double-click).
+* <a name="traintestresults"></a>The _Test_ tab displays the performance metrics and interactive graphs. This is split in three subtabs: Full Test, Per Wagon and Graphs.
+* The _Full test_ tab shows the performance metrics for the full test and plots the proportional set size on a responsive graph that can be zoomed in (click and drag) and out (double click). The table on the right side of the graph summarizes the resources used, including information such as the PSS memory and private memory, as well as the expected resources.
 
 <div align="center">
-   <img src="../images/testResults.png" width="70%">
+   <img src="../images/testResults.png" width="60%">
 </div>
 
-* <a name="traintestgraphs"></a>In the _Test Graphs_ tab, you can plot the available metrics for the specific _Train run_. By hovering over the graph, the corresponding values are displayed in a dynamic window, stating the value for each participating wagon.
+* The _Per Wagon_ tab displays the metrics per device (reader, workflows and writer), offering the same type of responsive graph for the monitoring of the PSS memory. To access / hide the graphs, click on the icon next to the device names. Additionally, you can check the number of calls to CCDB per device in the right-most column.
+ 
+<div align="center">
+   <img src="../images/trainTestResultsPerWagon.png" width="60%">
+</div>
+ 
+* <a name="traintestgraphs"></a>In the _Graphs_ tab, the user can plot the available metrics for the specific _Train run_. By hovering over the graph, the corresponding values are displayed in a dynamic window, stating the value for each participating wagon.
 
   <div align="center">
-    <img src="../images/testGraphs.png" width="70%">
+    <img src="../images/trainTestGraphs.png" width="60%">
   </div>
 
-  * The metric can be selected from the upper-left dropdown, and the graph will change accordingly.
-  * To plot the metric data per device, select the _Per Device_ checkbox near the dropdown.
+* You can choose the metric of interest from the upper-left dropdown, which will update the graph accordingly. To plot the metric data per device, select the `Per device` checkbox.
 
-  <div align="center">
-    <img src="../images/testGraphsPerDevice.png" width="70%">
-  </div>
+<div align="center">
+ <img src="../images/testGraphsPerDevice.png" width="60%">
+</div>
 
-  * In order to plot the highest ten graphs, that means the graphs with the highest average, click the **Show top 10 largest** checkbox.
-  
-  <div align="center">
-    <img src="../images/graphLargest.png" width="70%">
-  </div>
-  
-  * You can zoom into the graph by clicking and dragging the mouse along the area of interest. For zooming out, double-click on the graph.
+* In order to plot the highest ten graphs, that means the graphs with the highest average, the user can click the **Show top 10 largest** checkbox.
 
-  <div align="center">
-    <img src="../images/graphZoom.png" width="70%">
-  </div>
-  
-   <div align="center">
-    <img src="../images/graphZoom2.png" width="70%">
-  </div>
+<div align="center">
+  <img src="../images/graphLargest.png" width="60%">
+</div>
+
+* To zoom into the graph, click and drag over the area of interest, and release. Double click on the graph to zoom out.
+
+<div align="center">
+  <img src="../images/graphZoom.png" width="45%">
+  <img src="../images/graphZoom2.png" width="45%">
+</div>
 
 * <a name="trainsubmittedjobs"></a>In _Submitted jobs_, you can see the summary of the master jobs, along with links to the **IO Statistics** and **Stack trace**.
 
