@@ -20,12 +20,16 @@ If you need a single input files from a conversion train, please take them from 
 
 # Downloading AO2D from the Grid
 
-You can use the jalien cache manager for this which is the tool which downloads files to Hyperloop. To get this up on your local box, you need a few steps:
+You can use the either JAliEn Cache Manager (Hyperloop downloading tool) or just `alien.py cp` (or `alien_cp`) commands of `xjalienfs` package.  
+To get this up on your local box, you need a few steps:
 
 * Install xjalienfs with aliBuild:
 ```bash
 aliBuild install xjalienfs
 ```
+
+### Use the JAliEn Cache Manager
+
 * Checkout the cache manager from git:
 ```bash
 git clone ssh://git@gitlab.cern.ch:7999/jalien/jalien-cache-manager.git
@@ -55,3 +59,40 @@ When the command terminates it creates a `wn.xml` which contains the list of fil
 ```bash
 sed -rn 's/.*turl="([^"]*)".*/\1/p' wn.xml > input.txt
 ```
+
+### Use the `xjalienfs` package commands (`alienpy` in pypi repository)
+
+General description of file transfer capabilities of `alien.py` can be found in [JAliEn documentation pages](https://jalien.docs.cern.ch/user/alienpy_files/#transfer-files)
+
+General form of command: `alien.py cp args source destination`  
+where local targets _*MUST*_ have the designator `file:`
+and the lack of any designation imply remote (GRID) target
+
+#### Brief list of options
+
+Destination will be automatically taken as directory (and automatically created) if the source is directory or a file selection.
+The source allow inside globbing so the source can have the form of `/alice/data/2021/OCT/505637/apass1/AOD*AO2D.root`
+The other selection options are:
+* `-glob STRING` : form like `-glob AO2D.root /alice/data/2021/OCT/505637/apass1/AOD file:local_destination`
+* `-select PATTERN` : regex based selection of files in source directory (applied to full path)
+* `-name PATTERN` : regex based selection of files in source directory (applied only to file name)
+
+
+Force checking of destination: `-f`
+When destination exists the file is skipped from re-downloading (it will change to always check the md5sum)
+With `-f` the md5 will be checked (it will change to become default)
+
+
+Nr Parallel downloads (defaults to 8 for downloads) : `-T Nr`
+
+
+Retry Nr times the replica list for a failing LFN : `-retry Nr`
+
+
+Keep Nr components of the full path for the destination file : `-parent Nr`
+e.g. `alien.py cp -parent 99 /alice/data/2021/OCT/505637/apass1/AOD/001/AO2D.root file:/my_cache_dir`
+will download the file to `/my_cache_dir/alice/data/2021/OCT/505637/apass1/AOD/001/`
+
+{min, max}{Size, depth, time} selection is possible (see the linked manual)
+
+For writing xml collections see `toXml` command (and the help content)
