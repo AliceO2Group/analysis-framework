@@ -35,7 +35,11 @@ title: Operator Documentation
 
 * If a wagon has _Derived data_ tables activated, it will be signalized with the icon 🗂️ in the _Test status_ column. 
 * `☑️ slow train`: If enabled, the express train features are disabled. This means that you may have up to 2% more jobs which finish but the train run may take several days more.
-* `☑️ derived data`: If enabled, this train produces derived data to be used for further analysis. The results will not be merged and can be used as input for future train runs.
+* `Type`: This setting defines the type of train to be composed, and decides if derived data will be stored. The dropdown offers 4 possible options:
+  * **Analysis train** - this will be a standard analysis train and no derived data will be produced.
+  * **Standard derived data** - this train will produce derived data to be used for further analysis. The results will not be merged across runs and can be used as input for future train runs.
+  * **Linked derived data** - this option is for derived data which needs to access its parent file when it is processed. The derived data file produced will remember its parent files, inheriting also their storage location. The results will not be merged across runs and can be used as input for future train runs. Datasets composed from this train need to have parent access level activated. **`NOTE`**: at present (November 2022) this option is not yet implemented.
+  * **Slim derived data** - similarly to the standard derived data case, this train will produce derived data to be used for further analysis. This is reserved for derived data of small output size. The results will be merged across runs and are not available to use in future train runs. The data will be automatically deleted after a preset period of time. **`NOTE`**: at present (November 2022) this option is not yet implemented. 
 * `☑️ automatic submission`: If enabled will submit the train automatically after the test is done and succeeds `🌟`.
 * `Target`: Sets the facility/cores where the train will be run.
 * Finally, after defining the configuration, click on `Compose 🚂` to compose a train. After composing a train run, the wagons selected cannot be selected for a different train run unless the current train run is [decomposed](#decompose). After the train run is [submitted](#submit), the wagons will be disabled. 
