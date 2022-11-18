@@ -24,26 +24,36 @@ title: Operator Documentation
 * For a user, the <a href="https://alimonitor.cern.ch/hyperloop/train-submission" target="_blank">**Train Submission**</a> page displays a read view only of datasets which have enabled wagons.
 * For a train operator, the  _Train Submission_ page displays only datasets which have enabled wagons, and allows train composition, as well as submitting, modifying and killing a train.
 ### <a name="trainsubmission"></a>Train Composition
-* Trains are composed per dataset. Only wagons which have a test status of success `🌟` or warning `❗️` can be composed in a train.
+* Trains are composed per dataset. Only wagons which have a test status of success `🌟` or warning `❗️` can be composed in a train. If a wagon has _Derived data_ tables activated, it will be signalized with the icon 🗂️ in the _Test status_ column.
 * By default, wagons that were enabled at most one week ago are shown. In order to display all enabled wagons, click on `off` in the _Enabled_ column.
-* In order to compose a train, click `☑️` in the _Compose_ column. The package tag will be automatically chosen, and other wagons that can be included in the train run are signalized with 🟢, and the ones which are not compatible with 🔴. All wagons that are compatible can be automatically chosen by clicking on `✅ Select all compatible wagons`, or by selecting them one by one.
-* `☑️ automatic composition`: Train composition schedule is defined in the dataset settings. If the dataset has a defined schedule, the trains will be automatically composed at the specified time if the tests have finished without a warning.
+* In order to compose a train, select wagons by checking `☑️` in the _Compose_ column. The Package `Tag` will be automatically chosen, and other wagons that can be included in the train run are signalized with 🟢, and the ones which are not compatible with 🔴. All wagons that are compatible can be automatically chosen by clicking on `✅ Select all compatible wagons`, or by selecting them one by one.
 
 <div align="center">
-<img src="../images/automaticComposition.png" width="90%">
+<img src="../images/trainCompositionSettings.png" width="80%" style="margin: 30px">
 </div>
+&nbsp;
 
-* If a wagon has _Derived data_ tables activated, it will be signalized with the icon 🗂️ in the _Test status_ column. 
-* `☑️ slow train`: If enabled, the express train features are disabled. This means that you may have up to 2% more jobs which finish but the train run may take several days more.
+There are a number of settings that you can decide on when composing a train:
+* `Target`: Sets the facility/cores where the train will be run. 
 * `Type`: This setting defines the type of train to be composed, and decides if derived data will be stored. The dropdown offers 4 possible options:
   * **Analysis train** - this will be a standard analysis train and no derived data will be produced.
   * **Standard derived data** - this train will produce derived data to be used for further analysis. The results will not be merged across runs and can be used as input for future train runs.
   * **Linked derived data** - this option is for derived data which needs to access its parent file when it is processed. The derived data file produced will remember its parent files, inheriting also their storage location. The results will not be merged across runs and can be used as input for future train runs. Datasets composed from this train need to have parent access level activated. **`NOTE`**: at present (November 2022) this option is not yet implemented.
   * **Slim derived data** - similarly to the standard derived data case, this train will produce derived data to be used for further analysis. This is reserved for derived data of small output size. The results will be merged across runs and are not available to use in future train runs. The data will be automatically deleted after a preset period of time. **`NOTE`**: at present (November 2022) this option is not yet implemented. 
-* `☑️ automatic submission`: If enabled will submit the train automatically after the test is done and succeeds `🌟`.
-* `Target`: Sets the facility/cores where the train will be run.
-* Finally, after defining the configuration, click on `Compose 🚂` to compose a train. After composing a train run, the wagons selected cannot be selected for a different train run unless the current train run is [decomposed](#decompose). After the train run is [submitted](#submit), the wagons will be disabled. 
+* `☑️ slow train`: If enabled, the express train features are disabled. This means that you may have up to 2% more jobs which finish but the train run may take several days more.
+
+* `☑️ automatic submission`: If enabled, the train will be automatically submitted after the test is done and succeeds `🌟`.
+* Finally, after defining the configuration, click `Compose 🚂`. After composing a train run, the wagons that are part of it cannot be selected for a different train run unless the current one is [decomposed](#decompose). After the train run is [submitted](#submit), the wagons will be disabled. 
+
+* `☑️ automatic composition`: The train composition schedule is defined in the dataset settings. If the dataset has a defined schedule, the trains will be automatically composed at the specified times if the tests have finished without a warning and there is no derived data activated.
+
+<div align="center">
+<img src="../images/automaticComposition.png" width="75%">
+</div>
+&nbsp;
+
 * If a user changes a configuration between train composition and submission, the new configuration is not taken into account. The train runs with the wagons and dataset configuration corresponding to the time at which it was _created_.
+
 * The train will be automatically tested, and its progress can be followed in the _Train Runs_ table, or in the [**Train Runs**](#train-runs) page by clicking on the TRAIN_ID link.
 
 ### <a name="stagedsubmission"></a>Staged Submission
