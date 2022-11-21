@@ -13,7 +13,7 @@ Click on the labels to display the table content. Click buttons to
 
 <!-- Block with AO2D tables -->
 
-#### AO2D files
+####  AO2D files
 For better overview the tables are grouped into the following categories: | [General](#cat_General) | [Tracks](#cat_Tracks) | [Detectors](#cat_Detectors) | [Strangeness](#cat_Strangeness) | [Indices](#cat_Indices) | [MonteCarlo](#cat_MonteCarlo) | [Run2](#cat_Run2) | [Others](#cat_Others) |
 
 <div>
@@ -142,7 +142,7 @@ For better overview the tables are grouped into the following categories: | [Gen
         <td>I</td>
         <td>bcId</td>
         <td>int32</td>
-        <td>Most probably BC to where this collision has occurred</td>
+        <td>Most probably BC to where this collision has occured</td>
       </tr>
       <tr>
         <td>o2::aod::&zwnj;collision::PosX</td>
@@ -4985,14 +4985,14 @@ For better overview the tables are grouped into the following categories: | [Gen
         <td>SI</td>
         <td>daughter0Id</td>
         <td>int</td>
-        <td>Track index of the first daughter</td>
+        <td>Track index of the first daugther</td>
       </tr>
       <tr>
         <td>o2::aod::mcparticle::Daughter1Id</td>
         <td>SI</td>
         <td>daughter1Id</td>
         <td>int</td>
-        <td>Track index of the last daughter</td>
+        <td>Track index of the last daugther</td>
       </tr>
       <tr>
         <td>o2::aod::mcparticle::Weight</td>
@@ -5413,14 +5413,14 @@ For better overview the tables are grouped into the following categories: | [Gen
         <td>SI</td>
         <td>daughter0Id</td>
         <td>int</td>
-        <td>Track index of the first daughter</td>
+        <td>Track index of the first daugther</td>
       </tr>
       <tr>
         <td>o2::aod::mcparticle::Daughter1Id</td>
         <td>SI</td>
         <td>daughter1Id</td>
         <td>int</td>
-        <td>Track index of the last daughter</td>
+        <td>Track index of the last daugther</td>
       </tr>
       <tr>
         <td>o2::aod::mcparticle::Weight</td>
