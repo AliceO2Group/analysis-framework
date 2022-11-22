@@ -9,6 +9,4 @@ title: Options for running analyses
 
 ## Grid execution (standalone)
 
-## Hyperloop 
-
-
+## Hyperloop

@@ -3,10 +3,10 @@ sort: 11
 title: Table IO
 ---
 
-# Reading and saving tables to root files 
+# Reading and saving tables to root files
 
 ```goal
-Learn how to customize the reading of tables from root files. Write tables selectively according to your choice. 
+Learn how to customize the reading of tables from root files. Write tables selectively according to your choice.
 
 ```
 
@@ -28,10 +28,10 @@ When processing AO2D root files the command line option --aod-file is sufficient
 
 By default the writing of e.g. histograms created in a task also happens without much hassle. They are saved to one of the files AnalysisResults.root or QAResults.root (see tutorial [Histograms](histograms)).
 
-This tutorial demonstrates how to customize the reading and writing of tables from and to root files. 
-
+This tutorial demonstrates how to customize the reading and writing of tables from and to root files.
 
 <a name="writing"></a>
+
 ### Customized writing
 
 The writing of tables to file is customized by command line options. The option --aod-writer-keep allows to specify which columns of which table are saved to which tree in which file.
@@ -70,7 +70,7 @@ As a result the file AnalysisResults_trees.root is created with directories DF_x
 
 If you do not like the name of the root file then use command line argument --aod-writer-resfile to specify the output file.
 
-The implementation of an option which allows to save dangling tables only is motivated by the idea that tables which are consumed within a workflow are of temporary character and hence do normally not need to be saved. 
+The implementation of an option which allows to save dangling tables only is motivated by the idea that tables which are consumed within a workflow are of temporary character and hence do normally not need to be saved.
 
 The --aod-writer-keep argument is however more powerful than that and allows to save any table - dangling or not dangling <i class="fa fa-copyright">WS</i> - in a customized way.
 
@@ -93,6 +93,7 @@ o2-analysistutorial-tablio-write --aod-file AO2D.root --aod-writer-json writer.j
 With the following json file both tables of the example are saved to file EtaPtRanges.root, table MinMaxPt to tree O2ptrange and table MinMaxEta to tree O2etarange.
 
 `writer.json`:
+
 ```json
 {
   "OutputDirector": {
@@ -123,6 +124,7 @@ With the following json file both tables of the example are saved to file EtaPtR
 ```
 
 <a name="reading"></a>
+
 ### Customized reading
 
 Now that we have saved data to a file we would like to read it in an other task for further processing.
@@ -172,7 +174,7 @@ o2-analysistutorial-tableio-read --aod-file EtaPtRanges.root
 
 and as a result you should obtain the confirmation message that the number of rows in tables PtRange and EtaRange are equal. The case works fine without further specification, because a few rules have been followed in the declaration of the two tables and their columns. By default a table 'TABLE' is filled with data from the tree 'O2tABLE' and column 'COLUMN' with values from branch 'fCOLUMN'.
 
-What if we want to use the same task but read the data from the previously created files AnalysisResults_trees.root and TemporaryResults_trees.root. In fact together these two files contain exactly the same data as EtaPtRanges.root although the treenames are different. 
+What if we want to use the same task but read the data from the previously created files AnalysisResults_trees.root and TemporaryResults_trees.root. In fact together these two files contain exactly the same data as EtaPtRanges.root although the treenames are different.
 
 To customize the aod-reader beyond the default behavior we use the command line option --aod-reader-json and provide a json file with all the required information. Use the following command together with the displayed reader.json and resultFiles.txt to obtain again:
 <center>
@@ -186,6 +188,7 @@ o2-analysistutorial-tableio-read --aod-file @resultFiles.txt --aod-reader-json r
 ```
 
 `reader.json`
+
 ```json
 {
   "InputDirector": {
@@ -207,6 +210,7 @@ o2-analysistutorial-tableio-read --aod-file @resultFiles.txt --aod-reader-json r
 ```
 
 `resultFiles.txt`
+
 ```txt
 AnalysisResults_trees.root
 TemporaryResults_trees.root

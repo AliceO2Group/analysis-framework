@@ -17,11 +17,12 @@ Learn how to implement a task with more than one process function, and be aware 
 A Task can have several process functions. Such a task does not differ from a task with one process function only. Each process function has its arguments and filters are applied to the arguments of all process functions.
 
 <a name="multipleprocessexample"></a>
+
 ### MultipleProcessExample
 
 The tutorial example MultipleProcessExample has three process functions. All of of these process functions are relevant when processing MC data, but only one is needed when processing real data.
 
-In order for a process function to be executed it needs to be listed in the definition of the WorkFlowSpec. Here a global configurable is introduced to distingush the two cases. The option optionDoMC is set true when MC data are to be processed and otherwise to false. Note, it is important, that the ConfigParamSpec is made before runDataProcessing.h is included! The program will otherwise not compile.
+In order for a process function to be executed it needs to be listed in the definition of the WorkFlowSpec. Here a global configurable is introduced to distinguish the two cases. The option optionDoMC is set true when MC data are to be processed and otherwise to false. Note, it is important, that the ConfigParamSpec is made before runDataProcessing.h is included! The program will otherwise not compile.
 
 ```cpp
 void customize(std::vector<o2::framework::ConfigParamSpec>& workflowOptions)

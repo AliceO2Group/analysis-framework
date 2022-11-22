@@ -5,8 +5,8 @@ title: Using json configuration files
 
 # Using json configuration files
 
-Files of `json` type can be used to pass along configuration parameters to the various workflows 
-that one wishes to execute. 
+Files of `json` type can be used to pass along configuration parameters to the various workflows
+that one wishes to execute.
 
 ## Example of json file
 
@@ -63,18 +63,18 @@ that one wishes to execute.
 
 ```
 
-## Quick explanation 
+## Quick explanation
 
-In the above example of json file, in the `pseudorapidity-density` section (line 37 to 44), you can see the different values of the configurables, `maxDCAZ` is now 3.2 for instance. You can also specify the type of data you are processing with the flags `processRun2` `processRun3` and `isMC`. 
+In the above example of json file, in the `pseudorapidity-density` section (line 37 to 44), you can see the different values of the configurables, `maxDCAZ` is now 3.2 for instance. You can also specify the type of data you are processing with the flags `processRun2` `processRun3` and `isMC`.
 
-Another very useful thing is that inside this file you can provide a list of aod files to analyse, as you can see the line 10 `"aod-file": "@inputs-sim.txt"` means that the workflow will analyse the all the files contained in the txt file `inputs-sim.txt`, with one file name per line. 
+Another very useful thing is that inside this file you can provide a list of aod files to analyse, as you can see the line 10 `"aod-file": "@inputs-sim.txt"` means that the workflow will analyse the all the files contained in the txt file `inputs-sim.txt`, with one file name per line.
 
 ## How to give this json file to the workflow
 
 You have to provide the json file to the workflows with the command `--configuration json://config-file.json`
 
-For example the above json file is well adapted for the task `o2-analysis-mm-dndeta`, you could run this workflow by typing this command inside the O2Physics environment : 
+For example the above json file is well adapted for the task `o2-analysis-mm-dndeta`, you could run this workflow by typing this command inside the O2Physics environment :
 
 `o2-analysis-timestamp --configuration json://config-file.json | o2-analysis-event-selection --configuration json://config-file.json | o2-analysis-trackextension --configuration json://config-file.json | o2-analysis-mm-dndeta --configuration json://config-file.json`
 
-*N.B. : You should provide the json file to each workflow separated by a pipe. *
+*N.B. : You should provide the json file to each workflow separated by a pipe.*

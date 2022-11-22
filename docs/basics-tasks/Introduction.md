@@ -15,10 +15,10 @@ timeframe. The timeframe represents the minimal processing unit at all stages of
 the data processing, including the final analysis. Each timeframe is processed
 independently.  Because of the continuous nature of the data taking in Run 3,
 vertex-to-track association, for example, is no longer unambiguous, and thus
-collisions and tracks are represented as separate arrays of analysis objects, all 
+collisions and tracks are represented as separate arrays of analysis objects, all
 connected by an index. The analysis data model in Run 3 hence differs considerably
-from the hierarchical "event contents" of Runs 1 and 2. It is a collection of 
-flat tables (realized by Apache Arrow tables), arranged in a relational 
+from the hierarchical "event contents" of Runs 1 and 2. It is a collection of
+flat tables (realized by Apache Arrow tables), arranged in a relational
 database-like structure using index connections.
 
 The result of the asynchronous reconstruction is the Analysis Object Data (AOD)

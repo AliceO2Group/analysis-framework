@@ -7,7 +7,7 @@ title: Setting up an execution
 
 All user executables have the prefix o2-analysis- and end with xx-taskname,
 where xx is the PWG abbreviation (lower case) and taskname the name of the task
-as defined in the respective CMakeLists.txt file. 
+as defined in the respective CMakeLists.txt file.
 
 Tasks come with command line options. To display the available options use &#8208;&#8208;help. The following table lists the most commonly used options:
 
@@ -21,14 +21,16 @@ are either contained in the input AOD file or are produced by other tasks in the
 workflow.
 
 A simple example is the histogram tutorial which you can run (on Run 2 converted data) with:
+
 ```
 o2-analysistutorial-histograms --aod-file AO2D.root
 ```
+
 In case you try the same on Run 3 data or MC, you also need the [track propagation task](../helperTasks/trackPropagation.md):
+
 ```
 o2-analysis-timestamp | o2-analysis-track-propagation | o2-analysistutorial-histograms --aod-file AO2D.root
 ```
-
 
 Single task executables are combined with the pipe ( &#124; ) operator, e.g.
 

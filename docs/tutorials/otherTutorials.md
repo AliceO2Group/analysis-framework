@@ -4,11 +4,11 @@ title: More tutorials
 ---
 
 ### List of available tutorials
+
 This is a list of tutorials with less explanations. All code file can be found
 in the <a
 href="https://github.com/AliceO2Group/O2Physics/blob/master/Tutorials/src/"
 target="_blank">ALICEO2 code repository</a>.
-
 
 <div style="margin-bottom:5mm">
   Source: <a href="https://github.com/AliceO2Group/O2Physics/blob/master/Tutorials/src/compatibleBCs.cxx" target="_blank">compatibleBCs.cxx</a><br>
@@ -17,7 +17,6 @@ target="_blank">ALICEO2 code repository</a>.
     The most probable BC associated to a collision is the one closest in time to the collision time, which is determined from the tracks forming the collision vertex. Within the uncertainty of the collision time there might howvere be more than on BC. This tutorial shows how to find all BC which are within the uncertainty range of the collision time.
   </div>
 </div>
-  
 
 <div style="margin-bottom:5mm">
   Source: <a href="https://github.com/AliceO2Group/O2Physics/blob/master/Tutorials/src/configurableObjects.cxx" target="_blank">configurableObjects.cxx</a>, <a href="https://github.com/AliceO2Group/O2Physics/blob/master/Tutorials/src/configurableCut.cxx" target="_blank">configurableCut.cxx</a>, <a href="https://github.com/AliceO2Group/O2Physics/blob/master/Tutorials/include/Analysis/configurableCut.h" target="_blank">configurableCut.h</a>, <a href="https://github.com/AliceO2Group/O2Physics/blob/master/Tutorials/src/configurableCut.json" target="_blank">configurableCut.json</a><br>
@@ -27,7 +26,6 @@ target="_blank">ALICEO2 code repository</a>.
   </div>
 </div>
 
-
 <div style="margin-bottom:5mm">
   Source: <a href="https://github.com/AliceO2Group/O2Physics/blob/master/Tutorials/src/conditionalExpressions.cxx" target="_blank">conditionalExpressions.cxx</a><br>
   Executable: o2-analysistutorial-conditional-expressions
@@ -36,15 +34,13 @@ target="_blank">ALICEO2 code repository</a>.
   </div>
 </div>
 
-
 <div style="margin-bottom:5mm">
   Source: <a href="https://github.com/AliceO2Group/O2Physics/blob/master/Tutorials/src/extendedColumns.cxx" target="_blank">extendedColumns.cxx</a><br>
   Executable: o2-analysistutorial-extended-columns
   <div class="indBox">
-    Expression column are declared with a recipe to compute its values. The column is automatically computed when added to an existing table with the soa::Extend operator. 
+    Expression column are declared with a recipe to compute its values. The column is automatically computed when added to an existing table with the soa::Extend operator.
   </div>
 </div>
-
 
 <div style="margin-bottom:5mm">
   Source: <a href="https://github.com/AliceO2Group/O2Physics/blob/master/Tutorials/src/dynamicColumns.cxx" target="_blank">dynamicColumns.cxx</a><br>
@@ -54,7 +50,6 @@ target="_blank">ALICEO2 code repository</a>.
   </div>
 </div>
 
-
 <div style="margin-bottom:5mm">
   Source: <a href="https://github.com/AliceO2Group/O2Physics/blob/master/Tutorials/src/efficiencyGlobal.cxx" target="_blank">efficiencyGlobal.cxx</a><br>
   Executable: o2-analysistutorial-efficiency-global
@@ -62,7 +57,6 @@ target="_blank">ALICEO2 code repository</a>.
     In this tutorial an object which has previously been saved to the CCDB, is retrieved from the CCDB and is used for the construction of an efficiency histogram.
   </div>
 </div>
-
 
 <div style="margin-bottom:5mm">
   Source: <a href="https://github.com/AliceO2Group/O2Physics/blob/master/Tutorials/src/efficiencyPerRun.cxx" target="_blank">efficiencyPerRun.cxx</a><br>
@@ -72,7 +66,6 @@ target="_blank">ALICEO2 code repository</a>.
   </div>
 </div>
 
-
 <div style="margin-bottom:5mm">
   Source: <a href="https://github.com/AliceO2Group/O2Physics/blob/master/Tutorials/src/fullTrackIteration.cxx" target="_blank">fullTrackIteration.cxx</a><br>
   Executable: o2-analysistutorial-track-iteration
@@ -80,7 +73,6 @@ target="_blank">ALICEO2 code repository</a>.
     An example showing how to loop over the entries of joined tables.
   </div>
 </div>
-
 
 <div style="margin-bottom:5mm">
   Source: <a href="https://github.com/AliceO2Group/O2Physics/blob/master/Tutorials/src/histogramsFullTracks.cxx" target="_blank">histogramsFullTracks.cxx</a><br>
@@ -90,7 +82,6 @@ target="_blank">ALICEO2 code repository</a>.
     This example shows how to use aod::FullTracks which is a join of Tracks, TracksCov, and TracksExtra.
   </div>
 </div>
-
 
 <div style="margin-bottom:5mm">
   Source: <a href="https://github.com/AliceO2Group/O2Physics/blob/master/Tutorials/src/histogramTrackSelection.cxx" target="_blank">histogramTrackSelection.cxx</a><br>
@@ -103,7 +94,6 @@ target="_blank">ALICEO2 code repository</a>.
     o2-analysistutorial-track-selection  </div>
 </div>
 
-
 <div style="margin-bottom:5mm">
   Source: <a href="https://github.com/AliceO2Group/O2Physics/blob/master/Tutorials/src/jetAnalysis.cxx" target="_blank">jetAnalysis.cxx</a><br>
   Executable: o2-analysistutorial-jet-analysis
@@ -111,7 +101,6 @@ target="_blank">ALICEO2 code repository</a>.
   The JetAnalysis tasks subscribed to the tables Jet and JetConstituents which are created with the jet-finder executable o2-analysis-jetfinder.
   </div>
 </div>
-
 
 <div style="margin-bottom:5mm">
   Source: <a href="https://github.com/AliceO2Group/O2Physics/blob/master/Tutorials/src/multiplicityEventTrackSelection.cxx" target="_blank">multiplicityEventTrackSelection.cxx</a><br>
@@ -122,15 +111,13 @@ target="_blank">ALICEO2 code repository</a>.
   </div>
 </div>
 
-
 <div style="margin-bottom:5mm">
   Source: <a href="https://github.com/AliceO2Group/O2Physics/blob/master/Tutorials/src/muonIteration.cxx" target="_blank">muonIteration.cxx</a><br>
   Executable: o2-analysistutorial-muon-iteration
   <div class="indBox">
-    This tutorial shows how to use tables MatchedBCCollisionsExclusive and MatchedBCCollisionsSparse to access the Muons belonging to a given collision. 
+    This tutorial shows how to use tables MatchedBCCollisionsExclusive and MatchedBCCollisionsSparse to access the Muons belonging to a given collision.
   </div>
 </div>
-
 
 <div style="margin-bottom:5mm">
   Source: <a href="https://github.com/AliceO2Group/O2Physics/blob/master/Tutorials/src/schemaEvolution.cxx" target="_blank">schemaEvolution.cxx</a><br>
@@ -140,7 +127,6 @@ target="_blank">ALICEO2 code repository</a>.
   </div>
 </div>
 
-
 <div style="margin-bottom:5mm">
   Source: <a href="https://github.com/AliceO2Group/O2Physics/blob/master/Tutorials/src/tracksCombinations.cxx" target="_blank">tracksCombinations.cxx</a><br>
   Executable: o2-analysistutorial-tracks-combinations
@@ -148,7 +134,6 @@ target="_blank">ALICEO2 code repository</a>.
     Use a hash to sort tracks into a 2D histogram. The hash is used to create pairs of tracks from the same hash bin with function selfCombinations.
   </div>
 </div>
-
 
 <div style="margin-bottom:5mm">
   Source: <a href="https://github.com/AliceO2Group/O2Physics/blob/master/Tutorials/src/weakDecayIteration.cxx" target="_blank">weakDecayIteration.cxx</a><br>
@@ -158,11 +143,10 @@ target="_blank">ALICEO2 code repository</a>.
   </div>
 </div>
 
-
 <div style="margin-bottom:5mm">
   Source: <a href="https://github.com/AliceO2Group/O2Physics/blob/master/Tutorials/src/ZDCVZeroIteration.cxx" target="_blank">ZDCVZeroIteration.cxx</a><br>
   Executable: o2-analysistutorial-zdc-vzero-iteration
   <div class="indBox">
-    This tutorial shows how to use tables CollisionMatchedRun2Sparse and Run2MatchedExclusive to access ZDC and Fv0 information from Run2 data. 
+    This tutorial shows how to use tables CollisionMatchedRun2Sparse and Run2MatchedExclusive to access ZDC and Fv0 information from Run2 data.
   </div>
 </div>

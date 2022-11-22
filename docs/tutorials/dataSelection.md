@@ -15,7 +15,9 @@ Selecting rows of a table which fullfil given requirements is made easy by O2 wi
 Grouping (see e.g. tutorial [Table Combinations](tableCombinations.md)) is also a kind of a selection mechanism. In that case the "selection" is done with help of an index column. With Filter and Partition general requirements can be formulated and applied to any type of table.
 
 <a name="filter"></a>
+
 ## Filter
+
 <div style="margin-bottom:5mm">
   source: <a href="https://github.com/AliceO2Group/O2Physics/blob/master/Tutorials/src/filters.cxx" target="_blank">filters.cxx</a><br>
   Executable: o2-analysistutorial-filters
@@ -24,6 +26,7 @@ Grouping (see e.g. tutorial [Table Combinations](tableCombinations.md)) is also 
 Filters are used to select table entries only which comply with given reqirements.
 
 <a name="spawnextendedtables"></a>
+
 ### SpawnExtendedTables
 
 In task SpawnExtendedTables a couple of filters are defined. One of them (posZfilter) acts on collisions, the others on tracks. Note, that Filters is defined in namespace o2::framework::expressions.
@@ -69,13 +72,16 @@ Filters defined in front of a process function can be applied to the arguments o
 ```
 
 <a name="partition"></a>
+
 ## Partition
+
 <div style="margin-bottom:5mm">
   source: <a href="https://github.com/AliceO2Group/O2Physics/blob/master/Tutorials/src/partitions.cxx" target="_blank">partitions.cxx</a><br>
   Executable: o2-analysistutorial-partitions
 </div>
 
 <a name="partitionoutside"></a>
+
 ### PartitionOutside
 
 Partitions are subsets of existing tables, subsets of rows which are consistent
@@ -90,7 +96,7 @@ struct PartitionOutside {
   .
   .
   .
-  
+
   // all defined filters are applied
   using myTracks = soa::Filtered<aod::Tracks>;
 
@@ -102,7 +108,7 @@ struct PartitionOutside {
   // partitions are created and provided within the process function
   void process(aod::Collision const& collision, myTracks const& tracks)
   {
-    
+
     // all defined partitions are available
     LOGF(INFO, "Collision: %d [N = %d] [left phis = %d] [mid phis = %d] [right phis = %d]",
          collision.globalIndex(), tracks.size(), leftPhi.size(), midPhi.size(), rightPhi.size());
@@ -125,6 +131,7 @@ struct PartitionOutside {
 ```
 
 <a name="partitioninside"></a>
+
 ### PartitionInside
 
 Partitions can also be defined and used within the process function. in order to
@@ -136,11 +143,11 @@ struct PartitionInside {
   void process(aod::Collisions const& collisions, aod::Tracks& tracks)
   {
     for (auto& c : collisions) {
-      
+
       // create the partition groupedTracks
       Partition<aod::Tracks> groupedTracks = aod::track::collisionId == c.globalIndex();
       groupedTracks.bindTable(tracks);
-      
+
       // loop over the partition groupedTracks
       for (auto& t : groupedTracks) {
         LOGF(INFO, "collision global index: %d grouped track collision id: %d", c.globalIndex(), t.collisionId());

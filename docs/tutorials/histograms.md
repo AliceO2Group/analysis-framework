@@ -5,7 +5,6 @@ title: Histograms
 
 # Creating histograms
 
-
 ```goal
 Learn how to create, fill, and save histograms.
 ```
@@ -14,8 +13,9 @@ Learn how to create, fill, and save histograms.
   source: <a href="https://github.com/AliceO2Group/O2Physics/blob/master/Tutorials/src/histograms.cxx" target="_blank">histograms.cxx</a><br>
   Executable: o2-analysistutorial-histograms
 </div>
-  
+
 <a name="roothistograms"></a>
+
 ### RootHistograms
 
 Histograms can be created and filled in a task with the histogram constructors
@@ -25,7 +25,7 @@ target="_blank">chapter Histograms</a>).
 
 ```cpp
 struct RootHistograms {
-  
+
   // normal creation of a histogram
   TH1F* phiH = new TH1F("phiA", "phiA", 100, 0., 2. * M_PI);
 
@@ -43,6 +43,7 @@ In this way one can create and process tables. However, they are not persistent 
 This is different when using `OutputObj<>` to create a histogram or other root objects.
 
 <a name="outputobjects"></a>
+
 ### OutputObjects
 
 `OutputObj<>` allows to create root objects which are automatically saved to disk. The objects are either AnalysisObjects (default) or QAObjects, which determines into which file they are written. AnalysisObjects end up in AnalysisResults.root and QAObjects, in QAResults.root.
@@ -53,9 +54,9 @@ target="_blank">TNamed Class</a>).
 
 ```cpp
 struct OutputObjects {
-  
+
   // histogram created with OutputObj<TH1F>
-  OutputObj<TH1F> phiB{TH1F("phiB", "phiB", 100, 0., 2. * M_PI, 
+  OutputObj<TH1F> phiB{TH1F("phiB", "phiB", 100, 0., 2. * M_PI,
                        OutputObjHandlingPolicy::QAObjects)};
 
   void process(aod::Tracks const& tracks)
@@ -68,6 +69,7 @@ struct OutputObjects {
 ```
 
 <a name="outputobjset"></a>
+
 ### OutputObjSet
 
 In task OutputObjSet the initial definition of the OutputObj trZ is incomplet. The axis definition of the histogram is missing. This is rectified in the init function. The setObject() method allows to redefine the actual object properties.
@@ -82,13 +84,14 @@ In task OutputObjSet the initial definition of the OutputObj trZ is incomplet. T
 ```
 
 <a name="histregistry"></a>
+
 ### HistRegistry
 
 HistogramRegistry is an other method to work with histograms in a flexible way. There is a [tutorial](histogramRegistry.md) on this specific topic to which we refer for further details. To give an impression an example task using HistogramRegistry is displayed below.
 
 ```cpp
 struct HistRegistry {
-  
+
   // histogram defined with HistogramRegistry
   HistogramRegistry registry {
     "registry",

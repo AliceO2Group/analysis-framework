@@ -16,7 +16,6 @@ The options to consider are:
 * --aod-writer-ntfmerge
 * --aod-writer-json
 
-
 ## --aod-writer-keep
 
 aod-writer-keep is a comma-separated list of DataOuputDescriptors.
@@ -30,6 +29,7 @@ Each DataOuputDescriptor is a colon-separated list of 4 items
 ```csh
 table:tree:columns:file
 ```
+
 and instructs the internal-dpl-aod-writer, to save the columns `columns` of table `table` as TTree `tree` into file `file`.root. The selected columns are saved as separate TBranches of TTree `tree`.
 
 By default there is one directory DF_x created per processed data frame, where x is the data frame number. This behavior can be modified with the command line option --aod-writer-ntfmerge. The value of aod-writer-ntfmerge specifies the number of data frames to write into the same DF_y directory with y = ntfmerge * (uint64_t)(x / ntfmerge).
@@ -41,6 +41,7 @@ The format of `table` is
 ```csh
 AOD/TABLENAME/0
 ```
+
 `TABLENAME` is the description of the table as defined in the workflow definition.
 
 The format of `tree` is a simple string which names the TTree the table is saved to. If tree is not specified then `O2tablename` is used as TTree name.
@@ -50,11 +51,13 @@ The format of `tree` is a simple string which names the TTree the table is saved
 ```csh
 col1/col2/col3
 ```
+
 The column names are expected to match column labels as defined in the respective workflow. Non-matching columns are ignored. The selected table columns are saved as separate TBranches with the same names as the corresponding table columns. If `columns` is not specified then all table columns are saved.
 
 `file` finally is used to compose the name of the file `file`.root the tables are saved to. If this is missing the file name is set to the default file name. The default file name is AnalysisResults_trees.root but can be changed with the option aod-writer-resfile.
 
 ### Dangling outputs
+
 The aod-writer-keep option also accepts the string "dangling" (or any leading
 sub-string of it). In this case all dangling output tables are saved. For the
 parameters tree, columns, and file the default values ([see table
@@ -76,17 +79,17 @@ An example file is shown in the highlighted field below. The relevant
 information is contained in a json object OutputDirector. The
 OutputDirector can include three different items:
 
-  1. resfile is a string and corresponds to the aod-writer-resfile command line option  
-  2. ntfmerge is an integer and corresponds to the aod-writer-ntfmerge command line option  
+  1. resfile is a string and corresponds to the aod-writer-resfile command line option
+  2. ntfmerge is an integer and corresponds to the aod-writer-ntfmerge command line option
   3. OutputDescriptors is an array of objects and corresponds to the aod-writer-keep command line option. The objects are equivalent to the DataOuputDescriptors of the aod-writer-keep option and are composed of 4 items which correspond to the 4 items of a DataOuputDescriptor.
-  
-     a. `table` is a string  
-     b. `treename` is a string  
-     c. `columns` is an array of strings  
-     d. `filename` is a string  
-  
-  
+
+     a. `table` is a string
+     b. `treename` is a string
+     c. `columns` is an array of strings
+     d. `filename` is a string
+
 Example json file for the internal-dpl-aod-writer:
+
 ```csh
 {
   "OutputDirector": {
@@ -114,6 +117,7 @@ Example json file for the internal-dpl-aod-writer:
   }
 }
 ```
+
 <a name="redundancy"></a> The information provided with the json file and the
 information which can be provided with the other command line options is
 obviously redundant. Anyway, currently all options can be used together.
@@ -125,22 +129,21 @@ This hierarchy of the options is summarized in the following table. The columns 
 
 <a name="priorities"></a>
 
-| parameter\option | keep | resfile | ntfmerge | json | default |
-|--------------|:----:|:--------:|:--------:|----------:|:-------:|
-| `default file name` | - | 1.    | -        | 2.        | 3. (AnalysisResults_trees)|
-| `ntfmerge`   | -    | -        |  1.      | 2.        | 3. (1)  |
-| `tablename`  | 1.   | -        | -        | 2.        | -       |
-| `tree`       | 1.   | -        | -        | 2.        | 3. (`O2tablename`) |
-| `columns`    | 1.   | -        | -        | 2.        | 3. (all columns)     |
-| `file`       | 1.   | 2.       | -        | 3.        | 4. (`default file name`)|
-
+| parameter\option    | keep | resfile | ntfmerge | json |          default           |
+|---------------------|:----:|:-------:|:--------:|-----:|:--------------------------:|
+| `default file name` |  -   |   1.    |    -     |   2. | 3. (AnalysisResults_trees) |
+| `ntfmerge`          |  -   |    -    |    1.    |   2. |           3. (1)           |
+| `tablename`         |  1.  |    -    |    -     |   2. |             -              |
+| `tree`              |  1.  |    -    |    -     |   2. |     3. (`O2tablename`)     |
+| `columns`           |  1.  |    -    |    -     |   2. |      3. (all columns)      |
+| `file`              |  1.  |   2.    |    -     |   3. |  4. (`default file name`)  |
 
 ## Valid example command line options
 
 ```csh
 --aod-writer-keep AOD/UNO/0
  # save all columns of table 'UNO' to TTree O2'uno' in file AnalysisResults_tree.root
-  
+
 --aod-writer-keep AOD/UNO/0::c2/c4:unoresults
  # save columns 'c2' and 'c4' of table 'UNO' to TTree O2'uno' in file unoresults.root
 

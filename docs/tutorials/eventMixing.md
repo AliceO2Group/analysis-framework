@@ -19,6 +19,7 @@ For a general introduction to combinations and event mixing, check first [here](
 ### MixedEvents
 
 Firstly, we define binning of collisions for block combinations:
+
 ```cpp
 std::vector<double> xBins{VARIABLE_WIDTH, -0.064, -0.062, -0.060, 0.066, 0.068, 0.070, 0.072};
 std::vector<double> yBins{VARIABLE_WIDTH, -0.320, -0.301, -0.300, 0.330, 0.340, 0.350, 0.360};
@@ -29,9 +30,11 @@ BinningType binningOnPositions{{xBins, yBins}, true};                           
 ```
 
 Then, we define the mixing structure itself:
+
 ```cpp
 SameKindPair<aod::Collisions, aod::Tracks, BinningType> pair{binningOnPositions, 5, -1}; // indicates that 5 events should be mixed and under/overflow (-1) to be ignored
 ```
+
 In this case, only table types and the binning police type need to be passed, as the rest is taken from the defaults.
 
 Then, inside your `process()` function, you can directly iterate over mixed event pairs together with two separate track tables which contain tracks from the two different collision in the pair:

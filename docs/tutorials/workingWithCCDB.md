@@ -27,15 +27,17 @@ The CCDB can by-the-way be browsed
 <a href="http://alice-ccdb.cern.ch/browse" target="_blank">here.</a>
 
 <a name="timestampusertask"></a>
+
 ### TimestampUserTask
 
 Access to the CCDB is realized through the service o2::ccdb::BasicCCDBManager.
+
 ```cpp
 Service<o2::ccdb::BasicCCDBManager> ccdb;
 ```
 
 The BasicCCDBManager has to be initialized first. In this example this happens in the init function. With the setCreatedNotAfter() method an upper time limit for the retrieved object is set.
- 
+
 ```cpp
 void init(o2::framework::InitContext&)
 {
@@ -48,9 +50,8 @@ void init(o2::framework::InitContext&)
 }
 ```
 
-In the process function we loop over BCs and the associated Collisions. The CCDB object for a given timestamp is retrieved with the templated method 
+In the process function we loop over BCs and the associated Collisions. The CCDB object for a given timestamp is retrieved with the templated method
 getForTimeStamp<T>(path,timestamp). In this case the object qc/TOF/TOFTaskCompressed/hDiagnostic of type TH2F is accessed.
-
 
 ```cpp
 // goup BCs according to Collisions
@@ -61,7 +62,7 @@ void process(aod::BCsWithTimestamps::iterator const& bc, aod::Collisions const& 
   if (collisions.size() == 0) {
     return;
   }
-  
+
   LOGF(info, "Getting object %s for run number %i from timestamp=%llu", path.value.data(), bc.runNumber(), bc.timestamp());
   // retrieve object for given timestamp
   auto obj = ccdb->getForTimeStamp<TH2F>(path.value, bc.timestamp());

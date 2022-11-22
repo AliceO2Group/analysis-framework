@@ -3,12 +3,12 @@ sort: 6
 title: Creating Tables
 ---
 
-# Declaration and production of tables 
-
+# Declaration and production of tables
 
 ```goal
 Learn how to declare and produce new tables.
 ```
+
 <div style="margin-bottom:5mm">
   source: <a href="https://github.com/AliceO2Group/O2Physics/blob/master/Tutorials/src/newCollections.cxx" target="_blank">newCollections.cxx</a><br>
   Executable: o2-analysistutorial-new-collections
@@ -17,6 +17,7 @@ Learn how to declare and produce new tables.
 Before we come to discussing the tutorial [code](#produceetaphi) a few general words about creating tables.
 
 <a name="declareTables"></a>
+
 ### Declaration of tables
 
 The first step in creating a table in O2 is to declare it, hence specify its name, some additional parameters, and it's basic components, the columns.
@@ -35,7 +36,7 @@ All methods have a `Name` and `Description` argument. The argument Name is used 
       </b>
       <div>
         Declares a table of type `Name` with the columns specified in the argument list. The columns are specified as a comma separated list of column types. Only columns, dynamic columns, and index columns are accepted.
-        
+
         <table style="width:100%">
           <tr>
             <th> Method </th>
@@ -88,7 +89,7 @@ All methods have a `Name` and `Description` argument. The argument Name is used 
             <td>  </td>
           </tr>
        </table>
-        
+
       </div>
     </div>
   </div>
@@ -120,6 +121,7 @@ All methods have a `Name` and `Description` argument. The argument Name is used 
 </div>
 
 <a name="declareColumns"></a>
+
 ### Declaration of columns
 
 Tables are basically collections of columns. The O2 framework provides the methods to declare columns, which are listed below. Click on the titles to display information about the arguments and the resulting columns.
@@ -127,7 +129,7 @@ Tables are basically collections of columns. The O2 framework provides the metho
 `Name` and `Getter` are the common arguments of all methods. Name is used to
 define the type of the column which is `namespace::Name` where namespace is the
 namespace the column is declared in. Getter is the method which allows to access
-a column (tab.pt() e.g. gives access to an element of the column which was declared with a Getter value of pt). 
+a column (tab.pt() e.g. gives access to an element of the column which was declared with a Getter value of pt).
 
 <div>
 
@@ -139,7 +141,7 @@ a column (tab.pt() e.g. gives access to an element of the column which was decla
       </b>
       <div>
         Declares a column of type `Name`. The elements are of type `Type`. The column is given the label "f`Label`" which is used within the framework to identify the column.
-        
+
         <table style="width:100%">
           <tr>
             <th> Method </th>
@@ -152,7 +154,7 @@ a column (tab.pt() e.g. gives access to an element of the column which was decla
             <td> Column element. </td>
           </tr>
         </table>
-        
+
       </div>
     </div>
   </div>
@@ -176,8 +178,8 @@ a column (tab.pt() e.g. gives access to an element of the column which was decla
       DECLARE_SOA_EXPRESSION_COLUMN_FULL (Name, Getter, Type, char* Label, Expression);
       </b>
       <div>
-        Same as DECLARE_SOA_COLUMN_FULL but here the column element values are computed according to the expression `Expression`. Expression columns can be used to extend an exising table (see tutorial <a href="extendedTables.html">Extending Tables</a>).
-        
+        Same as DECLARE_SOA_COLUMN_FULL but here the column element values are computed according to the expression `Expression`. Expression columns can be used to extend an existing table (see tutorial <a href="extendedTables.html">Extending Tables</a>).
+
         <table style="width:100%">
           <tr>
             <th> Method </th>
@@ -195,7 +197,7 @@ a column (tab.pt() e.g. gives access to an element of the column which was decla
             <td> `Expression`. </td>
           </tr>
         </table>
-        
+
       </div>
     </div>
   </div>
@@ -220,7 +222,7 @@ a column (tab.pt() e.g. gives access to an element of the column which was decla
       </b>
       <div>
         Declares the index column `Name`Id to the existing table `Table`s (binding table). The column elements are of type `Type`. `Suffix` can be used to distinguish several index columns to the same table. The column label which is used within the framework to identify the column is set to fIndex`Table``Suffix`. If `Suffix` is not empty it must start with an underscore! `Table` must have a o2::soa::Index column!
-        
+
         <table style="width:100%">
           <tr>
             <th> Method </th>
@@ -258,7 +260,7 @@ a column (tab.pt() e.g. gives access to an element of the column which was decla
             <td> Binding table. </td>
           </tr>
         </table>
-        
+
       </div>
     </div>
   </div>
@@ -282,8 +284,8 @@ a column (tab.pt() e.g. gives access to an element of the column which was decla
       DECLARE_SOA_DYNAMIC_COLUMN (Name, Getter, ...);
       </b>
       <div>
-        Declares a column of type `Name`. The column elements are dynamically computed with the lambda provided as third argument to the declaration. This also determines the type of the elements. Dynamic columns can be attached to exising tables (see tutorial <a href="extendedTables.html">Extending Tables</a>).
-        
+        Declares a column of type `Name`. The column elements are dynamically computed with the lambda provided as third argument to the declaration. This also determines the type of the elements. Dynamic columns can be attached to existing tables (see tutorial <a href="extendedTables.html">Extending Tables</a>).
+
         <table style="width:100%">
           <tr>
             <th> Method </th>
@@ -301,7 +303,7 @@ a column (tab.pt() e.g. gives access to an element of the column which was decla
             <td> Dynamic column element computed with input columns t. </td>
           </tr>
         </table>
-        
+
       </div>
     </div>
   </div>
@@ -311,11 +313,11 @@ a column (tab.pt() e.g. gives access to an element of the column which was decla
 <br>
 This tutorial demonstrates the creation and filling of normal tables. The usage of index tables is explained in tutorial [Index Tables](indexTables.md).
 
-
 <a name="produceetaphi"></a>
+
 ### ProduceEtaPhi
 
-In order to avoid naming conflicts between different tasks it is advisable to declare new columns in subspaces of the namespace o2::aod and the new tables in namespace o2::aod. 
+In order to avoid naming conflicts between different tasks it is advisable to declare new columns in subspaces of the namespace o2::aod and the new tables in namespace o2::aod.
 
 ```cpp
 // declare columns in a sub-namespace of o2::aod
@@ -331,6 +333,7 @@ DECLARE_SOA_TABLE(EtaPhi, "AOD", "ETAPHI",
                   etaphi::Eta, etaphi::Phi);
 } // namespace o2::aod
 ```
+
 Now that the table is declared we can use it to create a corresponding table object. This happens with the Produces class. Produces is a templated class and takes the type of the table to create as template argument. The table type in this case is aod::EtaPhi and the actual table object is etaphi.
 
 The filling of the table etaphi is done with the method (... ) which takes as many arguments as columns are available.
@@ -354,6 +357,7 @@ struct ProduceEtaPhi {
 ```
 
 <a name="consumeetaphi"></a>
+
 ### ConsumeEtaPhi and LoopEtaPhi
 
 Within all tasks of a workflow the such created and filled table is available and hence can be use for further calculations. This is demonstrated with the tasks ConsumeEtaPhi and LoopEtaPhi of this tutorial.

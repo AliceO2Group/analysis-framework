@@ -3,12 +3,12 @@ sort: 3
 title: Table Combinations
 ---
 
-# Processing information from multiple tables 
-
+# Processing information from multiple tables
 
 ```goal
 Learn how to efficiently access and process related information from different tables.
 ```
+
 <div style="margin-bottom:5mm">
   source: <a href="https://github.com/AliceO2Group/O2Physics/blob/master/Tutorials/src/collisionTracksIteration.cxx" target="_blank">collisionTracksIteration.cxx</a><br>
   Executable: o2-analysistutorial-collision-tracks-iteration
@@ -19,6 +19,7 @@ Are you having problems running this tutorial? If the program stops with an erro
 ```
 
 <a name="trackspercollision"></a>
+
 ### TracksPerCollision
 
 Tables can be related - tracks belong to a collision, FT0 signals to a bunch crossing, muon clusters to a muon track, etc, etc. To express this child-parent relation, the children have index columns which point into the parent table (see the <a href="../datamodel#table-relations">Data Model</a>).
@@ -29,7 +30,7 @@ Using the full power of the task's process method this can be done without expli
 
 ```cpp
 struct TracksPerCollision {
-  
+
   void process(aod::Collision const&, aod::Tracks const& tracks)
   {
     // `tracks` contains tracks belonging to`collision`
@@ -42,11 +43,12 @@ struct TracksPerCollision {
   }
 };
 ```
+
 By the way, add a collision variable in the argument list of process to have access to the information contained in the Collisions table - if you wish.
 
 ```cpp
 struct TracksPerCollision {
-  
+
   void process(aod::Collision const& collision, aod::Tracks const& tracks)
   {
     LOGF(info, "The collision time:   %f", collision.collisionTime());
@@ -54,12 +56,15 @@ struct TracksPerCollision {
   }
 };
 ```
+
 <a name="tracksperdataframe"></a>
+
 ### TracksPerDataframe
 
 The automatic grouping of tracks according to the collision works in the above case because the table Tracks has an index column with pointers to the table Collisions. It is also crucial to use the iterator version Collision and not Collisions. It is in fact the first iterator of the argument list which is used for grouping. With Collisions instead of Collision the grouping does not happen! Instead the entire Collisions and Tracks tables will be available in the process function.
 
 <a name="groupbycollision"></a>
+
 ### GroupByCollision
 
 The grouping works with any number of children. In the below example the process function is given three arguments. In this case process is run for each collision with the tracks and V0s belonging to the actual collision.
@@ -76,13 +81,15 @@ The grouping works with any number of children. In the below example the process
 ```
 
 ATENTION: if the tutorial is executed like
+
 ```csh
 o2-analysistutorial-collision-tracks-iteration --aod-file AO2D.root
 ```
+
 it will stop in GroupByCollision with an error message from the internal-dpl-aod-reader saying something like `Exception caught: Couldn't get TTree "DF_xxx/O2v0index"`. This is because the V0s table needs to be prepared first with the task `o2-analysis-weak-decay-indices`. Hence first process the data with `o2-analysis-weak-decay-indices` and pipe its output to `o2-analysistutorial-collision-tracks-iteration` using
 
 ```csh
 o2-analysis-weak-decay-indices --aod-file AO2D.root | o2-analysistutorial-weak-decay-iteration
 ```
-Success?
 
+Success?

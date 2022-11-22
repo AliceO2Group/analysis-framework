@@ -4,7 +4,8 @@ title: Notifications
 ---
 
 ## <a name="notifications"></a>Introduction
-* There are different types of notifications that the user receives, each related to a specific topic. A notification does not necessarly request an action to be taken, but informs the user about a specific element, and depending on the situation, the user can decide the possible next steps.
+
+* There are different types of notifications that the user receives, each related to a specific topic. A notification does not necessarily request an action to be taken, but informs the user about a specific element, and depending on the situation, the user can decide the possible next steps.
 * The notifications can be seen in the _My Analyses_ page and in the _Notifications_ page, by clicking `🔔` in the menu bar.
 
 <div align="center">
@@ -67,7 +68,7 @@ title: Notifications
 
 ## <a name="mergelistUpdate"></a>Mergelist updated
 
-* The mergelist defines which runs are merged into one file at the end of the train running. The user is informed when a mergelist has been modified, added to or removed from the dataset production. 
+* The mergelist defines which runs are merged into one file at the end of the train running. The user is informed when a mergelist has been modified, added to or removed from the dataset production.
 
 <div align="center">
   <img src="../images/mergelistUpdate.png" width="90%">
@@ -75,38 +76,37 @@ title: Notifications
 
 ## <a name="linkedDataset"></a>Linked datasets
 
-* When a dataset has linked datasets, it cannot be part of an analysis. If a dataset was part of an analysis, and then the dataset is modified to have linked datasets, then the dataset is removed from the analysis. If there were enabled wagons, they are disabled. 
+* When a dataset has linked datasets, it cannot be part of an analysis. If a dataset was part of an analysis, and then the dataset is modified to have linked datasets, then the dataset is removed from the analysis. If there were enabled wagons, they are disabled.
 
 ## <a name="infoWagonDisabled"></a>Disabled wagon
 
-Informs the user when a wagon has been disabled in different circumstances: 
+Informs the user when a wagon has been disabled in different circumstances:
 
-  * When the dataset the wagon was enabled for is deactivated.
-  
-  * When the directories corresponding to a dataset production (job types or train runs) are not found.
+* When the dataset the wagon was enabled for is deactivated.
 
-  * Local tests are cleaned if the wagons are not submitted in a period of 4 weeks. The user is notified that the respective wagons are automatically disabled.
+* When the directories corresponding to a dataset production (job types or train runs) are not found.
+
+* Local tests are cleaned if the wagons are not submitted in a period of 4 weeks. The user is notified that the respective wagons are automatically disabled.
 
 <div align="center">
   <img src="../images/testCleaned.png" width="90%">
 </div>
-  
-  * When a wagon with derived data output is enabled, the test cannot start if the wagon and its dependencies share the same workflow. As a result, the wagon is disabled and the user is notified about the wagons which share the same task.
- 
-    * The notification format is: The wagon _"wagon_name"_ was disabled in _"dataset_name"_. There is derived data. The following wagons have the same workflows {_wagon1_, _wagon2_: _common_workflow_},...,{_wagonX_, _wagonY_: _common_workflow_}
+
+* When a wagon with derived data output is enabled, the test cannot start if the wagon and its dependencies share the same workflow. As a result, the wagon is disabled and the user is notified about the wagons which share the same task.
+
+  * The notification format is: The wagon _"wagon_name"_ was disabled in _"dataset_name"_. There is derived data. The following wagons have the same workflows {_wagon1_, _wagon2_: _common_workflow_},...,{_wagonX_, _wagonY_: _common_workflow_}
 
   <div align="center">
     <img src="../images/wagonDisabled1.png" width="90%">
   </div>
-  
-  * If among the wagon and its dependencies there are identical derived data outputs, the test cannot start, and the wagon is disabled.
 
-    * The notification format is:  The wagon _"wagon_name"_ was disabled in _"dataset_name"_. The following wagons have the same derived data outputs {_wagon1_, _wagon2_: _common_derived_data_},...,{_wagonX_, _wagonY_: _common_derived_data_}
+* If among the wagon and its dependencies there are identical derived data outputs, the test cannot start, and the wagon is disabled.
+
+  * The notification format is:  The wagon _"wagon_name"_ was disabled in _"dataset_name"_. The following wagons have the same derived data outputs {_wagon1_, _wagon2_: _common_derived_data_},...,{_wagonX_, _wagonY_: _common_derived_data_}
 
   <div align="center">
     <img src="../images/wagonDisabled.png" width="90%">
   </div>
- 
 
 ## <a name="inconsistentParameters"></a>Inconsistent parameters
 
@@ -125,4 +125,3 @@ Informs the user when a wagon has been disabled in different circumstances:
   </div>
 
 * If the **wagon is enabled with an older tag**, the configuration might not match (hence the notification). If the old tag is needed, then syncing is not an option because this will set the package to the latest one. Therefore, the wagon configuration has to be modified as needed. The user can take as a reference _full_config.json_ in the test output, which shows the configuration the test is being run with, and compare it to the wagon configuration.
-

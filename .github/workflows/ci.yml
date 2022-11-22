@@ -37,8 +37,8 @@ jobs:
 
       - name: Generate changelog and Auto update version!
         run: |
-          LAST_TAG=$(git describe --tags --abbrev=0)
-          git log ${LAST_TAG}..HEAD --no-merges --format="- %h %s @%an" > action.changelog.md
+          LAST_TAG="$(git describe --tags --abbrev=0)"
+          git log "${LAST_TAG}"..HEAD --no-merges --format="- %h %s @%an" > action.changelog.md
           sed -i "s/${LAST_TAG:1}/${VERSION}/g" jekyll-rtd-theme.gemspec
           sed -i "s/${LAST_TAG:1}/${VERSION}/g" _includes/rest/defaults.liquid
 
@@ -67,17 +67,17 @@ jobs:
 
       - name: Configure gem credentials and Build gemspec!
         run: |
-          CONFIG=${HOME}/.gem/credentials
-          mkdir -p ${HOME}/.gem && touch ${CONFIG} && chmod 0600 ${CONFIG}
-          echo "---" > ${CONFIG}
-          echo ":github: Bearer ${GITHUB_TOKEN}" >> ${CONFIG}
-          echo ":rubygems_api_key: ${RUBYGEMS_AUTH_TOKEN}" >> ${CONFIG}
-          gem build *.gemspec
+          CONFIG="${HOME}/.gem/credentials"
+          mkdir -p "${HOME}/.gem" && touch "${CONFIG}" && chmod 0600 "${CONFIG}"
+          echo "---" > "${CONFIG}"
+          echo ":github: Bearer ${GITHUB_TOKEN}" >> "${CONFIG}"
+          echo ":rubygems_api_key: ${RUBYGEMS_AUTH_TOKEN}" >> "${CONFIG}"
+          gem build ./*.gemspec
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           RUBYGEMS_AUTH_TOKEN: ${{ secrets.RUBYGEMS_AUTH_TOKEN }}
 
       - name: Publish rubygems!
         run: |
-          gem push *.gem
-          gem push --KEY github --host https://rubygems.pkg.github.com/${{ github.repository_owner }} *.gem
+          gem push ./*.gem
+          gem push --KEY github --host https://rubygems.pkg.github.com/${{ github.repository_owner }} ./*.gem

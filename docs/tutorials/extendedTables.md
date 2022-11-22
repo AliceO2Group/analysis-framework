@@ -5,7 +5,6 @@ title: Extending Tables
 
 # Extending existing tables
 
-
 ```goal
 Learn how add new columns to existing tables, use dynamic and expression columns, and join tables
 ```
@@ -14,9 +13,9 @@ Learn how add new columns to existing tables, use dynamic and expression columns
   source: <a href="https://github.com/AliceO2Group/O2Physics/blob/master/Tutorials/src/extendedTables.cxx" target="_blank">extendedTables.cxx</a><br>
   Executable: o2-analysistutorial-extended-tables
 </div>
-  
 
 <a name="extendtable"></a>
+
 ### ExtendTable
 
 Existing tables can be extended with additional expression columns using the 'Extend" function. The first step is the declaration of the new expression column (see also tutorial [Creating Tables](creatingTables)).
@@ -42,17 +41,19 @@ struct ExtendTable {
     // add expression column o2::aod::extension::P2exp to table
     // o2::aod::Tracks
     auto table_extension = soa::Extend<aod::Tracks, aod::extension::P2exp>(tracks);
-    
+
 ```
 
 Note that the argument of the Extend function (here track) is a table object and needs to include all information required to fill the new table.
 
 <a name="attachcolumn"></a>
+
 ### AttachColumn
 
 Extend can only be used with expression columns. The function to extend a table with a dynamic column is `Attach`.
 
 Again we start with the declaration of the new dynamic columns
+
 ```cpp
 namespace o2::aod
 {
@@ -74,11 +75,13 @@ struct AttachColumn {
 ```
 
 <a name="extendandattach"></a>
+
 ### ExtendAndAttach
 
 The two types of extension can be combined as demonstrated in task ExtendAndAttach.
 
 <a name="spawndynamiccolumns"></a>
+
 ### SpawnDynamicColumns and ProcessExtendedTables
 
 A Similar effect can be achieved by joining tables with the soa::Join helper function. Again we need some declarations at the beginning.
@@ -108,10 +111,9 @@ DECLARE_SOA_EXTENDED_TABLE_USER(ExTable, Tracks, "EXTABLE",
 
 using namespace o2;
 using namespace o2::framework;
-``` 
+```
 
 DynTable is a table with a few dynamic columns and has to be created and filled using Produces and the fill function. ExTable is an extended table and needes to be filled with the Helper function `Spawns`. Spawns causes the expression columns to be computed.
-
 
 ```cpp
 // spawn ExTable and produce DynTable
@@ -137,7 +139,7 @@ table ExTable is Spawned in task SpawnDynamicColumns before it can be consumed i
 // loop over the joined table <ExTable, DynTable>
 struct ProcessExtendedTables {
   using allinfo = soa::Join<aod::ExTable,aod::DynTable>;
-  
+
   void process(aod::Collision const&, allinfo const& tracks)
   {
     for (auto& row : tracks) {

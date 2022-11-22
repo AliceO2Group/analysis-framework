@@ -15,13 +15,14 @@ Follow the instructions <a href="https://alice-doc.github.io/alice-analysis-tuto
 ## Prepare your source code
 
 We assume your work area is `~/alice`.
-Start with a clean shell where you are not in an `alienv` environment. 
+Start with a clean shell where you are not in an `alienv` environment.
 Create the directory and move to it (all the following commands need to be executed in this folder):
 
 ```bash
 mkdir -p ~/alice
 cd ~/alice
 ```
+
 Download O2 and O2Physics (note the `--defaults o2`):
 
 ```bash
@@ -43,7 +44,7 @@ aliDoctor O2Physics --defaults o2
 ```
 
 aliDoctor will warn you that some packages have to be built as they could not be found from the
-system. 
+system.
 
 ## Build and rebuild
 
@@ -85,6 +86,7 @@ alienv enter O2Physics/latest ninja/latest
 ```
 
 Go to the build directory
+
 ```bash
 cd sw/BUILD/O2Physics-latest/O2Physics
 ```
@@ -94,16 +96,21 @@ You can now rebuild a specific directory with
 ```bash
 ninja install <your-analysis-directory>/all
 ```
+
 For example:
+
 ```bash
 ninja install PWGCF/Tasks/all
 ```
 
 A specific executable can be built with
+
 ```bash
 ninja install O2Physicsexe-<target>
 ```
+
 For example (note the missing o2-):
+
 ```bash
 ninja install O2Physicsexe-analysis-cf-correlations
 ```

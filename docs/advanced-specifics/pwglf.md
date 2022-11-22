@@ -5,9 +5,9 @@ title: PWGLF
 
 # Light-flavour (LF) analysis framework
 
-## Get started!
+## Get started
 
-## Contact 
+## Contact
 
 ## Code
 

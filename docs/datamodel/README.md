@@ -42,4 +42,3 @@ And similar for the columns:
 - SSLI: self slice index column
 - SAI: self array index column
 - else: normal column
- 

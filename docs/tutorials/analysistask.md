@@ -15,6 +15,7 @@ At the very beginning of each analysis task code file we recommend to but the fo
 <a href="https://www.gnu.org/philosophy/free-sw.html" target="_blank">free software</a>. You can find the full O2 license information <a href="https://alice-o2-project.web.cern.ch/license" target="_blank">here</a>.
 
 `License agreement`
+
 ```cpp
 
 // Copyright 2019-2020 CERN and copyright holders of ALICE O2.
@@ -34,6 +35,7 @@ At the very beginning of each analysis task code file we recommend to but the fo
 The exact list of header files needed to be included in a task depends on the content of the task. There are however two which are needed in any case.
 
 `Required header files`
+
 ```cpp
 #include "Framework/runDataProcessing.h"
 #include "Framework/AnalysisTask.h"
@@ -44,6 +46,7 @@ The exact list of header files needed to be included in a task depends on the co
 Namespaces provide a method for preventing name conflicts in large projects. The O2 analysis framework also uses namespaces. Use the namespaces `o2` and `o2::framework` in any analysis task and add more if needed.
 
 `O2 basic name spaces`
+
 ```cpp
 using namespace o2;
 using namespace o2::framework;
@@ -59,7 +62,7 @@ A task is a basic block of an analysis program. It it a struct and has an init a
 
 Several tasks can be put together to form a workflow (using defineDataProcessing()). Workflows on the other hand can be chained - the output of one workflow is piped to the input of the other workflow.
 
-This is discussed in more detail in the [Data Processing ](../framework/framework.md) section of these documentation pages.
+This is discussed in more detail in the [Data Processing](../framework/framework.md) section of these documentation pages.
 
 So this is kind of a workflow skeleton
 

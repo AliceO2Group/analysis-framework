@@ -17,6 +17,7 @@ Learn how access and work with MC data
 The MC truth and MC reconstructed information can be accessed separately but are related by dedicated index columns.
 
 <a name="vertexdistribution"></a>
+
 ### VertexDistribution
 
 The data model includes a set of MC related tables (see also [datamodel](../datamodel/)) which contain the MC truth information. In task VertexDistribution the process function loops over the rows of the MC truth McCollisions table.
@@ -35,6 +36,7 @@ struct VertexDistribution {
 ```
 
 <a name="accessmctruth"></a>
+
 ### AccessMCTruth
 
 The task AccessMCTruth demonstrates how to access MC truth information for a given reconstructed item. In this example the MC truth McParticle for a given reconstructed Track is searched for.
@@ -47,7 +49,7 @@ columns available they are joined with the related tables. Hence
 soa::Join<aod::Tracks, aod::McTrackLabels> const& tracks
 ```
 
-is needed to relate the reconstructed Tracks information with the corresponding MC truth McParticles information and 
+is needed to relate the reconstructed Tracks information with the corresponding MC truth McParticles information and
 
 ```cpp
 soa::Join<aod::Collisions, aod::McCollisionLabels>
@@ -65,4 +67,3 @@ for (auto& track : tracks) {
   .
 }
 ```
-

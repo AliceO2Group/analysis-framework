@@ -5,9 +5,9 @@ title: PWG-EM
 
 # Electromagnetic probes (EM) analysis framework
 
-## Get started!
+## Get started
 
-## Contact 
+## Contact
 
 ## Code
 
