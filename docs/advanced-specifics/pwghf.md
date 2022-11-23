@@ -7,9 +7,12 @@ title: PWG-HF
 
 ## Get started
 
-See the materials from the [HF O2 hackathon](https://indico.cern.ch/event/1101005/)
+- See the materials from the [HF O2 hackathon](https://indico.cern.ch/event/1101005/)
 (includes introduction to O2, O2 HF, tutorials,...) and watch the
-[Zoom recordings of the sessions](https://videos.cern.ch/deposit/project/cbe4869a27f749b7b45ea66577ca8a9f).
+[Zoom recordings of the sessions](https://videos.cern.ch/deposit/project/cbe4869a27f749b7b45ea66577ca8a9f) (7, 9 Dec 2021).
+- See the [presentation on HF vertexing and analysis](https://indico.cern.ch/event/1200252/timetable/#10-hf-vertexing-and-analysis)
+and the [HF analysis example](https://indico.cern.ch/event/1200252/timetable/#23-hands-on-session-4-analysis)
+from the [O2 Analysis Tutorial](https://indico.cern.ch/event/1200252/) (13–14 Oct 2022).
 
 ## Contact
 
@@ -19,7 +22,7 @@ Mattermost channel: [hf-o2-analysis-challenge](https://mattermost.web.cern.ch/al
 
 ## Code
 
-- Tasks used by the heavy-flavour analysis framework are in the
+- Code used by the heavy-flavour analysis framework are in the
 [`PWGHF`](https://github.com/AliceO2Group/O2Physics/tree/master/PWGHF) directory.
 - Tables produced by skimming and candidate creators are defined in
 [`CandidateReconstructionTables.h`](https://github.com/AliceO2Group/O2Physics/blob/master/PWGHF/DataModel/CandidateReconstructionTables.h).
@@ -41,7 +44,7 @@ Mattermost channel: [hf-o2-analysis-challenge](https://mattermost.web.cern.ch/al
 ## AliHyperloop
 
 [JIRA tickets](https://alice.its.cern.ch/jira/browse/PWGHF-269?jql=project%20%3D%20PWGHF%20AND%20issuetype%20%3D%20Analysis%20AND%20component%20%3D%20PWG-HF)
-of the HF analyses on [AliHyperloop](https://alimonitor.cern.ch/hyperloop/):
+of the HF analyses on <!-- markdown-link-check-disable -->[AliHyperloop](https://alimonitor.cern.ch/hyperloop/)<!-- markdown-link-check-enable -->
 
 ## Framework structure
 
@@ -127,20 +130,20 @@ The selection results are stored in a column of a new dedicated table that is la
 
 ### Analysis tasks
 
-Workflow                                    | File                        | Type
---------------------------------------------|-----------------------------|-------------------------------------------------------------------------
-`o2-analysis-hf-task-d0`                    | `taskD0.cxx`                | D<sup>0</sup>(bar) → π<sup>±</sup> K<sup>∓</sup>
-`o2-analysis-hf-task-jpsi`                  | `taskJpsi.cxx`              | J/ψ → e<sup>+</sup> e<sup>−</sup>/μ<sup>+</sup> μ<sup>−</sup>
-`o2-analysis-hf-task-dplus`                 | `taskDplus.cxx`             | D<sup>±</sup> → π<sup>±</sup> K<sup>∓</sup> π<sup>±</sup>
-`o2-analysis-hf-task-lc`                    | `taskLc.cxx`                | Λ<sub>c</sub><sup>±</sup> → p(bar) K<sup>∓</sup> π<sup>±</sup>
-`o2-analysis-hf-task-lc-to-k0s-p`           | `taskLcToK0sP.cxx`          | Λ<sub>c</sub><sup>±</sup> → p(bar) K<sub>S</sub><sup>0</sup>
-`o2-analysis-hf-task-xic`                   | `taskXic.cxx`               | Ξ<sub>c</sub><sup>±</sup> → p(bar) K<sup>∓</sup> π<sup>±</sup>
-`o2-analysis-hf-task-xicc`                  | `taskXicc.cxx`              | Ξ<sub>cc</sub><sup>±±</sup> → Ξ<sub>c</sub><sup>±</sup> π<sup>±</sup>
-`o2-analysis-hf-task-bplus`                 | `taskBplus.cxx`             | B<sup>±</sup> → D<sup>0</sup>(bar) π<sup>±</sup>
-`o2-analysis-hf-task-x`                     | `taskX.cxx`                 | X(3872) → J/ψ π<sup>±</sup> π<sup>∓</sup>
-`o2-analysis-hf-hf-correlator-d0-d0bar`     | `correlatorD0D0bar.cxx`     | D<sup>0</sup>–D<sup>0</sup>bar correlations
-`o2-analysis-hf-hf-correlator-dplus-dminus` | `correlatorDplusDminus.cxx` | D<sup>+</sup>–D<sup>−</sup> correlations
-`o2-analysis-hf-task-correlation-d-dbar`    | `taskCorrelationDDbar.cxx`  | D<sup>0</sup>–D<sup>0</sup>bar, D<sup>+</sup>–D<sup>−</sup> correlations
+Workflow                                 | File                        | Type
+-----------------------------------------|-----------------------------|-------------------------------------------------------------------------
+`o2-analysis-hf-task-d0`                 | `taskD0.cxx`                | D<sup>0</sup>(bar) → π<sup>±</sup> K<sup>∓</sup>
+`o2-analysis-hf-task-jpsi`               | `taskJpsi.cxx`              | J/ψ → e<sup>+</sup> e<sup>−</sup>/μ<sup>+</sup> μ<sup>−</sup>
+`o2-analysis-hf-task-dplus`              | `taskDplus.cxx`             | D<sup>±</sup> → π<sup>±</sup> K<sup>∓</sup> π<sup>±</sup>
+`o2-analysis-hf-task-lc`                 | `taskLc.cxx`                | Λ<sub>c</sub><sup>±</sup> → p(bar) K<sup>∓</sup> π<sup>±</sup>
+`o2-analysis-hf-task-lc-to-k0s-p`        | `taskLcToK0sP.cxx`          | Λ<sub>c</sub><sup>±</sup> → p(bar) K<sub>S</sub><sup>0</sup>
+`o2-analysis-hf-task-xic`                | `taskXic.cxx`               | Ξ<sub>c</sub><sup>±</sup> → p(bar) K<sup>∓</sup> π<sup>±</sup>
+`o2-analysis-hf-task-xicc`               | `taskXicc.cxx`              | Ξ<sub>cc</sub><sup>±±</sup> → Ξ<sub>c</sub><sup>±</sup> π<sup>±</sup>
+`o2-analysis-hf-task-bplus`              | `taskBplus.cxx`             | B<sup>±</sup> → D<sup>0</sup>(bar) π<sup>±</sup>
+`o2-analysis-hf-task-x`                  | `taskX.cxx`                 | X(3872) → J/ψ π<sup>±</sup> π<sup>∓</sup>
+`o2-analysis-hf-correlator-d0-d0bar`     | `correlatorD0D0bar.cxx`     | D<sup>0</sup>–D<sup>0</sup>bar correlations
+`o2-analysis-hf-correlator-dplus-dminus` | `correlatorDplusDminus.cxx` | D<sup>+</sup>–D<sup>−</sup> correlations
+`o2-analysis-hf-task-correlation-d-dbar` | `taskCorrelationDDbar.cxx`  | D<sup>0</sup>–D<sup>0</sup>bar, D<sup>+</sup>–D<sup>−</sup> correlations
 
 #### Real-data analysis
 
@@ -150,13 +153,14 @@ In the user analysis task, histograms needed for the analysis are filled with pr
 
 For MC events, histograms with quantities of generated MC particles and MC-matched candidates are produced.
 
-### QA and helper tasks
+### QA and helper workflows
 
 Workflow                               | File                      | Type
----------------------------------------|---------------------------|----------------------------------
+---------------------------------------|---------------------------|----------------------------------------------------------------------------
 `o2-analysis-hf-task-mc-validation`    | `taskMcValidation.cxx`    | validation of HF MC distributions
 `o2-analysis-task-qa-pid-rejection`    | `taskQaPidRejection.cxx`  | PID selection performance
 `o2-analysis-hf-task-sel-optimisation` | `taskSelOptimisation.cxx` | preselection optimisation
+`o2-analysis-hf-refit-pv-dummy`        | `refitPvDummy.cxx`        | creation of a dummy table with primary-vertex position (for converted data)
 
 ### Tree creation
 
@@ -177,10 +181,7 @@ Workflow                                        | File                          
 - Follow the [O2 coding guidelines](https://github.com/AliceO2Group/CodingGuidelines)
     (especially the [naming](https://rawgit.com/AliceO2Group/CodingGuidelines/master/naming_formatting.html)
     and [commenting](https://rawgit.com/AliceO2Group/CodingGuidelines/master/comments_guidelines.html) rules).
-- If your changes consist of several independent steps, keep them separate in several commits.
-- Give your commits meaningful titles.
-  - If needed, add more details in the commit message (separated by a blank line from the commit title).
-- Keep your feature branch up to date with the upstream main branch.
+- Sort O2Physics `#include`s alphabetically and keep `PWGHF/...` at the end.
 - Test your code before making a pull request.
   - Propagate your changes into the Run3Analysisvalidation configuration.
   - Check that your branch compiles.
@@ -189,21 +190,45 @@ Workflow                                        | File                          
     - Check that your changes do not alter unexpectedly the control plots produced by the validation framework.
   - Make sure your tasks can be fully configured from Run3Analysisvalidation and AliHyperloop.
 
-#### Naming conventions
+#### `struct` members
 
-Use the `<object><attribute>` (or `<general><specific>`) naming scheme, so that names of the same kind of objects start with same string and the different attributes follow.
-This scheme makes names more readable, searchable and sortable.
+Organising the code in a well defined structure makes it easier to navigate through the source files.
 
-Example:
+- Group `struct` data members by category and separate the blocks by a single blank line.
+  - If there is a reason to visually divide a category into smaller blocks, add a corresponding comment at the beginning of each block.
+- Sort `struct` member categories in the following order:
+  - `Produces`, `Spawns`, `Builds`
+  - `Configurable`
+    - scalars (`bool`, `int`, `float`, `double`,...)
+    - vectors (`std::vector`)
+    - arrays (`LabeledArray`)
+  - other members (constants, objects)
+  - `using` declarations
+  - `Filter`
+  - `Partition`
+  - `ConfigurableAxis`
+  - `AxisSpec`
+  - `HistogramRegistry`
+  - output declarations (`OutputObj`,...)
+  - `init` function
+  - `process` function(s)
+    - `PROCESS_SWITCH` follows immediately after the function definition.
 
-    ptTrackMin, etaTrackMax, trackPos, trackNeg
+### Naming conventions
 
-is more readable and sortable than
+- Use the `<object><attribute>` (or `<general><specific>`) naming scheme, so that names of the same kind of objects start with same string and the different attributes follow.
+  This scheme makes names more readable, searchable and sortable.
+  - Example: `ptTrackMin`, `etaTrackMax`, `trackPos`, `trackNeg` is more readable and sortable than `minTrackPt`, `maxTrackEta`, `posTrack`, `negTrack`.
+- Word-like strings (acronyms, abbreviations, particle names, mathematical variables) are treated as words; i.e. capitalise only the first letter.
+  It makes the names more readable in case of combinations (`PidTof` vs `PIDTOF`) or when hyphenated (e.g. `Mc` → `mc` vs `MC` → `m-c`).
+  - Examples: `Hf`, `Pt`, `Lc`, `Dplus`, `Jpsi`, `Xicc`, `Mc`, `Pid`, `Tpc`, `Alice3`, `Pdg`, `Pv`, `Dca`
+- Decay strings follow the `<Mother>To<Daughter1><Daughter2>...` pattern (e.g. `DplusToPiKPi`).
 
-    minTrackPt, maxTrackEta, posTrack, negTrack
-
-- Names of task configurables follow the same conventions as
+- Names of `struct` members follow the same conventions as
     [names of variables](https://rawgit.com/AliceO2Group/CodingGuidelines/master/naming_formatting.html#Variable_Names).
+- In `Configurable` declarations, use the same name for the `struct` member and for the JSON string (e.g. `Configurable<bool> isRun2{"isRun2",...`).
+- Use a single histograms registry declared as `HistogramRegistry registry{"registry",...`, unless you have good reasons to do otherwise.
+- Quote all the axis variables (*x*, *y*,...) in the histogram names as `hXVsYVs...` so that the dimension and axes are obvious from the name (e.g. `hMassVsPt...`).
 - Names of histograms start with `h` and follow the same conventions as names of variables.
   - Names of histograms of MC variables have the following suffixes:
     - `Gen` - generator level quantity of a signal particle
@@ -211,22 +236,36 @@ is more readable and sortable than
     - `RecSig` - reconstruction level quantity of a reconstructed signal candidate
     - `RecBg` - reconstruction level quantity of a reconstructed background candidate
 
-The device name of a task is automatically generated from the name of the corresponding `struct` by replacing uppercase letters with lowercase letters preceded with a hyphen unless defined explicitly using `TaskName`, which should be avoided if not necessary.
+The names of the source file, the executable and the task(s) should match.<br>
+Note: The device name of a task is automatically generated from the name of the corresponding `struct` by replacing uppercase letters with lowercase letters preceded with a hyphen unless defined explicitly using `TaskName`, which should be avoided if not necessary.<br>
+Example:
+
+- source file name: `taskXY.cxx`
+- executable name (without the automatic prefix `o2-analysis-hf-`): `task-x-y`
+- main task (`struct`) name: `HfTaskXY` (results in the generated device name `hf-task-x-y`)
+  - auxiliary-task name: `HfTaskXY<Suffix>` (results in the generated device name `hf-task-x-y-<suffix>`)
+
+### Git
+
+- If your changes consist of several independent steps, keep them separate in several commits.
+- Give your commits meaningful titles.
+  - If needed, add more details in the commit message (separated by a blank line from the commit title).
+- Keep your feature branch up to date with the upstream main branch (`git pull --rebase upstream master`).
 
 ### Pull requests (PR)
 
+- Update your branch and test it before creating a PR.
 - Create one PR per feature (i.e. do not mix big unrelated code changes).
 - Give your PR a short meaningful title.
-  - Add the “PWGHF: ” prefix in the title of your PR.
-        (It allows to search for PWGHF-related PRs in the commit history of the main branch.)
-    - Note: If your PR has only one commit, add the prefix also in the commit title
-            (because that is the title that will appear in the history after merging).
+  - Add the “PWGHF: ” prefix in the title of your PR. (It helps to search for PWGHF-related PRs in the commit history of the main branch.)
+    - Note: If your PR has only one commit, add the prefix also in the commit title (because that is the title that will appear in the history after merging, unless the person merging the PR changes it by hand).
 - Give further useful details about your changes in the PR description.
   - Add links to all related PRs (e.g. O2Physics, O2, AliPhysics, Run3Analysisvalidation) in the PR description.
 
 #### PR review
 
-- When you implement changes during the review, push them into your branch as new separate commits (with meaningful titles).
+- When you implement changes during the review, push them into your branch as new separate commits with meaningful titles.
 - Do not amend, squash or rebase existing commits in the PR. It would break the links between the code and the review comments.
-  - If you need to update your branch with the changes in the main branch, use `merge` instead of `rebase` to preserve the commit history.
+  - If you need to update your branch with the changes in the main branch while the PR is under review, use `git merge upstream/master` (instead of `rebase`) to preserve the commit history.
 - Fix formatting issues by merging the PRs created automatically by the CI tests in your fork repository.
+- If you need more time to implement further changes in your PR, convert it to a draft to avoid unnecessary build tests and mark it as ready for review again when you're done.
