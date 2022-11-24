@@ -3322,81 +3322,17 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGDQ
 
 ## PWG-HF
 
-####  o2-analysis-hf-b0-todpi-candidate-selector
-Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer//HFB0ToDPiCandidateSelector.cxx" target="_blank">HFB0ToDPiCandidateSelector.cxx</a>
-<div>
-
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::HFSelB0ToDPiCandidate</button>
-  <div class="panel">
-    <div>
-
-    </div>
-    <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/DataModel/HFCandidateSelectionTables.h" target="_blank">PWGHF/DataModel/HFCandidateSelectionTables.h</a>
-    </div>
-    <table class=DataModel>
-      <tr>
-        <th>Name</th>
-        <th></th>
-        <th>Getter</th>
-        <th>Type</th>
-        <th>Comment</th>
-      </tr>
-      <tr>
-        <td>o2::aod::hf_selcandidate_b0::IsSelB0ToDPi</td>
-        <td></td>
-        <td>isSelB0ToDPi</td>
-        <td>int</td>
-        <td></td>
-      </tr>
-    </table>
-  </div>
-
-</div>
-
-####  o2-analysis-hf-bplus-tod0pi-candidate-selector
-Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer//HFBPlusToD0PiCandidateSelector.cxx" target="_blank">HFBPlusToD0PiCandidateSelector.cxx</a>
-<div>
-
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::HFSelBPlusToD0PiCandidate</button>
-  <div class="panel">
-    <div>
-
-    </div>
-    <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/DataModel/HFCandidateSelectionTables.h" target="_blank">PWGHF/DataModel/HFCandidateSelectionTables.h</a>
-    </div>
-    <table class=DataModel>
-      <tr>
-        <th>Name</th>
-        <th></th>
-        <th>Getter</th>
-        <th>Type</th>
-        <th>Comment</th>
-      </tr>
-      <tr>
-        <td>o2::aod::hf_selcandidate_bplus::IsSelBPlusToD0Pi</td>
-        <td></td>
-        <td>isSelBPlusToD0Pi</td>
-        <td>int</td>
-        <td></td>
-      </tr>
-    </table>
-  </div>
-
-</div>
-
 ####  o2-analysis-hf-candidate-creator-2prong
-Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer//HFCandidateCreator2Prong.cxx" target="_blank">HFCandidateCreator2Prong.cxx</a>
+Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer//candidateCreator2Prong.cxx" target="_blank">candidateCreator2Prong.cxx</a>
 <div>
 
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::HfCandProng2Base</button>
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::HfCand2ProngBase</button>
   <div class="panel">
     <div>
 
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/DataModel/HFSecondaryVertex.h" target="_blank">PWGHF/DataModel/HFSecondaryVertex.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/DataModel/CandidateReconstructionTables.h" target="_blank">PWGHF/DataModel/CandidateReconstructionTables.h</a>
     </div>
     <table class=DataModel>
       <tr>
@@ -3645,16 +3581,16 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::hf_track_index::Index0Id</td>
+        <td>o2::aod::hf_track_index::Prong0Id</td>
         <td>I</td>
-        <td>index0Id</td>
+        <td>prong0Id</td>
         <td>int</td>
         <td>Index to first prong</td>
       </tr>
       <tr>
-        <td>o2::aod::hf_track_index::Index1Id</td>
+        <td>o2::aod::hf_track_index::Prong1Id</td>
         <td>I</td>
-        <td>index1Id</td>
+        <td>prong1Id</td>
         <td>int</td>
         <td>Index to second prong</td>
       </tr>
@@ -3666,35 +3602,35 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::hf_cand_prong2::M</td>
+        <td>o2::aod::hf_cand_2prong::M</td>
         <td>D</td>
         <td>m</td>
         <td>float</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::hf_cand_prong2::M2</td>
+        <td>o2::aod::hf_cand_2prong::M2</td>
         <td>D</td>
         <td>m2</td>
         <td>float</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::hf_cand_prong2::ImpactParameterProduct</td>
+        <td>o2::aod::hf_cand_2prong::ImpactParameterProduct</td>
         <td>D</td>
         <td>impactParameterProduct</td>
         <td>float</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::hf_cand_prong2::CosThetaStar</td>
+        <td>o2::aod::hf_cand_2prong::CosThetaStar</td>
         <td>D</td>
         <td>cosThetaStar</td>
         <td>float</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::hf_cand_prong2::ImpactParameterProngSqSum</td>
+        <td>o2::aod::hf_cand_2prong::ImpactParameterProngSqSum</td>
         <td>D</td>
         <td>impactParameterProngSqSum</td>
         <td>float</td>
@@ -3764,7 +3700,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::hf_cand_prong2::MaxNormalisedDeltaIP</td>
+        <td>o2::aod::hf_cand_2prong::MaxNormalisedDeltaIP</td>
         <td>D</td>
         <td>maxNormalisedDeltaIP</td>
         <td>float</td>
@@ -3808,13 +3744,13 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
     </table>
   </div>
 
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::HfCandProng2MCRec</button>
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::HfCand2ProngMcRec</button>
   <div class="panel">
     <div>
 
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/DataModel/HFSecondaryVertex.h" target="_blank">PWGHF/DataModel/HFSecondaryVertex.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/DataModel/CandidateReconstructionTables.h" target="_blank">PWGHF/DataModel/CandidateReconstructionTables.h</a>
     </div>
     <table class=DataModel>
       <tr>
@@ -3825,29 +3761,29 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <th>Comment</th>
       </tr>
       <tr>
-        <td>o2::aod::hf_cand_prong2::FlagMCMatchRec</td>
+        <td>o2::aod::hf_cand_2prong::FlagMcMatchRec</td>
         <td></td>
-        <td>flagMCMatchRec</td>
+        <td>flagMcMatchRec</td>
         <td>int8_t</td>
         <td>reconstruction level</td>
       </tr>
       <tr>
-        <td>o2::aod::hf_cand_prong2::OriginMCRec</td>
+        <td>o2::aod::hf_cand_2prong::OriginMcRec</td>
         <td></td>
-        <td>originMCRec</td>
+        <td>originMcRec</td>
         <td>int8_t</td>
         <td>particle origin, reconstruction level</td>
       </tr>
     </table>
   </div>
 
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::HfCandProng2MCGen</button>
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::HfCand2ProngMcGen</button>
   <div class="panel">
     <div>
 
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/DataModel/HFSecondaryVertex.h" target="_blank">PWGHF/DataModel/HFSecondaryVertex.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/DataModel/CandidateReconstructionTables.h" target="_blank">PWGHF/DataModel/CandidateReconstructionTables.h</a>
     </div>
     <table class=DataModel>
       <tr>
@@ -3858,16 +3794,16 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <th>Comment</th>
       </tr>
       <tr>
-        <td>o2::aod::hf_cand_prong2::FlagMCMatchGen</td>
+        <td>o2::aod::hf_cand_2prong::FlagMcMatchGen</td>
         <td></td>
-        <td>flagMCMatchGen</td>
+        <td>flagMcMatchGen</td>
         <td>int8_t</td>
         <td>generator level</td>
       </tr>
       <tr>
-        <td>o2::aod::hf_cand_prong2::OriginMCGen</td>
+        <td>o2::aod::hf_cand_2prong::OriginMcGen</td>
         <td></td>
-        <td>originMCGen</td>
+        <td>originMcGen</td>
         <td>int8_t</td>
         <td>particle origin, generator level</td>
       </tr>
@@ -3877,16 +3813,16 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
 </div>
 
 ####  o2-analysis-hf-candidate-creator-3prong
-Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer//HFCandidateCreator3Prong.cxx" target="_blank">HFCandidateCreator3Prong.cxx</a>
+Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer//candidateCreator3Prong.cxx" target="_blank">candidateCreator3Prong.cxx</a>
 <div>
 
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::HfCandProng3Base</button>
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::HfCand3ProngBase</button>
   <div class="panel">
     <div>
 
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/DataModel/HFSecondaryVertex.h" target="_blank">PWGHF/DataModel/HFSecondaryVertex.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/DataModel/CandidateReconstructionTables.h" target="_blank">PWGHF/DataModel/CandidateReconstructionTables.h</a>
     </div>
     <table class=DataModel>
       <tr>
@@ -4170,23 +4106,23 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::hf_track_index::Index0Id</td>
+        <td>o2::aod::hf_track_index::Prong0Id</td>
         <td>I</td>
-        <td>index0Id</td>
+        <td>prong0Id</td>
         <td>int</td>
         <td>Index to first prong</td>
       </tr>
       <tr>
-        <td>o2::aod::hf_track_index::Index1Id</td>
+        <td>o2::aod::hf_track_index::Prong1Id</td>
         <td>I</td>
-        <td>index1Id</td>
+        <td>prong1Id</td>
         <td>int</td>
         <td>Index to second prong</td>
       </tr>
       <tr>
-        <td>o2::aod::hf_track_index::Index2Id</td>
+        <td>o2::aod::hf_track_index::Prong2Id</td>
         <td>I</td>
-        <td>index2Id</td>
+        <td>prong2Id</td>
         <td>int</td>
         <td>Index to third prong</td>
       </tr>
@@ -4198,21 +4134,21 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::hf_cand_prong3::M</td>
+        <td>o2::aod::hf_cand_3prong::M</td>
         <td>D</td>
         <td>m</td>
         <td>float</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::hf_cand_prong3::M2</td>
+        <td>o2::aod::hf_cand_3prong::M2</td>
         <td>D</td>
         <td>m2</td>
         <td>float</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::hf_cand_prong3::ImpactParameterProngSqSum</td>
+        <td>o2::aod::hf_cand_3prong::ImpactParameterProngSqSum</td>
         <td>D</td>
         <td>impactParameterProngSqSum</td>
         <td>float</td>
@@ -4310,7 +4246,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::hf_cand_prong3::MaxNormalisedDeltaIP</td>
+        <td>o2::aod::hf_cand_3prong::MaxNormalisedDeltaIP</td>
         <td>D</td>
         <td>maxNormalisedDeltaIP</td>
         <td>float</td>
@@ -4354,13 +4290,13 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
     </table>
   </div>
 
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::HfCandProng3MCRec</button>
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::HfCand3ProngMcRec</button>
   <div class="panel">
     <div>
 
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/DataModel/HFSecondaryVertex.h" target="_blank">PWGHF/DataModel/HFSecondaryVertex.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/DataModel/CandidateReconstructionTables.h" target="_blank">PWGHF/DataModel/CandidateReconstructionTables.h</a>
     </div>
     <table class=DataModel>
       <tr>
@@ -4371,43 +4307,43 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <th>Comment</th>
       </tr>
       <tr>
-        <td>o2::aod::hf_cand_prong3::FlagMCMatchRec</td>
+        <td>o2::aod::hf_cand_3prong::FlagMcMatchRec</td>
         <td></td>
-        <td>flagMCMatchRec</td>
+        <td>flagMcMatchRec</td>
         <td>int8_t</td>
         <td>reconstruction level</td>
       </tr>
       <tr>
-        <td>o2::aod::hf_cand_prong3::OriginMCRec</td>
+        <td>o2::aod::hf_cand_3prong::OriginMcRec</td>
         <td></td>
-        <td>originMCRec</td>
+        <td>originMcRec</td>
         <td>int8_t</td>
         <td>particle origin, reconstruction level</td>
       </tr>
       <tr>
-        <td>o2::aod::hf_cand_prong3::IsCandidateSwapped</td>
+        <td>o2::aod::hf_cand_3prong::IsCandidateSwapped</td>
         <td></td>
         <td>isCandidateSwapped</td>
         <td>int8_t</td>
         <td>swapping of the prongs order</td>
       </tr>
       <tr>
-        <td>o2::aod::hf_cand_prong3::FlagMCDecayChanRec</td>
+        <td>o2::aod::hf_cand_3prong::FlagMcDecayChanRec</td>
         <td></td>
-        <td>flagMCDecayChanRec</td>
+        <td>flagMcDecayChanRec</td>
         <td>int8_t</td>
         <td>resonant decay channel flag, reconstruction level</td>
       </tr>
     </table>
   </div>
 
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::HfCandProng3MCGen</button>
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::HfCand3ProngMcGen</button>
   <div class="panel">
     <div>
 
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/DataModel/HFSecondaryVertex.h" target="_blank">PWGHF/DataModel/HFSecondaryVertex.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/DataModel/CandidateReconstructionTables.h" target="_blank">PWGHF/DataModel/CandidateReconstructionTables.h</a>
     </div>
     <table class=DataModel>
       <tr>
@@ -4418,23 +4354,23 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <th>Comment</th>
       </tr>
       <tr>
-        <td>o2::aod::hf_cand_prong3::FlagMCMatchGen</td>
+        <td>o2::aod::hf_cand_3prong::FlagMcMatchGen</td>
         <td></td>
-        <td>flagMCMatchGen</td>
+        <td>flagMcMatchGen</td>
         <td>int8_t</td>
         <td>generator level</td>
       </tr>
       <tr>
-        <td>o2::aod::hf_cand_prong3::OriginMCGen</td>
+        <td>o2::aod::hf_cand_3prong::OriginMcGen</td>
         <td></td>
-        <td>originMCGen</td>
+        <td>originMcGen</td>
         <td>int8_t</td>
         <td>particle origin, generator level</td>
       </tr>
       <tr>
-        <td>o2::aod::hf_cand_prong3::FlagMCDecayChanGen</td>
+        <td>o2::aod::hf_cand_3prong::FlagMcDecayChanGen</td>
         <td></td>
-        <td>flagMCDecayChanGen</td>
+        <td>flagMcDecayChanGen</td>
         <td>int8_t</td>
         <td>resonant decay channel flag, generator level</td>
       </tr>
@@ -4444,7 +4380,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
 </div>
 
 ####  o2-analysis-hf-candidate-creator-b0
-Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer//HFCandidateCreatorB0.cxx" target="_blank">HFCandidateCreatorB0.cxx</a>
+Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer//candidateCreatorB0.cxx" target="_blank">candidateCreatorB0.cxx</a>
 <div>
 
   <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::HfCandB0Base</button>
@@ -4453,7 +4389,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
 
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/DataModel/HFSecondaryVertex.h" target="_blank">PWGHF/DataModel/HFSecondaryVertex.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/DataModel/CandidateReconstructionTables.h" target="_blank">PWGHF/DataModel/CandidateReconstructionTables.h</a>
     </div>
     <table class=DataModel>
       <tr>
@@ -4695,16 +4631,16 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::hf_cand_b0::Index0Id</td>
+        <td>o2::aod::hf_cand_b0::Prong0Id</td>
         <td>I</td>
-        <td>index0Id</td>
+        <td>prong0Id</td>
         <td>int</td>
-        <td>Pointer into HfCandProng3</td>
+        <td>Pointer into HfCand3Prong</td>
       </tr>
       <tr>
-        <td>o2::aod::hf_track_index::Index1Id</td>
+        <td>o2::aod::hf_track_index::Prong1Id</td>
         <td>I</td>
-        <td>index1Id</td>
+        <td>prong1Id</td>
         <td>int</td>
         <td>Index to second prong</td>
       </tr>
@@ -4716,35 +4652,35 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::hf_cand_prong2::M</td>
+        <td>o2::aod::hf_cand_2prong::M</td>
         <td>D</td>
         <td>m</td>
         <td>float</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::hf_cand_prong2::M2</td>
+        <td>o2::aod::hf_cand_2prong::M2</td>
         <td>D</td>
         <td>m2</td>
         <td>float</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::hf_cand_prong2::ImpactParameterProduct</td>
+        <td>o2::aod::hf_cand_2prong::ImpactParameterProduct</td>
         <td>D</td>
         <td>impactParameterProduct</td>
         <td>float</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::hf_cand_prong2::CosThetaStar</td>
+        <td>o2::aod::hf_cand_2prong::CosThetaStar</td>
         <td>D</td>
         <td>cosThetaStar</td>
         <td>float</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::hf_cand_prong2::ImpactParameterProngSqSum</td>
+        <td>o2::aod::hf_cand_2prong::ImpactParameterProngSqSum</td>
         <td>D</td>
         <td>impactParameterProngSqSum</td>
         <td>float</td>
@@ -4814,7 +4750,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::hf_cand_prong2::MaxNormalisedDeltaIP</td>
+        <td>o2::aod::hf_cand_2prong::MaxNormalisedDeltaIP</td>
         <td>D</td>
         <td>maxNormalisedDeltaIP</td>
         <td>float</td>
@@ -4858,13 +4794,13 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
     </table>
   </div>
 
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::HfCandB0MCRec</button>
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::HfCandB0McRec</button>
   <div class="panel">
     <div>
 
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/DataModel/HFSecondaryVertex.h" target="_blank">PWGHF/DataModel/HFSecondaryVertex.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/DataModel/CandidateReconstructionTables.h" target="_blank">PWGHF/DataModel/CandidateReconstructionTables.h</a>
     </div>
     <table class=DataModel>
       <tr>
@@ -4875,36 +4811,36 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <th>Comment</th>
       </tr>
       <tr>
-        <td>o2::aod::hf_cand_b0::FlagMCMatchRec</td>
+        <td>o2::aod::hf_cand_b0::FlagMcMatchRec</td>
         <td></td>
-        <td>flagMCMatchRec</td>
+        <td>flagMcMatchRec</td>
         <td>int8_t</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::hf_cand_b0::OriginMCRec</td>
+        <td>o2::aod::hf_cand_b0::OriginMcRec</td>
         <td></td>
-        <td>originMCRec</td>
+        <td>originMcRec</td>
         <td>int8_t</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::hf_cand_b0::DebugMCRec</td>
+        <td>o2::aod::hf_cand_b0::DebugMcRec</td>
         <td></td>
-        <td>debugMCRec</td>
+        <td>debugMcRec</td>
         <td>int8_t</td>
         <td></td>
       </tr>
     </table>
   </div>
 
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::HfCandB0MCGen</button>
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::HfCandB0McGen</button>
   <div class="panel">
     <div>
 
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/DataModel/HFSecondaryVertex.h" target="_blank">PWGHF/DataModel/HFSecondaryVertex.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/DataModel/CandidateReconstructionTables.h" target="_blank">PWGHF/DataModel/CandidateReconstructionTables.h</a>
     </div>
     <table class=DataModel>
       <tr>
@@ -4915,16 +4851,16 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <th>Comment</th>
       </tr>
       <tr>
-        <td>o2::aod::hf_cand_b0::FlagMCMatchGen</td>
+        <td>o2::aod::hf_cand_b0::FlagMcMatchGen</td>
         <td></td>
-        <td>flagMCMatchGen</td>
+        <td>flagMcMatchGen</td>
         <td>int8_t</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::hf_cand_b0::OriginMCGen</td>
+        <td>o2::aod::hf_cand_b0::OriginMcGen</td>
         <td></td>
-        <td>originMCGen</td>
+        <td>originMcGen</td>
         <td>int8_t</td>
         <td></td>
       </tr>
@@ -4934,16 +4870,16 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
 </div>
 
 ####  o2-analysis-hf-candidate-creator-bplus
-Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer//HFCandidateCreatorBPlus.cxx" target="_blank">HFCandidateCreatorBPlus.cxx</a>
+Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer//candidateCreatorBplus.cxx" target="_blank">candidateCreatorBplus.cxx</a>
 <div>
 
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::HfCandBPlusBase</button>
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::HfCandBplusBase</button>
   <div class="panel">
     <div>
 
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/DataModel/HFSecondaryVertex.h" target="_blank">PWGHF/DataModel/HFSecondaryVertex.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/DataModel/CandidateReconstructionTables.h" target="_blank">PWGHF/DataModel/CandidateReconstructionTables.h</a>
     </div>
     <table class=DataModel>
       <tr>
@@ -5185,16 +5121,16 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::hf_cand_bplus::Index0Id</td>
+        <td>o2::aod::hf_cand_bplus::Prong0Id</td>
         <td>I</td>
-        <td>index0Id</td>
+        <td>prong0Id</td>
         <td>int</td>
-        <td>Pointer into HfCandProng2</td>
+        <td>Pointer into HfCand2Prong</td>
       </tr>
       <tr>
-        <td>o2::aod::hf_track_index::Index1Id</td>
+        <td>o2::aod::hf_track_index::Prong1Id</td>
         <td>I</td>
-        <td>index1Id</td>
+        <td>prong1Id</td>
         <td>int</td>
         <td>Index to second prong</td>
       </tr>
@@ -5206,35 +5142,35 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::hf_cand_prong2::M</td>
+        <td>o2::aod::hf_cand_2prong::M</td>
         <td>D</td>
         <td>m</td>
         <td>float</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::hf_cand_prong2::M2</td>
+        <td>o2::aod::hf_cand_2prong::M2</td>
         <td>D</td>
         <td>m2</td>
         <td>float</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::hf_cand_prong2::ImpactParameterProduct</td>
+        <td>o2::aod::hf_cand_2prong::ImpactParameterProduct</td>
         <td>D</td>
         <td>impactParameterProduct</td>
         <td>float</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::hf_cand_prong2::CosThetaStar</td>
+        <td>o2::aod::hf_cand_2prong::CosThetaStar</td>
         <td>D</td>
         <td>cosThetaStar</td>
         <td>float</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::hf_cand_prong2::ImpactParameterProngSqSum</td>
+        <td>o2::aod::hf_cand_2prong::ImpactParameterProngSqSum</td>
         <td>D</td>
         <td>impactParameterProngSqSum</td>
         <td>float</td>
@@ -5304,7 +5240,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::hf_cand_prong2::MaxNormalisedDeltaIP</td>
+        <td>o2::aod::hf_cand_2prong::MaxNormalisedDeltaIP</td>
         <td>D</td>
         <td>maxNormalisedDeltaIP</td>
         <td>float</td>
@@ -5348,13 +5284,13 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
     </table>
   </div>
 
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::HfCandBPMCRec</button>
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::HfCandBplusMcRec</button>
   <div class="panel">
     <div>
 
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/DataModel/HFSecondaryVertex.h" target="_blank">PWGHF/DataModel/HFSecondaryVertex.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/DataModel/CandidateReconstructionTables.h" target="_blank">PWGHF/DataModel/CandidateReconstructionTables.h</a>
     </div>
     <table class=DataModel>
       <tr>
@@ -5365,22 +5301,22 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <th>Comment</th>
       </tr>
       <tr>
-        <td>o2::aod::hf_cand_bplus::FlagMCMatchRec</td>
+        <td>o2::aod::hf_cand_bplus::FlagMcMatchRec</td>
         <td></td>
-        <td>flagMCMatchRec</td>
+        <td>flagMcMatchRec</td>
         <td>int8_t</td>
         <td></td>
       </tr>
     </table>
   </div>
 
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::HfCandBPMCGen</button>
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::HfCandBplusMcGen</button>
   <div class="panel">
     <div>
 
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/DataModel/HFSecondaryVertex.h" target="_blank">PWGHF/DataModel/HFSecondaryVertex.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/DataModel/CandidateReconstructionTables.h" target="_blank">PWGHF/DataModel/CandidateReconstructionTables.h</a>
     </div>
     <table class=DataModel>
       <tr>
@@ -5391,9 +5327,9 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <th>Comment</th>
       </tr>
       <tr>
-        <td>o2::aod::hf_cand_bplus::FlagMCMatchGen</td>
+        <td>o2::aod::hf_cand_bplus::FlagMcMatchGen</td>
         <td></td>
-        <td>flagMCMatchGen</td>
+        <td>flagMcMatchGen</td>
         <td>int8_t</td>
         <td></td>
       </tr>
@@ -5403,7 +5339,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
 </div>
 
 ####  o2-analysis-hf-candidate-creator-cascade
-Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer//HFCandidateCreatorCascade.cxx" target="_blank">HFCandidateCreatorCascade.cxx</a>
+Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer//candidateCreatorCascade.cxx" target="_blank">candidateCreatorCascade.cxx</a>
 <div>
 
   <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::HfCandCascBase</button>
@@ -5412,7 +5348,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
 
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/DataModel/HFSecondaryVertex.h" target="_blank">PWGHF/DataModel/HFSecondaryVertex.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/DataModel/CandidateReconstructionTables.h" target="_blank">PWGHF/DataModel/CandidateReconstructionTables.h</a>
     </div>
     <table class=DataModel>
       <tr>
@@ -5654,9 +5590,9 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::hf_track_index::Index0Id</td>
+        <td>o2::aod::hf_track_index::Prong0Id</td>
         <td>I</td>
-        <td>index0Id</td>
+        <td>prong0Id</td>
         <td>int</td>
         <td>Index to first prong</td>
       </tr>
@@ -5766,35 +5702,35 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::hf_cand_prong2::M</td>
+        <td>o2::aod::hf_cand_2prong::M</td>
         <td>D</td>
         <td>m</td>
         <td>float</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::hf_cand_prong2::M2</td>
+        <td>o2::aod::hf_cand_2prong::M2</td>
         <td>D</td>
         <td>m2</td>
         <td>float</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::hf_cand_prong2::ImpactParameterProduct</td>
+        <td>o2::aod::hf_cand_2prong::ImpactParameterProduct</td>
         <td>D</td>
         <td>impactParameterProduct</td>
         <td>float</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::hf_cand_prong2::CosThetaStar</td>
+        <td>o2::aod::hf_cand_2prong::CosThetaStar</td>
         <td>D</td>
         <td>cosThetaStar</td>
         <td>float</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::hf_cand_prong2::ImpactParameterProngSqSum</td>
+        <td>o2::aod::hf_cand_2prong::ImpactParameterProngSqSum</td>
         <td>D</td>
         <td>impactParameterProngSqSum</td>
         <td>float</td>
@@ -5864,7 +5800,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::hf_cand_prong2::MaxNormalisedDeltaIP</td>
+        <td>o2::aod::hf_cand_2prong::MaxNormalisedDeltaIP</td>
         <td>D</td>
         <td>maxNormalisedDeltaIP</td>
         <td>float</td>
@@ -5964,13 +5900,13 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
     </table>
   </div>
 
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::HfCandCascadeMCRec</button>
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::HfCandCascadeMcRec</button>
   <div class="panel">
     <div>
 
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/DataModel/HFSecondaryVertex.h" target="_blank">PWGHF/DataModel/HFSecondaryVertex.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/DataModel/CandidateReconstructionTables.h" target="_blank">PWGHF/DataModel/CandidateReconstructionTables.h</a>
     </div>
     <table class=DataModel>
       <tr>
@@ -5981,22 +5917,22 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <th>Comment</th>
       </tr>
       <tr>
-        <td>o2::aod::hf_cand_casc::FlagMCMatchRec</td>
+        <td>o2::aod::hf_cand_casc::FlagMcMatchRec</td>
         <td></td>
-        <td>flagMCMatchRec</td>
+        <td>flagMcMatchRec</td>
         <td>int8_t</td>
         <td>reconstruction level</td>
       </tr>
     </table>
   </div>
 
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::HfCandCascadeMCGen</button>
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::HfCandCascadeMcGen</button>
   <div class="panel">
     <div>
 
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/DataModel/HFSecondaryVertex.h" target="_blank">PWGHF/DataModel/HFSecondaryVertex.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/DataModel/CandidateReconstructionTables.h" target="_blank">PWGHF/DataModel/CandidateReconstructionTables.h</a>
     </div>
     <table class=DataModel>
       <tr>
@@ -6007,9 +5943,9 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <th>Comment</th>
       </tr>
       <tr>
-        <td>o2::aod::hf_cand_casc::FlagMCMatchGen</td>
+        <td>o2::aod::hf_cand_casc::FlagMcMatchGen</td>
         <td></td>
-        <td>flagMCMatchGen</td>
+        <td>flagMcMatchGen</td>
         <td>int8_t</td>
         <td>generator level</td>
       </tr>
@@ -6019,7 +5955,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
 </div>
 
 ####  o2-analysis-hf-candidate-creator-chic
-Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer//HFCandidateCreatorChic.cxx" target="_blank">HFCandidateCreatorChic.cxx</a>
+Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer//candidateCreatorChic.cxx" target="_blank">candidateCreatorChic.cxx</a>
 <div>
 
   <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::HfCandChicBase</button>
@@ -6028,7 +5964,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
 
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/DataModel/HFSecondaryVertex.h" target="_blank">PWGHF/DataModel/HFSecondaryVertex.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/DataModel/CandidateReconstructionTables.h" target="_blank">PWGHF/DataModel/CandidateReconstructionTables.h</a>
     </div>
     <table class=DataModel>
       <tr>
@@ -6270,16 +6206,16 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::hf_cand_chic::Index0Id</td>
+        <td>o2::aod::hf_cand_chic::Prong0Id</td>
         <td>I</td>
-        <td>index0Id</td>
+        <td>prong0Id</td>
         <td>int</td>
-        <td>Pointer into HfCandProng2</td>
+        <td>Pointer into HfCand2Prong</td>
       </tr>
       <tr>
-        <td>o2::aod::hf_cand_chic::Index1Id</td>
+        <td>o2::aod::hf_cand_chic::Prong1Id</td>
         <td>I</td>
-        <td>index1Id</td>
+        <td>prong1Id</td>
         <td>int</td>
         <td>Pointer into ECALs</td>
       </tr>
@@ -6298,14 +6234,14 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::hf_cand_prong2::M</td>
+        <td>o2::aod::hf_cand_2prong::M</td>
         <td>D</td>
         <td>m</td>
         <td>float</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::hf_cand_prong2::M2</td>
+        <td>o2::aod::hf_cand_2prong::M2</td>
         <td>D</td>
         <td>m2</td>
         <td>float</td>
@@ -6375,7 +6311,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::hf_cand_prong2::MaxNormalisedDeltaIP</td>
+        <td>o2::aod::hf_cand_2prong::MaxNormalisedDeltaIP</td>
         <td>D</td>
         <td>maxNormalisedDeltaIP</td>
         <td>float</td>
@@ -6419,13 +6355,13 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
     </table>
   </div>
 
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::HfCandChicMCRec</button>
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::HfCandChicMcRec</button>
   <div class="panel">
     <div>
 
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/DataModel/HFSecondaryVertex.h" target="_blank">PWGHF/DataModel/HFSecondaryVertex.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/DataModel/CandidateReconstructionTables.h" target="_blank">PWGHF/DataModel/CandidateReconstructionTables.h</a>
     </div>
     <table class=DataModel>
       <tr>
@@ -6436,36 +6372,36 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <th>Comment</th>
       </tr>
       <tr>
-        <td>o2::aod::hf_cand_chic::FlagMCMatchRec</td>
+        <td>o2::aod::hf_cand_chic::FlagMcMatchRec</td>
         <td></td>
-        <td>flagMCMatchRec</td>
+        <td>flagMcMatchRec</td>
         <td>int8_t</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::hf_cand_chic::OriginMCRec</td>
+        <td>o2::aod::hf_cand_chic::OriginMcRec</td>
         <td></td>
-        <td>originMCRec</td>
+        <td>originMcRec</td>
         <td>int8_t</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::hf_cand_chic::FlagMCDecayChanRec</td>
+        <td>o2::aod::hf_cand_chic::FlagMcDecayChanRec</td>
         <td></td>
-        <td>flagMCDecayChanRec</td>
+        <td>flagMcDecayChanRec</td>
         <td>int8_t</td>
         <td></td>
       </tr>
     </table>
   </div>
 
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::HfCandChicMCGen</button>
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::HfCandChicMcGen</button>
   <div class="panel">
     <div>
 
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/DataModel/HFSecondaryVertex.h" target="_blank">PWGHF/DataModel/HFSecondaryVertex.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/DataModel/CandidateReconstructionTables.h" target="_blank">PWGHF/DataModel/CandidateReconstructionTables.h</a>
     </div>
     <table class=DataModel>
       <tr>
@@ -6476,23 +6412,23 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <th>Comment</th>
       </tr>
       <tr>
-        <td>o2::aod::hf_cand_chic::FlagMCMatchGen</td>
+        <td>o2::aod::hf_cand_chic::FlagMcMatchGen</td>
         <td></td>
-        <td>flagMCMatchGen</td>
+        <td>flagMcMatchGen</td>
         <td>int8_t</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::hf_cand_chic::OriginMCGen</td>
+        <td>o2::aod::hf_cand_chic::OriginMcGen</td>
         <td></td>
-        <td>originMCGen</td>
+        <td>originMcGen</td>
         <td>int8_t</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::hf_cand_chic::FlagMCDecayChanGen</td>
+        <td>o2::aod::hf_cand_chic::FlagMcDecayChanGen</td>
         <td></td>
-        <td>flagMCDecayChanGen</td>
+        <td>flagMcDecayChanGen</td>
         <td>int8_t</td>
         <td></td>
       </tr>
@@ -6502,7 +6438,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
 </div>
 
 ####  o2-analysis-hf-candidate-creator-lb
-Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer//HFCandidateCreatorLb.cxx" target="_blank">HFCandidateCreatorLb.cxx</a>
+Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer//candidateCreatorLb.cxx" target="_blank">candidateCreatorLb.cxx</a>
 <div>
 
   <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::HfCandLbBase</button>
@@ -6511,7 +6447,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
 
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/DataModel/HFSecondaryVertex.h" target="_blank">PWGHF/DataModel/HFSecondaryVertex.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/DataModel/CandidateReconstructionTables.h" target="_blank">PWGHF/DataModel/CandidateReconstructionTables.h</a>
     </div>
     <table class=DataModel>
       <tr>
@@ -6753,16 +6689,16 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::hf_cand_lb::Index0Id</td>
+        <td>o2::aod::hf_cand_lb::Prong0Id</td>
         <td>I</td>
-        <td>index0Id</td>
+        <td>prong0Id</td>
         <td>int</td>
-        <td>Pointer into HfCandProng3</td>
+        <td>Pointer into HfCand3Prong</td>
       </tr>
       <tr>
-        <td>o2::aod::hf_track_index::Index1Id</td>
+        <td>o2::aod::hf_track_index::Prong1Id</td>
         <td>I</td>
-        <td>index1Id</td>
+        <td>prong1Id</td>
         <td>int</td>
         <td>Index to second prong</td>
       </tr>
@@ -6774,21 +6710,21 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::hf_cand_prong2::M</td>
+        <td>o2::aod::hf_cand_2prong::M</td>
         <td>D</td>
         <td>m</td>
         <td>float</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::hf_cand_prong2::M2</td>
+        <td>o2::aod::hf_cand_2prong::M2</td>
         <td>D</td>
         <td>m2</td>
         <td>float</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::hf_cand_prong2::ImpactParameterProduct</td>
+        <td>o2::aod::hf_cand_2prong::ImpactParameterProduct</td>
         <td>D</td>
         <td>impactParameterProduct</td>
         <td>float</td>
@@ -6858,7 +6794,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::hf_cand_prong2::MaxNormalisedDeltaIP</td>
+        <td>o2::aod::hf_cand_2prong::MaxNormalisedDeltaIP</td>
         <td>D</td>
         <td>maxNormalisedDeltaIP</td>
         <td>float</td>
@@ -6902,13 +6838,13 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
     </table>
   </div>
 
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::HfCandLbMCRec</button>
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::HfCandLbMcRec</button>
   <div class="panel">
     <div>
 
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/DataModel/HFSecondaryVertex.h" target="_blank">PWGHF/DataModel/HFSecondaryVertex.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/DataModel/CandidateReconstructionTables.h" target="_blank">PWGHF/DataModel/CandidateReconstructionTables.h</a>
     </div>
     <table class=DataModel>
       <tr>
@@ -6919,36 +6855,36 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <th>Comment</th>
       </tr>
       <tr>
-        <td>o2::aod::hf_cand_lb::FlagMCMatchRec</td>
+        <td>o2::aod::hf_cand_lb::FlagMcMatchRec</td>
         <td></td>
-        <td>flagMCMatchRec</td>
+        <td>flagMcMatchRec</td>
         <td>int8_t</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::hf_cand_lb::OriginMCRec</td>
+        <td>o2::aod::hf_cand_lb::OriginMcRec</td>
         <td></td>
-        <td>originMCRec</td>
+        <td>originMcRec</td>
         <td>int8_t</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::hf_cand_lb::DebugMCRec</td>
+        <td>o2::aod::hf_cand_lb::DebugMcRec</td>
         <td></td>
-        <td>debugMCRec</td>
+        <td>debugMcRec</td>
         <td>int8_t</td>
         <td></td>
       </tr>
     </table>
   </div>
 
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::HfCandLbMCGen</button>
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::HfCandLbMcGen</button>
   <div class="panel">
     <div>
 
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/DataModel/HFSecondaryVertex.h" target="_blank">PWGHF/DataModel/HFSecondaryVertex.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/DataModel/CandidateReconstructionTables.h" target="_blank">PWGHF/DataModel/CandidateReconstructionTables.h</a>
     </div>
     <table class=DataModel>
       <tr>
@@ -6959,16 +6895,16 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <th>Comment</th>
       </tr>
       <tr>
-        <td>o2::aod::hf_cand_lb::FlagMCMatchGen</td>
+        <td>o2::aod::hf_cand_lb::FlagMcMatchGen</td>
         <td></td>
-        <td>flagMCMatchGen</td>
+        <td>flagMcMatchGen</td>
         <td>int8_t</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::hf_cand_lb::OriginMCGen</td>
+        <td>o2::aod::hf_cand_lb::OriginMcGen</td>
         <td></td>
-        <td>originMCGen</td>
+        <td>originMcGen</td>
         <td>int8_t</td>
         <td></td>
       </tr>
@@ -6978,7 +6914,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
 </div>
 
 ####  o2-analysis-hf-candidate-creator-x
-Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer//HFCandidateCreatorX.cxx" target="_blank">HFCandidateCreatorX.cxx</a>
+Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer//candidateCreatorX.cxx" target="_blank">candidateCreatorX.cxx</a>
 <div>
 
   <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::HfCandXBase</button>
@@ -6987,7 +6923,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
 
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/DataModel/HFSecondaryVertex.h" target="_blank">PWGHF/DataModel/HFSecondaryVertex.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/DataModel/CandidateReconstructionTables.h" target="_blank">PWGHF/DataModel/CandidateReconstructionTables.h</a>
     </div>
     <table class=DataModel>
       <tr>
@@ -7264,23 +7200,23 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::hf_cand_x::Index0Id</td>
+        <td>o2::aod::hf_cand_x::Prong0Id</td>
         <td>I</td>
-        <td>index0Id</td>
+        <td>prong0Id</td>
         <td>int</td>
-        <td>Pointer into HfCandProng2</td>
+        <td>Pointer into HfCand2Prong</td>
       </tr>
       <tr>
-        <td>o2::aod::hf_track_index::Index1Id</td>
+        <td>o2::aod::hf_track_index::Prong1Id</td>
         <td>I</td>
-        <td>index1Id</td>
+        <td>prong1Id</td>
         <td>int</td>
         <td>Index to second prong</td>
       </tr>
       <tr>
-        <td>o2::aod::hf_track_index::Index2Id</td>
+        <td>o2::aod::hf_track_index::Prong2Id</td>
         <td>I</td>
-        <td>index2Id</td>
+        <td>prong2Id</td>
         <td>int</td>
         <td>Index to third prong</td>
       </tr>
@@ -7292,14 +7228,14 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::hf_cand_prong3::M</td>
+        <td>o2::aod::hf_cand_3prong::M</td>
         <td>D</td>
         <td>m</td>
         <td>float</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::hf_cand_prong3::M2</td>
+        <td>o2::aod::hf_cand_3prong::M2</td>
         <td>D</td>
         <td>m2</td>
         <td>float</td>
@@ -7390,7 +7326,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::hf_cand_prong3::MaxNormalisedDeltaIP</td>
+        <td>o2::aod::hf_cand_3prong::MaxNormalisedDeltaIP</td>
         <td>D</td>
         <td>maxNormalisedDeltaIP</td>
         <td>float</td>
@@ -7434,13 +7370,13 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
     </table>
   </div>
 
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::HfCandXMCRec</button>
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::HfCandXMcRec</button>
   <div class="panel">
     <div>
 
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/DataModel/HFSecondaryVertex.h" target="_blank">PWGHF/DataModel/HFSecondaryVertex.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/DataModel/CandidateReconstructionTables.h" target="_blank">PWGHF/DataModel/CandidateReconstructionTables.h</a>
     </div>
     <table class=DataModel>
       <tr>
@@ -7451,36 +7387,36 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <th>Comment</th>
       </tr>
       <tr>
-        <td>o2::aod::hf_cand_x::FlagMCMatchRec</td>
+        <td>o2::aod::hf_cand_x::FlagMcMatchRec</td>
         <td></td>
-        <td>flagMCMatchRec</td>
+        <td>flagMcMatchRec</td>
         <td>int8_t</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::hf_cand_x::OriginMCRec</td>
+        <td>o2::aod::hf_cand_x::OriginMcRec</td>
         <td></td>
-        <td>originMCRec</td>
+        <td>originMcRec</td>
         <td>int8_t</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::hf_cand_x::FlagMCDecayChanRec</td>
+        <td>o2::aod::hf_cand_x::FlagMcDecayChanRec</td>
         <td></td>
-        <td>flagMCDecayChanRec</td>
+        <td>flagMcDecayChanRec</td>
         <td>int8_t</td>
         <td></td>
       </tr>
     </table>
   </div>
 
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::HfCandXMCGen</button>
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::HfCandXMcGen</button>
   <div class="panel">
     <div>
 
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/DataModel/HFSecondaryVertex.h" target="_blank">PWGHF/DataModel/HFSecondaryVertex.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/DataModel/CandidateReconstructionTables.h" target="_blank">PWGHF/DataModel/CandidateReconstructionTables.h</a>
     </div>
     <table class=DataModel>
       <tr>
@@ -7491,23 +7427,23 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <th>Comment</th>
       </tr>
       <tr>
-        <td>o2::aod::hf_cand_x::FlagMCMatchGen</td>
+        <td>o2::aod::hf_cand_x::FlagMcMatchGen</td>
         <td></td>
-        <td>flagMCMatchGen</td>
+        <td>flagMcMatchGen</td>
         <td>int8_t</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::hf_cand_x::OriginMCGen</td>
+        <td>o2::aod::hf_cand_x::OriginMcGen</td>
         <td></td>
-        <td>originMCGen</td>
+        <td>originMcGen</td>
         <td>int8_t</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::hf_cand_x::FlagMCDecayChanGen</td>
+        <td>o2::aod::hf_cand_x::FlagMcDecayChanGen</td>
         <td></td>
-        <td>flagMCDecayChanGen</td>
+        <td>flagMcDecayChanGen</td>
         <td>int8_t</td>
         <td></td>
       </tr>
@@ -7517,7 +7453,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
 </div>
 
 ####  o2-analysis-hf-candidate-creator-xicc
-Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer//HFCandidateCreatorXicc.cxx" target="_blank">HFCandidateCreatorXicc.cxx</a>
+Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer//candidateCreatorXicc.cxx" target="_blank">candidateCreatorXicc.cxx</a>
 <div>
 
   <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::HfCandXiccBase</button>
@@ -7526,7 +7462,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
 
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/DataModel/HFSecondaryVertex.h" target="_blank">PWGHF/DataModel/HFSecondaryVertex.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/DataModel/CandidateReconstructionTables.h" target="_blank">PWGHF/DataModel/CandidateReconstructionTables.h</a>
     </div>
     <table class=DataModel>
       <tr>
@@ -7768,16 +7704,16 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::hf_cand_xicc::Index0Id</td>
+        <td>o2::aod::hf_cand_xicc::Prong0Id</td>
         <td>I</td>
-        <td>index0Id</td>
+        <td>prong0Id</td>
         <td>int</td>
-        <td>Pointer into HfCandProng3</td>
+        <td>Pointer into HfCand3Prong</td>
       </tr>
       <tr>
-        <td>o2::aod::hf_track_index::Index1Id</td>
+        <td>o2::aod::hf_track_index::Prong1Id</td>
         <td>I</td>
-        <td>index1Id</td>
+        <td>prong1Id</td>
         <td>int</td>
         <td>Index to second prong</td>
       </tr>
@@ -7789,21 +7725,21 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::hf_cand_prong2::M</td>
+        <td>o2::aod::hf_cand_2prong::M</td>
         <td>D</td>
         <td>m</td>
         <td>float</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::hf_cand_prong2::M2</td>
+        <td>o2::aod::hf_cand_2prong::M2</td>
         <td>D</td>
         <td>m2</td>
         <td>float</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::hf_cand_prong2::ImpactParameterProduct</td>
+        <td>o2::aod::hf_cand_2prong::ImpactParameterProduct</td>
         <td>D</td>
         <td>impactParameterProduct</td>
         <td>float</td>
@@ -7873,7 +7809,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::hf_cand_prong2::MaxNormalisedDeltaIP</td>
+        <td>o2::aod::hf_cand_2prong::MaxNormalisedDeltaIP</td>
         <td>D</td>
         <td>maxNormalisedDeltaIP</td>
         <td>float</td>
@@ -7917,13 +7853,13 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
     </table>
   </div>
 
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::HfCandXiccMCRec</button>
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::HfCandXiccMcRec</button>
   <div class="panel">
     <div>
 
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/DataModel/HFSecondaryVertex.h" target="_blank">PWGHF/DataModel/HFSecondaryVertex.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/DataModel/CandidateReconstructionTables.h" target="_blank">PWGHF/DataModel/CandidateReconstructionTables.h</a>
     </div>
     <table class=DataModel>
       <tr>
@@ -7934,36 +7870,36 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <th>Comment</th>
       </tr>
       <tr>
-        <td>o2::aod::hf_cand_xicc::FlagMCMatchRec</td>
+        <td>o2::aod::hf_cand_xicc::FlagMcMatchRec</td>
         <td></td>
-        <td>flagMCMatchRec</td>
+        <td>flagMcMatchRec</td>
         <td>int8_t</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::hf_cand_xicc::OriginMCRec</td>
+        <td>o2::aod::hf_cand_xicc::OriginMcRec</td>
         <td></td>
-        <td>originMCRec</td>
+        <td>originMcRec</td>
         <td>int8_t</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::hf_cand_xicc::DebugMCRec</td>
+        <td>o2::aod::hf_cand_xicc::DebugMcRec</td>
         <td></td>
-        <td>debugMCRec</td>
+        <td>debugMcRec</td>
         <td>int8_t</td>
         <td></td>
       </tr>
     </table>
   </div>
 
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::HfCandXiccMCGen</button>
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::HfCandXiccMcGen</button>
   <div class="panel">
     <div>
 
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/DataModel/HFSecondaryVertex.h" target="_blank">PWGHF/DataModel/HFSecondaryVertex.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/DataModel/CandidateReconstructionTables.h" target="_blank">PWGHF/DataModel/CandidateReconstructionTables.h</a>
     </div>
     <table class=DataModel>
       <tr>
@@ -7974,16 +7910,16 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <th>Comment</th>
       </tr>
       <tr>
-        <td>o2::aod::hf_cand_xicc::FlagMCMatchGen</td>
+        <td>o2::aod::hf_cand_xicc::FlagMcMatchGen</td>
         <td></td>
-        <td>flagMCMatchGen</td>
+        <td>flagMcMatchGen</td>
         <td>int8_t</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::hf_cand_xicc::OriginMCGen</td>
+        <td>o2::aod::hf_cand_xicc::OriginMcGen</td>
         <td></td>
-        <td>originMCGen</td>
+        <td>originMcGen</td>
         <td>int8_t</td>
         <td></td>
       </tr>
@@ -7992,17 +7928,17 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
 
 </div>
 
-####  o2-analysis-hf-chic-tojpsigamma-candidate-selector
-Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer//HFChicToJpsiGammaCandidateSelector.cxx" target="_blank">HFChicToJpsiGammaCandidateSelector.cxx</a>
+####  o2-analysis-hf-candidate-selector-b0-to-d-pi
+Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer//candidateSelectorB0ToDPi.cxx" target="_blank">candidateSelectorB0ToDPi.cxx</a>
 <div>
 
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::HFSelChicToJpsiGammaCandidate</button>
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::HfSelB0ToDPi</button>
   <div class="panel">
     <div>
 
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/DataModel/HFCandidateSelectionTables.h" target="_blank">PWGHF/DataModel/HFCandidateSelectionTables.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/DataModel/CandidateSelectionTables.h" target="_blank">PWGHF/DataModel/CandidateSelectionTables.h</a>
     </div>
     <table class=DataModel>
       <tr>
@@ -8013,14 +7949,78 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <th>Comment</th>
       </tr>
       <tr>
-        <td>o2::aod::hf_selcandidate_chic::IsSelChicToJpsiToEEGamma</td>
+        <td>o2::aod::hf_sel_candidate_b0::IsSelB0ToDPi</td>
+        <td></td>
+        <td>isSelB0ToDPi</td>
+        <td>int</td>
+        <td></td>
+      </tr>
+    </table>
+  </div>
+
+</div>
+
+####  o2-analysis-hf-candidate-selector-bplus-to-d0-pi
+Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer//candidateSelectorBplusToD0Pi.cxx" target="_blank">candidateSelectorBplusToD0Pi.cxx</a>
+<div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::HfSelBplusToD0Pi</button>
+  <div class="panel">
+    <div>
+
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/DataModel/CandidateSelectionTables.h" target="_blank">PWGHF/DataModel/CandidateSelectionTables.h</a>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_sel_candidate_bplus::IsSelBplusToD0Pi</td>
+        <td></td>
+        <td>isSelBplusToD0Pi</td>
+        <td>int</td>
+        <td></td>
+      </tr>
+    </table>
+  </div>
+
+</div>
+
+####  o2-analysis-hf-candidate-selector-chic-to-jpsi-gamma
+Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer//candidateSelectorChicToJpsiGamma.cxx" target="_blank">candidateSelectorChicToJpsiGamma.cxx</a>
+<div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::HfSelChicToJpsiGamma</button>
+  <div class="panel">
+    <div>
+
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/DataModel/CandidateSelectionTables.h" target="_blank">PWGHF/DataModel/CandidateSelectionTables.h</a>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_sel_candidate_chic::IsSelChicToJpsiToEEGamma</td>
         <td></td>
         <td>isSelChicToJpsiToEEGamma</td>
         <td>int</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::hf_selcandidate_chic::IsSelChicToJpsiToMuMuGamma</td>
+        <td>o2::aod::hf_sel_candidate_chic::IsSelChicToJpsiToMuMuGamma</td>
         <td></td>
         <td>isSelChicToJpsiToMuMuGamma</td>
         <td>int</td>
@@ -8031,17 +8031,17 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
 
 </div>
 
-####  o2-analysis-hf-d0-candidate-selector
-Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer//HFD0CandidateSelector.cxx" target="_blank">HFD0CandidateSelector.cxx</a>
+####  o2-analysis-hf-candidate-selector-d0
+Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer//candidateSelectorD0.cxx" target="_blank">candidateSelectorD0.cxx</a>
 <div>
 
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::HFSelD0Candidate</button>
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::HfSelD0</button>
   <div class="panel">
     <div>
 
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/DataModel/HFCandidateSelectionTables.h" target="_blank">PWGHF/DataModel/HFCandidateSelectionTables.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/DataModel/CandidateSelectionTables.h" target="_blank">PWGHF/DataModel/CandidateSelectionTables.h</a>
     </div>
     <table class=DataModel>
       <tr>
@@ -8052,44 +8052,44 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <th>Comment</th>
       </tr>
       <tr>
-        <td>o2::aod::hf_selcandidate_d0::IsSelD0</td>
+        <td>o2::aod::hf_sel_candidate_d0::IsSelD0</td>
         <td></td>
         <td>isSelD0</td>
         <td>int</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::hf_selcandidate_d0::IsSelD0bar</td>
+        <td>o2::aod::hf_sel_candidate_d0::IsSelD0bar</td>
         <td></td>
         <td>isSelD0bar</td>
         <td>int</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::hf_selcandidate_d0::IsRecoHFFlag</td>
+        <td>o2::aod::hf_sel_candidate_d0::IsRecoHfFlag</td>
         <td></td>
-        <td>isRecoHFFlag</td>
+        <td>isRecoHfFlag</td>
         <td>int</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::hf_selcandidate_d0::IsRecoTopol</td>
+        <td>o2::aod::hf_sel_candidate_d0::IsRecoTopol</td>
         <td></td>
         <td>isRecoTopol</td>
         <td>int</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::hf_selcandidate_d0::IsRecoCand</td>
+        <td>o2::aod::hf_sel_candidate_d0::IsRecoCand</td>
         <td></td>
         <td>isRecoCand</td>
         <td>int</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::hf_selcandidate_d0::IsRecoPID</td>
+        <td>o2::aod::hf_sel_candidate_d0::IsRecoPid</td>
         <td></td>
-        <td>isRecoPID</td>
+        <td>isRecoPid</td>
         <td>int</td>
         <td></td>
       </tr>
@@ -8098,17 +8098,17 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
 
 </div>
 
-####  o2-analysis-hf-d0-candidate-selector-alice3-barrel
-Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer//HFD0CandidateSelectorALICE3Barrel.cxx" target="_blank">HFD0CandidateSelectorALICE3Barrel.cxx</a>
+####  o2-analysis-hf-candidate-selector-d0-alice3-barrel
+Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer//candidateSelectorD0Alice3Barrel.cxx" target="_blank">candidateSelectorD0Alice3Barrel.cxx</a>
 <div>
 
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::HFSelD0CandidateALICE3Barrel</button>
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::HfSelD0Alice3Barrel</button>
   <div class="panel">
     <div>
 
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/DataModel/HFCandidateSelectionTables.h" target="_blank">PWGHF/DataModel/HFCandidateSelectionTables.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/DataModel/CandidateSelectionTables.h" target="_blank">PWGHF/DataModel/CandidateSelectionTables.h</a>
     </div>
     <table class=DataModel>
       <tr>
@@ -8119,51 +8119,51 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <th>Comment</th>
       </tr>
       <tr>
-        <td>o2::aod::hf_selcandidate_d0_ALICE3_Barrel::IsSelHFFlag</td>
+        <td>o2::aod::hf_sel_candidate_d0_alice3_barrel::IsSelHfFlag</td>
         <td></td>
-        <td>isSelHFFlag</td>
+        <td>isSelHfFlag</td>
         <td>int</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::hf_selcandidate_d0_ALICE3_Barrel::IsSelD0NoPID</td>
+        <td>o2::aod::hf_sel_candidate_d0_alice3_barrel::IsSelD0NoPid</td>
         <td></td>
-        <td>isSelD0NoPID</td>
+        <td>isSelD0NoPid</td>
         <td>int</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::hf_selcandidate_d0_ALICE3_Barrel::IsSelD0PerfectPID</td>
+        <td>o2::aod::hf_sel_candidate_d0_alice3_barrel::IsSelD0PerfectPid</td>
         <td></td>
-        <td>isSelD0PerfectPID</td>
+        <td>isSelD0PerfectPid</td>
         <td>int</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::hf_selcandidate_d0_ALICE3_Barrel::IsSelD0TOFPID</td>
+        <td>o2::aod::hf_sel_candidate_d0_alice3_barrel::IsSelD0TofPid</td>
         <td></td>
-        <td>isSelD0TOFPID</td>
+        <td>isSelD0TofPid</td>
         <td>int</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::hf_selcandidate_d0_ALICE3_Barrel::IsSelD0RICHPID</td>
+        <td>o2::aod::hf_sel_candidate_d0_alice3_barrel::IsSelD0RichPid</td>
         <td></td>
-        <td>isSelD0RICHPID</td>
+        <td>isSelD0RichPid</td>
         <td>int</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::hf_selcandidate_d0_ALICE3_Barrel::IsSelD0TOFplusRICHPID</td>
+        <td>o2::aod::hf_sel_candidate_d0_alice3_barrel::IsSelD0TofPlusRichPid</td>
         <td></td>
-        <td>isSelD0TOFplusRICHPID</td>
+        <td>isSelD0TofPlusRichPid</td>
         <td>int</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::hf_selcandidate_d0_ALICE3_Barrel::IsSelD0barTOFplusRICHPID</td>
+        <td>o2::aod::hf_sel_candidate_d0_alice3_barrel::IsSelD0barTofPlusRichPid</td>
         <td></td>
-        <td>isSelD0barTOFplusRICHPID</td>
+        <td>isSelD0barTofPlusRichPid</td>
         <td>int</td>
         <td></td>
       </tr>
@@ -8172,17 +8172,17 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
 
 </div>
 
-####  o2-analysis-hf-d0-candidate-selector-alice3-forward
-Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer//HFD0CandidateSelectorALICE3Forward.cxx" target="_blank">HFD0CandidateSelectorALICE3Forward.cxx</a>
+####  o2-analysis-hf-candidate-selector-d0-alice3-forward
+Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer//candidateSelectorD0Alice3Forward.cxx" target="_blank">candidateSelectorD0Alice3Forward.cxx</a>
 <div>
 
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::HFSelD0CandidateALICE3Forward</button>
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::HfSelD0Alice3Forward</button>
   <div class="panel">
     <div>
 
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/DataModel/HFCandidateSelectionTables.h" target="_blank">PWGHF/DataModel/HFCandidateSelectionTables.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/DataModel/CandidateSelectionTables.h" target="_blank">PWGHF/DataModel/CandidateSelectionTables.h</a>
     </div>
     <table class=DataModel>
       <tr>
@@ -8193,23 +8193,23 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <th>Comment</th>
       </tr>
       <tr>
-        <td>o2::aod::hf_selcandidate_d0_ALICE3_Forward::IsSelHFFFlag</td>
+        <td>o2::aod::hf_sel_candidate_d0_alice3_forward::IsSelHfFlag</td>
         <td></td>
-        <td>isSelHFFFlag</td>
+        <td>isSelHfFlag</td>
         <td>int</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::hf_selcandidate_d0_ALICE3_Forward::IsSelD0FNoPID</td>
+        <td>o2::aod::hf_sel_candidate_d0_alice3_forward::IsSelD0FNoPid</td>
         <td></td>
-        <td>isSelD0FNoPID</td>
+        <td>isSelD0FNoPid</td>
         <td>int</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::hf_selcandidate_d0_ALICE3_Forward::IsSelD0FRICHPID</td>
+        <td>o2::aod::hf_sel_candidate_d0_alice3_forward::IsSelD0FRichPid</td>
         <td></td>
-        <td>isSelD0FRICHPID</td>
+        <td>isSelD0FRichPid</td>
         <td>int</td>
         <td></td>
       </tr>
@@ -8218,17 +8218,17 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
 
 </div>
 
-####  o2-analysis-hf-d0-candidate-selector-parametrized-pid
-Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer//HFD0CandidateSelectorparametrizedPID.cxx" target="_blank">HFD0CandidateSelectorparametrizedPID.cxx</a>
+####  o2-analysis-hf-candidate-selector-d0-parametrized-pid
+Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer//candidateSelectorD0ParametrizedPid.cxx" target="_blank">candidateSelectorD0ParametrizedPid.cxx</a>
 <div>
 
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::HFSelD0CandidateparametrizedPID</button>
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::HfSelD0ParametrizedPid</button>
   <div class="panel">
     <div>
 
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/DataModel/HFCandidateSelectionTables.h" target="_blank">PWGHF/DataModel/HFCandidateSelectionTables.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/DataModel/CandidateSelectionTables.h" target="_blank">PWGHF/DataModel/CandidateSelectionTables.h</a>
     </div>
     <table class=DataModel>
       <tr>
@@ -8239,42 +8239,42 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <th>Comment</th>
       </tr>
       <tr>
-        <td>o2::aod::hf_selcandidate_d0_parametrizedPID::IsSelD0NoPID</td>
+        <td>o2::aod::hf_sel_candidate_d0_parametrized_pid::IsSelD0NoPid</td>
         <td></td>
-        <td>isSelD0NoPID</td>
+        <td>isSelD0NoPid</td>
         <td>int</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::hf_selcandidate_d0_parametrizedPID::IsSelD0PerfectPID</td>
+        <td>o2::aod::hf_sel_candidate_d0_parametrized_pid::IsSelD0PerfectPid</td>
         <td></td>
-        <td>isSelD0PerfectPID</td>
+        <td>isSelD0PerfectPid</td>
         <td>int</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::hf_selcandidate_d0_parametrizedPID::IsSelD0</td>
+        <td>o2::aod::hf_sel_candidate_d0_parametrized_pid::IsSelD0</td>
         <td></td>
         <td>isSelD0</td>
         <td>int</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::hf_selcandidate_d0_parametrizedPID::IsSelD0barNoPID</td>
+        <td>o2::aod::hf_sel_candidate_d0_parametrized_pid::IsSelD0barNoPid</td>
         <td></td>
-        <td>isSelD0barNoPID</td>
+        <td>isSelD0barNoPid</td>
         <td>int</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::hf_selcandidate_d0_parametrizedPID::IsSelD0barPerfectPID</td>
+        <td>o2::aod::hf_sel_candidate_d0_parametrized_pid::IsSelD0barPerfectPid</td>
         <td></td>
-        <td>isSelD0barPerfectPID</td>
+        <td>isSelD0barPerfectPid</td>
         <td>int</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::hf_selcandidate_d0_parametrizedPID::IsSelD0bar</td>
+        <td>o2::aod::hf_sel_candidate_d0_parametrized_pid::IsSelD0bar</td>
         <td></td>
         <td>isSelD0bar</td>
         <td>int</td>
@@ -8285,17 +8285,17 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
 
 </div>
 
-####  o2-analysis-hf-dplus-topikpi-candidate-selector
-Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer//HFDplusToPiKPiCandidateSelector.cxx" target="_blank">HFDplusToPiKPiCandidateSelector.cxx</a>
+####  o2-analysis-hf-candidate-selector-dplus-to-pi-k-pi
+Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer//candidateSelectorDplusToPiKPi.cxx" target="_blank">candidateSelectorDplusToPiKPi.cxx</a>
 <div>
 
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::HFSelDplusToPiKPiCandidate</button>
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::HfSelDplusToPiKPi</button>
   <div class="panel">
     <div>
 
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/DataModel/HFCandidateSelectionTables.h" target="_blank">PWGHF/DataModel/HFCandidateSelectionTables.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/DataModel/CandidateSelectionTables.h" target="_blank">PWGHF/DataModel/CandidateSelectionTables.h</a>
     </div>
     <table class=DataModel>
       <tr>
@@ -8306,7 +8306,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <th>Comment</th>
       </tr>
       <tr>
-        <td>o2::aod::hf_selcandidate_dplus::IsSelDplusToPiKPi</td>
+        <td>o2::aod::hf_sel_candidate_dplus::IsSelDplusToPiKPi</td>
         <td></td>
         <td>isSelDplusToPiKPi</td>
         <td>int</td>
@@ -8317,17 +8317,17 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
 
 </div>
 
-####  o2-analysis-hf-ds-tokkpi-candidate-selector
-Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer//HFDsToKKPiCandidateSelector.cxx" target="_blank">HFDsToKKPiCandidateSelector.cxx</a>
+####  o2-analysis-hf-candidate-selector-ds-to-k-k-pi
+Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer//candidateSelectorDsToKKPi.cxx" target="_blank">candidateSelectorDsToKKPi.cxx</a>
 <div>
 
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::HFSelDsToKKPiCandidate</button>
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::HfSelDsToKKPi</button>
   <div class="panel">
     <div>
 
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/DataModel/HFCandidateSelectionTables.h" target="_blank">PWGHF/DataModel/HFCandidateSelectionTables.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/DataModel/CandidateSelectionTables.h" target="_blank">PWGHF/DataModel/CandidateSelectionTables.h</a>
     </div>
     <table class=DataModel>
       <tr>
@@ -8338,14 +8338,14 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <th>Comment</th>
       </tr>
       <tr>
-        <td>o2::aod::hf_selcandidate_ds::IsSelDsToKKPi</td>
+        <td>o2::aod::hf_sel_candidate_ds::IsSelDsToKKPi</td>
         <td></td>
         <td>isSelDsToKKPi</td>
         <td>int</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::hf_selcandidate_ds::IsSelDsToPiKK</td>
+        <td>o2::aod::hf_sel_candidate_ds::IsSelDsToPiKK</td>
         <td></td>
         <td>isSelDsToPiKK</td>
         <td>int</td>
@@ -8356,17 +8356,17 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
 
 </div>
 
-####  o2-analysis-hf-jpsi-candidate-selector
-Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer//HFJpsiCandidateSelector.cxx" target="_blank">HFJpsiCandidateSelector.cxx</a>
+####  o2-analysis-hf-candidate-selector-jpsi
+Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer//candidateSelectorJpsi.cxx" target="_blank">candidateSelectorJpsi.cxx</a>
 <div>
 
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::HFSelJpsiCandidate</button>
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::HfSelJpsi</button>
   <div class="panel">
     <div>
 
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/DataModel/HFCandidateSelectionTables.h" target="_blank">PWGHF/DataModel/HFCandidateSelectionTables.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/DataModel/CandidateSelectionTables.h" target="_blank">PWGHF/DataModel/CandidateSelectionTables.h</a>
     </div>
     <table class=DataModel>
       <tr>
@@ -8377,63 +8377,63 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <th>Comment</th>
       </tr>
       <tr>
-        <td>o2::aod::hf_selcandidate_jpsi::IsSelJpsiToEE</td>
+        <td>o2::aod::hf_sel_candidate_jpsi::IsSelJpsiToEE</td>
         <td></td>
         <td>isSelJpsiToEE</td>
         <td>int</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::hf_selcandidate_jpsi::IsSelJpsiToMuMu</td>
+        <td>o2::aod::hf_sel_candidate_jpsi::IsSelJpsiToMuMu</td>
         <td></td>
         <td>isSelJpsiToMuMu</td>
         <td>int</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::hf_selcandidate_jpsi::IsSelJpsiToEETopol</td>
+        <td>o2::aod::hf_sel_candidate_jpsi::IsSelJpsiToEETopol</td>
         <td></td>
         <td>isSelJpsiToEETopol</td>
         <td>int</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::hf_selcandidate_jpsi::IsSelJpsiToEETpc</td>
+        <td>o2::aod::hf_sel_candidate_jpsi::IsSelJpsiToEETpc</td>
         <td></td>
         <td>isSelJpsiToEETpc</td>
         <td>int</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::hf_selcandidate_jpsi::IsSelJpsiToEETof</td>
+        <td>o2::aod::hf_sel_candidate_jpsi::IsSelJpsiToEETof</td>
         <td></td>
         <td>isSelJpsiToEETof</td>
         <td>int</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::hf_selcandidate_jpsi::IsSelJpsiToEERich</td>
+        <td>o2::aod::hf_sel_candidate_jpsi::IsSelJpsiToEERich</td>
         <td></td>
         <td>isSelJpsiToEERich</td>
         <td>int</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::hf_selcandidate_jpsi::IsSelJpsiToEETofRich</td>
+        <td>o2::aod::hf_sel_candidate_jpsi::IsSelJpsiToEETofRich</td>
         <td></td>
         <td>isSelJpsiToEETofRich</td>
         <td>int</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::hf_selcandidate_jpsi::IsSelJpsiToMuMuTopol</td>
+        <td>o2::aod::hf_sel_candidate_jpsi::IsSelJpsiToMuMuTopol</td>
         <td></td>
         <td>isSelJpsiToMuMuTopol</td>
         <td>int</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::hf_selcandidate_jpsi::IsSelJpsiToMuMuMid</td>
+        <td>o2::aod::hf_sel_candidate_jpsi::IsSelJpsiToMuMuMid</td>
         <td></td>
         <td>isSelJpsiToMuMuMid</td>
         <td>int</td>
@@ -8444,17 +8444,17 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
 
 </div>
 
-####  o2-analysis-hf-lb-tolcpi-candidate-selector
-Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer//HFLbToLcPiCandidateSelector.cxx" target="_blank">HFLbToLcPiCandidateSelector.cxx</a>
+####  o2-analysis-hf-candidate-selector-lb-to-lc-pi
+Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer//candidateSelectorLbToLcPi.cxx" target="_blank">candidateSelectorLbToLcPi.cxx</a>
 <div>
 
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::HFSelLbToLcPiCandidate</button>
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::HfSelLbToLcPi</button>
   <div class="panel">
     <div>
 
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/DataModel/HFCandidateSelectionTables.h" target="_blank">PWGHF/DataModel/HFCandidateSelectionTables.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/DataModel/CandidateSelectionTables.h" target="_blank">PWGHF/DataModel/CandidateSelectionTables.h</a>
     </div>
     <table class=DataModel>
       <tr>
@@ -8465,7 +8465,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <th>Comment</th>
       </tr>
       <tr>
-        <td>o2::aod::hf_selcandidate_lb::IsSelLbToLcPi</td>
+        <td>o2::aod::hf_sel_candidate_lb::IsSelLbToLcPi</td>
         <td></td>
         <td>isSelLbToLcPi</td>
         <td>int</td>
@@ -8476,17 +8476,17 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
 
 </div>
 
-####  o2-analysis-hf-lc-candidate-selector
-Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer//HFLcCandidateSelector.cxx" target="_blank">HFLcCandidateSelector.cxx</a>
+####  o2-analysis-hf-candidate-selector-lc
+Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer//candidateSelectorLc.cxx" target="_blank">candidateSelectorLc.cxx</a>
 <div>
 
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::HFSelLcCandidate</button>
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::HfSelLc</button>
   <div class="panel">
     <div>
 
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/DataModel/HFCandidateSelectionTables.h" target="_blank">PWGHF/DataModel/HFCandidateSelectionTables.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/DataModel/CandidateSelectionTables.h" target="_blank">PWGHF/DataModel/CandidateSelectionTables.h</a>
     </div>
     <table class=DataModel>
       <tr>
@@ -8497,16 +8497,16 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <th>Comment</th>
       </tr>
       <tr>
-        <td>o2::aod::hf_selcandidate_lc::IsSelLcpKpi</td>
+        <td>o2::aod::hf_sel_candidate_lc::IsSelLcToPKPi</td>
         <td></td>
-        <td>isSelLcpKpi</td>
+        <td>isSelLcToPKPi</td>
         <td>int</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::hf_selcandidate_lc::IsSelLcpiKp</td>
+        <td>o2::aod::hf_sel_candidate_lc::IsSelLcToPiKP</td>
         <td></td>
-        <td>isSelLcpiKp</td>
+        <td>isSelLcToPiKP</td>
         <td>int</td>
         <td></td>
       </tr>
@@ -8515,17 +8515,17 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
 
 </div>
 
-####  o2-analysis-hf-lc-candidate-selector-alice3
-Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer//HFLcCandidateSelectorALICE3.cxx" target="_blank">HFLcCandidateSelectorALICE3.cxx</a>
+####  o2-analysis-hf-candidate-selector-lc-alice3
+Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer//candidateSelectorLcAlice3.cxx" target="_blank">candidateSelectorLcAlice3.cxx</a>
 <div>
 
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::HFSelLcCandidateALICE3</button>
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::HfSelLcAlice3</button>
   <div class="panel">
     <div>
 
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/DataModel/HFCandidateSelectionTables.h" target="_blank">PWGHF/DataModel/HFCandidateSelectionTables.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/DataModel/CandidateSelectionTables.h" target="_blank">PWGHF/DataModel/CandidateSelectionTables.h</a>
     </div>
     <table class=DataModel>
       <tr>
@@ -8536,58 +8536,58 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <th>Comment</th>
       </tr>
       <tr>
-        <td>o2::aod::hf_selcandidate_lc_ALICE3::IsSelLcPKPiNoPID</td>
+        <td>o2::aod::hf_sel_candidate_lc_alice3::IsSelLcToPKPiNoPid</td>
         <td></td>
-        <td>isSelLcPKPiNoPID</td>
+        <td>isSelLcToPKPiNoPid</td>
         <td>int</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::hf_selcandidate_lc_ALICE3::IsSelLcPKPiPerfectPID</td>
+        <td>o2::aod::hf_sel_candidate_lc_alice3::IsSelLcToPKPiPerfectPid</td>
         <td></td>
-        <td>isSelLcPKPiPerfectPID</td>
+        <td>isSelLcToPKPiPerfectPid</td>
         <td>int</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::hf_selcandidate_lc_ALICE3::IsSelLcPKPiTOFPID</td>
+        <td>o2::aod::hf_sel_candidate_lc_alice3::IsSelLcToPKPiTofPid</td>
         <td></td>
-        <td>isSelLcPKPiTOFPID</td>
+        <td>isSelLcToPKPiTofPid</td>
         <td>int</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::hf_selcandidate_lc_ALICE3::IsSelLcPKPiTOFplusRICHPID</td>
+        <td>o2::aod::hf_sel_candidate_lc_alice3::IsSelLcToPKPiTofPlusRichPid</td>
         <td></td>
-        <td>isSelLcPKPiTOFplusRICHPID</td>
+        <td>isSelLcToPKPiTofPlusRichPid</td>
         <td>int</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::hf_selcandidate_lc_ALICE3::IsSelLcPiKPNoPID</td>
+        <td>o2::aod::hf_sel_candidate_lc_alice3::IsSelLcToPiKPNoPid</td>
         <td></td>
-        <td>isSelLcPiKPNoPID</td>
+        <td>isSelLcToPiKPNoPid</td>
         <td>int</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::hf_selcandidate_lc_ALICE3::IsSelLcPiKPPerfectPID</td>
+        <td>o2::aod::hf_sel_candidate_lc_alice3::IsSelLcToPiKPPerfectPid</td>
         <td></td>
-        <td>isSelLcPiKPPerfectPID</td>
+        <td>isSelLcToPiKPPerfectPid</td>
         <td>int</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::hf_selcandidate_lc_ALICE3::IsSelLcPiKPTOFPID</td>
+        <td>o2::aod::hf_sel_candidate_lc_alice3::IsSelLcToPiKPTofPid</td>
         <td></td>
-        <td>isSelLcPiKPTOFPID</td>
+        <td>isSelLcToPiKPTofPid</td>
         <td>int</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::hf_selcandidate_lc_ALICE3::IsSelLcPiKPTOFplusRICHPID</td>
+        <td>o2::aod::hf_sel_candidate_lc_alice3::IsSelLcToPiKPTofPlusRichPid</td>
         <td></td>
-        <td>isSelLcPiKPTOFplusRICHPID</td>
+        <td>isSelLcToPiKPTofPlusRichPid</td>
         <td>int</td>
         <td></td>
       </tr>
@@ -8596,17 +8596,17 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
 
 </div>
 
-####  o2-analysis-hf-lc-candidate-selector-parametrized-pid
-Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer//HFLcCandidateSelectorparametrizedPID.cxx" target="_blank">HFLcCandidateSelectorparametrizedPID.cxx</a>
+####  o2-analysis-hf-candidate-selector-lc-parametrized-pid
+Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer//candidateSelectorLcParametrizedPid.cxx" target="_blank">candidateSelectorLcParametrizedPid.cxx</a>
 <div>
 
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::HFSelLcCandidateparametrizedPID</button>
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::HfSelLcParametrizedPid</button>
   <div class="panel">
     <div>
 
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/DataModel/HFCandidateSelectionTables.h" target="_blank">PWGHF/DataModel/HFCandidateSelectionTables.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/DataModel/CandidateSelectionTables.h" target="_blank">PWGHF/DataModel/CandidateSelectionTables.h</a>
     </div>
     <table class=DataModel>
       <tr>
@@ -8617,44 +8617,44 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <th>Comment</th>
       </tr>
       <tr>
-        <td>o2::aod::hf_selcandidate_lc_parametrizedPID::IsSelLcPKPiNoPID</td>
+        <td>o2::aod::hf_sel_candidate_lc_parametrized_pid::IsSelLcToPKPiNoPid</td>
         <td></td>
-        <td>isSelLcPKPiNoPID</td>
+        <td>isSelLcToPKPiNoPid</td>
         <td>int</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::hf_selcandidate_lc_parametrizedPID::IsSelLcPKPiPerfectPID</td>
+        <td>o2::aod::hf_sel_candidate_lc_parametrized_pid::IsSelLcToPKPiPerfectPid</td>
         <td></td>
-        <td>isSelLcPKPiPerfectPID</td>
+        <td>isSelLcToPKPiPerfectPid</td>
         <td>int</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::hf_selcandidate_lc_parametrizedPID::IsSelLcPKPi</td>
+        <td>o2::aod::hf_sel_candidate_lc_parametrized_pid::IsSelLcToPKPi</td>
         <td></td>
-        <td>isSelLcPKPi</td>
+        <td>isSelLcToPKPi</td>
         <td>int</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::hf_selcandidate_lc_parametrizedPID::IsSelLcPiKPNoPID</td>
+        <td>o2::aod::hf_sel_candidate_lc_parametrized_pid::IsSelLcToPiKPNoPid</td>
         <td></td>
-        <td>isSelLcPiKPNoPID</td>
+        <td>isSelLcToPiKPNoPid</td>
         <td>int</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::hf_selcandidate_lc_parametrizedPID::IsSelLcPiKPPerfectPID</td>
+        <td>o2::aod::hf_sel_candidate_lc_parametrized_pid::IsSelLcToPiKPPerfectPid</td>
         <td></td>
-        <td>isSelLcPiKPPerfectPID</td>
+        <td>isSelLcToPiKPPerfectPid</td>
         <td>int</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::hf_selcandidate_lc_parametrizedPID::IsSelLcPiKP</td>
+        <td>o2::aod::hf_sel_candidate_lc_parametrized_pid::IsSelLcToPiKP</td>
         <td></td>
-        <td>isSelLcPiKP</td>
+        <td>isSelLcToPiKP</td>
         <td>int</td>
         <td></td>
       </tr>
@@ -8663,17 +8663,17 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
 
 </div>
 
-####  o2-analysis-hf-lc-tok0sp-candidate-selector
-Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer//HFLcK0sPCandidateSelector.cxx" target="_blank">HFLcK0sPCandidateSelector.cxx</a>
+####  o2-analysis-hf-candidate-selector-lc-to-k0s-p
+Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer//candidateSelectorLcToK0sP.cxx" target="_blank">candidateSelectorLcToK0sP.cxx</a>
 <div>
 
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::HFSelLcK0sPCandidate</button>
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::HfSelLcToK0sP</button>
   <div class="panel">
     <div>
 
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/DataModel/HFCandidateSelectionTables.h" target="_blank">PWGHF/DataModel/HFCandidateSelectionTables.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/DataModel/CandidateSelectionTables.h" target="_blank">PWGHF/DataModel/CandidateSelectionTables.h</a>
     </div>
     <table class=DataModel>
       <tr>
@@ -8684,9 +8684,9 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <th>Comment</th>
       </tr>
       <tr>
-        <td>o2::aod::hf_selcandidate_lc_k0sp::IsSelLcK0sP</td>
+        <td>o2::aod::hf_sel_candidate_lc_to_k0s_p::IsSelLcToK0sP</td>
         <td></td>
-        <td>isSelLcK0sP</td>
+        <td>isSelLcToK0sP</td>
         <td>int</td>
         <td></td>
       </tr>
@@ -8695,17 +8695,17 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
 
 </div>
 
-####  o2-analysis-hf-pvrefit-skim-converted
-Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer//HFPvRefitSkimConverted.cxx" target="_blank">HFPvRefitSkimConverted.cxx</a>
+####  o2-analysis-hf-candidate-selector-x-to-jpsi-pi-pi
+Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer//candidateSelectorXToJpsiPiPi.cxx" target="_blank">candidateSelectorXToJpsiPiPi.cxx</a>
 <div>
 
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::HfPvRefitProng2</button>
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::HfSelXToJpsiPiPi</button>
   <div class="panel">
     <div>
 
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/DataModel/HFSecondaryVertex.h" target="_blank">PWGHF/DataModel/HFSecondaryVertex.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/DataModel/CandidateSelectionTables.h" target="_blank">PWGHF/DataModel/CandidateSelectionTables.h</a>
     </div>
     <table class=DataModel>
       <tr>
@@ -8716,63 +8716,173 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <th>Comment</th>
       </tr>
       <tr>
-        <td>o2::aod::hf_pvrefit_cand_prong2::PvRefitX</td>
+        <td>o2::aod::hf_sel_candidate_x::IsSelXToJpsiToEEPiPi</td>
+        <td></td>
+        <td>isSelXToJpsiToEEPiPi</td>
+        <td>int</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_sel_candidate_x::IsSelXToJpsiToMuMuPiPi</td>
+        <td></td>
+        <td>isSelXToJpsiToMuMuPiPi</td>
+        <td>int</td>
+        <td></td>
+      </tr>
+    </table>
+  </div>
+
+</div>
+
+####  o2-analysis-hf-candidate-selector-xic-to-p-k-pi
+Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer//candidateSelectorXicToPKPi.cxx" target="_blank">candidateSelectorXicToPKPi.cxx</a>
+<div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::HfSelXicToPKPi</button>
+  <div class="panel">
+    <div>
+
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/DataModel/CandidateSelectionTables.h" target="_blank">PWGHF/DataModel/CandidateSelectionTables.h</a>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_sel_candidate_xic::IsSelXicToPKPi</td>
+        <td></td>
+        <td>isSelXicToPKPi</td>
+        <td>int</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_sel_candidate_xic::IsSelXicToPiKP</td>
+        <td></td>
+        <td>isSelXicToPiKP</td>
+        <td>int</td>
+        <td></td>
+      </tr>
+    </table>
+  </div>
+
+</div>
+
+####  o2-analysis-hf-candidate-selector-xicc-to-p-k-pi-pi
+Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer//candidateSelectorXiccToPKPiPi.cxx" target="_blank">candidateSelectorXiccToPKPiPi.cxx</a>
+<div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::HfSelXiccToPKPiPi</button>
+  <div class="panel">
+    <div>
+
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/DataModel/CandidateSelectionTables.h" target="_blank">PWGHF/DataModel/CandidateSelectionTables.h</a>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_sel_candidate_xicc::IsSelXiccToPKPiPi</td>
+        <td></td>
+        <td>isSelXiccToPKPiPi</td>
+        <td>int</td>
+        <td></td>
+      </tr>
+    </table>
+  </div>
+
+</div>
+
+####  o2-analysis-hf-refit-pv-dummy
+Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer//refitPvDummy.cxx" target="_blank">refitPvDummy.cxx</a>
+<div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::HfPvRefit2Prong</button>
+  <div class="panel">
+    <div>
+
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/DataModel/CandidateReconstructionTables.h" target="_blank">PWGHF/DataModel/CandidateReconstructionTables.h</a>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_pv_refit_cand_2prong::PvRefitX</td>
         <td></td>
         <td>pvRefitX</td>
         <td>float</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::hf_pvrefit_cand_prong2::PvRefitY</td>
+        <td>o2::aod::hf_pv_refit_cand_2prong::PvRefitY</td>
         <td></td>
         <td>pvRefitY</td>
         <td>float</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::hf_pvrefit_cand_prong2::PvRefitZ</td>
+        <td>o2::aod::hf_pv_refit_cand_2prong::PvRefitZ</td>
         <td></td>
         <td>pvRefitZ</td>
         <td>float</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::hf_pvrefit_cand_prong2::PvRefitSigmaX2</td>
+        <td>o2::aod::hf_pv_refit_cand_2prong::PvRefitSigmaX2</td>
         <td></td>
         <td>pvRefitSigmaX2</td>
         <td>float</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::hf_pvrefit_cand_prong2::PvRefitSigmaXY</td>
+        <td>o2::aod::hf_pv_refit_cand_2prong::PvRefitSigmaXY</td>
         <td></td>
         <td>pvRefitSigmaXY</td>
         <td>float</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::hf_pvrefit_cand_prong2::PvRefitSigmaY2</td>
+        <td>o2::aod::hf_pv_refit_cand_2prong::PvRefitSigmaY2</td>
         <td></td>
         <td>pvRefitSigmaY2</td>
         <td>float</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::hf_pvrefit_cand_prong2::PvRefitSigmaXZ</td>
+        <td>o2::aod::hf_pv_refit_cand_2prong::PvRefitSigmaXZ</td>
         <td></td>
         <td>pvRefitSigmaXZ</td>
         <td>float</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::hf_pvrefit_cand_prong2::PvRefitSigmaYZ</td>
+        <td>o2::aod::hf_pv_refit_cand_2prong::PvRefitSigmaYZ</td>
         <td></td>
         <td>pvRefitSigmaYZ</td>
         <td>float</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::hf_pvrefit_cand_prong2::PvRefitSigmaZ2</td>
+        <td>o2::aod::hf_pv_refit_cand_2prong::PvRefitSigmaZ2</td>
         <td></td>
         <td>pvRefitSigmaZ2</td>
         <td>float</td>
@@ -8781,13 +8891,13 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
     </table>
   </div>
 
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::HfPvRefitProng3</button>
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::HfPvRefit3Prong</button>
   <div class="panel">
     <div>
 
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/DataModel/HFSecondaryVertex.h" target="_blank">PWGHF/DataModel/HFSecondaryVertex.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/DataModel/CandidateReconstructionTables.h" target="_blank">PWGHF/DataModel/CandidateReconstructionTables.h</a>
     </div>
     <table class=DataModel>
       <tr>
@@ -8798,63 +8908,63 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <th>Comment</th>
       </tr>
       <tr>
-        <td>o2::aod::hf_pvrefit_cand_prong3::PvRefitX</td>
+        <td>o2::aod::hf_pv_refit_cand_3prong::PvRefitX</td>
         <td></td>
         <td>pvRefitX</td>
         <td>float</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::hf_pvrefit_cand_prong3::PvRefitY</td>
+        <td>o2::aod::hf_pv_refit_cand_3prong::PvRefitY</td>
         <td></td>
         <td>pvRefitY</td>
         <td>float</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::hf_pvrefit_cand_prong3::PvRefitZ</td>
+        <td>o2::aod::hf_pv_refit_cand_3prong::PvRefitZ</td>
         <td></td>
         <td>pvRefitZ</td>
         <td>float</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::hf_pvrefit_cand_prong3::PvRefitSigmaX2</td>
+        <td>o2::aod::hf_pv_refit_cand_3prong::PvRefitSigmaX2</td>
         <td></td>
         <td>pvRefitSigmaX2</td>
         <td>float</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::hf_pvrefit_cand_prong3::PvRefitSigmaXY</td>
+        <td>o2::aod::hf_pv_refit_cand_3prong::PvRefitSigmaXY</td>
         <td></td>
         <td>pvRefitSigmaXY</td>
         <td>float</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::hf_pvrefit_cand_prong3::PvRefitSigmaY2</td>
+        <td>o2::aod::hf_pv_refit_cand_3prong::PvRefitSigmaY2</td>
         <td></td>
         <td>pvRefitSigmaY2</td>
         <td>float</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::hf_pvrefit_cand_prong3::PvRefitSigmaXZ</td>
+        <td>o2::aod::hf_pv_refit_cand_3prong::PvRefitSigmaXZ</td>
         <td></td>
         <td>pvRefitSigmaXZ</td>
         <td>float</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::hf_pvrefit_cand_prong3::PvRefitSigmaYZ</td>
+        <td>o2::aod::hf_pv_refit_cand_3prong::PvRefitSigmaYZ</td>
         <td></td>
         <td>pvRefitSigmaYZ</td>
         <td>float</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::hf_pvrefit_cand_prong3::PvRefitSigmaZ2</td>
+        <td>o2::aod::hf_pv_refit_cand_3prong::PvRefitSigmaZ2</td>
         <td></td>
         <td>pvRefitSigmaZ2</td>
         <td>float</td>
@@ -8865,17 +8975,17 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
 
 </div>
 
-####  o2-analysis-hf-track-index-skims-creator
-Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer//HFTrackIndexSkimsCreator.cxx" target="_blank">HFTrackIndexSkimsCreator.cxx</a>
+####  o2-analysis-hf-track-index-skim-creator
+Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer//trackIndexSkimCreator.cxx" target="_blank">trackIndexSkimCreator.cxx</a>
 <div>
 
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::HFSelCollision</button>
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::HfSelCollision</button>
   <div class="panel">
     <div>
 
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/DataModel/HFSecondaryVertex.h" target="_blank">PWGHF/DataModel/HFSecondaryVertex.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/DataModel/CandidateReconstructionTables.h" target="_blank">PWGHF/DataModel/CandidateReconstructionTables.h</a>
     </div>
     <table class=DataModel>
       <tr>
@@ -8886,7 +8996,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <th>Comment</th>
       </tr>
       <tr>
-        <td>o2::aod::hf_selcollision::WhyRejectColl</td>
+        <td>o2::aod::hf_sel_collision::WhyRejectColl</td>
         <td></td>
         <td>whyRejectColl</td>
         <td>int</td>
@@ -8895,13 +9005,13 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
     </table>
   </div>
 
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::HFSelTrack</button>
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::HfSelTrack</button>
   <div class="panel">
     <div>
 
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/DataModel/HFSecondaryVertex.h" target="_blank">PWGHF/DataModel/HFSecondaryVertex.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/DataModel/CandidateReconstructionTables.h" target="_blank">PWGHF/DataModel/CandidateReconstructionTables.h</a>
     </div>
     <table class=DataModel>
       <tr>
@@ -8912,28 +9022,28 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <th>Comment</th>
       </tr>
       <tr>
-        <td>o2::aod::hf_seltrack::IsSelProng</td>
+        <td>o2::aod::hf_sel_track::IsSelProng</td>
         <td></td>
         <td>isSelProng</td>
         <td>int</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::hf_seltrack::PxProng</td>
+        <td>o2::aod::hf_sel_track::PxProng</td>
         <td></td>
         <td>pxProng</td>
         <td>float</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::hf_seltrack::PyProng</td>
+        <td>o2::aod::hf_sel_track::PyProng</td>
         <td></td>
         <td>pyProng</td>
         <td>float</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::hf_seltrack::PzProng</td>
+        <td>o2::aod::hf_sel_track::PzProng</td>
         <td></td>
         <td>pzProng</td>
         <td>float</td>
@@ -8948,7 +9058,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
 
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/DataModel/HFSecondaryVertex.h" target="_blank">PWGHF/DataModel/HFSecondaryVertex.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/DataModel/CandidateReconstructionTables.h" target="_blank">PWGHF/DataModel/CandidateReconstructionTables.h</a>
     </div>
     <table class=DataModel>
       <tr>
@@ -8959,77 +9069,77 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <th>Comment</th>
       </tr>
       <tr>
-        <td>o2::aod::hf_pvrefit_track::PvRefitX</td>
+        <td>o2::aod::hf_pv_refit_track::PvRefitX</td>
         <td></td>
         <td>pvRefitX</td>
         <td>float</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::hf_pvrefit_track::PvRefitY</td>
+        <td>o2::aod::hf_pv_refit_track::PvRefitY</td>
         <td></td>
         <td>pvRefitY</td>
         <td>float</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::hf_pvrefit_track::PvRefitZ</td>
+        <td>o2::aod::hf_pv_refit_track::PvRefitZ</td>
         <td></td>
         <td>pvRefitZ</td>
         <td>float</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::hf_pvrefit_track::PvRefitSigmaX2</td>
+        <td>o2::aod::hf_pv_refit_track::PvRefitSigmaX2</td>
         <td></td>
         <td>pvRefitSigmaX2</td>
         <td>float</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::hf_pvrefit_track::PvRefitSigmaXY</td>
+        <td>o2::aod::hf_pv_refit_track::PvRefitSigmaXY</td>
         <td></td>
         <td>pvRefitSigmaXY</td>
         <td>float</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::hf_pvrefit_track::PvRefitSigmaY2</td>
+        <td>o2::aod::hf_pv_refit_track::PvRefitSigmaY2</td>
         <td></td>
         <td>pvRefitSigmaY2</td>
         <td>float</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::hf_pvrefit_track::PvRefitSigmaXZ</td>
+        <td>o2::aod::hf_pv_refit_track::PvRefitSigmaXZ</td>
         <td></td>
         <td>pvRefitSigmaXZ</td>
         <td>float</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::hf_pvrefit_track::PvRefitSigmaYZ</td>
+        <td>o2::aod::hf_pv_refit_track::PvRefitSigmaYZ</td>
         <td></td>
         <td>pvRefitSigmaYZ</td>
         <td>float</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::hf_pvrefit_track::PvRefitSigmaZ2</td>
+        <td>o2::aod::hf_pv_refit_track::PvRefitSigmaZ2</td>
         <td></td>
         <td>pvRefitSigmaZ2</td>
         <td>float</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::hf_pvrefit_track::PvRefitDcaXY</td>
+        <td>o2::aod::hf_pv_refit_track::PvRefitDcaXY</td>
         <td></td>
         <td>pvRefitDcaXY</td>
         <td>float</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::hf_pvrefit_track::PvRefitDcaZ</td>
+        <td>o2::aod::hf_pv_refit_track::PvRefitDcaZ</td>
         <td></td>
         <td>pvRefitDcaZ</td>
         <td>float</td>
@@ -9044,7 +9154,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
        Table for HF 2 prong candidates
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/DataModel/HFSecondaryVertex.h" target="_blank">PWGHF/DataModel/HFSecondaryVertex.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/DataModel/CandidateReconstructionTables.h" target="_blank">PWGHF/DataModel/CandidateReconstructionTables.h</a>
     </div>
     <div>Is used in:
       <ul>
@@ -9067,16 +9177,16 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::hf_track_index::Index0Id</td>
+        <td>o2::aod::hf_track_index::Prong0Id</td>
         <td>I</td>
-        <td>index0Id</td>
+        <td>prong0Id</td>
         <td>int</td>
         <td>Index to first prong</td>
       </tr>
       <tr>
-        <td>o2::aod::hf_track_index::Index1Id</td>
+        <td>o2::aod::hf_track_index::Prong1Id</td>
         <td>I</td>
-        <td>index1Id</td>
+        <td>prong1Id</td>
         <td>int</td>
         <td>Index to second prong</td>
       </tr>
@@ -9096,7 +9206,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
        Table for HF candidates with a V0
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/DataModel/HFSecondaryVertex.h" target="_blank">PWGHF/DataModel/HFSecondaryVertex.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/DataModel/CandidateReconstructionTables.h" target="_blank">PWGHF/DataModel/CandidateReconstructionTables.h</a>
     </div>
     <div>Is used in:
       <ul>
@@ -9119,9 +9229,9 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::hf_track_index::Index0Id</td>
+        <td>o2::aod::hf_track_index::Prong0Id</td>
         <td>I</td>
-        <td>index0Id</td>
+        <td>prong0Id</td>
         <td>int</td>
         <td>Index to first prong</td>
       </tr>
@@ -9141,7 +9251,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
        Table for HF 3 prong candidates
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/DataModel/HFSecondaryVertex.h" target="_blank">PWGHF/DataModel/HFSecondaryVertex.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/DataModel/CandidateReconstructionTables.h" target="_blank">PWGHF/DataModel/CandidateReconstructionTables.h</a>
     </div>
     <div>Is used in:
       <ul>
@@ -9164,23 +9274,23 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::hf_track_index::Index0Id</td>
+        <td>o2::aod::hf_track_index::Prong0Id</td>
         <td>I</td>
-        <td>index0Id</td>
+        <td>prong0Id</td>
         <td>int</td>
         <td>Index to first prong</td>
       </tr>
       <tr>
-        <td>o2::aod::hf_track_index::Index1Id</td>
+        <td>o2::aod::hf_track_index::Prong1Id</td>
         <td>I</td>
-        <td>index1Id</td>
+        <td>prong1Id</td>
         <td>int</td>
         <td>Index to second prong</td>
       </tr>
       <tr>
-        <td>o2::aod::hf_track_index::Index2Id</td>
+        <td>o2::aod::hf_track_index::Prong2Id</td>
         <td>I</td>
-        <td>index2Id</td>
+        <td>prong2Id</td>
         <td>int</td>
         <td>Index to third prong</td>
       </tr>
@@ -9194,13 +9304,13 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
     </table>
   </div>
 
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::HfCutStatusProng2</button>
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::HfCutStatus2Prong</button>
   <div class="panel">
     <div>
 
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/DataModel/HFSecondaryVertex.h" target="_blank">PWGHF/DataModel/HFSecondaryVertex.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/DataModel/CandidateReconstructionTables.h" target="_blank">PWGHF/DataModel/CandidateReconstructionTables.h</a>
     </div>
     <table class=DataModel>
       <tr>
@@ -9211,36 +9321,36 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <th>Comment</th>
       </tr>
       <tr>
-        <td>o2::aod::hf_track_index::D0ToKPiFlag</td>
+        <td>o2::aod::hf_track_index::FlagD0ToKPi</td>
         <td></td>
-        <td>d0ToKPiFlag</td>
+        <td>flagD0ToKPi</td>
         <td>uint8_t</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::hf_track_index::JpsiToEEFlag</td>
+        <td>o2::aod::hf_track_index::FlagJpsiToEE</td>
         <td></td>
-        <td>jpsiToEEFlag</td>
+        <td>flagJpsiToEE</td>
         <td>uint8_t</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::hf_track_index::JpsiToMuMuFlag</td>
+        <td>o2::aod::hf_track_index::FlagJpsiToMuMu</td>
         <td></td>
-        <td>jpsiToMuMuFlag</td>
+        <td>flagJpsiToMuMu</td>
         <td>uint8_t</td>
         <td></td>
       </tr>
     </table>
   </div>
 
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::HfCutStatusProng3</button>
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::HfCutStatus3Prong</button>
   <div class="panel">
     <div>
 
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/DataModel/HFSecondaryVertex.h" target="_blank">PWGHF/DataModel/HFSecondaryVertex.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/DataModel/CandidateReconstructionTables.h" target="_blank">PWGHF/DataModel/CandidateReconstructionTables.h</a>
     </div>
     <table class=DataModel>
       <tr>
@@ -9251,43 +9361,43 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <th>Comment</th>
       </tr>
       <tr>
-        <td>o2::aod::hf_track_index::DPlusPiKPiFlag</td>
+        <td>o2::aod::hf_track_index::FlagDplusToPiKPi</td>
         <td></td>
-        <td>dPlusPiKPiFlag</td>
+        <td>flagDplusToPiKPi</td>
         <td>uint8_t</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::hf_track_index::LcPKPiFlag</td>
+        <td>o2::aod::hf_track_index::FlagLcToPKPi</td>
         <td></td>
-        <td>lcPKPiFlag</td>
+        <td>flagLcToPKPi</td>
         <td>uint8_t</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::hf_track_index::DsKKPiFlag</td>
+        <td>o2::aod::hf_track_index::FlagDsToKKPi</td>
         <td></td>
-        <td>dsKKPiFlag</td>
+        <td>flagDsToKKPi</td>
         <td>uint8_t</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::hf_track_index::XicToPKPiFlag</td>
+        <td>o2::aod::hf_track_index::FlagXicToPKPi</td>
         <td></td>
-        <td>xicToPKPiFlag</td>
+        <td>flagXicToPKPi</td>
         <td>uint8_t</td>
         <td></td>
       </tr>
     </table>
   </div>
 
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::HfPvRefitProng2</button>
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::HfPvRefit2Prong</button>
   <div class="panel">
     <div>
 
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/DataModel/HFSecondaryVertex.h" target="_blank">PWGHF/DataModel/HFSecondaryVertex.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/DataModel/CandidateReconstructionTables.h" target="_blank">PWGHF/DataModel/CandidateReconstructionTables.h</a>
     </div>
     <table class=DataModel>
       <tr>
@@ -9298,63 +9408,63 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <th>Comment</th>
       </tr>
       <tr>
-        <td>o2::aod::hf_pvrefit_cand_prong2::PvRefitX</td>
+        <td>o2::aod::hf_pv_refit_cand_2prong::PvRefitX</td>
         <td></td>
         <td>pvRefitX</td>
         <td>float</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::hf_pvrefit_cand_prong2::PvRefitY</td>
+        <td>o2::aod::hf_pv_refit_cand_2prong::PvRefitY</td>
         <td></td>
         <td>pvRefitY</td>
         <td>float</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::hf_pvrefit_cand_prong2::PvRefitZ</td>
+        <td>o2::aod::hf_pv_refit_cand_2prong::PvRefitZ</td>
         <td></td>
         <td>pvRefitZ</td>
         <td>float</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::hf_pvrefit_cand_prong2::PvRefitSigmaX2</td>
+        <td>o2::aod::hf_pv_refit_cand_2prong::PvRefitSigmaX2</td>
         <td></td>
         <td>pvRefitSigmaX2</td>
         <td>float</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::hf_pvrefit_cand_prong2::PvRefitSigmaXY</td>
+        <td>o2::aod::hf_pv_refit_cand_2prong::PvRefitSigmaXY</td>
         <td></td>
         <td>pvRefitSigmaXY</td>
         <td>float</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::hf_pvrefit_cand_prong2::PvRefitSigmaY2</td>
+        <td>o2::aod::hf_pv_refit_cand_2prong::PvRefitSigmaY2</td>
         <td></td>
         <td>pvRefitSigmaY2</td>
         <td>float</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::hf_pvrefit_cand_prong2::PvRefitSigmaXZ</td>
+        <td>o2::aod::hf_pv_refit_cand_2prong::PvRefitSigmaXZ</td>
         <td></td>
         <td>pvRefitSigmaXZ</td>
         <td>float</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::hf_pvrefit_cand_prong2::PvRefitSigmaYZ</td>
+        <td>o2::aod::hf_pv_refit_cand_2prong::PvRefitSigmaYZ</td>
         <td></td>
         <td>pvRefitSigmaYZ</td>
         <td>float</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::hf_pvrefit_cand_prong2::PvRefitSigmaZ2</td>
+        <td>o2::aod::hf_pv_refit_cand_2prong::PvRefitSigmaZ2</td>
         <td></td>
         <td>pvRefitSigmaZ2</td>
         <td>float</td>
@@ -9363,13 +9473,13 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
     </table>
   </div>
 
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::HfPvRefitProng3</button>
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::HfPvRefit3Prong</button>
   <div class="panel">
     <div>
 
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/DataModel/HFSecondaryVertex.h" target="_blank">PWGHF/DataModel/HFSecondaryVertex.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/DataModel/CandidateReconstructionTables.h" target="_blank">PWGHF/DataModel/CandidateReconstructionTables.h</a>
     </div>
     <table class=DataModel>
       <tr>
@@ -9380,63 +9490,63 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <th>Comment</th>
       </tr>
       <tr>
-        <td>o2::aod::hf_pvrefit_cand_prong3::PvRefitX</td>
+        <td>o2::aod::hf_pv_refit_cand_3prong::PvRefitX</td>
         <td></td>
         <td>pvRefitX</td>
         <td>float</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::hf_pvrefit_cand_prong3::PvRefitY</td>
+        <td>o2::aod::hf_pv_refit_cand_3prong::PvRefitY</td>
         <td></td>
         <td>pvRefitY</td>
         <td>float</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::hf_pvrefit_cand_prong3::PvRefitZ</td>
+        <td>o2::aod::hf_pv_refit_cand_3prong::PvRefitZ</td>
         <td></td>
         <td>pvRefitZ</td>
         <td>float</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::hf_pvrefit_cand_prong3::PvRefitSigmaX2</td>
+        <td>o2::aod::hf_pv_refit_cand_3prong::PvRefitSigmaX2</td>
         <td></td>
         <td>pvRefitSigmaX2</td>
         <td>float</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::hf_pvrefit_cand_prong3::PvRefitSigmaXY</td>
+        <td>o2::aod::hf_pv_refit_cand_3prong::PvRefitSigmaXY</td>
         <td></td>
         <td>pvRefitSigmaXY</td>
         <td>float</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::hf_pvrefit_cand_prong3::PvRefitSigmaY2</td>
+        <td>o2::aod::hf_pv_refit_cand_3prong::PvRefitSigmaY2</td>
         <td></td>
         <td>pvRefitSigmaY2</td>
         <td>float</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::hf_pvrefit_cand_prong3::PvRefitSigmaXZ</td>
+        <td>o2::aod::hf_pv_refit_cand_3prong::PvRefitSigmaXZ</td>
         <td></td>
         <td>pvRefitSigmaXZ</td>
         <td>float</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::hf_pvrefit_cand_prong3::PvRefitSigmaYZ</td>
+        <td>o2::aod::hf_pv_refit_cand_3prong::PvRefitSigmaYZ</td>
         <td></td>
         <td>pvRefitSigmaYZ</td>
         <td>float</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::hf_pvrefit_cand_prong3::PvRefitSigmaZ2</td>
+        <td>o2::aod::hf_pv_refit_cand_3prong::PvRefitSigmaZ2</td>
         <td></td>
         <td>pvRefitSigmaZ2</td>
         <td>float</td>
@@ -9447,8 +9557,8 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
 
 </div>
 
-####  o2-analysis-hf-tree-creator-bplus-tod0pi
-Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer//HFTreeCreatorBplusToD0Pi.cxx" target="_blank">HFTreeCreatorBplusToD0Pi.cxx</a>
+####  o2-analysis-hf-tree-creator-bplus-to-d0-pi
+Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer//treeCreatorBplusToD0Pi.cxx" target="_blank">treeCreatorBplusToD0Pi.cxx</a>
 <div>
 
   <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::HfCandBplusFull</button>
@@ -9457,7 +9567,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
 
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer/HFTreeCreatorBplusToD0Pi.cxx" target="_blank">PWGHF/TableProducer/HFTreeCreatorBplusToD0Pi.cxx</a>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer/treeCreatorBplusToD0Pi.cxx" target="_blank">PWGHF/TableProducer/treeCreatorBplusToD0Pi.cxx</a>
     </div>
     <table class=DataModel>
       <tr>
@@ -9896,7 +10006,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
 
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer/HFTreeCreatorBplusToD0Pi.cxx" target="_blank">PWGHF/TableProducer/HFTreeCreatorBplusToD0Pi.cxx</a>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer/treeCreatorBplusToD0Pi.cxx" target="_blank">PWGHF/TableProducer/treeCreatorBplusToD0Pi.cxx</a>
     </div>
     <table class=DataModel>
       <tr>
@@ -9964,7 +10074,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
 
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer/HFTreeCreatorBplusToD0Pi.cxx" target="_blank">PWGHF/TableProducer/HFTreeCreatorBplusToD0Pi.cxx</a>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer/treeCreatorBplusToD0Pi.cxx" target="_blank">PWGHF/TableProducer/treeCreatorBplusToD0Pi.cxx</a>
     </div>
     <table class=DataModel>
       <tr>
@@ -10021,8 +10131,8 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
 
 </div>
 
-####  o2-analysis-hf-tree-creator-chic-tojpsigamma
-Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer//HFTreeCreatorChicToJpsiGamma.cxx" target="_blank">HFTreeCreatorChicToJpsiGamma.cxx</a>
+####  o2-analysis-hf-tree-creator-chic-to-jpsi-gamma
+Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer//treeCreatorChicToJpsiGamma.cxx" target="_blank">treeCreatorChicToJpsiGamma.cxx</a>
 <div>
 
   <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::HfCandChicFull</button>
@@ -10031,7 +10141,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
 
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer/HFTreeCreatorChicToJpsiGamma.cxx" target="_blank">PWGHF/TableProducer/HFTreeCreatorChicToJpsiGamma.cxx</a>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer/treeCreatorChicToJpsiGamma.cxx" target="_blank">PWGHF/TableProducer/treeCreatorChicToJpsiGamma.cxx</a>
     </div>
     <table class=DataModel>
       <tr>
@@ -10253,7 +10363,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
 
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer/HFTreeCreatorChicToJpsiGamma.cxx" target="_blank">PWGHF/TableProducer/HFTreeCreatorChicToJpsiGamma.cxx</a>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer/treeCreatorChicToJpsiGamma.cxx" target="_blank">PWGHF/TableProducer/treeCreatorChicToJpsiGamma.cxx</a>
     </div>
     <table class=DataModel>
       <tr>
@@ -10321,7 +10431,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
 
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer/HFTreeCreatorChicToJpsiGamma.cxx" target="_blank">PWGHF/TableProducer/HFTreeCreatorChicToJpsiGamma.cxx</a>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer/treeCreatorChicToJpsiGamma.cxx" target="_blank">PWGHF/TableProducer/treeCreatorChicToJpsiGamma.cxx</a>
     </div>
     <table class=DataModel>
       <tr>
@@ -10385,17 +10495,17 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
 
 </div>
 
-####  o2-analysis-hf-tree-creator-d0-tokpi
-Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer//HFTreeCreatorD0ToKPi.cxx" target="_blank">HFTreeCreatorD0ToKPi.cxx</a>
+####  o2-analysis-hf-tree-creator-d0-to-k-pi
+Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer//treeCreatorD0ToKPi.cxx" target="_blank">treeCreatorD0ToKPi.cxx</a>
 <div>
 
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::HfCandProng2Full</button>
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::HfCand2ProngFull</button>
   <div class="panel">
     <div>
 
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer/HFTreeCreatorD0ToKPi.cxx" target="_blank">PWGHF/TableProducer/HFTreeCreatorD0ToKPi.cxx</a>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer/treeCreatorD0ToKPi.cxx" target="_blank">PWGHF/TableProducer/treeCreatorD0ToKPi.cxx</a>
     </div>
     <table class=DataModel>
       <tr>
@@ -10786,13 +10896,13 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
     </table>
   </div>
 
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::HfCandProng2FullEvents</button>
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::HfCand2ProngFullEvents</button>
   <div class="panel">
     <div>
 
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer/HFTreeCreatorD0ToKPi.cxx" target="_blank">PWGHF/TableProducer/HFTreeCreatorD0ToKPi.cxx</a>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer/treeCreatorD0ToKPi.cxx" target="_blank">PWGHF/TableProducer/treeCreatorD0ToKPi.cxx</a>
     </div>
     <table class=DataModel>
       <tr>
@@ -10854,13 +10964,13 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
     </table>
   </div>
 
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::HfCandProng2FullParticles</button>
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::HfCand2ProngFullParticles</button>
   <div class="panel">
     <div>
 
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer/HFTreeCreatorD0ToKPi.cxx" target="_blank">PWGHF/TableProducer/HFTreeCreatorD0ToKPi.cxx</a>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer/treeCreatorD0ToKPi.cxx" target="_blank">PWGHF/TableProducer/treeCreatorD0ToKPi.cxx</a>
     </div>
     <table class=DataModel>
       <tr>
@@ -10917,8 +11027,8 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
 
 </div>
 
-####  o2-analysis-hf-tree-creator-lb-tolcpi
-Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer//HFTreeCreatorLbToLcPi.cxx" target="_blank">HFTreeCreatorLbToLcPi.cxx</a>
+####  o2-analysis-hf-tree-creator-lb-to-lc-pi
+Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer//treeCreatorLbToLcPi.cxx" target="_blank">treeCreatorLbToLcPi.cxx</a>
 <div>
 
   <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::HfCandLbFull</button>
@@ -10927,7 +11037,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
 
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer/HFTreeCreatorLbToLcPi.cxx" target="_blank">PWGHF/TableProducer/HFTreeCreatorLbToLcPi.cxx</a>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer/treeCreatorLbToLcPi.cxx" target="_blank">PWGHF/TableProducer/treeCreatorLbToLcPi.cxx</a>
     </div>
     <table class=DataModel>
       <tr>
@@ -11397,17 +11507,17 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
 
 </div>
 
-####  o2-analysis-hf-tree-creator-lc-topkpi
-Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer//HFTreeCreatorLcToPKPi.cxx" target="_blank">HFTreeCreatorLcToPKPi.cxx</a>
+####  o2-analysis-hf-tree-creator-lc-to-p-k-pi
+Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer//treeCreatorLcToPKPi.cxx" target="_blank">treeCreatorLcToPKPi.cxx</a>
 <div>
 
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::HfCandProng3Full</button>
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::HfCand3ProngFull</button>
   <div class="panel">
     <div>
 
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer/HFTreeCreatorLcToPKPi.cxx" target="_blank">PWGHF/TableProducer/HFTreeCreatorLcToPKPi.cxx</a>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer/treeCreatorLcToPKPi.cxx" target="_blank">PWGHF/TableProducer/treeCreatorLcToPKPi.cxx</a>
     </div>
     <table class=DataModel>
       <tr>
@@ -11917,13 +12027,13 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
     </table>
   </div>
 
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::HfCandProng3FullEvents</button>
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::HfCand3ProngFullEvents</button>
   <div class="panel">
     <div>
 
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer/HFTreeCreatorLcToPKPi.cxx" target="_blank">PWGHF/TableProducer/HFTreeCreatorLcToPKPi.cxx</a>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer/treeCreatorLcToPKPi.cxx" target="_blank">PWGHF/TableProducer/treeCreatorLcToPKPi.cxx</a>
     </div>
     <table class=DataModel>
       <tr>
@@ -11985,13 +12095,13 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
     </table>
   </div>
 
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::HfCandProng3FullParticles</button>
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::HfCand3ProngFullParticles</button>
   <div class="panel">
     <div>
 
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer/HFTreeCreatorLcToPKPi.cxx" target="_blank">PWGHF/TableProducer/HFTreeCreatorLcToPKPi.cxx</a>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer/treeCreatorLcToPKPi.cxx" target="_blank">PWGHF/TableProducer/treeCreatorLcToPKPi.cxx</a>
     </div>
     <table class=DataModel>
       <tr>
@@ -12048,8 +12158,8 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
 
 </div>
 
-####  o2-analysis-hf-tree-creator-x-tojpsipipi
-Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer//HFTreeCreatorXToJpsiPiPi.cxx" target="_blank">HFTreeCreatorXToJpsiPiPi.cxx</a>
+####  o2-analysis-hf-tree-creator-x-to-jpsi-pi-pi
+Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer//treeCreatorXToJpsiPiPi.cxx" target="_blank">treeCreatorXToJpsiPiPi.cxx</a>
 <div>
 
   <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::HfCandXFull</button>
@@ -12058,7 +12168,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
 
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer/HFTreeCreatorXToJpsiPiPi.cxx" target="_blank">PWGHF/TableProducer/HFTreeCreatorXToJpsiPiPi.cxx</a>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer/treeCreatorXToJpsiPiPi.cxx" target="_blank">PWGHF/TableProducer/treeCreatorXToJpsiPiPi.cxx</a>
     </div>
     <table class=DataModel>
       <tr>
@@ -12364,7 +12474,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
 
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer/HFTreeCreatorXToJpsiPiPi.cxx" target="_blank">PWGHF/TableProducer/HFTreeCreatorXToJpsiPiPi.cxx</a>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer/treeCreatorXToJpsiPiPi.cxx" target="_blank">PWGHF/TableProducer/treeCreatorXToJpsiPiPi.cxx</a>
     </div>
     <table class=DataModel>
       <tr>
@@ -12432,7 +12542,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
 
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer/HFTreeCreatorXToJpsiPiPi.cxx" target="_blank">PWGHF/TableProducer/HFTreeCreatorXToJpsiPiPi.cxx</a>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer/treeCreatorXToJpsiPiPi.cxx" target="_blank">PWGHF/TableProducer/treeCreatorXToJpsiPiPi.cxx</a>
     </div>
     <table class=DataModel>
       <tr>
@@ -12489,8 +12599,8 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
 
 </div>
 
-####  o2-analysis-hf-tree-creator-xicc-topkpipi
-Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer//HFTreeCreatorXiccToPKPiPi.cxx" target="_blank">HFTreeCreatorXiccToPKPiPi.cxx</a>
+####  o2-analysis-hf-tree-creator-xicc-to-p-k-pi-pi
+Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer//treeCreatorXiccToPKPiPi.cxx" target="_blank">treeCreatorXiccToPKPiPi.cxx</a>
 <div>
 
   <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::HfCandXiccFull</button>
@@ -12499,7 +12609,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
 
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer/HFTreeCreatorXiccToPKPiPi.cxx" target="_blank">PWGHF/TableProducer/HFTreeCreatorXiccToPKPiPi.cxx</a>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer/treeCreatorXiccToPKPiPi.cxx" target="_blank">PWGHF/TableProducer/treeCreatorXiccToPKPiPi.cxx</a>
     </div>
     <table class=DataModel>
       <tr>
@@ -12875,7 +12985,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
 
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer/HFTreeCreatorXiccToPKPiPi.cxx" target="_blank">PWGHF/TableProducer/HFTreeCreatorXiccToPKPiPi.cxx</a>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer/treeCreatorXiccToPKPiPi.cxx" target="_blank">PWGHF/TableProducer/treeCreatorXiccToPKPiPi.cxx</a>
     </div>
     <table class=DataModel>
       <tr>
@@ -12943,7 +13053,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
 
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer/HFTreeCreatorXiccToPKPiPi.cxx" target="_blank">PWGHF/TableProducer/HFTreeCreatorXiccToPKPiPi.cxx</a>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer/treeCreatorXiccToPKPiPi.cxx" target="_blank">PWGHF/TableProducer/treeCreatorXiccToPKPiPi.cxx</a>
     </div>
     <table class=DataModel>
       <tr>
@@ -12993,116 +13103,6 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <td></td>
         <td>mcflag</td>
         <td>int8_t</td>
-        <td></td>
-      </tr>
-    </table>
-  </div>
-
-</div>
-
-####  o2-analysis-hf-x-tojpsipipi-candidate-selector
-Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer//HFXToJpsiPiPiCandidateSelector.cxx" target="_blank">HFXToJpsiPiPiCandidateSelector.cxx</a>
-<div>
-
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::HFSelXToJpsiPiPiCandidate</button>
-  <div class="panel">
-    <div>
-
-    </div>
-    <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/DataModel/HFCandidateSelectionTables.h" target="_blank">PWGHF/DataModel/HFCandidateSelectionTables.h</a>
-    </div>
-    <table class=DataModel>
-      <tr>
-        <th>Name</th>
-        <th></th>
-        <th>Getter</th>
-        <th>Type</th>
-        <th>Comment</th>
-      </tr>
-      <tr>
-        <td>o2::aod::hf_selcandidate_x::IsSelXToJpsiToEEPiPi</td>
-        <td></td>
-        <td>isSelXToJpsiToEEPiPi</td>
-        <td>int</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::hf_selcandidate_x::IsSelXToJpsiToMuMuPiPi</td>
-        <td></td>
-        <td>isSelXToJpsiToMuMuPiPi</td>
-        <td>int</td>
-        <td></td>
-      </tr>
-    </table>
-  </div>
-
-</div>
-
-####  o2-analysis-hf-xic-topkpi-candidate-selector
-Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer//HFXicToPKPiCandidateSelector.cxx" target="_blank">HFXicToPKPiCandidateSelector.cxx</a>
-<div>
-
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::HFSelXicToPKPiCandidate</button>
-  <div class="panel">
-    <div>
-
-    </div>
-    <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/DataModel/HFCandidateSelectionTables.h" target="_blank">PWGHF/DataModel/HFCandidateSelectionTables.h</a>
-    </div>
-    <table class=DataModel>
-      <tr>
-        <th>Name</th>
-        <th></th>
-        <th>Getter</th>
-        <th>Type</th>
-        <th>Comment</th>
-      </tr>
-      <tr>
-        <td>o2::aod::hf_selcandidate_xic::IsSelXicToPKPi</td>
-        <td></td>
-        <td>isSelXicToPKPi</td>
-        <td>int</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::hf_selcandidate_xic::IsSelXicToPiKP</td>
-        <td></td>
-        <td>isSelXicToPiKP</td>
-        <td>int</td>
-        <td></td>
-      </tr>
-    </table>
-  </div>
-
-</div>
-
-####  o2-analysis-hf-xicc-topkpipi-candidate-selector
-Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer//HFXiccToPKPiPiCandidateSelector.cxx" target="_blank">HFXiccToPKPiPiCandidateSelector.cxx</a>
-<div>
-
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::HFSelXiccToPKPiPiCandidate</button>
-  <div class="panel">
-    <div>
-
-    </div>
-    <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/DataModel/HFCandidateSelectionTables.h" target="_blank">PWGHF/DataModel/HFCandidateSelectionTables.h</a>
-    </div>
-    <table class=DataModel>
-      <tr>
-        <th>Name</th>
-        <th></th>
-        <th>Getter</th>
-        <th>Type</th>
-        <th>Comment</th>
-      </tr>
-      <tr>
-        <td>o2::aod::hf_selcandidate_xicc::IsSelXiccToPKPiPi</td>
-        <td></td>
-        <td>isSelXiccToPKPiPi</td>
-        <td>int</td>
         <td></td>
       </tr>
     </table>
