@@ -633,6 +633,13 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
         <td>int</td>
         <td>FDD entry index in FDDs table (-1 if doesn't exist)</td>
       </tr>
+      <tr>
+        <td>o2::aod::evsel::FoundZDCId</td>
+        <td>I</td>
+        <td>foundZDCId</td>
+        <td>int</td>
+        <td>ZDC entry index in ZDCs table (-1 if doesn't exist)</td>
+      </tr>
     </table>
   </div>
 
@@ -768,6 +775,13 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
         <td>foundFDDId</td>
         <td>int</td>
         <td>FDD entry index in FDDs table (-1 if doesn't exist)</td>
+      </tr>
+      <tr>
+        <td>o2::aod::evsel::FoundZDCId</td>
+        <td>I</td>
+        <td>foundZDCId</td>
+        <td>int</td>
+        <td>ZDC entry index in ZDCs table (-1 if doesn't exist)</td>
       </tr>
     </table>
   </div>
