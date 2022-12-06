@@ -18,9 +18,9 @@ The _Service wagons_ are wagons which are dependencies to other wagons. They are
 * For the users, in the _My Analyses_ page, there is a read only view of the _Service Analyses_ available on the top of the page.
 * For the experts, if you need to create _Service wagons_, you need to have an analysis with the project type _O2 Hyperloop Service Wagons (OHSW)_ which can be [created in JIRA](#joinanalysis). Once the analysis is created, you can [add a new wagon](#addwagon) inside of the analysis available in _My Analyses_.
 
-### Adding and configuring a wagon to an analysis
+## <a name="configure-wagon"></a> Adding and configuring a wagon to an analysis
 
-##### 1. <a name="addwagon"></a>Adding a new wagon
+### 1. <a name="addwagon"></a>Adding a new wagon
 
 Using the _My Analyses_ page, inside of the _Analysis_ you want to add the wagon to, click on `✚ Add new wagon`.
 
@@ -35,7 +35,7 @@ There are 2 parameters required to create a new wagon:
 
 By clicking on `💾 Save` the wagon will be added, and you will be redirected to [_Edit **Wagon**_](#editwagon) where you can modify the wagon's configuration.
 
-##### 2. <a name="clonewagon"></a>Cloning a wagon
+### 2. <a name="clonewagon"></a>Cloning a wagon
 
 * Using the _My Analyses_ page, click on the button `🧬` to clone a wagon.
 
@@ -49,7 +49,7 @@ A list of _Analyses_ you belong to will be displayed. You have to select the _An
 
 You can get to the _All Analyses_ page by using the main menu, or by the link in _My Analyses_ page: `(or clone wagon from other analysis)`. In the _All Analyses_ page, a read only view of all the analyses available in the system will be displayed. Browse and click on the _Analysis_ you want to clone the wagon from, and follow the procedure mentioned above.
 
-##### <a name="editwagon"></a> 3. Edit a wagon
+### <a name="editwagon"></a> 3. Edit a wagon
 
 * You can edit a wagon by clicking on the _Wagon_ name in the _My Analyses_ page. There are different tabs: Wagon settings, Configuration, Test Statistics.
 * <a name="view-wagon">By clicking on the top-left corner, you will be redirected to a read-only view of the wagon, that can be shared with colleagues and support. The top right corner history symbol leads to the [_Wagon **History**_](#wagonhistory) page, which will display the state evolution of the wagon.
@@ -120,7 +120,7 @@ You can get to the _All Analyses_ page by using the main menu, or by the link in
 <img src="../images/zooming.png" width="90%">
 </div>
 
-##### <a name="wagonhistory"></a> 4. Wagon History
+### <a name="wagonhistory"></a> 4. Wagon History
 
 * In the _Wagon History_ page, there is a summary of the wagon's state from the creation until the last update. By clicking on the _+_ symbol, one can expand the information, showing the subwagons' details and the derived data at each timestamp.
 
@@ -130,7 +130,7 @@ You can get to the _All Analyses_ page by using the main menu, or by the link in
 
 * On the right side of the page, the user can select two timestamps in order to compare the state of the wagon between the two by clicking _Compare_. This will lead to [_Compare Wagons_](#comparewagons) page. You can cancel your current selection by clicking _Unselect all_.
 
-##### <a name="compare-wagons"></a> 5. Compare wagon at different timestamps
+### <a name="compare-wagons"></a> 5. Compare wagon at different timestamps
 
 * In the _Compare Wagons_ view, we can analyse the state of a wagon at two different timestamps. The _Wagon settings_ tab shows the changes regarding the name, workflow and dependencies and/or the common features between the two. By clicking on one of the dependencies, a new tab will open showing the comparison between the same two timestamps for the wagon clicked.
 
@@ -140,7 +140,7 @@ You can get to the _All Analyses_ page by using the main menu, or by the link in
 <img src="../images/compareWagons.png" width="70%">
 </div>
 
-##### <a name="compare-arb-wagons"></a>6. Compare individual wagons
+### <a name="compare-arb-wagons"></a>6. Compare individual wagons
 
 * The user is able to compare a wagon with any of their individual wagons.
 * Using the _My Analyses_ page, click on the button `🆚` to compare the wagon. A list of all your wagons will be displayed. Once you select the desired wagon, this will open the comparison view in a new tab. This has a similar structure to the different timstamps comparison.
@@ -169,9 +169,9 @@ After all the parameters have been set, click on `Create` and your _Analysis_ wi
 
 The synchronization from JIRA to the Hyperloop train system can take up to 30 minutes.
 
-### <a name="enabledatasets"></a>Enabling datasets
+## <a name="enabledatasets"></a>Enabling datasets
 
-#### 1. Using the _My Analyses_ page
+### 1. Using the _My Analyses_ page
 
 * Inside of an analysis, click on the button `Datasets and Settings 📝`.
 
@@ -182,7 +182,7 @@ The synchronization from JIRA to the Hyperloop train system can take up to 30 mi
 * There is a list of _Enabled datasets in **Analysis**_. You can disable a dataset for that analysis by clicking on the button `❌`.
 * Inside of _Enable dataset_ you can search for an active dataset by filtering by data type, collision system, anchor and period. And add it to your analysis by clicking on the button `✚ Add to analysis`. Or you can click the button `ℹ️ All datasets` to be redirected to the [**Datasets**](#datasets) page.
 
-#### 2. <a name="datasets"></a> Using the _Datasets_ page
+### 2. <a name="datasets"></a> Using the _Datasets_ page
 
 * The [**Datasets**](https://alimonitor.cern.ch/hyperloop/datasets) page displays all the datasets available.
 * You can browse and click on the _Dataset_ you want to add to your analysis.
@@ -193,7 +193,7 @@ The synchronization from JIRA to the Hyperloop train system can take up to 30 mi
 
 * <a name="view-dataset"></a>Inside of the _Dataset_ view page, click on the button `✚ Add dataset to analysis`. It will display a list of all the analyses you belong to. Select the _Analysis_ you want to add the dataset to, and click on `💾 Save`.
 
-### <a name="enablingwagon"></a>Enabling a wagon
+## <a name="enablingwagon"></a>Enabling a wagon and wagon test
 
 You can enable a wagon in the _My Analyses_ page. Inside of the _Analysis_ there are the datasets available for that analysis, or you can [_enable/disable_ datasets](#enabledatasets). There are 3 options for enabling a wagon:
 
@@ -274,7 +274,7 @@ When creating or enabling wagons, you can use a pull request instead of a packag
    <img src="../images/trainRunsPage.png" width="70%">
 </div>
 
-### <a name="train-run"></a>Train Run Result
+## <a name="train-run"></a>Train Run Result
 
 * The _General_ tab displays the summary of the train's progress, direct links to dataset and participating wagon configuration, as well as direct links to the test output and the [speedscope](https://johnysswlab.com/speedscope-visualize-what-your-program-is-doing-and-where-it-is-spending-time/) profiling of the task.
 
