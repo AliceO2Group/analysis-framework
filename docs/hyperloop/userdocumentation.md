@@ -130,7 +130,7 @@ You can get to the _All Analyses_ page by using the main menu, or by the link in
 
 * On the right side of the page, the user can select two timestamps in order to compare the state of the wagon between the two by clicking _Compare_. This will lead to [_Compare Wagons_](#comparewagons) page. You can cancel your current selection by clicking _Unselect all_.
 
-### <a name="compare-wagons"></a> 5. Compare wagon at different timestamps
+### <a name="comparewagons"></a> 5. Compare wagon at different timestamps
 
 * In the _Compare Wagons_ view, we can analyse the state of a wagon at two different timestamps. The _Wagon settings_ tab shows the changes regarding the name, workflow and dependencies and/or the common features between the two. By clicking on one of the dependencies, a new tab will open showing the comparison between the same two timestamps for the wagon clicked.
 
@@ -193,7 +193,7 @@ The synchronization from JIRA to the Hyperloop train system can take up to 30 mi
 
 * <a name="view-dataset"></a>Inside of the _Dataset_ view page, click on the button `✚ Add dataset to analysis`. It will display a list of all the analyses you belong to. Select the _Analysis_ you want to add the dataset to, and click on `💾 Save`.
 
-## <a name="enablingwagon"></a>Enabling a wagon and wagon test
+## <a name="enablewagon"></a>Enabling a wagon and wagon test
 
 You can enable a wagon in the _My Analyses_ page. Inside of the _Analysis_ there are the datasets available for that analysis, or you can [_enable/disable_ datasets](#enabledatasets). There are 3 options for enabling a wagon:
 
@@ -209,7 +209,7 @@ You can enable a wagon in the _My Analyses_ page. Inside of the _Analysis_ there
 
   If a wagon has dependencies, there is no need to enable the dependencies as well. The wagon's dependencies will be automatically tested by the system as well.
 
-### <a name="wagon-test"></a>Wagon tests
+### <a name="wagontest"></a>Wagon tests
 
 * The wagon test can be accessed in the _My Analyses_ page by clicking on the buttons: `⏳`,`🌟`, `❗️` or `💣`.
 * If the TEST_ID is known, it can be directly accessed using the url <https://alimonitor.cern.ch/hyperloop/wagon-test/TEST_ID>.
