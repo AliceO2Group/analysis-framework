@@ -71,7 +71,7 @@ and in this example add it with the Attach function to the table Tracks.
 struct AttachColumn {
   void process(aod::Collision const&, aod::Tracks const& tracks)
   {
-    auto table_extension = soa::Attach<aod::Tracks, aod::extension::R2dyn<aod::track::X,aod::track::Y> (tracks);
+    auto table_extension = soa::Attach<aod::Tracks, aod::extension::R2dyn<aod::track::X,aod::track::Y>> (tracks);
 ```
 
 <a name="extendandattach"></a>

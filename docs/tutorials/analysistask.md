@@ -11,7 +11,7 @@ This explains the basic blocks and structures an analysis task in O2 is built of
 
 ## License agreement
 
-At the very beginning of each analysis task code file we recommend to but the following license agreement. The task will also run without, but with these lines you confirm that your program is
+At the very beginning of each analysis task code file we recommend to put the following license agreement. The task will also run without, but with these lines you confirm that your program is
 <a href="https://www.gnu.org/philosophy/free-sw.html" target="_blank">free software</a>. You can find the full O2 license information <a href="https://alice-o2-project.web.cern.ch/license" target="_blank">here</a>.
 
 `License agreement`
@@ -58,7 +58,7 @@ All tables of the ALICE O2 analysis data model reside in the namespace o2::aod. 
 
 ## Tasks, workflows, data analysis
 
-A task is a basic block of an analysis program. It it a struct and has an init and a process function. In order to be complete either of the two functions must be defined.
+A task is a basic block of an analysis program. It is a struct and has an init and a process function. In order to be complete either of the two functions must be defined.
 
 Several tasks can be put together to form a workflow (using defineDataProcessing()). Workflows on the other hand can be chained - the output of one workflow is piped to the input of the other workflow.
 

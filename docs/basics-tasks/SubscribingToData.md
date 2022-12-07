@@ -77,7 +77,7 @@ This means that each subsequent argument is associated to all the one preceding 
 
 ## Processing related tables
 
-For performance reasons, sometimes it's a good idea to split data in separate tables, so that once can request only the subset which is required for a given task. For example, so far the track related information is split in three tables: `Tracks`, `TracksCov`, `TracksExtra`.
+For performance reasons, sometimes it's a good idea to split data in separate tables, so that one can request only the subset which is required for a given task. For example, so far the track related information is split in three tables: `Tracks`, `TracksCov`, `TracksExtra`.
 
 However you might need to get all the information at once. This can be done by asking for a `Join` table in the process method:
 

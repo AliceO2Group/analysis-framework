@@ -38,9 +38,13 @@ defineDataProcessing() {
 >
 > `AnalysisTask` will not actually provide any virtual method, as the `adaptAnalysis` helper relies on template argument matching to discover the properties of the task. It will come clear in the next paragraph how this allow is used to avoid the proliferation of data subscription methods.
 
-```todo
-Define minimum requirements for a complet task
-```
+###### Minimum requirements for a complete task
+
+- License agreement
+- Required header files
+- O2 basic name spaces
+- Struct comprising an init and a process function
+- Defined Workflow
 
 See also tutorial [Analysis Task](../tutorials/analysistask.md).
 
@@ -115,7 +119,7 @@ HistogramConfigSpec(HistType type,
                     uint8_t nSteps = 1)
 ```
 
-HistType specifies the type of the histogram. The supported hstograms types are listed in <a href="https://github.com/AliceO2Group/AliceO2/blob/dev/Framework/Core/include/Framework/HistogramSpec.h" target="_blank">HistogramSpec.h</a>. The vector of AxisSpec describe the axes of the histogram. nSteps is only used for histograms of type <a href="https://github.com/AliceO2Group/AliceO2/blob/dev/Framework/Core/include/Framework/StepTHn.h" target="_blank">StepTHn</a>.
+HistType specifies the type of the histogram. The supported histogram types are listed in <a href="https://github.com/AliceO2Group/AliceO2/blob/dev/Framework/Core/include/Framework/HistogramSpec.h" target="_blank">HistogramSpec.h</a>. The vector of AxisSpec describes the axes of the histogram. nSteps is only used for histograms of type <a href="https://github.com/AliceO2Group/AliceO2/blob/dev/Framework/Core/include/Framework/StepTHn.h" target="_blank">StepTHn</a>.
 
 Histogram axes are realized by AxisSpec which has two constructors.
 
@@ -131,7 +135,7 @@ AxisSpec(int nBins,
          std::optional<std::string> name = std::nullopt)
 ```
 
-They differ in the way the axis bins are defined. In the first version a vector of bin edges is provided, which allows for bins of different widths, whereas in the second case the edges of the equally wide bins are computed with the provided number of bins and the range of the axis, defined by binMin and binMax.
+They differ in the way the axis bins are defined. In the first version a vector of bin edges is provided, which allows bins of different widths, whereas in the second case the edges of the equally wide bins are computed with the provided number of bins and the range of the axis, defined by binMin and binMax.
 
 By-the-way, there is in fact a third version of the AxisSpec constructor, which is similar to the first version, but takes as first argument a ConfigurableAxis (= [Configurable](#configurables)&lt;std::vector&lt;double&gt;&gt;) instead of a std::vector&lt;double&gt;.
 
@@ -139,7 +143,7 @@ By-the-way, there is in fact a third version of the AxisSpec constructor, which 
 
 ## Adding histograms
 
-A HistogramRegistry can be created together with the histograms it contains. It can however also be created empty and the histograms can be added later with the add method of which there a three versions.
+A HistogramRegistry can be created together with the histograms it contains. It can however also be created empty and the histograms can be added later with the add method of which there are three versions.
 
 ```cpp
 void add(const HistogramSpec& histSpec);
