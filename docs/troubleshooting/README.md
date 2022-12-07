@@ -39,9 +39,8 @@ o2-analysis-timestamp | o2-analysis-my-analysis ...
 
 and the table should be found.
 
-If you run on Run 3 data or MC and the missing table is "O2tracks", please refer to the documentation on the [track propagation](https://aliceo2group.github.io/analysis-framework/docs/basics-usage/HelperTasks.html?highlight=track%20propagation#track-propagation).
+If you run on Run 3 data or MC and the missing table is "O2tracks", please refer to the documentation on the [track propagation](../basics-usage/HelperTasks.md#track-propagation).
 
+If you are running on Run 3 data or MC and the missing table is "O2fv0c", please make sure that the process switches in the bc-selection, event-selection and multiplicity-table workflows are set to `"processRun2": "false", "processRun3": "true"` in your config JSON; see e.g. the "Configurables" section in the [event selection](../basics-usage/HelperTasks.md#event-selection) documentation.
 
-If you are running on Run 3 data or MC and the missing table is "O2fv0c", please make sure that the process switches in the bc-selection, event-selection and multiplicity-table workflows are set to `"processRun2": "false", "processRun3": "true"` in your config JSON; see e.g. the "Configurables" section in the [event selection](../helperTasks/eventselection.md#configurables) documentation.
-
-If the misssing table is `O2tofsignal`, please refer to the documentation on the [TOF PID](../helperTasks/pid.md) requirements.
+If the misssing table is `O2tofsignal`, please refer to the documentation on the [TOF PID](../basics-usage/HelperTasks.md#particle-identification) requirements.

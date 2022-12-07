@@ -22,11 +22,11 @@ For **each** index in a table, there is a method to get the corresponding object
 ```
 
 ```note
-Be aware that tables can be [joined](../framework/framework.md#processing-related-tables) and be [extended](../framework/framework.md#expression-columns) with extra colums.
+Be aware that tables can be [joined](../basics-task/SubscribingToData.md#processing-related-tables) and be [extended](../tutorials/extendedTables.md) with extra colums.
 ```
 
 In order to process the data, analysis task objects have to be written and have to subscribe to tables - i.e., they
-have to tell the framework that a certain table is of interest and will be processed by the task. 
-In what follows, we will explain the basics regarding analysis tasks and the subscription to data. 
+have to tell the framework that a certain table is of interest and will be processed by the task.
+In what follows, we will explain the basics regarding analysis tasks and the subscription to data.
 If you are interested in a reference guide that covers all the basic content of the tables that
-are currently in O2Physics, please refer to the automatically generated [Appendix: Data model reference](../09-appendix-fulldatatables/).
+are currently in O2Physics, please refer to the automatically generated [Appendix: Data model reference](../datamodel/README.md).
