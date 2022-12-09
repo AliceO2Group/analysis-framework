@@ -23,7 +23,9 @@ filters upfront you can not only simplify your code, but allow the framework to
 optimize the processing. To do so, we provide two helpers: `Filter` and
 `Partition`.
 
-*Note: Filters cannot be used on dynamic columns.*
+```note
+Filters cannot be used on dynamic columns.
+```
 
 ## Upfront filtering
 
@@ -86,7 +88,26 @@ i.e. `Filter` is applied to the objects before passing them to the `process` met
 
 ## Filtering and partitioning together
 
-Of course it should be possible to filter and partition data in the same task. The way this works is that multiple `Filter`s are logically ANDed together and then they will get anded with the OR of all the `Select` specified selections.
+It is also possible to filter and partition data in the same task. Therefore, multiple `Filter`s are combined using the logical `AND`. These filters then are combined by a logical `AND` with all the specified selections `Select`, which themself are combined by logical `OR`s. E.g. (Filter1 && Filter2) && (Select1 || Select2).
+
+```cpp
+using namespace o2::aod;
+
+using MyCompleteTracks = soa::Join<Tracks, TracksExtra, TracksDCA>;
+
+struct partandfiltexample {
+  Partition<Tracks> leftTracks = track::eta < 0;
+  Partition<Tracks> rightTracks = track::eta >= 0;
+  Filter etaFilter = nabs(track::eta) < 0.5f;
+  Filter trackQuality = track::tpcNClsFindable - track::tpcNClsFindableMinusCrossedRows >= 70;
+  Filter trackDCA = nabs(track::dcaXY) <= .2;
+
+  void process(Collision const& collision, soa::Filtered<MyCompleteTracks> const& tracks)
+  {
+    ...
+  }
+};
+```
 
 ## Configuring filters
 
@@ -108,4 +129,4 @@ struct MyTask : AnalysisTask {
 - Complete list of methods related to filters and partitions
 ```
 
-See also tutorials [Data Selection](../tutorials/dataSelection).
+See also tutorials [Data Selection](../tutorials/dataSelection.md).

@@ -10,7 +10,7 @@ The internal-dpl-aod-reader reads trees from root files and provides them as arr
 * --aod-file
 * --aod-reader-json
 
-### --aod-file
+### &#8208;&#8208;aod-file
 
 aod-file takes a string as option value, which either is the name of the input root file or, if starting with an `@`-character, is an ASCII-file which contains a list of input files.
 
@@ -23,7 +23,7 @@ aod-file takes a string as option value, which either is the name of the input r
 
 ```
 
-#### --aod-reader-json
+#### &#8208;&#8208;aod-reader-json
 
 aod-reader-json is a string and specifies a json file, which contains the
 customization information for the internal-dpl-aod-reader. An example file is
