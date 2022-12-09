@@ -16,7 +16,7 @@ Learn how add new columns to existing tables, use dynamic and expression columns
 
 <a name="extendtable"></a>
 
-### ExtendTable
+## ExtendTable
 
 Existing tables can be extended with additional expression columns using the 'Extend" function. The first step is the declaration of the new expression column (see also tutorial [Creating Tables](creatingTables.md)).
 
@@ -48,7 +48,7 @@ Note that the argument of the Extend function (here track) is a table object and
 
 <a name="attachcolumn"></a>
 
-### AttachColumn
+## AttachColumn
 
 Extend can only be used with expression columns. The function to extend a table with a dynamic column is `Attach`.
 
@@ -76,13 +76,13 @@ struct AttachColumn {
 
 <a name="extendandattach"></a>
 
-### ExtendAndAttach
+## ExtendAndAttach
 
 The two types of extension can be combined as demonstrated in task ExtendAndAttach.
 
 <a name="spawndynamiccolumns"></a>
 
-### SpawnDynamicColumns and ProcessExtendedTables
+## SpawnDynamicColumns and ProcessExtendedTables
 
 A Similar effect can be achieved by joining tables with the soa::Join helper function. Again we need some declarations at the beginning.
 

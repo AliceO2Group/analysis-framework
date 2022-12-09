@@ -77,4 +77,6 @@ For example the above json file is well adapted for the task `o2-analysis-mm-dnd
 
 `o2-analysis-timestamp --configuration json://config-file.json | o2-analysis-event-selection --configuration json://config-file.json | o2-analysis-trackextension --configuration json://config-file.json | o2-analysis-mm-dndeta --configuration json://config-file.json`
 
-*N.B. : You should provide the json file to each workflow separated by a pipe.*
+```note
+You should provide the json file to each workflow separated by a pipe.
+```

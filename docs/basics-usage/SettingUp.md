@@ -22,19 +22,19 @@ workflow.
 
 A simple example is the histogram tutorial which you can run (on Run 2 converted data) with:
 
-```
+```bash
 o2-analysistutorial-histograms --aod-file AO2D.root
 ```
 
-In case you try the same on Run 3 data or MC, you also need the [track propagation task](https://aliceo2group.github.io/analysis-framework/docs/basics-usage/HelperTasks.html?highlight=track%20propagation#track-propagation):
+In case you try the same on Run 3 data or MC, you also need the [track propagation task](HelperTasks.md#track-propagation):
 
-```
+```bash
 o2-analysis-timestamp | o2-analysis-track-propagation | o2-analysistutorial-histograms --aod-file AO2D.root
 ```
 
 Single task executables are combined with the pipe ( &#124; ) operator, e.g.
 
-```
+```bash
 o2-analysis-timestamp | o2-analysis-event-selection | o2-analysis-trackextension
 | o2-analysis-trackselection | o2-analysis-ud-mytask --aod-file AO2D.root
 ```
