@@ -18,7 +18,7 @@ The _Service wagons_ are wagons which are dependencies to other wagons. They are
 * For the users, in the _My Analyses_ page, there is a read only view of the _Service Analyses_ available on the top of the page.
 * For the experts, if you need to create _Service wagons_, you need to have an analysis with the project type _O2 Hyperloop Service Wagons (OHSW)_ which can be [created in JIRA](#joinanalysis). Once the analysis is created, you can [add a new wagon](#addwagon) inside of the analysis available in _My Analyses_.
 
-## <a name="configure-wagon"></a> Adding and configuring a wagon to an analysis
+## <a name="configure-wagon"></a> Adding and configuring a wagon
 
 ### 1. <a name="addwagon"></a>Adding a new wagon
 
@@ -57,12 +57,16 @@ You can get to the _All Analyses_ page by using the main menu, or by the link in
 <div align="center">
 <img src="../images/wagonShortcuts.png" width="80%">
 </div>
+ 
+## <a name="wagon-settings"></a> Wagon Settings
 
 * <a name="wagonsettings"></a>In _Wagon settings_ you can modify the wagon name, work flow name, and select wagon's dependencies. The dependencies offered are wagons from the same _Analysis_ or from [_Service wagons_](#servicewagons).
 
 <div align="center">
 <img src="../images/wagonSettings.png" width="70%">
 </div>
+ 
+## <a name="wagon-configuration"></a> Wagon Configuration
 
 * <a name="wagonconfiguration"></a>In _Configuration_ the wagon configuration corresponding to the workflow will be available in the _Base_. The configuration is divided per _Task_, hence if you need to add a new parameter, you will need add it in the following order: task, parameter and value.
 * The wagon configuration supports a variety of parameter types defined in task as _Configurable_ including: primitive type parameters, fixed-length arrays, variable-length arrays, matrices, labelled matrices and histogram binning.
@@ -88,6 +92,8 @@ You can get to the _All Analyses_ page by using the main menu, or by the link in
 
 * In order to update the base and subwagon configuration with the latest version of the workflow, click on the button `↻ sync` in _Configuration_. By synchronizing the configuration, the parameters which no longer belong to the workflow will be removed, and the values of the wagon's _Base_ will be updated as well if they have not been modified by the user.
 
+## <a name="wagon-derived-data"></a> Derived data 
+
 * <a name="wagonderived"></a>In _Derived Data_ the tables which are produced by the task are displayed. If activated, these are saved to the output if the train is run as a derived data production. The produced derived data can be made available by the operators and serve as input for subsequent trains. Note that derived data train do not submit automatically and may need additional approval. If in doubt, please seek advise before enabling derived data tables in your wagon configuration.
 
 * In order to update the derived data configuration with the latest version of the workflow, click on the button `↻ sync` in _Derived data_. By synchronizing the derived data, the tables which no longer belong to the workflow will be removed, and the values of the tables will be updated.
@@ -95,6 +101,8 @@ You can get to the _All Analyses_ page by using the main menu, or by the link in
 <div align="center">
 <img src="../images/derivedDataEx.png" width="70%">
 </div>
+
+## <a name="wagon-test-statistics"></a> Test Statistics 
 
 * <a name="wagonteststatistics"></a>_Test Statistics_ contains three graphs that display different metrics following the tests this wagon was part of. The first graph plots the _PSS Memory_ corresponding to each test run. The second one diplays the _CPU Time_, _Wall time_ and _Throughput_ along the test runs for this wagon. Finally, the third graph shows the _Output size_ at each test run.
 
@@ -128,9 +136,9 @@ You can get to the _All Analyses_ page by using the main menu, or by the link in
 <img src="../images/WagonHistory.png" width="70%">
 </div>
 
-* On the right side of the page, the user can select two timestamps in order to compare the state of the wagon between the two by clicking _Compare_. This will lead to [_Compare Wagons_](#comparewagons) page. You can cancel your current selection by clicking _Unselect all_.
+* On the right side of the page, the user can select two timestamps in order to compare the state of the wagon between the two by clicking _Compare_. This will lead to [_Compare Wagons_](#compare-wagons) page. You can cancel your current selection by clicking _Unselect all_.
 
-### <a name="comparewagons"></a> 5. Compare wagon at different timestamps
+### <a name="compare-wagons"></a> 5. Compare wagon at different timestamps
 
 * In the _Compare Wagons_ view, we can analyse the state of a wagon at two different timestamps. The _Wagon settings_ tab shows the changes regarding the name, workflow and dependencies and/or the common features between the two. By clicking on one of the dependencies, a new tab will open showing the comparison between the same two timestamps for the wagon clicked.
 
@@ -193,7 +201,7 @@ The synchronization from JIRA to the Hyperloop train system can take up to 30 mi
 
 * <a name="view-dataset"></a>Inside of the _Dataset_ view page, click on the button `✚ Add dataset to analysis`. It will display a list of all the analyses you belong to. Select the _Analysis_ you want to add the dataset to, and click on `💾 Save`.
 
-## <a name="enablewagon"></a>Enabling a wagon and wagon test
+## <a name="enabling-a-wagon"></a>Enabling a wagon
 
 You can enable a wagon in the _My Analyses_ page. Inside of the _Analysis_ there are the datasets available for that analysis, or you can [_enable/disable_ datasets](#enabledatasets). There are 3 options for enabling a wagon:
 
@@ -205,11 +213,11 @@ You can enable a wagon in the _My Analyses_ page. Inside of the _Analysis_ there
 <img src="../images/enablewagon.png" width="70%">
 </div>
 
-  After choosing the package tag to be used, click on the button `❌` to enable your wagon in a dataset, the icon will change from `❌` to `✅`. If you hover over `✅` you can see the information about the enabled wagon: package tag, time and username. If you need to disable a wagon in a dataset, click on the button `✅`. After enabled, the wagon will be automatically tested and you can follow the progress of the [test](#wagontest) on the button next to `✅`: `⌛️` queued,`⏳` ongoing,`🌟` done, `❗️` warning and `💣` failed.
+  After choosing the package tag to be used, click on the button `❌` to enable your wagon in a dataset, the icon will change from `❌` to `✅`. If you hover over `✅` you can see the information about the enabled wagon: package tag, time and username. If you need to disable a wagon in a dataset, click on the button `✅`. After enabled, the wagon will be automatically tested and you can follow the progress of the [test](#wagon-test) on the button next to `✅`: `⌛️` queued,`⏳` ongoing,`🌟` done, `❗️` warning and `💣` failed.
 
   If a wagon has dependencies, there is no need to enable the dependencies as well. The wagon's dependencies will be automatically tested by the system as well.
 
-### <a name="wagontest"></a>Wagon tests
+## <a name="wagon-test"></a> Wagon tests
 
 * The wagon test can be accessed in the _My Analyses_ page by clicking on the buttons: `⏳`,`🌟`, `❗️` or `💣`.
 * If the TEST_ID is known, it can be directly accessed using the url <https://alimonitor.cern.ch/hyperloop/wagon-test/TEST_ID>.
@@ -251,7 +259,7 @@ You can enable a wagon in the _My Analyses_ page. Inside of the _Analysis_ there
 When creating or enabling wagons, you can use a pull request instead of a package tag. By doing this, you don't need to wait until your code has been merged and released in a package tag.
 
 1. [Adding a new wagon](#addwagon): You can create a wagon with your unmerged or unreleased workflow. If the workflow is not available, add manually the configuration of the wagon, and subwagons if needed. You can synchronize the wagon's configuration once the package tag that includes your pull request has been released.
-2. [Enabling a wagon in a dataset](#enablewagon): If you need to enable your wagon with workflow that is unmerged or unreleased, use a `Future tag based on pull request`. There is a list of the latest merged and unmerged pull requests available in the system, you can see the pull request number and description. Select the _pull request tag_ and enable the wagon in a dataset. By doing this, the wagon will be queued to test, and the test will begin once the _pull request_ has been merged to a package tag, and the package tag is released. And then, if the test is successful, it'll be composed in a train with the latest package tag available.
+2. [Enabling a wagon in a dataset](#enabling-a-wagon): If you need to enable your wagon with workflow that is unmerged or unreleased, use a `Future tag based on pull request`. There is a list of the latest merged and unmerged pull requests available in the system, you can see the pull request number and description. Select the _pull request tag_ and enable the wagon in a dataset. By doing this, the wagon will be queued to test, and the test will begin once the _pull request_ has been merged to a package tag, and the package tag is released. And then, if the test is successful, it'll be composed in a train with the latest package tag available.
 
 ## <a name="all-analyses"></a>All Analyses
 
