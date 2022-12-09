@@ -182,6 +182,10 @@ Workflow                                        | File                          
     (especially the [naming](https://rawgit.com/AliceO2Group/CodingGuidelines/master/naming_formatting.html)
     and [commenting](https://rawgit.com/AliceO2Group/CodingGuidelines/master/comments_guidelines.html) rules).
 - Sort O2Physics `#include`s alphabetically and keep `PWGHF/...` at the end.
+- Avoid using hard-coded PDG codes. Use their `enum` names instead
+  (from [`PDG_t`](https://root.cern/doc/master/TPDGCode_8h.html) or
+  [`o2::analysis::pdg::Code`](https://github.com/AliceO2Group/O2Physics/blob/master/PWGHF/Core/SelectorCuts.h)).
+  See also [Magic numbers](https://rawgit.com/AliceO2Group/CodingGuidelines/master/coding_guidelines.html?showone=Magic_numbers#Magic_numbers).
 - Test your code before making a pull request.
   - Propagate your changes into the Run3Analysisvalidation configuration.
   - Check that your branch compiles.
