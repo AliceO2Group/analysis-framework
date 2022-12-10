@@ -28,6 +28,13 @@ Click on the labels to display the definitions. Click buttons to
     </ul>
   </div>
 
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::Collisions</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::Collisions = o2::aod::Collisions_000</li>
+    </ul>
+  </div>
+
   <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::Collision</button>
   <div class="panel">
     <ul>
@@ -1239,10 +1246,45 @@ Click on the labels to display the definitions. Click buttons to
     </ul>
   </div>
 
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::hf_cand_omegac::SelectedCollisions</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::hf_cand_omegac::SelectedCollisions = soa::Join<o2::aod::hf_cand_omegac::soa::Join></li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::hf_cand_omegac::MyTracks</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::hf_cand_omegac::MyTracks = soa::Join<o2::aod::BigTracks, o2::aod::TracksDCA, o2::aod::TrackSelection></li>
+    </ul>
+  </div>
+
   <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::hf_cand_lb::TracksExtendedPID</button>
   <div class="panel">
     <ul>
         <li>o2::aod::hf_cand_lb::TracksExtendedPID = soa::Join<o2::aod::BigTracksPID, o2::aod::HfTrackIndexALICE3PID></li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::hf_sel_omegac::only</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::hf_sel_omegac::only = o2::aod::hf_sel_omegac::''}</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::hf_sel_omegac::TPC</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::hf_sel_omegac::TPC = o2::aod::hf_sel_omegac::TOF''}</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::hf_sel_omegac::MyTrackInfo</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::hf_sel_omegac::MyTrackInfo = soa::Join<o2::aod::BigTracksPIDExtended, o2::aod::TrackSelection></li>
     </ul>
   </div>
 
@@ -1284,14 +1326,14 @@ Click on the labels to display the definitions. Click buttons to
   <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::analysis::hf_cuts_lc_to_k0s_p::MyBigTracks</button>
   <div class="panel">
     <ul>
-        <li>o2::analysis::hf_cuts_lc_to_k0s_p::MyBigTracks = soa::Join<o2::analysis::hf_cuts_lc_to_k0s_p::aod::BigTracksPID, o2::analysis::hf_cuts_lc_to_k0s_p::aod::McTrackLabels></li>
+        <li>o2::analysis::hf_cuts_lc_to_k0s_p::MyBigTracks = soa::Join<o2::analysis::hf_cuts_lc_to_k0s_p::aod::BigTracksPID, o2::analysis::hf_cuts_lc_to_k0s_p::aod::pidBayesPr, o2::analysis::hf_cuts_lc_to_k0s_p::aod::pidBayesEl, o2::analysis::hf_cuts_lc_to_k0s_p::aod::pidBayesMu, o2::analysis::hf_cuts_lc_to_k0s_p::aod::pidBayesKa, o2::analysis::hf_cuts_lc_to_k0s_p::aod::pidBayesPi, o2::analysis::hf_cuts_lc_to_k0s_p::aod::McTrackLabels></li>
     </ul>
   </div>
 
   <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::analysis::hf_cuts_lc_to_k0s_p::MyBigTracks</button>
   <div class="panel">
     <ul>
-        <li>o2::analysis::hf_cuts_lc_to_k0s_p::MyBigTracks = o2::analysis::hf_cuts_lc_to_k0s_p::aod::BigTracksPID</li>
+        <li>o2::analysis::hf_cuts_lc_to_k0s_p::MyBigTracks = soa::Join<o2::analysis::hf_cuts_lc_to_k0s_p::aod::BigTracksPID, o2::analysis::hf_cuts_lc_to_k0s_p::aod::pidBayesPr, o2::analysis::hf_cuts_lc_to_k0s_p::aod::pidBayesEl, o2::analysis::hf_cuts_lc_to_k0s_p::aod::pidBayesMu, o2::analysis::hf_cuts_lc_to_k0s_p::aod::pidBayesKa, o2::analysis::hf_cuts_lc_to_k0s_p::aod::pidBayesPi></li>
     </ul>
   </div>
 
