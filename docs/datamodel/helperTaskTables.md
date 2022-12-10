@@ -468,6 +468,143 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
 
 </div>
 
+####  o2-analysis-collision-converter
+Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/TableProducer//collisionConverter.cxx" target="_blank">collisionConverter.cxx</a>
+<div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::Collisions_001</button>
+  <div class="panel">
+    <div>
+       Time and vertex information of collision
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev//Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::soa::Index</td>
+        <td>GI</td>
+        <td>globalIndex</td>
+        <td>int64_t</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::&zwnj;collision::BCId</td>
+        <td>I</td>
+        <td>bcId</td>
+        <td>int32</td>
+        <td>Most probably BC to where this collision has occured</td>
+      </tr>
+      <tr>
+        <td>o2::aod::&zwnj;collision::PosX</td>
+        <td></td>
+        <td>posX</td>
+        <td>float</td>
+        <td>X Vertex position in cm</td>
+      </tr>
+      <tr>
+        <td>o2::aod::&zwnj;collision::PosY</td>
+        <td></td>
+        <td>posY</td>
+        <td>float</td>
+        <td>Y Vertex position in cm</td>
+      </tr>
+      <tr>
+        <td>o2::aod::&zwnj;collision::PosZ</td>
+        <td></td>
+        <td>posZ</td>
+        <td>float</td>
+        <td>Z Vertex position in cm</td>
+      </tr>
+      <tr>
+        <td>o2::aod::&zwnj;collision::CovXX</td>
+        <td></td>
+        <td>covXX</td>
+        <td>float</td>
+        <td>Vertex covariance matrix</td>
+      </tr>
+      <tr>
+        <td>o2::aod::&zwnj;collision::CovXY</td>
+        <td></td>
+        <td>covXY</td>
+        <td>float</td>
+        <td>Vertex covariance matrix</td>
+      </tr>
+      <tr>
+        <td>o2::aod::&zwnj;collision::CovYY</td>
+        <td></td>
+        <td>covYY</td>
+        <td>float</td>
+        <td>Vertex covariance matrix</td>
+      </tr>
+      <tr>
+        <td>o2::aod::&zwnj;collision::CovXZ</td>
+        <td></td>
+        <td>covXZ</td>
+        <td>float</td>
+        <td>Vertex covariance matrix</td>
+      </tr>
+      <tr>
+        <td>o2::aod::&zwnj;collision::CovYZ</td>
+        <td></td>
+        <td>covYZ</td>
+        <td>float</td>
+        <td>Vertex covariance matrix</td>
+      </tr>
+      <tr>
+        <td>o2::aod::&zwnj;collision::CovZZ</td>
+        <td></td>
+        <td>covZZ</td>
+        <td>float</td>
+        <td>Vertex covariance matrix</td>
+      </tr>
+      <tr>
+        <td>o2::aod::&zwnj;collision::Flags</td>
+        <td></td>
+        <td>flags</td>
+        <td>uint16_t</td>
+        <td>Run 2: see CollisionFlagsRun2 | Run 3: see Vertex::Flags</td>
+      </tr>
+      <tr>
+        <td>o2::aod::&zwnj;collision::Chi2</td>
+        <td></td>
+        <td>chi2</td>
+        <td>float</td>
+        <td>Chi2 of vertex fit</td>
+      </tr>
+      <tr>
+        <td>o2::aod::&zwnj;collision::NumContrib</td>
+        <td></td>
+        <td>numContrib</td>
+        <td>uint16_t</td>
+        <td>Number of tracks used for the vertex</td>
+      </tr>
+      <tr>
+        <td>o2::aod::&zwnj;collision::CollisionTime</td>
+        <td></td>
+        <td>collisionTime</td>
+        <td>float</td>
+        <td>Collision time in ns relative to BC stored in bc()</td>
+      </tr>
+      <tr>
+        <td>o2::aod::&zwnj;collision::CollisionTimeRes</td>
+        <td></td>
+        <td>collisionTimeRes</td>
+        <td>float</td>
+        <td>Resolution of collision time</td>
+      </tr>
+    </table>
+  </div>
+
+</div>
+
 ####  o2-analysis-event-selection
 Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/TableProducer//eventSelection.cxx" target="_blank">eventSelection.cxx</a>
 <div>
@@ -1136,7 +1273,14 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
         <td>D</td>
         <td>getGenStatusCode</td>
         <td>int</td>
-        <td>The status code put by the generator, or -1 if a particle produced during transport</td>
+        <td>The native status code put by the generator, or -1 if a particle produced during transport</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::GetHepMCStatusCode</td>
+        <td>D</td>
+        <td>getHepMCStatusCode</td>
+        <td>int</td>
+        <td>The HepMC status code put by the generator, or -1 if a particle produced during transport</td>
       </tr>
       <tr>
         <td>o2::aod::mcparticle::GetProcess</td>
@@ -1673,6 +1817,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
       <ul>
         <li>o2::aod::BigTracksExtended = soa::Join<o2::aod::BigTracks, o2::aod::TracksDCA></li>
         <li>o2::aod::BigTracksPIDExtended = soa::Join<o2::aod::BigTracksPID, o2::aod::TracksDCA></li>
+        <li>o2::aod::hf_cand_omegac::MyTracks = soa::Join<o2::aod::BigTracks, o2::aod::TracksDCA, o2::aod::TrackSelection></li>
       </ul>
     </div>
     <table class=DataModel>
@@ -1718,6 +1863,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
       <ul>
         <li>o2::aod::BigTracksExtended = soa::Join<o2::aod::BigTracks, o2::aod::TracksDCA></li>
         <li>o2::aod::BigTracksPIDExtended = soa::Join<o2::aod::BigTracksPID, o2::aod::TracksDCA></li>
+        <li>o2::aod::hf_cand_omegac::MyTracks = soa::Join<o2::aod::BigTracks, o2::aod::TracksDCA, o2::aod::TrackSelection></li>
       </ul>
     </div>
     <table class=DataModel>
@@ -1758,6 +1904,12 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
     </div>
     <div>
       Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/DataModel/TrackSelectionTables.h" target="_blank">Common/DataModel/TrackSelectionTables.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::hf_cand_omegac::MyTracks = soa::Join<o2::aod::BigTracks, o2::aod::TracksDCA, o2::aod::TrackSelection></li>
+        <li>o2::aod::hf_sel_omegac::MyTrackInfo = soa::Join<o2::aod::BigTracksPIDExtended, o2::aod::TrackSelection></li>
+      </ul>
     </div>
     <table class=DataModel>
       <tr>
