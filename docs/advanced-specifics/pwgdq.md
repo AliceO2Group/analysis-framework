@@ -61,17 +61,17 @@ Mattermost channel: [O2-DQ Analysis Framework Alpha](https://mattermost.web.cern
 * [`dqEfficiency.cxx`](https://github.com/AliceO2Group/O2Physics/blob/master/PWGDQ/Tasks/dqEfficiency.cxx) Analysis task for processing O2::DQ MC skimmed AODs.
 * [`v0selector.cxx`](https://github.com/AliceO2Group/O2Physics/blob/master/PWGDQ/Tasks/v0selector.cxx) Select barrel tracks which belong to clean V0 and cascade topologies. This code loops over a V0Data table and produces some standard analysis output for select clean V0 sample.
 * [`dileptonMuMu.cxx`](https://github.com/AliceO2Group/O2Physics/blob/master/PWGDQ/Tasks/dileptonMuMu.cxx) It refers to The dimuon analysis task. It’s a derivative of the tableReader, but with muon only informations.  takes tracks flaged as « muon » and creates Pairs calculating mass, rapidity, pT.
-* [`dileptonEE.cxx`](https://github.com/AliceO2Group/O2Physics/blob/master/PWGDQ/Tasks/dileptonEE.cxx) It refers to The dielectron analysis task. It’s a derivative of the tableReader, but with electron only informations.  takes tracks flaged as « electron » and creates Pairs calculating mass, rapidity, pT.
 
 ## Python Interface
 To simplify the handling and usage of the O2-DQ framework a [python interface](https://github.com/ctolon/PythonInterfaceOOP) has been developed and will be maintained for further user support.
 
 Its main features are:
+
 - run tasks with simple commands (all main workflows are included)
 - dependencies are selected and set with no need to specify them in the command line
 - auto completion for workflows, settings and configurables
 
-To get started, a [detailed introduction](https://github.com/ctolon/PythonInterfaceOOP#user-python-based-interface) has been written and an introduction was given in the [hands-on session](https://indico.cern.ch/event/1220887/) (Dec 22). 
+To get started, a [detailed introduction](https://github.com/ctolon/PythonInterfaceOOP#user-python-based-interface) has been written and an introduction was given in the [hands-on session](https://indico.cern.ch/event/1220887/) (Dec 22).
 
 ## AliHyperloop
 

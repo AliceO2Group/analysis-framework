@@ -38,7 +38,7 @@ defineDataProcessing() {
 >
 > `AnalysisTask` will not actually provide any virtual method, as the `adaptAnalysis` helper relies on template argument matching to discover the properties of the task. It will come clear in the next paragraph how this allow is used to avoid the proliferation of data subscription methods.
 
-###### Minimum requirements for a complete task
+## Minimum requirements for a complete task
 
 - License agreement
 - Required header files

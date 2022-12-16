@@ -6,7 +6,7 @@ title: PWG-EM
 # Electromagnetic probes (EM) analysis framework
 
 ## Get started
-In the past several O2 hands-on sessions have been taken placed. A list of the most recent ones in DQ, can be found [here](pwgdq.md#get-started). 
+In the past several O2 hands-on sessions have been taken placed. A list of the most recent ones in DQ, can be found [here](pwgdq.md#get-started).
 
 ## Contact
 Coordinators: Raphaelle Bailhache, Mike Sas
@@ -22,6 +22,7 @@ Due to a large overlap with the PWGDQ, the low mass dielectron tasks are using s
 
 * [`TableMaker.cxx`](https://github.com/AliceO2Group/O2Physics/blob/master/PWGDQ/TableProducer/tableMaker.cxx) Is used to produced skimmed data tables for EM analysis from central barrel and muon AODs based on selected event information, barrel track and muon track information.
 * [`TableReader.cxx`](https://github.com/AliceO2Group/O2Physics/blob/master/PWGDQ/Tasks/tableReader.cxx) Analyze EM skimmed data tables. This workflow runs a few tasks: event selection, barrel track selection, muon track selection, same event pairing, event mixing, and dilepton hadron combinations.
+* [`dileptonEE.cxx`](https://github.com/AliceO2Group/O2Physics/blob/master/PWGEM/Dilepton/Tasks/dileptonEE.cxx) It refers to The dielectron analysis task. It’s a derivative of the tableReader, but with electron only informations.  takes tracks flaged as « electron » and creates Pairs calculating mass, rapidity, pT.
 * [`emEfficiencyEE.cxx`](https://github.com/AliceO2Group/O2Physics/blob/master/PWGEM/Dilepton/Tasks/emEfficiencyEE.cxx) Task to calculate the dielectron efficiency.
 * [`v0gammaQA.cxx`](https://github.com/AliceO2Group/O2Physics/blob/master/PWGEM/Dilepton/Tasks/v0gammaQA.cxx)
 
