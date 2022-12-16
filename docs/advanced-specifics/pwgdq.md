@@ -5,13 +5,13 @@ title: PWG-DQ
 
 ## Get started
 
-[link to indico page of the Hands-On session :]
+In the past, some hands-on sessions have been organised within the PWG-DQ. A list of the corresponding indico events is down below:
 
-1. O2 DQ (7/12/21)(<https://indico.cern.ch/event/1098200/>)
-2. O2 DQ (April 2022) <https://indico.cern.ch/event/1150382/>
-3. O2 tutorial (Oct 2022) <https://indico.cern.ch/event/1200252/timetable/?view=standard>
-
-[ZOOM recordings of the first part of the session](https://indico.cern.ch/event/1098200/sessions/419561/attachments/2362418/4033057/videoPlenarySession.mp4)
+**most recent:**
+1. O2 DQ hands-on session (7 Dec 21) [indico event](https://indico.cern.ch/event/1098200/) , [ZOOM recordings of the first part of the session](https://indico.cern.ch/event/1098200/sessions/419561/attachments/2362418/4033057/videoPlenarySession.mp4)
+2. O2 DQ hands-on session (April 2022) [indico event](https://indico.cern.ch/event/1150382/)
+3. O2 Analysis tutorial (Oct 2022) [indico event](https://indico.cern.ch/event/1200252/timetable/?view=standard)
+4. O2 DQ hands-on session (13 Dec 22) [indico event](https://indico.cern.ch/event/1220887/), [ZOOM recordings, DQ User Interfce](https://indico.cern.ch/event/1220887/contributions/5168779/attachments/2568116/4427919/afternoon_session.mp4)
 
 # Dileptons-Quarkonia (DQ) analysis framework
 
@@ -29,7 +29,7 @@ Mattermost channel: [O2-DQ Analysis Framework Alpha](https://mattermost.web.cern
 [`VarManager.h`](https://github.com/AliceO2Group/O2Physics/blob/master/PWGDQ/Core/VarManager.h).
 * Class to define and fill histograms are defined in
 [`HistogramManager.h`](https://github.com/AliceO2Group/O2Physics/blob/master/PWGDQ/Core/HistogramManager.h).
-* Class to set of predefined selection cuts(either AnalysisCut or AnalysisCompositeCut) are defined in
+* Class to set predefined selection cuts (either AnalysisCut or AnalysisCompositeCut) are defined in
 [`CutsLibrary.h`](https://github.com/AliceO2Group/O2Physics/blob/master/PWGDQ/Core/CutsLibrary.h).
 * Class for analysis cuts applied on the variables defined in the VarManager is defined in
 [`AnalysisCut.h`](https://github.com/AliceO2Group/O2Physics/blob/master/PWGDQ/Core/AnalysisCut.h) class.
@@ -63,10 +63,20 @@ Mattermost channel: [O2-DQ Analysis Framework Alpha](https://mattermost.web.cern
 * [`dileptonMuMu.cxx`](https://github.com/AliceO2Group/O2Physics/blob/master/PWGDQ/Tasks/dileptonMuMu.cxx) It refers to The dimuon analysis task. It’s a derivative of the tableReader, but with muon only informations.  takes tracks flaged as « muon » and creates Pairs calculating mass, rapidity, pT.
 * [`dileptonEE.cxx`](https://github.com/AliceO2Group/O2Physics/blob/master/PWGDQ/Tasks/dileptonEE.cxx) It refers to The dielectron analysis task. It’s a derivative of the tableReader, but with electron only informations.  takes tracks flaged as « electron » and creates Pairs calculating mass, rapidity, pT.
 
+## Python Interface
+To simplify the handling and usage of the O2-DQ framework a [python interface](https://github.com/ctolon/PythonInterfaceOOP) has been developed and will be maintained for further user support.
+
+Its main features are:
+- run tasks with simple commands (all main workflows are included)
+- dependencies are selected and set with no need to specify them in the command line
+- auto completion for workflows, settings and configurables
+
+To get started, a [detailed introduction](https://github.com/ctolon/PythonInterfaceOOP#user-python-based-interface) has been written and an introduction was given in the [hands-on session](https://indico.cern.ch/event/1220887/) (Dec 22). 
+
 ## AliHyperloop
 
 [JIRA tickets](https://alice.its.cern.ch/jira/browse/PWGDQ-57?jql=project%20%3D%20PWGDQ%20AND%20issuetype%20%3D%20Analysis)
-of the DQ analyses on [AliHyperloop](https://alimonitor.cern.ch/hyperloop/):
+of the DQ analyses on [AliHyperloop](https://alimonitor.cern.ch/hyperloop/).
 
 ## DQ Data Model
 
