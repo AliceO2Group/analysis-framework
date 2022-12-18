@@ -420,6 +420,20 @@ Click on the labels to display the definitions. Click buttons to
     </ul>
   </div>
 
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::CentFT0A</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::CentFT0A = o2::aod::CentFT0As::iterator</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::CentFT0C</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::CentFT0C = o2::aod::CentFT0Cs::iterator</li>
+    </ul>
+  </div>
+
   <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::CentFDDM</button>
   <div class="panel">
     <ul>

@@ -404,6 +404,68 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
     </table>
   </div>
 
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::CentFT0As</button>
+  <div class="panel">
+    <div>
+       Run3 FT0A estimated centrality table
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/DataModel/Centrality.h" target="_blank">Common/DataModel/Centrality.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::CentFT0A = o2::aod::CentFT0As::iterator</li>
+      </ul>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::cent::CentFT0A</td>
+        <td></td>
+        <td>centFT0A</td>
+        <td>float</td>
+        <td>Run3 centrality percentile estimated from FT0A multiplicity</td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::CentFT0Cs</button>
+  <div class="panel">
+    <div>
+       Run3 FT0C estimated centrality table
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/DataModel/Centrality.h" target="_blank">Common/DataModel/Centrality.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::CentFT0C = o2::aod::CentFT0Cs::iterator</li>
+      </ul>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::cent::CentFT0C</td>
+        <td></td>
+        <td>centFT0C</td>
+        <td>float</td>
+        <td>Run3 centrality percentile estimated from FT0C multiplicity</td>
+      </tr>
+    </table>
+  </div>
+
   <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::CentFDDMs</button>
   <div class="panel">
     <div>
