@@ -7,7 +7,9 @@ title: Saving tables to a file
 
 Produced tables can be saved to file as TTrees. This process is customized by various command line options of the internal-dpl-aod-writer. The options allow to specify which columns of which table are saved to which tree in which file.
 
-**Please be aware, that the functionality of these options is preliminary and might change in future.**
+```note
+Please be aware, that the functionality of these options is preliminary and might change in future.
+```
 
 The options to consider are:
 
@@ -16,7 +18,7 @@ The options to consider are:
 * --aod-writer-ntfmerge
 * --aod-writer-json
 
-## --aod-writer-keep
+## &#8208;&#8208;aod-writer-keep
 
 aod-writer-keep is a comma-separated list of DataOuputDescriptors.
 
@@ -63,15 +65,15 @@ sub-string of it). In this case all dangling output tables are saved. For the
 parameters tree, columns, and file the default values ([see table
 below](#priorities)) are used.
 
-## --aod-writer-ntfmerge
+## &#8208;&#8208;aod-writer-ntfmerge
 
 aod-writer-ntfmerge specifies the number of data frames which are merged into a given root directory. By default this value is set to 1. The actual directory name is DF_y directory with y = ntfmerge * (uint64_t)(x / ntfmerge) and x the actual data frame the table belongs to.
 
-## --aod-writer-resfile
+## &#8208;&#8208;aod-writer-resfile
 
 aod-writer-resfile specifies the default name of the result file. If in any of the DataOutputDescriptor the file value is missing it will be set to this default value.
 
-## ----aod-writer-json
+## &#8208;&#8208;&#8208;&#8208;aod-writer-json
 
 --aod-writer-json specifies the name of a json-file which contains the full information needed to customize the behavior of the internal-dpl-aod-writer. It can replace the other three options completely. Nevertheless, currently all options are supported ([see also discussion below](#redundancy)).
 

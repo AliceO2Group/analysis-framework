@@ -18,7 +18,7 @@ GitHub see GitHubs specific <a
 href="https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github"
 target="_blank">documentation</a>.
 
-### Testing off-line
+## Testing off-line
 
 Be aware that changes to the repository are immediately rendered automatically. So it is recommended to test changes locally before applying them to the GitHub repository.
 
@@ -26,7 +26,7 @@ The procedure to set up the site locally is described <a
 href="https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/testing-your-github-pages-site-locally-with-jekyll"
 target="_blank">here</a>.
 
-### Organization
+## Organization
 
 The source files are organized in a directory structure as outlined below. It consists of a number of subdirectories in the main directory docs/. Each subdirectory contains a README.md and any number of documentation files.
 
@@ -64,15 +64,15 @@ title: MyTitle
 
 n determines the sequence the items appear in the menu. If n is not provided the items are sorted alphabetically. The title is displayed as item name in the menu. When adding new files don't forget to adjust the sorting information of all affected files.
 
-### Headers
+## Headers
 
 Any level of header can be used. Be aware, that it is the level 2 headers which are included in the site menu.
 
-### Links
+## Links
 
 There are two methods to provide links to local and external pages.
 
-#### Links to local files or anchors
+### Links to local files or anchors
 
 For links to local pages and anchors within local pages use the <a href="https://www.markdownguide.org/basic-syntax/#links" target="_blank">markdown syntax</a>.<br>
 
@@ -88,7 +88,7 @@ Anchors can be placed anywhere in a markdown file and are specified with
 <a name="anchorname"></a>
 ```
 
-#### Links to external sites
+### Links to external sites
 
 For links to external pages use the html syntax which can be used in html as well as markdown files with the target="_blank" attribute.
 
@@ -98,7 +98,7 @@ For links to external pages use the html syntax which can be used in html as wel
 
 In contrast to the local case this method opens the linked page in a new window (target="_blank") instead of the current one.
 
-### Highlighting text
+## Highlighting text
 
 Markdown provides several methods to highlight text.
 
@@ -120,6 +120,10 @@ warning
 
 ```danger
 danger
+```
+
+```todo
+todo
 ```
 
 ```goal

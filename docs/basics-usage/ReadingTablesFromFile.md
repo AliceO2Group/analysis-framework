@@ -10,7 +10,7 @@ The internal-dpl-aod-reader reads trees from root files and provides them as arr
 * --aod-file
 * --aod-reader-json
 
-### &#8208;&#8208;aod-file
+## &#8208;&#8208;aod-file
 
 aod-file takes a string as option value, which either is the name of the input root file or, if starting with an `@`-character, is an ASCII-file which contains a list of input files.
 
@@ -23,7 +23,7 @@ aod-file takes a string as option value, which either is the name of the input r
 
 ```
 
-#### &#8208;&#8208;aod-reader-json
+### &#8208;&#8208;aod-reader-json
 
 aod-reader-json is a string and specifies a json file, which contains the
 customization information for the internal-dpl-aod-reader. An example file is
@@ -82,7 +82,7 @@ Example json file for the internal-dpl-aod-reader
 
 When the internal-dpl-aod-reader receives the request to fill a given table tablename it searches in the provided InputDirector for the corresponding InputDescriptor and proceeds as defined there. However, if there is no corresponding InputDescripto` it falls back to the information provided by the resfiles and fileregex options of the InputDirector and uses the tablename as treename.
 
-### Some practical comments
+## Some practical comments
 
 The json-file option allows to setup the reading of tables in a rather
 flexible way. Here a few presumably practical cases are discussed:
@@ -92,44 +92,44 @@ processed together. Table tableA was previously saved as tree tableA to file
 tableAResults.root and tableB was saved as tree tableB to tableBResults.root.
 The following json-file could be used to read these tables:
 
-```csh
-{
-  # file resfiles.txt lists all tableAResults.root and tableBResults.root files.
+  ```csh
+  {
+    # file resfiles.txt lists all tableAResults.root and tableBResults.root files.
 
-  "InputDirector": {
-    "resfiles": "@resfiles.txt",
-    "InputDescriptors": [
-      {
-        "table": "AOD/tableA/0",
-        "fileregex": "(tableAResult)(.*)"
-      },
-      {
-        "table": "AOD/tableB/0",
-        "fileregex": "(tableBResult)(.*)"
-      }
-    ]
-  }
-```
+    "InputDirector": {
+      "resfiles": "@resfiles.txt",
+      "InputDescriptors": [
+        {
+          "table": "AOD/tableA/0",
+          "fileregex": "(tableAResult)(.*)"
+        },
+        {
+          "table": "AOD/tableB/0",
+          "fileregex": "(tableBResult)(.*)"
+        }
+      ]
+    }
+  ```
 
   2. In this case several tables need to be provided. All tables can be read from files tableResults_x.root, except for one table, namely tableA, which is saved as tree treeA in files tableAResults_x.root.
 
-```csh
-  # file resfiles.txt lists all tableResults_x.root and tableAResults_x.root files.
+  ```csh
+    # file resfiles.txt lists all tableResults_x.root and tableAResults_x.root files.
 
-  "InputDirector": {
-    "resfiles": "@resfiles.txt",
-    "fileregex": "(tableResult)(.*)"
-    "InputDescriptors": [
-      {
-        "table": "AOD/tableA/0",
-        "treename": "treeA",
-        "fileregex": "(tableAResult)(.*)"
-      }
-    ]
-  }
-```
+    "InputDirector": {
+      "resfiles": "@resfiles.txt",
+      "fileregex": "(tableResult)(.*)"
+      "InputDescriptors": [
+        {
+          "table": "AOD/tableA/0",
+          "treename": "treeA",
+          "fileregex": "(tableAResult)(.*)"
+        }
+      ]
+    }
+  ```
 
-### Limitations
+## Limitations
 
   1. It is required that all InputDescriptors have the same number of selected input files. This is internally checked and the processing is stopped if it turns out that this is not the case.
   2. The internal-dpl-aod-reader loops over the selected input files in the order as they are listed. It is the duty of the user to make sure that the order is correct and that the order in the file lists
@@ -138,7 +138,7 @@ of the various InputDescriptors are corresponding to each other.
 
 See also tutorial [Table IO](../tutorials/tablesIO.md).
 
-### Possible ideas
+## Possible ideas
 
 We could add a template `<typename C...> reshuffle()` method to the Table class which allows you to reduce the number of columns or attach new dynamic columns. A template wrapper could
 even be used to specify if a given dynamic column should be precalculated (or not). This would come handy to optimize the creation of a RowView, which could bind only the required (dynamic) columns. E.g.:
