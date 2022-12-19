@@ -115,11 +115,6 @@ For better overview the tables are grouped into the following categories: | [Gen
     <div>
       Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev//Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
     </div>
-    <div>Is used in:
-      <ul>
-        <li>o2::aod::Collisions = o2::aod::Collisions_000</li>
-      </ul>
-    </div>
     <table class=DataModel>
       <tr>
         <th>Name</th>
@@ -251,6 +246,11 @@ For better overview the tables are grouped into the following categories: | [Gen
     </div>
     <div>
       Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev//Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::Collisions = o2::aod::Collisions_001</li>
+      </ul>
     </div>
     <table class=DataModel>
       <tr>

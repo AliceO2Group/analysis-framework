@@ -542,6 +542,11 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
     <div>
       Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev//Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
     </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::Collisions = o2::aod::Collisions_001</li>
+      </ul>
+    </div>
     <table class=DataModel>
       <tr>
         <th>Name</th>
