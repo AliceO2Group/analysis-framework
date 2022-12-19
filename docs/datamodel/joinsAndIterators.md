@@ -31,7 +31,7 @@ Click on the labels to display the definitions. Click buttons to
   <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::Collisions</button>
   <div class="panel">
     <ul>
-        <li>o2::aod::Collisions = o2::aod::Collisions_000</li>
+        <li>o2::aod::Collisions = o2::aod::Collisions_001</li>
     </ul>
   </div>
 
