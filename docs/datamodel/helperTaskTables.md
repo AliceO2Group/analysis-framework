@@ -46,11 +46,18 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::calocluster::CollisionId</td>
+        <td>o2::aod::calocluster::BCId</td>
         <td>I</td>
-        <td>collisionId</td>
+        <td>bcId</td>
         <td>int32</td>
-        <td>Pointer into Collisions</td>
+        <td>BC index</td>
+      </tr>
+      <tr>
+        <td>o2::aod::calocluster::ColId</td>
+        <td></td>
+        <td>colId</td>
+        <td>int</td>
+        <td>collision index used to calculate momentum, -1 if no collision and def vertex used</td>
       </tr>
       <tr>
         <td>o2::aod::calocluster::Type</td>
@@ -106,14 +113,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
         <td></td>
         <td>x</td>
         <td>float</td>
-        <td>cluster global coordinates</td>
-      </tr>
-      <tr>
-        <td>o2::aod::calocluster::Y</td>
-        <td></td>
-        <td>y</td>
-        <td>float</td>
-        <td></td>
+        <td>cluster local coordinates</td>
       </tr>
       <tr>
         <td>o2::aod::calocluster::Z</td>
@@ -1998,112 +1998,35 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
         <td></td>
         <td>trackCutFlag</td>
         <td>TrackSelectionFlags::flagtype</td>
-        <td>Flag with the single cut passed flagged</td>
+        <td>Flag with the single cut passed flagged (general selection... stil being tuned)</td>
       </tr>
       <tr>
-        <td>o2::aod::track::PassedTrackType</td>
-        <td>D</td>
-        <td>passedTrackType</td>
-        <td>bool</td>
+        <td>o2::aod::track::TrackCutFlagFb1</td>
         <td></td>
+        <td>trackCutFlagFb1</td>
+        <td>bool</td>
+        <td>Flag with the single cut passed flagged for the first selection criteria (as general but 1 point in ITS IB)</td>
       </tr>
       <tr>
-        <td>o2::aod::track::PassedPtRange</td>
-        <td>D</td>
-        <td>passedPtRange</td>
-        <td>bool</td>
+        <td>o2::aod::track::TrackCutFlagFb2</td>
         <td></td>
+        <td>trackCutFlagFb2</td>
+        <td>bool</td>
+        <td>Flag with the single cut passed flagged for the second selection criteria (as general but 2 point2 in ITS IB)</td>
       </tr>
       <tr>
-        <td>o2::aod::track::PassedEtaRange</td>
-        <td>D</td>
-        <td>passedEtaRange</td>
-        <td>bool</td>
+        <td>o2::aod::track::TrackCutFlagFb3</td>
         <td></td>
+        <td>trackCutFlagFb3</td>
+        <td>bool</td>
+        <td>Flag with the single cut passed flagged for the third selection criteria (HF-like: global w/o tight DCA selection)</td>
       </tr>
       <tr>
-        <td>o2::aod::track::PassedTPCNCls</td>
-        <td>D</td>
-        <td>passedTPCNCls</td>
-        <td>bool</td>
+        <td>o2::aod::track::TrackCutFlagFb4</td>
         <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::PassedTPCCrossedRows</td>
-        <td>D</td>
-        <td>passedTPCCrossedRows</td>
+        <td>trackCutFlagFb4</td>
         <td>bool</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::PassedTPCCrossedRowsOverNCls</td>
-        <td>D</td>
-        <td>passedTPCCrossedRowsOverNCls</td>
-        <td>bool</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::PassedTPCChi2NDF</td>
-        <td>D</td>
-        <td>passedTPCChi2NDF</td>
-        <td>bool</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::PassedTPCRefit</td>
-        <td>D</td>
-        <td>passedTPCRefit</td>
-        <td>bool</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::PassedITSNCls</td>
-        <td>D</td>
-        <td>passedITSNCls</td>
-        <td>bool</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::PassedITSChi2NDF</td>
-        <td>D</td>
-        <td>passedITSChi2NDF</td>
-        <td>bool</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::PassedITSRefit</td>
-        <td>D</td>
-        <td>passedITSRefit</td>
-        <td>bool</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::PassedITSHits</td>
-        <td>D</td>
-        <td>passedITSHits</td>
-        <td>bool</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::PassedGoldenChi2</td>
-        <td>D</td>
-        <td>passedGoldenChi2</td>
-        <td>bool</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::PassedDCAxy</td>
-        <td>D</td>
-        <td>passedDCAxy</td>
-        <td>bool</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::PassedDCAz</td>
-        <td>D</td>
-        <td>passedDCAz</td>
-        <td>bool</td>
-        <td></td>
+        <td>Flag with the single cut passed flagged for the fourth selection criteria (nuclei)</td>
       </tr>
       <tr>
         <td>o2::aod::track::IsQualityTrack</td>
@@ -2142,10 +2065,148 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
       </tr>
       <tr>
         <td>o2::aod::track::IsGlobalTrackWoDCA</td>
-        <td>GI</td>
+        <td>D</td>
+        <td>isGlobalTrackWoDCA</td>
+        <td>bool</td>
         <td></td>
-        <td>?</td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::TrackSelectionExtension</button>
+  <div class="panel">
+    <div>
+       Information on the track selections set by each Filter Bit
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/DataModel/TrackSelectionTables.h" target="_blank">Common/DataModel/TrackSelectionTables.h</a>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::track::PassedTrackType</td>
         <td></td>
+        <td>passedTrackType</td>
+        <td>bool</td>
+        <td>Passed the track cut: kTrackType</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::PassedPtRange</td>
+        <td></td>
+        <td>passedPtRange</td>
+        <td>bool</td>
+        <td>Passed the track cut: kPtRange</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::PassedEtaRange</td>
+        <td></td>
+        <td>passedEtaRange</td>
+        <td>bool</td>
+        <td>Passed the track cut: kEtaRange</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::PassedTPCNCls</td>
+        <td></td>
+        <td>passedTPCNCls</td>
+        <td>bool</td>
+        <td>Passed the track cut: kTPCNCls</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::PassedTPCCrossedRows</td>
+        <td></td>
+        <td>passedTPCCrossedRows</td>
+        <td>bool</td>
+        <td>Passed the track cut: kTPCCrossedRows</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::PassedTPCCrossedRowsOverNCls</td>
+        <td></td>
+        <td>passedTPCCrossedRowsOverNCls</td>
+        <td>bool</td>
+        <td>Passed the track cut: kTPCCrossedRowsOverNCls</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::PassedTPCChi2NDF</td>
+        <td></td>
+        <td>passedTPCChi2NDF</td>
+        <td>bool</td>
+        <td>Passed the track cut: kTPCChi2NDF</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::PassedTPCRefit</td>
+        <td></td>
+        <td>passedTPCRefit</td>
+        <td>bool</td>
+        <td>Passed the track cut: kTPCRefit</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::PassedITSNCls</td>
+        <td></td>
+        <td>passedITSNCls</td>
+        <td>bool</td>
+        <td>Passed the track cut: kITSNCls</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::PassedITSChi2NDF</td>
+        <td></td>
+        <td>passedITSChi2NDF</td>
+        <td>bool</td>
+        <td>Passed the track cut: kITSChi2NDF</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::PassedITSRefit</td>
+        <td></td>
+        <td>passedITSRefit</td>
+        <td>bool</td>
+        <td>Passed the track cut: kITSRefit</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::PassedITSHits</td>
+        <td></td>
+        <td>passedITSHits</td>
+        <td>bool</td>
+        <td>Passed the track cut: kITSHits</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::PassedGoldenChi2</td>
+        <td></td>
+        <td>passedGoldenChi2</td>
+        <td>bool</td>
+        <td>Passed the track cut: kGoldenChi2</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::PassedDCAxy</td>
+        <td></td>
+        <td>passedDCAxy</td>
+        <td>bool</td>
+        <td>Passed the track cut: kDCAxy</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::PassedDCAz</td>
+        <td></td>
+        <td>passedDCAz</td>
+        <td>bool</td>
+        <td>Passed the track cut: kDCAz</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::PassedITSHitsFB1</td>
+        <td></td>
+        <td>passedITSHitsFB1</td>
+        <td>bool</td>
+        <td>Passed the track cut: kITSHits defined for FB1</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::PassedITSHitsFB2</td>
+        <td></td>
+        <td>passedITSHitsFB2</td>
+        <td>bool</td>
+        <td>Passed the track cut: kITSHits defined for FB2</td>
       </tr>
     </table>
   </div>
