@@ -13,8 +13,10 @@ A number of tasks are included in `O2Physics` at the moment and can be consulted
 
 In many analyses - not only PWG-LF exclusively - V0s and cascades are required. The new O2Physics data format stores only track index pairs or triplets for these objects, and all analysis-related properties have to be constructed from these indices. In order to take care of that centrally, `strangeness builders` are provided. They are: 
 
-* `lambdakzerobuilder`: this task takes track index pairs and constructs the analysis information related to the V0, which can then be queried conveniently from the `V0Data` table. Optionally, it can also produce V0 covariance matrices (`V0Covs`) that are particularly useful to reconstruct decay chains that involve a V0. 
-* `cascadebuilder`: this task takes track index triples and constructs the analysis information related to cascades, which can then be queried conveniently from the `CascData` table. Optionally, it can also produce V0 covariance matrices (`V0Covs`) that are particularly useful to reconstruct decay chains that involve a V0. 
+* `lambdakzerobuilder`: this task takes track index pairs and constructs the analysis information related to the V0, which can then be queried conveniently from the `V0Data` table. 
+* `cascadebuilder`: this task takes track index triples and constructs the analysis information related to cascades, which can then be queried conveniently from the `CascData` table. 
+
+Optionally, both builders can also produce covariance matrices (`V0Covs` or `CascCovs`) that are particularly useful to reconstruct decay chains that involve weakly decaying particles. 
 
 The logical elements in these two tasks are outlined in the figure below: 
 
