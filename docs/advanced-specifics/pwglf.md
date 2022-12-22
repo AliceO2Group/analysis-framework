@@ -21,7 +21,7 @@ Optionally, both builders can also produce covariance matrices (`V0Covs` or `Cas
 The logical elements in these two tasks are outlined in the figure below: 
 
 <div align="center">
-<img src="../images/strabuildersscheme.png" width="90%">
+<img src="../images/strabuildersscheme.png" width="75%">
 </div>
 
 There are three relevant devices (subtasks) inside each of the builders, each with different configurations that are of interest to the users. They are: 
@@ -32,7 +32,21 @@ There are three relevant devices (subtasks) inside each of the builders, each wi
 
 ### Topological selection autodetect in strangeness builders 
 
-(documentation being written)
+In order to make analysis more convenient and efficient, the strangeness builders have an option called `d_UseAutodetectMode` that, if enabled, will make the builders go through all user tasks set to run together with it and look for variables with the following names: 
+
+* `v0setting_cospa` (V0 builder)
+* `v0setting_dcav0dau` (V0 builder)
+* `v0setting_dcapostopv` (V0 builder)
+* `v0setting_dcanegtopv` (V0 builder)
+* `v0setting_radius` (V0 builder)
+* `cascadesetting_cospa` (cascade builder)
+* `cascadesetting_dcacascdau` (cascade builder)
+* `cascadesetting_dcabachtopv` (cascade builder)
+* `cascadesetting_cascradius` (cascade builder)
+* `cascadesetting_v0masswindow` (cascade builder)
+* `cascadesetting_mindcav0topv` (cascade builder)
+
+If found, the values of these 11 basic topological variables will then be the ones that the builders will use. If more than one task has specified desired topological selections, the builders will automatically configure for the loosest among the multiple selections requested, such that all tasks in the analysis chain get their requests adequately fulfilled. Please note that, because of this loosening in case of multiple requests, it is expected that analysis tasks also additionally select on these variables when processing data. 
 
 ## Code
 
