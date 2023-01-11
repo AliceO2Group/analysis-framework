@@ -1302,6 +1302,13 @@ Click on the labels to display the definitions. Click buttons to
     </ul>
   </div>
 
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::framework::expressions::TracksWithSel</button>
+  <div class="panel">
+    <ul>
+        <li>o2::framework::expressions::TracksWithSel = soa::Join<o2::framework::expressions::aod::BigTracksExtended, o2::framework::expressions::aod::TrackSelection></li>
+    </ul>
+  </div>
+
   <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::analysis::hf_cuts_d0_to_pi_k::Trks</button>
   <div class="panel">
     <ul>
