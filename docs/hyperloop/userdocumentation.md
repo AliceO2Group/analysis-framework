@@ -396,8 +396,7 @@ When creating or enabling wagons, you can use a pull request instead of a packag
 ```
  To now run a specific train test or Grid run, you need to create a folder and put there two files:
    * Download the `full_config.json` from the train test or Grid run
-   * Create a file `input_data.txt` in which you put the file paths of the data you want to process. You can either put the paths to files on AliEn or download the data locally and point to the local paths. Each line should contain one file. In order to take the same data as from a train test, you can check at the top of the `stdout.log` of a train test where you have the AliEn paths and also paths to download the files to your local machine.
- Now you should have a folder which contains: `full_config.json` and `input_data.txt`. You then run:
+   * Create a file `input_data.txt` in which you put the file paths of the data you want to process. You can either put the paths to files on AliEn or download the data locally and point to the local paths. Each line should contain one file. In order to take the same data as from a train test, you can check at the top of the `stdout.log` of a train test where you have the AliEn paths and also paths to download the files to your local machine. You then run:
  ```bash
  /my/path/run_train.sh --skip-perf
  ```
