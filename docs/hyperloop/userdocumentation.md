@@ -388,7 +388,7 @@ When creating or enabling wagons, you can use a pull request instead of a packag
 ## <a name="local-train"></a>Reproducing a train run on a local machine
  A train test or a Grid train run can be redone on a local machine. This is useful to understand a problem better or to just reproduce some settings of a previous train.
  In order to do so, you need two general prerequisites:
-   * Download the `run_train.sh` script from: TODO. Say this is placed in a folder `/my/path/`.
+   * Download the `run_train.sh` script from [here](https://alimonitor.cern.ch/train-workdir/run_train.sh). Say this is placed in a folder `/my/path/`.
    * Make sure `jq` is installed on your system. Type `jq` on the command prompt. If you get an error that the command was not found, you have to install it. This package is a system package on most systems (it has nothing to do with ALICE). Use Google if you need instructions for your specific operation system.
    * Now the following command should work and give reasonable output:
  ```bash
