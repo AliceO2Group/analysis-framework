@@ -21,28 +21,41 @@ A legacy support venue is the alice project analysis task force mailing list: <a
 
 Error messages of the following kind:
 
-```csh
+```text
 [ERROR] Exception caught: Couldn't get TTree "DF_2853960297589372650/O2v0dataext from ..."
 ```
 
 mean that the table `v0dataext` could not be found in the input file, nor has any other workflow produced them.
 
-If the reported table is part of the main [AO2D tables](../datamodel/ao2dTables.md) (e.g. `tracks`), then something is wrong with your input file. You can check by opening it with ROOT if the corresponding table exists in the file by navigating to the reported folder (here: `DF_2853960297589372650`).
+If the reported table is part of the main [AO2D tables](../datamodel/ao2dTables.md) (e.g. `bc`), then something is wrong with your input file.
+You can check by opening it with ROOT if the corresponding table exists in the file by navigating to the reported folder (here: `DF_2853960297589372650`).
 
-Most likely however the table which is missing has to be produced by a [helper task](../datamodel/helperTaskTables.md). You can identify the missing task by looking it up in this [page](../datamodel/helperTaskTables.md). The procedure is simple: if the error message complains about a missing table `DF_<id>/O2<table>` then you have to look for `<table>` and add the workflow which is listed to your command line.
+Most likely however the table which is missing has to be produced by a [helper task](../datamodel/helperTaskTables.md).
+You can identify the missing workflow by running the [`find_dependencies.py`](https://github.com/AliceO2Group/O2Physics/blob/master/Scripts/find_dependencies.py) script.
+The procedure is simple: If the error message complains about a missing table `DF_<id>/O2<table>` then you have to run `./Scripts/find_dependencies.py -t <table>` in the `O2Physics` repository
+while having the O2Physics environment loaded and add the correct one among the listed producer workflows to your command line.
 
-Example: imagine the missing table is `DF_2853960297589372650/O2timestamp`, then you have to look up `timestamp` where you find the executable `o2-analysis-timestamp`. You now execute:
+Example: If the missing table is `DF_2853960297589372650/O2timestamps`, then you have to look up `timestamps`:
 
-```csh
+```text
+[O2Physics/latest] ~/alice/O2Physics $> ./Scripts/find_dependencies.py -t timestamps
+
+Table: timestamps
+
+timestamps <- ['o2-analysis-timestamp']
+```
+
+You find that the missing workflow is `o2-analysis-timestamp` and you add it to your command:
+
+```bash
 o2-analysis-timestamp | o2-analysis-my-analysis ...
 ```
 
 and the table should be found.
 
-If you run on Run 3 data or MC and the missing table is "O2tracks", please refer to the documentation on the [track propagation](../basics-usage/HelperTasks.md#track-propagation).
+#### Special cases
 
-If you are running on Run 3 data or MC and the missing table is "O2fv0c", please make sure that the process switches in the bc-selection, event-selection and multiplicity-table workflows are set to `"processRun2": "false", "processRun3": "true"` in your config JSON; see e.g. the "Configurables" section in the [event selection](../basics-usage/HelperTasks.md#event-selection) documentation.
-
-If the misssing table is `O2tofsignal`, please refer to the documentation on the [TOF PID](../basics-usage/HelperTasks.md#particle-identification) requirements.
-
-If the missing table is `O2collision_001`, please remember to add the `o2-analysis-collision-converter`. 
+- Missing `track`: If you are running on Run 3 data or MC, please refer to the documentation on the [track propagation](../basics-usage/HelperTasks.md#track-propagation).
+- Missing `fv0c`: If you are running on Run 3 data or MC, please make sure that the process switches in the `bc-selection`, `event-selection` and `multiplicity-table` workflows are set to `"processRun2": "false", "processRun3": "true"` in your config JSON; see e.g. the `Configurables` section in the [event selection](../basics-usage/HelperTasks.md#event-selection) documentation.
+- Missing `tofsignal`: Please refer to the documentation on the [TOF PID](../basics-usage/HelperTasks.md#particle-identification) requirements.
+- Missing `collision_001`: Please add the `o2-analysis-collision-converter`.
