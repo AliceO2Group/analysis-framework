@@ -593,19 +593,19 @@ o2-analysis-trackselection | o2-analysis-qa-event-track | ...
 
 At the moment there are two 'FilterBits' available in the TrackSelection table, which are defined as follows:
 
- | Cuts                                                 | globalTrack                                  | globalTrackSDD                               |
- |------------------------------------------------------|----------------------------------------------|----------------------------------------------|
- | min number of crossed rows TPC                       | 70                                           | 70                                           |
- | min ratio of crossed rows over findable clusters TPC | 0.8                                          | 0.8                                          |
- | max chi2 per cluster TPC                             | 4.0                                          | 4.0                                          |
- | max chi2 per cluster ITS                             | 36.0                                         | 36.0                                         |
- | require TPC refit                                    | true                                         | true                                         |
- | require ITS refit                                    | true                                         | true                                         |
- | max DCA to vertex z                                  | 2.0                                          | 2.0                                          |
- | max DCA to vertex xy                                 | 0.0105 * 0.035 / p<sub>T</sub><sup>1.1</sup> | 0.0105 * 0.035 / p<sub>T</sub><sup>1.1</sup> |
- | cluster requirement ITS                              | at least one hit in SPD (*)                  | no hit in SPD and hit in first SDD layer     |
- | p<sub>T</sub> range                                  | 0.1 - 1e10                                   | 0.1 - 1e10                                   |
- | &eta; range                                          | -0.8 - 0.8                                   | -0.8 - 0.8                                   |
+ | Cuts                                                 | globalTrack                                                            | globalTrackSDD                               |
+ |------------------------------------------------------|------------------------------------------------------------------------|----------------------------------------------|
+ | min number of crossed rows TPC                       | 70                                                                     | 70                                           |
+ | min ratio of crossed rows over findable clusters TPC | 0.8                                                                    | 0.8                                          |
+ | max chi2 per cluster TPC                             | 4.0                                                                    | 4.0                                          |
+ | max chi2 per cluster ITS                             | 36.0                                                                   | 36.0                                         |
+ | require TPC refit                                    | true                                                                   | true                                         |
+ | require ITS refit                                    | true                                                                   | true                                         |
+ | max DCA to vertex z                                  | 2.0                                                                    | 2.0                                          |
+ | max DCA to vertex xy                                 | 0.0105 * 0.035 / p<sub>T</sub><sup>1.1</sup>                           | 0.0105 * 0.035 / p<sub>T</sub><sup>1.1</sup> |
+ | cluster requirement ITS                              | Run 2 (Run 3): at least one hit in SPD (in 3 innermost ITS layers) [*] | no hit in SPD and hit in first SDD layer     |
+ | p<sub>T</sub> range                                  | 0.1 - 1e10                                                             | 0.1 - 1e10                                   |
+ | &eta; range                                          | -0.8 - 0.8                                                             | -0.8 - 0.8                                   |
 
 The goal of the track selection task is to provide the most common selections for all analyses.
 If you really require a completely different set of tracks not covered by the standard filter bits, you can create your own TrackSelection object (see [`TrackSelection.h`](https://github.com/AliceO2Group/AliceO2/blob/dev/Analysis/Core/include/Analysis/TrackSelection.h) and [`TrackSelectionTables.cxx`](https://github.com/AliceO2Group/AliceO2/blob/dev/Analysis/Core/src/TrackSelection.cxx)) :
@@ -647,13 +647,15 @@ mySelection = myTrackSelection();
 // in process()
 bool isSelected = mySelection.IsSelected(track)
 ```
+```note
+[*] The default set of global-track selections requires at least 1 hit between the two innermost ITS layers (function `getGlobalTrackSelection` in [`TrackSelectionDefaults.h`](https://github.com/AliceO2Group/O2Physics/blob/master/Common/Core/TrackSelectionDefaults.h)). This is a Run 1, 2 refuse when the SPD was equipped, and currently this is enabled only for analyses on Run2 converted data (`isRun3 == false`).
+The same set of global-track selections, but with different ITS requirements are available in [`trackselection.cxx`](https://github.com/AliceO2Group/O2Physics/blob/master/Common/TableProducer/trackselection.cxx). This is possible thanks to the `getGlobalTrackSelectionITSMatch` in [`TrackSelectionDefaults.h`](https://github.com/AliceO2Group/O2Physics/blob/master/Common/Core/TrackSelectionDefaults.h), which can be enabled with different ITS requirements via the integer configurable `itsMatching` in [`trackselection.cxx`](https://github.com/AliceO2Group/O2Physics/blob/master/Common/TableProducer/trackselection.cxx). The available configurations are the following:
 
-(*) The default set of global-track selections requires at least 1 hit between the two innermost ITS layers (function `getGlobalTrackSelection` in [`TrackSelectionDefaults.h`](https://github.com/AliceO2Group/O2Physics/blob/master/Common/Core/TrackSelectionDefaults.h)). This is a Run 1, 2 refuse when the SPD was equipped. The same set of global-track selections, but with different ITS requirements are available in [`trackselection.cxx`](https://github.com/AliceO2Group/O2Physics/blob/master/Common/TableProducer/trackselection.cxx). This is possible thanks to the `getGlobalTrackSelectionITSMatch` in [`TrackSelectionDefaults.h`](https://github.com/AliceO2Group/O2Physics/blob/master/Common/Core/TrackSelectionDefaults.h), which can be enabled with different ITS requirements via the integer configurable `itsMatching` in [`trackselection.cxx`](https://github.com/AliceO2Group/O2Physics/blob/master/Common/TableProducer/trackselection.cxx). The available configurations are the following:
-
-* `itsMatching == 0`: at least one hit between the two innermost ITS layers (default);
-* `itsMatching == 1`: at least one hit among the three innermost ITS layers (`Run3ITSibAny`);
+* `itsMatching == 0`: at least one hit between the two innermost ITS layers (default for `isRun3 == false`);
+* `itsMatching == 1`: at least one hit among the three innermost ITS layers (`Run3ITSibAny`, default for `isRun3 == true`);
 * `itsMatching == 2`: at least one hit among all the ITS layers (`Run3ITSallAny`);
 * `itsMatching == 3`: one hit on all the ITS layers (`Run3ITSall7Layers`);
+```
 
 ### Remarks
 
