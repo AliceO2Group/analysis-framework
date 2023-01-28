@@ -123,6 +123,27 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
         <td></td>
       </tr>
       <tr>
+        <td>o2::aod::calocluster::GlobalX</td>
+        <td></td>
+        <td>globalx</td>
+        <td>float</td>
+        <td>cluster global coordinates</td>
+      </tr>
+      <tr>
+        <td>o2::aod::calocluster::GlobalY</td>
+        <td></td>
+        <td>globaly</td>
+        <td>float</td>
+        <td>cluster global coordinates</td>
+      </tr>
+      <tr>
+        <td>o2::aod::calocluster::GlobalZ</td>
+        <td></td>
+        <td>globalz</td>
+        <td>float</td>
+        <td>cluster global coordinates</td>
+      </tr>
+      <tr>
         <td>o2::aod::calocluster::Time</td>
         <td></td>
         <td>time</td>
@@ -141,14 +162,14 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
         <td></td>
         <td>m02</td>
         <td>float</td>
-        <td>smaller dispersion axis</td>
+        <td>longer dispersion axis</td>
       </tr>
       <tr>
         <td>o2::aod::calocluster::M20</td>
         <td></td>
         <td>m20</td>
         <td>float</td>
-        <td>larger dispersion axis</td>
+        <td>shorter dispersion axis</td>
       </tr>
       <tr>
         <td>o2::aod::calocluster::TrackDist</td>
