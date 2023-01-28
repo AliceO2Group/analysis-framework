@@ -1293,7 +1293,7 @@ For better overview the tables are grouped into the following categories: | [Gen
         <td></td>
         <td>trdPattern</td>
         <td>uint8_t</td>
-        <td>Contributor to the track on TRD layer in bits 0-5, starting from the innermost</td>
+        <td>Contributor to the track on TRD layer in bits 0-5, starting from the innermost, bit 6 indicates a potentially split tracklet, bit 7 if the track crossed a padrow</td>
       </tr>
       <tr>
         <td>o2::aod::track::ITSChi2NCl</td>
@@ -1335,7 +1335,7 @@ For better overview the tables are grouped into the following categories: | [Gen
         <td></td>
         <td>trdSignal</td>
         <td>float</td>
-        <td>dE/dx signal in the TRD</td>
+        <td>PID signal in the TRD</td>
       </tr>
       <tr>
         <td>o2::aod::track::Length</td>
@@ -2072,7 +2072,7 @@ For better overview the tables are grouped into the following categories: | [Gen
         <td></td>
         <td>trdPattern</td>
         <td>uint8_t</td>
-        <td>Contributor to the track on TRD layer in bits 0-5, starting from the innermost</td>
+        <td>Contributor to the track on TRD layer in bits 0-5, starting from the innermost, bit 6 indicates a potentially split tracklet, bit 7 if the track crossed a padrow</td>
       </tr>
       <tr>
         <td>o2::aod::track::ITSChi2NCl</td>
@@ -2114,7 +2114,7 @@ For better overview the tables are grouped into the following categories: | [Gen
         <td></td>
         <td>trdSignal</td>
         <td>float</td>
-        <td>dE/dx signal in the TRD</td>
+        <td>PID signal in the TRD</td>
       </tr>
       <tr>
         <td>o2::aod::track::Length</td>
