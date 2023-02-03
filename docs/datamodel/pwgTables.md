@@ -706,6 +706,83 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGDQ
         <td>float</td>
         <td>Run2 Centrality percentile estimated from V0C+V0A multiplicities</td>
       </tr>
+      <tr>
+        <td>o2::aod::mult::MultTPC</td>
+        <td></td>
+        <td>multTPC</td>
+        <td>int</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::mult::MultFV0A</td>
+        <td></td>
+        <td>multFV0A</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::mult::MultFV0C</td>
+        <td></td>
+        <td>multFV0C</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::mult::MultFT0A</td>
+        <td></td>
+        <td>multFT0A</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::mult::MultFT0C</td>
+        <td></td>
+        <td>multFT0C</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::mult::MultFDDA</td>
+        <td></td>
+        <td>multFDDA</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::mult::MultFDDC</td>
+        <td></td>
+        <td>multFDDC</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::mult::MultZNA</td>
+        <td></td>
+        <td>multZNA</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::mult::MultZNC</td>
+        <td></td>
+        <td>multZNC</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::mult::MultTracklets</td>
+        <td></td>
+        <td>multTracklets</td>
+        <td>int</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::cent::CentFT0C</td>
+        <td></td>
+        <td>centFT0C</td>
+        <td>float</td>
+        <td>Run3 centrality percentile estimated from FT0C multiplicity</td>
+      </tr>
     </table>
   </div>
 
@@ -1875,6 +1952,83 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGDQ
         <td>centRun2V0M</td>
         <td>float</td>
         <td>Run2 Centrality percentile estimated from V0C+V0A multiplicities</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mult::MultTPC</td>
+        <td></td>
+        <td>multTPC</td>
+        <td>int</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::mult::MultFV0A</td>
+        <td></td>
+        <td>multFV0A</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::mult::MultFV0C</td>
+        <td></td>
+        <td>multFV0C</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::mult::MultFT0A</td>
+        <td></td>
+        <td>multFT0A</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::mult::MultFT0C</td>
+        <td></td>
+        <td>multFT0C</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::mult::MultFDDA</td>
+        <td></td>
+        <td>multFDDA</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::mult::MultFDDC</td>
+        <td></td>
+        <td>multFDDC</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::mult::MultZNA</td>
+        <td></td>
+        <td>multZNA</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::mult::MultZNC</td>
+        <td></td>
+        <td>multZNC</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::mult::MultTracklets</td>
+        <td></td>
+        <td>multTracklets</td>
+        <td>int</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::cent::CentFT0C</td>
+        <td></td>
+        <td>centFT0C</td>
+        <td>float</td>
+        <td>Run3 centrality percentile estimated from FT0C multiplicity</td>
       </tr>
     </table>
   </div>
