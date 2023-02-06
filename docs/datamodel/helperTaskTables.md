@@ -1995,6 +1995,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
     </div>
     <div>Is used in:
       <ul>
+        <li>o2::aod::TracksWithSel = soa::Join<o2::aod::Tracks, o2::aod::TracksExtra, o2::aod::TrackSelection></li>
         <li>o2::aod::hf_cand_omegac::MyTracks = soa::Join<o2::aod::BigTracks, o2::aod::TracksDCA, o2::aod::TrackSelection></li>
         <li>o2::aod::hf_sel_omegac::MyTrackInfo = soa::Join<o2::aod::BigTracksPIDExtended, o2::aod::TrackSelection></li>
       </ul>

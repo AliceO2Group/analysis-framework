@@ -398,6 +398,7 @@ For better overview the tables are grouped into the following categories: | [Gen
         <li>o2::aod::FullTracks = soa::Join<o2::aod::Tracks, o2::aod::TracksExtra></li>
         <li>o2::aod::FullTrack = soa::Join<o2::aod::Tracks, o2::aod::TracksExtra>::iterator</li>
         <li>o2::aod::BigTracks = soa::Join<o2::aod::Tracks, o2::aod::TracksCov, o2::aod::TracksExtra></li>
+        <li>o2::aod::TracksWithSel = soa::Join<o2::aod::Tracks, o2::aod::TracksExtra, o2::aod::TrackSelection></li>
       </ul>
     </div>
     <table class=DataModel>
@@ -1229,6 +1230,7 @@ For better overview the tables are grouped into the following categories: | [Gen
         <li>o2::aod::FullTracks = soa::Join<o2::aod::Tracks, o2::aod::TracksExtra></li>
         <li>o2::aod::FullTrack = soa::Join<o2::aod::Tracks, o2::aod::TracksExtra>::iterator</li>
         <li>o2::aod::BigTracks = soa::Join<o2::aod::Tracks, o2::aod::TracksCov, o2::aod::TracksExtra></li>
+        <li>o2::aod::TracksWithSel = soa::Join<o2::aod::Tracks, o2::aod::TracksExtra, o2::aod::TrackSelection></li>
       </ul>
     </div>
     <table class=DataModel>
