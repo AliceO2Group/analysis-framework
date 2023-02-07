@@ -610,11 +610,11 @@ At the moment there are two 'FilterBits' available in the TrackSelection table, 
 ```note
 [*]
 
-_RUN2 data/MC analyses_
+_RUN2 data/MC analyses_ (`isRun3 == false`)
 The default set of global-track selections requires at least 1 hit between the two innermost ITS layers (function `getGlobalTrackSelection` in [`TrackSelectionDefaults.h`](https://github.com/AliceO2Group/O2Physics/blob/master/Common/Core/TrackSelectionDefaults.h)).
 This is a Run 1, 2 refuse when the SPD was equipped, and currently this is enabled ONLY for analyses on Run2 converted data (`isRun3 == false`).
 
-_RUN3 data/MC analyses_
+_RUN3 data/MC analyses_ (`isRun3 == true`)
 The same set of global-track selections, but with different ITS requirements for Run3 data are available in [`trackselection.cxx`](https://github.com/AliceO2Group/O2Physics/blob/master/Common/TableProducer/trackselection.cxx). This is possible thanks to the `getGlobalTrackSelectionITSMatch` in [`TrackSelectionDefaults.h`](https://github.com/AliceO2Group/O2Physics/blob/master/Common/Core/TrackSelectionDefaults.h), which can be enabled with different ITS requirements via the integer configurable `itsMatching` in [`trackselection.cxx`](https://github.com/AliceO2Group/O2Physics/blob/master/Common/TableProducer/trackselection.cxx). The available configurations are the following:
 
 * `itsMatching == 0`: at least one hit between the two innermost ITS layers (default for `isRun3 == false`).
