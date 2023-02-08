@@ -607,6 +607,23 @@ At the moment there are two 'FilterBits' available in the TrackSelection table, 
  | p<sub>T</sub> range                                  | 0.1 - 1e10                                                             | 0.1 - 1e10                                   |
  | &eta; range                                          | -0.8 - 0.8                                                             | -0.8 - 0.8                                   |
 
+```note
+[*]
+
+_RUN2 data/MC analyses_ (`isRun3 == false`)
+The default set of global-track selections requires at least 1 hit between the two innermost ITS layers (function `getGlobalTrackSelection` in [`TrackSelectionDefaults.h`](https://github.com/AliceO2Group/O2Physics/blob/master/Common/Core/TrackSelectionDefaults.h)).
+This is a Run 1, 2 refuse when the SPD was equipped, and currently this is enabled ONLY for analyses on Run2 converted data (`isRun3 == false`).
+
+_RUN3 data/MC analyses_ (`isRun3 == true`)
+The same set of global-track selections, but with different ITS requirements for Run3 data are available in [`trackselection.cxx`](https://github.com/AliceO2Group/O2Physics/blob/master/Common/TableProducer/trackselection.cxx). This is possible thanks to the `getGlobalTrackSelectionITSMatch` in [`TrackSelectionDefaults.h`](https://github.com/AliceO2Group/O2Physics/blob/master/Common/Core/TrackSelectionDefaults.h), which can be enabled with different ITS requirements via the integer configurable `itsMatching` in [`trackselection.cxx`](https://github.com/AliceO2Group/O2Physics/blob/master/Common/TableProducer/trackselection.cxx). The available configurations are the following:
+
+* `itsMatching == 0`: at least one hit between the two innermost ITS layers (default for `isRun3 == false`).
+                      IMPORTANT: in case `isRun3 == true`, then `itsMatching == 0` enables `itsMatching == 1` automatically (a WARNING is dumped at runtime);
+* `itsMatching == 1`: at least one hit among the three innermost ITS layers (`Run3ITSibAny`, default for `isRun3 == true`);
+* `itsMatching == 2`: at least one hit among all the ITS layers (`Run3ITSallAny`);
+* `itsMatching == 3`: one hit on all the ITS layers (`Run3ITSall7Layers`);
+```
+
 The goal of the track selection task is to provide the most common selections for all analyses.
 If you really require a completely different set of tracks not covered by the standard filter bits, you can create your own TrackSelection object (see [`TrackSelection.h`](https://github.com/AliceO2Group/AliceO2/blob/dev/Analysis/Core/include/Analysis/TrackSelection.h) and [`TrackSelectionTables.cxx`](https://github.com/AliceO2Group/AliceO2/blob/dev/Analysis/Core/src/TrackSelection.cxx)) :
 
@@ -646,15 +663,6 @@ mySelection = myTrackSelection();
 
 // in process()
 bool isSelected = mySelection.IsSelected(track)
-```
-```note
-[*] The default set of global-track selections requires at least 1 hit between the two innermost ITS layers (function `getGlobalTrackSelection` in [`TrackSelectionDefaults.h`](https://github.com/AliceO2Group/O2Physics/blob/master/Common/Core/TrackSelectionDefaults.h)). This is a Run 1, 2 refuse when the SPD was equipped, and currently this is enabled only for analyses on Run2 converted data (`isRun3 == false`).
-The same set of global-track selections, but with different ITS requirements are available in [`trackselection.cxx`](https://github.com/AliceO2Group/O2Physics/blob/master/Common/TableProducer/trackselection.cxx). This is possible thanks to the `getGlobalTrackSelectionITSMatch` in [`TrackSelectionDefaults.h`](https://github.com/AliceO2Group/O2Physics/blob/master/Common/Core/TrackSelectionDefaults.h), which can be enabled with different ITS requirements via the integer configurable `itsMatching` in [`trackselection.cxx`](https://github.com/AliceO2Group/O2Physics/blob/master/Common/TableProducer/trackselection.cxx). The available configurations are the following:
-
-* `itsMatching == 0`: at least one hit between the two innermost ITS layers (default for `isRun3 == false`);
-* `itsMatching == 1`: at least one hit among the three innermost ITS layers (`Run3ITSibAny`, default for `isRun3 == true`);
-* `itsMatching == 2`: at least one hit among all the ITS layers (`Run3ITSallAny`);
-* `itsMatching == 3`: one hit on all the ITS layers (`Run3ITSall7Layers`);
 ```
 
 ### Remarks
