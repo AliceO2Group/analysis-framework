@@ -9977,27 +9977,6 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <td>int</td>
         <td></td>
       </tr>
-      <tr>
-        <td>o2::aod::hf_sel_track::PxProng</td>
-        <td></td>
-        <td>pxProng</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::hf_sel_track::PyProng</td>
-        <td></td>
-        <td>pyProng</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::hf_sel_track::PzProng</td>
-        <td></td>
-        <td>pzProng</td>
-        <td>float</td>
-        <td></td>
-      </tr>
     </table>
   </div>
 
@@ -10126,6 +10105,13 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <td></td>
       </tr>
       <tr>
+        <td>o2::aod::hf_track_association::CollisionId</td>
+        <td>I</td>
+        <td>collisionId</td>
+        <td>int32</td>
+        <td>Collision index</td>
+      </tr>
+      <tr>
         <td>o2::aod::hf_track_index::Prong0Id</td>
         <td>I</td>
         <td>prong0Id</td>
@@ -10178,6 +10164,13 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <td></td>
       </tr>
       <tr>
+        <td>o2::aod::hf_track_association::CollisionId</td>
+        <td>I</td>
+        <td>collisionId</td>
+        <td>int32</td>
+        <td>Collision index</td>
+      </tr>
+      <tr>
         <td>o2::aod::hf_track_index::Prong0Id</td>
         <td>I</td>
         <td>prong0Id</td>
@@ -10223,6 +10216,13 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <td></td>
       </tr>
       <tr>
+        <td>o2::aod::hf_track_association::CollisionId</td>
+        <td>I</td>
+        <td>collisionId</td>
+        <td>int32</td>
+        <td>Collision index</td>
+      </tr>
+      <tr>
         <td>o2::aod::hf_track_index::Prong0Id</td>
         <td>I</td>
         <td>prong0Id</td>
@@ -10249,6 +10249,103 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <td>hfflag</td>
         <td>uint8_t</td>
         <td></td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::HfCascLf2Prongs</button>
+  <div class="panel">
+    <div>
+       Table for HF 2 prong candidates with a Cascade
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/DataModel/CandidateReconstructionTables.h" target="_blank">PWGHF/DataModel/CandidateReconstructionTables.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::HfCascLf2Prong = o2::aod::HfCascLf2Prongs::iterator</li>
+      </ul>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::soa::Index</td>
+        <td>GI</td>
+        <td>globalIndex</td>
+        <td>int64_t</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_track_index::CascadeId</td>
+        <td>I</td>
+        <td>cascadeId</td>
+        <td>int32</td>
+        <td>Index to cascade prong</td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_track_index::Prong0Id</td>
+        <td>I</td>
+        <td>prong0Id</td>
+        <td>int</td>
+        <td>Index to first prong</td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::HfCascLf3Prongs</button>
+  <div class="panel">
+    <div>
+       Table for HF 3 prong candidates with a Cascade
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/DataModel/CandidateReconstructionTables.h" target="_blank">PWGHF/DataModel/CandidateReconstructionTables.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::HfCascLf3Prong = o2::aod::HfCascLf3Prongs::iterator</li>
+      </ul>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::soa::Index</td>
+        <td>GI</td>
+        <td>globalIndex</td>
+        <td>int64_t</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_track_index::CascadeId</td>
+        <td>I</td>
+        <td>cascadeId</td>
+        <td>int32</td>
+        <td>Index to cascade prong</td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_track_index::Prong0Id</td>
+        <td>I</td>
+        <td>prong0Id</td>
+        <td>int</td>
+        <td>Index to first prong</td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_track_index::Prong1Id</td>
+        <td>I</td>
+        <td>prong1Id</td>
+        <td>int</td>
+        <td>Index to second prong</td>
       </tr>
     </table>
   </div>
@@ -10500,6 +10597,71 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <td>pvRefitSigmaZ2</td>
         <td>float</td>
         <td></td>
+      </tr>
+    </table>
+  </div>
+
+</div>
+
+####  o2-analysis-hf-track-to-collision-associator
+Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer//trackToCollisionAssociator.cxx" target="_blank">trackToCollisionAssociator.cxx</a>
+<div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::HfTrackAssoc</button>
+  <div class="panel">
+    <div>
+       Table for track-to-collision association for HF vertex finding - tracks can appear for several collisions
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/DataModel/CandidateReconstructionTables.h" target="_blank">PWGHF/DataModel/CandidateReconstructionTables.h</a>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_track_association::CollisionId</td>
+        <td>I</td>
+        <td>collisionId</td>
+        <td>int32</td>
+        <td>Collision index</td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_track_association::TrackId</td>
+        <td>I</td>
+        <td>trackId</td>
+        <td>int32</td>
+        <td>Track index</td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::HfTrackAssocExtra</button>
+  <div class="panel">
+    <div>
+
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/DataModel/CandidateReconstructionTables.h" target="_blank">PWGHF/DataModel/CandidateReconstructionTables.h</a>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_track_association::TrackType</td>
+        <td></td>
+        <td>trackType</td>
+        <td>int8_t</td>
+        <td>Track type</td>
       </tr>
     </table>
   </div>
