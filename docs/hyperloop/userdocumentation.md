@@ -94,8 +94,17 @@ You can get to the _All Analyses_ page by using the main menu, or by the link in
 
 ## <a name="wagon-derived-data"></a> Derived data 
 
-* <a name="wagonderived"></a>In _Derived Data_ the tables which are produced by the task are displayed. If activated, these are saved to the output if the train is run as a derived data production. The produced derived data can be made available by the operators and serve as input for subsequent trains. Note that derived data train do not submit automatically and may need additional approval. If in doubt, please seek advise before enabling derived data tables in your wagon configuration.
-
+* <a name="wagonderived"></a>In _Derived Data_ the tables which are produced by the task are displayed. If activated, these are saved to the output if the train is run as a derived data production. The produced derived data can be made available by the operators and serve as input for subsequent trains. 
+ 
+### <a name="deriveddatatypes"></a> Derived data types
+* At the moment, there are two types of derived data specifications:
+  * Standard derived data (marked with 🗂️)- if the wagon is used in a train, this will produce derived data to be used for further analysis. The results will not be merged across runs and can be used as input for future train runs. Note that standard derived data trains do not submit automatically and may need additional approval. If in doubt, please seek advise before enabling derived data tables in your wagon configuration.
+  * Slim derived data (marked with green bordered 🗂️) - similarly to the standard derived data case, if used in a train, this will produce derived data to be used for further analysis. This is reserved for derived data of small output size. The results will be merged across runs and are not available to use in future train runs. The data will be automatically deleted after a preset period of time. You can mark a wagon for running as slim derived data by checking `Ready for slim derived data`.
+ 
+* For wagons set as ready for slim derived data, two more fields need to be correctly set:
+  * Max DF size - This sets the maximal dataframe size in the merging step. Has to be 0 for not-self contained derived data (which need parent file access).
+  * Max derived file size - Sets the size limit for the output file size of the derived data file. This is an expert parameter which usually does not have to be changed. Only change this value if the processing in subsequent trains takes so long that the jobs fail. If set to 0 a good value will be automatically determined.
+ 
 * In order to update the derived data configuration with the latest version of the workflow, click on the button `↻ sync` in _Derived data_. By synchronizing the derived data, the tables which no longer belong to the workflow will be removed, and the values of the tables will be updated.
 
 <div align="center">
@@ -268,7 +277,7 @@ When creating or enabling wagons, you can use a pull request instead of a packag
 
 ## <a name="train-runs"></a>Train Runs
 
-* For a user, the [**Train Runs**](https://alimonitor.cern.ch/hyperloop/train-runs) page displays a read view only of all train runs available in the system.
+* For a user, the [**Train Runs**](https://alimonitor.cern.ch/hyperloop/train-runs) page displays a read view only of all train runs available in the system. The derived data column shows if a train is an analysis train (empty), standard derived data train (🗂️) or slim derived data train (green bordered 🗂️). The difference between standard and slim derived data trains is explained [above](#deriveddatatypes).
 
 * <a name="train-comparison"></a>To compare two trains, select them in the Compare column and click Compare. This will open a new tab displaying the differences between the two trains.
 
