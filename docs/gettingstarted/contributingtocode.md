@@ -1,5 +1,5 @@
 ---
-sort: 4
+sort: 5
 title: Contributing to the repository
 ---
 # Contributing to the repository
