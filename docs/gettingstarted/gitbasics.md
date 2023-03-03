@@ -47,3 +47,13 @@ Selected sections:
 - [Git cheat sheet \| Atlassian Git Tutorial](https://www.atlassian.com/git/tutorials/atlassian-git-cheatsheet)
 - [git - the simple guide](https://rogerdudler.github.io/git-guide/)
 - [Oh Shit, Git!?!](https://ohshitgit.com/)
+
+## Tips
+
+### Tools
+
+[Visual Studio Code (VS Code)](https://code.visualstudio.com/) – Integrated development environment
+
+[Meld](https://meldmerge.org/) – Visual diff and merge tool that can be used with Git commands `git difftool` and `git mergetool`
+
+[Tig](https://jonas.github.io/tig/) – Git repository browser
