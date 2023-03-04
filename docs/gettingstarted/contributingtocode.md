@@ -26,7 +26,7 @@ In order to contribute new code to the central repository, please follow these s
   - Add the workflow compilation instructions in the `CMakeLists.txt` (you can clone one of the existing `o2physics_add_dpl_workflow` blocks).
     Follow the `kebab-case` naming convention of the executables (i.e. lowercase words separated by hyphens).
 - [Compile O2Physics](installing.md#building-partially-for-development-using-ninja) with your changes.
-  - In case you added a new workflow, the newly created executable will have the name you specified on the `o2physics_add_dpl_workflow` line prefixed with `o2-analysis-<xx>-`, where `<xx>` corresponds to the `PWG<XX>` folder your file is in.
+  - In case you added a new workflow, the newly created executable will have the name you specified on the `o2physics_add_dpl_workflow` line, prefixed with `o2-analysis-<xx>-`, where `<xx>` corresponds to the `PWG<XX>` folder your file is in.
 - Test your code.
 - Commit your changes and push them to your remote fork repository on GitHub.
 - [Create a pull request (PR)](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request-from-a-fork)
@@ -60,9 +60,9 @@ __Keep pull requests small and focused.__
 __Give your pull request a short and meaningful title.__
 
 - The title should be informative enough to give an idea of _what_ was changed and _where_.
-- Further details (e.g. _why_ this change is needed, related links) can be provided in the description below the title.
+- Further details (e.g. _why_ this change is needed or related links) can be provided in the description below the title.
 - It is useful to put the PWG name at the beginning of the PR title to specify the scope of the changes, which makes it easier to filter PRs related to the PWG in the PR history and also in the commit history of the main branch.
-- Examples of bad titles: "Test", "Fix bug", "Add new parameter", "Update cuts", "Improve code".
+- Examples of too vague titles: "Test", "Fix bug", "Add new parameter", "Update cuts", "Improve code".
 
 ### Automatic checks
 
@@ -73,7 +73,7 @@ PRs from first-time contributors (who have not authored any commit in the reposi
 If a check fails, you can click on "Details" to see more information about the errors in the log of the test.
 
 If the clang-format check (or a formatting linter in MegaLinter) fails, an automatic PR with the formatting fixes is opened in your fork and a notification email is sent to you.
-You have to merge this formatting PR so that your branch (and your opened PR) gets updated.
+You have to merge this formatting PR to update your branch (and your opened PR).
 
 ```note
 This means that _you do not have to format your (C++ and Python) code_, as the automatic formatting check does that for you.
