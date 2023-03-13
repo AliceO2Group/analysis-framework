@@ -269,7 +269,81 @@ When creating or enabling wagons, you can use a pull request instead of a packag
 
 1. [Adding a new wagon](#addwagon): You can create a wagon with your unmerged or unreleased workflow. If the workflow is not available, add manually the configuration of the wagon, and subwagons if needed. You can synchronize the wagon's configuration once the package tag that includes your pull request has been released.
 2. [Enabling a wagon in a dataset](#enabling-a-wagon): If you need to enable your wagon with workflow that is unmerged or unreleased, use a `Future tag based on pull request`. There is a list of the latest merged and unmerged pull requests available in the system, you can see the pull request number and description. Select the _pull request tag_ and enable the wagon in a dataset. By doing this, the wagon will be queued to test, and the test will begin once the _pull request_ has been merged to a package tag, and the package tag is released. And then, if the test is successful, it'll be composed in a train with the latest package tag available.
+ 
+## <a name="warnings"></a> Warnings
+ 
+When a wagon test finishes in warning, this means that the wagon will not be included in the automatic composition schedule. Therefore, train composition can be requested in the Operation channel, where an operator will take care of the request. Depending on the nature of the warning and the degree of exceeding specific constraints, the operator will either compose your train or advise you to review and improve certain parts before requesting a train again. In the latter case, the user can analyze the test and review the logs, searching for ways of improving resource usage or other elements that caused the exceptions.
+ 
+ There are a number of warnings, which will require different courses of action:
+ 
+ ### 1. <a name="warning-memory"></a> Memory consumption too large for automatic train submission
+ 
+ <div align="center">
+    <img src="../images/warnignMemory.png" width="40%">
+ </div>
+ 
+ * The memory consumption is larger than the allowed memory on the current target queue (e.g. Grid - Single core). 
+ * For Grid - Single core and 2 core: If the average PSS memory is not significantly larger ( <=  3.2 GB ), then operators will compose your train on request on Grid - Single core. Otherwise, if it is > 3.2 GB and <= 5 GB, the operators will compose the train on request on Grid - 2 core. If larger than 5 GB, then the train cannot be composed. The user should check for ways of improving memory consumption.
+ * For the other target queues, trains can only be composed if the memory consumption is within the target limits.
+ * For the cases when the train cannot be composed due to high memory consumption, the user can review the test. One can check the logs and look for any possible improvements that can be done for a lower memory consumption.
+ 
+ ### 2. <a name="warning-pss"></a> Maximal PSS more than 30% larger than average PSS
+ 
+  <div align="center">
+    <img src="../images/warningPSS.png" width="40%">
+  </div>
+ 
+ * The maximum PSS memory consumption is larger than 30% of the average PSS, therefore the train cannot be automatically composed. The test will be checked by the operator and, if there is no memory leak, the train can be composed. Otherwise, they will advise the user to check for possible causes and improvements before requesting again.
 
+ ### 3. <a name="warning-cpu"></a> CPU usage too large
+ 
+  <div align="center">
+    <img src="../images/warningCPU.png" width="40%">
+  </div>
+ 
+ * The CPU usage limit is set per dataset and all trains running on a specific dataset must respect this constraint. If the limit is not respected, the train cannot be composed without PWG approval. Therefore, the user should discuss the details and requirements for this train with the PWG before requesting again.
+ 
+ ### 4. <a name="warning-ccdb"></a> Too many CCDB calls
+ 
+  <div align="center">
+    <img src="../images/warningCCDB.png" width="40%">
+  </div>
+ 
+ * Too many calls to the CCDB, therefore the train cannot be composed, and the cause of a high number of calls should be checked.
+
+ ### 5. <a name="warning-reduction-factor"></a> Reduction factor too small
+ 
+  <div align="center">
+    <img src="../images/warningReductionFactor.png" width="40%">
+  </div>
+ 
+ * This occurs when the reduction factor is lower than 50. If the expected output size is below 10 GB, the operator can compose the train on request. If larger, the train cannot be composed.
+ 
+ ### 6. <a name="warning-log-file"></a> Log output too large
+ 
+  <div align="center">
+    <img src="../images/warningLogOutput.png" width="40%">
+  </div>
+ 
+ * The log file is too large, therefore the train cannot be composed, and the user should check for factors leading to this.
+ 
+ ### 7. <a name="warning-derived-output"></a> Derived output too large for slim train
+ 
+  <div align="center">
+    <img src="../images/warningDerivedOutput.png" width="40%">
+  </div>
+ 
+ * This is specific to tests with wagons set as ready for slim derived data. It can happen when the estimate is slightly different during the wagon test and the train test. If the output is lower than 5000 MB, the operator can submit the train on request. 
+ * Otherwise, the user is advised to switch to standard derived data by unchecking the option “Ready for slim derived data” in the wagon edit view. Then a request for standard derived data train can be made.
+ 
+It is possible that a wagon test will produce multiple warnings. In that case, the same checks above will be done for each warning present, and the decision making regarding train submission will be done considering all the exceptions.
+ 
+  
+  <div align="center">
+    <img src="../images/multipleWarnings.png" width="40%">
+  </div>
+ 
+ 
 ## <a name="all-analyses"></a>All Analyses
 
 * [**All Analyses**](https://alimonitor.cern.ch/hyperloop/all-analyses) is a read only view of all analyses available in the system. <a name="view-analysis">Click on the analysis name to be redirected to a read-only view of the analysis.
