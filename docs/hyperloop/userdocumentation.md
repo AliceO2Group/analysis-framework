@@ -276,7 +276,7 @@ When a wagon test finishes in warning, this means that the wagon will not be inc
  
  There are a number of warnings, which will require different courses of action:
  
- ### 1. <a name="warning-memory"></a> Memory consumption too large for automatic train submission
+### 1. <a name="warning-memory"></a> Memory consumption too large for automatic train submission
  
  <div align="center">
     <img src="../images/warnignMemory.png" width="40%">
@@ -287,7 +287,7 @@ When a wagon test finishes in warning, this means that the wagon will not be inc
  * For the other target queues, trains can only be composed if the memory consumption is within the target limits.
  * For the cases when the train cannot be composed due to high memory consumption, the user can review the test. One can check the logs and look for any possible improvements that can be done for a lower memory consumption.
  
- ### 2. <a name="warning-pss"></a> Maximal PSS more than 30% larger than average PSS
+### 2. <a name="warning-pss"></a> Maximal PSS more than 30% larger than average PSS
  
   <div align="center">
     <img src="../images/warningPSS.png" width="40%">
@@ -295,7 +295,7 @@ When a wagon test finishes in warning, this means that the wagon will not be inc
  
  * The maximum PSS memory consumption is larger than 30% of the average PSS, therefore the train cannot be automatically composed. The test will be checked by the operator and, if there is no memory leak, the train can be composed. Otherwise, they will advise the user to check for possible causes and improvements before requesting again.
 
- ### 3. <a name="warning-cpu"></a> CPU usage too large
+### 3. <a name="warning-cpu"></a> CPU usage too large
  
   <div align="center">
     <img src="../images/warningCPU.png" width="40%">
@@ -303,7 +303,7 @@ When a wagon test finishes in warning, this means that the wagon will not be inc
  
  * The CPU usage limit is set per dataset and all trains running on a specific dataset must respect this constraint. If the limit is not respected, the train cannot be composed without PWG approval. Therefore, the user should discuss the details and requirements for this train with the PWG before requesting again. Depending on the amount of total resources, an approval in the Physics Board (PB) may also be needed.
  
- ### 4. <a name="warning-ccdb"></a> Too many CCDB calls
+### 4. <a name="warning-ccdb"></a> Too many CCDB calls
  
   <div align="center">
     <img src="../images/warningCCDB.png" width="40%">
@@ -311,7 +311,7 @@ When a wagon test finishes in warning, this means that the wagon will not be inc
  
  * Too many calls to the CCDB, therefore the train cannot be composed, and the cause of a high number of calls should be checked.
 
- ### 5. <a name="warning-reduction-factor"></a> Reduction factor too small
+### 5. <a name="warning-reduction-factor"></a> Reduction factor too small
  
   <div align="center">
     <img src="../images/warningReductionFactor.png" width="40%">
@@ -319,7 +319,7 @@ When a wagon test finishes in warning, this means that the wagon will not be inc
  
  * This occurs when the reduction factor is lower than 50. If the expected output size is below 10 GB, the operator can compose the train on request. If larger, the train cannot be composed.
  
- ### 6. <a name="warning-log-file"></a> Log output too large
+### 6. <a name="warning-log-file"></a> Log output too large
  
   <div align="center">
     <img src="../images/warningLogOutput.png" width="40%">
@@ -327,7 +327,7 @@ When a wagon test finishes in warning, this means that the wagon will not be inc
  
  * The log file is too large, therefore the train cannot be composed, and the user should check for factors leading to this.
  
- ### 7. <a name="warning-derived-output"></a> Derived output too large for slim train
+### 7. <a name="warning-derived-output"></a> Derived output too large for slim train
  
   <div align="center">
     <img src="../images/warningDerivedOutput.png" width="40%">
