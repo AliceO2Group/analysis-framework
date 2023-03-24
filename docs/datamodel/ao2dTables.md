@@ -17,7 +17,7 @@ Click on the labels to display the table content. Click buttons to
 ####  AO2D files
 For better overview the tables are grouped into the following categories: | [General](#cat_General) | [Tracks](#cat_Tracks) | [Detectors](#cat_Detectors) | [Strangeness](#cat_Strangeness) | [Indices](#cat_Indices) | [MonteCarlo](#cat_MonteCarlo) | [Run2](#cat_Run2) | [Others](#cat_Others) |
 
-#### Note on ambiguous tracks: 
+#### Note on ambiguous tracks
 
 The tables aod::Tracks and aod::AmbiguousTracks are **not** exclusive. In fact, the table aod::Tracks contains all of the tracks, ambiguous ones, non-ambiguous ones and unassociated tracks. The table aod::AmbiguousTracks is giving extra information on only the ambiguous and the unassociated tracks.
 If the track can be time associated to several collisions, only one of them is given a pointer through its index (`collisionId`) in the aod::Tracks table.
