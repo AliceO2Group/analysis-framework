@@ -23,6 +23,8 @@ If the track can be time associated to several collisions, only one of them is g
 
 The previous statements are also true for aod::MFTTracks and aod::AmbiguousMFTTracks tables, as well as aod::FwdTracks and aod::AmbiguousFwdTrack.
 
+An example of how to collect the collisions compatible to an ambiguous track and how to reassociate them to the collision with the smallest DCA is available in the PWGMM task <a href="https://github.com/AliceO2Group/O2Physics/blob/master/PWGMM/Mult/TableProducer/trackPropagation.cxx" target="_blank">Mult/TableProducer/trackPropagation.cxx</a>.
+
 <div>
 
 <h4 id="cat_General">General</h4>
