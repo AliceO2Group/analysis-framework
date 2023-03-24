@@ -22,13 +22,13 @@ You can check by opening it with ROOT if the corresponding table exists in the f
 
 Most likely however the table which is missing has to be produced by a [helper task](../datamodel/helperTaskTables.md).
 You can identify the missing workflow by running the [`find_dependencies.py`](https://github.com/AliceO2Group/O2Physics/blob/master/Scripts/find_dependencies.py) script.
-The procedure is simple: If the error message complains about a missing table `DF_<id>/O2<table>` then you have to run `./Scripts/find_dependencies.py -t <table>` in the `O2Physics` repository
-while having the O2Physics environment loaded and add the correct one among the listed producer workflows to your command line.
+The procedure is simple: If the error message complains about a missing table `DF_<id>/O2<table>` then you have to run `$O2PHYSICS_ROOT/share/scripts/find_dependencies.py -t <table>`
+inside the O2Physics environment and add the correct one among the listed producer workflows to your command line.
 
 Example: If the missing table is `DF_2853960297589372650/O2timestamps`, then you have to look up `timestamps`:
 
 ```text
-[O2Physics/latest] ~/alice/O2Physics $> ./Scripts/find_dependencies.py -t timestamps
+[O2Physics/latest] ~/alice/O2Physics $> $O2PHYSICS_ROOT/share/scripts/find_dependencies.py -t timestamps
 
 Table: timestamps
 
