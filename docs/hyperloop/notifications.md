@@ -107,6 +107,12 @@ Informs the user when a wagon has been disabled in different circumstances:
   <div align="center">
     <img src="../images/wagonDisabled.png" width="90%">
   </div>
+  
+* The wagon is disabled if the workflow name has been changed in the meantime. This is fixed by updating the workflow name in the wagon configuration.
+
+  <div align="center">
+    <img src="../images/notificationWorkflow.png" width="90%">
+  </div>
 
 ## <a name="inconsistentParameters"></a>Inconsistent parameters
 
