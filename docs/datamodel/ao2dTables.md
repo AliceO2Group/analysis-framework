@@ -14,8 +14,7 @@ Click on the labels to display the table content. Click buttons to
 
 <!-- Block with AO2D tables -->
 
-####  AO2D files
-For better overview the tables are grouped into the following categories: | [General](#cat_General) | [Tracks](#cat_Tracks) | [Detectors](#cat_Detectors) | [Strangeness](#cat_Strangeness) | [Indices](#cat_Indices) | [MonteCarlo](#cat_MonteCarlo) | [Run2](#cat_Run2) | [Others](#cat_Others) |
+For better overview the tables are grouped into the following categories: \| [General](#cat_General) \| [Tracks](#cat_Tracks) \| [Detectors](#cat_Detectors) \| [Strangeness](#cat_Strangeness) \| [Indices](#cat_Indices) \| [MonteCarlo](#cat_MonteCarlo) \| [Run2](#cat_Run2) \| [Others](#cat_Others) \|
 
 #### Note on ambiguous tracks
 
@@ -384,7 +383,8 @@ The previous statements are also true for aod::MFTTracks and aod::AmbiguousMFTTr
   </div>
 
 </div>
-<h4 id="cat_Tracks">Tracks</h4>
+<a name="cat_Tracks"></a>
+## Tracks
 <div>
 
   <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::Tracks (E)</button>
@@ -407,6 +407,7 @@ The previous statements are also true for aod::MFTTracks and aod::AmbiguousMFTTr
         <li>o2::aod::FullTrack = soa::Join<o2::aod::Tracks, o2::aod::TracksExtra>::iterator</li>
         <li>o2::aod::BigTracks = soa::Join<o2::aod::Tracks, o2::aod::TracksCov, o2::aod::TracksExtra></li>
         <li>o2::aod::TracksWithSel = soa::Join<o2::aod::Tracks, o2::aod::TracksExtra, o2::aod::TrackSelection></li>
+        <li>o2::aod::hf_cand_3prong::TracksMC = soa::Join<o2::aod::Tracks, o2::aod::McTrackLabels></li>
       </ul>
     </div>
     <table class=DataModel>
@@ -3514,7 +3515,8 @@ The previous statements are also true for aod::MFTTracks and aod::AmbiguousMFTTr
   </div>
 
 </div>
-<h4 id="cat_Detectors">Detectors</h4>
+<a name="cat_Detectors"></a>
+## Detectors
 <div>
 
   <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::FV0As</button>
@@ -4329,7 +4331,8 @@ The previous statements are also true for aod::MFTTracks and aod::AmbiguousMFTTr
   </div>
 
 </div>
-<h4 id="cat_Strangeness">Strangeness</h4>
+<a name="cat_Strangeness"></a>
+## Strangeness
 <div>
 
   <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::V0s_000</button>
@@ -4581,7 +4584,8 @@ The previous statements are also true for aod::MFTTracks and aod::AmbiguousMFTTr
   </div>
 
 </div>
-<h4 id="cat_Indices">Indices</h4>
+<a name="cat_Indices"></a>
+## Indices
 <div>
 
   <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::Run3MatchedExclusive (I)</button>
@@ -4959,7 +4963,8 @@ The previous statements are also true for aod::MFTTracks and aod::AmbiguousMFTTr
   </div>
 
 </div>
-<h4 id="cat_MonteCarlo">MonteCarlo</h4>
+<a name="cat_MonteCarlo"></a>
+## MonteCarlo
 <div>
 
   <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::McCollisions</button>
@@ -5871,6 +5876,8 @@ The previous statements are also true for aod::MFTTracks and aod::AmbiguousMFTTr
       <ul>
         <li>o2::aod::McTrackLabel = o2::aod::McTrackLabels::iterator</li>
         <li>o2::aod::BigTracksMC = soa::Join<o2::aod::BigTracks, o2::aod::McTrackLabels></li>
+        <li>o2::aod::Reso2TracksMC = soa::Join<o2::aod::FullTracks, o2::aod::McTrackLabels></li>
+        <li>o2::aod::hf_cand_3prong::TracksMC = soa::Join<o2::aod::Tracks, o2::aod::McTrackLabels></li>
       </ul>
     </div>
     <table class=DataModel>
@@ -6389,7 +6396,8 @@ The previous statements are also true for aod::MFTTracks and aod::AmbiguousMFTTr
   </div>
 
 </div>
-<h4 id="cat_Run2">Run2</h4>
+<a name="cat_Run2"></a>
+## Run2
 <div>
 
   <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::Run2BCInfos</button>
@@ -6699,7 +6707,8 @@ The previous statements are also true for aod::MFTTracks and aod::AmbiguousMFTTr
   </div>
 
 </div>
-<h4 id="cat_Others">Others</h4>
+<a name="cat_Others"></a>
+## Others
 <div>
 
   <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::Origins</button>
@@ -6740,6 +6749,5 @@ The previous statements are also true for aod::MFTTracks and aod::AmbiguousMFTTr
     </table>
   </div>
 
-</div>
 </div>
 <!-- Block with AO2D tables -->
