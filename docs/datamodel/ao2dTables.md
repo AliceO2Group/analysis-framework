@@ -16,16 +16,8 @@ Click on the labels to display the table content. Click buttons to
 
 For better overview the tables are grouped into the following categories: \| [General](#cat_General) \| [Tracks](#cat_Tracks) \| [Detectors](#cat_Detectors) \| [Strangeness](#cat_Strangeness) \| [Indices](#cat_Indices) \| [MonteCarlo](#cat_MonteCarlo) \| [Run2](#cat_Run2) \| [Others](#cat_Others) \|
 
-#### Note on ambiguous tracks
-
-The tables aod::Tracks and aod::AmbiguousTracks are **not** exclusive. In fact, the table aod::Tracks contains all of the tracks, ambiguous ones, non-ambiguous ones and unassociated tracks. The table aod::AmbiguousTracks is giving extra information on only the ambiguous and the unassociated tracks.
-If the track can be time associated to several collisions, only one of them is given a pointer through its index (`collisionId`) in the aod::Tracks table.
-
-The previous statements are also true for aod::MFTTracks and aod::AmbiguousMFTTracks tables, as well as aod::FwdTracks and aod::AmbiguousFwdTrack.
-
-<div>
-
-<h4 id="cat_General">General</h4>
+<a name="cat_General"></a>
+## General
 <div>
 
   <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::BCs</button>
@@ -406,7 +398,6 @@ The previous statements are also true for aod::MFTTracks and aod::AmbiguousMFTTr
         <li>o2::aod::FullTracks = soa::Join<o2::aod::Tracks, o2::aod::TracksExtra></li>
         <li>o2::aod::FullTrack = soa::Join<o2::aod::Tracks, o2::aod::TracksExtra>::iterator</li>
         <li>o2::aod::BigTracks = soa::Join<o2::aod::Tracks, o2::aod::TracksCov, o2::aod::TracksExtra></li>
-        <li>o2::aod::TracksWithSel = soa::Join<o2::aod::Tracks, o2::aod::TracksExtra, o2::aod::TrackSelection></li>
         <li>o2::aod::hf_cand_3prong::TracksMC = soa::Join<o2::aod::Tracks, o2::aod::McTrackLabels></li>
       </ul>
     </div>
@@ -1239,7 +1230,6 @@ The previous statements are also true for aod::MFTTracks and aod::AmbiguousMFTTr
         <li>o2::aod::FullTracks = soa::Join<o2::aod::Tracks, o2::aod::TracksExtra></li>
         <li>o2::aod::FullTrack = soa::Join<o2::aod::Tracks, o2::aod::TracksExtra>::iterator</li>
         <li>o2::aod::BigTracks = soa::Join<o2::aod::Tracks, o2::aod::TracksCov, o2::aod::TracksExtra></li>
-        <li>o2::aod::TracksWithSel = soa::Join<o2::aod::Tracks, o2::aod::TracksExtra, o2::aod::TrackSelection></li>
       </ul>
     </div>
     <table class=DataModel>
