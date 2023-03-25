@@ -16,8 +16,18 @@ Click on the labels to display the table content. Click buttons to
 
 For better overview the tables are grouped into the following categories: \| [General](#cat_General) \| [Tracks](#cat_Tracks) \| [Detectors](#cat_Detectors) \| [Strangeness](#cat_Strangeness) \| [Indices](#cat_Indices) \| [MonteCarlo](#cat_MonteCarlo) \| [Run2](#cat_Run2) \| [Others](#cat_Others) \|
 
-<a name="cat_General"></a>
-## General
+#### Note on ambiguous tracks
+
+The tables aod::Tracks and aod::AmbiguousTracks are **not** exclusive. In fact, the table aod::Tracks contains all of the tracks, ambiguous ones, non-ambiguous ones and unassociated tracks. The table aod::AmbiguousTracks is giving extra information on only the ambiguous and the unassociated tracks.
+If the track can be time associated to several collisions, only one of them is given a pointer through its index (`collisionId`) in the aod::Tracks table.
+
+The previous statements are also true for aod::MFTTracks and aod::AmbiguousMFTTracks tables, as well as aod::FwdTracks and aod::AmbiguousFwdTrack.
+
+An example of how to collect the collisions compatible to an ambiguous track and how to reassociate them to the collision with the smallest DCA is available in the PWGMM task <a href="https://github.com/AliceO2Group/O2Physics/blob/master/PWGMM/Mult/TableProducer/trackPropagation.cxx" target="_blank">Mult/TableProducer/trackPropagation.cxx</a>.
+
+<div>
+
+<h4 id="cat_General">General</h4>
 <div>
 
   <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::BCs</button>
