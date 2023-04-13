@@ -88,31 +88,37 @@ alienv enter O2Physics/latest ninja/latest
 Go to the build directory
 
 ```bash
-cd sw/BUILD/O2Physics-latest/O2Physics
+cd ~/alice/sw/BUILD/O2Physics-latest/O2Physics
 ```
 
-You can now rebuild a specific directory with
+You can now rebuild and install a specific directory with
 
 ```bash
-ninja install <your-analysis-directory>/all
+ninja <directory>/install
 ```
 
 For example:
 
 ```bash
-ninja install PWGCF/Tasks/all
+ninja PWGCF/Tasks/install
 ```
 
-A specific executable can be built with
+A specific executable can be built in the staging directory `stage/bin` with
 
 ```bash
-ninja install O2Physicsexe-<target>
+ninja stage/bin/<target>
 ```
 
-For example (note the missing o2-):
+For example:
 
 ```bash
-ninja install O2Physicsexe-analysis-cf-correlations
+ninja stage/bin/o2-analysis-cf-correlations
+```
+
+The executable can then be executed directly from the staging directory:
+
+```bash
+./stage/bin/o2-analysis-cf-correlations
 ```
 
 ```danger
