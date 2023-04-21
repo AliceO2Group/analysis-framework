@@ -33,7 +33,7 @@ The `GroupedCombinationsGenerator` general constructor is defined as:
 
 ```cpp
 template <typename T1, typename GroupingPolicy, typename BP, typename G, typename... As>
-GroupedCombinationsGenerator(const BP& binningPolicy, int catNeighbours, const T1& outsider, G& grouping, std::tuple<T2s...>& associated)
+GroupedCombinationsGenerator(const BP& binningPolicy, int catNeighbours, const T1& outsider, G& grouping, std::tuple<T2s...>& associated, SliceCache* cache)
 ```
 
 This is a more general functionality which potentially could be used for other applications beyond event mixing. However, to simplify this tutorial, let's assume our `grouping` table is the table of collisions, and the `associated` are tables of structures like tracks and V0s.
@@ -43,7 +43,8 @@ This is a more general functionality which potentially could be used for other a
 - `T1`: type of an outsider value as well as the value itself as a parameter,
 - `GroupingPolicy`: type of a *BlockCombinationIndexPolicies* which specifies how collision pairs will be generated (strictly upper, upper or full block combinations)i,
 - `BP`: type of a binning policy applied to the block combinations of collisions as well as the policy instance,
-- input grouping (collisions) and associated (tracks, V0s) tables and their types.
+- input grouping (collisions) and associated (tracks, V0s) tables and their types
+- a pointer to the `SliceCache` which is used implicitly for efficient slicing of associated tables
 
 To simplify the code, there are helper shortcuts defined for the most common use cases:
 
