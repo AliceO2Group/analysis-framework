@@ -14,9 +14,9 @@ Obtain mixed event tuples.
   Executable: o2-analysistutorial-event-mixing
 </div>
 
-For a general introduction to combinations and event mixing, check first [here](../framework/eventMixing.md).
+For a general introduction to combinations and event mixing, check first [here](../advanced-specifics/eventMixing.md).
 
-### MixedEvents
+## MixedEvents
 
 Firstly, we define slice cache and binning of collisions for block combinations:
 
@@ -54,15 +54,15 @@ for (auto& [t1, t2] : combinations(CombinationsFullIndexPolicy(tracks1, tracks2)
 }
 ```
 
-### MixedEventsInsideProcess
+## MixedEventsInsideProcess
 
 This is the same task as above, with the difference that binning policy and `SameKindPair` are declared inside `process()`. This is particularly helpful when your bins are ConfigurableAxes. The standard out-of-process declaration of binning policy and corresponding mixing structure would take only default configurable values.
 
-### Task with different table structures
+## Tasks with different table structures
 
 These tasks demonstrate how mixing works with Filtered and Join.
 
-### MixedEventsDynamicColumns
+## MixedEventsDynamicColumns
 
 This is a more realistic example with mixing of collisions binned by z-vertex and multiplicity V0M. As `MultFV0M` is a dynamic column, its type is templated on the contributing column types. Therefore, the binning policy type is:
 
@@ -72,15 +72,15 @@ using BinningType = BinningPolicy<aod::collision::PosZ, aod::mult::MultFV0M<aod:
 
 The rest of the task is the same as in the basic example.
 
-### Tasks with different table kinds
+## Tasks with different table kinds
 
 These tasks demonstrate usage of `Pair`, `Triple` and `SameKindTriple` on tracks and V0s.
 
-### MixedEventsWithHashTask
+## MixedEventsWithHashTask
 
 This task shows how one can use `NoBinningPolicy` in case of bins predefined somewhere else.
 
-### MixedEventsPartitionedTracks
+## MixedEventsPartitionedTracks
 
 This is a bit more advanced example which shows how one can further partition the tracks from mixing. As the tracks tables are produced only at the generation of each mixed collision pair, `Partitions` must be declared inside the mixing loop. Additionally, each partition must be bound to a respective table -- `tracks1` or `tracks2`. Then, the corresponding partitioning condition is applied to the selected table.
 
@@ -97,7 +97,7 @@ for (auto& [c1, tracks1, c2, tracks2] : pair) {
 }
 ```
 
-### MixedEventsLambdaBinning
+## MixedEventsLambdaBinning
 
 The task demonstrates how to use FlexibleBinningPolicy if binning cannot be calculated straight from the collision columns, but is obtained from other variables in a user-defined function.<br>
 This is naturally implemented for mixing inside `process()`, as the helper lambda function is usually defined inside `process()`. For example:

@@ -17,9 +17,9 @@ o2::soa::combinations (CombinationIndexPolicy(tracks1, tracks2, ...))
 
 which returns tuples of tracks (one track from each table of tracks).
 
-There are several *CombinationIndexPolicies* available which are explained [here](../framework/framework.md#getting-combinations-pairs-triplets-). It is recommended that you will get first well acquainted with combinations before moving on to mixing.
+There are several *CombinationIndexPolicies* available which are explained [here](../basics-tasks/CombiningData.md). It is recommended that you will get first well acquainted with combinations before moving on to mixing.
 
-## Event mixing
+## Mixing generator
 
 `GroupedCombinationsGenerator` which generates mixed event pairs is a generalization of block combination policies. Therefore, it accepts the same parameters:
 
@@ -27,7 +27,7 @@ There are several *CombinationIndexPolicies* available which are explained [here
 - outsider
 - category neighbours (equivalent to the number of other collisions to mix with)
 
-You can consult a detailed description of these parameters in the [block combinations section](../framework/framework.md#block--binned-combination-policies).
+You can consult a detailed description of these parameters in the [block combinations section](../basics-tasks/CombiningData.md#block--binned-combination-policies).
 
 The `GroupedCombinationsGenerator` general constructor is defined as:
 
