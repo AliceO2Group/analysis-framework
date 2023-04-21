@@ -101,6 +101,7 @@ for (auto& [c1, tracks1, c2, tracks2] : pair) {
 
 The task demonstrates how to use FlexibleBinningPolicy if binning cannot be calculated straight from the collision columns, but is obtained from other variables in a user-defined function.<br>
 This is naturally implemented for mixing inside `process()`, as the helper lambda function is usually defined inside `process()`. For example:
+
 ```cpp
 void process(aod::Collisions& collisions, aod::Tracks& tracks) {
   auto getTracksSize =
@@ -111,16 +112,19 @@ void process(aod::Collisions& collisions, aod::Tracks& tracks) {
 ```
 
 The binning policy:
+
 ```cpp
 using BinningType = FlexibleBinningPolicy<std::tuple<decltype(getTracksSize)>, aod::collision::PosZ, decltype(getTracksSize)>;
 BinningType binningWithLambda{{getTracksSize}, {axisVertex, axisMultiplicity}, true};
 ```
+
 A tuple with types of all lambda functions must be first passed in the `BinningType` definition, before the rest of arguments follow in the order of usage.<br>
 Similarly, in `binningWithLambda` definition, one must first pass a tuple with all lambda functions before other arguments.<br>
 Note that binning with respect to z-vertex is calculated from column values as before, while the lambda is used only for the multiplicity axis. You must be careful to follow the same order of columns/lambdas in the `BinningType` definition and of the corresponding axes in binning instantation.
 Any combination of lambda- and column-based binning is possible.
 
 Finally, the mixing structure is defined like in previous examples:
+
 ```cpp
 SameKindPair<aod::Collisions, aod::Tracks, BinningType> pair{binningWithLambda, 5, -1, collisions, tracksTuple, &cache};
 ```
