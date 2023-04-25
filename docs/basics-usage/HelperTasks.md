@@ -4,6 +4,14 @@ title: Helper tasks
 ---
 
 # Helper tasks
+Table of contents:
+
+* [Timestamp](#timestamp)
+* [Event selection](#event-selection)
+* [Multiplicity and centrality selection in O2](#multiplicity-and-centrality-selection-in-o2)
+* [Particle identification (PID)](#particle-identification-pid)
+* [Track Selection](#track-selection)
+* [Track Propagation](#track-propagation)
 
 ## Timestamp
 
@@ -406,24 +414,29 @@ One can check _o2-analysis-centrality-qa_ task for example usage: [`Analysis/Tas
 
     _o2-analysis-timestamp_ task [`Analysis/Tasks/timestamp.cxx`](https://github.com/AliceO2Group/AliceO2/blob/dev/Analysis/Tasks/timestamp.cxx) is required to create per-event timestamps necessary to access relevant CCDB objects in the event selection and/or centrality tasks.
 
-## Particle identification
+## Particle identification (PID)
 
-Here are described the PID working principles in O2 as well as how to get PID information (expected values, separation et cetera) in your task.
+Table of contents:
+
+* [Introduction](#introduction)
+* [Usage in user tasks](#usage-in-user-tasks)
+* [Task for TOF and TPC PID](#task-for-tof-and-tpc-pid)
+* [Example of tasks that use the PID tables (and how to run them)](#example-of-tasks-that-use-the-pid-tables-and-how-to-run-them)
+
+Here are described the working principles of Particle Identification (PID) in O2 and how to get PID information (expected values, nSigma separation *et cetera*) in your analysis tasks if you plan to identify particles.
 
 ### Introduction
 
-PID is handled in O2 via the reimplementation of base classes found in [`Common/Core/PID/`](https://github.com/AliceO2Group/O2Physics/tree/master/Common/Core/PID).
-
-The parametrization of the expected detector response (e.g. signal, resolution, separation) is handled in the classes derived from [`Common/Core/PID/ParamBase.h`](https://github.com/AliceO2Group/O2Physics/tree/master/Common/Core/PID/ParamBase.h).
-Examples of these derived classes can be found in [`PIDTOF.h`](https://github.com/AliceO2Group/O2Physics/blob/master/Common/Core/PID/PIDTOF.h), in this example the the TOF resolution response is implemented.
-
-The interface between the detector and the Analysis Framework is fully enclosed in [`DetectorResponse.h`](https://github.com/AliceO2Group/O2Physics/tree/master/Common/Core/PID/DetectorResponse.h).
-Here are defined the tables for the PID.
+PID is handled in analysis by filling helper tables that can be joined to tracks (propagated or not).
+The parameterization of the expected detector response (e.g. signal, resolution, separation) is used in the PID tasks to fill the PID tables.
+These parameterizations are detector specific and handled by the detector experts; usually, they are shipped to the PID helper tasks from the CCDB to match the data-taking conditions.
+The interface between the detector and the Analysis Framework (i.e. your tracks) is fully enclosed in [`PIDResponse.h`](https://github.com/AliceO2Group/O2Physics/tree/master/Common/DataModel/PIDResponse.h).
+Here are the defined tables for the PID information for all the detectors.
 
 The filling of the PID tables is delegated to dedicated tasks in [`Common/TableProducer/PID/`](https://github.com/AliceO2Group/O2Physics/tree/master/Common/TableProducer/PID)
-Examples of these tasks can be found in [`pidTOF.cxx`](https://github.com/AliceO2Group/O2Physics/tree/master/Common/TableProducer/PID/pidTOF.cxx) and [`pidTPC.cxx`](https://github.com/AliceO2Group/O2Physics/tree/master/Common/TableProducer/PID/pidTPC.cxx) for TOF and TPC tables respectively.
+Examples of these tasks can be found in [`pidTOF.cxx`](https://github.com/AliceO2Group/O2Physics/tree/master/Common/TableProducer/PID/pidTOF.cxx) and [`pidTPC.cxx`](https://github.com/AliceO2Group/O2Physics/tree/master/Common/TableProducer/PID/pidTPC.cxx) for TOF and TPC tables, respectively.
 
-### Usage in tasks
+### Usage in user tasks
 
 Tables for PID values in O2 are defined in [`PIDResponse.h`](https://github.com/AliceO2Group/O2Physics/blob/master/Common/DataModel/PIDResponse.h).
 You can include it in your task with:
@@ -434,31 +447,38 @@ You can include it in your task with:
 
 ```
 
-In the process functions you can join the table to add the PID (per particle mass hypothesis) information to the track.
+In the process functions, you can join the table to add the PID (per particle mass hypothesis) information to the track.
+In this case, we are using the mass hypothesis of the electron, but tables for nine (9) stable particle species are produced (`El`, `Mu`, `Pi`, `Ka`, `Pr`, `De`, `Tr`, `He`, `Al`).
 
-* For the TOF PID as:
-
-    ``` c++
-    void process(aod::Collision const& collision, soa::Join<aod::Tracks, aod::TracksExtra, aod::pidTOFEl> const& tracks)
-    ```
-
-* For the TPC PID as:
+* For the **TOF** PID as:
 
     ``` c++
-    void process(aod::Collision const& collision, soa::Join<aod::Tracks, aod::TracksExtra, aod::pidTPCEl> const& tracks)
+    void process(soa::Join<aod::Tracks, aod::pidTOFEl>::iterator const& track) {
+      track.tofNSigmaEl();
+    }
     ```
 
-* For both TOF and TPC PID as:
+* For the **TPC** PID as:
 
     ``` c++
-    void process(aod::Collision const& collision, soa::Join<aod::Tracks, aod::TracksExtra, aod::pidTOFEl, aod::pidTPCEl> const& tracks)
+    void process(soa::Join<aod::Tracks, aod::pidTPCEl>::iterator const& track) {
+      track.tpcNSigmaEl();
+    }
     ```
 
-### Task for PID spectra (and to fill PID tables!)
+* For both TOF and TPC PID information as:
 
-O2 tasks dedicated to the filling of the PID tables are called with
+    ``` c++
+    void process(soa::Join<aod::Tracks, aod::pidTOFEl, aod::pidTPCEl>::iterator const& track) {
+      const float combNSigmaEl = std::sqrt( track.tofNSigmaEl() * track.tofNSigmaEl() + track.tpcNSigmaEl() * track.tpcNSigmaEl());
+    }
+    ```
 
-* TOF PID Table
+### Task for TOF and TPC PID
+
+**In short:** O2 tasks dedicated to the filling of the PID tables are called with
+
+* Filling TOF PID Table
 
     ``` bash
     o2-analysis-pid-tof
@@ -470,13 +490,21 @@ O2 tasks dedicated to the filling of the PID tables are called with
     o2-analysis-pid-tof-base
     ```
 
-    This can be configured according to needs
+    These tasks can be configured according to the needs specified by the detector experts.
+    If you are in doubt, you can contact them or take the configuration of the Hyperloop as a reference.
 
-* TPC PID Table
+* Filling the TPC PID Table
 
     ``` bash
     o2-analysis-pid-tpc
     ```
+
+    ``` bash
+    o2-analysis-pid-tpc-base
+    ```
+    
+    These tasks can be configured according to the needs specified by the detector experts.
+    If you are in doubt, you can contact them or take the configuration of the Hyperloop as a reference.
 
 ### Example of tasks that use the PID tables (and how to run them)
 
@@ -484,25 +512,30 @@ O2 tasks dedicated to the filling of the PID tables are called with
     You can run the TOF spectra task with:
 
     ``` bash
-    o2-analysis-spectra-tof --aod-file AO2D.root -b | o2-analysis-pid-tof -b | o2-analysis-pid-tof-base -b
+    o2-analysis-pid-tof-qa --aod-file AO2D.root -b | o2-analysis-pid-tof -b | o2-analysis-pid-tof-base -b
     ```
 
 * TPC PID task [`pidTPC.cxx`](https://github.com/AliceO2Group/O2Physics/tree/master/Common/TableProducer/PID/pidTPC.cxx)
     You can run the TPC spectra task with:
 
     ``` bash
-    o2-analysis-spectra-tpc --aod-file AO2D.root -b | o2-analysis-pid-tpc -b
+    o2-analysis-pid-tpc-qa --aod-file AO2D.root -b | o2-analysis-pid-tpc -b | o2-analysis-pid-tpc-base -b
     ```
 
 ### Enabling QA histograms
 
-* QA histograms should come with the PID tasks, they can be enabled with the option `--add-qa 1` when running locally or with the corresponding QA tasks as in:
+* QA histograms should come with the PID tasks; they can be enabled by including the QA tasks in your workflow when running locally or with the corresponding QA tasks as in:
 
+    For the **TOF** QA plots
     ``` bash
-    ... | o2-analysis-pid-tof -b --add-qa 1
-
-    ... | o2-analysis-pid-tpc -b --add-qa 1
+    ... | o2-analysis-pid-tof-qa | ...
     ```
+
+    For the **TPC** QA plots
+    ``` bash
+    ... | o2-analysis-pid-tpc-qa | ...
+    ```
+    Where by `...` we mean the other tasks in your workflow.
 
 ## Track Selection
 
@@ -594,7 +627,7 @@ o2-analysis-trackselection | o2-analysis-qa-event-track | ...
 At the moment there are two 'FilterBits' available in the TrackSelection table, which are defined as follows:
 
  | Cuts                                                 | globalTrack                                                            | globalTrackSDD                               |
- |------------------------------------------------------|------------------------------------------------------------------------|----------------------------------------------|
+ | ---------------------------------------------------- | ---------------------------------------------------------------------- | -------------------------------------------- |
  | min number of crossed rows TPC                       | 70                                                                     | 70                                           |
  | min ratio of crossed rows over findable clusters TPC | 0.8                                                                    | 0.8                                          |
  | max chi2 per cluster TPC                             | 4.0                                                                    | 4.0                                          |
