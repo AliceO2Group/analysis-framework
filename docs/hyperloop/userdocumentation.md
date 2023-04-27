@@ -260,6 +260,8 @@ You can enable a wagon in the _My Analyses_ page. Inside of the _Analysis_ there
 </div>
 
 * If you only want to see the top 10 graph with the highest average, check the Show top 10 largest box.
+ 
+* To produce this type of performance graphs for a local O2 execution, follow the instructions [here](#producing-performance-graphs-for-a-local-o2-execution).
 
 * Whenever a wagon configuration is changed, if there are enabled wagons (including wagons that depend on it), then the test is automatically reset and a new test is launched. However, if the enabled wagon was already composed in a train, the train will run with the wagons and dataset configuration of the time at which the train was created.
 
@@ -406,6 +408,8 @@ It is possible that a wagon test will produce multiple warnings. In that case, t
    <div align="center">
     <img src="../images/graphZoom2.png" width="70%">
   </div>
+ 
+* To produce this type of performance graphs for a local O2 execution, follow the instructions [here](#producing-performance-graphs-for-a-local-o2-execution).
 
 * <a name="trainsubmittedjobs"></a>In _Submitted jobs_, you can see the summary of the master jobs, along with links to the **IO Statistics** and **Stack trace**.
 
@@ -466,6 +470,14 @@ It is possible that a wagon test will produce multiple warnings. In that case, t
    <div align="center">
     <img src="../images/longTrainApproved.png" width="80%">
    </div>
+ 
+## <a name="localO2execution"></a>Producing performance graphs for a local O2 execution
+ 
+ **Performance Graphs** page allows the user to upload his own local metrics file, and then generate the test graphs specific to that file. You produce a local _performanceMetrics.json_ by running the o2 workflow with the argument _--resources-monitoring 2_ which, in this example, produces monitoring information every 2 seconds. These are the same type of graphs produced in the _Test Graphs_ tab of the train run. This page can be accessed at: <https://alimonitor.cern.ch/hyperloop/performance-graphs>.
+
+<div align="center">
+<img src="../images/performanceGraphs.png" width="100%">
+</div>
 
 ## <a name="local-train"></a>Reproducing a train run on a local machine
  A train test or a Grid train run can be redone on a local machine. This is useful to understand a problem better or to just reproduce some settings of a previous train.
