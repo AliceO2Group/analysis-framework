@@ -261,7 +261,7 @@ You can enable a wagon in the _My Analyses_ page. Inside of the _Analysis_ there
 
 * If you only want to see the top 10 graph with the highest average, check the Show top 10 largest box.
  
-* To produce this type of performance graphs for a local O2 execution, follow the instructions [here](#localO2execution).
+* To produce this type of performance graphs for a local O2 execution, follow the instructions [here](#producing-performance-graphs-for-a-local-o2-execution).
 
 * Whenever a wagon configuration is changed, if there are enabled wagons (including wagons that depend on it), then the test is automatically reset and a new test is launched. However, if the enabled wagon was already composed in a train, the train will run with the wagons and dataset configuration of the time at which the train was created.
 
@@ -409,7 +409,7 @@ It is possible that a wagon test will produce multiple warnings. In that case, t
     <img src="../images/graphZoom2.png" width="70%">
   </div>
  
-* To produce this type of performance graphs for a local O2 execution, follow the instructions [here](#localO2execution).
+* To produce this type of performance graphs for a local O2 execution, follow the instructions [here](#producing-performance-graphs-for-a-local-o2-execution).
 
 * <a name="trainsubmittedjobs"></a>In _Submitted jobs_, you can see the summary of the master jobs, along with links to the **IO Statistics** and **Stack trace**.
 
