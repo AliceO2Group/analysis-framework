@@ -16,18 +16,8 @@ Click on the labels to display the table content. Click buttons to
 
 For better overview the tables are grouped into the following categories: \| [General](#cat_General) \| [Tracks](#cat_Tracks) \| [Detectors](#cat_Detectors) \| [Strangeness](#cat_Strangeness) \| [Indices](#cat_Indices) \| [MonteCarlo](#cat_MonteCarlo) \| [Run2](#cat_Run2) \| [Others](#cat_Others) \|
 
-#### Note on ambiguous tracks
-
-The tables aod::Tracks and aod::AmbiguousTracks are **not** exclusive. In fact, the table aod::Tracks contains all of the tracks, ambiguous ones, non-ambiguous ones and unassociated tracks. The table aod::AmbiguousTracks is giving extra information on only the ambiguous and the unassociated tracks.
-If the track can be time associated to several collisions, only one of them is given a pointer through its index (`collisionId`) in the aod::Tracks table.
-
-The previous statements are also true for aod::MFTTracks and aod::AmbiguousMFTTracks tables, as well as aod::FwdTracks and aod::AmbiguousFwdTrack.
-
-An example of how to collect the collisions compatible to an ambiguous track and how to reassociate them to the collision with the smallest DCA is available in the PWGMM task <a href="https://github.com/AliceO2Group/O2Physics/blob/master/PWGMM/Mult/TableProducer/trackPropagation.cxx" target="_blank">Mult/TableProducer/trackPropagation.cxx</a>.
-
-<div>
-
-<h4 id="cat_General">General</h4>
+<a name="cat_General"></a>
+## General
 <div>
 
   <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::BCs</button>
@@ -3965,18 +3955,13 @@ An example of how to collect the collisions compatible to an ambiguous track and
   </div>
 
 
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::Zdcs</button>
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::Zdcs_000</button>
   <div class="panel">
     <div>
        ZDC information
     </div>
     <div>
       Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev//Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
-    </div>
-    <div>Is used in:
-      <ul>
-        <li>o2::aod::Zdc = o2::aod::Zdcs::iterator</li>
-      </ul>
     </div>
     <table class=DataModel>
       <tr>
@@ -3998,7 +3983,7 @@ An example of how to collect the collisions compatible to an ambiguous track and
         <td>I</td>
         <td>bcId</td>
         <td>int32</td>
-        <td>BC index</td>
+        <td>BC index, to be used by both legacy and new table</td>
       </tr>
       <tr>
         <td>o2::aod::zdc::EnergyZEM1</td>
@@ -4111,6 +4096,234 @@ An example of how to collect the collisions compatible to an ambiguous track and
         <td>timeZPC</td>
         <td>float</td>
         <td></td>
+      </tr>
+    </table>
+  </div>
+
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::Zdcs_001</button>
+  <div class="panel">
+    <div>
+       ZDC information, version 1, std::vector format
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev//Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::Zdcs = o2::aod::Zdcs_001</li>
+      </ul>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::soa::Index</td>
+        <td>GI</td>
+        <td>globalIndex</td>
+        <td>int64_t</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::zdc::BCId</td>
+        <td>I</td>
+        <td>bcId</td>
+        <td>int32</td>
+        <td>BC index, to be used by both legacy and new table</td>
+      </tr>
+      <tr>
+        <td>o2::aod::zdc::Energy</td>
+        <td></td>
+        <td>energy</td>
+        <td>std::vector&lt;float&gt;</td>
+        <td>Energy of non-zero channels. The channel IDs are given in ChannelE (at the same index)</td>
+      </tr>
+      <tr>
+        <td>o2::aod::zdc::ChannelE</td>
+        <td></td>
+        <td>channelE</td>
+        <td>std::vector&lt;uint8_t&gt;</td>
+        <td>Channel IDs which have reconstructed energy. There are at maximum 26 channels.</td>
+      </tr>
+      <tr>
+        <td>o2::aod::zdc::Amplitude</td>
+        <td></td>
+        <td>amplitude</td>
+        <td>std::vector&lt;float&gt;</td>
+        <td>Amplitudes of non-zero channels. The channel IDs are given in ChannelT (at the same index)</td>
+      </tr>
+      <tr>
+        <td>o2::aod::zdc::Time</td>
+        <td></td>
+        <td>time</td>
+        <td>std::vector&lt;float&gt;</td>
+        <td>Times of non-zero channels. The channel IDs are given in ChannelT (at the same index)</td>
+      </tr>
+      <tr>
+        <td>o2::aod::zdc::ChannelT</td>
+        <td></td>
+        <td>channelT</td>
+        <td>std::vector&lt;uint8_t&gt;</td>
+        <td>Channel IDs which had non-zero amplitudes. There are at maximum 26 channels.</td>
+      </tr>
+      <tr>
+        <td>o2::aod::zdc::DyEnergyZEM1</td>
+        <td>D</td>
+        <td>energyZEM1</td>
+        <td>float</td>
+        <td>return ZEM1 energy</td>
+      </tr>
+      <tr>
+        <td>o2::aod::zdc::DyEnergyZEM2</td>
+        <td>D</td>
+        <td>energyZEM2</td>
+        <td>float</td>
+        <td>return ZEM2 energy</td>
+      </tr>
+      <tr>
+        <td>o2::aod::zdc::DyEnergyCommonZNA</td>
+        <td>D</td>
+        <td>energyCommonZNA</td>
+        <td>float</td>
+        <td>return common ZNA energy</td>
+      </tr>
+      <tr>
+        <td>o2::aod::zdc::DyEnergyCommonZNC</td>
+        <td>D</td>
+        <td>energyCommonZNC</td>
+        <td>float</td>
+        <td>return common ZNC energy</td>
+      </tr>
+      <tr>
+        <td>o2::aod::zdc::DyEnergyCommonZPA</td>
+        <td>D</td>
+        <td>energyCommonZPA</td>
+        <td>float</td>
+        <td>return common ZPA energy</td>
+      </tr>
+      <tr>
+        <td>o2::aod::zdc::DyEnergyCommonZPC</td>
+        <td>D</td>
+        <td>energyCommonZPC</td>
+        <td>float</td>
+        <td>return common ZPC energy</td>
+      </tr>
+      <tr>
+        <td>o2::aod::zdc::DyEnergySectorZNA</td>
+        <td>D</td>
+        <td>energySectorZNA</td>
+        <td>std::array&lt;float,4&gt;</td>
+        <td>return sector ZNA energy (array of 4 floats)</td>
+      </tr>
+      <tr>
+        <td>o2::aod::zdc::DyEnergySectorZNC</td>
+        <td>D</td>
+        <td>energySectorZNC</td>
+        <td>std::array&lt;float,4&gt;</td>
+        <td>return sector ZNC energy (array of 4 floats)</td>
+      </tr>
+      <tr>
+        <td>o2::aod::zdc::DyEnergySectorZPA</td>
+        <td>D</td>
+        <td>energySectorZPA</td>
+        <td>std::array&lt;float,4&gt;</td>
+        <td>return sector ZPA energy (array of 4 floats)</td>
+      </tr>
+      <tr>
+        <td>o2::aod::zdc::DyEnergySectorZPC</td>
+        <td>D</td>
+        <td>energySectorZPC</td>
+        <td>std::array&lt;float,4&gt;</td>
+        <td>return sector ZPC energy (array of 4 floats)</td>
+      </tr>
+      <tr>
+        <td>o2::aod::zdc::DyTimeZEM1</td>
+        <td>D</td>
+        <td>timeZEM1</td>
+        <td>float</td>
+        <td>return ZEM1 time information</td>
+      </tr>
+      <tr>
+        <td>o2::aod::zdc::DyTimeZEM2</td>
+        <td>D</td>
+        <td>timeZEM2</td>
+        <td>float</td>
+        <td>return ZEM2 time information</td>
+      </tr>
+      <tr>
+        <td>o2::aod::zdc::DyTimeZNA</td>
+        <td>D</td>
+        <td>timeZNA</td>
+        <td>float</td>
+        <td>return ZNA time information</td>
+      </tr>
+      <tr>
+        <td>o2::aod::zdc::DyTimeZNC</td>
+        <td>D</td>
+        <td>timeZNC</td>
+        <td>float</td>
+        <td>return ZNC time information</td>
+      </tr>
+      <tr>
+        <td>o2::aod::zdc::DyTimeZPA</td>
+        <td>D</td>
+        <td>timeZPA</td>
+        <td>float</td>
+        <td>return ZPA time information</td>
+      </tr>
+      <tr>
+        <td>o2::aod::zdc::DyTimeZPC</td>
+        <td>D</td>
+        <td>timeZPC</td>
+        <td>float</td>
+        <td>return ZPC time information</td>
+      </tr>
+      <tr>
+        <td>o2::aod::zdc::DyAmplitudeZEM1</td>
+        <td>D</td>
+        <td>amplitudeZEM1</td>
+        <td>float</td>
+        <td>return ZEM1 amplitude</td>
+      </tr>
+      <tr>
+        <td>o2::aod::zdc::DyAmplitudeZEM2</td>
+        <td>D</td>
+        <td>amplitudeZEM2</td>
+        <td>float</td>
+        <td>return ZEM2 amplitude</td>
+      </tr>
+      <tr>
+        <td>o2::aod::zdc::DyAmplitudeZNA</td>
+        <td>D</td>
+        <td>amplitudeZNA</td>
+        <td>float</td>
+        <td>return ZNA amplitude</td>
+      </tr>
+      <tr>
+        <td>o2::aod::zdc::DyAmplitudeZNC</td>
+        <td>D</td>
+        <td>amplitudeZNC</td>
+        <td>float</td>
+        <td>return ZNC amplitude</td>
+      </tr>
+      <tr>
+        <td>o2::aod::zdc::DyAmplitudeZPA</td>
+        <td>D</td>
+        <td>amplitudeZPA</td>
+        <td>float</td>
+        <td>return ZPA amplitude</td>
+      </tr>
+      <tr>
+        <td>o2::aod::zdc::DyAmplitudeZPC</td>
+        <td>D</td>
+        <td>amplitudeZPC</td>
+        <td>float</td>
+        <td>return ZPC amplitude</td>
       </tr>
     </table>
   </div>
@@ -4518,67 +4731,6 @@ An example of how to collect the collisions compatible to an ambiguous track and
         <td>bachelorId</td>
         <td>int</td>
         <td>Bachelor track index</td>
-      </tr>
-    </table>
-  </div>
-
-
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::Decays3Body</button>
-  <div class="panel">
-    <div>
-       Run 2 cascade table
-    </div>
-    <div>
-      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev//Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
-    </div>
-    <div>Is used in:
-      <ul>
-        <li>o2::aod::Decays3Body = o2::aod::Decays3Body</li>
-        <li>o2::aod::Decay3Body = o2::aod::Decays3Body::iterator</li>
-      </ul>
-    </div>
-    <table class=DataModel>
-      <tr>
-        <th>Name</th>
-        <th></th>
-        <th>Getter</th>
-        <th>Type</th>
-        <th>Comment</th>
-      </tr>
-      <tr>
-        <td>o2::soa::Index</td>
-        <td>GI</td>
-        <td>globalIndex</td>
-        <td>int64_t</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::decay3body::CollisionId</td>
-        <td>I</td>
-        <td>collisionId</td>
-        <td>int32</td>
-        <td>Collision index</td>
-      </tr>
-      <tr>
-        <td>o2::aod::decay3body::Track0Id</td>
-        <td>I</td>
-        <td>track0Id</td>
-        <td>int</td>
-        <td>Track 0 index</td>
-      </tr>
-      <tr>
-        <td>o2::aod::decay3body::Track1Id</td>
-        <td>I</td>
-        <td>track1Id</td>
-        <td>int</td>
-        <td>Track 1 index</td>
-      </tr>
-      <tr>
-        <td>o2::aod::decay3body::Track2Id</td>
-        <td>I</td>
-        <td>track2Id</td>
-        <td>int</td>
-        <td>Track 2 index</td>
       </tr>
     </table>
   </div>
@@ -5984,17 +6136,17 @@ An example of how to collect the collisions compatible to an ambiguous track and
   </div>
 
 
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::McCaloLabels</button>
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::McCaloLabels_000</button>
   <div class="panel">
     <div>
-       Table joined to the calo table containing the MC index
+       Table joined to the calo table containing the MC index (version 000, Run 2 format)
     </div>
     <div>
       Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev//Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
     </div>
     <div>Is used in:
       <ul>
-        <li>o2::aod::McCaloLabel = o2::aod::McCaloLabels::iterator</li>
+        <li>o2::aod::McCaloLabels = o2::aod::McCaloLabels_000</li>
       </ul>
     </div>
     <table class=DataModel>
@@ -6018,6 +6170,40 @@ An example of how to collect the collisions compatible to an ambiguous track and
         <td>mcMask</td>
         <td>uint16_t</td>
         <td>Bit mask to indicate detector mismatches (bit ON means mismatch). Bit 15: indicates negative label</td>
+      </tr>
+    </table>
+  </div>
+
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::McCaloLabels_001</button>
+  <div class="panel">
+    <div>
+       Table joined to the calo table containing multiple MC indices and the amplitude fraction (version 001)
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev//Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::mccalolabel::McParticleIds</td>
+        <td>GI</td>
+        <td></td>
+        <td>?</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::mccalolabel::AmplitudeA</td>
+        <td></td>
+        <td>amplitudeA</td>
+        <td>std::vector&lt;float&gt;</td>
+        <td>Energy fraction deposited by a particle inside this calo cell.</td>
       </tr>
     </table>
   </div>
@@ -6710,6 +6896,397 @@ An example of how to collect the collisions compatible to an ambiguous track and
 <a name="cat_Others"></a>
 ## Others
 <div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::Decay3Bodys</button>
+  <div class="panel">
+    <div>
+       Run 2 cascade table
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev//Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::Decay3Bodys = o2::aod::Decay3Bodys</li>
+        <li>o2::aod::Decay3Body = o2::aod::Decay3Bodys::iterator</li>
+      </ul>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::soa::Index</td>
+        <td>GI</td>
+        <td>globalIndex</td>
+        <td>int64_t</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::decay3body::CollisionId</td>
+        <td>I</td>
+        <td>collisionId</td>
+        <td>int32</td>
+        <td>Collision index</td>
+      </tr>
+      <tr>
+        <td>o2::aod::decay3body::Track0Id</td>
+        <td>I</td>
+        <td>track0Id</td>
+        <td>int</td>
+        <td>Track 0 index</td>
+      </tr>
+      <tr>
+        <td>o2::aod::decay3body::Track1Id</td>
+        <td>I</td>
+        <td>track1Id</td>
+        <td>int</td>
+        <td>Track 1 index</td>
+      </tr>
+      <tr>
+        <td>o2::aod::decay3body::Track2Id</td>
+        <td>I</td>
+        <td>track2Id</td>
+        <td>int</td>
+        <td>Track 2 index</td>
+      </tr>
+    </table>
+  </div>
+
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::TrackedCascades</button>
+  <div class="panel">
+    <div>
+       Strangeness tracking cascade table
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev//Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::TrackedCascades = o2::aod::TrackedCascades</li>
+        <li>o2::aod::TrackedCascade = o2::aod::TrackedCascades::iterator</li>
+      </ul>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::soa::Index</td>
+        <td>GI</td>
+        <td>globalIndex</td>
+        <td>int64_t</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::strangenesstracking::TrackId</td>
+        <td>I</td>
+        <td>trackId</td>
+        <td>int32</td>
+        <td>Strange track index</td>
+      </tr>
+      <tr>
+        <td>o2::aod::strangenesstracking::ITSTrackId</td>
+        <td>I</td>
+        <td>itsTrackId</td>
+        <td>int</td>
+        <td>ITS index</td>
+      </tr>
+      <tr>
+        <td>o2::aod::strangenesstracking::CascadeId</td>
+        <td>I</td>
+        <td>cascadeId</td>
+        <td>int32</td>
+        <td>Cascade index</td>
+      </tr>
+      <tr>
+        <td>o2::aod::strangenesstracking::DecayX</td>
+        <td></td>
+        <td>decayX</td>
+        <td>float</td>
+        <td>X coordinate of decay vertex</td>
+      </tr>
+      <tr>
+        <td>o2::aod::strangenesstracking::DecayY</td>
+        <td></td>
+        <td>decayY</td>
+        <td>float</td>
+        <td>Y coordinate of decay vertex</td>
+      </tr>
+      <tr>
+        <td>o2::aod::strangenesstracking::DecayZ</td>
+        <td></td>
+        <td>decayZ</td>
+        <td>float</td>
+        <td>Z coordinate of decay vertex</td>
+      </tr>
+      <tr>
+        <td>o2::aod::strangenesstracking::XiMass</td>
+        <td></td>
+        <td>xiMass</td>
+        <td>float</td>
+        <td>Xi mass</td>
+      </tr>
+      <tr>
+        <td>o2::aod::strangenesstracking::OmegaMass</td>
+        <td></td>
+        <td>omegaMass</td>
+        <td>float</td>
+        <td>Omega mass</td>
+      </tr>
+      <tr>
+        <td>o2::aod::strangenesstracking::MatchingChi2</td>
+        <td></td>
+        <td>matchingChi2</td>
+        <td>float</td>
+        <td>Matching Chi2</td>
+      </tr>
+      <tr>
+        <td>o2::aod::strangenesstracking::TopologyChi2</td>
+        <td></td>
+        <td>topologyChi2</td>
+        <td>float</td>
+        <td>Topology Chi2</td>
+      </tr>
+      <tr>
+        <td>o2::aod::strangenesstracking::ITSclsSize</td>
+        <td></td>
+        <td>itsClsSize</td>
+        <td>float</td>
+        <td>Average ITS cluster size</td>
+      </tr>
+    </table>
+  </div>
+
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::TrackedV0s</button>
+  <div class="panel">
+    <div>
+       Strangeness tracking V0 table
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev//Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::TrackedV0s = o2::aod::TrackedV0s</li>
+        <li>o2::aod::TrackedV0 = o2::aod::TrackedV0s::iterator</li>
+      </ul>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::soa::Index</td>
+        <td>GI</td>
+        <td>globalIndex</td>
+        <td>int64_t</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::strangenesstracking::TrackId</td>
+        <td>I</td>
+        <td>trackId</td>
+        <td>int32</td>
+        <td>Strange track index</td>
+      </tr>
+      <tr>
+        <td>o2::aod::strangenesstracking::ITSTrackId</td>
+        <td>I</td>
+        <td>itsTrackId</td>
+        <td>int</td>
+        <td>ITS index</td>
+      </tr>
+      <tr>
+        <td>o2::aod::strangenesstracking::V0Id</td>
+        <td>I</td>
+        <td>v0Id</td>
+        <td>int32</td>
+        <td>V0 index</td>
+      </tr>
+      <tr>
+        <td>o2::aod::strangenesstracking::DecayX</td>
+        <td></td>
+        <td>decayX</td>
+        <td>float</td>
+        <td>X coordinate of decay vertex</td>
+      </tr>
+      <tr>
+        <td>o2::aod::strangenesstracking::DecayY</td>
+        <td></td>
+        <td>decayY</td>
+        <td>float</td>
+        <td>Y coordinate of decay vertex</td>
+      </tr>
+      <tr>
+        <td>o2::aod::strangenesstracking::DecayZ</td>
+        <td></td>
+        <td>decayZ</td>
+        <td>float</td>
+        <td>Z coordinate of decay vertex</td>
+      </tr>
+      <tr>
+        <td>o2::aod::strangenesstracking::H3Lmass</td>
+        <td></td>
+        <td>h3Lmass</td>
+        <td>float</td>
+        <td>H3L mass</td>
+      </tr>
+      <tr>
+        <td>o2::aod::strangenesstracking::H4Lmass</td>
+        <td></td>
+        <td>h4Lmass</td>
+        <td>float</td>
+        <td>H4L mass</td>
+      </tr>
+      <tr>
+        <td>o2::aod::strangenesstracking::MatchingChi2</td>
+        <td></td>
+        <td>matchingChi2</td>
+        <td>float</td>
+        <td>Matching Chi2</td>
+      </tr>
+      <tr>
+        <td>o2::aod::strangenesstracking::TopologyChi2</td>
+        <td></td>
+        <td>topologyChi2</td>
+        <td>float</td>
+        <td>Topology Chi2</td>
+      </tr>
+      <tr>
+        <td>o2::aod::strangenesstracking::ITSclsSize</td>
+        <td></td>
+        <td>itsClsSize</td>
+        <td>float</td>
+        <td>Average ITS cluster size</td>
+      </tr>
+    </table>
+  </div>
+
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::Tracked3Bodys</button>
+  <div class="panel">
+    <div>
+       Strangeness tracking 3-body decay table
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev//Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::Tracked3Bodys = o2::aod::Tracked3Bodys</li>
+        <li>o2::aod::Tracked3body = o2::aod::Tracked3Bodys::iterator</li>
+      </ul>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::soa::Index</td>
+        <td>GI</td>
+        <td>globalIndex</td>
+        <td>int64_t</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::strangenesstracking::TrackId</td>
+        <td>I</td>
+        <td>trackId</td>
+        <td>int32</td>
+        <td>Strange track index</td>
+      </tr>
+      <tr>
+        <td>o2::aod::strangenesstracking::ITSTrackId</td>
+        <td>I</td>
+        <td>itsTrackId</td>
+        <td>int</td>
+        <td>ITS index</td>
+      </tr>
+      <tr>
+        <td>o2::aod::strangenesstracking::Decay3BodyId</td>
+        <td>I</td>
+        <td>decay3BodyId</td>
+        <td>int32</td>
+        <td>Decay 3 body index</td>
+      </tr>
+      <tr>
+        <td>o2::aod::strangenesstracking::DecayX</td>
+        <td></td>
+        <td>decayX</td>
+        <td>float</td>
+        <td>X coordinate of decay vertex</td>
+      </tr>
+      <tr>
+        <td>o2::aod::strangenesstracking::DecayY</td>
+        <td></td>
+        <td>decayY</td>
+        <td>float</td>
+        <td>Y coordinate of decay vertex</td>
+      </tr>
+      <tr>
+        <td>o2::aod::strangenesstracking::DecayZ</td>
+        <td></td>
+        <td>decayZ</td>
+        <td>float</td>
+        <td>Z coordinate of decay vertex</td>
+      </tr>
+      <tr>
+        <td>o2::aod::strangenesstracking::H3Lmass</td>
+        <td></td>
+        <td>h3Lmass</td>
+        <td>float</td>
+        <td>H3L mass</td>
+      </tr>
+      <tr>
+        <td>o2::aod::strangenesstracking::He4Lmass</td>
+        <td></td>
+        <td>he4Lmass</td>
+        <td>float</td>
+        <td>He4L mass</td>
+      </tr>
+      <tr>
+        <td>o2::aod::strangenesstracking::MatchingChi2</td>
+        <td></td>
+        <td>matchingChi2</td>
+        <td>float</td>
+        <td>Matching Chi2</td>
+      </tr>
+      <tr>
+        <td>o2::aod::strangenesstracking::TopologyChi2</td>
+        <td></td>
+        <td>topologyChi2</td>
+        <td>float</td>
+        <td>Topology Chi2</td>
+      </tr>
+      <tr>
+        <td>o2::aod::strangenesstracking::ITSclsSize</td>
+        <td></td>
+        <td>itsClsSize</td>
+        <td>float</td>
+        <td>Average ITS cluster size</td>
+      </tr>
+    </table>
+  </div>
+
 
   <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::Origins</button>
   <div class="panel">
