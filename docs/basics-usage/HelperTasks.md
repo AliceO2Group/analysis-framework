@@ -78,7 +78,7 @@ In general, one has to follow the following steps:
 * check if your trigger alias is fired if you run over Run1 or Run2 data (or future triggered Run3 data):
 
     ``` c++
-    if (!col.alias()[kINT7]) {
+    if (!col.alias_bit(kINT7)) {
       return;
     }
     ```
@@ -113,6 +113,8 @@ In general, one has to follow the following steps:
 
   _o2-analysis-timestamp_ task [`Common/TableProducer/timestamp.cxx`](https://github.com/AliceO2Group/O2Physics/blob/master/Common/TableProducer/timestamp.cxx) is required to create per-event timestamps necessary to access relevant CCDB objects in the event selection task.
 
+  _o2-analysis-zdc-converter_ and _o2-analysis-collision-converter_ might be also necessary for old datasets to account for changes in the data model.
+
 ### Trigger aliases
 
 Direct selection on trigger class names in O2 is rather complicated. In contrast to Run 2 AODs, there is no way to get the list of fired classes in a string-like format. Instead one has to check bits corresponding to trigger class ids either in ```triggerMask``` column in ```BCs``` table or ```triggerMaskNext50``` in ```Run2BCInfos``` table (for Run 2 if the trigger class id is larger than 50). This approach is complicated since trigger class ids for the same class vary from run to run.
@@ -123,20 +125,36 @@ To simplify trigger checks, we use trigger alias approach. Fired trigger classes
 * alias bits do not change from run to run in contrast to trigger class ids
 
 The list of available trigger alises can be found in [`Common/CCDB/TriggerAliases.h`](https://github.com/AliceO2Group/O2Physics/blob/master/Common/CCDB/TriggerAliases.h). The mapping between trigger classes (and their indices) and trigger aliases is stored in [`CCDB`](http://alice-ccdb.cern.ch/browse/EventSelection/TriggerAliases) run-by-run in dedicated _TriggerAliases_ objects.
-Current mapping can be checked in [upload_trigger_aliases.C](https://github.com/AliceO2Group/O2Physics/blob/master/Common/CCDB/macros/upload_trigger_aliases.C#L24) macro:
-
+Current mapping can be checked in [upload_trigger_aliases.C](https://github.com/AliceO2Group/O2Physics/blob/master/Common/CCDB/macros/upload_trigger_aliases.C#L24) macro for Run2:
 ``` c++
-  mAliases[kINT7] = "CINT7-B-NOPF-CENT,CV0L7-B-NOPF-CENT,CINT7-B-NOPF-CENTNOTRD,CINT7ZAC-B-NOPF-CENTNOPMD";
-  mAliases[kEMC7] = "CEMC7-B-NOPF-CENTNOPMD,CDMC7-B-NOPF-CENTNOPMD";
+  mAliases[kINT7] = "CINT7-B-NOPF-CENT,CINT7-B-NOPF-FAST,CV0L7-B-NOPF-CENT,CINT7-B-NOPF-CENTNOTRD,CINT7ZAC-B-NOPF-CENTNOPMD,CINT7-B-NOPF-ALLNOTRD,CINT7-I-NOPF-ALLNOTRD,CINT7-S-NOPF-ALLNOTRD,CMBAC-B-NOPF-ALL,CMBACS2-B-NOPF-ALLNOTRD,CMBACS2-B-NOPF-ALL";
+  mAliases[kEMC7] = "CEMC7-B-NOPF-CENTNOPMD,CEMC7-B-NOPF-CENT,CEMC7-B-NOPF-CENTNOTRD,CEMC7-B-NOPF-ALLNOTRD,CEMC7-S-NOPF-ALLNOTRD";
   mAliases[kINT7inMUON] = "CINT7-B-NOPF-MUFAST";
-  mAliases[kMuonSingleLowPt7] = "CMSL7-B-NOPF-MUFAST";
-  mAliases[kMuonUnlikeLowPt7] = "CMUL7-B-NOPF-MUFAST";
-  mAliases[kMuonLikeLowPt7] = "CMLL7-B-NOPF-MUFAST";
-  mAliases[kMuonSingleHighPt7] = "CMSH7-B-NOPF-MUFAST";
+  mAliases[kMuonSingleLowPt7] = "CMSL7-B-NOPF-MUFAST,CMSL7-B-NOPF-MUON,CMSL7-S-NOPF-MUON,CMSL7-SC-NOPF-MUON,CPBI1MSL-B-NOPF-MUON,CMUS7-B-NOPF-MUON";
+  mAliases[kMuonUnlikeLowPt7] = "CMUL7-B-NOPF-MUFAST,CMUL7-B-NOPF-MUON,CMUL7-S-NOPF-MUON,CMUL7-S-NOPF-ALLNOTRD,CPBI1MUL-B-NOPF-MUON,CMUU7-B-NOPF-MUON,CMUU7-B-NOPF-ALLNOTRD";
+  mAliases[kMuonLikeLowPt7] = "CMLL7-B-NOPF-MUFAST,CMLL7-B-NOPF-MUON,CMLL7-S-NOPF-MUON,CPBI1MLL-B-NOPF-MUON";
+  mAliases[kMuonSingleHighPt7] = "CMSH7-B-NOPF-MUFAST,CMSH7-B-NOPF-MUON,CMSH7-S-NOPF-MUON,CMSH7-S-NOPF-ALLNOTRD,CPBI1MSH-B-NOPF-MUON,CMUSH7-B-NOPF-MUON";
   mAliases[kCUP8] = "CCUP8-B-NOPF-CENTNOTRD";
   mAliases[kCUP9] = "CCUP9-B-NOPF-CENTNOTRD";
   mAliases[kMUP10] = "CMUP10-B-NOPF-MUFAST";
   mAliases[kMUP11] = "CMUP11-B-NOPF-MUFAST";
+  mAliases[kINT1] = "CINT1B-ABCE-NOPF-ALL,CINT1-B-NOPF-ALLNOTRD,CINT1-B-NOPF-ALLNOTRD";
+  mAliases[kUnbiased] = "CBEAMB-ABCE-NOPF-ALL,CBEAMB-B-NOPF-ALLNOTRD,CTRUE-B-NOPF-ALLNOTRD,CTRUE-S-NOPF-ALLNOTRD,CTRUE-B-NOPF-CENTNOTRD";
+  mAliases[kDMC7] = "CDMC7-B-NOPF-CENTNOPMD,CDMC7-B-NOPF-CENT,CDMC7-B-NOPF-CENTNOTRD,CDMC7-B-NOPF-ALLNOTRD";
+  mAliases[kEG1] = "CINT7EG1-B-NOPF-CENTNOPMD,CEMC7EG1-B-NOPF-CENT,CEMC7EG1-B-NOPF-CENTNOTRD,CEMC7EG1-B-NOPF-CENTNOPMD,CEMC7EG1-B-NOPF-ALLNOTRD,CEMC7EGA-B-NOPF-CENTNOTRD,CEMC7EGA-S-NOPF-CENTNOTRD,CEMC7EGA-S-NOPF-ALLNOTRD,CPBI2EGA-B-NOPF-CENTNOTRD";
+  mAliases[kEJ1] = "CINT7EJ1-B-NOPF-CENTNOTRD,CEMC7EJ1-B-NOPF-CENT,CEMC7EJ1-B-NOPF-CENTNOTRD,CEMC7EJ1-B-NOPF-CENTNOPMD,CEMC7EJ1-B-NOPF-ALLNOTRD,CEMC7EJE-B-NOPF-CENTNOTRD,CEMC7EJE-S-NOPF-CENTNOTRD,CEMC7EJE-S-NOPF-ALLNOTRD,CPBI2EJE-B-NOPF-CENTNOTRD";
+  mAliases[kEG2] = "CINT7EG2-B-NOPF-CENTNOPMD,CEMC7EG2-B-NOPF-CENT,CEMC7EG2-B-NOPF-CENTNOTRD,CEMC7EG2-B-NOPF-CENTNOPMD,CEMC7EG2-B-NOPF-ALLNOTRD,CEMC7EG2PER-B-NOPF-CENTNOPMD";
+  mAliases[kEJ2] = "CINT7EJ2-B-NOPF-CENTNOPMD,CEMC7EJ2-B-NOPF-CENT,CEMC7EJ2-B-NOPF-CENTNOTRD,CEMC7EJ2-B-NOPF-CENTNOPMD,CEMC7EJ2-B-NOPF-ALLNOTRD";
+  mAliases[kDG1] = "CINT7DG1-B-NOPF-CENTNOPMD,CDMC7DG1-B-NOPF-CENT,CDMC7DG1-B-NOPF-CENTNOTRD,CDMC7DG1-B-NOPF-CENTNOPMD";
+  mAliases[kDJ1] = "CINT7DJ1-B-NOPF-CENTNOPMD,CDMC7DJ1-B-NOPF-CENT,CDMC7DJ1-B-NOPF-CENTNOTRD,CDMC7DJ1-B-NOPF-CENTNOPMD";
+  mAliases[kDG2] = "CINT7DG2-B-NOPF-CENTNOPMD,CDMC7DG2-B-NOPF-CENT,CDMC7DG2-B-NOPF-CENTNOTRD,CDMC7DG2-B-NOPF-CENTNOPMD,CDMC7DG2PER-B-NOPF-CENTNOPMD";
+  mAliases[kDJ2] = "CINT7DJ2-B-NOPF-CENTNOPMD,CDMC7DJ2-B-NOPF-CENT,CDMC7DJ2-B-NOPF-CENTNOTRD,CDMC7DJ2-B-NOPF-CENTNOPMD";
+```
+and in [upload_trigger_aliases_run3.C](https://github.com/AliceO2Group/O2Physics/blob/master/Common/CCDB/macros/upload_trigger_aliases_run3.C#L25) for Run 3:
+``` c++
+  mAliases[kTVXinTRD] = "CMTVX-B-NOPF-TRD,minbias_TVX";
+  mAliases[kTVXinEMC] = "C0TVX-B-NOPF-EMC,minbias_TVX_L0";
+  mAliases[kTVXinPHOS] = "C0TVX-B-NOPF-PHSCPV,minbias_TVX_L0";
 ```
 
 This list of trigger aliases and classes is not complete but it should be enough for tests in various PWGs. New trigger classes and aliases can be added upon request (contact Evgeny Kryshen).
@@ -147,33 +165,41 @@ Full list of event selection criteria can be found in [`Common/CCDB/EventSelecti
 
 ``` c++
 enum EventSelectionFlags {
-  kIsBBV0A = 0,       // cell-averaged time in V0A in beam-beam window
-  kIsBBV0C,           // cell-averaged time in V0C in beam-beam window (for Run 2 only)
-  kIsBBFDA,           // cell-averaged time in FDA (or AD in Run2) in beam-beam window
-  kIsBBFDC,           // cell-averaged time in FDC (or AD in Run2) in beam-beam window
-  kNoBGV0A,           // cell-averaged time in V0A in beam-gas window
-  kNoBGV0C,           // cell-averaged time in V0C in beam-gas window (for Run 2 only)
-  kNoBGFDA,           // cell-averaged time in FDA (AD in Run2) in beam-gas window
-  kNoBGFDC,           // cell-averaged time in FDC (AD in Run2) in beam-gas window
-  kIsBBT0A,           // cell-averaged time in T0A in beam-beam window
-  kIsBBT0C,           // cell-averaged time in T0C in beam-beam window
-  kIsBBZNA,           // time in common ZNA channel in beam-beam window
-  kIsBBZNC,           // time in common ZNC channel in beam-beam window
-  kIsBBZAC,           // time in ZNA and ZNC in beam-beam window - circular cut in ZNA-ZNC plane
-  kNoBGZNA,           // time in common ZNA channel is outside of beam-gas window
-  kNoBGZNC,           // time in common ZNC channel is outside of beam-gas window
-  kNoV0MOnVsOfPileup, // no out-of-bunch pileup according to online-vs-offline VOM correlation
-  kNoSPDOnVsOfPileup, // no out-of-bunch pileup according to online-vs-offline SPD correlation
-  kNoV0Casymmetry,    // no beam-gas according to correlation of V0C multiplicities in V0C3 and V0C012
-  kIsGoodTimeRange,   // good time range
-  kNoIncompleteDAQ,   // complete event according to DAQ flags
-  kNoTPCLaserWarmUp,  // no TPC laser warm-up event (used in Run 1)
-  kNoTPCHVdip,        // no TPC HV dip
-  kNoPileupFromSPD,   // no pileup according to SPD vertexer
-  kNoV0PFPileup,      // no out-of-bunch pileup according to V0 past-future info
-  kNoSPDClsVsTklBG,   // no beam-gas according to cluster-vs-tracklet correlation
-  kNoV0C012vsTklBG,   // no beam-gas according to V0C012-vs-tracklet correlation
-  kNsel               // counter
+  kIsBBV0A = 0,        // cell-averaged time in V0A in beam-beam window
+  kIsBBV0C,            // cell-averaged time in V0C in beam-beam window (for Run 2 only)
+  kIsBBFDA,            // cell-averaged time in FDA (or AD in Run2) in beam-beam window
+  kIsBBFDC,            // cell-averaged time in FDC (or AD in Run2) in beam-beam window
+  kIsBBT0A,            // cell-averaged time in T0A in beam-beam window
+  kIsBBT0C,            // cell-averaged time in T0C in beam-beam window
+  kNoBGV0A,            // cell-averaged time in V0A in beam-gas window
+  kNoBGV0C,            // cell-averaged time in V0C in beam-gas window (for Run 2 only)
+  kNoBGFDA,            // cell-averaged time in FDA (AD in Run2) in beam-gas window
+  kNoBGFDC,            // cell-averaged time in FDC (AD in Run2) in beam-gas window
+  kNoBGT0A,            // cell-averaged time in T0A in beam-gas window
+  kNoBGT0C,            // cell-averaged time in T0C in beam-gas window
+  kIsBBZNA,            // time in common ZNA channel in beam-beam window
+  kIsBBZNC,            // time in common ZNC channel in beam-beam window
+  kIsBBZAC,            // time in ZNA and ZNC in beam-beam window - circular cut in ZNA-ZNC plane
+  kNoBGZNA,            // time in common ZNA channel is outside of beam-gas window
+  kNoBGZNC,            // time in common ZNC channel is outside of beam-gas window
+  kNoV0MOnVsOfPileup,  // no out-of-bunch pileup according to online-vs-offline VOM correlation
+  kNoSPDOnVsOfPileup,  // no out-of-bunch pileup according to online-vs-offline SPD correlation
+  kNoV0Casymmetry,     // no beam-gas according to correlation of V0C multiplicities in V0C3 and V0C012
+  kIsGoodTimeRange,    // good time range
+  kNoIncompleteDAQ,    // complete event according to DAQ flags
+  kNoTPCLaserWarmUp,   // no TPC laser warm-up event (used in Run 1)
+  kNoTPCHVdip,         // no TPC HV dip
+  kNoPileupFromSPD,    // no pileup according to SPD vertexer
+  kNoV0PFPileup,       // no out-of-bunch pileup according to V0 past-future info
+  kNoSPDClsVsTklBG,    // no beam-gas according to cluster-vs-tracklet correlation
+  kNoV0C012vsTklBG,    // no beam-gas according to V0C012-vs-tracklet correlation
+  kNoInconsistentVtx,  // no inconsistency in SPD and Track vertices
+  kNoPileupInMultBins, // no pileup according to multiplicity-differential pileup checks
+  kNoPileupMV,         // no pileup according to multi-vertexer
+  kNoPileupTPC,        // no pileup in TPC
+  kIsTriggerTVX,       // FT0 vertex (acceptable FT0C-FT0A time difference) at trigger level
+  kIsINT1,             // SPDGFO >= 1 || V0A || V0C
+  kNsel                // counter
 };
 ```
 
@@ -186,7 +212,7 @@ Technically there are three types of criteria:
 Decisions on inidividual selection criteria are stored in _selection_ array ```BcSels``` and ```EvSels``` tables. E.g. one can check if a given collision passed _kIsBBV0A_ selection:
 
 ``` c++
-  bool isBBV0Apassed = col.selection()[evsel::kIsBBV0A];
+  bool isBBV0Apassed = col.selection_bit(evsel::kIsBBV0A);
 ```
 
 ### Event selection decisions
@@ -278,8 +304,6 @@ Then _sel7_ decision is constructed from active checks:
 
 One of the main goals of the event selection task in Run 3 is to find the original bunch crossing for each collision. The basic approach is to start from estimated collision bc and search for closest BC containing FT0 entries in a +/-4 sigma window where sigma corresponds to the estimated collision time resolution from ```col.collisionTimeRes()```. Implementation details can be found in [eventSelection.cxx#L348](https://github.com/AliceO2Group/O2Physics/blob/master/Common/TableProducer/eventSelection.cxx#L348).
 
-There is a possibility to set custom search window using _customDeltaBC_ configurable. At the moment we use _customDeltaBC_ set to 300 bunch crossings.
-
 Users can access found bunch crossings and FT0 entries using _foundBC_ or _foundFT0_ indices stored in the _EvSels_ table:
 
 ``` c++
@@ -308,12 +332,6 @@ Event selection task supports several configurables:
 
   ``` c++
   Configurable<int> muonSelection{"muonSelection", 0, "0 - barrel, 1 - muon selection with pileup cuts, 2 - muon selection without pileup cuts"};
-  ```
-
-* _customDeltaBC_ allows to set custom search window for FIT-collision matching in Run 3, see [Found bunch crossings](#found-bunch-crossings) section.
-
-  ``` c++
-  Configurable<int> customDeltaBC{"customDeltaBC", 300, "custom BC delta for FIT-collision matching"};
   ```
 
 * _isMC_ allows to suppress several checks for Run 2 MC, see [Event selection decisions](#event-selection-decisions):
@@ -351,7 +369,6 @@ One can set other configurables in the json file. This json file has to be provi
 
 * One has to apply offline selections in O2 explicitly in contrast to AliPhysics where these selections were applied together with trigger alias selection.
 * EvSel table might be also useful in user tasks relying on beam-beam and beam-gas decisions in forward detectors, e.g. in UPC tasks.
-* Trigger class aliases for Run 3 are not available yet (pilot beam data taking was focused on continuous readout)
 
 ## Multiplicity and centrality selection in O2
 
