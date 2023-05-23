@@ -291,7 +291,7 @@ Selection mask _applySelection_ is obtained from CCDB in [eventSelection.cxx](ht
 ```
 
 Then _sel7_ decision is constructed from active checks:
-[Common/TableProducer/eventSelection.cxx#L321](https://github.com/AliceO2Group/O2Physics/blob/master/Common/TableProducer/eventSelection.cxx#L321)
+[Common/TableProducer/eventSelection.cxx](https://github.com/AliceO2Group/O2Physics/blob/master/Common/TableProducer/eventSelection.cxx#L438)
 
 ``` c++
     bool sel7 = 1;
@@ -365,33 +365,33 @@ One can set other configurables in the json file. This json file has to be provi
   o2-analysis-timestamp -b | o2-analysis-event-selection --configuration json://config.json -b
   ```
 
-### Remarks
+### Remarks on event selection
 
 * One has to apply offline selections in O2 explicitly in contrast to AliPhysics where these selections were applied together with trigger alias selection.
 * EvSel table might be also useful in user tasks relying on beam-beam and beam-gas decisions in forward detectors, e.g. in UPC tasks.
 
 ## Multiplicity and centrality selection in O2
 
-### Concept
+### Multiplicity selection concept
 
 The multiplicity and centrality selection in O2 is based on the concept of derived tables created in dedicated tasks from available AOD contents:
 
-* _o2-analysis-multiplicity-table_ task [`Analysis/Tasks/multiplicityTable.cxx`](https://github.com/AliceO2Group/AliceO2/blob/dev/Analysis/Tasks/multiplicityTable.cxx) stores relevant multiplicity values (V0A, V0C, ZNA, ZNC) and their dynamic sums (V0M) in [`Mults`](https://github.com/AliceO2Group/AliceO2/blob/dev/Analysis/DataModel/include/Analysis/Multiplicity.h) table joinable with _Collisions_ table.
-* _o2-analysis-multiplicity-qa_ task [`Analysis/Tasks/multiplicityQa.cxx`](https://github.com/AliceO2Group/AliceO2/blob/dev/Analysis/Tasks/multiplicityQa.cxx) creates multiplicity distributions in minimum bias triggers necessary for centrality calibration.
-* _o2-analysis-centrality-table_ task [`Analysis/Tasks/centralityTable.cxx`](https://github.com/AliceO2Group/AliceO2/blob/dev/Analysis/Tasks/centralityTable.cxx) takes multiplicity values from the [`Mults`](https://github.com/AliceO2Group/AliceO2/blob/dev/Analysis/DataModel/include/Analysis/Multiplicity.h) table and stores centrality values in [`Cents`](https://github.com/AliceO2Group/AliceO2/blob/dev/Analysis/DataModel/include/Analysis/Centrality.h) table joinable with _Collisions_ table. Relevant cumulative multiplicity distributions are stored in [CCDB](http://ccdb-test.cern.ch:8080/browse/Multiplicity/CumMultV0M). At the moment, centrality calibration objects are available only for LHC15o. The centrality calibration relies on 90% anchor points but doesn't take into account vertex dependence yet. The difference with AliPhysics centrality calibration doesn't exceed 0.5%.
-* _o2-analysis-centrality-qa_ task [`Analysis/Tasks/centralityQa.cxx`](https://github.com/AliceO2Group/AliceO2/blob/dev/Analysis/Tasks/centralityQa.cxx) creates centrality distributions for minimum bias triggers and can be used for control and QA purposes.
+* _o2-analysis-multiplicity-table_ task [`Common/TableProducer/multiplicityTable.cxx`](https://github.com/AliceO2Group/O2Physics/blob/master/Common/TableProducer/multiplicityTable.cxx) stores relevant multiplicity values (V0A, V0C, ZNA, ZNC) and their dynamic sums (V0M) in [`Mults`](https://github.com/AliceO2Group/O2Physics/blob/master/Common/DataModel/Multiplicity.h) table joinable with _Collisions_ table.
+* _o2-analysis-multiplicity-qa_ task [`Common/Tasks/multiplicityQa.cxx`](https://github.com/AliceO2Group/O2Physics/blob/master/Common/Tasks/multiplicityQa.cxx) creates multiplicity distributions in minimum bias triggers necessary for centrality calibration.
+* _o2-analysis-centrality-table_ task [`Common/TableProducer/centralityTable.cxx`](https://github.com/AliceO2Group/O2Physics/blob/master/Common/TableProducer/centralityTable.cxx) takes multiplicity values from the [`Mults`](https://github.com/AliceO2Group/AliceO2/blob/dev/Analysis/DataModel/include/Analysis/Multiplicity.h) table and stores centrality values in [`Cents`](https://github.com/AliceO2Group/O2Physics/blob/master/Common/DataModel/Centrality.h) table joinable with _Collisions_ table. Relevant cumulative multiplicity distributions are stored in [CCDB](http://alice-ccdb.cern.ch/browse/Centrality). The centrality calibration relies on 90% anchor points in Pb-Pb.
+* _o2-analysis-centrality-qa_ task [`Common/Tasks/centralityQa.cxx`](https://github.com/AliceO2Group/O2Physics/blob/master/Common/Tasks/centralityQa.cxx) creates centrality distributions for minimum bias triggers and can be used for control and QA purposes.
 
-Note that _o2-analysis-multiplicity-qa_ and _o2-analysis-centrality-qa_ tasks rely on the minimum bias trigger selection therefore one has to run event selection in stack with these tasks, see [here](evsel.md) for more details.
+Note that _o2-analysis-multiplicity-qa_ and _o2-analysis-centrality-qa_ tasks rely on the minimum bias trigger selection therefore one has to run event selection in stack with these tasks.
 
-### Usage in user tasks
+### Multiplicity selection usage in user tasks
 
-One can check _o2-analysis-centrality-qa_ task for example usage: [`Analysis/Tasks/centralityQa.cxx`](https://github.com/AliceO2Group/AliceO2/blob/dev/Analysis/Tasks/centralityQa.cxx). Usually, analysers perform event selection before the centrality selection therefore one has to consider the following steps:
+One can check _o2-analysis-centrality-qa_ task for example usage: [`Common/Tasks/centralityQa.cxx`](https://github.com/AliceO2Group/O2Physics/blob/master/Common/Tasks/centralityQa.cxx). Usually, analysers perform event selection before the centrality selection therefore one has to consider the following steps:
 
-* add [`EventSelection.h`](https://github.com/AliceO2Group/AliceO2/blob/dev/Analysis/DataModel/include/Analysis/EventSelection.h) and [`Centrality.h`](https://github.com/AliceO2Group/AliceO2/blob/dev/Analysis/DataModel/include/Analysis/Centrality.h) headers:
+* add [`EventSelection.h`](https://github.com/AliceO2Group/O2Physics/blob/master/Common/DataModel/EventSelection.h) and [`Centrality.h`](https://github.com/AliceO2Group/O2Physics/blob/master/Common/DataModel/Centrality.h) headers:
 
     ``` c++
-    #include "Analysis/EventSelection.h"
-    #include "Analysis/Centrality.h"
+    #include "Common/DataModel/EventSelection.h"
+    #include "Common/DataModel/Centrality.h"
     ```
 
 * join _Collisions_, _EvSels_ and _Cents_ tables and use corresponding iterator as an argument of the process function:
@@ -403,7 +403,7 @@ One can check _o2-analysis-centrality-qa_ task for example usage: [`Analysis/Tas
 * check if your trigger alias is fired if you run over Run1 or Run2 data (or future triggered Run3 data):
 
     ``` c++
-    if (!col.alias()[kINT7])
+    if (!col.alias_bit(kINT7))
       return;
     ```
 
@@ -429,7 +429,9 @@ One can check _o2-analysis-centrality-qa_ task for example usage: [`Analysis/Tas
     o2-analysis-timestamp --aod-file AO2D.root -b | o2-analysis-event-selection -b | o2-analysis-mulitplicity-table -b | o2-analysis-centrality-table -b | o2-analysis-user-task -b
     ```
 
-    _o2-analysis-timestamp_ task [`Analysis/Tasks/timestamp.cxx`](https://github.com/AliceO2Group/AliceO2/blob/dev/Analysis/Tasks/timestamp.cxx) is required to create per-event timestamps necessary to access relevant CCDB objects in the event selection and/or centrality tasks.
+    _o2-analysis-timestamp_ task is required to create per-event timestamps necessary to access relevant CCDB objects in the event selection and/or centrality tasks.
+
+    _o2-analysis-zdc-converter_ and _o2-analysis-collision-converter_ might be also necessary for old datasets to account for changes in the data model.
 
 ## Particle identification (PID)
 
@@ -519,7 +521,7 @@ In this case, we are using the mass hypothesis of the electron, but tables for n
     ``` bash
     o2-analysis-pid-tpc-base
     ```
-    
+
     These tasks can be configured according to the needs specified by the detector experts.
     If you are in doubt, you can contact them or take the configuration of the Hyperloop as a reference.
 
@@ -558,7 +560,7 @@ In this case, we are using the mass hypothesis of the electron, but tables for n
 
 The track selection in the O2 analysis framework is provided in form of a stand-alone workflow that you can run in front of your analysis:
 
-```
+``` bash
 o2-analysis-trackselection | o2-analysis-myTask
 ```
 
@@ -635,7 +637,7 @@ void process(soa::Filtered<soa::Join<aod::Tracks, aod::TrackSelection, aod::Trac
 ```
 
 Both the definition of `TrackSelection` and the `TracksDCA` tables can be found here: [`TrackSelectionTables`](https://github.com/AliceO2Group/O2Physics/blob/master/Common/DataModel/TrackSelectionTables.h).
-If you want to have a look at the track parameters after the selection, you can use the [`o2-analysis-qa-event-track`](https://github.com/AliceO2Group/O2Physics/blob/master/DPG/Tasks/qaEventTrack.cxx) task:
+If you want to have a look at the track parameters after the selection, you can use the [`o2-analysis-qa-event-track`](https://github.com/AliceO2Group/O2Physics/blob/master/DPG/Tasks/AOTTrack/qaEventTrack.h) task:
 
 ``` bash
 o2-analysis-trackselection | o2-analysis-qa-event-track | ...
@@ -675,7 +677,7 @@ The same set of global-track selections, but with different ITS requirements for
 ```
 
 The goal of the track selection task is to provide the most common selections for all analyses.
-If you really require a completely different set of tracks not covered by the standard filter bits, you can create your own TrackSelection object (see [`TrackSelection.h`](https://github.com/AliceO2Group/AliceO2/blob/dev/Analysis/Core/include/Analysis/TrackSelection.h) and [`TrackSelectionTables.cxx`](https://github.com/AliceO2Group/AliceO2/blob/dev/Analysis/Core/src/TrackSelection.cxx)) :
+If you really require a completely different set of tracks not covered by the standard filter bits, you can create your own TrackSelection object (see [`TrackSelectionTables.h`](https://github.com/AliceO2Group/O2Physics/blob/master/Common/DataModel/TrackSelectionTables.h) and [`trackselection.cxx`](https://github.com/AliceO2Group/O2Physics/blob/master/Common/TableProducer/trackselection.cxx)) :
 
 ``` c++
 
@@ -715,7 +717,7 @@ mySelection = myTrackSelection();
 bool isSelected = mySelection.IsSelected(track)
 ```
 
-### Remarks
+### Remarks on track selection
 
 Please note that this documentation only represents the status quo of the track selection implementation and many things can and will change.
 In particular the cut values will most likely change with the 'new' detector in Run 3 and some of the legacy cuts will be removed or only available for converted Run 2 data.
