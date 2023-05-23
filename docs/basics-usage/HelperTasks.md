@@ -15,9 +15,9 @@ Table of contents:
 
 ## Timestamp
 
-The timestamp task is needed to fill the table [Timestamps](../datamodel/helperTaskTables.html#o2-analysis-timestamp). Timestamp contains the time of a bunch crossing since the start of the run. This time is often needed to retrieve objects in the CCDB (see Tutorial [CCDB](../tutorials/workingWithCCDB.html#ccdb)).
+The timestamp task is needed to fill the table with timestamps. Timestamp contains the time of a bunch crossing since the start of the run. This time is often needed to retrieve objects in the CCDB (see Tutorial [CCDB](../tutorials/workingWithCCDB.html)).
 
-Since the Timestamps table has an entry per bunch crossing it can be joined with table BC. The join is defined by o2::aod::BCsWithTimestamps (see list of defined [joins and iterators](../datamodel/joinsAndIterators.html#list-of-defined-joins-and-iterators)).
+Since the Timestamps table has an entry per bunch crossing it can be joined with table BC. The join is defined by o2::aod::BCsWithTimestamps (see list of defined [joins and iterators](../datamodel/joinsAndIterators.html#list-of-joins-and-iterators)).
 
 ## Event selection
 
@@ -365,7 +365,7 @@ One can set other configurables in the json file. This json file has to be provi
   o2-analysis-timestamp -b | o2-analysis-event-selection --configuration json://config.json -b
   ```
 
-### Remarks on event selection
+### Remarks
 
 * One has to apply offline selections in O2 explicitly in contrast to AliPhysics where these selections were applied together with trigger alias selection.
 * EvSel table might be also useful in user tasks relying on beam-beam and beam-gas decisions in forward detectors, e.g. in UPC tasks.
@@ -378,7 +378,7 @@ The multiplicity and centrality selection in O2 is based on the concept of deriv
 
 * _o2-analysis-multiplicity-table_ task [`Common/TableProducer/multiplicityTable.cxx`](https://github.com/AliceO2Group/O2Physics/blob/master/Common/TableProducer/multiplicityTable.cxx) stores relevant multiplicity values (V0A, V0C, ZNA, ZNC) and their dynamic sums (V0M) in [`Mults`](https://github.com/AliceO2Group/O2Physics/blob/master/Common/DataModel/Multiplicity.h) table joinable with _Collisions_ table.
 * _o2-analysis-multiplicity-qa_ task [`Common/Tasks/multiplicityQa.cxx`](https://github.com/AliceO2Group/O2Physics/blob/master/Common/Tasks/multiplicityQa.cxx) creates multiplicity distributions in minimum bias triggers necessary for centrality calibration.
-* _o2-analysis-centrality-table_ task [`Common/TableProducer/centralityTable.cxx`](https://github.com/AliceO2Group/O2Physics/blob/master/Common/TableProducer/centralityTable.cxx) takes multiplicity values from the [`Mults`](https://github.com/AliceO2Group/AliceO2/blob/dev/Analysis/DataModel/include/Analysis/Multiplicity.h) table and stores centrality values in [`Cents`](https://github.com/AliceO2Group/O2Physics/blob/master/Common/DataModel/Centrality.h) table joinable with _Collisions_ table. Relevant cumulative multiplicity distributions are stored in [CCDB](http://alice-ccdb.cern.ch/browse/Centrality). The centrality calibration relies on 90% anchor points in Pb-Pb.
+* _o2-analysis-centrality-table_ task [`Common/TableProducer/centralityTable.cxx`](https://github.com/AliceO2Group/O2Physics/blob/master/Common/TableProducer/centralityTable.cxx) takes multiplicity values from the [`Mults`](https://github.com/AliceO2Group/O2Physics/blob/master/Common/DataModel/Multiplicity.h) table and stores centrality values in [`Cents`](https://github.com/AliceO2Group/O2Physics/blob/master/Common/DataModel/Centrality.h) table joinable with _Collisions_ table. Relevant cumulative multiplicity distributions are stored in [CCDB](http://alice-ccdb.cern.ch/browse/Centrality). The centrality calibration relies on 90% anchor points in Pb-Pb.
 * _o2-analysis-centrality-qa_ task [`Common/Tasks/centralityQa.cxx`](https://github.com/AliceO2Group/O2Physics/blob/master/Common/Tasks/centralityQa.cxx) creates centrality distributions for minimum bias triggers and can be used for control and QA purposes.
 
 Note that _o2-analysis-multiplicity-qa_ and _o2-analysis-centrality-qa_ tasks rely on the minimum bias trigger selection therefore one has to run event selection in stack with these tasks.
