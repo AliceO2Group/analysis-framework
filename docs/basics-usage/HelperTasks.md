@@ -4,6 +4,7 @@ title: Helper tasks
 ---
 
 # Helper tasks
+
 Table of contents:
 
 * [Timestamp](#timestamp)
@@ -126,6 +127,7 @@ To simplify trigger checks, we use trigger alias approach. Fired trigger classes
 
 The list of available trigger alises can be found in [`Common/CCDB/TriggerAliases.h`](https://github.com/AliceO2Group/O2Physics/blob/master/Common/CCDB/TriggerAliases.h). The mapping between trigger classes (and their indices) and trigger aliases is stored in [`CCDB`](http://alice-ccdb.cern.ch/browse/EventSelection/TriggerAliases) run-by-run in dedicated _TriggerAliases_ objects.
 Current mapping can be checked in [upload_trigger_aliases.C](https://github.com/AliceO2Group/O2Physics/blob/master/Common/CCDB/macros/upload_trigger_aliases.C#L24) macro for Run2:
+
 ``` c++
   mAliases[kINT7] = "CINT7-B-NOPF-CENT,CINT7-B-NOPF-FAST,CV0L7-B-NOPF-CENT,CINT7-B-NOPF-CENTNOTRD,CINT7ZAC-B-NOPF-CENTNOPMD,CINT7-B-NOPF-ALLNOTRD,CINT7-I-NOPF-ALLNOTRD,CINT7-S-NOPF-ALLNOTRD,CMBAC-B-NOPF-ALL,CMBACS2-B-NOPF-ALLNOTRD,CMBACS2-B-NOPF-ALL";
   mAliases[kEMC7] = "CEMC7-B-NOPF-CENTNOPMD,CEMC7-B-NOPF-CENT,CEMC7-B-NOPF-CENTNOTRD,CEMC7-B-NOPF-ALLNOTRD,CEMC7-S-NOPF-ALLNOTRD";
@@ -150,7 +152,9 @@ Current mapping can be checked in [upload_trigger_aliases.C](https://github.com/
   mAliases[kDG2] = "CINT7DG2-B-NOPF-CENTNOPMD,CDMC7DG2-B-NOPF-CENT,CDMC7DG2-B-NOPF-CENTNOTRD,CDMC7DG2-B-NOPF-CENTNOPMD,CDMC7DG2PER-B-NOPF-CENTNOPMD";
   mAliases[kDJ2] = "CINT7DJ2-B-NOPF-CENTNOPMD,CDMC7DJ2-B-NOPF-CENT,CDMC7DJ2-B-NOPF-CENTNOTRD,CDMC7DJ2-B-NOPF-CENTNOPMD";
 ```
+
 and in [upload_trigger_aliases_run3.C](https://github.com/AliceO2Group/O2Physics/blob/master/Common/CCDB/macros/upload_trigger_aliases_run3.C#L25) for Run 3:
+
 ``` c++
   mAliases[kTVXinTRD] = "CMTVX-B-NOPF-TRD,minbias_TVX";
   mAliases[kTVXinEMC] = "C0TVX-B-NOPF-EMC,minbias_TVX_L0";
@@ -442,7 +446,7 @@ Table of contents:
 * [Task for TOF and TPC PID](#task-for-tof-and-tpc-pid)
 * [Example of tasks that use the PID tables (and how to run them)](#example-of-tasks-that-use-the-pid-tables-and-how-to-run-them)
 
-Here are described the working principles of Particle Identification (PID) in O2 and how to get PID information (expected values, nSigma separation *et cetera*) in your analysis tasks if you plan to identify particles.
+Here are described the working principles of Particle Identification (PID) in O2 and how to get PID information (expected values, nSigma separation _et cetera_) in your analysis tasks if you plan to identify particles.
 
 ### Introduction
 
@@ -546,14 +550,17 @@ In this case, we are using the mass hypothesis of the electron, but tables for n
 * QA histograms should come with the PID tasks; they can be enabled by including the QA tasks in your workflow when running locally or with the corresponding QA tasks as in:
 
     For the **TOF** QA plots
+
     ``` bash
     ... | o2-analysis-pid-tof-qa | ...
     ```
 
     For the **TPC** QA plots
+
     ``` bash
     ... | o2-analysis-pid-tpc-qa | ...
     ```
+
     Where by `...` we mean the other tasks in your workflow.
 
 ## Track Selection
@@ -646,7 +653,7 @@ o2-analysis-trackselection | o2-analysis-qa-event-track | ...
 At the moment there are two 'FilterBits' available in the TrackSelection table, which are defined as follows:
 
  | Cuts                                                 | globalTrack                                                            | globalTrackSDD                               |
- | ---------------------------------------------------- | ---------------------------------------------------------------------- | -------------------------------------------- |
+ |------------------------------------------------------|------------------------------------------------------------------------|----------------------------------------------|
  | min number of crossed rows TPC                       | 70                                                                     | 70                                           |
  | min ratio of crossed rows over findable clusters TPC | 0.8                                                                    | 0.8                                          |
  | max chi2 per cluster TPC                             | 4.0                                                                    | 4.0                                          |
