@@ -420,6 +420,45 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
 
 </div>
 
+##  o2-analysis-calo-label-converter
+Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/TableProducer//caloLabelConverter.cxx" target="_blank">caloLabelConverter.cxx</a>
+<div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::McCaloLabels_001</button>
+  <div class="panel">
+    <div>
+       Table joined to the calo table containing multiple MC indices and the amplitude fraction (version 001)
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev//Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::mccalolabel::McParticleIds</td>
+        <td>GI</td>
+        <td></td>
+        <td>?</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::mccalolabel::AmplitudeA</td>
+        <td></td>
+        <td>amplitudeA</td>
+        <td>std::vector&lt;float&gt;</td>
+        <td>Energy fraction deposited by a particle inside this calo cell.</td>
+      </tr>
+    </table>
+  </div>
+
+</div>
+
 ##  o2-analysis-centrality-table
 Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/TableProducer//centralityTable.cxx" target="_blank">centralityTable.cxx</a>
 <div>
@@ -2124,7 +2163,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
         <li>o2::aod::Reso2TracksExt = soa::Join<o2::aod::FullTracks, o2::aod::TracksDCA></li>
         <li>o2::aod::Reso2TracksPIDExt = soa::Join<o2::aod::Reso2TracksPID, o2::aod::TracksDCA></li>
         <li>o2::aod::hf_cand_3prong::TracksSigmac = soa::Join<o2::aod::FullTracks, o2::aod::TracksDCA></li>
-        <li>o2::aod::hf_cand_toxipi::MyTracks = soa::Join<o2::aod::BigTracks, o2::aod::TracksDCA, o2::aod::TrackSelection></li>
+        <li>o2::aod::hf_cand_toxipi::MyTracks = soa::Join<o2::aod::BigTracks, o2::aod::TracksDCA, o2::aod::HfPvRefitTrack></li>
       </ul>
     </div>
     <table class=DataModel>
@@ -2468,7 +2507,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
         <li>o2::aod::Reso2TracksExt = soa::Join<o2::aod::FullTracks, o2::aod::TracksDCA></li>
         <li>o2::aod::Reso2TracksPIDExt = soa::Join<o2::aod::Reso2TracksPID, o2::aod::TracksDCA></li>
         <li>o2::aod::hf_cand_3prong::TracksSigmac = soa::Join<o2::aod::FullTracks, o2::aod::TracksDCA></li>
-        <li>o2::aod::hf_cand_toxipi::MyTracks = soa::Join<o2::aod::BigTracks, o2::aod::TracksDCA, o2::aod::TrackSelection></li>
+        <li>o2::aod::hf_cand_toxipi::MyTracks = soa::Join<o2::aod::BigTracks, o2::aod::TracksDCA, o2::aod::HfPvRefitTrack></li>
       </ul>
     </div>
     <table class=DataModel>
@@ -2535,6 +2574,32 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
     </table>
   </div>
 
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::TrackCompColls</button>
+  <div class="panel">
+    <div>
+       Table with vectors of collision indices stored per track
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/DataModel/CollisionAssociation.h" target="_blank">Common/DataModel/CollisionAssociation.h</a>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::track_association::CollisionIds</td>
+        <td>GI</td>
+        <td></td>
+        <td>?</td>
+        <td></td>
+      </tr>
+    </table>
+  </div>
+
 </div>
 
 ##  o2-analysis-trackextension
@@ -2556,7 +2621,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
         <li>o2::aod::Reso2TracksExt = soa::Join<o2::aod::FullTracks, o2::aod::TracksDCA></li>
         <li>o2::aod::Reso2TracksPIDExt = soa::Join<o2::aod::Reso2TracksPID, o2::aod::TracksDCA></li>
         <li>o2::aod::hf_cand_3prong::TracksSigmac = soa::Join<o2::aod::FullTracks, o2::aod::TracksDCA></li>
-        <li>o2::aod::hf_cand_toxipi::MyTracks = soa::Join<o2::aod::BigTracks, o2::aod::TracksDCA, o2::aod::TrackSelection></li>
+        <li>o2::aod::hf_cand_toxipi::MyTracks = soa::Join<o2::aod::BigTracks, o2::aod::TracksDCA, o2::aod::HfPvRefitTrack></li>
       </ul>
     </div>
     <table class=DataModel>
@@ -2597,12 +2662,6 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
     </div>
     <div>
       Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/DataModel/TrackSelectionTables.h" target="_blank">Common/DataModel/TrackSelectionTables.h</a>
-    </div>
-    <div>Is used in:
-      <ul>
-        <li>o2::aod::hf_cand_toxipi::MyTracks = soa::Join<o2::aod::BigTracks, o2::aod::TracksDCA, o2::aod::TrackSelection></li>
-        <li>o2::aod::hf_sel_toxipi::MyTrackInfo = soa::Join<o2::aod::BigTracksPIDExtended, o2::aod::TrackSelection></li>
-      </ul>
     </div>
     <table class=DataModel>
       <tr>
@@ -2683,6 +2742,13 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
         <td></td>
       </tr>
       <tr>
+        <td>o2::aod::track::IsGlobalTrackWoTPCCluster</td>
+        <td>D</td>
+        <td>isGlobalTrackWoTPCCluster</td>
+        <td>bool</td>
+        <td></td>
+      </tr>
+      <tr>
         <td>o2::aod::track::IsGlobalTrackWoPtEta</td>
         <td>D</td>
         <td>isGlobalTrackWoPtEta</td>
@@ -2693,6 +2759,13 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
         <td>o2::aod::track::IsGlobalTrackWoDCA</td>
         <td>D</td>
         <td>isGlobalTrackWoDCA</td>
+        <td>bool</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::IsGlobalTrackWoDCATPCCluster</td>
+        <td>D</td>
+        <td>isGlobalTrackWoDCATPCCluster</td>
         <td>bool</td>
         <td></td>
       </tr>
@@ -2943,6 +3016,239 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
         <td>bachelorId</td>
         <td>int</td>
         <td>Bachelor track index</td>
+      </tr>
+    </table>
+  </div>
+
+</div>
+
+##  o2-analysis-zdc-converter
+Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/TableProducer//zdcConverter.cxx" target="_blank">zdcConverter.cxx</a>
+<div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::Zdcs_001</button>
+  <div class="panel">
+    <div>
+       ZDC information, version 1, std::vector format
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev//Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::Zdcs = o2::aod::Zdcs_001</li>
+      </ul>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::soa::Index</td>
+        <td>GI</td>
+        <td>globalIndex</td>
+        <td>int64_t</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::zdc::BCId</td>
+        <td>I</td>
+        <td>bcId</td>
+        <td>int32</td>
+        <td>BC index, to be used by both legacy and new table</td>
+      </tr>
+      <tr>
+        <td>o2::aod::zdc::Energy</td>
+        <td></td>
+        <td>energy</td>
+        <td>std::vector&lt;float&gt;</td>
+        <td>Energy of non-zero channels. The channel IDs are given in ChannelE (at the same index)</td>
+      </tr>
+      <tr>
+        <td>o2::aod::zdc::ChannelE</td>
+        <td></td>
+        <td>channelE</td>
+        <td>std::vector&lt;uint8_t&gt;</td>
+        <td>Channel IDs which have reconstructed energy. There are at maximum 26 channels.</td>
+      </tr>
+      <tr>
+        <td>o2::aod::zdc::Amplitude</td>
+        <td></td>
+        <td>amplitude</td>
+        <td>std::vector&lt;float&gt;</td>
+        <td>Amplitudes of non-zero channels. The channel IDs are given in ChannelT (at the same index)</td>
+      </tr>
+      <tr>
+        <td>o2::aod::zdc::Time</td>
+        <td></td>
+        <td>time</td>
+        <td>std::vector&lt;float&gt;</td>
+        <td>Times of non-zero channels. The channel IDs are given in ChannelT (at the same index)</td>
+      </tr>
+      <tr>
+        <td>o2::aod::zdc::ChannelT</td>
+        <td></td>
+        <td>channelT</td>
+        <td>std::vector&lt;uint8_t&gt;</td>
+        <td>Channel IDs which had non-zero amplitudes. There are at maximum 26 channels.</td>
+      </tr>
+      <tr>
+        <td>o2::aod::zdc::DyEnergyZEM1</td>
+        <td>D</td>
+        <td>energyZEM1</td>
+        <td>float</td>
+        <td>return ZEM1 energy</td>
+      </tr>
+      <tr>
+        <td>o2::aod::zdc::DyEnergyZEM2</td>
+        <td>D</td>
+        <td>energyZEM2</td>
+        <td>float</td>
+        <td>return ZEM2 energy</td>
+      </tr>
+      <tr>
+        <td>o2::aod::zdc::DyEnergyCommonZNA</td>
+        <td>D</td>
+        <td>energyCommonZNA</td>
+        <td>float</td>
+        <td>return common ZNA energy</td>
+      </tr>
+      <tr>
+        <td>o2::aod::zdc::DyEnergyCommonZNC</td>
+        <td>D</td>
+        <td>energyCommonZNC</td>
+        <td>float</td>
+        <td>return common ZNC energy</td>
+      </tr>
+      <tr>
+        <td>o2::aod::zdc::DyEnergyCommonZPA</td>
+        <td>D</td>
+        <td>energyCommonZPA</td>
+        <td>float</td>
+        <td>return common ZPA energy</td>
+      </tr>
+      <tr>
+        <td>o2::aod::zdc::DyEnergyCommonZPC</td>
+        <td>D</td>
+        <td>energyCommonZPC</td>
+        <td>float</td>
+        <td>return common ZPC energy</td>
+      </tr>
+      <tr>
+        <td>o2::aod::zdc::DyEnergySectorZNA</td>
+        <td>D</td>
+        <td>energySectorZNA</td>
+        <td>std::array&lt;float,4&gt;</td>
+        <td>return sector ZNA energy (array of 4 floats)</td>
+      </tr>
+      <tr>
+        <td>o2::aod::zdc::DyEnergySectorZNC</td>
+        <td>D</td>
+        <td>energySectorZNC</td>
+        <td>std::array&lt;float,4&gt;</td>
+        <td>return sector ZNC energy (array of 4 floats)</td>
+      </tr>
+      <tr>
+        <td>o2::aod::zdc::DyEnergySectorZPA</td>
+        <td>D</td>
+        <td>energySectorZPA</td>
+        <td>std::array&lt;float,4&gt;</td>
+        <td>return sector ZPA energy (array of 4 floats)</td>
+      </tr>
+      <tr>
+        <td>o2::aod::zdc::DyEnergySectorZPC</td>
+        <td>D</td>
+        <td>energySectorZPC</td>
+        <td>std::array&lt;float,4&gt;</td>
+        <td>return sector ZPC energy (array of 4 floats)</td>
+      </tr>
+      <tr>
+        <td>o2::aod::zdc::DyTimeZEM1</td>
+        <td>D</td>
+        <td>timeZEM1</td>
+        <td>float</td>
+        <td>return ZEM1 time information</td>
+      </tr>
+      <tr>
+        <td>o2::aod::zdc::DyTimeZEM2</td>
+        <td>D</td>
+        <td>timeZEM2</td>
+        <td>float</td>
+        <td>return ZEM2 time information</td>
+      </tr>
+      <tr>
+        <td>o2::aod::zdc::DyTimeZNA</td>
+        <td>D</td>
+        <td>timeZNA</td>
+        <td>float</td>
+        <td>return ZNA time information</td>
+      </tr>
+      <tr>
+        <td>o2::aod::zdc::DyTimeZNC</td>
+        <td>D</td>
+        <td>timeZNC</td>
+        <td>float</td>
+        <td>return ZNC time information</td>
+      </tr>
+      <tr>
+        <td>o2::aod::zdc::DyTimeZPA</td>
+        <td>D</td>
+        <td>timeZPA</td>
+        <td>float</td>
+        <td>return ZPA time information</td>
+      </tr>
+      <tr>
+        <td>o2::aod::zdc::DyTimeZPC</td>
+        <td>D</td>
+        <td>timeZPC</td>
+        <td>float</td>
+        <td>return ZPC time information</td>
+      </tr>
+      <tr>
+        <td>o2::aod::zdc::DyAmplitudeZEM1</td>
+        <td>D</td>
+        <td>amplitudeZEM1</td>
+        <td>float</td>
+        <td>return ZEM1 amplitude</td>
+      </tr>
+      <tr>
+        <td>o2::aod::zdc::DyAmplitudeZEM2</td>
+        <td>D</td>
+        <td>amplitudeZEM2</td>
+        <td>float</td>
+        <td>return ZEM2 amplitude</td>
+      </tr>
+      <tr>
+        <td>o2::aod::zdc::DyAmplitudeZNA</td>
+        <td>D</td>
+        <td>amplitudeZNA</td>
+        <td>float</td>
+        <td>return ZNA amplitude</td>
+      </tr>
+      <tr>
+        <td>o2::aod::zdc::DyAmplitudeZNC</td>
+        <td>D</td>
+        <td>amplitudeZNC</td>
+        <td>float</td>
+        <td>return ZNC amplitude</td>
+      </tr>
+      <tr>
+        <td>o2::aod::zdc::DyAmplitudeZPA</td>
+        <td>D</td>
+        <td>amplitudeZPA</td>
+        <td>float</td>
+        <td>return ZPA amplitude</td>
+      </tr>
+      <tr>
+        <td>o2::aod::zdc::DyAmplitudeZPC</td>
+        <td>D</td>
+        <td>amplitudeZPC</td>
+        <td>float</td>
+        <td>return ZPC amplitude</td>
       </tr>
     </table>
   </div>
@@ -4113,34 +4419,6 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
         <td>betaerror</td>
         <td>float</td>
         <td>Uncertainty on the TOF beta</td>
-      </tr>
-      <tr>
-        <td>o2::aod::pidtofbeta::ExpBetaEl</td>
-        <td></td>
-        <td>expbetael</td>
-        <td>float</td>
-        <td>Expected beta of electron</td>
-      </tr>
-      <tr>
-        <td>o2::aod::pidtofbeta::ExpBetaElError</td>
-        <td></td>
-        <td>expbetaelerror</td>
-        <td>float</td>
-        <td>Expected uncertainty on the beta of electron</td>
-      </tr>
-      <tr>
-        <td>o2::aod::pidtofbeta::SeparationBetaEl</td>
-        <td></td>
-        <td>separationbetael</td>
-        <td>float</td>
-        <td>Separation computed with the expected beta for electrons</td>
-      </tr>
-      <tr>
-        <td>o2::aod::pidtofbeta::DiffBetaEl</td>
-        <td>D</td>
-        <td>diffbetael</td>
-        <td>float</td>
-        <td>Difference between the measured and the expected beta for electrons</td>
       </tr>
     </table>
   </div>
