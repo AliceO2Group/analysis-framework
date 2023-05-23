@@ -15,9 +15,9 @@ Table of contents:
 
 ## Timestamp
 
-The timestamp task is needed to fill the table with timestamps. Timestamp contains the time of a bunch crossing since the start of the run. This time is often needed to retrieve objects in the CCDB (see Tutorial [CCDB](../tutorials/workingWithCCDB.html)).
+The timestamp task is needed to fill the table with timestamps. Timestamp contains the time of a bunch crossing since the start of the run. This time is often needed to retrieve objects in the CCDB (see Tutorial [CCDB](https://aliceo2group.github.io/analysis-framework/docs/tutorials/workingWithCCDB.html)).
 
-Since the Timestamps table has an entry per bunch crossing it can be joined with table BC. The join is defined by o2::aod::BCsWithTimestamps (see list of defined [joins and iterators](../datamodel/joinsAndIterators.html#list-of-joins-and-iterators)).
+Since the Timestamps table has an entry per bunch crossing it can be joined with table BC. The join is defined by o2::aod::BCsWithTimestamps (see list of defined [joins and iterators](https://aliceo2group.github.io/analysis-framework/docs/datamodel/joinsAndIterators.html#list-of-joins-and-iterators)).
 
 ## Event selection
 
