@@ -31,7 +31,7 @@ Mattermost channel: [hf-o2-analysis-challenge](https://mattermost.web.cern.ch/al
 - Default parameters used in the selection of single tracks, track-index skims and candidates are defined in
 [`SelectorCuts.h`](https://github.com/AliceO2Group/O2Physics/blob/master/PWGHF/Core/SelectorCuts.h).
 - Secondary-vertex reconstruction algorithms are implemented in the
-[`DCAFitterN`](https://github.com/AliceO2Group/AliceO2/blob/dev/Detectors/Vertexing/include/DetectorsVertexing/DCAFitterN.h) class.
+[`DCAFitterN`](https://github.com/AliceO2Group/AliceO2/blob/dev/Common/DCAFitter/include/DCAFitter/DCAFitterN.h) class.
 - Functions for calculations of kinematic quantities and for MC matching are implemented in the
 [`RecoDecay`](https://github.com/AliceO2Group/O2Physics/blob/master/Common/Core/RecoDecay.h) class.
 - Selection of tracks based on the particle identification (PID) detectors is performed via the
