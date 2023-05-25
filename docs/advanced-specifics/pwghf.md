@@ -249,27 +249,11 @@ Example:
 - main task (`struct`) name: `HfTaskXY` (results in the generated device name `hf-task-x-y`)
   - auxiliary-task name: `HfTaskXY<Suffix>` (results in the generated device name `hf-task-x-y-<suffix>`)
 
-### Git
-
-- If your changes consist of several independent steps, keep them separate in several commits.
-- Give your commits meaningful titles.
-  - If needed, add more details in the commit message (separated by a blank line from the commit title).
-- Keep your feature branch up to date with the upstream main branch (`git pull --rebase upstream master`).
-
 ### Pull requests (PR)
 
 - Update your branch and test it before creating a PR.
-- Create one PR per feature (i.e. do not mix big unrelated code changes).
 - Give your PR a short meaningful title.
   - Add the “PWGHF: ” prefix in the title of your PR. (It helps to search for PWGHF-related PRs in the commit history of the main branch.)
     - Note: If your PR has only one commit, add the prefix also in the commit title (because that is the title that will appear in the history after merging, unless the person merging the PR changes it by hand).
 - Give further useful details about your changes in the PR description.
   - Add links to all related PRs (e.g. O2Physics, O2, AliPhysics, Run3Analysisvalidation) in the PR description.
-
-#### PR review
-
-- When you implement changes during the review, push them into your branch as new separate commits with meaningful titles.
-- Do not amend, squash or rebase existing commits in the PR. It would break the links between the code and the review comments.
-  - If you need to update your branch with the changes in the main branch while the PR is under review, use `git merge upstream/master` (instead of `rebase`) to preserve the commit history.
-- Fix formatting issues by merging the PRs created automatically by the CI tests in your fork repository.
-- If you need more time to implement further changes in your PR, convert it to a draft to avoid unnecessary build tests and mark it as ready for review again when you're done.
