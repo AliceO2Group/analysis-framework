@@ -25,9 +25,7 @@ SliceCache cache;
 std::vector<double> xBins{VARIABLE_WIDTH, -0.064, -0.062, -0.060, 0.066, 0.068, 0.070, 0.072};
 std::vector<double> yBins{VARIABLE_WIDTH, -0.320, -0.301, -0.300, 0.330, 0.340, 0.350, 0.360};
 using BinningType = BinningPolicy<aod::collision::PosX, aod::collision::PosY>;
-{% raw %}
-BinningType binningOnPositions{{xBins, yBins}, true};                                    // true is for 'ignore overflows' (true by default)
-{% endraw %}
+{% raw %}BinningType binningOnPositions{{xBins, yBins}, true};                                    // true is for 'ignore overflows' (true by default){% endraw %}
 ```
 
 Then, we define the mixing structure itself:
@@ -114,8 +112,8 @@ void process(aod::Collisions& collisions, aod::Tracks& tracks) {
 The binning policy:
 
 ```cpp
-using BinningType = FlexibleBinningPolicy<std::tuple<decltype(getTracksSize)>, aod::collision::PosZ, decltype(getTracksSize)>;
-BinningType binningWithLambda{{getTracksSize}, {axisVertex, axisMultiplicity}, true};
+{% raw %}using BinningType = FlexibleBinningPolicy<std::tuple<decltype(getTracksSize)>, aod::collision::PosZ, decltype(getTracksSize)>;
+BinningType binningWithLambda{{getTracksSize}, {axisVertex, axisMultiplicity}, true};{% endraw %}
 ```
 
 A tuple with types of all lambda functions must be first passed in the `BinningType` definition, before the rest of arguments follow in the order of usage.<br>
