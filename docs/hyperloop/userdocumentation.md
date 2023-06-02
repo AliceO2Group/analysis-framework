@@ -284,8 +284,8 @@ When a wagon test finishes in warning, this means that the wagon will not be inc
     <img src="../images/warnignMemory.png" width="40%">
  </div>
  
- * The memory consumption is larger than the allowed memory on the current target queue (e.g. Grid - Single core). 
- * For Grid - Single core and 2 core: If the average PSS memory is not significantly larger ( <=  3.2 GB ), then operators will compose your train on request on Grid - Single core. Otherwise, if it is > 3.2 GB and <= 5 GB, the operators will compose the train on request on Grid - 2 core. If larger than 5 GB, then the train cannot be composed. The user should check for ways of improving memory consumption.
+ * The memory consumption is larger than the allowed memory on the current target queue (e.g. Grid - Single core). The usual limit fora user wagon is 2 GB.
+ * For Grid - Single core and 2 core: If the average PSS memory is not significantly larger ( <=  3.2 GB ), then operators will compose your train on request on Grid - Single core. Otherwise, if it is > 3.2 GB and <= 4 GB, the operators will compose the train on request on Grid - 2 core. If larger than 4 GB, then the train cannot be composed. The user should check for ways of improving memory consumption.
  * For the other target queues, trains can only be composed if the memory consumption is within the target limits.
  * For the cases when the train cannot be composed due to high memory consumption, the user can review the test. One can check the logs and look for any possible improvements that can be done for a lower memory consumption.
  
