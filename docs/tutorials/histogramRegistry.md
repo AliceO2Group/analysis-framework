@@ -3,6 +3,8 @@ sort: 5
 title: Histogram Registry
 ---
 
+# Histogram Registry
+
 ```goal
 Learn how to create, fill, and manage histograms and other objects
 ```
@@ -11,8 +13,6 @@ Learn how to create, fill, and manage histograms and other objects
   Source: <a href="https://github.com/AliceO2Group/O2Physics/blob/master/Tutorials/src/histogramRegistry.cxx" target="_blank">histogramRegistry.cxx</a><br>
   Executable: o2-analysistutorial-histogram-registry
 </div>
-
-# Histogram Registry
 
 The histogram registry is an object to create and manage histograms in a consistent and optimized way.
 

@@ -197,5 +197,4 @@ std::shared_ptr<T>& get(const H& histName)
 Again HIST("histname") must be provided as argument to get the histogram with name = histname.
 
 Practical examples of histogram manipulations in O2 can be found in the
-tutorials [Histograms](../tutorials/histograms.md) and [Histogram
-Registry](../tutorials/histogramRegistry.md).
+tutorials [Histograms](../tutorials/histograms.md) and [Histogram Registry](../tutorials/histogramRegistry.md).
