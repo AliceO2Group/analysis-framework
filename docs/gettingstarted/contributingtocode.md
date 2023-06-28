@@ -26,6 +26,7 @@ In order to contribute new code to the central repository, please follow these s
   - Add the workflow compilation instructions in the `CMakeLists.txt` (you can clone one of the existing `o2physics_add_dpl_workflow` blocks).
     Follow the `kebab-case` naming convention of the executables (i.e. lowercase words separated by hyphens).
 - [Compile O2Physics](installing.md#building-partially-for-development-using-ninja) with your changes.
+  - Make sure the compilation of your code does not produce any errors or warnings.
   - In case you added a new workflow, the newly created executable will have the name you specified on the `o2physics_add_dpl_workflow` line, prefixed with `o2-analysis-<xx>-`, where `<xx>` corresponds to the `PWG<XX>` folder your file is in.
 - Test your code.
 - Commit your changes and push them to your remote fork repository on GitHub.
@@ -97,6 +98,8 @@ When you implement changes during the review, push them into your branch as addi
 - Do not amend, squash or rebase existing commits in the PR (unless asked to do so by the code owners)!
   You would have to force the push to update your branch which would overwrite the commit history, break the links between the code and the review comments and make the PR review more messy.
   - If you need to update your branch with the changes in the main branch while the PR is under review, use `git merge upstream/master` (instead of rebasing) to preserve the commit history.
+- Do not mark someone else's review comments as resolved. It is up to the reviewer who made the comment to judge whether the comment has been addressed.
+  If you think you have addressed the comment, say so in a reply (e.g. comment “Done” or give a thumb-up reaction).
 - If you need more time to implement further changes in your PR,
 [convert it to a draft](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/changing-the-stage-of-a-pull-request#converting-a-pull-request-to-a-draft)
 to avoid unnecessary compilation tests and mark it as ready for review again when you're done.

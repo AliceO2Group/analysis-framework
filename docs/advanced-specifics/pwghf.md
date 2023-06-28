@@ -13,12 +13,14 @@ title: PWG-HF
 - See the [presentation on HF vertexing and analysis](https://indico.cern.ch/event/1200252/timetable/#10-hf-vertexing-and-analysis)
 and the [HF analysis example](https://indico.cern.ch/event/1200252/timetable/#23-hands-on-session-4-analysis)
 from the [O2 Analysis Tutorial](https://indico.cern.ch/event/1200252/) (13–14 Oct 2022).
+- See the [HF hands-on session](https://indico.cern.ch/event/1267433/timetable/#b-504545-parallel-hands-on-pwg)
+from the [O2 Analysis Tutorial 2.0](https://indico.cern.ch/event/1267433/) (17-28 Apr 2023).
 
 ## Contact
 
 Coordinators: Francesco Prino, Vít Kučera
 
-Mattermost channel: [hf-o2-analysis-challenge](https://mattermost.web.cern.ch/alice/channels/hf-o2-analysis-challenge)
+Mattermost channel: [hf-o2-analysis](https://mattermost.web.cern.ch/alice/channels/hf-o2-analysis)
 
 ## Code
 
@@ -36,15 +38,18 @@ Mattermost channel: [hf-o2-analysis-challenge](https://mattermost.web.cern.ch/al
 [`RecoDecay`](https://github.com/AliceO2Group/O2Physics/blob/master/Common/Core/RecoDecay.h) class.
 - Selection of tracks based on the particle identification (PID) detectors is performed via the
 [`TrackSelectorPID`](https://github.com/AliceO2Group/O2Physics/blob/master/Common/Core/TrackSelectorPID.h) class.
-- Code for easy running of the HF tasks and output processing can be found in the
+- Code for easy local running of the HF tasks and output processing can be found in the
 [Run3Analysisvalidation](https://github.com/AliceO2Group/Run3Analysisvalidation) repository.
   - Analysis code for postprocessing of the task output is collected in the
   [`FirstAnalysis`](https://github.com/AliceO2Group/Run3Analysisvalidation/tree/master/FirstAnalysis) directory.
 
 ## AliHyperloop
 
-[JIRA tickets](https://alice.its.cern.ch/jira/browse/PWGHF-269?jql=project%20%3D%20PWGHF%20AND%20issuetype%20%3D%20Analysis%20AND%20component%20%3D%20PWG-HF)
-of the HF analyses on <!-- markdown-link-check-disable -->[AliHyperloop](https://alimonitor.cern.ch/hyperloop/)<!-- markdown-link-check-enable -->
+<!-- markdown-link-check-disable -->
+[AliHyperloop analyses](https://alimonitor.cern.ch/hyperloop/all-analyses)
+<!-- markdown-link-check-enable -->
+(Type "PWGHF" in the field "JIRA" to filter.)<br>
+Corresponding [JIRA tickets](https://alice.its.cern.ch/jira/issues/?jql=project%20%3D%20PWGHF%20AND%20%22Run%203%20analysis%22%20%3D%20Yes)
 
 ## Framework structure
 
@@ -59,9 +64,8 @@ Individual components are described in the next section below.
 
 ### Track index skimming
 
-Workflow                                  | File                        | Type
-------------------------------------------|-----------------------------|------------------------------------
-`o2-analysis-hf-track-index-skim-creator` | `trackIndexSkimCreator.cxx` | direct 2/3-prong and cascade decays
+Workflow: `o2-analysis-hf-track-index-skim-creator`<br>
+File: [`trackIndexSkimCreator.cxx`](https://github.com/AliceO2Group/O2Physics/blob/master/PWGHF/TableProducer/trackIndexSkimCreator.cxx)
 
 #### Track and event selection
 
@@ -81,14 +85,9 @@ together with a flag indicating for which decay channel(s) the candidate was sel
 
 ### Candidate creation and MC matching
 
-Workflow                                   | File                          | Type
--------------------------------------------|-------------------------------|------------------------------------------------------------------------
-`o2-analysis-hf-candidate-creator-2prong`  | `candidateCreator2Prong.cxx`  | direct 2-prong decays
-`o2-analysis-hf-candidate-creator-3prong`  | `candidateCreator3Prong.cxx`  | direct 3-prong decays
-`o2-analysis-hf-candidate-creator-cascade` | `candidateCreatorCascade.cxx` | cascade decays with V<sup>0</sup> daughters (Λ<sub>c</sub><sup>±</sup>)
-`o2-analysis-hf-candidate-creator-xicc`    | `candidateCreatorXicc.cxx`    | Ξ<sub>cc</sub><sup>±±</sup> → Ξ<sub>c</sub><sup>±</sup> π<sup>±</sup>
-`o2-analysis-hf-candidate-creator-x`       | `candidateCreatorX.cxx`       | X(3872) → J/ψ π<sup>±</sup> π<sup>∓</sup>
-`o2-analysis-hf-candidate-creator-bplus`   | `candidateCreatorBplus.cxx`   | B<sup>±</sup> → D<sup>0</sup>(bar) π<sup>±</sup>
+Workflows: `o2-analysis-hf-candidate-creator-<particle|decay>`<br>
+Files: `candidateCreator<Particle|Decay>.cxx`<br>
+Directories: [`PWGHF/TableProducer`](https://github.com/AliceO2Group/O2Physics/tree/master/PWGHF/TableProducer), `PWGHF/*/TableProducer`
 
 #### Candidate creation
 
@@ -111,17 +110,9 @@ Derived tables with MC flags used for the estimation of the signal efficiencies 
 
 ### Candidate selection
 
-Workflow                                              | File                                | Type
-------------------------------------------------------|-------------------------------------|----------------------------------------------------------------------
-`o2-analysis-hf-candidate-selector-d0`                | `candidateSelectorD0.cxx`           | D<sup>0</sup>(bar) → π<sup>±</sup> K<sup>∓</sup>
-`o2-analysis-hf-candidate-selector-jpsi`              | `candidateSelectorJpsi.cxx`         | J/ψ → e<sup>+</sup> e<sup>−</sup>/μ<sup>+</sup> μ<sup>−</sup>
-`o2-analysis-hf-candidate-selector-x-to-jpsi-pi-pi`   | `candidateSelectorXToJpsiPiPi.cxx`  | X(3872) → J/ψ π<sup>±</sup> π<sup>∓</sup>
-`o2-analysis-hf-candidate-selector-dplus-to-pi-k-pi`  | `candidateSelectorDplusToPiKPi.cxx` | D<sup>±</sup> → π<sup>±</sup> K<sup>∓</sup> π<sup>±</sup>
-`o2-analysis-hf-candidate-selector-lc`                | `candidateSelectorLc.cxx`           | Λ<sub>c</sub><sup>±</sup> → p(bar) K<sup>∓</sup> π<sup>±</sup>
-`o2-analysis-hf-candidate-selector-lc-to-k0s-p`       | `candidateSelectorLcToK0sP.cxx`     | Λ<sub>c</sub><sup>±</sup> → p(bar) K<sub>S</sub><sup>0</sup>
-`o2-analysis-hf-candidate-selector-xic-to-p-k-pi`     | `candidateSelectorXicToPKPi.cxx`    | Ξ<sub>c</sub><sup>±</sup> → p(bar) K<sup>∓</sup> π<sup>±</sup>
-`o2-analysis-hf-candidate-selector-xicc-to-p-k-pi-pi` | `candidateSelectorXiccToPKPiPi.cxx` | Ξ<sub>cc</sub><sup>±±</sup> → Ξ<sub>c</sub><sup>±</sup> π<sup>±</sup>
-`o2-analysis-hf-candidate-selector-bplus-to-d0-pi`    | `candidateSelectorBplusToD0Pi.cxx`  | B<sup>±</sup> → D<sup>0</sup>(bar) π<sup>±</sup>
+Workflows: `o2-analysis-hf-candidate-selector-<particle|decay>`<br>
+Files: `candidateSelector<Particle|Decay>.cxx`<br>
+Directories: [`PWGHF/TableProducer`](https://github.com/AliceO2Group/O2Physics/tree/master/PWGHF/TableProducer), `PWGHF/*/TableProducer`
 
 In a dedicated selector task, tailored for each decay channel, accurate analysis level selection criteria
 based on decay topology and PID are applied to the reconstructed candidates.
@@ -130,20 +121,9 @@ The selection results are stored in a column of a new dedicated table that is la
 
 ### Analysis tasks
 
-Workflow                                 | File                        | Type
------------------------------------------|-----------------------------|-------------------------------------------------------------------------
-`o2-analysis-hf-task-d0`                 | `taskD0.cxx`                | D<sup>0</sup>(bar) → π<sup>±</sup> K<sup>∓</sup>
-`o2-analysis-hf-task-jpsi`               | `taskJpsi.cxx`              | J/ψ → e<sup>+</sup> e<sup>−</sup>/μ<sup>+</sup> μ<sup>−</sup>
-`o2-analysis-hf-task-dplus`              | `taskDplus.cxx`             | D<sup>±</sup> → π<sup>±</sup> K<sup>∓</sup> π<sup>±</sup>
-`o2-analysis-hf-task-lc`                 | `taskLc.cxx`                | Λ<sub>c</sub><sup>±</sup> → p(bar) K<sup>∓</sup> π<sup>±</sup>
-`o2-analysis-hf-task-lc-to-k0s-p`        | `taskLcToK0sP.cxx`          | Λ<sub>c</sub><sup>±</sup> → p(bar) K<sub>S</sub><sup>0</sup>
-`o2-analysis-hf-task-xic`                | `taskXic.cxx`               | Ξ<sub>c</sub><sup>±</sup> → p(bar) K<sup>∓</sup> π<sup>±</sup>
-`o2-analysis-hf-task-xicc`               | `taskXicc.cxx`              | Ξ<sub>cc</sub><sup>±±</sup> → Ξ<sub>c</sub><sup>±</sup> π<sup>±</sup>
-`o2-analysis-hf-task-bplus`              | `taskBplus.cxx`             | B<sup>±</sup> → D<sup>0</sup>(bar) π<sup>±</sup>
-`o2-analysis-hf-task-x`                  | `taskX.cxx`                 | X(3872) → J/ψ π<sup>±</sup> π<sup>∓</sup>
-`o2-analysis-hf-correlator-d0-d0bar`     | `correlatorD0D0bar.cxx`     | D<sup>0</sup>–D<sup>0</sup>bar correlations
-`o2-analysis-hf-correlator-dplus-dminus` | `correlatorDplusDminus.cxx` | D<sup>+</sup>–D<sup>−</sup> correlations
-`o2-analysis-hf-task-correlation-d-dbar` | `taskCorrelationDDbar.cxx`  | D<sup>0</sup>–D<sup>0</sup>bar, D<sup>+</sup>–D<sup>−</sup> correlations
+Workflows: `o2-analysis-hf-task-<particle|decay>`<br>
+Files: `task<Particle|Decay>.cxx`<br>
+Directories: [`PWGHF/Tasks`](https://github.com/AliceO2Group/O2Physics/tree/master/PWGHF/Tasks), `PWGHF/*/Tasks`
 
 #### Real-data analysis
 
@@ -153,26 +133,22 @@ In the user analysis task, histograms needed for the analysis are filled with pr
 
 For MC events, histograms with quantities of generated MC particles and MC-matched candidates are produced.
 
-### QA and helper workflows
-
-Workflow                               | File                      | Type
----------------------------------------|---------------------------|----------------------------------------------------------------------------
-`o2-analysis-hf-task-mc-validation`    | `taskMcValidation.cxx`    | validation of HF MC distributions
-`o2-analysis-task-qa-pid-rejection`    | `taskQaPidRejection.cxx`  | PID selection performance
-`o2-analysis-hf-task-sel-optimisation` | `taskSelOptimisation.cxx` | preselection optimisation
-`o2-analysis-hf-refit-pv-dummy`        | `refitPvDummy.cxx`        | creation of a dummy table with primary-vertex position (for converted data)
-
 ### Tree creation
 
 Candidate tables and other related derived tables are exported to disk as ROOT trees for
 post-processing with external tools, e.g. for optimisation with Machine Learning techniques.
 
-Workflow                                        | File                          | Type
-------------------------------------------------|-------------------------------|----------------------------------------------------------------------
-`o2-analysis-hf-tree-creator-d0-to-k-pi`        | `treeCreatorD0ToKPi.cxx`      | D<sup>0</sup>(bar) → π<sup>±</sup> K<sup>∓</sup>
-`o2-analysis-hf-tree-creator-lc-to-p-k-pi`      | `treeCreatorLcToPKPi.cxx`     | Λ<sub>c</sub><sup>±</sup> → p(bar) K<sup>∓</sup> π<sup>±</sup>
-`o2-analysis-hf-tree-creator-x-to-jpsi-pi-pi`   | `treeCreatorXToJpsiPiPi.cxx`  | X(3872) → J/ψ π<sup>±</sup> π<sup>∓</sup>
-`o2-analysis-hf-tree-creator-xicc-to-p-k-pi-pi` | `treeCreatorXiccToPKPiPi.cxx` | Ξ<sub>cc</sub><sup>±±</sup> → Ξ<sub>c</sub><sup>±</sup> π<sup>±</sup>
+Workflows: `o2-analysis-hf-tree-creator-<particle|decay>`<br>
+Files: `treeCreator<Particle|Decay>.cxx`<br>
+Directories: [`PWGHF/TableProducer`](https://github.com/AliceO2Group/O2Physics/tree/master/PWGHF/TableProducer), `PWGHF/*/TableProducer`
+
+### QA and helper workflows
+
+Workflow                               | File                      | Type
+---------------------------------------|---------------------------|----------------------------------------------------------------------------
+`o2-analysis-hf-task-mc-validation`    | `taskMcValidation.cxx`    | validation of HF MC distributions
+`o2-analysis-hf-task-sel-optimisation` | `taskSelOptimisation.cxx` | preselection optimisation
+`o2-analysis-hf-refit-pv-dummy`        | `refitPvDummy.cxx`        | creation of a dummy table with primary-vertex position (for converted data)
 
 ## Contribute
 
@@ -181,17 +157,33 @@ Workflow                                        | File                          
 - Follow the [O2 coding guidelines](https://github.com/AliceO2Group/CodingGuidelines)
     (especially the [naming](https://rawgit.com/AliceO2Group/CodingGuidelines/master/naming_formatting.html)
     and [commenting](https://rawgit.com/AliceO2Group/CodingGuidelines/master/comments_guidelines.html) rules).
-- Sort O2Physics `#include`s alphabetically and keep `PWGHF/...` at the end.
+- Respect the alphabetic order and groups in `CMakeLists.txt` when adding a new workflow.
+- Link only necessary libraries in `CMakeLists.txt`.
+- Avoid code duplication and reuse existing code (e.g. `RecoDecay`, table columns, constants).
+- Explicitly state when using the `std` namespace (e.g. `std::abs`, `std::array`, `std::vector`).
+- Do not use ROOT features unnecessarily (e.g. `TMath::Abs` → `std::abs`).
+  - Use of macros for [bit manipulations](https://root.cern/doc/master/Rtypes_8h_source.html#l00083) (`BIT`, `SETBIT`, `TESTBIT`, `CLRBIT`) is encouraged.
+- Include only needed headers but do not rely on implicitly included headers.
+- Organise `#include`s into groups (separated by a blank line) in the following order:
+  - C++
+  - other external headers
+  - ROOT
+  - O2
+  - O2Physics
+  - PWG other than HF
+  - PWGHF
+    - Put PAG headers after the common ones.
+- Sort `#include`s alphabetically within a group.
 - Avoid using hard-coded PDG codes. Use their `enum` names instead
   (from [`PDG_t`](https://root.cern/doc/master/TPDGCode_8h.html) or
   [`o2::analysis::pdg::Code`](https://github.com/AliceO2Group/O2Physics/blob/master/PWGHF/Core/SelectorCuts.h)).
   See also [Magic numbers](https://rawgit.com/AliceO2Group/CodingGuidelines/master/coding_guidelines.html?showone=Magic_numbers#Magic_numbers).
 - Test your code before making a pull request.
-  - Propagate your changes into the Run3Analysisvalidation configuration.
-  - Check that your branch compiles.
+  - Check that your branch compiles without warnings.
+  - Propagate your changes into the [Run3Analysisvalidation](https://github.com/AliceO2Group/Run3Analysisvalidation/tree/master/codeHF#add-a-new-workflow) configuration.
   - Check that your code works and runs without errors and warnings.
     - Make sure your code is compatible with the expected input (Run 2/3/5, real/MC data, p–p/Pb–Pb).
-    - Check that your changes do not alter unexpectedly the control plots produced by the validation framework.
+    - Check that your changes do not alter unexpectedly the control plots produced by the [validation framework](https://github.com/AliceO2Group/Run3Analysisvalidation/tree/master/codeHF#run-the-example).
   - Make sure your tasks can be fully configured from Run3Analysisvalidation and AliHyperloop.
 
 #### `struct` members
@@ -209,12 +201,14 @@ Organising the code in a well defined structure makes it easier to navigate thro
   - other members (constants, objects)
   - `using` declarations
   - `Filter`
+  - `Preslice`
   - `Partition`
   - `ConfigurableAxis`
   - `AxisSpec`
   - `HistogramRegistry`
   - output declarations (`OutputObj`,...)
   - `init` function
+  - helper functions
   - `process` function(s)
     - `PROCESS_SWITCH` follows immediately after the function definition.
 
@@ -241,7 +235,8 @@ Organising the code in a well defined structure makes it easier to navigate thro
     - `RecBg` - reconstruction level quantity of a reconstructed background candidate
 
 The names of the source file, the executable and the task(s) should match.<br>
-Note: The device name of a task is automatically generated from the name of the corresponding `struct` by replacing uppercase letters with lowercase letters preceded with a hyphen unless defined explicitly using `TaskName`, which should be avoided if not necessary.<br>
+Note: The device name of a task is automatically generated from the name of the corresponding `struct` by replacing uppercase letters with lowercase letters preceded with a hyphen.
+The device name can be explicitly defined using `TaskName` only when several instances of a templated task need to be defined.<br>
 Example:
 
 - source file name: `taskXY.cxx`
