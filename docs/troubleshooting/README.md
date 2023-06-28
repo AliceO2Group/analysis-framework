@@ -5,7 +5,61 @@ title: Troubleshooting
 
 # Troubleshooting
 
-## Typical problems and solutions
+## Finding problems
+
+### Compilation problems
+
+```todo
+To be added
+```
+
+### Runtime problems
+
+If your O2 code is crashing and you have difficulties finding out the reason, try the following tips.
+
+Redirect the terminal output to a text file (here called `stdout.log`):
+
+```bash
+o2-analysis-... > stdout.log 2>&1
+```
+
+Search for keywords related to problems in the log file using the `grep` command:
+
+```bash
+grep -e "\\[ERROR\\]" -e "\\[FATAL\\]" -e "segmentation" -e "Segmentation" -e "SEGMENTATION" -e "command not found" -e "Error:" -e "Error in " -e "\\[WARN\\]" stdout.log
+```
+
+Try to understand and resolve the first reported problem.
+
+```note
+You can inspect a failing [AliHyperloop test](../hyperloop/userdocumentation.md#-wagon-tests) in the same way. The log is saved in the `stdout.log` file in the test output directory.
+```
+
+## Reporting problems
+
+See the [Support](../gettingstarted/support.md) section for the list of Mattermost channels where you can ask for help.
+
+When posting on Mattermost:
+
+- Do not paste the entire content of files or any long blocks of log lines or code directly in the message. If needed, attach the file.
+- Paste only lines relevant to your problem. (See [Finding problems](#finding-problems).)
+- Enclose code words and expressions in [backticks](https://www.markdownguide.org/basic-syntax/#code) (`).
+- When pasting blocks of code or log lines, use [fenced code blocks](https://www.markdownguide.org/extended-syntax/#fenced-code-blocks).
+  - Use [syntax highlighting](https://www.markdownguide.org/extended-syntax/#syntax-highlighting) when pasting blocks of code.
+
+## Typical compilation problems and solutions
+
+### Compilation terminated because of exhausted memory
+
+Error message:
+
+```text
+c++: fatal error: Killed signal terminated program cc1plus
+```
+
+The compilation exhausted all available RAM memory and was killed. Try to compile with less cores using the `-j N` option to use `N` cores.
+
+## Typical runtime problems and solutions
 
 ### Tree not found
 
@@ -49,3 +103,32 @@ and the table should be found.
 - Missing `fv0c`: If you are running on Run 3 data or MC, please make sure that the process switches in the `bc-selection`, `event-selection` and `multiplicity-table` workflows are set to `"processRun2": "false", "processRun3": "true"` in your config JSON; see e.g. the `Configurables` section in the [event selection](../basics-usage/HelperTasks.md#event-selection) documentation.
 - Missing `tofsignal`: Please refer to the documentation on the [TOF PID](../basics-usage/HelperTasks.md#particle-identification) requirements.
 - Missing `collision_001`: Please add the `o2-analysis-collision-converter`.
+
+### CCDB object not found
+
+Error messages:
+
+```text
+[ERROR] Requested resource does not exist: http://alice-ccdb.cern.ch/...
+[FATAL] Got nullptr from CCDB for path ...
+```
+
+Verify whether:
+
+- You use the right workflow configuration (e.g. Run 2 vs 3).
+- The timestamp is correct.
+- The path is correct (check at <http://alice-ccdb.cern.ch/browse/>).
+- The connection to CCDB is fine.
+
+```todo
+How to check the timestamp?
+```
+
+### Alien connection failed
+
+```todo
+Error message:
+```
+
+- Create an Alien token by executing the `alien-token-init` command inside the O2Physics environment.
+- Verify that the connection can be established by executing `alien.py`.
