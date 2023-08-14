@@ -91,12 +91,12 @@ If the missing table is not mentioned there, try to find the missing workflow fo
 
 - Missing `track`: If you are running on Run 3 input, add `o2-analysis-track-propagation`.
   - Please refer to the documentation on the [track propagation](../basics-usage/HelperTasks.md#track-propagation) for details.
-- Missing `fv0c`: If you are running on Run 3 input, please make sure that the process switches in the `bc-selection`, `event-selection` and `multiplicity-table` tasks are set to `"processRun2": "false", "processRun3": "true"` in your config JSON; see e.g. the `Configurables` section in the [event selection](../basics-usage/HelperTasks.md#event-selection) documentation.
-- Missing `tofsignal`: Please refer to the documentation on the [TOF PID](../basics-usage/HelperTasks.md#particle-identification) requirements.
 - Missing `collision_001`: Please add the `o2-analysis-collision-converter`.
   - Missing `collision`: If you are executing `o2-analysis-collision-converter`, remove it.
 - Missing `zdc_001`: Please add the `o2-analysis-zdc-converter`.
   - Missing `zdc`: If you are executing `o2-analysis-zdc-converter`, remove it.
+- Missing `fv0c`: If you are running on Run 3 input, please make sure that the process switches in the `bc-selection`, `event-selection` and `multiplicity-table` tasks are set to `"processRun2": "false", "processRun3": "true"` in your config JSON; see e.g. the `Configurables` section in the [event selection](../basics-usage/HelperTasks.md#event-selection) documentation.
+- Missing `tofsignal`: Please refer to the documentation on the [TOF PID](../basics-usage/HelperTasks.md#particle-identification) requirements.
 
 #### General cases
 
