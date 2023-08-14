@@ -22,7 +22,7 @@ Developers can review project history to find out:
 Selected sections:
 
 - [Saving changes](https://www.atlassian.com/git/tutorials/saving-changes) – `add`, `commit`, `diff`, `stash`
-- [Inspecting a repository](https://www.atlassian.com/git/tutorials/inspecting-a-repository) – `status`, `tag`, `blame`
+- [Inspecting a repository](https://www.atlassian.com/git/tutorials/inspecting-a-repository) – `status`, `log`, `tag`, `blame`
 - [Undoing changes](https://www.atlassian.com/git/tutorials/undoing-changes) – `checkout`, `clean`, `revert`, `reset`, `rm`
 - [Rewriting history](https://www.atlassian.com/git/tutorials/rewriting-history) – `commit`, `rebase`, `reflog`
 - [Syncing](https://www.atlassian.com/git/tutorials/syncing) – `remote`, `fetch`, `push`, `pull`
