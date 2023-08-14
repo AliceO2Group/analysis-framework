@@ -9,13 +9,21 @@ title: Troubleshooting
 
 ### Compilation problems
 
-```todo
-To be added
+If your O2 code fails to compile and you have difficulties finding the reason, try the following tips.
+
+Search for errors (and warnings) in the compilation log file (here assumed `../log`) using the `grep` command.
+
+Get the list of executables that failed to build and the list of problems in the code (in the format `file:line:column`):
+
+```bash
+grep -e "FAILED:" -e "error:" -e "warning:" ../log | cut -d : -f -3
 ```
+
+If you want to see the full messages, remove the `| cut...` part.
 
 ### Runtime problems
 
-If your O2 code is crashing and you have difficulties finding out the reason, try the following tips.
+If your O2 code is crashing and you have difficulties finding the reason, try the following tips.
 
 Redirect the terminal output to a text file (here called `stdout.log`):
 
@@ -75,6 +83,23 @@ If the reported table is part of the main [AO2D tables](../datamodel/ao2dTables.
 You can check by opening it with ROOT if the corresponding table exists in the file by navigating to the reported folder (here: `DF_2853960297589372650`).
 
 Most likely however the table which is missing has to be produced by a [helper task](../datamodel/helperTaskTables.md).
+
+First, look for a solution in the list of [Special cases](#special-cases).
+If the missing table is not mentioned there, try to find the missing workflow following the instructions for [General cases](#general-cases).
+
+#### Special cases
+
+- Missing `track`: If you are running on Run 3 input, add `o2-analysis-track-propagation`.
+  - Please refer to the documentation on the [track propagation](../basics-usage/HelperTasks.md#track-propagation) for details.
+- Missing `collision_001`: Please add the `o2-analysis-collision-converter`.
+  - Missing `collision`: If you are executing `o2-analysis-collision-converter`, remove it.
+- Missing `zdc_001`: Please add the `o2-analysis-zdc-converter`.
+  - Missing `zdc`: If you are executing `o2-analysis-zdc-converter`, remove it.
+- Missing `fv0c`: If you are running on Run 3 input, please make sure that the process switches in the `bc-selection`, `event-selection` and `multiplicity-table` tasks are set to `"processRun2": "false", "processRun3": "true"` in your config JSON; see e.g. the `Configurables` section in the [event selection](../basics-usage/HelperTasks.md#event-selection) documentation.
+- Missing `tofsignal`: Please refer to the documentation on the [TOF PID](../basics-usage/HelperTasks.md#particle-identification) requirements.
+
+#### General cases
+
 You can identify the missing workflow by running the [`find_dependencies.py`](https://github.com/AliceO2Group/O2Physics/blob/master/Scripts/find_dependencies.py) script.
 The procedure is simple: If the error message complains about a missing table `DF_<id>/O2<table>` then you have to run `$O2PHYSICS_ROOT/share/scripts/find_dependencies.py -t <table>`
 inside the O2Physics environment and add the correct one among the listed producer workflows to your command line.
@@ -96,13 +121,6 @@ o2-analysis-timestamp | o2-analysis-my-analysis ...
 ```
 
 and the table should be found.
-
-#### Special cases
-
-- Missing `track`: If you are running on Run 3 data or MC, please refer to the documentation on the [track propagation](../basics-usage/HelperTasks.md#track-propagation).
-- Missing `fv0c`: If you are running on Run 3 data or MC, please make sure that the process switches in the `bc-selection`, `event-selection` and `multiplicity-table` workflows are set to `"processRun2": "false", "processRun3": "true"` in your config JSON; see e.g. the `Configurables` section in the [event selection](../basics-usage/HelperTasks.md#event-selection) documentation.
-- Missing `tofsignal`: Please refer to the documentation on the [TOF PID](../basics-usage/HelperTasks.md#particle-identification) requirements.
-- Missing `collision_001`: Please add the `o2-analysis-collision-converter`.
 
 ### CCDB object not found
 
@@ -126,9 +144,11 @@ How to check the timestamp?
 
 ### Alien connection failed
 
-```todo
 Error message:
+
+```text
+Alien Token Check failed - Please get an alien token before running with https CCDB endpoint, or alice-ccdb.cern.ch!
 ```
 
 - Create an Alien token by executing the `alien-token-init` command inside the O2Physics environment.
-- Verify that the connection can be established by executing `alien.py`.
+- Verify that the connection can be established by executing `alien.py`. You should be greeted with `Welcome to the ALICE GRID`. Exit with `exit`.
