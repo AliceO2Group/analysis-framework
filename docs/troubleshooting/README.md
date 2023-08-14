@@ -9,13 +9,21 @@ title: Troubleshooting
 
 ### Compilation problems
 
-```todo
-To be added
+If your O2 code fails to compile and you have difficulties finding the reason, try the following tips.
+
+Search for errors (and warnings) in the compilation log file (here assumed `../log`) using the `grep` command.
+
+Get the list of executables that failed to build and the list of problems in the code (in the format `file:line:column`):
+
+```bash
+grep -e "FAILED:" -e "error:" -e "warning:" ../log | cut -d : -f -3
 ```
+
+If you want to see the full messages, remove the `| cut...` part.
 
 ### Runtime problems
 
-If your O2 code is crashing and you have difficulties finding out the reason, try the following tips.
+If your O2 code is crashing and you have difficulties finding the reason, try the following tips.
 
 Redirect the terminal output to a text file (here called `stdout.log`):
 
