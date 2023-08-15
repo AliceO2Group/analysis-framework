@@ -23,11 +23,11 @@ mkdir -p ~/alice
 cd ~/alice
 ```
 
-Download O2 and O2Physics (note the `--defaults o2`):
+Download O2 and O2Physics:
 
 ```bash
-aliBuild init O2@dev --defaults o2
-aliBuild init O2Physics@master --defaults o2
+aliBuild init O2@dev
+aliBuild init O2Physics@master
 ```
 
 If you perform `ls` under your work directory, you will see the packages you have downloaded via
@@ -40,7 +40,7 @@ to keep them up-to-date manually.
 ## Check your prerequisites
 
 ```bash
-aliDoctor O2Physics --defaults o2
+aliDoctor O2Physics
 ```
 
 aliDoctor will warn you that some packages have to be built as they could not be found from the
@@ -49,8 +49,10 @@ system.
 ## Build and rebuild
 
 ```bash
-aliBuild build O2Physics --defaults o2
+aliBuild build O2Physics
 ```
+
+See the [Troubleshooting](../troubleshooting/README.md) section for debugging tips if the build fails.
 
 ## Use your local software installations
 
@@ -91,7 +93,13 @@ Go to the build directory
 cd ~/alice/sw/BUILD/O2Physics-latest/O2Physics
 ```
 
-You can now rebuild and install a specific directory with
+You can now rebuild and install entire O2Physics with
+
+```bash
+ninja install
+```
+
+or just a specific directory with
 
 ```bash
 ninja <directory>/install
@@ -101,6 +109,12 @@ For example:
 
 ```bash
 ninja PWGCF/Tasks/install
+```
+
+You can redirect the terminal output to the standard aliBuild log file and see whether the build succeeded:
+
+```bash
+ninja install > ../log 2>&1 && echo "Good" || echo "Bad"
 ```
 
 A specific executable can be built in the staging directory `stage/bin` with
