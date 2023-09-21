@@ -336,6 +336,14 @@ When a wagon test finishes in warning, this means that the wagon will not be inc
   </div>
  
  * This is specific to tests with wagons set as ready for slim derived data. As the entire output is merged into one single file, there is a limit of 4000 MB for this. If exceeded, the user is advised to switch to standard derived data by unchecking the option “Ready for slim derived data” in the wagon edit view. Then a request for standard derived data train can be made.
+
+### 8. <a name="warning-unbound-indices"></a>Unbound indices detected in AO2D merging
+ 
+  <div align="center">
+    <img src="../images/warningUnboundIndices.png" width="40%">
+  </div>
+ 
+ * For derived data trains (excluding linked derived data), it notifies the detection of unbound columns during AO2D merging. This means that one or more participating wagons have activated derived data tables that do not match the workflow specifications. One possible reason for this is that the workflow configuration has changed in the meantime, and the wagon has not been synchronized yet.
  
 It is possible that a wagon test will produce multiple warnings. In that case, the same checks above will be done for each warning present, and the decision making regarding train submission will be done considering all the exceptions.
  
