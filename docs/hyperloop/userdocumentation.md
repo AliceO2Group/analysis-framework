@@ -343,7 +343,7 @@ When a wagon test finishes in warning, this means that the wagon will not be inc
     <img src="../images/warningUnboundIndices.png" width="40%">
   </div>
  
- * For derived data trains (excluding linked derived data), it notifies the detection of unbound columns during AO2D merging. This means that one or more participating wagons have activated derived data tables that do not match the workflow specifications. One possible reason for this is that the workflow configuration has changed in the meantime, and the wagon has not been synchronized yet.
+ * For derived data trains, it notifies the detection of unbound columns during AO2D merging. This means that one of the output tables which has been asked to be stored has index columns to tables which are not within the output. This usually points to a bad or broken data model definition and should be fixed. The only case where this is expected and not worrisome is linked derived data. For both slim derived data and standard derived data, the data model should be fixed.
  
 It is possible that a wagon test will produce multiple warnings. In that case, the same checks above will be done for each warning present, and the decision making regarding train submission will be done considering all the exceptions.
  
