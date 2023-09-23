@@ -93,6 +93,7 @@ If the missing table is not mentioned there, try to find the missing workflow fo
   - Please refer to the documentation on the [track propagation](../basics-usage/HelperTasks.md#track-propagation) for details.
 - Missing `collision_001`: Please add the `o2-analysis-collision-converter`.
   - Missing `collision`: If you are executing `o2-analysis-collision-converter`, remove it.
+- Missing `O2bc_001`: Please add the `o2-analysis-bc-converter`.
 - Missing `zdc_001`: Please add the `o2-analysis-zdc-converter`.
   - Missing `zdc`: If you are executing `o2-analysis-zdc-converter`, remove it.
 - Missing `fv0c`: If you are running on Run 3 input, please make sure that the process switches in the `bc-selection`, `event-selection` and `multiplicity-table` tasks are set to `"processRun2": "false", "processRun3": "true"` in your config JSON; see e.g. the `Configurables` section in the [event selection](../basics-usage/HelperTasks.md#event-selection) documentation.
