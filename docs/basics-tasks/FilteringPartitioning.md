@@ -88,7 +88,7 @@ i.e. `Filter` is applied to the objects before passing them to the `process` met
 
 ## Filtering and partitioning together
 
-It is also possible to filter and partition data in the same task. Therefore, multiple `Filter`s are combined using the logical `AND`. These filters then are combined by a logical `AND` with all the specified selections `Select`, which themself are combined by logical `OR`s. E.g. (Filter1 && Filter2) && (Select1 || Select2).
+It is also possible to filter and partition data in the same task. Therefore, multiple `Filter`s are combined using the logical `AND`. These filters then are combined by a logical `AND` with all the specified selections `Select`, which themself are combined by logical `OR`s. E.g., `(Filter1 && Filter2) && (Select1 || Select2)`.
 
 ```cpp
 using namespace o2::aod;
