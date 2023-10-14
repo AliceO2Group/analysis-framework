@@ -105,6 +105,8 @@ If the missing table is not mentioned there, try to find the missing workflow fo
 You can identify the missing workflow by running the [`find_dependencies.py`](https://github.com/AliceO2Group/O2Physics/blob/master/Scripts/find_dependencies.py) script.
 The procedure is simple: If the error message complains about a missing table `DF_<id>/O2<table>` then you have to run `$O2PHYSICS_ROOT/share/scripts/find_dependencies.py -t <table>`
 inside the O2Physics environment and add the correct one among the listed producer workflows to your command line.
+Note that the script searches for tables based on their description in the data model.
+This description does not contain the table version suffix (e.g. `_001`), so you need to remove it from the name of the table.
 
 Example: If the missing table is `DF_2853960297589372650/O2timestamps`, then you have to look up `timestamps`:
 
