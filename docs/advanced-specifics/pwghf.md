@@ -160,9 +160,18 @@ Workflow                               | File                      | Type
 - Respect the alphabetic order and groups in `CMakeLists.txt` when adding a new workflow.
 - Link only necessary libraries in `CMakeLists.txt`.
 - Avoid code duplication and reuse existing code (e.g. `RecoDecay`, table columns, constants).
+- Define variables for repeatedly used objects (histogram types, axes, strings, calculated values).
 - Explicitly state when using the `std` namespace (e.g. `std::abs`, `std::array`, `std::vector`).
-- Do not use ROOT features unnecessarily (e.g. `TMath::Abs` → `std::abs`).
+- Do not use ROOT features unnecessarily (e.g. `TMath::Abs` → `std::abs`, `Double_t` → `double`).
   - Use of macros for [bit manipulations](https://root.cern/doc/master/Rtypes_8h_source.html#l00083) (`BIT`, `SETBIT`, `TESTBIT`, `CLRBIT`) is encouraged.
+- Do not use `M_PI`. Instead, use `PI`, `TwoPI`, `PIHalf`, `PIThird`, `PIQuarter` from the `o2::constants::math` namespace.
+- Use `LOG`, `LOGF`, `LOGP` macros for logging (instead of `Printf`, `printf`, `std::cout`).
+  - Use the right logging level:
+    - `debug` for technical information useful for debugging and development,
+    - `info` for information about what the code is doing that is useful to report at every execution,
+    - `warn` for conditions that are likely to affect the expected behaviour of the code,
+    - `error` for problems that lead to an unwanted behaviour of the code,
+    - `fatal` for critical problems that make further running of the code impossible or useless.
 - Include only needed headers but do not rely on implicitly included headers.
 - Organise `#include`s into groups (separated by a blank line) in the following order:
   - C++
@@ -176,8 +185,10 @@ Workflow                               | File                      | Type
 - Sort `#include`s alphabetically within a group.
 - Avoid using hard-coded PDG codes. Use their `enum` names instead
   (from [`PDG_t`](https://root.cern/doc/master/TPDGCode_8h.html) or
-  [`o2::analysis::pdg::Code`](https://github.com/AliceO2Group/O2Physics/blob/master/PWGHF/Core/SelectorCuts.h)).
+  [`o2::analysis::pdg::Code`](https://github.com/AliceO2Group/O2Physics/blob/master/PWGHF/Core/PDG.h)).
   See also [Magic numbers](https://rawgit.com/AliceO2Group/CodingGuidelines/master/coding_guidelines.html?showone=Magic_numbers#Magic_numbers).
+- Use `Type const&` for table subscriptions in function arguments.
+- Declare iterators in range-based `for` loops over tables with `const auto&`.
 - Test your code before making a pull request.
   - Check that your branch compiles without warnings.
   - Propagate your changes into the [Run3Analysisvalidation](https://github.com/AliceO2Group/Run3Analysisvalidation/tree/master/codeHF#add-a-new-workflow) configuration.
@@ -210,6 +221,7 @@ Organising the code in a well defined structure makes it easier to navigate thro
   - `init` function
   - helper functions
   - `process` function(s)
+    - Put one process function argument per line.
     - `PROCESS_SWITCH` follows immediately after the function definition.
 
 ### Naming conventions
