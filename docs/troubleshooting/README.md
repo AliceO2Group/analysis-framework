@@ -79,7 +79,7 @@ Error messages of the following kind:
 
 mean that the table `v0dataext` could not be found in the input file, nor has any other workflow produced them.
 
-If the reported table is part of the main [AO2D tables](../datamodel/ao2dTables.md) (e.g. `bc`), then something is wrong with your input file.
+If the reported table is part of the main [AO2D tables](../datamodel/ao2dTables.md), then something is wrong with your input file.
 You can check by opening it with ROOT if the corresponding table exists in the file by navigating to the reported folder (here: `DF_2853960297589372650`).
 
 Most likely however the table which is missing has to be produced by a [helper task](../datamodel/helperTaskTables.md).
@@ -91,6 +91,8 @@ If the missing table is not mentioned there, try to find the missing workflow fo
 
 - Missing `track`: If you are running on Run 3 input, add `o2-analysis-track-propagation`.
   - Please refer to the documentation on the [track propagation](../basics-usage/HelperTasks.md#track-propagation) for details.
+- Missing `bc_001`: Please add the `o2-analysis-bc-converter`.
+  - Missing `bc`: If you are executing `o2-analysis-bc-converter`, remove it.
 - Missing `collision_001`: Please add the `o2-analysis-collision-converter`.
   - Missing `collision`: If you are executing `o2-analysis-collision-converter`, remove it.
 - Missing `zdc_001`: Please add the `o2-analysis-zdc-converter`.
@@ -103,6 +105,8 @@ If the missing table is not mentioned there, try to find the missing workflow fo
 You can identify the missing workflow by running the [`find_dependencies.py`](https://github.com/AliceO2Group/O2Physics/blob/master/Scripts/find_dependencies.py) script.
 The procedure is simple: If the error message complains about a missing table `DF_<id>/O2<table>` then you have to run `$O2PHYSICS_ROOT/share/scripts/find_dependencies.py -t <table>`
 inside the O2Physics environment and add the correct one among the listed producer workflows to your command line.
+Note that the script searches for tables based on their description in the data model.
+This description does not contain the table version suffix (e.g. `_001`), so you need to remove it from the name of the table.
 
 Example: If the missing table is `DF_2853960297589372650/O2timestamps`, then you have to look up `timestamps`:
 
