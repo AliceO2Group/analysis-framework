@@ -17,11 +17,15 @@ Where appropriate, when one tour ends, the next will begin to explain the next s
 
 * Each element of Hyperloop with a tour includes a tour 🚌 button. Clicking this button initiates the tour.
 
+<div align="center">
 <img src="../images/JoyrideTourIcon.png" width="40%">
+</div>
 
 * Each tour step includes a _Next_ button to access the next step of the tour. The page will automatically scroll to and highlight the next element to be explained. Also displayed is the current step number and total number of steps in the tour.
 
-<img src="../images/JoyrideNextButton.png" width="8%">
+<div align="center">
+<img src="../images/JoyrideNextButton.png" width="10%">
+</div>
 
 * Each tour step additionally includes an exit button. Clicking this closes the tour. After clicking this, the tour of the given section will not automatically open on future visits to the section of Hyperloop. To access the tour of the section again, the relevant tour 🚌 button must be clicked.
 
