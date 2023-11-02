@@ -3,6 +3,34 @@ sort: 1
 title: User Documentation
 ---
 
+## <a name="introductory-tours"></a>Introductory Tours
+
+When opening a page in Hyperloop which has not been visited before, a guided tour will explain key concepts. These tours provide an interactive learning experience for Hyperloop, easily activated with a single click. They are ideal for beginners and for refreshing knowledge.
+
+Where appropriate, when one tour ends, the next will begin to explain the next section of Hyperloop. Tours can be exited at any time. Once closed, they will not automatically begin on future page visits. 
+
+<div align="center">
+<img src="../images/JoyrideWelcome.png" width="35%">
+</div>
+
+### <a name="tour-elements"></a>Tour Elements
+
+* Each element of Hyperloop with a tour includes a tour 🚌 button. Clicking this button initiates the tour.
+
+<div align="center">
+<img src="../images/JoyrideTourIcon.png" width="40%">
+</div>
+
+* Each tour step includes a _Next_ button to access the next step of the tour. The page will automatically scroll to and highlight the next element to be explained. Also displayed is the current step number and total number of steps in the tour.
+
+<div align="center">
+<img src="../images/JoyrideNextButton.png" width="10%">
+</div>
+
+* Each tour step additionally includes an exit button. Clicking this closes the tour. After clicking this, the tour of the given section will not automatically open on future visits to the section of Hyperloop. To access the tour of the section again, the relevant tour 🚌 button must be clicked.
+
+* Many tours also offer direct links to relevant sections of the documentation for in-depth explanations, reducing the need to search through the documentation.
+
 ## <a name="my-analyses"></a>My Analyses
 
 * [**My Analyses**](https://alimonitor.cern.ch/hyperloop/) is a personalized webpage which displays all the analyses where the user belongs to.
