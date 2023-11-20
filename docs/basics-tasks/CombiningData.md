@@ -168,6 +168,12 @@ combinations(combinationPolicy)
 
 You can see some combinations examples in the <a href="https://github.com/AliceO2Group/O2Physics/blob/master/Tutorials/src/tracksCombinations.cxx" target="_blank">tracksCombinations.cxx</a> tutorial.
 
+```warning
+The tracks in dataset might be implicitly ordered. As a result, for example, you can observe slight asymmetries in same-event 2-particle correlations obtained with `StrictlyUpperIndexPolicy`. The recommended solutions are:
+1. Randomly swap tracks in pairs or
+2. Use `FullIndexPolicy` and apply additional condition to exclude pairs with the same element repeated ((0, 0), (1, 1), and so on). At the end, you need to apply proper statistic corrections in your analysis, as you count each unique pair twice.
+```
+
 ## Weighted combinations
 
 You might need to calculate weights for your event mixing. You can get useful variables:
