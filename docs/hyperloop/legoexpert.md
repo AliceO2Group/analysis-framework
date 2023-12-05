@@ -1,5 +1,5 @@
 ---
-sort: 4
+sort: 5
 title: For the Run 2 LEGO train expert. What has changed?
 ---
 
