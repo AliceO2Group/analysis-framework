@@ -10,7 +10,7 @@ The very large amount of data that will be collected in Run 3 represents a chall
 The image below summarizes the policy: 
 
 <div align="center">
-<img src="../images/hyperlooppolicy.png" width="35%">
+<img src="../images/hyperlooppolicy.png" width="95%">
 </div>
 
 In general, three categories of trains exist: 
