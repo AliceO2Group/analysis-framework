@@ -13,7 +13,7 @@ The image below summarizes the policy:
 <img src="../images/hyperlooppolicy.png" width="95%">
 </div>
 
-In general, three categories of trains exist: 
+In general, four categories of trains exist: 
 
 * Trains below 30TB and taking more than 1.5y of CPU time are very strongly discouraged. In those cases, please resort to very small trains (where throughputs of even 100KB/s are allowed with autosubmission) to run. 
 * Trains that are lower than 1.5y in CPU usage and loop over less than 200TB are free-to-execute and can be executed on hyperloop via autosubmission. In a certain region between 30-200TB, slightly more than 1.5y in CPU time is allowed as long as performance is better than 1MB/s. 
