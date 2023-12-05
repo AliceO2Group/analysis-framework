@@ -25,7 +25,7 @@ In general, four categories of trains exist:
 In practice the chart above is mapped on a number of distinct resource groups which determine the limits assigned to each dataset:
 
 <div align="center">
-<img src="../images/resourcetable.png" width="80%">
+<img src="../images/resourcetable.png">
 </div>
 
 The smaller the dataset size, the more often it is automatically submitted per week and the more often you are allowed to run on it per week.
