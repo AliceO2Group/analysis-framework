@@ -1,11 +1,11 @@
 ---
 sort: 2
-title: Hyperloop policy
+title: Fair usage policy
 ---
 
 ## <a name="generalresourcerules"></a>General resource rules
 
-The very large amount of data that will be collected in Run 3 represents a challenge for analysis, for both the CPU needs and the read data from storage, and therefore a resource usage policy has been put in place to ensure proper use of computing resources. The policy has been openly discussed in multiple meetings, including ALICE weeks, and is subject to adjustments as necessary and as the collaboration gains experience with the Run 3 analysis. 
+The very large amount of data that will be collected in Run 3 represents a challenge for analysis, for both the CPU needs and the read data from storage, and therefore a resource usage policy has been put in place to ensure proper use of computing resources. The policy has been openly discussed in multiple meetings, including ALICE weeks, and is subject to adjustments as necessary and as the collaboration gains experience with the Run 3 analysis. If you have questions or doubts, please first refer to your PWG convener who will then bring up the case with the analysis coordinator.
 
 The image below summarizes the policy: 
 
