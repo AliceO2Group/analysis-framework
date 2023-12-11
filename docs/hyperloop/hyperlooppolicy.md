@@ -28,7 +28,7 @@ In practice the chart above is mapped on a number of distinct resource groups wh
 <img src="../images/resourcetable.png">
 </div>
 
-The smaller the dataset size, the more often it is automatically submitted per week and the more often you are allowed to run on it per week.
+The smaller the dataset size, the more often it is automatically submitted per week and the more often you are allowed to run on it per week. Manual requests to datasets above 50 TB are only fulfilled at the automatical submission times defined. This is in order to allow grouping of wagons to large trains.
 
 ## <a name="deriveddata"></a>Derived data
 
