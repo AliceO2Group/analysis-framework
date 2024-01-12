@@ -1245,7 +1245,7 @@ For better overview the tables are grouped into the following categories: \| [Ge
         <td></td>
         <td>tpcInnerParam</td>
         <td>float</td>
-        <td>Momentum at inner wall of the TPC</td>
+        <td>Rigidity at inner wall of the TPC</td>
       </tr>
       <tr>
         <td>o2::aod::track::Flags</td>
