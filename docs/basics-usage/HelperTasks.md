@@ -13,7 +13,6 @@ Table of contents:
 * [Particle identification (PID)](#particle-identification-pid)
 * [Track Selection](#track-selection)
 * [Track Propagation](#track-propagation)
-      * [TrackTuner](#track-tuner)
 
 ## Timestamp
 
