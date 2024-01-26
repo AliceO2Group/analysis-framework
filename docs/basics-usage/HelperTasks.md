@@ -764,7 +764,7 @@ The smearing is done on the `y`, `z` parameters of each reconstructed track in M
 The performance of such parameters is evaluated vs. global-track pt and stored into `.root` files, which can be read from CCDB at runtime.
 
 An instance of the `TrackTuner` class is present as data-member in the `trackPropagation` workflow, and it can be enabled via
-```
+```c++
 Configurable<bool> useTrackTuner{"useTrackTuner", false, "Apply Improver/DCA corrections to MC"};
 ```
 ```note
