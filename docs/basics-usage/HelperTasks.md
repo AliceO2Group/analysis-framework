@@ -768,7 +768,7 @@ An instance of the `TrackTuner` class is present as data-member in the `trackPro
 Configurable<bool> useTrackTuner{"useTrackTuner", false, "Apply Improver/DCA corrections to MC"};
 ```
 ```note
-The `TrackTuner` can be enabled only if the `processCovarianceMc` process function in the `trackPropagation` workflow is used 
+The `TrackTuner` can be enabled only if the `processCovarianceMc` process function in the `trackPropagation` workflow is used
 ```
 This object can be configured through the `Configurable<std::string> trackTunerParams` in the `trackPropagation` workflow. This configuration `std::string` must define the following parameters:
 * `bool debugInfo`: flag to switch on/off some debug outputs
