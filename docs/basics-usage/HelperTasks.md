@@ -795,6 +795,8 @@ The dcaXY, dcaZ parametrization currently available are the following:
 * proxy for pp @ 13.6 TeV: [trackTuner_DataLHC23fPass1_McLHC23k4b_run535085.root](http://alice-ccdb.cern.ch/browse/Users/m/mfaggin/test/inputsTrackTuner/pp2023)
   Data: LHC23f apass1, run 535085.
   MC: LHC23k4b, run 535085.
+  Slides [here](https://docs.google.com/presentation/d/1_bsxzgB1DdVu-mxRwhpZ-U65c4J9iL2IH8xUEP3tv4Q/edit?usp=sharing).
 * proxy for Pb-Pb @ 5.36 TeV: [trackTuner_DataLHC22sPass5_McLHC22l1b2_run529397.root](http://alice-ccdb.cern.ch/browse/Users/m/mfaggin/test/inputsTrackTuner/PbPb2022)
   Data: LHC22s apass5, run 529397.
   MC: LHC22l1b2, run 529397.
+  Slides [here](https://docs.google.com/presentation/d/1sIXWMckaPZJir3gNLeDnB2TorNJrjXKcGJvyTvz5V8s/edit?usp=sharing).
