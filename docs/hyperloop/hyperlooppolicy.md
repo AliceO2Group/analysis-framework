@@ -20,7 +20,7 @@ In general, four categories of trains exist:
 * Trains that loop over more than 200 TB and have a throughput of at least 3 MB/s can run, provided that PWG conveners approve them (pink shaded area). 
 * Heavy trains looping over datasets bigger than 200 TB or with low throughput above 30 TB, as marked in the blue region in the plot, require Physics Board approval to run. For those trains, a special analysis budget can be negotiated with the Physics Board.
 
-***Exceptionally***, trains based on metadata (i.e. trains covering multiple periods) are allowed to have throughput between 1 MB/s and 3 MB/s (and not just above 3 MB/s) for a few selected high-priority datasets. This is to provide incentives to running over master datasets and therefore will also increase the likelihood of running common trains with more than one wagon at a time. This exception is marked in the resource group map below.
+***Exceptionally***, trains based on metadata (i.e. trains covering multiple periods) are allowed to have throughput between 1 MB/s and 3 MB/s (and not just above 3 MB/s) for a few selected high-priority datasets. This is to provide incentives to running over master datasets and therefore will also increase the likelihood of running common trains with more than one wagon at a time. This exception is marked in the resource group map above.
 
 ## <a name="implementation"></a>Implementation in Hyperloop datasets
 
