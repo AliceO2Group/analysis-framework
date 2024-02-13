@@ -752,3 +752,51 @@ The overall table flow is illustrated here:
 <div align="center">
 <img src="prop.png" width="60%">
 </div>
+
+
+### TrackTuner
+The `TrackTuner` class ([Common/Tools/TrackTuner.h](https://github.com/AliceO2Group/O2Physics/blob/master/Common/Tools/TrackTuner.h)) allows to smear the reconstructed track parameters.
+Such tool is primarely conceived to smear the parameters of tracks reconstructed in MC simulations according to the discrepancy between data and MC of the dcaXY and dcaZ.
+```note
+This task was called `improver-task` in the Run 2 jargon
+```
+The smearing is done on the `y`, `z` parameters of each reconstructed track in MC evaluated at the associated particle production point. The smearing is based on the discrepancy between resolution, mean and pull ratio of dcaXY, dcaZ w.r.t. primary vertex measured in data and MC.
+The performance of such parameters is evaluated vs. global-track pt and stored into `.root` files, which can be read from CCDB at runtime.
+
+An instance of the `TrackTuner` class is present as data-member in the `trackPropagation` workflow, and it can be enabled via
+```c++
+Configurable<bool> useTrackTuner{"useTrackTuner", false, "Apply Improver/DCA corrections to MC"};
+```
+```note
+The `TrackTuner` can be enabled only if the `processCovarianceMc` process function in the `trackPropagation` workflow is used
+```
+This object can be configured through the `Configurable<std::string> trackTunerParams` in the `trackPropagation` workflow. This configuration `std::string` must define the following parameters:
+* `bool debugInfo`: flag to switch on/off some debug outputs
+* `bool updateTrackCovMat`: flag to enable the update of the track covariance matrix, propagating the scaling on the dca resolution
+* `bool updatePulls`: flag to enable the update of the track covariance matrix updating also the pulls (if `updateTrackCovMat == true`)
+* `std::string pathInputFile`: path to browse to find the correction file
+* `std::string nameInputFile`: name of the correction file
+* `bool isInputFileFromCCDB`: the `pathInputFile/nameInputFile` is searched in CCDB if this flag is `true`, otherwise in the local file system (debug purposes)
+* `bool usePvRefitCorrections`: if this flag is `true`, the track smearing is performed using mean, resolution and pulls parametrizations vs. pt of dcaXY, dcaZ calculated w.r.t. primary collision vertex refitted w/o the current track, if this was originally a PV contributor
+```note
+In pp collisions, one should use `usePvRefitCorrections == true`
+This is not relevant in Pb-Pb collisions.
+```
+* `bool updateCurvature`: flag to enable the update of the track curvature, i.e. `q/pt` (see note below)
+* `float oneOverPtCurrent` (MC) and `float oneOverPtUpgr` (data): the ratio `oneOverPtUpgr/oneOverPtCurrent` defines the scaling factor to the `q/pt` residual to smear the track pt
+
+```note
+The `TrackTuner` allows also to smear the `q/pt` if `updateCurvature == true`. At the moment, this is possible only via a constant factor. More realistic strategies can be implemented.
+```
+The string `trackTunerParams` must follow the format: <variable_name>=<value>|<variable_name>=<value>)" (see the default configuration [here](https://github.com/AliceO2Group/O2Physics/blob/master/Common/TableProducer/trackPropagation.cxx#L62) as reference).
+
+
+The dcaXY, dcaZ parametrization currently available are the following:
+* proxy for pp @ 13.6 TeV: [trackTuner_DataLHC23fPass1_McLHC23k4b_run535085.root](http://alice-ccdb.cern.ch/browse/Users/m/mfaggin/test/inputsTrackTuner/pp2023)
+  Data: LHC23f apass1, run 535085.
+  MC: LHC23k4b, run 535085.
+  Slides [here](https://docs.google.com/presentation/d/1_bsxzgB1DdVu-mxRwhpZ-U65c4J9iL2IH8xUEP3tv4Q/edit?usp=sharing).
+* proxy for Pb-Pb @ 5.36 TeV: [trackTuner_DataLHC22sPass5_McLHC22l1b2_run529397.root](http://alice-ccdb.cern.ch/browse/Users/m/mfaggin/test/inputsTrackTuner/PbPb2022)
+  Data: LHC22s apass5, run 529397.
+  MC: LHC22l1b2, run 529397.
+  Slides [here](https://docs.google.com/presentation/d/1sIXWMckaPZJir3gNLeDnB2TorNJrjXKcGJvyTvz5V8s/edit?usp=sharing).
