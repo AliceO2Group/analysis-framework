@@ -788,7 +788,7 @@ This is not relevant in Pb-Pb collisions.
 ```note
 The `TrackTuner` allows also to smear the `q/pt` if `updateCurvature == true`. At the moment, this is possible only via a constant factor. More realistic strategies can be implemented.
 ```
-The string `trackTunerParams` must follow the format: <variable_name>=<value>|<variable_name>=<value>)" (see the default configuration [here](https://github.com/AliceO2Group/O2Physics/blob/master/Common/TableProducer/trackPropagation.cxx#L62) as reference).
+The string `trackTunerParams` must follow the format: `<variable_name>=<value>|<variable_name>=<value>` (see the default configuration [here](https://github.com/AliceO2Group/O2Physics/blob/master/Common/TableProducer/trackPropagation.cxx#L62) as reference).
 
 
 The dcaXY, dcaZ parametrization currently available are the following:
