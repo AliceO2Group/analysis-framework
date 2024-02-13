@@ -28,9 +28,8 @@ o2-analysistutorial-... --aod-file AO2D.root
 
 ## Tutorial events
 
+- [O2 Analysis Tutorials](https://indico.cern.ch/category/16548/) Indico page
 - [O2 analysis tutorial](https://mattermost.web.cern.ch/alice/channels/o2-analysis-tutorial) support Mattermost channel
-- [O2 Analysis Tutorial (13-14 October 2022)](https://indico.cern.ch/event/1200252/)
-- [O2 Analysis Tutorial 2.0 (17-28 April 2023)](https://indico.cern.ch/event/1267433/)
 
 ## List of tutorials
 
