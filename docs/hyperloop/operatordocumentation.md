@@ -59,8 +59,8 @@ There are a number of settings that you can decide on when composing a train:
 
 ### <a name="stagedsubmission"></a>Staged Submission
 
-* Linked datasets are subsets of a big dataset
-* First, a train run needs to be _Done_ on a smaller linked dataset before being run on a bigger dataset
+* Short datasets are subsets of a big dataset
+* First, a train run needs to be _Done_ on a smaller short dataset before being run on a bigger dataset
 * Any user who is part of the analysis can **request a long train**, by going on the train result to the _Request long train_ tab
 * Choose the dataset, target and wagons you want to include and click the _Compose and request approval_ button.
 * Approval from the participating analyses PWGs conveners is required in order to submit a long train
@@ -189,7 +189,7 @@ There are a number of settings that you can decide on when composing a train:
    <img src="../images/cloneTrain.png" width="70%">
 </div>
 
-* <a name="longTrain"></a>The _Request long train_ tab allows users to request a long train after the train ran on a linked dataset. Linked datasets are subsets of a big dataset (_set up in the Dataset settings_). First, a train run needs to be **Done on a smaller linked dataset** before being run on a bigger dataset.
+* <a name="longTrain"></a>The _Request long train_ tab allows users to request a long train after the train ran on a short dataset. Short datasets are subsets of a big dataset (_set up in the Dataset settings_). First, a train run needs to be **Done on a smaller short dataset** before being run on a bigger dataset.
 * Any user who is part of the analysis can request a long train. Approval from the participating analyses PWGs conveners is required in order to submit a long train. Train operators or admins can also approve a long train, but it is usually done by the PWG.
 
 <div align="center">
@@ -246,7 +246,7 @@ There are a number of settings that you can decide on when composing a train:
     <img src="../images/editDatasetOptions.png" width="70%">
   </div>
 
-* <a name="datasetoptions"></a>In the **Options** box, you can add linked datasets to the current dataset, which will be used for the [**staged submission**](#stagedsubmission). Enabling _Run final merging over all runs in this dataset_ will merge all the runs of all the productions during the final merging.
+* <a name="datasetoptions"></a>In the **Options** box, you can add short datasets to the current dataset, which will be used for the [**staged submission**](#stagedsubmission). Enabling _Run final merging over all runs in this dataset_ will merge all the runs of all the productions during the final merging.
 * <a name="datasetstaging"></a>In the **Analysis Facility Staging**, the operator is able to stage or unstage the data to the available targets displayed in the dropdown.
   * Choose a target from the dropdown list, and you will be notified of the amount of data required for the staging process. Confirm by clicking OK. The staging process will start once clicking the _Save all changes_ button at the top right of the page.
   * You can hover over the staging percentage to get a detailed status of the staging progress. By clicking on the percentage, you will be lead to a new tab where you can see the elaborate overview of the transfer requests on MonALISA.
