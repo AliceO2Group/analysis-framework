@@ -492,7 +492,7 @@ It is possible that a wagon test will produce multiple warnings. In that case, t
    <img src="../images/mergedOutput1.png" width="90%">
 </div>
 
-* <a name="longTrain"></a>The _Request long train_ tab allows users to request a long train after the train ran on a linked dataset. Linked datasets are subsets of a big dataset (_set up in the Dataset settings_). First, a train run needs to be **Done on a smaller linked dataset** before being run on a bigger dataset.
+* <a name="longTrain"></a>The _Request long train_ tab allows users to request a long train after the train ran on a short dataset. Short datasets are subsets of a big dataset (_set up in the Dataset settings_). First, a train run needs to be **Done on a smaller short dataset** before being run on a bigger dataset.
 * Any user who is part of the analysis can request a long train. Approval from the participating analyses PWGs conveners is required in order to submit a long train.
 
 <div align="center">
