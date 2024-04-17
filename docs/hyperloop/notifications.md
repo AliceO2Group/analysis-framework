@@ -23,7 +23,7 @@ title: Notifications
 * Notifies the user that an update has been made to one of the datasets included in his or her analyses. The notification message contains a link to the history of the dataset that has been modified, as well as a link to the analysis this dataset is included in. The update here indicates that:
   * The list of runs to be excluded in a production has been modified
   * The dataset has been staged or unstaged to a target
-  * A linked dataset had been added or removed
+  * A short dataset had been added or removed
   * The automatic composition settings have changed, e.g. the schedule
 
 <div align="center">
@@ -74,9 +74,9 @@ title: Notifications
   <img src="../images/mergelistUpdate.png" width="90%">
 </div>
 
-## <a name="linkedDataset"></a>Linked datasets
+## <a name="linkedDataset"></a>Short datasets
 
-* When a dataset has linked datasets, it cannot be part of an analysis. If a dataset was part of an analysis, and then the dataset is modified to have linked datasets, then the dataset is removed from the analysis. If there were enabled wagons, they are disabled.
+* When a dataset has short datasets, it cannot be part of an analysis. If a dataset was part of an analysis, and then the dataset is modified to have short datasets, then the dataset is removed from the analysis. If there were enabled wagons, they are disabled.
 
 ## <a name="infoWagonDisabled"></a>Disabled wagon
 
