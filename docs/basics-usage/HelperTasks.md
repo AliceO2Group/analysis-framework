@@ -772,21 +772,27 @@ The `TrackTuner` can be enabled only if the `processCovarianceMc` process functi
 ```
 This object can be configured through the `Configurable<std::string> trackTunerParams` in the `trackPropagation` workflow. This configuration `std::string` must define the following parameters:
 * `bool debugInfo`: flag to switch on/off some debug outputs
+* `bool updateTrackDCAs`: flag to switch on/off the smearing of the dcaXY, dcaZ
 * `bool updateTrackCovMat`: flag to enable the update of the track covariance matrix, propagating the scaling on the dca resolution
 * `bool updatePulls`: flag to enable the update of the track covariance matrix updating also the pulls (if `updateTrackCovMat == true`)
-* `std::string pathInputFile`: path to browse to find the correction file
-* `std::string nameInputFile`: name of the correction file
+* `std::string pathInputFile`: path to browse to find the correction file for the dca smearing
+* `std::string nameInputFile`: name of the correction file for the dca smearing
 * `bool isInputFileFromCCDB`: the `pathInputFile/nameInputFile` is searched in CCDB if this flag is `true`, otherwise in the local file system (debug purposes)
 * `bool usePvRefitCorrections`: if this flag is `true`, the track smearing is performed using mean, resolution and pulls parametrizations vs. pt of dcaXY, dcaZ calculated w.r.t. primary collision vertex refitted w/o the current track, if this was originally a PV contributor
 ```note
 In pp collisions, one should use `usePvRefitCorrections == true`
 This is not relevant in Pb-Pb collisions.
 ```
-* `bool updateCurvature`: flag to enable the update of the track curvature, i.e. `q/pt` (see note below)
-* `float oneOverPtCurrent` (MC) and `float oneOverPtUpgr` (data): the ratio `oneOverPtUpgr/oneOverPtCurrent` defines the scaling factor to the `q/pt` residual to smear the track pt
+* `std::string pathFileQoverPt`: path to browse to find the correction file for the `q/pt` smearing
+* `std::string nameFileQoverPt`: name of the correction file for the `q/pt` smearing
+* `bool updateCurvature`: flag to enable the update of the track curvature, i.e. `q/pt`, at the particle production point
+* `bool updateCurvatureIU`: flag to enable the update of the track curvature, i.e. `q/pt`, at the innermost update (IU) point
+* `float oneOverPtMC` (MC) and `float oneOverPtData` (data): the ratio `oneOverPtData/oneOverPtMC` defines the scaling factor to the `q/pt` residual to smear the track pt
 
 ```note
-The `TrackTuner` allows also to smear the `q/pt` if `updateCurvature == true`. At the moment, this is possible only via a constant factor. More realistic strategies can be implemented.
+* The `TrackTuner` allows also to smear the `q/pt` if only one between `updateCurvature` and `updateCurvatureIU` is `true`
+* By default, the variables `oneOverPtData` and `oneOverPtMC` are initialized to `-1`
+* If `(qOverPtMC < 0) || (qOverPtData < 0)`, the `q/pt` correction is done wuering the file from CCDB. Otherwise, the input values of `qOverPtMC` and `qOverPtData` are used to defined the factor `oneOverPtData/oneOverPtMC`, which is a constant factor flat in transverse momentum.
 ```
 The string `trackTunerParams` must follow the format: `<variable_name>=<value>|<variable_name>=<value>` (see the default configuration [here](https://github.com/AliceO2Group/O2Physics/blob/master/Common/TableProducer/trackPropagation.cxx#L62) as reference).
 
