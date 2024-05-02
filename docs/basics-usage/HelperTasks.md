@@ -788,11 +788,12 @@ This is not relevant in Pb-Pb collisions.
 * `bool updateCurvature`: flag to enable the update of the track curvature, i.e. `q/pt`, at the particle production point
 * `bool updateCurvatureIU`: flag to enable the update of the track curvature, i.e. `q/pt`, at the innermost update (IU) point
 * `float oneOverPtMC` (MC) and `float oneOverPtData` (data): the ratio `oneOverPtData/oneOverPtMC` defines the scaling factor to the `q/pt` residual to smear the track pt
+* `fillTrackTunerTable`: flag to enable the filling of a new table containing for each track the smeared `q/pt` at the IU point
 
 ```note
 * The `TrackTuner` allows also to smear the `q/pt` if only one between `updateCurvature` and `updateCurvatureIU` is `true`
 * By default, the variables `oneOverPtData` and `oneOverPtMC` are initialized to `-1`
-* If `(qOverPtMC < 0) || (qOverPtData < 0)`, the `q/pt` correction is done wuering the file from CCDB. Otherwise, the input values of `qOverPtMC` and `qOverPtData` are used to defined the factor `oneOverPtData/oneOverPtMC`, which is a constant factor flat in transverse momentum.
+* If at least one between`qOverPtMCq` and `OverPtData` is negative, the `q/pt` correction is done wuering the file from CCDB. Otherwise, the input values of `qOverPtMC` and `qOverPtData` are used to defined the factor `oneOverPtData/oneOverPtMC`, which is a constant factor flat in transverse momentum.
 ```
 The string `trackTunerParams` must follow the format: `<variable_name>=<value>|<variable_name>=<value>` (see the default configuration [here](https://github.com/AliceO2Group/O2Physics/blob/master/Common/TableProducer/trackPropagation.cxx#L62) as reference).
 
