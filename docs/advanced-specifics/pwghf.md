@@ -157,7 +157,7 @@ Directories: [`PWGHF/TableProducer`](https://github.com/AliceO2Group/O2Physics/t
 
 Workflow                               | File                      | Type
 ---------------------------------------|---------------------------|----------------------------------------------------------------------------
-`o2-analysis-hf-pid-creator`    | `pidCreator.cxx`    | creation of tables combining *σ* from TPC and TOF for track selection
+`o2-analysis-hf-pid-creator`           | `pidCreator.cxx`          | creation of tables combining *σ* from TPC and TOF for track selection
 `o2-analysis-hf-task-mc-validation`    | `taskMcValidation.cxx`    | validation of HF MC distributions
 `o2-analysis-hf-task-sel-optimisation` | `taskSelOptimisation.cxx` | preselection optimisation
 `o2-analysis-hf-refit-pv-dummy`        | `refitPvDummy.cxx`        | creation of a dummy table with primary-vertex position (for converted data)
