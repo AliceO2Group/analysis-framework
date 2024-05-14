@@ -97,20 +97,19 @@ If the missing table is not mentioned there, try to find the missing workflow fo
   - If the missing table is the **old** version, it indicates that you are running the corresponding converter while you should not. **Remove** it.
   - If the missing table is the **new** version, it indicates that you are not running the corresponding converter while you should. **Add** it.
 
-  Old | New | Converter
-  -|-|-
-  `bc` | `bc_001` | `o2-analysis-bc-converter`
-  `collision` | `collision_001` | `o2-analysis-collision-converter`
-  `fdd` | `fdd_001` | `o2-analysis-fdd-converter`
-  `hmpid` | `hmpid_001` | `o2-analysis-hmpid-converter`
-  `mccalolabel` | `mccalolabel_001` | `o2-analysis-calo-label-converter`
-  `mcparticle` | `mcparticle_001` | `o2-analysis-mc-converter`
-  `mfttrack` | `mfttrack_001` | `o2-analysis-mft-tracks-converter`
-  `trackextra` | `trackextra_001` | `o2-analysis-tracks-extra-converter`
-  `v0` | `v0_001` | `o2-analysis-weak-decay-indices`
-  `v0_001` | `v0_002` | `o2-analysis-v0converter`
-  `zdc` | `zdc_001` | `o2-analysis-zdc-converter`
-
+Old           | New               | Converter
+--------------|-------------------|-------------------------------------
+`bc`          | `bc_001`          | `o2-analysis-bc-converter`
+`collision`   | `collision_001`   | `o2-analysis-collision-converter`
+`fdd`         | `fdd_001`         | `o2-analysis-fdd-converter`
+`hmpid`       | `hmpid_001`       | `o2-analysis-hmpid-converter`
+`mccalolabel` | `mccalolabel_001` | `o2-analysis-calo-label-converter`
+`mcparticle`  | `mcparticle_001`  | `o2-analysis-mc-converter`
+`mfttrack`    | `mfttrack_001`    | `o2-analysis-mft-tracks-converter`
+`trackextra`  | `trackextra_001`  | `o2-analysis-tracks-extra-converter`
+`v0`          | `v0_001`          | `o2-analysis-weak-decay-indices`
+`v0_001`      | `v0_002`          | `o2-analysis-v0converter`
+`zdc`         | `zdc_001`         | `o2-analysis-zdc-converter`
 
 #### General cases
 
