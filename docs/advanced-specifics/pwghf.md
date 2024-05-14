@@ -18,30 +18,31 @@ from the [O2 Analysis Tutorial 2.0](https://indico.cern.ch/event/1267433/) (17-2
 
 ## Contact
 
-Coordinators: Francesco Prino, Vít Kučera
-
 Mattermost channel: [hf-o2-analysis](https://mattermost.web.cern.ch/alice/channels/hf-o2-analysis)
 
 ## Code
 
-- Code used by the heavy-flavour analysis framework are in the
+- Code used by the heavy-flavour analysis framework is in the
 [`PWGHF`](https://github.com/AliceO2Group/O2Physics/tree/master/PWGHF) directory.
-- Tables produced by skimming and candidate creators are defined in
+  - Tables produced by skimming and candidate creators are defined in
 [`CandidateReconstructionTables.h`](https://github.com/AliceO2Group/O2Physics/blob/master/PWGHF/DataModel/CandidateReconstructionTables.h).
-- Tables produced by candidate selectors are defined in
+  - Tables produced by candidate selectors are defined in
 [`CandidateSelectionTables.h`](https://github.com/AliceO2Group/O2Physics/blob/master/PWGHF/DataModel/CandidateSelectionTables.h).
-- Default parameters used in the selection of single tracks, track-index skims and candidates are defined in
+  - Tables produced by derived-data creators are defined in
+[`DerivedTables.h`](https://github.com/AliceO2Group/O2Physics/blob/master/PWGHF/DataModel/DerivedTables.h).
+  - Default parameters used in the selection of single tracks, track-index skims and candidates are defined in
 [`SelectorCuts.h`](https://github.com/AliceO2Group/O2Physics/blob/master/PWGHF/Core/SelectorCuts.h).
+  - Machine learning response classes are implemented in [`HfMlResponse(...).h`](https://github.com/AliceO2Group/O2Physics/tree/master/PWGHF/Core) files.
+  - Utilities, providing small pieces of code used repeatedly in many workflows, are in the
+[`Utils`](https://github.com/AliceO2Group/O2Physics/tree/master/PWGHF/Utils) directory.
 - Secondary-vertex reconstruction algorithms are implemented in the
 [`DCAFitterN`](https://github.com/AliceO2Group/AliceO2/blob/dev/Common/DCAFitter/include/DCAFitter/DCAFitterN.h) class.
 - Functions for calculations of kinematic quantities and for MC matching are implemented in the
 [`RecoDecay`](https://github.com/AliceO2Group/O2Physics/blob/master/Common/Core/RecoDecay.h) class.
 - Selection of tracks based on the particle identification (PID) detectors is performed via the
 [`TrackSelectorPID`](https://github.com/AliceO2Group/O2Physics/blob/master/Common/Core/TrackSelectorPID.h) class.
-- Code for easy local running of the HF tasks and output processing can be found in the
+- The validation framework for easy local execution, testing and validation of O2Physics code can be found in the
 [Run3Analysisvalidation](https://github.com/AliceO2Group/Run3Analysisvalidation) repository.
-  - Analysis code for postprocessing of the task output is collected in the
-  [`FirstAnalysis`](https://github.com/AliceO2Group/Run3Analysisvalidation/tree/master/FirstAnalysis) directory.
 
 ## AliHyperloop
 
@@ -49,11 +50,11 @@ Mattermost channel: [hf-o2-analysis](https://mattermost.web.cern.ch/alice/channe
 [AliHyperloop analyses](https://alimonitor.cern.ch/hyperloop/all-analyses)
 <!-- markdown-link-check-enable -->
 (Type "PWGHF" in the field "JIRA" to filter.)<br>
-Corresponding [JIRA tickets](https://alice.its.cern.ch/jira/issues/?jql=project%20%3D%20PWGHF%20AND%20%22Run%203%20analysis%22%20%3D%20Yes)
+Corresponding [JIRA tickets](https://its.cern.ch/jira/issues/?jql=project%20%3D%20PWG-HF%20AND%20%22Run%203%20analysis%22%20%3D%20Yes)
 
 ## Framework structure
 
-Simplified graph of the workflows and tasks involved in a single HF analysis is shown in the following picture.
+A simplified graph of the workflows and tasks involved in a single HF analysis is shown in the following picture.
 Individual components are described in the next section below.
 
 <div align="center">
@@ -136,19 +137,37 @@ For MC events, histograms with quantities of generated MC particles and MC-match
 ### Tree creation
 
 Candidate tables and other related derived tables are exported to disk as ROOT trees for
-post-processing with external tools, e.g. for optimisation with Machine Learning techniques.
+post-processing with external tools, e.g. for selection optimisation with machine learning techniques.
 
 Workflows: `o2-analysis-hf-tree-creator-<particle|decay>`<br>
 Files: `treeCreator<Particle|Decay>.cxx`<br>
+Directories: [`PWGHF/TableProducer`](https://github.com/AliceO2Group/O2Physics/tree/master/PWGHF/TableProducer), `PWGHF/*/TableProducer`
+
+### Derived-data creation
+
+Derived-data creators are a better alternative to tree creators, because they are more flexible and
+can produce light self-contained interlinked tables which are independent from the parent AO2D files
+and can therefore be stored as derived datasets on AliHyperloop as well as processed locally.
+
+Workflows: `o2-analysis-hf-derived-data-creator-<particle|decay>`<br>
+Files: `derivedDataCreator<Particle|Decay>.cxx`<br>
 Directories: [`PWGHF/TableProducer`](https://github.com/AliceO2Group/O2Physics/tree/master/PWGHF/TableProducer), `PWGHF/*/TableProducer`
 
 ### QA and helper workflows
 
 Workflow                               | File                      | Type
 ---------------------------------------|---------------------------|----------------------------------------------------------------------------
+`o2-analysis-hf-pid-creator`    | `pidCreator.cxx`    | creation of tables combining *σ* from TPC and TOF for track selection
 `o2-analysis-hf-task-mc-validation`    | `taskMcValidation.cxx`    | validation of HF MC distributions
 `o2-analysis-hf-task-sel-optimisation` | `taskSelOptimisation.cxx` | preselection optimisation
 `o2-analysis-hf-refit-pv-dummy`        | `refitPvDummy.cxx`        | creation of a dummy table with primary-vertex position (for converted data)
+
+### Postprocessing scripts and macros
+
+Python scripts and ROOT macros which process the O2Physics output files.
+In general, Python scripts are preferred over ROOT macros.
+
+Directories: [`PWGHF/D2H/Macros`](https://github.com/AliceO2Group/O2Physics/tree/master/PWGHF/D2H/Macros)
 
 ## Contribute
 
@@ -185,7 +204,7 @@ Workflow                               | File                      | Type
 - Sort `#include`s alphabetically within a group.
 - Avoid using hard-coded PDG codes. Use their `enum` names instead
   (from [`PDG_t`](https://root.cern/doc/master/TPDGCode_8h.html) or
-  [`o2::analysis::pdg::Code`](https://github.com/AliceO2Group/O2Physics/blob/master/PWGHF/Core/PDG.h)).
+  [`o2::constants::physics::Pdg`](https://github.com/AliceO2Group/AliceO2/blob/dev/Common/Constants/include/CommonConstants/PhysicsConstants.h)).
   See also [Magic numbers](https://rawgit.com/AliceO2Group/CodingGuidelines/master/coding_guidelines.html?showone=Magic_numbers#Magic_numbers).
 - Use `Type const&` for table subscriptions in function arguments.
 - Declare iterators in range-based `for` loops over tables with `const auto&`.
