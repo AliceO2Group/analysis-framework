@@ -91,22 +91,31 @@ If the missing table is not mentioned there, try to find the missing workflow fo
 
 - Missing `track`: If you are running on Run 3 input, add `o2-analysis-track-propagation`.
   - Please refer to the documentation on the [track propagation](../basics-usage/HelperTasks.md#track-propagation) for details.
-- Missing `bc_001`: Please add the `o2-analysis-bc-converter`.
-  - Missing `bc`: If you are executing `o2-analysis-bc-converter`, remove it.
-- Missing `collision_001`: Please add the `o2-analysis-collision-converter`.
-  - Missing `collision`: If you are executing `o2-analysis-collision-converter`, remove it.
-- Missing `zdc_001`: Please add the `o2-analysis-zdc-converter`.
-  - Missing `zdc`: If you are executing `o2-analysis-zdc-converter`, remove it.
-- Missing `fv0c`: If you are running on Run 3 input, please make sure that the process switches in the `bc-selection`, `event-selection` and `multiplicity-table` tasks are set to `"processRun2": "false", "processRun3": "true"` in your config JSON; see e.g. the `Configurables` section in the [event selection](../basics-usage/HelperTasks.md#event-selection) documentation.
+- Missing `fv0c`: If you are running on Run 3 input, please make sure that the process switches in the `bc-selection`, `event-selection` and `multiplicity-table` devices are set to `"processRun2": "false", "processRun3": "true"` in your config JSON; see e.g. the `Configurables` section in the [event selection](../basics-usage/HelperTasks.md#event-selection) documentation.
 - Missing `tofsignal`: Please refer to the documentation on the [TOF PID](../basics-usage/HelperTasks.md#particle-identification) requirements.
+- Missing versioned table: Converters convert older versions of tables into their newer versions. (See the table below.)
+  - If the missing table is the **old** version, it indicates that you are running the corresponding converter while you should not. **Remove** it.
+  - If the missing table is the **new** version, it indicates that you are not running the corresponding converter while you should. **Add** it.
+
+Old           | New               | Converter
+--------------|-------------------|-------------------------------------
+`bc`          | `bc_001`          | `o2-analysis-bc-converter`
+`collision`   | `collision_001`   | `o2-analysis-collision-converter`
+`fdd`         | `fdd_001`         | `o2-analysis-fdd-converter`
+`hmpid`       | `hmpid_001`       | `o2-analysis-hmpid-converter`
+`mccalolabel` | `mccalolabel_001` | `o2-analysis-calo-label-converter`
+`mcparticle`  | `mcparticle_001`  | `o2-analysis-mc-converter`
+`mfttrack`    | `mfttrack_001`    | `o2-analysis-mft-tracks-converter`
+`trackextra`  | `trackextra_001`  | `o2-analysis-tracks-extra-converter`
+`v0`          | `v0_001`          | `o2-analysis-weak-decay-indices`
+`v0_001`      | `v0_002`          | `o2-analysis-v0converter`
+`zdc`         | `zdc_001`         | `o2-analysis-zdc-converter`
 
 #### General cases
 
 You can identify the missing workflow by running the [`find_dependencies.py`](https://github.com/AliceO2Group/O2Physics/blob/master/Scripts/find_dependencies.py) script.
 The procedure is simple: If the error message complains about a missing table `DF_<id>/O2<table>` then you have to run `$O2PHYSICS_ROOT/share/scripts/find_dependencies.py -t <table>`
 inside the O2Physics environment and add the correct one among the listed producer workflows to your command line.
-Note that the script searches for tables based on their description in the data model.
-This description does not contain the table version suffix (e.g. `_001`), so you need to remove it from the name of the table.
 
 Example: If the missing table is `DF_2853960297589372650/O2timestamps`, then you have to look up `timestamps`:
 
