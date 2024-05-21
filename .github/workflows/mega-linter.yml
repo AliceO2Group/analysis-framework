@@ -1,9 +1,11 @@
 ---
 # MegaLinter GitHub Action configuration file
-# More info at https://oxsecurity.github.io/megalinter
+# More info at https://megalinter.io
 name: MegaLinter
 
 'on': [pull_request_target]
+
+permissions: {}
 
 env:
   # Apply linter fixes configuration
@@ -15,19 +17,18 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  build:
+  megalinter:
     name: MegaLinter
     runs-on: ubuntu-latest
     steps:
       # Git Checkout
       - name: Checkout Code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           # Checkout the HEAD of the PR instead of the merge commit.
-          # This may include unrelated files if the PR branch is not up to date with the upstream.
-          # ref: ${{ github.event.pull_request.head.sha }}
-          # Checkout the merge commit.
-          ref: refs/pull/${{ github.event.number }}/merge
+          ref: ${{ github.event.pull_request.head.sha }}
+          # Checkout the merge commit. (If a fixing PR is made, it will include also missing commits from upstream.)
+          # ref: refs/pull/${{ github.event.number }}/merge
           fetch-depth: 0
           # So we can use secrets.ALIBUILD_GITHUB_TOKEN to push later.
           persist-credentials: false
@@ -36,11 +37,11 @@ jobs:
       - name: MegaLinter
         id: ml
         # You can override MegaLinter flavor used to have faster performances
-        # More info at https://oxsecurity.github.io/megalinter/flavors/
-        uses: oxsecurity/megalinter@v6
+        # More info at https://megalinter.io/flavors/
+        uses: oxsecurity/megalinter@v7
         env:
           # All available variables are described in documentation:
-          # https://oxsecurity.github.io/megalinter/configuration/
+          # https://megalinter.io/configuration/
           # Validates all source when push on master, else just the diff with
           # master. Override with true if you always want to lint all sources.
           VALIDATE_ALL_CODEBASE: false
@@ -81,7 +82,7 @@ jobs:
             yourself and update the pull request, or merge this PR in yours.
 
             You can find how to run MegaLinter locally at
-            <https://oxsecurity.github.io/megalinter/latest/mega-linter-runner/>.
+            <https://megalinter.io/latest/mega-linter-runner/>.
         # We do not create PRs if the branch is not there.
         continue-on-error: true
 
