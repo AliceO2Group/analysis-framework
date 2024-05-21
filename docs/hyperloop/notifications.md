@@ -114,6 +114,16 @@ Informs the user when a wagon has been disabled in different circumstances:
     <img src="../images/notificationWorkflow.png" width="90%">
   </div>
 
+* The wagon is disabled if one of the user defined dependencies of the wagon is considered identical to a service wagon. In order to most efficiently make use of the Grid and the analysis factilities, copies of core services are not permitted as it prevents combining several users into one train.
+
+  <div align="center">
+    <img src="../images/notificationIdenticalWagon.png" width="90%">
+  </div>
+
+    A service wagon is considered identical to a user wagon if it shares the same activated output tables, the same workflow, and it has matching configurables. To fix this error, please use the listed service wagon as a dependency instead of the copy.
+
+
+
 ## <a name="inconsistentParameters"></a>Inconsistent parameters
 
 * Hyperloop makes a comparison between the wagon configuration and the configuration defined in O2 for the package tag selected for the wagon. If they do not coincide, the user will be informed about the mismatch. The comparison is case sensitive, therefore a Configurable will not match if its name does not contain the identical lowercase / uppercase combination.
