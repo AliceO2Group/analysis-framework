@@ -71,9 +71,9 @@ The slicing needs to be pre-declared using `Preslice` (or `PresliceUnsorted` if 
 struct Task {
     Preslice<aod::Tracks> perCol = aod::track::collisionId;
     void proces(aod::Collisions const & cols, aod::Tracks const& tracks) {
-	for (auto& col : cols) {
-	    auto groupedTracks = tracks.sliceBy(perCol, col.globalIndex());
-	}
+        for (auto& col : cols) {
+            auto groupedTracks = tracks.sliceBy(perCol, col.globalIndex());
+        }
     }
 }
 ```
