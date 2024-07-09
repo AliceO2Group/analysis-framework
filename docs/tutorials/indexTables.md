@@ -18,7 +18,7 @@ Related information can be contained in different tables. And in order to associ
 
 <a name="ProduceEtaPhi"></a>
 
-### ProduceEtaPhi, ProduceColExtra, and ConsumeEtaPhi
+## ProduceEtaPhi, ProduceColExtra, and ConsumeEtaPhi
 
 The tutorial example starts with the declaration and production of three tables, EtaPhi and CollisionsExtra, which are normal tables, and HMPIDTracksIndex, an index table.
 
@@ -30,7 +30,7 @@ DECLARE_SOA_INDEX_TABLE_USER(HMPIDTracksIndex, Tracks, "HMPIDTRKIDX", indices::T
 
 <a name="consumecolextra"></a>
 
-### ConsumeColExtra
+## ConsumeColExtra
 
 In task ConsumeColExtra the basic usage of indices is demonstrated. Tracks are
 associated to collisions via the index column o2::aod::track::CollisionId (see
@@ -63,7 +63,7 @@ struct ConsumeColExtra {
 
 <a name="partitioncolextra"></a>
 
-### PartitionColExtra
+## PartitionColExtra
 
 Index columns allow to easily select e.g. all tracks belonging to a given collision using the `sliceBy()` method (see also [DECLARE_SOA_TABLE](creatingTables.md#declareTables)). groupedTracks contains only tracks which belong to Collision col.
 The slicing needs to be pre-declared using `Preslice` (or `PresliceUnsorted` if the index is not sorted) so that the framework can prepare and add it to the internal cache.
@@ -80,7 +80,7 @@ struct Task {
 
 <a name="hmpidtask"></a>
 
-### BuildHmpidIndex and ConsumeHmpidIndex
+## BuildHmpidIndex and ConsumeHmpidIndex
 
 Builds&lt;T&gt; is used to prepare an index column of type T. This has to be performed
 before the index table can be used. Note the declaration of the init() function
