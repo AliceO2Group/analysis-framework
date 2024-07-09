@@ -65,10 +65,17 @@ struct ConsumeColExtra {
 
 ### PartitionColExtra
 
-Index columns allow to easily select e.g. all tracks belonging to a given collision using the sliceBy() method (see also [DECLARE_SOA_TABLE](creatingTables.md#declareTables)). groupedTracks contains only tracks which belong to Collision col.
-
+Index columns allow to easily select e.g. all tracks belonging to a given collision using the `sliceBy()` method (see also [DECLARE_SOA_TABLE](creatingTables.md#declareTables)). groupedTracks contains only tracks which belong to Collision col.
+The slicing needs to be pre-declared using `Preslice` (or `PresliceUnsorted` if the index is not sorted) so that the framework can prepare and add it to the internal cache.
 ```cpp
-auto groupedTracks = tracks.sliceBy(aod::track::collisionId, col.globalIndex());
+struct Task {
+    Preslice<aod::Tracks> perCol = aod::track::collisionId;
+    void proces(aod::Collisions const & cols, aod::Tracks const& tracks) {
+	for (auto& col : cols) {
+	    auto groupedTracks = tracks.sliceBy(perCol, col.globalIndex());
+	}
+    }
+}
 ```
 
 <a name="hmpidtask"></a>
