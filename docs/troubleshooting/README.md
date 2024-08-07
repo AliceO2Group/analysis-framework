@@ -104,6 +104,7 @@ Old           | New               | Converter
 `fdd`         | `fdd_001`         | `o2-analysis-fdd-converter`
 `hmpid`       | `hmpid_001`       | `o2-analysis-hmpid-converter`
 `mccalolabel` | `mccalolabel_001` | `o2-analysis-calo-label-converter`
+`mccollision` | `mccollision_001` | `o2-analysis-mccollision-converter`
 `mcparticle`  | `mcparticle_001`  | `o2-analysis-mc-converter`
 `mfttrack`    | `mfttrack_001`    | `o2-analysis-mft-tracks-converter`
 `trackextra`  | `trackextra_001`  | `o2-analysis-tracks-extra-converter`
