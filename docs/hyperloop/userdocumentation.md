@@ -530,3 +530,5 @@ It is possible that a wagon test will produce multiple warnings. In that case, t
  ```bash
  /my/path/run_train.sh --skip-perf
  ```
+## <a name="merge-scripts"></a>Local merging scripts
+ [Here](https://github.com/romainschotter/HYRunByRunMerging/tree/main) is a repository containing scripts to download all output files from a Hyperloop train run by run, and to merge locally only the files associated to a given run list.
