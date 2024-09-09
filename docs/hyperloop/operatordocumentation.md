@@ -189,7 +189,15 @@ There are a number of settings that you can decide on when composing a train:
    <img src="../images/cloneTrain.png" width="70%">
 </div>
 
+### <a name="request-long-train"></a>Request Long Train
+
 * <a name="longTrain"></a>The _Request long train_ tab allows users to request a long train after the train ran on a short dataset. Short datasets are subsets of a big dataset (_set up in the Dataset settings_). First, a train run needs to be **Done on a smaller short dataset** before being run on a bigger dataset.
+* When requesting a long train, it is possible to request standard derived data from a short train with slim derived data.
+
+<div align="center">
+   <img src="../images/longTrainDerivedType.png" width="70%">
+</div>
+
 * Any user who is part of the analysis can request a long train. Approval from the participating analyses PWGs conveners is required in order to submit a long train. Train operators or admins can also approve a long train, but it is usually done by the PWG.
 
 <div align="center">
