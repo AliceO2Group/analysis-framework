@@ -459,6 +459,7 @@ For better overview the tables are grouped into the following categories: \| [Ge
         <li>o2::aod::TracksWDcaExtra = soa::Join<o2::aod::Tracks, o2::aod::TracksDCA, o2::aod::TracksExtra></li>
         <li>o2::aod::TracksWCovDcaExtra = soa::Join<o2::aod::Tracks, o2::aod::TracksCov, o2::aod::TracksDCA, o2::aod::TracksExtra></li>
         <li>o2::aod::TracksWMc = soa::Join<o2::aod::Tracks, o2::aod::McTrackLabels></li>
+        <li>o2::analysis::TracksWExt = soa::Join<o2::aod::Tracks, o2::aod::TracksExtra, o2::analysis::aod::TrackSelection, o2::aod::TrackSelectionExtension, o2::analysis::aod::TracksPidPi, o2::analysis::aod::PidTpcTofFullPi, o2::analysis::aod::TracksPidKa, o2::analysis::aod::PidTpcTofFullKa, o2::analysis::aod::pidTPCFullPi></li>
       </ul>
     </div>
     <table class=DataModel>
@@ -566,6 +567,13 @@ For better overview the tables are grouped into the following categories: \| [Ge
         <td>pz</td>
         <td>float</td>
         <td>Momentum in z-direction in GeV/c</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::PVector</td>
+        <td>D</td>
+        <td>pVector</td>
+        <td>std::array&lt;float,3&gt;</td>
+        <td>Momentum vector in x,y,z-directions in GeV/c</td>
       </tr>
       <tr>
         <td>o2::aod::track::Energy</td>
@@ -743,6 +751,20 @@ For better overview the tables are grouped into the following categories: \| [Ge
         <td>pz</td>
         <td>float</td>
         <td>Momentum in z-direction in GeV/c</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::PVector</td>
+        <td>D</td>
+        <td>pVector</td>
+        <td>std::array&lt;float,3&gt;</td>
+        <td>Momentum vector in x,y,z-directions in GeV/c</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::Energy</td>
+        <td>D</td>
+        <td>energy</td>
+        <td>float</td>
+        <td>Track energy, computed under the mass assumption given as input</td>
       </tr>
       <tr>
         <td>o2::aod::track::Rapidity</td>
@@ -1464,6 +1486,34 @@ For better overview the tables are grouped into the following categories: \| [Ge
         <td>Number of crossed TPC Rows</td>
       </tr>
       <tr>
+        <td>o2::aod::track::TOFExpTime</td>
+        <td>D</td>
+        <td>tofExpTime</td>
+        <td>float</td>
+        <td>Expected time for the track to reach the TOF</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::TOFExpTimePi</td>
+        <td>D</td>
+        <td>tofExpTimePi</td>
+        <td>float</td>
+        <td>Expected time for the track to reach the TOF under the pion hypothesis</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::TOFExpTimeKa</td>
+        <td>D</td>
+        <td>tofExpTimeKa</td>
+        <td>float</td>
+        <td>Expected time for the track to reach the TOF under the kaon hypothesis</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::TOFExpTimePr</td>
+        <td>D</td>
+        <td>tofExpTimePr</td>
+        <td>float</td>
+        <td>Expected time for the track to reach the TOF under the proton hypothesis</td>
+      </tr>
+      <tr>
         <td>o2::aod::track::ITSNCls</td>
         <td>D</td>
         <td>itsNCls</td>
@@ -1613,6 +1663,20 @@ For better overview the tables are grouped into the following categories: \| [Ge
         <td>Number of shared TPC clusters</td>
       </tr>
       <tr>
+        <td>o2::aod::track::v001::extensions::TPCDeltaTFwd</td>
+        <td>D</td>
+        <td>tpcDeltaTFwd</td>
+        <td>float</td>
+        <td>Delta Forward of track time in TPC time bis</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::v001::extensions::TPCDeltaTBwd</td>
+        <td>D</td>
+        <td>tpcDeltaTBwd</td>
+        <td>float</td>
+        <td>Delta Backward of track time in TPC time bis</td>
+      </tr>
+      <tr>
         <td>o2::aod::track::TRDPattern</td>
         <td></td>
         <td>trdPattern</td>
@@ -1751,6 +1815,48 @@ For better overview the tables are grouped into the following categories: \| [Ge
         <td>itsNClsInnerBarrel</td>
         <td>uint8_t</td>
         <td>Number of ITS clusters in the Inner Barrel</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::v001::ITSClsSizeInLayer</td>
+        <td>D</td>
+        <td>itsClsSizeInLayer</td>
+        <td>uint8_t</td>
+        <td>Size of the ITS cluster in a given layer</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::v001::IsITSAfterburner</td>
+        <td>D</td>
+        <td>isITSAfterburner</td>
+        <td>bool</td>
+        <td>If the track used the afterburner in the ITS</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::TOFExpTime</td>
+        <td>D</td>
+        <td>tofExpTime</td>
+        <td>float</td>
+        <td>Expected time for the track to reach the TOF</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::TOFExpTimePi</td>
+        <td>D</td>
+        <td>tofExpTimePi</td>
+        <td>float</td>
+        <td>Expected time for the track to reach the TOF under the pion hypothesis</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::TOFExpTimeKa</td>
+        <td>D</td>
+        <td>tofExpTimeKa</td>
+        <td>float</td>
+        <td>Expected time for the track to reach the TOF under the kaon hypothesis</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::TOFExpTimePr</td>
+        <td>D</td>
+        <td>tofExpTimePr</td>
+        <td>float</td>
+        <td>Expected time for the track to reach the TOF under the proton hypothesis</td>
       </tr>
       <tr>
         <td>o2::aod::track::TPCCrossedRowsOverFindableCls</td>
@@ -1927,6 +2033,13 @@ For better overview the tables are grouped into the following categories: \| [Ge
         <td>Momentum in z-direction in GeV/c</td>
       </tr>
       <tr>
+        <td>o2::aod::track::PVector</td>
+        <td>D</td>
+        <td>pVector</td>
+        <td>std::array&lt;float,3&gt;</td>
+        <td>Momentum vector in x,y,z-directions in GeV/c</td>
+      </tr>
+      <tr>
         <td>o2::aod::track::Energy</td>
         <td>D</td>
         <td>energy</td>
@@ -2064,6 +2177,20 @@ For better overview the tables are grouped into the following categories: \| [Ge
         <td>pz</td>
         <td>float</td>
         <td>Momentum in z-direction in GeV/c</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::PVector</td>
+        <td>D</td>
+        <td>pVector</td>
+        <td>std::array&lt;float,3&gt;</td>
+        <td>Momentum vector in x,y,z-directions in GeV/c</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::Energy</td>
+        <td>D</td>
+        <td>energy</td>
+        <td>float</td>
+        <td>Track energy, computed under the mass assumption given as input</td>
       </tr>
       <tr>
         <td>o2::aod::track::Rapidity</td>
@@ -2518,6 +2645,34 @@ For better overview the tables are grouped into the following categories: \| [Ge
         <td>Number of crossed TPC Rows</td>
       </tr>
       <tr>
+        <td>o2::aod::track::TOFExpTime</td>
+        <td>D</td>
+        <td>tofExpTime</td>
+        <td>float</td>
+        <td>Expected time for the track to reach the TOF</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::TOFExpTimePi</td>
+        <td>D</td>
+        <td>tofExpTimePi</td>
+        <td>float</td>
+        <td>Expected time for the track to reach the TOF under the pion hypothesis</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::TOFExpTimeKa</td>
+        <td>D</td>
+        <td>tofExpTimeKa</td>
+        <td>float</td>
+        <td>Expected time for the track to reach the TOF under the kaon hypothesis</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::TOFExpTimePr</td>
+        <td>D</td>
+        <td>tofExpTimePr</td>
+        <td>float</td>
+        <td>Expected time for the track to reach the TOF under the proton hypothesis</td>
+      </tr>
+      <tr>
         <td>o2::aod::track::ITSNCls</td>
         <td>D</td>
         <td>itsNCls</td>
@@ -2653,6 +2808,20 @@ For better overview the tables are grouped into the following categories: \| [Ge
         <td>tpcNClsShared</td>
         <td>uint8_t</td>
         <td>Number of shared TPC clusters</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::v001::extensions::TPCDeltaTFwd</td>
+        <td>D</td>
+        <td>tpcDeltaTFwd</td>
+        <td>float</td>
+        <td>Delta Forward of track time in TPC time bis</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::v001::extensions::TPCDeltaTBwd</td>
+        <td>D</td>
+        <td>tpcDeltaTBwd</td>
+        <td>float</td>
+        <td>Delta Backward of track time in TPC time bis</td>
       </tr>
       <tr>
         <td>o2::aod::track::TRDPattern</td>
@@ -2793,6 +2962,48 @@ For better overview the tables are grouped into the following categories: \| [Ge
         <td>itsNClsInnerBarrel</td>
         <td>uint8_t</td>
         <td>Number of ITS clusters in the Inner Barrel</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::v001::ITSClsSizeInLayer</td>
+        <td>D</td>
+        <td>itsClsSizeInLayer</td>
+        <td>uint8_t</td>
+        <td>Size of the ITS cluster in a given layer</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::v001::IsITSAfterburner</td>
+        <td>D</td>
+        <td>isITSAfterburner</td>
+        <td>bool</td>
+        <td>If the track used the afterburner in the ITS</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::TOFExpTime</td>
+        <td>D</td>
+        <td>tofExpTime</td>
+        <td>float</td>
+        <td>Expected time for the track to reach the TOF</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::TOFExpTimePi</td>
+        <td>D</td>
+        <td>tofExpTimePi</td>
+        <td>float</td>
+        <td>Expected time for the track to reach the TOF under the pion hypothesis</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::TOFExpTimeKa</td>
+        <td>D</td>
+        <td>tofExpTimeKa</td>
+        <td>float</td>
+        <td>Expected time for the track to reach the TOF under the kaon hypothesis</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::TOFExpTimePr</td>
+        <td>D</td>
+        <td>tofExpTimePr</td>
+        <td>float</td>
+        <td>Expected time for the track to reach the TOF under the proton hypothesis</td>
       </tr>
       <tr>
         <td>o2::aod::track::TPCCrossedRowsOverFindableCls</td>
@@ -4671,6 +4882,48 @@ For better overview the tables are grouped into the following categories: \| [Ge
         <td>float</td>
         <td>Z position calculated from timeA and timeC in cm</td>
       </tr>
+      <tr>
+        <td>o2::aod::ft0::CollTime</td>
+        <td>D</td>
+        <td>collTime</td>
+        <td>float</td>
+        <td>Collision time, one need also check validation (code below) for timeA and timeC</td>
+      </tr>
+      <tr>
+        <td>o2::aod::ft0::IsValidTimeA</td>
+        <td>D</td>
+        <td>isValidTimeA</td>
+        <td>bool</td>
+        <td>Checks if time from A side was calculated, and if is not dummy</td>
+      </tr>
+      <tr>
+        <td>o2::aod::ft0::IsValidTimeC</td>
+        <td>D</td>
+        <td>isValidTimeC</td>
+        <td>bool</td>
+        <td>Checks if time from C side was calculated</td>
+      </tr>
+      <tr>
+        <td>o2::aod::ft0::IsValidTime</td>
+        <td>D</td>
+        <td>isValidTime</td>
+        <td>bool</td>
+        <td>Checks if times from A and C side were calculated simultaneously</td>
+      </tr>
+      <tr>
+        <td>o2::aod::ft0::SumAmpA</td>
+        <td>D</td>
+        <td>sumAmpA</td>
+        <td>float</td>
+        <td>Calculates sum of positive amplitudes from side A</td>
+      </tr>
+      <tr>
+        <td>o2::aod::ft0::SumAmpC</td>
+        <td>D</td>
+        <td>sumAmpC</td>
+        <td>float</td>
+        <td>Calculates sum of positive amplitudes from side C</td>
+      </tr>
     </table>
   </div>
 
@@ -5813,7 +6066,14 @@ For better overview the tables are grouped into the following categories: \| [Ge
         <td>D</td>
         <td>isPhotonV0</td>
         <td>bool</td>
-        <td>is standard V0</td>
+        <td>is TPC-only V0 for which the photon-mass-hypothesis was good</td>
+      </tr>
+      <tr>
+        <td>o2::aod::v0::IsCollinearV0</td>
+        <td>D</td>
+        <td>isCollinearV0</td>
+        <td>bool</td>
+        <td>is V0 for which the photon-mass-hypothesis was good and was fitted collinearly</td>
       </tr>
     </table>
   </div>
@@ -6137,10 +6397,122 @@ For better overview the tables are grouped into the following categories: \| [Ge
   </div>
 
 
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::TrackedV0s</button>
+  <div class="panel">
+    <div>
+       Strangeness tracking V0 table
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev//Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::TrackedV0s = o2::aod::TrackedV0s</li>
+        <li>o2::aod::TrackedV0 = o2::aod::TrackedV0s::iterator</li>
+        <li>o2::aod::AssignedTrackedV0s = soa::Join<o2::aod::TrackedV0s, o2::aod::TrackedV0Colls></li>
+        <li>o2::aod::AssignedTrackedV0 = soa::Join<o2::aod::TrackedV0s, o2::aod::TrackedV0Colls>::iterator</li>
+      </ul>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::soa::Index</td>
+        <td>GI</td>
+        <td>globalIndex</td>
+        <td>int64_t</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::strangenesstracking::TrackId</td>
+        <td>I</td>
+        <td>trackId</td>
+        <td>int32</td>
+        <td>Strange track index</td>
+      </tr>
+      <tr>
+        <td>o2::aod::strangenesstracking::ITSTrackId</td>
+        <td>I</td>
+        <td>itsTrackId</td>
+        <td>int</td>
+        <td>ITS index</td>
+      </tr>
+      <tr>
+        <td>o2::aod::strangenesstracking::V0Id</td>
+        <td>I</td>
+        <td>v0Id</td>
+        <td>int32</td>
+        <td>V0 index</td>
+      </tr>
+      <tr>
+        <td>o2::aod::strangenesstracking::DecayX</td>
+        <td></td>
+        <td>decayX</td>
+        <td>float</td>
+        <td>X coordinate of decay vertex</td>
+      </tr>
+      <tr>
+        <td>o2::aod::strangenesstracking::DecayY</td>
+        <td></td>
+        <td>decayY</td>
+        <td>float</td>
+        <td>Y coordinate of decay vertex</td>
+      </tr>
+      <tr>
+        <td>o2::aod::strangenesstracking::DecayZ</td>
+        <td></td>
+        <td>decayZ</td>
+        <td>float</td>
+        <td>Z coordinate of decay vertex</td>
+      </tr>
+      <tr>
+        <td>o2::aod::strangenesstracking::H3Lmass</td>
+        <td></td>
+        <td>h3Lmass</td>
+        <td>float</td>
+        <td>H3L mass</td>
+      </tr>
+      <tr>
+        <td>o2::aod::strangenesstracking::H4Lmass</td>
+        <td></td>
+        <td>h4Lmass</td>
+        <td>float</td>
+        <td>H4L mass</td>
+      </tr>
+      <tr>
+        <td>o2::aod::strangenesstracking::MatchingChi2</td>
+        <td></td>
+        <td>matchingChi2</td>
+        <td>float</td>
+        <td>Matching Chi2</td>
+      </tr>
+      <tr>
+        <td>o2::aod::strangenesstracking::TopologyChi2</td>
+        <td></td>
+        <td>topologyChi2</td>
+        <td>float</td>
+        <td>Topology Chi2</td>
+      </tr>
+      <tr>
+        <td>o2::aod::strangenesstracking::ITSclsSize</td>
+        <td></td>
+        <td>itsClsSize</td>
+        <td>float</td>
+        <td>Average ITS cluster size</td>
+      </tr>
+    </table>
+  </div>
+
+
   <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::Decay3Bodys</button>
   <div class="panel">
     <div>
-       Run 2 cascade table
+       3-body decay table
     </div>
     <div>
       Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev//Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
@@ -6695,7 +7067,7 @@ For better overview the tables are grouped into the following categories: \| [Ge
 ## MonteCarlo
 <div>
 
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::McCollisions</button>
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::McCollisions_000</button>
   <div class="panel">
     <div>
        MC collision table
@@ -6703,9 +7075,113 @@ For better overview the tables are grouped into the following categories: \| [Ge
     <div>
       Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev//Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
     </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::soa::Index</td>
+        <td>GI</td>
+        <td>globalIndex</td>
+        <td>int64_t</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::mccollision::BCId</td>
+        <td>I</td>
+        <td>bcId</td>
+        <td>int32</td>
+        <td>BC index</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mccollision::GeneratorsID</td>
+        <td></td>
+        <td>generatorsID</td>
+        <td>short</td>
+        <td>disentangled generator IDs should be accessed using getGeneratorId, getSubGeneratorId and getSourceId</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mccollision::PosX</td>
+        <td></td>
+        <td>posX</td>
+        <td>float</td>
+        <td>X vertex position in cm</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mccollision::PosY</td>
+        <td></td>
+        <td>posY</td>
+        <td>float</td>
+        <td>Y vertex position in cm</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mccollision::PosZ</td>
+        <td></td>
+        <td>posZ</td>
+        <td>float</td>
+        <td>Z vertex position in cm</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mccollision::T</td>
+        <td></td>
+        <td>t</td>
+        <td>float</td>
+        <td>Collision time relative to given bc in ns</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mccollision::Weight</td>
+        <td></td>
+        <td>weight</td>
+        <td>float</td>
+        <td>MC weight</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mccollision::ImpactParameter</td>
+        <td></td>
+        <td>impactParameter</td>
+        <td>float</td>
+        <td>Impact parameter for A-A</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mccollision::GetGeneratorId</td>
+        <td>D</td>
+        <td>getGeneratorId</td>
+        <td>int</td>
+        <td>The global generator ID which might have been assigned by the user</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mccollision::GetSubGeneratorId</td>
+        <td>D</td>
+        <td>getSubGeneratorId</td>
+        <td>int</td>
+        <td>A specific sub-generator ID in case the generator has some sub-generator logic</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mccollision::GetSourceId</td>
+        <td>D</td>
+        <td>getSourceId</td>
+        <td>int</td>
+        <td>The source ID to differentiate between signals and background in an embedding simulation</td>
+      </tr>
+    </table>
+  </div>
+
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::McCollisions_001</button>
+  <div class="panel">
+    <div>
+       MC collision table with event plane
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev//Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
+    </div>
     <div>Is used in:
       <ul>
-        <li>o2::aod::McCollision = o2::aod::McCollisions::iterator</li>
+        <li>o2::aod::McCollisions = o2::aod::McCollisions_001</li>
       </ul>
     </div>
     <table class=DataModel>
@@ -6778,6 +7254,13 @@ For better overview the tables are grouped into the following categories: \| [Ge
         <td>impactParameter</td>
         <td>float</td>
         <td>Impact parameter for A-A</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mccollision::EventPlaneAngle</td>
+        <td></td>
+        <td>eventPlaneAngle</td>
+        <td>float</td>
+        <td>Event plane angle for A-A</td>
       </tr>
       <tr>
         <td>o2::aod::mccollision::GetGeneratorId</td>
@@ -6950,6 +7433,13 @@ For better overview the tables are grouped into the following categories: \| [Ge
         <td>vt</td>
         <td>float</td>
         <td>Production time</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::PVector</td>
+        <td>D</td>
+        <td>pVector</td>
+        <td>std::array&lt;float,3&gt;</td>
+        <td>Momentum vector in x,y,z-directions in GeV/c</td>
       </tr>
       <tr>
         <td>o2::aod::mcparticle::ProducedByGenerator</td>
@@ -7169,6 +7659,13 @@ For better overview the tables are grouped into the following categories: \| [Ge
         <td>vt</td>
         <td>float</td>
         <td>Production time</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::PVector</td>
+        <td>D</td>
+        <td>pVector</td>
+        <td>std::array&lt;float,3&gt;</td>
+        <td>Momentum vector in x,y,z-directions in GeV/c</td>
       </tr>
       <tr>
         <td>o2::aod::mcparticle::ProducedByGenerator</td>
@@ -7394,6 +7891,13 @@ For better overview the tables are grouped into the following categories: \| [Ge
         <td>Production time</td>
       </tr>
       <tr>
+        <td>o2::aod::mcparticle::PVector</td>
+        <td>D</td>
+        <td>pVector</td>
+        <td>std::array&lt;float,3&gt;</td>
+        <td>Momentum vector in x,y,z-directions in GeV/c</td>
+      </tr>
+      <tr>
         <td>o2::aod::mcparticle::ProducedByGenerator</td>
         <td>D</td>
         <td>producedByGenerator</td>
@@ -7571,6 +8075,13 @@ For better overview the tables are grouped into the following categories: \| [Ge
         <td>vt</td>
         <td>float</td>
         <td>Production time</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::PVector</td>
+        <td>D</td>
+        <td>pVector</td>
+        <td>std::array&lt;float,3&gt;</td>
+        <td>Momentum vector in x,y,z-directions in GeV/c</td>
       </tr>
       <tr>
         <td>o2::aod::mcparticle::ProducedByGenerator</td>
@@ -8511,6 +9022,33 @@ For better overview the tables are grouped into the following categories: \| [Ge
 <a name="cat_Others"></a>
 ## Others
 <div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::BCFlags</button>
+  <div class="panel">
+    <div>
+       flag for tagging UPCs, joinable with BCs
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev//Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::bc::Flags</td>
+        <td></td>
+        <td>flags</td>
+        <td>uint8_t</td>
+        <td>BC flags (e.g. tagging of UPC tracking settings, etc)</td>
+      </tr>
+    </table>
+  </div>
+
 
   <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::TracksQA</button>
   <div class="panel">

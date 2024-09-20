@@ -13,71 +13,6 @@ Click on the labels to display the table content. Click buttons to
 
 <!-- Block with helper tasks -->
 
-##  o2-analysis-bc-converter
-Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/TableProducer//bcConverter.cxx" target="_blank">bcConverter.cxx</a>
-<div>
-
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::BCs_001</button>
-  <div class="panel">
-    <div>
-       Root of data model for tables pointing to a bunch crossing, version 1
-    </div>
-    <div>
-      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev//Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
-    </div>
-    <div>Is used in:
-      <ul>
-        <li>o2::aod::BCs = o2::aod::BCs_001</li>
-      </ul>
-    </div>
-    <table class=DataModel>
-      <tr>
-        <th>Name</th>
-        <th></th>
-        <th>Getter</th>
-        <th>Type</th>
-        <th>Comment</th>
-      </tr>
-      <tr>
-        <td>o2::soa::Index</td>
-        <td>GI</td>
-        <td>globalIndex</td>
-        <td>int64_t</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::bc::RunNumber</td>
-        <td></td>
-        <td>runNumber</td>
-        <td>int</td>
-        <td>Run number</td>
-      </tr>
-      <tr>
-        <td>o2::aod::bc::GlobalBC</td>
-        <td></td>
-        <td>globalBC</td>
-        <td>uint64_t</td>
-        <td>Bunch crossing number (globally unique in this run)</td>
-      </tr>
-      <tr>
-        <td>o2::aod::bc::TriggerMask</td>
-        <td></td>
-        <td>triggerMask</td>
-        <td>uint64_t</td>
-        <td>CTP trigger mask</td>
-      </tr>
-      <tr>
-        <td>o2::aod::bc::InputMask</td>
-        <td></td>
-        <td>inputMask</td>
-        <td>uint64_t</td>
-        <td>CTP input mask</td>
-      </tr>
-    </table>
-  </div>
-
-</div>
-
 ##  o2-analysis-calo-clusters
 Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/TableProducer//caloClusterProducer.cxx" target="_blank">caloClusterProducer.cxx</a>
 <div>
@@ -575,45 +510,6 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
 
 </div>
 
-##  o2-analysis-calo-label-converter
-Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/TableProducer//caloLabelConverter.cxx" target="_blank">caloLabelConverter.cxx</a>
-<div>
-
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::McCaloLabels_001</button>
-  <div class="panel">
-    <div>
-       Table joined to the calo table containing multiple MC indices and the amplitude fraction (version 001)
-    </div>
-    <div>
-      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev//Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
-    </div>
-    <table class=DataModel>
-      <tr>
-        <th>Name</th>
-        <th></th>
-        <th>Getter</th>
-        <th>Type</th>
-        <th>Comment</th>
-      </tr>
-      <tr>
-        <td>o2::aod::mccalolabel::McParticleIds</td>
-        <td>GI</td>
-        <td></td>
-        <td>?</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::mccalolabel::AmplitudeA</td>
-        <td></td>
-        <td>amplitudeA</td>
-        <td>std::vector&lt;float&gt;</td>
-        <td>Energy fraction deposited by a particle inside this calo cell.</td>
-      </tr>
-    </table>
-  </div>
-
-</div>
-
 ##  o2-analysis-centrality-table
 Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/TableProducer//centralityTable.cxx" target="_blank">centralityTable.cxx</a>
 <div>
@@ -992,148 +888,6 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
 
 </div>
 
-##  o2-analysis-collision-converter
-Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/TableProducer//collisionConverter.cxx" target="_blank">collisionConverter.cxx</a>
-<div>
-
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::Collisions_001</button>
-  <div class="panel">
-    <div>
-       Time and vertex information of collision
-    </div>
-    <div>
-      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev//Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
-    </div>
-    <div>Is used in:
-      <ul>
-        <li>o2::aod::Collisions = o2::aod::Collisions_001</li>
-      </ul>
-    </div>
-    <table class=DataModel>
-      <tr>
-        <th>Name</th>
-        <th></th>
-        <th>Getter</th>
-        <th>Type</th>
-        <th>Comment</th>
-      </tr>
-      <tr>
-        <td>o2::soa::Index</td>
-        <td>GI</td>
-        <td>globalIndex</td>
-        <td>int64_t</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::&zwnj;collision::BCId</td>
-        <td>I</td>
-        <td>bcId</td>
-        <td>int32</td>
-        <td>Most probably BC to where this collision has occured</td>
-      </tr>
-      <tr>
-        <td>o2::aod::&zwnj;collision::PosX</td>
-        <td></td>
-        <td>posX</td>
-        <td>float</td>
-        <td>X Vertex position in cm</td>
-      </tr>
-      <tr>
-        <td>o2::aod::&zwnj;collision::PosY</td>
-        <td></td>
-        <td>posY</td>
-        <td>float</td>
-        <td>Y Vertex position in cm</td>
-      </tr>
-      <tr>
-        <td>o2::aod::&zwnj;collision::PosZ</td>
-        <td></td>
-        <td>posZ</td>
-        <td>float</td>
-        <td>Z Vertex position in cm</td>
-      </tr>
-      <tr>
-        <td>o2::aod::&zwnj;collision::CovXX</td>
-        <td></td>
-        <td>covXX</td>
-        <td>float</td>
-        <td>Vertex covariance matrix</td>
-      </tr>
-      <tr>
-        <td>o2::aod::&zwnj;collision::CovXY</td>
-        <td></td>
-        <td>covXY</td>
-        <td>float</td>
-        <td>Vertex covariance matrix</td>
-      </tr>
-      <tr>
-        <td>o2::aod::&zwnj;collision::CovYY</td>
-        <td></td>
-        <td>covYY</td>
-        <td>float</td>
-        <td>Vertex covariance matrix</td>
-      </tr>
-      <tr>
-        <td>o2::aod::&zwnj;collision::CovXZ</td>
-        <td></td>
-        <td>covXZ</td>
-        <td>float</td>
-        <td>Vertex covariance matrix</td>
-      </tr>
-      <tr>
-        <td>o2::aod::&zwnj;collision::CovYZ</td>
-        <td></td>
-        <td>covYZ</td>
-        <td>float</td>
-        <td>Vertex covariance matrix</td>
-      </tr>
-      <tr>
-        <td>o2::aod::&zwnj;collision::CovZZ</td>
-        <td></td>
-        <td>covZZ</td>
-        <td>float</td>
-        <td>Vertex covariance matrix</td>
-      </tr>
-      <tr>
-        <td>o2::aod::&zwnj;collision::Flags</td>
-        <td></td>
-        <td>flags</td>
-        <td>uint16_t</td>
-        <td>Run 2: see CollisionFlagsRun2 | Run 3: see Vertex::Flags</td>
-      </tr>
-      <tr>
-        <td>o2::aod::&zwnj;collision::Chi2</td>
-        <td></td>
-        <td>chi2</td>
-        <td>float</td>
-        <td>Chi2 of vertex fit</td>
-      </tr>
-      <tr>
-        <td>o2::aod::&zwnj;collision::NumContrib</td>
-        <td></td>
-        <td>numContrib</td>
-        <td>uint16_t</td>
-        <td>Number of tracks used for the vertex</td>
-      </tr>
-      <tr>
-        <td>o2::aod::&zwnj;collision::CollisionTime</td>
-        <td></td>
-        <td>collisionTime</td>
-        <td>float</td>
-        <td>Collision time in ns relative to BC stored in bc()</td>
-      </tr>
-      <tr>
-        <td>o2::aod::&zwnj;collision::CollisionTimeRes</td>
-        <td></td>
-        <td>collisionTimeRes</td>
-        <td>float</td>
-        <td>Resolution of collision time</td>
-      </tr>
-    </table>
-  </div>
-
-</div>
-
 ##  o2-analysis-event-selection
 Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/TableProducer//eventSelection.cxx" target="_blank">eventSelection.cxx</a>
 <div>
@@ -1288,84 +1042,12 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
         <td>int</td>
         <td>ZDC entry index in ZDCs table (-1 if doesn't exist)</td>
       </tr>
-    </table>
-  </div>
-
-</div>
-
-##  o2-analysis-fdd-converter
-Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/TableProducer//fddConverter.cxx" target="_blank">fddConverter.cxx</a>
-<div>
-
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::FDDs_001</button>
-  <div class="panel">
-    <div>
-       FDD table, version 001
-    </div>
-    <div>
-      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev//Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
-    </div>
-    <div>Is used in:
-      <ul>
-        <li>o2::aod::FDDs = o2::aod::FDDs_001</li>
-      </ul>
-    </div>
-    <table class=DataModel>
       <tr>
-        <th>Name</th>
-        <th></th>
-        <th>Getter</th>
-        <th>Type</th>
-        <th>Comment</th>
-      </tr>
-      <tr>
-        <td>o2::soa::Index</td>
-        <td>GI</td>
-        <td>globalIndex</td>
-        <td>int64_t</td>
+        <td>o2::aod::evsel::NumTracksInTimeRange</td>
         <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::fdd::BCId</td>
-        <td>I</td>
-        <td>bcId</td>
-        <td>int32</td>
-        <td>BC index</td>
-      </tr>
-      <tr>
-        <td>o2::aod::fdd::ChargeA</td>
-        <td></td>
-        <td>chargeA</td>
-        <td>int16_t[8]</td>
-        <td>Amplitude per channel A-side</td>
-      </tr>
-      <tr>
-        <td>o2::aod::fdd::ChargeC</td>
-        <td></td>
-        <td>chargeC</td>
-        <td>int16_t[8]</td>
-        <td>Amplitude per channel C-side</td>
-      </tr>
-      <tr>
-        <td>o2::aod::fdd::TimeA</td>
-        <td></td>
-        <td>timeA</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::fdd::TimeC</td>
-        <td></td>
-        <td>timeC</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::fdd::TriggerMask</td>
-        <td></td>
-        <td>triggerMask</td>
-        <td>uint8_t</td>
-        <td></td>
+        <td>trackOccupancyInTimeRange</td>
+        <td>int</td>
+        <td>Occupancy in specified time interval</td>
       </tr>
     </table>
   </div>
@@ -1614,22 +1296,17 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
 
 </div>
 
-##  o2-analysis-hmpid-converter
-Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/TableProducer//hmpConverter.cxx" target="_blank">hmpConverter.cxx</a>
+##  o2-analysis-match-mft-ft0
+Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/TableProducer//match-mft-ft0.cxx" target="_blank">match-mft-ft0.cxx</a>
 <div>
 
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::HMPID_001</button>
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::MatchedToFT0</button>
   <div class="panel">
     <div>
-       HMPID information version 1
+
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev//Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
-    </div>
-    <div>Is used in:
-      <ul>
-        <li>o2::aod::HMPIDs = o2::aod::HMPID_001</li>
-      </ul>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/DataModel/MatchMFTFT0.h" target="_blank">Common/DataModel/MatchMFTFT0.h</a>
     </div>
     <table class=DataModel>
       <tr>
@@ -1640,88 +1317,51 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
         <th>Comment</th>
       </tr>
       <tr>
-        <td>o2::soa::Index</td>
-        <td>GI</td>
-        <td>globalIndex</td>
-        <td>int64_t</td>
-        <td></td>
+        <td>o2::aod::indices::BCId</td>
+        <td>I</td>
+        <td>bcId</td>
+        <td>int32</td>
+        <td>Pointer into BCs</td>
       </tr>
       <tr>
-        <td>o2::aod::hmpid::TrackId</td>
+        <td>o2::aod::indices::FT0Ids</td>
+        <td>GI</td>
+        <td></td>
+        <td>?</td>
+        <td></td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::BCofMFT</button>
+  <div class="panel">
+    <div>
+
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/DataModel/MatchMFTFT0.h" target="_blank">Common/DataModel/MatchMFTFT0.h</a>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::ambii::MFTTrackId</td>
         <td>I</td>
         <td>trackId</td>
         <td>int32</td>
-        <td>Track index</td>
+        <td>Pointer into MFTTracks</td>
       </tr>
       <tr>
-        <td>o2::aod::hmpid::HMPIDSignal</td>
+        <td>o2::aod::indices::BCIds</td>
+        <td>GI</td>
         <td></td>
-        <td>hmpidSignal</td>
-        <td>float</td>
-        <td>Signal of the HMPID</td>
-      </tr>
-      <tr>
-        <td>o2::aod::hmpid::HMPIDXTrack</td>
+        <td>?</td>
         <td></td>
-        <td>hmpidXTrack</td>
-        <td>float</td>
-        <td>Extrapolated track point x coordinate</td>
-      </tr>
-      <tr>
-        <td>o2::aod::hmpid::HMPIDYTrack</td>
-        <td></td>
-        <td>hmpidYTrack</td>
-        <td>float</td>
-        <td>Extrapolated track point y coordinate</td>
-      </tr>
-      <tr>
-        <td>o2::aod::hmpid::HMPIDXMip</td>
-        <td></td>
-        <td>hmpidXMip</td>
-        <td>float</td>
-        <td>Matched MIP track point x coordinate</td>
-      </tr>
-      <tr>
-        <td>o2::aod::hmpid::HMPIDYMip</td>
-        <td></td>
-        <td>hmpidYMip</td>
-        <td>float</td>
-        <td>Matched MIP track point y coordinate</td>
-      </tr>
-      <tr>
-        <td>o2::aod::hmpid::HMPIDNPhotons</td>
-        <td></td>
-        <td>hmpidNPhotons</td>
-        <td>int</td>
-        <td>Number of detected photons in HMPID</td>
-      </tr>
-      <tr>
-        <td>o2::aod::hmpid::HMPIDQMip</td>
-        <td></td>
-        <td>hmpidQMip</td>
-        <td>float</td>
-        <td>Matched MIP cluster charge</td>
-      </tr>
-      <tr>
-        <td>o2::aod::hmpid::HMPIDClusSize</td>
-        <td></td>
-        <td>hmpidClusSize</td>
-        <td>int</td>
-        <td>Matched MIP cluster size</td>
-      </tr>
-      <tr>
-        <td>o2::aod::hmpid::HMPIDMom</td>
-        <td></td>
-        <td>hmpidMom</td>
-        <td>float</td>
-        <td>Track momentum at the HMPID</td>
-      </tr>
-      <tr>
-        <td>o2::aod::hmpid::HMPIDPhotsCharge</td>
-        <td></td>
-        <td>hmpidPhotsCharge</td>
-        <td>float[10]</td>
-        <td>Photon cluster charge</td>
       </tr>
     </table>
   </div>
@@ -1762,27 +1402,23 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
         <td>int</td>
         <td>stores N times this PV was recoed</td>
       </tr>
+      <tr>
+        <td>o2::aod::mccollisionprop::BestCollisionCentFT0C</td>
+        <td></td>
+        <td>bestCollisionCentFT0C</td>
+        <td>float</td>
+        <td>stores best FT0C centrality</td>
+      </tr>
     </table>
   </div>
 
-</div>
-
-##  o2-analysis-mc-converter
-Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/TableProducer//mcConverter.cxx" target="_blank">mcConverter.cxx</a>
-<div>
-
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::StoredMcParticles_001</button>
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::McCollContexts</button>
   <div class="panel">
     <div>
-       MC particle table, version 001
+
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev//Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
-    </div>
-    <div>Is used in:
-      <ul>
-        <li>o2::aod::StoredMcParticles = o2::aod::StoredMcParticles_001</li>
-      </ul>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/DataModel/McCollisionExtra.h" target="_blank">Common/DataModel/McCollisionExtra.h</a>
     </div>
     <table class=DataModel>
       <tr>
@@ -1793,314 +1429,18 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
         <th>Comment</th>
       </tr>
       <tr>
-        <td>o2::soa::Index</td>
-        <td>GI</td>
-        <td>globalIndex</td>
-        <td>int64_t</td>
+        <td>o2::aod::mccollisionprop::ForwardCollisionMap</td>
         <td></td>
+        <td>forwardCollisionMap</td>
+        <td>uint32_t</td>
+        <td>stores bitmap telling if PoI found in collisions after this one (bits forward in time)</td>
       </tr>
       <tr>
-        <td>o2::aod::mcparticle::McCollisionId</td>
-        <td>I</td>
-        <td>mcCollisionId</td>
-        <td>int32</td>
-        <td>MC collision of this particle</td>
-      </tr>
-      <tr>
-        <td>o2::aod::mcparticle::PdgCode</td>
+        <td>o2::aod::mccollisionprop::BackwardCollisionMap</td>
         <td></td>
-        <td>pdgCode</td>
-        <td>int</td>
-        <td>PDG code</td>
-      </tr>
-      <tr>
-        <td>o2::aod::mcparticle::StatusCode</td>
-        <td></td>
-        <td>statusCode</td>
-        <td>int</td>
-        <td>Generators status code or physics process. Do not use directly. Use dynamic columns getGenStatusCode() or getProcess()</td>
-      </tr>
-      <tr>
-        <td>o2::aod::mcparticle::Flags</td>
-        <td></td>
-        <td>flags</td>
-        <td>uint8_t</td>
-        <td>ALICE specific flags, see MCParticleFlags. Do not use directly. Use the dynamic columns, e.g. producedByGenerator()</td>
-      </tr>
-      <tr>
-        <td>o2::aod::mcparticle::MothersIds</td>
-        <td>SAI</td>
-        <td>mothersIds</td>
-        <td></td>
-        <td>Mother tracks (possible empty) array. Iterate over mcParticle.mothers_as<aod::McParticles>())</td>
-      </tr>
-      <tr>
-        <td>o2::aod::mcparticle::DaughtersIdSlice</td>
-        <td>SSLI</td>
-        <td>daughtersIds</td>
-        <td>int32_t</td>
-        <td>Daughter tracks (possibly empty) slice. Check for non-zero with mcParticle.has_daughters(). Iterate over mcParticle.daughters_as<aod::McParticles>())</td>
-      </tr>
-      <tr>
-        <td>o2::aod::mcparticle::Weight</td>
-        <td></td>
-        <td>weight</td>
-        <td>float</td>
-        <td>MC weight</td>
-      </tr>
-      <tr>
-        <td>o2::aod::mcparticle::Px</td>
-        <td></td>
-        <td>px</td>
-        <td>float</td>
-        <td>Momentum in x in GeV/c</td>
-      </tr>
-      <tr>
-        <td>o2::aod::mcparticle::Py</td>
-        <td></td>
-        <td>py</td>
-        <td>float</td>
-        <td>Momentum in y in GeV/c</td>
-      </tr>
-      <tr>
-        <td>o2::aod::mcparticle::Pz</td>
-        <td></td>
-        <td>pz</td>
-        <td>float</td>
-        <td>Momentum in z in GeV/c</td>
-      </tr>
-      <tr>
-        <td>o2::aod::mcparticle::E</td>
-        <td></td>
-        <td>e</td>
-        <td>float</td>
-        <td>Energy</td>
-      </tr>
-      <tr>
-        <td>o2::aod::mcparticle::Vx</td>
-        <td></td>
-        <td>vx</td>
-        <td>float</td>
-        <td>X production vertex in cm</td>
-      </tr>
-      <tr>
-        <td>o2::aod::mcparticle::Vy</td>
-        <td></td>
-        <td>vy</td>
-        <td>float</td>
-        <td>Y production vertex in cm</td>
-      </tr>
-      <tr>
-        <td>o2::aod::mcparticle::Vz</td>
-        <td></td>
-        <td>vz</td>
-        <td>float</td>
-        <td>Z production vertex in cm</td>
-      </tr>
-      <tr>
-        <td>o2::aod::mcparticle::Vt</td>
-        <td></td>
-        <td>vt</td>
-        <td>float</td>
-        <td>Production time</td>
-      </tr>
-      <tr>
-        <td>o2::aod::mcparticle::ProducedByGenerator</td>
-        <td>D</td>
-        <td>producedByGenerator</td>
-        <td>bool</td>
-        <td>True if particle produced by the generator (==TMCProcess::kPrimary); False if by the transport code</td>
-      </tr>
-      <tr>
-        <td>o2::aod::mcparticle::FromBackgroundEvent</td>
-        <td>D</td>
-        <td>fromBackgroundEvent</td>
-        <td>bool</td>
-        <td>Particle from background event</td>
-      </tr>
-      <tr>
-        <td>o2::aod::mcparticle::GetGenStatusCode</td>
-        <td>D</td>
-        <td>getGenStatusCode</td>
-        <td>int</td>
-        <td>The native status code put by the generator, or -1 if a particle produced during transport</td>
-      </tr>
-      <tr>
-        <td>o2::aod::mcparticle::GetHepMCStatusCode</td>
-        <td>D</td>
-        <td>getHepMCStatusCode</td>
-        <td>int</td>
-        <td>The HepMC status code put by the generator, or -1 if a particle produced during transport</td>
-      </tr>
-      <tr>
-        <td>o2::aod::mcparticle::GetProcess</td>
-        <td>D</td>
-        <td>getProcess</td>
-        <td>int</td>
-        <td>The VMC physics code (as int) that generated this particle (see header TMCProcess.h in ROOT)</td>
-      </tr>
-      <tr>
-        <td>o2::aod::mcparticle::IsPhysicalPrimary</td>
-        <td>D</td>
-        <td>isPhysicalPrimary</td>
-        <td>bool</td>
-        <td>True if particle is considered a physical primary according to the ALICE definition</td>
-      </tr>
-    </table>
-  </div>
-
-</div>
-
-##  o2-analysis-mft-tracks-converter
-Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/TableProducer//mftTracksConverter.cxx" target="_blank">mftTracksConverter.cxx</a>
-<div>
-
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::StoredMFTTracks_001</button>
-  <div class="panel">
-    <div>
-       On disk version of MFTTracks, version 1
-    </div>
-    <div>
-      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev//Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
-    </div>
-    <div>Is used in:
-      <ul>
-        <li>o2::aod::StoredMFTTracks = o2::aod::StoredMFTTracks_001</li>
-      </ul>
-    </div>
-    <table class=DataModel>
-      <tr>
-        <th>Name</th>
-        <th></th>
-        <th>Getter</th>
-        <th>Type</th>
-        <th>Comment</th>
-      </tr>
-      <tr>
-        <td>o2::soa::Index</td>
-        <td>GI</td>
-        <td>globalIndex</td>
-        <td>int64_t</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::fwdtrack::CollisionId</td>
-        <td>I</td>
-        <td>collisionId</td>
-        <td>int32</td>
-        <td>Pointer into Collisions</td>
-      </tr>
-      <tr>
-        <td>o2::aod::fwdtrack::X</td>
-        <td></td>
-        <td>x</td>
-        <td>float</td>
-        <td>TrackParFwd parameter x</td>
-      </tr>
-      <tr>
-        <td>o2::aod::fwdtrack::Y</td>
-        <td></td>
-        <td>y</td>
-        <td>float</td>
-        <td>TrackParFwd parameter y</td>
-      </tr>
-      <tr>
-        <td>o2::aod::fwdtrack::Z</td>
-        <td></td>
-        <td>z</td>
-        <td>float</td>
-        <td>TrackParFwd propagation parameter z</td>
-      </tr>
-      <tr>
-        <td>o2::aod::fwdtrack::Phi</td>
-        <td></td>
-        <td>phi</td>
-        <td>float</td>
-        <td>TrackParFwd parameter phi; (i.e. pt pointing direction)</td>
-      </tr>
-      <tr>
-        <td>o2::aod::fwdtrack::Tgl</td>
-        <td></td>
-        <td>tgl</td>
-        <td>float</td>
-        <td>TrackParFwd parameter tan(\lamba); (\lambda = 90 - \theta_{polar})</td>
-      </tr>
-      <tr>
-        <td>o2::aod::fwdtrack::Signed1Pt</td>
-        <td></td>
-        <td>signed1Pt</td>
-        <td>float</td>
-        <td>TrackParFwd parameter: charged inverse transverse momentum; (q/pt)</td>
-      </tr>
-      <tr>
-        <td>o2::aod::fwdtrack::v001::NClusters</td>
-        <td>D</td>
-        <td>nClusters</td>
-        <td>int8_t</td>
-        <td>Number of MFT clusters</td>
-      </tr>
-      <tr>
-        <td>o2::aod::fwdtrack::MFTClusterSizesAndTrackFlags</td>
-        <td></td>
-        <td>mftClusterSizesAndTrackFlags</td>
-        <td>uint64_t</td>
-        <td>Cluster sizes per track, stored per layer (each 6 bits). Remaining 4 bits for MFT flags</td>
-      </tr>
-      <tr>
-        <td>o2::aod::fwdtrack::IsCA</td>
-        <td>D</td>
-        <td>isCA</td>
-        <td>bool</td>
-        <td>Returns true if used track-finding algorithm was Cellular Automaton</td>
-      </tr>
-      <tr>
-        <td>o2::aod::fwdtrack::Px</td>
-        <td>D</td>
-        <td>px</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::fwdtrack::Py</td>
-        <td>D</td>
-        <td>py</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::fwdtrack::Pz</td>
-        <td>D</td>
-        <td>pz</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::fwdtrack::Sign</td>
-        <td>D</td>
-        <td>sign</td>
-        <td>short</td>
-        <td>Sign of the track eletric charge</td>
-      </tr>
-      <tr>
-        <td>o2::aod::fwdtrack::Chi2</td>
-        <td></td>
-        <td>chi2</td>
-        <td>float</td>
-        <td>Track chi^2</td>
-      </tr>
-      <tr>
-        <td>o2::aod::fwdtrack::TrackTime</td>
-        <td></td>
-        <td>trackTime</td>
-        <td>float</td>
-        <td>Estimated time of the track in ns wrt collision().bc() or ambiguoustrack.bcSlice()[0]</td>
-      </tr>
-      <tr>
-        <td>o2::aod::fwdtrack::TrackTimeRes</td>
-        <td></td>
-        <td>trackTimeRes</td>
-        <td>float</td>
-        <td>Resolution of the track time in ns</td>
+        <td>backwardCollisionMap</td>
+        <td>uint32_t</td>
+        <td>stores bitmap telling if PoI found in collisions before this one (bits backward in time)</td>
       </tr>
     </table>
   </div>
@@ -2360,7 +1700,54 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
 Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/TableProducer//multiplicityExtraTable.cxx" target="_blank">multiplicityExtraTable.cxx</a>
 <div>
 
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::MultsBC</button>
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::MultNeighs</button>
+  <div class="panel">
+    <div>
+
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/DataModel/Multiplicity.h" target="_blank">Common/DataModel/Multiplicity.h</a>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::mult::TimeToPrePrevious</td>
+        <td></td>
+        <td>timeToPrePrevious</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::mult::TimeToPrevious</td>
+        <td></td>
+        <td>timeToPrevious</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::mult::TimeToNext</td>
+        <td></td>
+        <td>timeToNext</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::mult::TimeToNeNext</td>
+        <td></td>
+        <td>timeToNeNext</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::MultBCs</button>
   <div class="panel">
     <div>
 
@@ -2370,7 +1757,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
     </div>
     <div>Is used in:
       <ul>
-        <li>o2::aod::MultBC = o2::aod::MultsBC::iterator</li>
+        <li>o2::aod::MultBC = o2::aod::MultBCs::iterator</li>
       </ul>
     </div>
     <table class=DataModel>
@@ -2396,9 +1783,79 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
         <td></td>
       </tr>
       <tr>
+        <td>o2::aod::multBC::MultBCFT0PosZ</td>
+        <td></td>
+        <td>multBCFT0PosZ</td>
+        <td>float</td>
+        <td>Position along Z computed with the FT0 information within the BC</td>
+      </tr>
+      <tr>
+        <td>o2::aod::multBC::MultBCFT0PosZValid</td>
+        <td></td>
+        <td>multBCFT0PosZValid</td>
+        <td>bool</td>
+        <td>Validity of the position along Z computed with the FT0 information within the BC</td>
+      </tr>
+      <tr>
         <td>o2::aod::multBC::MultBCFV0A</td>
         <td></td>
         <td>multBCFV0A</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::multBC::MultBCFDDA</td>
+        <td></td>
+        <td>multBCFDDA</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::multBC::MultBCFDDC</td>
+        <td></td>
+        <td>multBCFDDC</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::multBC::MultBCZNA</td>
+        <td></td>
+        <td>multBCZNA</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::multBC::MultBCZNC</td>
+        <td></td>
+        <td>multBCZNC</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::multBC::MultBCZEM1</td>
+        <td></td>
+        <td>multBCZEM1</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::multBC::MultBCZEM2</td>
+        <td></td>
+        <td>multBCZEM2</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::multBC::MultBCZPA</td>
+        <td></td>
+        <td>multBCZPA</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::multBC::MultBCZPC</td>
+        <td></td>
+        <td>multBCZPC</td>
         <td>float</td>
         <td></td>
       </tr>
@@ -2424,6 +1881,20 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
         <td></td>
       </tr>
       <tr>
+        <td>o2::aod::multBC::MultBCT0triggerBits</td>
+        <td></td>
+        <td>multBCT0triggerBits</td>
+        <td>uint8_t</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::multBC::MultBCFDDtriggerBits</td>
+        <td></td>
+        <td>multBCFDDtriggerBits</td>
+        <td>uint8_t</td>
+        <td></td>
+      </tr>
+      <tr>
         <td>o2::aod::multBC::MultBCTriggerMask</td>
         <td></td>
         <td>multBCTriggerMask</td>
@@ -2436,6 +1907,79 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
         <td>multBCColliding</td>
         <td>bool</td>
         <td>CTP trigger mask</td>
+      </tr>
+      <tr>
+        <td>o2::aod::bc::Flags</td>
+        <td></td>
+        <td>flags</td>
+        <td>uint8_t</td>
+        <td>BC flags (e.g. tagging of UPC tracking settings, etc)</td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::Mults2BC</button>
+  <div class="panel">
+    <div>
+       Relate mult -> BC
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/DataModel/Multiplicity.h" target="_blank">Common/DataModel/Multiplicity.h</a>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::soa::Index</td>
+        <td>GI</td>
+        <td>globalIndex</td>
+        <td>int64_t</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::mult::MultBCId</td>
+        <td>I</td>
+        <td>multBCId</td>
+        <td>int32</td>
+        <td>Pointer into MultBCs</td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::BC2Mults</button>
+  <div class="panel">
+    <div>
+       Relate BC -> mult
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/DataModel/Multiplicity.h" target="_blank">Common/DataModel/Multiplicity.h</a>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::soa::Index</td>
+        <td>GI</td>
+        <td>globalIndex</td>
+        <td>int64_t</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::multBC::FT0MultId</td>
+        <td>I</td>
+        <td>ft0MultId</td>
+        <td>int32</td>
+        <td>Pointer into FT0Mults</td>
       </tr>
     </table>
   </div>
@@ -2503,6 +2047,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
     <div>Is used in:
       <ul>
         <li>o2::aod::Mults = soa::Join<o2::aod::BarrelMults, o2::aod::FV0Mults, o2::aod::FT0Mults, o2::aod::FDDMults, o2::aod::ZDCMults></li>
+        <li>o2::aod::FT0Mult = o2::aod::FT0Mults::iterator</li>
         <li>o2::aod::Mult = soa::Join<o2::aod::BarrelMults, o2::aod::FV0Mults, o2::aod::FT0Mults, o2::aod::FDDMults, o2::aod::ZDCMults>::iterator</li>
       </ul>
     </div>
@@ -2617,6 +2162,34 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
         <td>o2::aod::mult::MultZNC</td>
         <td></td>
         <td>multZNC</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::mult::MultZEM1</td>
+        <td></td>
+        <td>multZEM1</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::mult::MultZEM2</td>
+        <td></td>
+        <td>multZEM2</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::mult::MultZPA</td>
+        <td></td>
+        <td>multZPA</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::mult::MultZPC</td>
+        <td></td>
+        <td>multZPC</td>
         <td>float</td>
         <td></td>
       </tr>
@@ -2769,7 +2342,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
         <td>o2::aod::mult::MultPVTotalContributors</td>
         <td></td>
         <td>multPVTotalContributors</td>
-        <td>float</td>
+        <td>int</td>
         <td></td>
       </tr>
       <tr>
@@ -2857,16 +2430,110 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::mult::BCNumber</td>
+        <td>o2::aod::mult::MultAllTracksTPCOnly</td>
         <td></td>
-        <td>bcNumber</td>
+        <td>multAllTracksTPCOnly</td>
+        <td>int</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::mult::MultAllTracksITSTPC</td>
+        <td></td>
+        <td>multAllTracksITSTPC</td>
+        <td>int</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::evsel::NumTracksInTimeRange</td>
+        <td></td>
+        <td>trackOccupancyInTimeRange</td>
+        <td>int</td>
+        <td>Occupancy in specified time interval</td>
+      </tr>
+      <tr>
+        <td>o2::aod::&zwnj;collision::Flags</td>
+        <td></td>
+        <td>flags</td>
+        <td>uint16_t</td>
+        <td>Run 2: see CollisionFlagsRun2 | Run 3: see Vertex::Flags</td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::MultsGlobal</button>
+  <div class="panel">
+    <div>
+       counters that use Track Selection (optional)
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/DataModel/Multiplicity.h" target="_blank">Common/DataModel/Multiplicity.h</a>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::mult::MultNTracksGlobal</td>
+        <td></td>
+        <td>multNTracksGlobal</td>
+        <td>int</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::mult::MultNGlobalTracksPV</td>
+        <td></td>
+        <td>multNGlobalTracksPV</td>
+        <td>int</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::mult::MultNGlobalTracksPVeta1</td>
+        <td></td>
+        <td>multNGlobalTracksPVeta1</td>
+        <td>int</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::mult::MultNGlobalTracksPVetaHalf</td>
+        <td></td>
+        <td>multNGlobalTracksPVetaHalf</td>
         <td>int</td>
         <td></td>
       </tr>
     </table>
   </div>
 
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::MultsExtraMC</button>
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::MultSelections</button>
+  <div class="panel">
+    <div>
+
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/DataModel/Multiplicity.h" target="_blank">Common/DataModel/Multiplicity.h</a>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::evsel::Selection</td>
+        <td>GI</td>
+        <td></td>
+        <td>?</td>
+        <td></td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::MultMCExtras</button>
   <div class="panel">
     <div>
        Table for the MC information
@@ -2876,7 +2543,8 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
     </div>
     <div>Is used in:
       <ul>
-        <li>o2::aod::MultExtraMC = o2::aod::MultsExtraMC::iterator</li>
+        <li>o2::aod::MultMCExtra = o2::aod::MultMCExtras::iterator</li>
+        <li>o2::aod::MultsExtraMC = o2::aod::MultMCExtras</li>
       </ul>
     </div>
     <table class=DataModel>
@@ -2891,37 +2559,106 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
         <td>o2::aod::mult::MultMCFT0A</td>
         <td></td>
         <td>multMCFT0A</td>
-        <td>float</td>
+        <td>int</td>
         <td></td>
       </tr>
       <tr>
         <td>o2::aod::mult::MultMCFT0C</td>
         <td></td>
         <td>multMCFT0C</td>
+        <td>int</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::mult::MultMCNParticlesEta05</td>
+        <td></td>
+        <td>multMCNParticlesEta05</td>
+        <td>int</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::mult::MultMCNParticlesEta08</td>
+        <td></td>
+        <td>multMCNParticlesEta08</td>
+        <td>int</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::mult::MultMCNParticlesEta10</td>
+        <td></td>
+        <td>multMCNParticlesEta10</td>
+        <td>int</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::mult::MultMCPVz</td>
+        <td></td>
+        <td>multMCPVz</td>
         <td>float</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::mult::MultMCNTracksPVeta1</td>
-        <td></td>
-        <td>multMCNTracksPVeta1</td>
-        <td>float</td>
-        <td></td>
+        <td>o2::aod::mult::IsInelGt0</td>
+        <td>D</td>
+        <td>isInelGt0</td>
+        <td>bool</td>
+        <td>is INEL > 0</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mult::IsInelGt1</td>
+        <td>D</td>
+        <td>isInelGt1</td>
+        <td>bool</td>
+        <td>is INEL > 1</td>
       </tr>
     </table>
   </div>
 
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::MultZeqs</button>
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::Mult2MCExtras</button>
   <div class="panel">
     <div>
+       Relate reco mult entry to MC extras entry
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/DataModel/Multiplicity.h" target="_blank">Common/DataModel/Multiplicity.h</a>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::soa::Index</td>
+        <td>GI</td>
+        <td>globalIndex</td>
+        <td>int64_t</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::mult::MultMCExtraId</td>
+        <td>I</td>
+        <td>multMCExtraId</td>
+        <td>int32</td>
+        <td>Pointer into MultMCExtras</td>
+      </tr>
+    </table>
+  </div>
 
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::FV0MultZeqs</button>
+  <div class="panel">
+    <div>
+       Multiplicity equalized for the vertex position with the FV0 detector
     </div>
     <div>
       Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/DataModel/Multiplicity.h" target="_blank">Common/DataModel/Multiplicity.h</a>
     </div>
     <div>Is used in:
       <ul>
-        <li>o2::aod::MultZeq = o2::aod::MultZeqs::iterator</li>
+        <li>o2::aod::MultZeqs = soa::Join<o2::aod::FV0MultZeqs, o2::aod::FT0MultZeqs, o2::aod::FDDMultZeqs, o2::aod::PVMultZeqs></li>
+        <li>o2::aod::MultZeq = soa::Join<o2::aod::FV0MultZeqs, o2::aod::FT0MultZeqs, o2::aod::FDDMultZeqs, o2::aod::PVMultZeqs>::iterator</li>
       </ul>
     </div>
     <table class=DataModel>
@@ -2937,42 +2674,117 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
         <td></td>
         <td>multZeqFV0A</td>
         <td>float</td>
-        <td></td>
+        <td>Multiplicity equalized for the vertex position with the FV0A detector</td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::FT0MultZeqs</button>
+  <div class="panel">
+    <div>
+       Multiplicity equalized for the vertex position with the FT0 detector
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/DataModel/Multiplicity.h" target="_blank">Common/DataModel/Multiplicity.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::MultZeqs = soa::Join<o2::aod::FV0MultZeqs, o2::aod::FT0MultZeqs, o2::aod::FDDMultZeqs, o2::aod::PVMultZeqs></li>
+        <li>o2::aod::MultZeq = soa::Join<o2::aod::FV0MultZeqs, o2::aod::FT0MultZeqs, o2::aod::FDDMultZeqs, o2::aod::PVMultZeqs>::iterator</li>
+      </ul>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
       </tr>
       <tr>
         <td>o2::aod::multZeq::MultZeqFT0A</td>
         <td></td>
         <td>multZeqFT0A</td>
         <td>float</td>
-        <td></td>
+        <td>Multiplicity equalized for the vertex position with the FT0A detector</td>
       </tr>
       <tr>
         <td>o2::aod::multZeq::MultZeqFT0C</td>
         <td></td>
         <td>multZeqFT0C</td>
         <td>float</td>
-        <td></td>
+        <td>Multiplicity equalized for the vertex position with the FT0C detector</td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::FDDMultZeqs</button>
+  <div class="panel">
+    <div>
+       Multiplicity equalized for the vertex position with the FDD detector
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/DataModel/Multiplicity.h" target="_blank">Common/DataModel/Multiplicity.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::MultZeqs = soa::Join<o2::aod::FV0MultZeqs, o2::aod::FT0MultZeqs, o2::aod::FDDMultZeqs, o2::aod::PVMultZeqs></li>
+        <li>o2::aod::MultZeq = soa::Join<o2::aod::FV0MultZeqs, o2::aod::FT0MultZeqs, o2::aod::FDDMultZeqs, o2::aod::PVMultZeqs>::iterator</li>
+      </ul>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
       </tr>
       <tr>
         <td>o2::aod::multZeq::MultZeqFDDA</td>
         <td></td>
         <td>multZeqFDDA</td>
         <td>float</td>
-        <td></td>
+        <td>Multiplicity equalized for the vertex position with the FDDA detector</td>
       </tr>
       <tr>
         <td>o2::aod::multZeq::MultZeqFDDC</td>
         <td></td>
         <td>multZeqFDDC</td>
         <td>float</td>
-        <td></td>
+        <td>Multiplicity equalized for the vertex position with the FDDC detector</td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::PVMultZeqs</button>
+  <div class="panel">
+    <div>
+       Multiplicity equalized for the vertex position from the PV contributors
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/DataModel/Multiplicity.h" target="_blank">Common/DataModel/Multiplicity.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::MultZeqs = soa::Join<o2::aod::FV0MultZeqs, o2::aod::FT0MultZeqs, o2::aod::FDDMultZeqs, o2::aod::PVMultZeqs></li>
+        <li>o2::aod::MultZeq = soa::Join<o2::aod::FV0MultZeqs, o2::aod::FT0MultZeqs, o2::aod::FDDMultZeqs, o2::aod::PVMultZeqs>::iterator</li>
+      </ul>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
       </tr>
       <tr>
         <td>o2::aod::multZeq::MultZeqNTracksPV</td>
         <td></td>
         <td>multZeqNTracksPV</td>
         <td>float</td>
-        <td></td>
+        <td>Multiplicity equalized for the vertex position from the PV contributors</td>
       </tr>
     </table>
   </div>
@@ -3012,10 +2824,10 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::qvec::CentBin</td>
+        <td>o2::aod::qvec::IsCalibrated</td>
         <td></td>
-        <td>centBin</td>
-        <td>int</td>
+        <td>isCalibrated</td>
+        <td>bool</td>
         <td></td>
       </tr>
       <tr>
@@ -3064,10 +2876,10 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
         <th>Comment</th>
       </tr>
       <tr>
-        <td>o2::aod::qvec::CentBin</td>
+        <td>o2::aod::qvec::IsCalibrated</td>
         <td></td>
-        <td>centBin</td>
-        <td>int</td>
+        <td>isCalibrated</td>
+        <td>bool</td>
         <td></td>
       </tr>
       <tr>
@@ -3116,10 +2928,10 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
         <th>Comment</th>
       </tr>
       <tr>
-        <td>o2::aod::qvec::CentBin</td>
+        <td>o2::aod::qvec::IsCalibrated</td>
         <td></td>
-        <td>centBin</td>
-        <td>int</td>
+        <td>isCalibrated</td>
+        <td>bool</td>
         <td></td>
       </tr>
       <tr>
@@ -3168,10 +2980,10 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
         <th>Comment</th>
       </tr>
       <tr>
-        <td>o2::aod::qvec::CentBin</td>
+        <td>o2::aod::qvec::IsCalibrated</td>
         <td></td>
-        <td>centBin</td>
-        <td>int</td>
+        <td>isCalibrated</td>
+        <td>bool</td>
         <td></td>
       </tr>
       <tr>
@@ -3220,10 +3032,10 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
         <th>Comment</th>
       </tr>
       <tr>
-        <td>o2::aod::qvec::CentBin</td>
+        <td>o2::aod::qvec::IsCalibrated</td>
         <td></td>
-        <td>centBin</td>
-        <td>int</td>
+        <td>isCalibrated</td>
+        <td>bool</td>
         <td></td>
       </tr>
       <tr>
@@ -3245,6 +3057,568 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
         <td></td>
         <td>sumAmplFV0A</td>
         <td>float</td>
+        <td></td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::QvectorTPCposs</button>
+  <div class="panel">
+    <div>
+
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/DataModel/Qvectors.h" target="_blank">Common/DataModel/Qvectors.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::QvectorTPCpos = o2::aod::QvectorTPCposs::iterator</li>
+      </ul>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::qvec::IsCalibrated</td>
+        <td></td>
+        <td>isCalibrated</td>
+        <td>bool</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::qvec::QvecTPCposRe</td>
+        <td></td>
+        <td>qvecTPCposRe</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::qvec::QvecTPCposIm</td>
+        <td></td>
+        <td>qvecTPCposIm</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::qvec::NTrkTPCpos</td>
+        <td></td>
+        <td>nTrkTPCpos</td>
+        <td>int</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::qvec::LabelsTPCpos</td>
+        <td></td>
+        <td>labelsTPCpos</td>
+        <td>std::vector&lt;int&gt;</td>
+        <td></td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::QvectorTPCnegs</button>
+  <div class="panel">
+    <div>
+
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/DataModel/Qvectors.h" target="_blank">Common/DataModel/Qvectors.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::QvectorTPCneg = o2::aod::QvectorTPCnegs::iterator</li>
+      </ul>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::qvec::IsCalibrated</td>
+        <td></td>
+        <td>isCalibrated</td>
+        <td>bool</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::qvec::QvecTPCnegRe</td>
+        <td></td>
+        <td>qvecTPCnegRe</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::qvec::QvecTPCnegIm</td>
+        <td></td>
+        <td>qvecTPCnegIm</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::qvec::NTrkTPCneg</td>
+        <td></td>
+        <td>nTrkTPCneg</td>
+        <td>int</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::qvec::LabelsTPCneg</td>
+        <td></td>
+        <td>labelsTPCneg</td>
+        <td>std::vector&lt;int&gt;</td>
+        <td></td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::QvectorTPCalls</button>
+  <div class="panel">
+    <div>
+
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/DataModel/Qvectors.h" target="_blank">Common/DataModel/Qvectors.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::QvectorTPCall = o2::aod::QvectorTPCalls::iterator</li>
+      </ul>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::qvec::IsCalibrated</td>
+        <td></td>
+        <td>isCalibrated</td>
+        <td>bool</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::qvec::QvecTPCallRe</td>
+        <td></td>
+        <td>qvecTPCallRe</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::qvec::QvecTPCallIm</td>
+        <td></td>
+        <td>qvecTPCallIm</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::qvec::NTrkTPCall</td>
+        <td></td>
+        <td>nTrkTPCall</td>
+        <td>int</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::qvec::LabelsTPCall</td>
+        <td></td>
+        <td>labelsTPCall</td>
+        <td>std::vector&lt;int&gt;</td>
+        <td></td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::QvectorFT0CVecs</button>
+  <div class="panel">
+    <div>
+
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/DataModel/Qvectors.h" target="_blank">Common/DataModel/Qvectors.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::QvectorFT0CVec = o2::aod::QvectorFT0CVecs::iterator</li>
+      </ul>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::qvec::IsCalibrated</td>
+        <td></td>
+        <td>isCalibrated</td>
+        <td>bool</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::qvec::QvecFT0CReVec</td>
+        <td></td>
+        <td>qvecFT0CReVec</td>
+        <td>std::vector&lt;float&gt;</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::qvec::QvecFT0CImVec</td>
+        <td></td>
+        <td>qvecFT0CImVec</td>
+        <td>std::vector&lt;float&gt;</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::qvec::SumAmplFT0C</td>
+        <td></td>
+        <td>sumAmplFT0C</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::QvectorFT0AVecs</button>
+  <div class="panel">
+    <div>
+
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/DataModel/Qvectors.h" target="_blank">Common/DataModel/Qvectors.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::QvectorFT0AVec = o2::aod::QvectorFT0AVecs::iterator</li>
+      </ul>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::qvec::IsCalibrated</td>
+        <td></td>
+        <td>isCalibrated</td>
+        <td>bool</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::qvec::QvecFT0AReVec</td>
+        <td></td>
+        <td>qvecFT0AReVec</td>
+        <td>std::vector&lt;float&gt;</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::qvec::QvecFT0AImVec</td>
+        <td></td>
+        <td>qvecFT0AImVec</td>
+        <td>std::vector&lt;float&gt;</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::qvec::SumAmplFT0A</td>
+        <td></td>
+        <td>sumAmplFT0A</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::QvectorFT0MVecs</button>
+  <div class="panel">
+    <div>
+
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/DataModel/Qvectors.h" target="_blank">Common/DataModel/Qvectors.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::QvectorFT0MVec = o2::aod::QvectorFT0MVecs::iterator</li>
+      </ul>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::qvec::IsCalibrated</td>
+        <td></td>
+        <td>isCalibrated</td>
+        <td>bool</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::qvec::QvecFT0MReVec</td>
+        <td></td>
+        <td>qvecFT0MReVec</td>
+        <td>std::vector&lt;float&gt;</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::qvec::QvecFT0MImVec</td>
+        <td></td>
+        <td>qvecFT0MImVec</td>
+        <td>std::vector&lt;float&gt;</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::qvec::SumAmplFT0M</td>
+        <td></td>
+        <td>sumAmplFT0M</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::QvectorFV0AVecs</button>
+  <div class="panel">
+    <div>
+
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/DataModel/Qvectors.h" target="_blank">Common/DataModel/Qvectors.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::QvectorFV0AVec = o2::aod::QvectorFV0AVecs::iterator</li>
+      </ul>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::qvec::IsCalibrated</td>
+        <td></td>
+        <td>isCalibrated</td>
+        <td>bool</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::qvec::QvecFV0AReVec</td>
+        <td></td>
+        <td>qvecFV0AReVec</td>
+        <td>std::vector&lt;float&gt;</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::qvec::QvecFV0AImVec</td>
+        <td></td>
+        <td>qvecFV0AImVec</td>
+        <td>std::vector&lt;float&gt;</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::qvec::SumAmplFV0A</td>
+        <td></td>
+        <td>sumAmplFV0A</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::QvectorTPCposVecs</button>
+  <div class="panel">
+    <div>
+
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/DataModel/Qvectors.h" target="_blank">Common/DataModel/Qvectors.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::QvectorTPCposVec = o2::aod::QvectorTPCposVecs::iterator</li>
+      </ul>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::qvec::IsCalibrated</td>
+        <td></td>
+        <td>isCalibrated</td>
+        <td>bool</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::qvec::QvecTPCposReVec</td>
+        <td></td>
+        <td>qvecTPCposReVec</td>
+        <td>std::vector&lt;float&gt;</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::qvec::QvecTPCposImVec</td>
+        <td></td>
+        <td>qvecTPCposImVec</td>
+        <td>std::vector&lt;float&gt;</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::qvec::NTrkTPCpos</td>
+        <td></td>
+        <td>nTrkTPCpos</td>
+        <td>int</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::qvec::LabelsTPCpos</td>
+        <td></td>
+        <td>labelsTPCpos</td>
+        <td>std::vector&lt;int&gt;</td>
+        <td></td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::QvectorTPCnegVecs</button>
+  <div class="panel">
+    <div>
+
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/DataModel/Qvectors.h" target="_blank">Common/DataModel/Qvectors.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::QvectorTPCnegVec = o2::aod::QvectorTPCnegVecs::iterator</li>
+      </ul>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::qvec::IsCalibrated</td>
+        <td></td>
+        <td>isCalibrated</td>
+        <td>bool</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::qvec::QvecTPCnegReVec</td>
+        <td></td>
+        <td>qvecTPCnegReVec</td>
+        <td>std::vector&lt;float&gt;</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::qvec::QvecTPCnegImVec</td>
+        <td></td>
+        <td>qvecTPCnegImVec</td>
+        <td>std::vector&lt;float&gt;</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::qvec::NTrkTPCneg</td>
+        <td></td>
+        <td>nTrkTPCneg</td>
+        <td>int</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::qvec::LabelsTPCneg</td>
+        <td></td>
+        <td>labelsTPCneg</td>
+        <td>std::vector&lt;int&gt;</td>
+        <td></td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::QvectorTPCallVecs</button>
+  <div class="panel">
+    <div>
+
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/DataModel/Qvectors.h" target="_blank">Common/DataModel/Qvectors.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::QvectorTPCallVec = o2::aod::QvectorTPCallVecs::iterator</li>
+      </ul>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::qvec::IsCalibrated</td>
+        <td></td>
+        <td>isCalibrated</td>
+        <td>bool</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::qvec::QvecTPCallReVec</td>
+        <td></td>
+        <td>qvecTPCallReVec</td>
+        <td>std::vector&lt;float&gt;</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::qvec::QvecTPCallImVec</td>
+        <td></td>
+        <td>qvecTPCallImVec</td>
+        <td>std::vector&lt;float&gt;</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::qvec::NTrkTPCall</td>
+        <td></td>
+        <td>nTrkTPCall</td>
+        <td>int</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::qvec::LabelsTPCall</td>
+        <td></td>
+        <td>labelsTPCall</td>
+        <td>std::vector&lt;int&gt;</td>
         <td></td>
       </tr>
     </table>
@@ -3272,10 +3646,10 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
         <th>Comment</th>
       </tr>
       <tr>
-        <td>o2::aod::qvec::CentBin</td>
+        <td>o2::aod::qvec::IsCalibrated</td>
         <td></td>
-        <td>centBin</td>
-        <td>int</td>
+        <td>isCalibrated</td>
+        <td>bool</td>
         <td></td>
       </tr>
       <tr>
@@ -3331,10 +3705,10 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
         <th>Comment</th>
       </tr>
       <tr>
-        <td>o2::aod::qvec::CentBin</td>
+        <td>o2::aod::qvec::IsCalibrated</td>
         <td></td>
-        <td>centBin</td>
-        <td>int</td>
+        <td>isCalibrated</td>
+        <td>bool</td>
         <td></td>
       </tr>
       <tr>
@@ -3362,6 +3736,242 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
         <td>o2::aod::qvec::LabelsBNeg</td>
         <td></td>
         <td>labelsBNeg</td>
+        <td>std::vector&lt;int&gt;</td>
+        <td></td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::QvectorBTots</button>
+  <div class="panel">
+    <div>
+
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/DataModel/Qvectors.h" target="_blank">Common/DataModel/Qvectors.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::QvectorBTot = o2::aod::QvectorBTots::iterator</li>
+      </ul>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::qvec::IsCalibrated</td>
+        <td></td>
+        <td>isCalibrated</td>
+        <td>bool</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::qvec::QvecBTotRe</td>
+        <td></td>
+        <td>qvecBTotRe</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::qvec::QvecBTotIm</td>
+        <td></td>
+        <td>qvecBTotIm</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::qvec::NTrkBTot</td>
+        <td></td>
+        <td>nTrkBTot</td>
+        <td>int</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::qvec::LabelsBTot</td>
+        <td></td>
+        <td>labelsBTot</td>
+        <td>std::vector&lt;int&gt;</td>
+        <td></td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::QvectorBPosVecs</button>
+  <div class="panel">
+    <div>
+
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/DataModel/Qvectors.h" target="_blank">Common/DataModel/Qvectors.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::QvectorBPosVec = o2::aod::QvectorBPosVecs::iterator</li>
+      </ul>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::qvec::IsCalibrated</td>
+        <td></td>
+        <td>isCalibrated</td>
+        <td>bool</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::qvec::QvecBPosReVec</td>
+        <td></td>
+        <td>qvecBPosReVec</td>
+        <td>std::vector&lt;float&gt;</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::qvec::QvecBPosImVec</td>
+        <td></td>
+        <td>qvecBPosImVec</td>
+        <td>std::vector&lt;float&gt;</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::qvec::NTrkBPos</td>
+        <td></td>
+        <td>nTrkBPos</td>
+        <td>int</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::qvec::LabelsBPos</td>
+        <td></td>
+        <td>labelsBPos</td>
+        <td>std::vector&lt;int&gt;</td>
+        <td></td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::QvectorBNegVecs</button>
+  <div class="panel">
+    <div>
+
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/DataModel/Qvectors.h" target="_blank">Common/DataModel/Qvectors.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::QvectorBNegVec = o2::aod::QvectorBNegVecs::iterator</li>
+      </ul>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::qvec::IsCalibrated</td>
+        <td></td>
+        <td>isCalibrated</td>
+        <td>bool</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::qvec::QvecBNegReVec</td>
+        <td></td>
+        <td>qvecBNegReVec</td>
+        <td>std::vector&lt;float&gt;</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::qvec::QvecBNegImVec</td>
+        <td></td>
+        <td>qvecBNegImVec</td>
+        <td>std::vector&lt;float&gt;</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::qvec::NTrkBNeg</td>
+        <td></td>
+        <td>nTrkBNeg</td>
+        <td>int</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::qvec::LabelsBNeg</td>
+        <td></td>
+        <td>labelsBNeg</td>
+        <td>std::vector&lt;int&gt;</td>
+        <td></td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::QvectorBTotVecs</button>
+  <div class="panel">
+    <div>
+
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/DataModel/Qvectors.h" target="_blank">Common/DataModel/Qvectors.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::QvectorBTotVec = o2::aod::QvectorBTotVecs::iterator</li>
+      </ul>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::qvec::IsCalibrated</td>
+        <td></td>
+        <td>isCalibrated</td>
+        <td>bool</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::qvec::QvecBTotReVec</td>
+        <td></td>
+        <td>qvecBTotReVec</td>
+        <td>std::vector&lt;float&gt;</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::qvec::QvecBTotImVec</td>
+        <td></td>
+        <td>qvecBTotImVec</td>
+        <td>std::vector&lt;float&gt;</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::qvec::NTrkBTot</td>
+        <td></td>
+        <td>nTrkBTot</td>
+        <td>int</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::qvec::LabelsBTot</td>
+        <td></td>
+        <td>labelsBTot</td>
         <td>std::vector&lt;int&gt;</td>
         <td></td>
       </tr>
@@ -3524,6 +4134,13 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
         <td>pz</td>
         <td>float</td>
         <td>Momentum in z-direction in GeV/c</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::PVector</td>
+        <td>D</td>
+        <td>pVector</td>
+        <td>std::array&lt;float,3&gt;</td>
+        <td>Momentum vector in x,y,z-directions in GeV/c</td>
       </tr>
       <tr>
         <td>o2::aod::track::Energy</td>
@@ -3870,6 +4487,13 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
         <td>Momentum in z-direction in GeV/c</td>
       </tr>
       <tr>
+        <td>o2::aod::track::PVector</td>
+        <td>D</td>
+        <td>pVector</td>
+        <td>std::array&lt;float,3&gt;</td>
+        <td>Momentum vector in x,y,z-directions in GeV/c</td>
+      </tr>
+      <tr>
         <td>o2::aod::track::Energy</td>
         <td>D</td>
         <td>energy</td>
@@ -4176,274 +4800,6 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
 
 </div>
 
-##  o2-analysis-tracks-extra-converter
-Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/TableProducer//tracksExtraConverter.cxx" target="_blank">tracksExtraConverter.cxx</a>
-<div>
-
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::StoredTracksExtra_001</button>
-  <div class="panel">
-    <div>
-
-    </div>
-    <div>
-      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev//Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
-    </div>
-    <div>Is used in:
-      <ul>
-        <li>o2::aod::StoredTracksExtra = o2::aod::StoredTracksExtra_001</li>
-      </ul>
-    </div>
-    <table class=DataModel>
-      <tr>
-        <th>Name</th>
-        <th></th>
-        <th>Getter</th>
-        <th>Type</th>
-        <th>Comment</th>
-      </tr>
-      <tr>
-        <td>o2::aod::track::TPCInnerParam</td>
-        <td></td>
-        <td>tpcInnerParam</td>
-        <td>float</td>
-        <td>Momentum at inner wall of the TPC</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::Flags</td>
-        <td></td>
-        <td>flags</td>
-        <td>uint32_t</td>
-        <td>Track flags. Run 2: see TrackFlagsRun2Enum | Run 3: see TrackFlags</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::ITSClusterSizes</td>
-        <td></td>
-        <td>itsClusterSizes</td>
-        <td>uint32_t</td>
-        <td>Clusters sizes, four bits per a layer, starting from the innermost</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::TPCNClsFindable</td>
-        <td></td>
-        <td>tpcNClsFindable</td>
-        <td>uint8_t</td>
-        <td>Findable TPC clusters for this track geometry</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::TPCNClsFindableMinusFound</td>
-        <td></td>
-        <td>tpcNClsFindableMinusFound</td>
-        <td>int8_t</td>
-        <td>TPC Clusters: Findable - Found</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::TPCNClsFindableMinusCrossedRows</td>
-        <td></td>
-        <td>tpcNClsFindableMinusCrossedRows</td>
-        <td>int8_t</td>
-        <td>TPC Clusters: Findable - crossed rows</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::TPCNClsShared</td>
-        <td></td>
-        <td>tpcNClsShared</td>
-        <td>uint8_t</td>
-        <td>Number of shared TPC clusters</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::TRDPattern</td>
-        <td></td>
-        <td>trdPattern</td>
-        <td>uint8_t</td>
-        <td>Contributor to the track on TRD layer in bits 0-5, starting from the innermost, bit 6 indicates a potentially split tracklet, bit 7 if the track crossed a padrow</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::ITSChi2NCl</td>
-        <td></td>
-        <td>itsChi2NCl</td>
-        <td>float</td>
-        <td>Chi2 / cluster for the ITS track segment</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::TPCChi2NCl</td>
-        <td></td>
-        <td>tpcChi2NCl</td>
-        <td>float</td>
-        <td>Chi2 / cluster for the TPC track segment</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::TRDChi2</td>
-        <td></td>
-        <td>trdChi2</td>
-        <td>float</td>
-        <td>Chi2 for the TRD track segment</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::TOFChi2</td>
-        <td></td>
-        <td>tofChi2</td>
-        <td>float</td>
-        <td>Chi2 for the TOF track segment</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::TPCSignal</td>
-        <td></td>
-        <td>tpcSignal</td>
-        <td>float</td>
-        <td>dE/dx signal in the TPC</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::TRDSignal</td>
-        <td></td>
-        <td>trdSignal</td>
-        <td>float</td>
-        <td>PID signal in the TRD</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::Length</td>
-        <td></td>
-        <td>length</td>
-        <td>float</td>
-        <td>Track length</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::TOFExpMom</td>
-        <td></td>
-        <td>tofExpMom</td>
-        <td>float</td>
-        <td>TOF expected momentum obtained in tracking, used to compute the expected times</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::PIDForTracking</td>
-        <td>D</td>
-        <td>pidForTracking</td>
-        <td>uint32_t</td>
-        <td>PID hypothesis used during tracking. See the constants in the class PID in PID.h</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::IsPVContributor</td>
-        <td>D</td>
-        <td>isPVContributor</td>
-        <td>bool</td>
-        <td>Run 3: Has this track contributed to the collision vertex fit</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::HasITS</td>
-        <td>D</td>
-        <td>hasITS</td>
-        <td>bool</td>
-        <td>Flag to check if track has a ITS match</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::HasTPC</td>
-        <td>D</td>
-        <td>hasTPC</td>
-        <td>bool</td>
-        <td>Flag to check if track has a TPC match</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::HasTRD</td>
-        <td>D</td>
-        <td>hasTRD</td>
-        <td>bool</td>
-        <td>Flag to check if track has a TRD match</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::HasTOF</td>
-        <td>D</td>
-        <td>hasTOF</td>
-        <td>bool</td>
-        <td>Flag to check if track has a TOF measurement</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::TPCNClsFound</td>
-        <td>D</td>
-        <td>tpcNClsFound</td>
-        <td>int16_t</td>
-        <td>Number of found TPC clusters</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::TPCNClsCrossedRows</td>
-        <td>D</td>
-        <td>tpcNClsCrossedRows</td>
-        <td>int16_t</td>
-        <td>Number of crossed TPC Rows</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::v001::ITSClusterMap</td>
-        <td>D</td>
-        <td>itsClusterMap</td>
-        <td>uint8_t</td>
-        <td>ITS cluster map, one bit per a layer, starting from the innermost</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::v001::ITSNCls</td>
-        <td>D</td>
-        <td>itsNCls</td>
-        <td>uint8_t</td>
-        <td>Number of ITS clusters</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::v001::ITSNClsInnerBarrel</td>
-        <td>D</td>
-        <td>itsNClsInnerBarrel</td>
-        <td>uint8_t</td>
-        <td>Number of ITS clusters in the Inner Barrel</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::TPCCrossedRowsOverFindableCls</td>
-        <td>D</td>
-        <td>tpcCrossedRowsOverFindableCls</td>
-        <td>float</td>
-        <td>Ratio crossed rows over findable clusters</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::TPCFoundOverFindableCls</td>
-        <td>D</td>
-        <td>tpcFoundOverFindableCls</td>
-        <td>float</td>
-        <td>Ratio of found over findable clusters</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::TPCFractionSharedCls</td>
-        <td>D</td>
-        <td>tpcFractionSharedCls</td>
-        <td>float</td>
-        <td>Fraction of shared TPC clusters</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::TrackEtaEMCAL</td>
-        <td></td>
-        <td>trackEtaEmcal</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::TrackPhiEMCAL</td>
-        <td></td>
-        <td>trackPhiEmcal</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::TrackTime</td>
-        <td></td>
-        <td>trackTime</td>
-        <td>float</td>
-        <td>Estimated time of the track in ns wrt collision().bc() or ambiguoustrack.bcSlice()[0]</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::TrackTimeRes</td>
-        <td></td>
-        <td>trackTimeRes</td>
-        <td>float</td>
-        <td>Resolution of the track time in ns (see TrackFlags::TrackTimeResIsRange)</td>
-      </tr>
-    </table>
-  </div>
-
-</div>
-
 ##  o2-analysis-trackselection
 Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/TableProducer//trackselection.cxx" target="_blank">trackselection.cxx</a>
 <div>
@@ -4602,6 +4958,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
     <div>Is used in:
       <ul>
         <li>o2::aod::Reso2TracksPIDExt = soa::Join<o2::aod::Reso2TracksPID, o2::aod::TracksDCA, o2::aod::TrackSelection, o2::aod::TrackSelectionExtension></li>
+        <li>o2::analysis::TracksWExt = soa::Join<o2::aod::Tracks, o2::aod::TracksExtra, o2::analysis::aod::TrackSelection, o2::aod::TrackSelectionExtension, o2::analysis::aod::TracksPidPi, o2::analysis::aod::PidTpcTofFullPi, o2::analysis::aod::TracksPidKa, o2::analysis::aod::PidTpcTofFullKa, o2::analysis::aod::pidTPCFullPi></li>
       </ul>
     </div>
     <table class=DataModel>
@@ -4736,85 +5093,6 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
 
 </div>
 
-##  o2-analysis-v0converter
-Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/TableProducer//v0converter.cxx" target="_blank">v0converter.cxx</a>
-<div>
-
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::V0s_002</button>
-  <div class="panel">
-    <div>
-       Run 3 V0 table (version 002)
-    </div>
-    <div>
-      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev//Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
-    </div>
-    <div>Is used in:
-      <ul>
-        <li>o2::aod::V0s = o2::aod::V0s_002</li>
-      </ul>
-    </div>
-    <table class=DataModel>
-      <tr>
-        <th>Name</th>
-        <th></th>
-        <th>Getter</th>
-        <th>Type</th>
-        <th>Comment</th>
-      </tr>
-      <tr>
-        <td>o2::soa::Index</td>
-        <td>GI</td>
-        <td>globalIndex</td>
-        <td>int64_t</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::v0::CollisionId</td>
-        <td>I</td>
-        <td>collisionId</td>
-        <td>int32</td>
-        <td>Collision index</td>
-      </tr>
-      <tr>
-        <td>o2::aod::v0::PosTrackId</td>
-        <td>I</td>
-        <td>posTrackId</td>
-        <td>int</td>
-        <td>Positive track</td>
-      </tr>
-      <tr>
-        <td>o2::aod::v0::NegTrackId</td>
-        <td>I</td>
-        <td>negTrackId</td>
-        <td>int</td>
-        <td>Negative track</td>
-      </tr>
-      <tr>
-        <td>o2::aod::v0::V0Type</td>
-        <td></td>
-        <td>v0Type</td>
-        <td>uint8_t</td>
-        <td>custom bitmap for various selections (see below)</td>
-      </tr>
-      <tr>
-        <td>o2::aod::v0::IsStandardV0</td>
-        <td>D</td>
-        <td>isStandardV0</td>
-        <td>bool</td>
-        <td>is standard V0</td>
-      </tr>
-      <tr>
-        <td>o2::aod::v0::IsPhotonV0</td>
-        <td>D</td>
-        <td>isPhotonV0</td>
-        <td>bool</td>
-        <td>is standard V0</td>
-      </tr>
-    </table>
-  </div>
-
-</div>
-
 ##  o2-analysis-weak-decay-indices
 Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/TableProducer//weakDecayIndices.cxx" target="_blank">weakDecayIndices.cxx</a>
 <div>
@@ -4920,22 +5198,17 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
 
 </div>
 
-##  o2-analysis-zdc-converter
-Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/TableProducer//zdcConverter.cxx" target="_blank">zdcConverter.cxx</a>
+##  o2-analysis-zdc-task-intercalib
+Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/TableProducer//zdc-task-intercalib.cxx" target="_blank">zdc-task-intercalib.cxx</a>
 <div>
 
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::Zdcs_001</button>
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::ZDCInterCalib</button>
   <div class="panel">
     <div>
-       ZDC information, version 1, std::vector format
+
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev//Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
-    </div>
-    <div>Is used in:
-      <ul>
-        <li>o2::aod::Zdcs = o2::aod::Zdcs_001</li>
-      </ul>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/DataModel/ZDCInterCalib.h" target="_blank">Common/DataModel/ZDCInterCalib.h</a>
     </div>
     <table class=DataModel>
       <tr>
@@ -4953,200 +5226,74 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::zdc::BCId</td>
-        <td>I</td>
-        <td>bcId</td>
-        <td>int32</td>
-        <td>BC index, to be used by both legacy and new table</td>
-      </tr>
-      <tr>
-        <td>o2::aod::zdc::Energy</td>
+        <td>o2::aod::znoutput::pmcZNA</td>
         <td></td>
-        <td>energy</td>
-        <td>std::vector&lt;float&gt;</td>
-        <td>Energy of non-zero channels. The channel IDs are given in ChannelE (at the same index)</td>
+        <td>ZNAcommonPM</td>
+        <td>float</td>
+        <td>PMC ZNA</td>
       </tr>
       <tr>
-        <td>o2::aod::zdc::ChannelE</td>
+        <td>o2::aod::znoutput::pm1ZNA</td>
         <td></td>
-        <td>channelE</td>
-        <td>std::vector&lt;uint8_t&gt;</td>
-        <td>Channel IDs which have reconstructed energy. There are at maximum 26 channels.</td>
+        <td>ZNAPM1</td>
+        <td>float</td>
+        <td>PM1 ZNA</td>
       </tr>
       <tr>
-        <td>o2::aod::zdc::Amplitude</td>
+        <td>o2::aod::znoutput::pm2ZNA</td>
         <td></td>
-        <td>amplitude</td>
-        <td>std::vector&lt;float&gt;</td>
-        <td>Amplitudes of non-zero channels. The channel IDs are given in ChannelT (at the same index)</td>
+        <td>ZNAPM2</td>
+        <td>float</td>
+        <td>PM2 ZNA</td>
       </tr>
       <tr>
-        <td>o2::aod::zdc::Time</td>
+        <td>o2::aod::znoutput::pm3ZNA</td>
         <td></td>
-        <td>time</td>
-        <td>std::vector&lt;float&gt;</td>
-        <td>Times of non-zero channels. The channel IDs are given in ChannelT (at the same index)</td>
+        <td>ZNAPM3</td>
+        <td>float</td>
+        <td>PM3 ZNA</td>
       </tr>
       <tr>
-        <td>o2::aod::zdc::ChannelT</td>
+        <td>o2::aod::znoutput::pm4ZNA</td>
         <td></td>
-        <td>channelT</td>
-        <td>std::vector&lt;uint8_t&gt;</td>
-        <td>Channel IDs which had non-zero amplitudes. There are at maximum 26 channels.</td>
-      </tr>
-      <tr>
-        <td>o2::aod::zdc::DyEnergyZEM1</td>
-        <td>D</td>
-        <td>energyZEM1</td>
+        <td>ZNAPM4</td>
         <td>float</td>
-        <td>return ZEM1 energy</td>
+        <td>PM4 ZNA</td>
       </tr>
       <tr>
-        <td>o2::aod::zdc::DyEnergyZEM2</td>
-        <td>D</td>
-        <td>energyZEM2</td>
+        <td>o2::aod::znoutput::pmcZNC</td>
+        <td></td>
+        <td>ZNCcommonPM</td>
         <td>float</td>
-        <td>return ZEM2 energy</td>
+        <td>PMC ZNC</td>
       </tr>
       <tr>
-        <td>o2::aod::zdc::DyEnergyCommonZNA</td>
-        <td>D</td>
-        <td>energyCommonZNA</td>
+        <td>o2::aod::znoutput::pm1ZNC</td>
+        <td></td>
+        <td>ZNCPM1</td>
         <td>float</td>
-        <td>return common ZNA energy</td>
+        <td>PM1 ZNC</td>
       </tr>
       <tr>
-        <td>o2::aod::zdc::DyEnergyCommonZNC</td>
-        <td>D</td>
-        <td>energyCommonZNC</td>
+        <td>o2::aod::znoutput::pm2ZNC</td>
+        <td></td>
+        <td>ZNCPM2</td>
         <td>float</td>
-        <td>return common ZNC energy</td>
+        <td>PM2 ZNC</td>
       </tr>
       <tr>
-        <td>o2::aod::zdc::DyEnergyCommonZPA</td>
-        <td>D</td>
-        <td>energyCommonZPA</td>
+        <td>o2::aod::znoutput::pm3ZNC</td>
+        <td></td>
+        <td>ZNCPM3</td>
         <td>float</td>
-        <td>return common ZPA energy</td>
+        <td>PM3 ZNC</td>
       </tr>
       <tr>
-        <td>o2::aod::zdc::DyEnergyCommonZPC</td>
-        <td>D</td>
-        <td>energyCommonZPC</td>
+        <td>o2::aod::znoutput::pm4ZNC</td>
+        <td></td>
+        <td>ZNCPM4</td>
         <td>float</td>
-        <td>return common ZPC energy</td>
-      </tr>
-      <tr>
-        <td>o2::aod::zdc::DyEnergySectorZNA</td>
-        <td>D</td>
-        <td>energySectorZNA</td>
-        <td>std::array&lt;float,4&gt;</td>
-        <td>return sector ZNA energy (array of 4 floats)</td>
-      </tr>
-      <tr>
-        <td>o2::aod::zdc::DyEnergySectorZNC</td>
-        <td>D</td>
-        <td>energySectorZNC</td>
-        <td>std::array&lt;float,4&gt;</td>
-        <td>return sector ZNC energy (array of 4 floats)</td>
-      </tr>
-      <tr>
-        <td>o2::aod::zdc::DyEnergySectorZPA</td>
-        <td>D</td>
-        <td>energySectorZPA</td>
-        <td>std::array&lt;float,4&gt;</td>
-        <td>return sector ZPA energy (array of 4 floats)</td>
-      </tr>
-      <tr>
-        <td>o2::aod::zdc::DyEnergySectorZPC</td>
-        <td>D</td>
-        <td>energySectorZPC</td>
-        <td>std::array&lt;float,4&gt;</td>
-        <td>return sector ZPC energy (array of 4 floats)</td>
-      </tr>
-      <tr>
-        <td>o2::aod::zdc::DyTimeZEM1</td>
-        <td>D</td>
-        <td>timeZEM1</td>
-        <td>float</td>
-        <td>return ZEM1 time information</td>
-      </tr>
-      <tr>
-        <td>o2::aod::zdc::DyTimeZEM2</td>
-        <td>D</td>
-        <td>timeZEM2</td>
-        <td>float</td>
-        <td>return ZEM2 time information</td>
-      </tr>
-      <tr>
-        <td>o2::aod::zdc::DyTimeZNA</td>
-        <td>D</td>
-        <td>timeZNA</td>
-        <td>float</td>
-        <td>return ZNA time information</td>
-      </tr>
-      <tr>
-        <td>o2::aod::zdc::DyTimeZNC</td>
-        <td>D</td>
-        <td>timeZNC</td>
-        <td>float</td>
-        <td>return ZNC time information</td>
-      </tr>
-      <tr>
-        <td>o2::aod::zdc::DyTimeZPA</td>
-        <td>D</td>
-        <td>timeZPA</td>
-        <td>float</td>
-        <td>return ZPA time information</td>
-      </tr>
-      <tr>
-        <td>o2::aod::zdc::DyTimeZPC</td>
-        <td>D</td>
-        <td>timeZPC</td>
-        <td>float</td>
-        <td>return ZPC time information</td>
-      </tr>
-      <tr>
-        <td>o2::aod::zdc::DyAmplitudeZEM1</td>
-        <td>D</td>
-        <td>amplitudeZEM1</td>
-        <td>float</td>
-        <td>return ZEM1 amplitude</td>
-      </tr>
-      <tr>
-        <td>o2::aod::zdc::DyAmplitudeZEM2</td>
-        <td>D</td>
-        <td>amplitudeZEM2</td>
-        <td>float</td>
-        <td>return ZEM2 amplitude</td>
-      </tr>
-      <tr>
-        <td>o2::aod::zdc::DyAmplitudeZNA</td>
-        <td>D</td>
-        <td>amplitudeZNA</td>
-        <td>float</td>
-        <td>return ZNA amplitude</td>
-      </tr>
-      <tr>
-        <td>o2::aod::zdc::DyAmplitudeZNC</td>
-        <td>D</td>
-        <td>amplitudeZNC</td>
-        <td>float</td>
-        <td>return ZNC amplitude</td>
-      </tr>
-      <tr>
-        <td>o2::aod::zdc::DyAmplitudeZPA</td>
-        <td>D</td>
-        <td>amplitudeZPA</td>
-        <td>float</td>
-        <td>return ZPA amplitude</td>
-      </tr>
-      <tr>
-        <td>o2::aod::zdc::DyAmplitudeZPC</td>
-        <td>D</td>
-        <td>amplitudeZPC</td>
-        <td>float</td>
-        <td>return ZPC amplitude</td>
+        <td>PM4 ZNC</td>
       </tr>
     </table>
   </div>
@@ -5441,6 +5588,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
     <div>Is used in:
       <ul>
         <li>o2::aod::TracksPidTinyEl = soa::Join<o2::aod::pidTPCEl, o2::aod::pidTOFEl></li>
+        <li>o2::aod::Reso2TracksPID = soa::Join<o2::aod::FullTracks, o2::aod::pidTPCPi, o2::aod::pidTPCKa, o2::aod::pidTPCPr, o2::aod::pidTPCEl, o2::aod::pidTOFPi, o2::aod::pidTOFKa, o2::aod::pidTOFPr, o2::aod::pidTOFEl></li>
       </ul>
     </div>
     <table class=DataModel>
@@ -5517,7 +5665,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
     <div>Is used in:
       <ul>
         <li>o2::aod::TracksPidTinyPi = soa::Join<o2::aod::pidTPCPi, o2::aod::pidTOFPi></li>
-        <li>o2::aod::Reso2TracksPID = soa::Join<o2::aod::FullTracks, o2::aod::pidTPCPi, o2::aod::pidTPCKa, o2::aod::pidTPCPr, o2::aod::pidTOFPi, o2::aod::pidTOFKa, o2::aod::pidTOFPr></li>
+        <li>o2::aod::Reso2TracksPID = soa::Join<o2::aod::FullTracks, o2::aod::pidTPCPi, o2::aod::pidTPCKa, o2::aod::pidTPCPr, o2::aod::pidTPCEl, o2::aod::pidTOFPi, o2::aod::pidTOFKa, o2::aod::pidTOFPr, o2::aod::pidTOFEl></li>
       </ul>
     </div>
     <table class=DataModel>
@@ -5556,7 +5704,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
     <div>Is used in:
       <ul>
         <li>o2::aod::TracksPidTinyKa = soa::Join<o2::aod::pidTPCKa, o2::aod::pidTOFKa></li>
-        <li>o2::aod::Reso2TracksPID = soa::Join<o2::aod::FullTracks, o2::aod::pidTPCPi, o2::aod::pidTPCKa, o2::aod::pidTPCPr, o2::aod::pidTOFPi, o2::aod::pidTOFKa, o2::aod::pidTOFPr></li>
+        <li>o2::aod::Reso2TracksPID = soa::Join<o2::aod::FullTracks, o2::aod::pidTPCPi, o2::aod::pidTPCKa, o2::aod::pidTPCPr, o2::aod::pidTPCEl, o2::aod::pidTOFPi, o2::aod::pidTOFKa, o2::aod::pidTOFPr, o2::aod::pidTOFEl></li>
       </ul>
     </div>
     <table class=DataModel>
@@ -5595,7 +5743,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
     <div>Is used in:
       <ul>
         <li>o2::aod::TracksPidTinyPr = soa::Join<o2::aod::pidTPCPr, o2::aod::pidTOFPr></li>
-        <li>o2::aod::Reso2TracksPID = soa::Join<o2::aod::FullTracks, o2::aod::pidTPCPi, o2::aod::pidTPCKa, o2::aod::pidTPCPr, o2::aod::pidTOFPi, o2::aod::pidTOFKa, o2::aod::pidTOFPr></li>
+        <li>o2::aod::Reso2TracksPID = soa::Join<o2::aod::FullTracks, o2::aod::pidTPCPi, o2::aod::pidTPCKa, o2::aod::pidTPCPr, o2::aod::pidTPCEl, o2::aod::pidTOFPi, o2::aod::pidTOFKa, o2::aod::pidTOFPr, o2::aod::pidTOFEl></li>
       </ul>
     </div>
     <table class=DataModel>
@@ -5783,6 +5931,13 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
         <td>tofSignal</td>
         <td>float</td>
         <td>TOF signal from track time</td>
+      </tr>
+      <tr>
+        <td>o2::aod::pidtofsignal::EventCollisionTime</td>
+        <td>D</td>
+        <td>eventCollisionTime</td>
+        <td>float</td>
+        <td>Event collision time used for the track. Needs the TOF</td>
       </tr>
     </table>
   </div>
@@ -6323,6 +6478,958 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
 
 </div>
 
+##  o2-analysis-pid-tof-merge
+Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/TableProducer/PID//pidTOFMerge.cxx" target="_blank">pidTOFMerge.cxx</a>
+<div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::TOFSignal</button>
+  <div class="panel">
+    <div>
+       Table of the TOF signal
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/DataModel/PIDResponse.h" target="_blank">Common/DataModel/PIDResponse.h</a>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::pidtofsignal::TOFSignal</td>
+        <td></td>
+        <td>tofSignal</td>
+        <td>float</td>
+        <td>TOF signal from track time</td>
+      </tr>
+      <tr>
+        <td>o2::aod::pidtofsignal::EventCollisionTime</td>
+        <td>D</td>
+        <td>eventCollisionTime</td>
+        <td>float</td>
+        <td>Event collision time used for the track. Needs the TOF</td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::pidTOFFlags</button>
+  <div class="panel">
+    <div>
+       Table of the flags for TOF signal quality on the track level
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/DataModel/PIDResponse.h" target="_blank">Common/DataModel/PIDResponse.h</a>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::pidflags::GoodTOFMatch</td>
+        <td></td>
+        <td>goodTOFMatch</td>
+        <td>bool</td>
+        <td>Bool for the TOF PID information on the single track information</td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::pidTOFbeta</button>
+  <div class="panel">
+    <div>
+       Table of the TOF beta
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/DataModel/PIDResponse.h" target="_blank">Common/DataModel/PIDResponse.h</a>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::pidtofbeta::Beta</td>
+        <td></td>
+        <td>beta</td>
+        <td>float</td>
+        <td>TOF beta</td>
+      </tr>
+      <tr>
+        <td>o2::aod::pidtofbeta::BetaError</td>
+        <td></td>
+        <td>betaerror</td>
+        <td>float</td>
+        <td>Uncertainty on the TOF beta</td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::pidTOFmass</button>
+  <div class="panel">
+    <div>
+       Table of the TOF mass
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/DataModel/PIDResponse.h" target="_blank">Common/DataModel/PIDResponse.h</a>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::pidtofmass::TOFMass</td>
+        <td></td>
+        <td>mass</td>
+        <td>float</td>
+        <td>TOF mass</td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::pidEvTimeFlags</button>
+  <div class="panel">
+    <div>
+       Table of the PID flags for the event time tables
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/DataModel/PIDResponse.h" target="_blank">Common/DataModel/PIDResponse.h</a>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::pidflags::TOFFlags</td>
+        <td></td>
+        <td>tofFlags</td>
+        <td>uint8_t</td>
+        <td>Flag for the complementary TOF PID information for the event time</td>
+      </tr>
+      <tr>
+        <td>o2::aod::pidflags::IsEvTimeDefined</td>
+        <td>D</td>
+        <td>isEvTimeDefined</td>
+        <td>bool</td>
+        <td>True if the Event Time was computed with any method i.e. there is a usable event time</td>
+      </tr>
+      <tr>
+        <td>o2::aod::pidflags::IsEvTimeTOF</td>
+        <td>D</td>
+        <td>isEvTimeTOF</td>
+        <td>bool</td>
+        <td>True if the Event Time was computed with the TOF</td>
+      </tr>
+      <tr>
+        <td>o2::aod::pidflags::IsEvTimeT0AC</td>
+        <td>D</td>
+        <td>isEvTimeT0AC</td>
+        <td>bool</td>
+        <td>True if the Event Time was computed with the T0AC</td>
+      </tr>
+      <tr>
+        <td>o2::aod::pidflags::IsEvTimeTOFT0AC</td>
+        <td>D</td>
+        <td>isEvTimeTOFT0AC</td>
+        <td>bool</td>
+        <td>True if the Event Time was computed with the TOF and T0AC</td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::pidTOFFullEl</button>
+  <div class="panel">
+    <div>
+       Table of the TOF (full) response with expected signal, expected resolution and Nsigma for electron
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/DataModel/PIDResponse.h" target="_blank">Common/DataModel/PIDResponse.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::TracksPidEl = soa::Join<o2::aod::pidTPCFullEl, o2::aod::pidTOFFullEl></li>
+      </ul>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::pidtof::TOFExpSignalDiffEl</td>
+        <td>D</td>
+        <td>tofExpSignalDiffEl</td>
+        <td>float</td>
+        <td>Difference between signal and expected for electron</td>
+      </tr>
+      <tr>
+        <td>o2::aod::pidtof::TOFExpSignalEl</td>
+        <td>D</td>
+        <td>tofExpSignalEl</td>
+        <td>float</td>
+        <td>Expected time for electron</td>
+      </tr>
+      <tr>
+        <td>o2::aod::pidtof::TOFExpSigmaEl</td>
+        <td></td>
+        <td>tofExpSigmaEl</td>
+        <td>float</td>
+        <td>Expected resolution with the TOF detector for electron</td>
+      </tr>
+      <tr>
+        <td>o2::aod::pidtof::TOFNSigmaEl</td>
+        <td></td>
+        <td>tofNSigmaEl</td>
+        <td>float</td>
+        <td>Nsigma separation with the TOF detector for electron</td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::pidTOFFullMu</button>
+  <div class="panel">
+    <div>
+       Table of the TOF (full) response with expected signal, expected resolution and Nsigma for muon
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/DataModel/PIDResponse.h" target="_blank">Common/DataModel/PIDResponse.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::TracksPidMu = soa::Join<o2::aod::pidTPCFullMu, o2::aod::pidTOFFullMu></li>
+      </ul>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::pidtof::TOFExpSignalDiffMu</td>
+        <td>D</td>
+        <td>tofExpSignalDiffMu</td>
+        <td>float</td>
+        <td>Difference between signal and expected for muon</td>
+      </tr>
+      <tr>
+        <td>o2::aod::pidtof::TOFExpSignalMu</td>
+        <td>D</td>
+        <td>tofExpSignalMu</td>
+        <td>float</td>
+        <td>Expected time for muon</td>
+      </tr>
+      <tr>
+        <td>o2::aod::pidtof::TOFExpSigmaMu</td>
+        <td></td>
+        <td>tofExpSigmaMu</td>
+        <td>float</td>
+        <td>Expected resolution with the TOF detector for muon</td>
+      </tr>
+      <tr>
+        <td>o2::aod::pidtof::TOFNSigmaMu</td>
+        <td></td>
+        <td>tofNSigmaMu</td>
+        <td>float</td>
+        <td>Nsigma separation with the TOF detector for muon</td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::pidTOFFullPi</button>
+  <div class="panel">
+    <div>
+       Table of the TOF (full) response with expected signal, expected resolution and Nsigma for pion
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/DataModel/PIDResponse.h" target="_blank">Common/DataModel/PIDResponse.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::TracksPidPi = soa::Join<o2::aod::pidTPCFullPi, o2::aod::pidTOFFullPi></li>
+      </ul>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::pidtof::TOFExpSignalDiffPi</td>
+        <td>D</td>
+        <td>tofExpSignalDiffPi</td>
+        <td>float</td>
+        <td>Difference between signal and expected for pion</td>
+      </tr>
+      <tr>
+        <td>o2::aod::pidtof::TOFExpSignalPi</td>
+        <td>D</td>
+        <td>tofExpSignalPi</td>
+        <td>float</td>
+        <td>Expected time for pion</td>
+      </tr>
+      <tr>
+        <td>o2::aod::pidtof::TOFExpSigmaPi</td>
+        <td></td>
+        <td>tofExpSigmaPi</td>
+        <td>float</td>
+        <td>Expected resolution with the TOF detector for pion</td>
+      </tr>
+      <tr>
+        <td>o2::aod::pidtof::TOFNSigmaPi</td>
+        <td></td>
+        <td>tofNSigmaPi</td>
+        <td>float</td>
+        <td>Nsigma separation with the TOF detector for pion</td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::pidTOFFullKa</button>
+  <div class="panel">
+    <div>
+       Table of the TOF (full) response with expected signal, expected resolution and Nsigma for kaon
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/DataModel/PIDResponse.h" target="_blank">Common/DataModel/PIDResponse.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::TracksPidKa = soa::Join<o2::aod::pidTPCFullKa, o2::aod::pidTOFFullKa></li>
+      </ul>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::pidtof::TOFExpSignalDiffKa</td>
+        <td>D</td>
+        <td>tofExpSignalDiffKa</td>
+        <td>float</td>
+        <td>Difference between signal and expected for kaon</td>
+      </tr>
+      <tr>
+        <td>o2::aod::pidtof::TOFExpSignalKa</td>
+        <td>D</td>
+        <td>tofExpSignalKa</td>
+        <td>float</td>
+        <td>Expected time for kaon</td>
+      </tr>
+      <tr>
+        <td>o2::aod::pidtof::TOFExpSigmaKa</td>
+        <td></td>
+        <td>tofExpSigmaKa</td>
+        <td>float</td>
+        <td>Expected resolution with the TOF detector for kaon</td>
+      </tr>
+      <tr>
+        <td>o2::aod::pidtof::TOFNSigmaKa</td>
+        <td></td>
+        <td>tofNSigmaKa</td>
+        <td>float</td>
+        <td>Nsigma separation with the TOF detector for kaon</td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::pidTOFFullPr</button>
+  <div class="panel">
+    <div>
+       Table of the TOF (full) response with expected signal, expected resolution and Nsigma for proton
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/DataModel/PIDResponse.h" target="_blank">Common/DataModel/PIDResponse.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::TracksPidPr = soa::Join<o2::aod::pidTPCFullPr, o2::aod::pidTOFFullPr></li>
+      </ul>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::pidtof::TOFExpSignalDiffPr</td>
+        <td>D</td>
+        <td>tofExpSignalDiffPr</td>
+        <td>float</td>
+        <td>Difference between signal and expected for proton</td>
+      </tr>
+      <tr>
+        <td>o2::aod::pidtof::TOFExpSignalPr</td>
+        <td>D</td>
+        <td>tofExpSignalPr</td>
+        <td>float</td>
+        <td>Expected time for proton</td>
+      </tr>
+      <tr>
+        <td>o2::aod::pidtof::TOFExpSigmaPr</td>
+        <td></td>
+        <td>tofExpSigmaPr</td>
+        <td>float</td>
+        <td>Expected resolution with the TOF detector for proton</td>
+      </tr>
+      <tr>
+        <td>o2::aod::pidtof::TOFNSigmaPr</td>
+        <td></td>
+        <td>tofNSigmaPr</td>
+        <td>float</td>
+        <td>Nsigma separation with the TOF detector for proton</td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::pidTOFFullDe</button>
+  <div class="panel">
+    <div>
+       Table of the TOF (full) response with expected signal, expected resolution and Nsigma for deuteron
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/DataModel/PIDResponse.h" target="_blank">Common/DataModel/PIDResponse.h</a>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::pidtof::TOFExpSignalDiffDe</td>
+        <td>D</td>
+        <td>tofExpSignalDiffDe</td>
+        <td>float</td>
+        <td>Difference between signal and expected for deuteron</td>
+      </tr>
+      <tr>
+        <td>o2::aod::pidtof::TOFExpSignalDe</td>
+        <td>D</td>
+        <td>tofExpSignalDe</td>
+        <td>float</td>
+        <td>Expected time for deuteron</td>
+      </tr>
+      <tr>
+        <td>o2::aod::pidtof::TOFExpSigmaDe</td>
+        <td></td>
+        <td>tofExpSigmaDe</td>
+        <td>float</td>
+        <td>Expected resolution with the TOF detector for deuteron</td>
+      </tr>
+      <tr>
+        <td>o2::aod::pidtof::TOFNSigmaDe</td>
+        <td></td>
+        <td>tofNSigmaDe</td>
+        <td>float</td>
+        <td>Nsigma separation with the TOF detector for deuteron</td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::pidTOFFullTr</button>
+  <div class="panel">
+    <div>
+       Table of the TOF (full) response with expected signal, expected resolution and Nsigma for triton
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/DataModel/PIDResponse.h" target="_blank">Common/DataModel/PIDResponse.h</a>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::pidtof::TOFExpSignalDiffTr</td>
+        <td>D</td>
+        <td>tofExpSignalDiffTr</td>
+        <td>float</td>
+        <td>Difference between signal and expected for triton</td>
+      </tr>
+      <tr>
+        <td>o2::aod::pidtof::TOFExpSignalTr</td>
+        <td>D</td>
+        <td>tofExpSignalTr</td>
+        <td>float</td>
+        <td>Expected time for triton</td>
+      </tr>
+      <tr>
+        <td>o2::aod::pidtof::TOFExpSigmaTr</td>
+        <td></td>
+        <td>tofExpSigmaTr</td>
+        <td>float</td>
+        <td>Expected resolution with the TOF detector for triton</td>
+      </tr>
+      <tr>
+        <td>o2::aod::pidtof::TOFNSigmaTr</td>
+        <td></td>
+        <td>tofNSigmaTr</td>
+        <td>float</td>
+        <td>Nsigma separation with the TOF detector for triton</td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::pidTOFFullHe</button>
+  <div class="panel">
+    <div>
+       Table of the TOF (full) response with expected signal, expected resolution and Nsigma for helium3
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/DataModel/PIDResponse.h" target="_blank">Common/DataModel/PIDResponse.h</a>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::pidtof::TOFExpSignalDiffHe</td>
+        <td>D</td>
+        <td>tofExpSignalDiffHe</td>
+        <td>float</td>
+        <td>Difference between signal and expected for helium3</td>
+      </tr>
+      <tr>
+        <td>o2::aod::pidtof::TOFExpSignalHe</td>
+        <td>D</td>
+        <td>tofExpSignalHe</td>
+        <td>float</td>
+        <td>Expected time for helium3</td>
+      </tr>
+      <tr>
+        <td>o2::aod::pidtof::TOFExpSigmaHe</td>
+        <td></td>
+        <td>tofExpSigmaHe</td>
+        <td>float</td>
+        <td>Expected resolution with the TOF detector for helium3</td>
+      </tr>
+      <tr>
+        <td>o2::aod::pidtof::TOFNSigmaHe</td>
+        <td></td>
+        <td>tofNSigmaHe</td>
+        <td>float</td>
+        <td>Nsigma separation with the TOF detector for helium3</td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::pidTOFFullAl</button>
+  <div class="panel">
+    <div>
+       Table of the TOF (full) response with expected signal, expected resolution and Nsigma for alpha
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/DataModel/PIDResponse.h" target="_blank">Common/DataModel/PIDResponse.h</a>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::pidtof::TOFExpSignalDiffAl</td>
+        <td>D</td>
+        <td>tofExpSignalDiffAl</td>
+        <td>float</td>
+        <td>Difference between signal and expected for alpha</td>
+      </tr>
+      <tr>
+        <td>o2::aod::pidtof::TOFExpSignalAl</td>
+        <td>D</td>
+        <td>tofExpSignalAl</td>
+        <td>float</td>
+        <td>Expected time for alpha</td>
+      </tr>
+      <tr>
+        <td>o2::aod::pidtof::TOFExpSigmaAl</td>
+        <td></td>
+        <td>tofExpSigmaAl</td>
+        <td>float</td>
+        <td>Expected resolution with the TOF detector for alpha</td>
+      </tr>
+      <tr>
+        <td>o2::aod::pidtof::TOFNSigmaAl</td>
+        <td></td>
+        <td>tofNSigmaAl</td>
+        <td>float</td>
+        <td>Nsigma separation with the TOF detector for alpha</td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::pidTOFEl</button>
+  <div class="panel">
+    <div>
+       Table of the TOF response with binned Nsigma for electron
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/DataModel/PIDResponse.h" target="_blank">Common/DataModel/PIDResponse.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::TracksPidTinyEl = soa::Join<o2::aod::pidTPCEl, o2::aod::pidTOFEl></li>
+        <li>o2::aod::Reso2TracksPID = soa::Join<o2::aod::FullTracks, o2::aod::pidTPCPi, o2::aod::pidTPCKa, o2::aod::pidTPCPr, o2::aod::pidTPCEl, o2::aod::pidTOFPi, o2::aod::pidTOFKa, o2::aod::pidTOFPr, o2::aod::pidTOFEl></li>
+      </ul>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::pidtof_tiny::TOFNSigmaStoreEl</td>
+        <td></td>
+        <td>tofNSigmaStoreEl</td>
+        <td>binning::binned_t</td>
+        <td>Stored binned nsigma with the TOF detector for electron</td>
+      </tr>
+      <tr>
+        <td>o2::aod::pidtof_tiny::TOFNSigmaEl</td>
+        <td>GI</td>
+        <td></td>
+        <td>?</td>
+        <td></td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::pidTOFMu</button>
+  <div class="panel">
+    <div>
+       Table of the TOF response with binned Nsigma for muon
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/DataModel/PIDResponse.h" target="_blank">Common/DataModel/PIDResponse.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::TracksPidTinyMu = soa::Join<o2::aod::pidTPCMu, o2::aod::pidTOFMu></li>
+      </ul>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::pidtof_tiny::TOFNSigmaStoreMu</td>
+        <td></td>
+        <td>tofNSigmaStoreMu</td>
+        <td>binning::binned_t</td>
+        <td>Stored binned nsigma with the TOF detector for muon</td>
+      </tr>
+      <tr>
+        <td>o2::aod::pidtof_tiny::TOFNSigmaMu</td>
+        <td>GI</td>
+        <td></td>
+        <td>?</td>
+        <td></td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::pidTOFPi</button>
+  <div class="panel">
+    <div>
+       Table of the TOF response with binned Nsigma for pion
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/DataModel/PIDResponse.h" target="_blank">Common/DataModel/PIDResponse.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::TracksPidTinyPi = soa::Join<o2::aod::pidTPCPi, o2::aod::pidTOFPi></li>
+        <li>o2::aod::Reso2TracksPID = soa::Join<o2::aod::FullTracks, o2::aod::pidTPCPi, o2::aod::pidTPCKa, o2::aod::pidTPCPr, o2::aod::pidTPCEl, o2::aod::pidTOFPi, o2::aod::pidTOFKa, o2::aod::pidTOFPr, o2::aod::pidTOFEl></li>
+      </ul>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::pidtof_tiny::TOFNSigmaStorePi</td>
+        <td></td>
+        <td>tofNSigmaStorePi</td>
+        <td>binning::binned_t</td>
+        <td>Stored binned nsigma with the TOF detector for pion</td>
+      </tr>
+      <tr>
+        <td>o2::aod::pidtof_tiny::TOFNSigmaPi</td>
+        <td>GI</td>
+        <td></td>
+        <td>?</td>
+        <td></td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::pidTOFKa</button>
+  <div class="panel">
+    <div>
+       Table of the TOF response with binned Nsigma for kaon
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/DataModel/PIDResponse.h" target="_blank">Common/DataModel/PIDResponse.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::TracksPidTinyKa = soa::Join<o2::aod::pidTPCKa, o2::aod::pidTOFKa></li>
+        <li>o2::aod::Reso2TracksPID = soa::Join<o2::aod::FullTracks, o2::aod::pidTPCPi, o2::aod::pidTPCKa, o2::aod::pidTPCPr, o2::aod::pidTPCEl, o2::aod::pidTOFPi, o2::aod::pidTOFKa, o2::aod::pidTOFPr, o2::aod::pidTOFEl></li>
+      </ul>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::pidtof_tiny::TOFNSigmaStoreKa</td>
+        <td></td>
+        <td>tofNSigmaStoreKa</td>
+        <td>binning::binned_t</td>
+        <td>Stored binned nsigma with the TOF detector for kaon</td>
+      </tr>
+      <tr>
+        <td>o2::aod::pidtof_tiny::TOFNSigmaKa</td>
+        <td>GI</td>
+        <td></td>
+        <td>?</td>
+        <td></td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::pidTOFPr</button>
+  <div class="panel">
+    <div>
+       Table of the TOF response with binned Nsigma for proton
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/DataModel/PIDResponse.h" target="_blank">Common/DataModel/PIDResponse.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::TracksPidTinyPr = soa::Join<o2::aod::pidTPCPr, o2::aod::pidTOFPr></li>
+        <li>o2::aod::Reso2TracksPID = soa::Join<o2::aod::FullTracks, o2::aod::pidTPCPi, o2::aod::pidTPCKa, o2::aod::pidTPCPr, o2::aod::pidTPCEl, o2::aod::pidTOFPi, o2::aod::pidTOFKa, o2::aod::pidTOFPr, o2::aod::pidTOFEl></li>
+      </ul>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::pidtof_tiny::TOFNSigmaStorePr</td>
+        <td></td>
+        <td>tofNSigmaStorePr</td>
+        <td>binning::binned_t</td>
+        <td>Stored binned nsigma with the TOF detector for proton</td>
+      </tr>
+      <tr>
+        <td>o2::aod::pidtof_tiny::TOFNSigmaPr</td>
+        <td>GI</td>
+        <td></td>
+        <td>?</td>
+        <td></td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::pidTOFDe</button>
+  <div class="panel">
+    <div>
+       Table of the TOF response with binned Nsigma for deuteron
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/DataModel/PIDResponse.h" target="_blank">Common/DataModel/PIDResponse.h</a>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::pidtof_tiny::TOFNSigmaStoreDe</td>
+        <td></td>
+        <td>tofNSigmaStoreDe</td>
+        <td>binning::binned_t</td>
+        <td>Stored binned nsigma with the TOF detector for deuteron</td>
+      </tr>
+      <tr>
+        <td>o2::aod::pidtof_tiny::TOFNSigmaDe</td>
+        <td>GI</td>
+        <td></td>
+        <td>?</td>
+        <td></td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::pidTOFTr</button>
+  <div class="panel">
+    <div>
+       Table of the TOF response with binned Nsigma for triton
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/DataModel/PIDResponse.h" target="_blank">Common/DataModel/PIDResponse.h</a>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::pidtof_tiny::TOFNSigmaStoreTr</td>
+        <td></td>
+        <td>tofNSigmaStoreTr</td>
+        <td>binning::binned_t</td>
+        <td>Stored binned nsigma with the TOF detector for triton</td>
+      </tr>
+      <tr>
+        <td>o2::aod::pidtof_tiny::TOFNSigmaTr</td>
+        <td>GI</td>
+        <td></td>
+        <td>?</td>
+        <td></td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::pidTOFHe</button>
+  <div class="panel">
+    <div>
+       Table of the TOF response with binned Nsigma for helium3
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/DataModel/PIDResponse.h" target="_blank">Common/DataModel/PIDResponse.h</a>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::pidtof_tiny::TOFNSigmaStoreHe</td>
+        <td></td>
+        <td>tofNSigmaStoreHe</td>
+        <td>binning::binned_t</td>
+        <td>Stored binned nsigma with the TOF detector for helium3</td>
+      </tr>
+      <tr>
+        <td>o2::aod::pidtof_tiny::TOFNSigmaHe</td>
+        <td>GI</td>
+        <td></td>
+        <td>?</td>
+        <td></td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::pidTOFAl</button>
+  <div class="panel">
+    <div>
+       Table of the TOF response with binned Nsigma for alpha
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/DataModel/PIDResponse.h" target="_blank">Common/DataModel/PIDResponse.h</a>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::pidtof_tiny::TOFNSigmaStoreAl</td>
+        <td></td>
+        <td>tofNSigmaStoreAl</td>
+        <td>binning::binned_t</td>
+        <td>Stored binned nsigma with the TOF detector for alpha</td>
+      </tr>
+      <tr>
+        <td>o2::aod::pidtof_tiny::TOFNSigmaAl</td>
+        <td>GI</td>
+        <td></td>
+        <td>?</td>
+        <td></td>
+      </tr>
+    </table>
+  </div>
+
+</div>
+
 ##  o2-analysis-pid-tof-beta
 Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/TableProducer/PID//pidTOFbeta.cxx" target="_blank">pidTOFbeta.cxx</a>
 <div>
@@ -6392,203 +7499,10 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
 Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/TableProducer/PID//pidTPC.cxx" target="_blank">pidTPC.cxx</a>
 <div>
 
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::pidTPCEl</button>
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::mcTPCTuneOnData</button>
   <div class="panel">
     <div>
-       Table of the TPC response with binned Nsigma for electron
-    </div>
-    <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/DataModel/PIDResponse.h" target="_blank">Common/DataModel/PIDResponse.h</a>
-    </div>
-    <div>Is used in:
-      <ul>
-        <li>o2::aod::TracksPidTinyEl = soa::Join<o2::aod::pidTPCEl, o2::aod::pidTOFEl></li>
-      </ul>
-    </div>
-    <table class=DataModel>
-      <tr>
-        <th>Name</th>
-        <th></th>
-        <th>Getter</th>
-        <th>Type</th>
-        <th>Comment</th>
-      </tr>
-      <tr>
-        <td>o2::aod::pidtpc_tiny::TPCNSigmaStoreEl</td>
-        <td></td>
-        <td>tpcNSigmaStoreEl</td>
-        <td>binning::binned_t</td>
-        <td>Stored binned nsigma with the TPC detector for electron</td>
-      </tr>
-      <tr>
-        <td>o2::aod::pidtpc_tiny::TPCNSigmaEl</td>
-        <td>GI</td>
-        <td></td>
-        <td>?</td>
-        <td></td>
-      </tr>
-    </table>
-  </div>
 
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::pidTPCMu</button>
-  <div class="panel">
-    <div>
-       Table of the TPC response with binned Nsigma for muon
-    </div>
-    <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/DataModel/PIDResponse.h" target="_blank">Common/DataModel/PIDResponse.h</a>
-    </div>
-    <div>Is used in:
-      <ul>
-        <li>o2::aod::TracksPidTinyMu = soa::Join<o2::aod::pidTPCMu, o2::aod::pidTOFMu></li>
-      </ul>
-    </div>
-    <table class=DataModel>
-      <tr>
-        <th>Name</th>
-        <th></th>
-        <th>Getter</th>
-        <th>Type</th>
-        <th>Comment</th>
-      </tr>
-      <tr>
-        <td>o2::aod::pidtpc_tiny::TPCNSigmaStoreMu</td>
-        <td></td>
-        <td>tpcNSigmaStoreMu</td>
-        <td>binning::binned_t</td>
-        <td>Stored binned nsigma with the TPC detector for muon</td>
-      </tr>
-      <tr>
-        <td>o2::aod::pidtpc_tiny::TPCNSigmaMu</td>
-        <td>GI</td>
-        <td></td>
-        <td>?</td>
-        <td></td>
-      </tr>
-    </table>
-  </div>
-
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::pidTPCPi</button>
-  <div class="panel">
-    <div>
-       Table of the TPC response with binned Nsigma for pion
-    </div>
-    <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/DataModel/PIDResponse.h" target="_blank">Common/DataModel/PIDResponse.h</a>
-    </div>
-    <div>Is used in:
-      <ul>
-        <li>o2::aod::TracksPidTinyPi = soa::Join<o2::aod::pidTPCPi, o2::aod::pidTOFPi></li>
-        <li>o2::aod::Reso2TracksPID = soa::Join<o2::aod::FullTracks, o2::aod::pidTPCPi, o2::aod::pidTPCKa, o2::aod::pidTPCPr, o2::aod::pidTOFPi, o2::aod::pidTOFKa, o2::aod::pidTOFPr></li>
-      </ul>
-    </div>
-    <table class=DataModel>
-      <tr>
-        <th>Name</th>
-        <th></th>
-        <th>Getter</th>
-        <th>Type</th>
-        <th>Comment</th>
-      </tr>
-      <tr>
-        <td>o2::aod::pidtpc_tiny::TPCNSigmaStorePi</td>
-        <td></td>
-        <td>tpcNSigmaStorePi</td>
-        <td>binning::binned_t</td>
-        <td>Stored binned nsigma with the TPC detector for pion</td>
-      </tr>
-      <tr>
-        <td>o2::aod::pidtpc_tiny::TPCNSigmaPi</td>
-        <td>GI</td>
-        <td></td>
-        <td>?</td>
-        <td></td>
-      </tr>
-    </table>
-  </div>
-
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::pidTPCKa</button>
-  <div class="panel">
-    <div>
-       Table of the TPC response with binned Nsigma for kaon
-    </div>
-    <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/DataModel/PIDResponse.h" target="_blank">Common/DataModel/PIDResponse.h</a>
-    </div>
-    <div>Is used in:
-      <ul>
-        <li>o2::aod::TracksPidTinyKa = soa::Join<o2::aod::pidTPCKa, o2::aod::pidTOFKa></li>
-        <li>o2::aod::Reso2TracksPID = soa::Join<o2::aod::FullTracks, o2::aod::pidTPCPi, o2::aod::pidTPCKa, o2::aod::pidTPCPr, o2::aod::pidTOFPi, o2::aod::pidTOFKa, o2::aod::pidTOFPr></li>
-      </ul>
-    </div>
-    <table class=DataModel>
-      <tr>
-        <th>Name</th>
-        <th></th>
-        <th>Getter</th>
-        <th>Type</th>
-        <th>Comment</th>
-      </tr>
-      <tr>
-        <td>o2::aod::pidtpc_tiny::TPCNSigmaStoreKa</td>
-        <td></td>
-        <td>tpcNSigmaStoreKa</td>
-        <td>binning::binned_t</td>
-        <td>Stored binned nsigma with the TPC detector for kaon</td>
-      </tr>
-      <tr>
-        <td>o2::aod::pidtpc_tiny::TPCNSigmaKa</td>
-        <td>GI</td>
-        <td></td>
-        <td>?</td>
-        <td></td>
-      </tr>
-    </table>
-  </div>
-
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::pidTPCPr</button>
-  <div class="panel">
-    <div>
-       Table of the TPC response with binned Nsigma for proton
-    </div>
-    <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/DataModel/PIDResponse.h" target="_blank">Common/DataModel/PIDResponse.h</a>
-    </div>
-    <div>Is used in:
-      <ul>
-        <li>o2::aod::TracksPidTinyPr = soa::Join<o2::aod::pidTPCPr, o2::aod::pidTOFPr></li>
-        <li>o2::aod::Reso2TracksPID = soa::Join<o2::aod::FullTracks, o2::aod::pidTPCPi, o2::aod::pidTPCKa, o2::aod::pidTPCPr, o2::aod::pidTOFPi, o2::aod::pidTOFKa, o2::aod::pidTOFPr></li>
-      </ul>
-    </div>
-    <table class=DataModel>
-      <tr>
-        <th>Name</th>
-        <th></th>
-        <th>Getter</th>
-        <th>Type</th>
-        <th>Comment</th>
-      </tr>
-      <tr>
-        <td>o2::aod::pidtpc_tiny::TPCNSigmaStorePr</td>
-        <td></td>
-        <td>tpcNSigmaStorePr</td>
-        <td>binning::binned_t</td>
-        <td>Stored binned nsigma with the TPC detector for proton</td>
-      </tr>
-      <tr>
-        <td>o2::aod::pidtpc_tiny::TPCNSigmaPr</td>
-        <td>GI</td>
-        <td></td>
-        <td>?</td>
-        <td></td>
-      </tr>
-    </table>
-  </div>
-
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::pidTPCDe</button>
-  <div class="panel">
-    <div>
-       Table of the TPC response with binned Nsigma for deuteron
     </div>
     <div>
       Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/DataModel/PIDResponse.h" target="_blank">Common/DataModel/PIDResponse.h</a>
@@ -6602,132 +7516,14 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
         <th>Comment</th>
       </tr>
       <tr>
-        <td>o2::aod::pidtpc_tiny::TPCNSigmaStoreDe</td>
+        <td>o2::aod::mcpidtpc::DeDxTunedMc</td>
         <td></td>
-        <td>tpcNSigmaStoreDe</td>
-        <td>binning::binned_t</td>
-        <td>Stored binned nsigma with the TPC detector for deuteron</td>
-      </tr>
-      <tr>
-        <td>o2::aod::pidtpc_tiny::TPCNSigmaDe</td>
-        <td>GI</td>
-        <td></td>
-        <td>?</td>
-        <td></td>
+        <td>mcTunedTPCSignal</td>
+        <td>float</td>
+        <td>TPC signal after TuneOnData application for MC</td>
       </tr>
     </table>
   </div>
-
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::pidTPCTr</button>
-  <div class="panel">
-    <div>
-       Table of the TPC response with binned Nsigma for triton
-    </div>
-    <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/DataModel/PIDResponse.h" target="_blank">Common/DataModel/PIDResponse.h</a>
-    </div>
-    <table class=DataModel>
-      <tr>
-        <th>Name</th>
-        <th></th>
-        <th>Getter</th>
-        <th>Type</th>
-        <th>Comment</th>
-      </tr>
-      <tr>
-        <td>o2::aod::pidtpc_tiny::TPCNSigmaStoreTr</td>
-        <td></td>
-        <td>tpcNSigmaStoreTr</td>
-        <td>binning::binned_t</td>
-        <td>Stored binned nsigma with the TPC detector for triton</td>
-      </tr>
-      <tr>
-        <td>o2::aod::pidtpc_tiny::TPCNSigmaTr</td>
-        <td>GI</td>
-        <td></td>
-        <td>?</td>
-        <td></td>
-      </tr>
-    </table>
-  </div>
-
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::pidTPCHe</button>
-  <div class="panel">
-    <div>
-       Table of the TPC response with binned Nsigma for helium3
-    </div>
-    <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/DataModel/PIDResponse.h" target="_blank">Common/DataModel/PIDResponse.h</a>
-    </div>
-    <table class=DataModel>
-      <tr>
-        <th>Name</th>
-        <th></th>
-        <th>Getter</th>
-        <th>Type</th>
-        <th>Comment</th>
-      </tr>
-      <tr>
-        <td>o2::aod::pidtpc_tiny::TPCNSigmaStoreHe</td>
-        <td></td>
-        <td>tpcNSigmaStoreHe</td>
-        <td>binning::binned_t</td>
-        <td>Stored binned nsigma with the TPC detector for helium3</td>
-      </tr>
-      <tr>
-        <td>o2::aod::pidtpc_tiny::TPCNSigmaHe</td>
-        <td>GI</td>
-        <td></td>
-        <td>?</td>
-        <td></td>
-      </tr>
-    </table>
-  </div>
-
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::pidTPCAl</button>
-  <div class="panel">
-    <div>
-       Table of the TPC response with binned Nsigma for alpha
-    </div>
-    <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/DataModel/PIDResponse.h" target="_blank">Common/DataModel/PIDResponse.h</a>
-    </div>
-    <table class=DataModel>
-      <tr>
-        <th>Name</th>
-        <th></th>
-        <th>Getter</th>
-        <th>Type</th>
-        <th>Comment</th>
-      </tr>
-      <tr>
-        <td>o2::aod::pidtpc_tiny::TPCNSigmaStoreAl</td>
-        <td></td>
-        <td>tpcNSigmaStoreAl</td>
-        <td>binning::binned_t</td>
-        <td>Stored binned nsigma with the TPC detector for alpha</td>
-      </tr>
-      <tr>
-        <td>o2::aod::pidtpc_tiny::TPCNSigmaAl</td>
-        <td>GI</td>
-        <td></td>
-        <td>?</td>
-        <td></td>
-      </tr>
-    </table>
-  </div>
-
-</div>
-
-##  o2-analysis-pid-tpc-base
-Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/TableProducer/PID//pidTPCBase.cxx" target="_blank">pidTPCBase.cxx</a>
-<div>
-
-</div>
-
-##  o2-analysis-pid-tpc-full
-Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/TableProducer/PID//pidTPCFull.cxx" target="_blank">pidTPCFull.cxx</a>
-<div>
 
   <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::pidTPCFullEl</button>
   <div class="panel">
@@ -7173,6 +7969,1920 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
         <td>tpcNSigmaAl</td>
         <td>float</td>
         <td>Nsigma separation with the TPC detector for alpha</td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::pidTPCEl</button>
+  <div class="panel">
+    <div>
+       Table of the TPC response with binned Nsigma for electron
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/DataModel/PIDResponse.h" target="_blank">Common/DataModel/PIDResponse.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::TracksPidTinyEl = soa::Join<o2::aod::pidTPCEl, o2::aod::pidTOFEl></li>
+        <li>o2::aod::Reso2TracksPID = soa::Join<o2::aod::FullTracks, o2::aod::pidTPCPi, o2::aod::pidTPCKa, o2::aod::pidTPCPr, o2::aod::pidTPCEl, o2::aod::pidTOFPi, o2::aod::pidTOFKa, o2::aod::pidTOFPr, o2::aod::pidTOFEl></li>
+      </ul>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::pidtpc_tiny::TPCNSigmaStoreEl</td>
+        <td></td>
+        <td>tpcNSigmaStoreEl</td>
+        <td>binning::binned_t</td>
+        <td>Stored binned nsigma with the TPC detector for electron</td>
+      </tr>
+      <tr>
+        <td>o2::aod::pidtpc_tiny::TPCNSigmaEl</td>
+        <td>GI</td>
+        <td></td>
+        <td>?</td>
+        <td></td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::pidTPCMu</button>
+  <div class="panel">
+    <div>
+       Table of the TPC response with binned Nsigma for muon
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/DataModel/PIDResponse.h" target="_blank">Common/DataModel/PIDResponse.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::TracksPidTinyMu = soa::Join<o2::aod::pidTPCMu, o2::aod::pidTOFMu></li>
+      </ul>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::pidtpc_tiny::TPCNSigmaStoreMu</td>
+        <td></td>
+        <td>tpcNSigmaStoreMu</td>
+        <td>binning::binned_t</td>
+        <td>Stored binned nsigma with the TPC detector for muon</td>
+      </tr>
+      <tr>
+        <td>o2::aod::pidtpc_tiny::TPCNSigmaMu</td>
+        <td>GI</td>
+        <td></td>
+        <td>?</td>
+        <td></td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::pidTPCPi</button>
+  <div class="panel">
+    <div>
+       Table of the TPC response with binned Nsigma for pion
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/DataModel/PIDResponse.h" target="_blank">Common/DataModel/PIDResponse.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::TracksPidTinyPi = soa::Join<o2::aod::pidTPCPi, o2::aod::pidTOFPi></li>
+        <li>o2::aod::Reso2TracksPID = soa::Join<o2::aod::FullTracks, o2::aod::pidTPCPi, o2::aod::pidTPCKa, o2::aod::pidTPCPr, o2::aod::pidTPCEl, o2::aod::pidTOFPi, o2::aod::pidTOFKa, o2::aod::pidTOFPr, o2::aod::pidTOFEl></li>
+      </ul>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::pidtpc_tiny::TPCNSigmaStorePi</td>
+        <td></td>
+        <td>tpcNSigmaStorePi</td>
+        <td>binning::binned_t</td>
+        <td>Stored binned nsigma with the TPC detector for pion</td>
+      </tr>
+      <tr>
+        <td>o2::aod::pidtpc_tiny::TPCNSigmaPi</td>
+        <td>GI</td>
+        <td></td>
+        <td>?</td>
+        <td></td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::pidTPCKa</button>
+  <div class="panel">
+    <div>
+       Table of the TPC response with binned Nsigma for kaon
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/DataModel/PIDResponse.h" target="_blank">Common/DataModel/PIDResponse.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::TracksPidTinyKa = soa::Join<o2::aod::pidTPCKa, o2::aod::pidTOFKa></li>
+        <li>o2::aod::Reso2TracksPID = soa::Join<o2::aod::FullTracks, o2::aod::pidTPCPi, o2::aod::pidTPCKa, o2::aod::pidTPCPr, o2::aod::pidTPCEl, o2::aod::pidTOFPi, o2::aod::pidTOFKa, o2::aod::pidTOFPr, o2::aod::pidTOFEl></li>
+      </ul>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::pidtpc_tiny::TPCNSigmaStoreKa</td>
+        <td></td>
+        <td>tpcNSigmaStoreKa</td>
+        <td>binning::binned_t</td>
+        <td>Stored binned nsigma with the TPC detector for kaon</td>
+      </tr>
+      <tr>
+        <td>o2::aod::pidtpc_tiny::TPCNSigmaKa</td>
+        <td>GI</td>
+        <td></td>
+        <td>?</td>
+        <td></td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::pidTPCPr</button>
+  <div class="panel">
+    <div>
+       Table of the TPC response with binned Nsigma for proton
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/DataModel/PIDResponse.h" target="_blank">Common/DataModel/PIDResponse.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::TracksPidTinyPr = soa::Join<o2::aod::pidTPCPr, o2::aod::pidTOFPr></li>
+        <li>o2::aod::Reso2TracksPID = soa::Join<o2::aod::FullTracks, o2::aod::pidTPCPi, o2::aod::pidTPCKa, o2::aod::pidTPCPr, o2::aod::pidTPCEl, o2::aod::pidTOFPi, o2::aod::pidTOFKa, o2::aod::pidTOFPr, o2::aod::pidTOFEl></li>
+      </ul>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::pidtpc_tiny::TPCNSigmaStorePr</td>
+        <td></td>
+        <td>tpcNSigmaStorePr</td>
+        <td>binning::binned_t</td>
+        <td>Stored binned nsigma with the TPC detector for proton</td>
+      </tr>
+      <tr>
+        <td>o2::aod::pidtpc_tiny::TPCNSigmaPr</td>
+        <td>GI</td>
+        <td></td>
+        <td>?</td>
+        <td></td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::pidTPCDe</button>
+  <div class="panel">
+    <div>
+       Table of the TPC response with binned Nsigma for deuteron
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/DataModel/PIDResponse.h" target="_blank">Common/DataModel/PIDResponse.h</a>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::pidtpc_tiny::TPCNSigmaStoreDe</td>
+        <td></td>
+        <td>tpcNSigmaStoreDe</td>
+        <td>binning::binned_t</td>
+        <td>Stored binned nsigma with the TPC detector for deuteron</td>
+      </tr>
+      <tr>
+        <td>o2::aod::pidtpc_tiny::TPCNSigmaDe</td>
+        <td>GI</td>
+        <td></td>
+        <td>?</td>
+        <td></td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::pidTPCTr</button>
+  <div class="panel">
+    <div>
+       Table of the TPC response with binned Nsigma for triton
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/DataModel/PIDResponse.h" target="_blank">Common/DataModel/PIDResponse.h</a>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::pidtpc_tiny::TPCNSigmaStoreTr</td>
+        <td></td>
+        <td>tpcNSigmaStoreTr</td>
+        <td>binning::binned_t</td>
+        <td>Stored binned nsigma with the TPC detector for triton</td>
+      </tr>
+      <tr>
+        <td>o2::aod::pidtpc_tiny::TPCNSigmaTr</td>
+        <td>GI</td>
+        <td></td>
+        <td>?</td>
+        <td></td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::pidTPCHe</button>
+  <div class="panel">
+    <div>
+       Table of the TPC response with binned Nsigma for helium3
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/DataModel/PIDResponse.h" target="_blank">Common/DataModel/PIDResponse.h</a>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::pidtpc_tiny::TPCNSigmaStoreHe</td>
+        <td></td>
+        <td>tpcNSigmaStoreHe</td>
+        <td>binning::binned_t</td>
+        <td>Stored binned nsigma with the TPC detector for helium3</td>
+      </tr>
+      <tr>
+        <td>o2::aod::pidtpc_tiny::TPCNSigmaHe</td>
+        <td>GI</td>
+        <td></td>
+        <td>?</td>
+        <td></td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::pidTPCAl</button>
+  <div class="panel">
+    <div>
+       Table of the TPC response with binned Nsigma for alpha
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/DataModel/PIDResponse.h" target="_blank">Common/DataModel/PIDResponse.h</a>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::pidtpc_tiny::TPCNSigmaStoreAl</td>
+        <td></td>
+        <td>tpcNSigmaStoreAl</td>
+        <td>binning::binned_t</td>
+        <td>Stored binned nsigma with the TPC detector for alpha</td>
+      </tr>
+      <tr>
+        <td>o2::aod::pidtpc_tiny::TPCNSigmaAl</td>
+        <td>GI</td>
+        <td></td>
+        <td>?</td>
+        <td></td>
+      </tr>
+    </table>
+  </div>
+
+</div>
+
+##  o2-analysis-pid-tpc-base
+Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/TableProducer/PID//pidTPCBase.cxx" target="_blank">pidTPCBase.cxx</a>
+<div>
+
+</div>
+
+##  o2-analysis-bc-converter
+Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/TableProducer/Converters//bcConverter.cxx" target="_blank">bcConverter.cxx</a>
+<div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::BCs_001</button>
+  <div class="panel">
+    <div>
+       Root of data model for tables pointing to a bunch crossing, version 1
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev//Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::BCs = o2::aod::BCs_001</li>
+      </ul>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::soa::Index</td>
+        <td>GI</td>
+        <td>globalIndex</td>
+        <td>int64_t</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::bc::RunNumber</td>
+        <td></td>
+        <td>runNumber</td>
+        <td>int</td>
+        <td>Run number</td>
+      </tr>
+      <tr>
+        <td>o2::aod::bc::GlobalBC</td>
+        <td></td>
+        <td>globalBC</td>
+        <td>uint64_t</td>
+        <td>Bunch crossing number (globally unique in this run)</td>
+      </tr>
+      <tr>
+        <td>o2::aod::bc::TriggerMask</td>
+        <td></td>
+        <td>triggerMask</td>
+        <td>uint64_t</td>
+        <td>CTP trigger mask</td>
+      </tr>
+      <tr>
+        <td>o2::aod::bc::InputMask</td>
+        <td></td>
+        <td>inputMask</td>
+        <td>uint64_t</td>
+        <td>CTP input mask</td>
+      </tr>
+    </table>
+  </div>
+
+</div>
+
+##  o2-analysis-bc-flags-creator
+Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/TableProducer/Converters//bcFlagsCreator.cxx" target="_blank">bcFlagsCreator.cxx</a>
+<div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::BCFlags</button>
+  <div class="panel">
+    <div>
+       flag for tagging UPCs, joinable with BCs
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev//Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::bc::Flags</td>
+        <td></td>
+        <td>flags</td>
+        <td>uint8_t</td>
+        <td>BC flags (e.g. tagging of UPC tracking settings, etc)</td>
+      </tr>
+    </table>
+  </div>
+
+</div>
+
+##  o2-analysis-calo-label-converter
+Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/TableProducer/Converters//caloLabelConverter.cxx" target="_blank">caloLabelConverter.cxx</a>
+<div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::McCaloLabels_001</button>
+  <div class="panel">
+    <div>
+       Table joined to the calo table containing multiple MC indices and the amplitude fraction (version 001)
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev//Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::mccalolabel::McParticleIds</td>
+        <td>GI</td>
+        <td></td>
+        <td>?</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::mccalolabel::AmplitudeA</td>
+        <td></td>
+        <td>amplitudeA</td>
+        <td>std::vector&lt;float&gt;</td>
+        <td>Energy fraction deposited by a particle inside this calo cell.</td>
+      </tr>
+    </table>
+  </div>
+
+</div>
+
+##  o2-analysis-collision-converter
+Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/TableProducer/Converters//collisionConverter.cxx" target="_blank">collisionConverter.cxx</a>
+<div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::Collisions_001</button>
+  <div class="panel">
+    <div>
+       Time and vertex information of collision
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev//Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::Collisions = o2::aod::Collisions_001</li>
+      </ul>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::soa::Index</td>
+        <td>GI</td>
+        <td>globalIndex</td>
+        <td>int64_t</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::&zwnj;collision::BCId</td>
+        <td>I</td>
+        <td>bcId</td>
+        <td>int32</td>
+        <td>Most probably BC to where this collision has occured</td>
+      </tr>
+      <tr>
+        <td>o2::aod::&zwnj;collision::PosX</td>
+        <td></td>
+        <td>posX</td>
+        <td>float</td>
+        <td>X Vertex position in cm</td>
+      </tr>
+      <tr>
+        <td>o2::aod::&zwnj;collision::PosY</td>
+        <td></td>
+        <td>posY</td>
+        <td>float</td>
+        <td>Y Vertex position in cm</td>
+      </tr>
+      <tr>
+        <td>o2::aod::&zwnj;collision::PosZ</td>
+        <td></td>
+        <td>posZ</td>
+        <td>float</td>
+        <td>Z Vertex position in cm</td>
+      </tr>
+      <tr>
+        <td>o2::aod::&zwnj;collision::CovXX</td>
+        <td></td>
+        <td>covXX</td>
+        <td>float</td>
+        <td>Vertex covariance matrix</td>
+      </tr>
+      <tr>
+        <td>o2::aod::&zwnj;collision::CovXY</td>
+        <td></td>
+        <td>covXY</td>
+        <td>float</td>
+        <td>Vertex covariance matrix</td>
+      </tr>
+      <tr>
+        <td>o2::aod::&zwnj;collision::CovYY</td>
+        <td></td>
+        <td>covYY</td>
+        <td>float</td>
+        <td>Vertex covariance matrix</td>
+      </tr>
+      <tr>
+        <td>o2::aod::&zwnj;collision::CovXZ</td>
+        <td></td>
+        <td>covXZ</td>
+        <td>float</td>
+        <td>Vertex covariance matrix</td>
+      </tr>
+      <tr>
+        <td>o2::aod::&zwnj;collision::CovYZ</td>
+        <td></td>
+        <td>covYZ</td>
+        <td>float</td>
+        <td>Vertex covariance matrix</td>
+      </tr>
+      <tr>
+        <td>o2::aod::&zwnj;collision::CovZZ</td>
+        <td></td>
+        <td>covZZ</td>
+        <td>float</td>
+        <td>Vertex covariance matrix</td>
+      </tr>
+      <tr>
+        <td>o2::aod::&zwnj;collision::Flags</td>
+        <td></td>
+        <td>flags</td>
+        <td>uint16_t</td>
+        <td>Run 2: see CollisionFlagsRun2 | Run 3: see Vertex::Flags</td>
+      </tr>
+      <tr>
+        <td>o2::aod::&zwnj;collision::Chi2</td>
+        <td></td>
+        <td>chi2</td>
+        <td>float</td>
+        <td>Chi2 of vertex fit</td>
+      </tr>
+      <tr>
+        <td>o2::aod::&zwnj;collision::NumContrib</td>
+        <td></td>
+        <td>numContrib</td>
+        <td>uint16_t</td>
+        <td>Number of tracks used for the vertex</td>
+      </tr>
+      <tr>
+        <td>o2::aod::&zwnj;collision::CollisionTime</td>
+        <td></td>
+        <td>collisionTime</td>
+        <td>float</td>
+        <td>Collision time in ns relative to BC stored in bc()</td>
+      </tr>
+      <tr>
+        <td>o2::aod::&zwnj;collision::CollisionTimeRes</td>
+        <td></td>
+        <td>collisionTimeRes</td>
+        <td>float</td>
+        <td>Resolution of collision time</td>
+      </tr>
+    </table>
+  </div>
+
+</div>
+
+##  o2-analysis-fdd-converter
+Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/TableProducer/Converters//fddConverter.cxx" target="_blank">fddConverter.cxx</a>
+<div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::FDDs_001</button>
+  <div class="panel">
+    <div>
+       FDD table, version 001
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev//Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::FDDs = o2::aod::FDDs_001</li>
+      </ul>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::soa::Index</td>
+        <td>GI</td>
+        <td>globalIndex</td>
+        <td>int64_t</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::fdd::BCId</td>
+        <td>I</td>
+        <td>bcId</td>
+        <td>int32</td>
+        <td>BC index</td>
+      </tr>
+      <tr>
+        <td>o2::aod::fdd::ChargeA</td>
+        <td></td>
+        <td>chargeA</td>
+        <td>int16_t[8]</td>
+        <td>Amplitude per channel A-side</td>
+      </tr>
+      <tr>
+        <td>o2::aod::fdd::ChargeC</td>
+        <td></td>
+        <td>chargeC</td>
+        <td>int16_t[8]</td>
+        <td>Amplitude per channel C-side</td>
+      </tr>
+      <tr>
+        <td>o2::aod::fdd::TimeA</td>
+        <td></td>
+        <td>timeA</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::fdd::TimeC</td>
+        <td></td>
+        <td>timeC</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::fdd::TriggerMask</td>
+        <td></td>
+        <td>triggerMask</td>
+        <td>uint8_t</td>
+        <td></td>
+      </tr>
+    </table>
+  </div>
+
+</div>
+
+##  o2-analysis-hmpid-converter
+Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/TableProducer/Converters//hmpConverter.cxx" target="_blank">hmpConverter.cxx</a>
+<div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::HMPID_001</button>
+  <div class="panel">
+    <div>
+       HMPID information version 1
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev//Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::HMPIDs = o2::aod::HMPID_001</li>
+      </ul>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::soa::Index</td>
+        <td>GI</td>
+        <td>globalIndex</td>
+        <td>int64_t</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hmpid::TrackId</td>
+        <td>I</td>
+        <td>trackId</td>
+        <td>int32</td>
+        <td>Track index</td>
+      </tr>
+      <tr>
+        <td>o2::aod::hmpid::HMPIDSignal</td>
+        <td></td>
+        <td>hmpidSignal</td>
+        <td>float</td>
+        <td>Signal of the HMPID</td>
+      </tr>
+      <tr>
+        <td>o2::aod::hmpid::HMPIDXTrack</td>
+        <td></td>
+        <td>hmpidXTrack</td>
+        <td>float</td>
+        <td>Extrapolated track point x coordinate</td>
+      </tr>
+      <tr>
+        <td>o2::aod::hmpid::HMPIDYTrack</td>
+        <td></td>
+        <td>hmpidYTrack</td>
+        <td>float</td>
+        <td>Extrapolated track point y coordinate</td>
+      </tr>
+      <tr>
+        <td>o2::aod::hmpid::HMPIDXMip</td>
+        <td></td>
+        <td>hmpidXMip</td>
+        <td>float</td>
+        <td>Matched MIP track point x coordinate</td>
+      </tr>
+      <tr>
+        <td>o2::aod::hmpid::HMPIDYMip</td>
+        <td></td>
+        <td>hmpidYMip</td>
+        <td>float</td>
+        <td>Matched MIP track point y coordinate</td>
+      </tr>
+      <tr>
+        <td>o2::aod::hmpid::HMPIDNPhotons</td>
+        <td></td>
+        <td>hmpidNPhotons</td>
+        <td>int</td>
+        <td>Number of detected photons in HMPID</td>
+      </tr>
+      <tr>
+        <td>o2::aod::hmpid::HMPIDQMip</td>
+        <td></td>
+        <td>hmpidQMip</td>
+        <td>float</td>
+        <td>Matched MIP cluster charge</td>
+      </tr>
+      <tr>
+        <td>o2::aod::hmpid::HMPIDClusSize</td>
+        <td></td>
+        <td>hmpidClusSize</td>
+        <td>int</td>
+        <td>Matched MIP cluster size</td>
+      </tr>
+      <tr>
+        <td>o2::aod::hmpid::HMPIDMom</td>
+        <td></td>
+        <td>hmpidMom</td>
+        <td>float</td>
+        <td>Track momentum at the HMPID</td>
+      </tr>
+      <tr>
+        <td>o2::aod::hmpid::HMPIDPhotsCharge</td>
+        <td></td>
+        <td>hmpidPhotsCharge</td>
+        <td>float[10]</td>
+        <td>Photon cluster charge</td>
+      </tr>
+    </table>
+  </div>
+
+</div>
+
+##  o2-analysis-mccollision-converter
+Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/TableProducer/Converters//mcCollisionConverter.cxx" target="_blank">mcCollisionConverter.cxx</a>
+<div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::McCollisions_001</button>
+  <div class="panel">
+    <div>
+       MC collision table with event plane
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev//Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::McCollisions = o2::aod::McCollisions_001</li>
+      </ul>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::soa::Index</td>
+        <td>GI</td>
+        <td>globalIndex</td>
+        <td>int64_t</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::mccollision::BCId</td>
+        <td>I</td>
+        <td>bcId</td>
+        <td>int32</td>
+        <td>BC index</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mccollision::GeneratorsID</td>
+        <td></td>
+        <td>generatorsID</td>
+        <td>short</td>
+        <td>disentangled generator IDs should be accessed using getGeneratorId, getSubGeneratorId and getSourceId</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mccollision::PosX</td>
+        <td></td>
+        <td>posX</td>
+        <td>float</td>
+        <td>X vertex position in cm</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mccollision::PosY</td>
+        <td></td>
+        <td>posY</td>
+        <td>float</td>
+        <td>Y vertex position in cm</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mccollision::PosZ</td>
+        <td></td>
+        <td>posZ</td>
+        <td>float</td>
+        <td>Z vertex position in cm</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mccollision::T</td>
+        <td></td>
+        <td>t</td>
+        <td>float</td>
+        <td>Collision time relative to given bc in ns</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mccollision::Weight</td>
+        <td></td>
+        <td>weight</td>
+        <td>float</td>
+        <td>MC weight</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mccollision::ImpactParameter</td>
+        <td></td>
+        <td>impactParameter</td>
+        <td>float</td>
+        <td>Impact parameter for A-A</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mccollision::EventPlaneAngle</td>
+        <td></td>
+        <td>eventPlaneAngle</td>
+        <td>float</td>
+        <td>Event plane angle for A-A</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mccollision::GetGeneratorId</td>
+        <td>D</td>
+        <td>getGeneratorId</td>
+        <td>int</td>
+        <td>The global generator ID which might have been assigned by the user</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mccollision::GetSubGeneratorId</td>
+        <td>D</td>
+        <td>getSubGeneratorId</td>
+        <td>int</td>
+        <td>A specific sub-generator ID in case the generator has some sub-generator logic</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mccollision::GetSourceId</td>
+        <td>D</td>
+        <td>getSourceId</td>
+        <td>int</td>
+        <td>The source ID to differentiate between signals and background in an embedding simulation</td>
+      </tr>
+    </table>
+  </div>
+
+</div>
+
+##  o2-analysis-mc-converter
+Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/TableProducer/Converters//mcConverter.cxx" target="_blank">mcConverter.cxx</a>
+<div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::StoredMcParticles_001</button>
+  <div class="panel">
+    <div>
+       MC particle table, version 001
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev//Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::StoredMcParticles = o2::aod::StoredMcParticles_001</li>
+      </ul>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::soa::Index</td>
+        <td>GI</td>
+        <td>globalIndex</td>
+        <td>int64_t</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::McCollisionId</td>
+        <td>I</td>
+        <td>mcCollisionId</td>
+        <td>int32</td>
+        <td>MC collision of this particle</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::PdgCode</td>
+        <td></td>
+        <td>pdgCode</td>
+        <td>int</td>
+        <td>PDG code</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::StatusCode</td>
+        <td></td>
+        <td>statusCode</td>
+        <td>int</td>
+        <td>Generators status code or physics process. Do not use directly. Use dynamic columns getGenStatusCode() or getProcess()</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::Flags</td>
+        <td></td>
+        <td>flags</td>
+        <td>uint8_t</td>
+        <td>ALICE specific flags, see MCParticleFlags. Do not use directly. Use the dynamic columns, e.g. producedByGenerator()</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::MothersIds</td>
+        <td>SAI</td>
+        <td>mothersIds</td>
+        <td></td>
+        <td>Mother tracks (possible empty) array. Iterate over mcParticle.mothers_as<aod::McParticles>())</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::DaughtersIdSlice</td>
+        <td>SSLI</td>
+        <td>daughtersIds</td>
+        <td>int32_t</td>
+        <td>Daughter tracks (possibly empty) slice. Check for non-zero with mcParticle.has_daughters(). Iterate over mcParticle.daughters_as<aod::McParticles>())</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::Weight</td>
+        <td></td>
+        <td>weight</td>
+        <td>float</td>
+        <td>MC weight</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::Px</td>
+        <td></td>
+        <td>px</td>
+        <td>float</td>
+        <td>Momentum in x in GeV/c</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::Py</td>
+        <td></td>
+        <td>py</td>
+        <td>float</td>
+        <td>Momentum in y in GeV/c</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::Pz</td>
+        <td></td>
+        <td>pz</td>
+        <td>float</td>
+        <td>Momentum in z in GeV/c</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::E</td>
+        <td></td>
+        <td>e</td>
+        <td>float</td>
+        <td>Energy</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::Vx</td>
+        <td></td>
+        <td>vx</td>
+        <td>float</td>
+        <td>X production vertex in cm</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::Vy</td>
+        <td></td>
+        <td>vy</td>
+        <td>float</td>
+        <td>Y production vertex in cm</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::Vz</td>
+        <td></td>
+        <td>vz</td>
+        <td>float</td>
+        <td>Z production vertex in cm</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::Vt</td>
+        <td></td>
+        <td>vt</td>
+        <td>float</td>
+        <td>Production time</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::PVector</td>
+        <td>D</td>
+        <td>pVector</td>
+        <td>std::array&lt;float,3&gt;</td>
+        <td>Momentum vector in x,y,z-directions in GeV/c</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::ProducedByGenerator</td>
+        <td>D</td>
+        <td>producedByGenerator</td>
+        <td>bool</td>
+        <td>True if particle produced by the generator (==TMCProcess::kPrimary); False if by the transport code</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::FromBackgroundEvent</td>
+        <td>D</td>
+        <td>fromBackgroundEvent</td>
+        <td>bool</td>
+        <td>Particle from background event</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::GetGenStatusCode</td>
+        <td>D</td>
+        <td>getGenStatusCode</td>
+        <td>int</td>
+        <td>The native status code put by the generator, or -1 if a particle produced during transport</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::GetHepMCStatusCode</td>
+        <td>D</td>
+        <td>getHepMCStatusCode</td>
+        <td>int</td>
+        <td>The HepMC status code put by the generator, or -1 if a particle produced during transport</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::GetProcess</td>
+        <td>D</td>
+        <td>getProcess</td>
+        <td>int</td>
+        <td>The VMC physics code (as int) that generated this particle (see header TMCProcess.h in ROOT)</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::IsPhysicalPrimary</td>
+        <td>D</td>
+        <td>isPhysicalPrimary</td>
+        <td>bool</td>
+        <td>True if particle is considered a physical primary according to the ALICE definition</td>
+      </tr>
+    </table>
+  </div>
+
+</div>
+
+##  o2-analysis-mft-tracks-converter
+Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/TableProducer/Converters//mftTracksConverter.cxx" target="_blank">mftTracksConverter.cxx</a>
+<div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::StoredMFTTracks_001</button>
+  <div class="panel">
+    <div>
+       On disk version of MFTTracks, version 1
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev//Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::StoredMFTTracks = o2::aod::StoredMFTTracks_001</li>
+      </ul>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::soa::Index</td>
+        <td>GI</td>
+        <td>globalIndex</td>
+        <td>int64_t</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::fwdtrack::CollisionId</td>
+        <td>I</td>
+        <td>collisionId</td>
+        <td>int32</td>
+        <td>Pointer into Collisions</td>
+      </tr>
+      <tr>
+        <td>o2::aod::fwdtrack::X</td>
+        <td></td>
+        <td>x</td>
+        <td>float</td>
+        <td>TrackParFwd parameter x</td>
+      </tr>
+      <tr>
+        <td>o2::aod::fwdtrack::Y</td>
+        <td></td>
+        <td>y</td>
+        <td>float</td>
+        <td>TrackParFwd parameter y</td>
+      </tr>
+      <tr>
+        <td>o2::aod::fwdtrack::Z</td>
+        <td></td>
+        <td>z</td>
+        <td>float</td>
+        <td>TrackParFwd propagation parameter z</td>
+      </tr>
+      <tr>
+        <td>o2::aod::fwdtrack::Phi</td>
+        <td></td>
+        <td>phi</td>
+        <td>float</td>
+        <td>TrackParFwd parameter phi; (i.e. pt pointing direction)</td>
+      </tr>
+      <tr>
+        <td>o2::aod::fwdtrack::Tgl</td>
+        <td></td>
+        <td>tgl</td>
+        <td>float</td>
+        <td>TrackParFwd parameter tan(\lamba); (\lambda = 90 - \theta_{polar})</td>
+      </tr>
+      <tr>
+        <td>o2::aod::fwdtrack::Signed1Pt</td>
+        <td></td>
+        <td>signed1Pt</td>
+        <td>float</td>
+        <td>TrackParFwd parameter: charged inverse transverse momentum; (q/pt)</td>
+      </tr>
+      <tr>
+        <td>o2::aod::fwdtrack::v001::NClusters</td>
+        <td>D</td>
+        <td>nClusters</td>
+        <td>int8_t</td>
+        <td>Number of MFT clusters</td>
+      </tr>
+      <tr>
+        <td>o2::aod::fwdtrack::MFTClusterSizesAndTrackFlags</td>
+        <td></td>
+        <td>mftClusterSizesAndTrackFlags</td>
+        <td>uint64_t</td>
+        <td>Cluster sizes per track, stored per layer (each 6 bits). Remaining 4 bits for MFT flags</td>
+      </tr>
+      <tr>
+        <td>o2::aod::fwdtrack::IsCA</td>
+        <td>D</td>
+        <td>isCA</td>
+        <td>bool</td>
+        <td>Returns true if used track-finding algorithm was Cellular Automaton</td>
+      </tr>
+      <tr>
+        <td>o2::aod::fwdtrack::Px</td>
+        <td>D</td>
+        <td>px</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::fwdtrack::Py</td>
+        <td>D</td>
+        <td>py</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::fwdtrack::Pz</td>
+        <td>D</td>
+        <td>pz</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::fwdtrack::Sign</td>
+        <td>D</td>
+        <td>sign</td>
+        <td>short</td>
+        <td>Sign of the track eletric charge</td>
+      </tr>
+      <tr>
+        <td>o2::aod::fwdtrack::Chi2</td>
+        <td></td>
+        <td>chi2</td>
+        <td>float</td>
+        <td>Track chi^2</td>
+      </tr>
+      <tr>
+        <td>o2::aod::fwdtrack::TrackTime</td>
+        <td></td>
+        <td>trackTime</td>
+        <td>float</td>
+        <td>Estimated time of the track in ns wrt collision().bc() or ambiguoustrack.bcSlice()[0]</td>
+      </tr>
+      <tr>
+        <td>o2::aod::fwdtrack::TrackTimeRes</td>
+        <td></td>
+        <td>trackTimeRes</td>
+        <td>float</td>
+        <td>Resolution of the track time in ns</td>
+      </tr>
+    </table>
+  </div>
+
+</div>
+
+##  o2-analysis-tracks-extra-converter
+Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/TableProducer/Converters//tracksExtraConverter.cxx" target="_blank">tracksExtraConverter.cxx</a>
+<div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::StoredTracksExtra_001</button>
+  <div class="panel">
+    <div>
+
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev//Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::StoredTracksExtra = o2::aod::StoredTracksExtra_001</li>
+      </ul>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::track::TPCInnerParam</td>
+        <td></td>
+        <td>tpcInnerParam</td>
+        <td>float</td>
+        <td>Momentum at inner wall of the TPC</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::Flags</td>
+        <td></td>
+        <td>flags</td>
+        <td>uint32_t</td>
+        <td>Track flags. Run 2: see TrackFlagsRun2Enum | Run 3: see TrackFlags</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::ITSClusterSizes</td>
+        <td></td>
+        <td>itsClusterSizes</td>
+        <td>uint32_t</td>
+        <td>Clusters sizes, four bits per a layer, starting from the innermost</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::TPCNClsFindable</td>
+        <td></td>
+        <td>tpcNClsFindable</td>
+        <td>uint8_t</td>
+        <td>Findable TPC clusters for this track geometry</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::TPCNClsFindableMinusFound</td>
+        <td></td>
+        <td>tpcNClsFindableMinusFound</td>
+        <td>int8_t</td>
+        <td>TPC Clusters: Findable - Found</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::TPCNClsFindableMinusCrossedRows</td>
+        <td></td>
+        <td>tpcNClsFindableMinusCrossedRows</td>
+        <td>int8_t</td>
+        <td>TPC Clusters: Findable - crossed rows</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::TPCNClsShared</td>
+        <td></td>
+        <td>tpcNClsShared</td>
+        <td>uint8_t</td>
+        <td>Number of shared TPC clusters</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::v001::extensions::TPCDeltaTFwd</td>
+        <td>D</td>
+        <td>tpcDeltaTFwd</td>
+        <td>float</td>
+        <td>Delta Forward of track time in TPC time bis</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::v001::extensions::TPCDeltaTBwd</td>
+        <td>D</td>
+        <td>tpcDeltaTBwd</td>
+        <td>float</td>
+        <td>Delta Backward of track time in TPC time bis</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::TRDPattern</td>
+        <td></td>
+        <td>trdPattern</td>
+        <td>uint8_t</td>
+        <td>Contributor to the track on TRD layer in bits 0-5, starting from the innermost, bit 6 indicates a potentially split tracklet, bit 7 if the track crossed a padrow</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::ITSChi2NCl</td>
+        <td></td>
+        <td>itsChi2NCl</td>
+        <td>float</td>
+        <td>Chi2 / cluster for the ITS track segment</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::TPCChi2NCl</td>
+        <td></td>
+        <td>tpcChi2NCl</td>
+        <td>float</td>
+        <td>Chi2 / cluster for the TPC track segment</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::TRDChi2</td>
+        <td></td>
+        <td>trdChi2</td>
+        <td>float</td>
+        <td>Chi2 for the TRD track segment</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::TOFChi2</td>
+        <td></td>
+        <td>tofChi2</td>
+        <td>float</td>
+        <td>Chi2 for the TOF track segment</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::TPCSignal</td>
+        <td></td>
+        <td>tpcSignal</td>
+        <td>float</td>
+        <td>dE/dx signal in the TPC</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::TRDSignal</td>
+        <td></td>
+        <td>trdSignal</td>
+        <td>float</td>
+        <td>PID signal in the TRD</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::Length</td>
+        <td></td>
+        <td>length</td>
+        <td>float</td>
+        <td>Track length</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::TOFExpMom</td>
+        <td></td>
+        <td>tofExpMom</td>
+        <td>float</td>
+        <td>TOF expected momentum obtained in tracking, used to compute the expected times</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::PIDForTracking</td>
+        <td>D</td>
+        <td>pidForTracking</td>
+        <td>uint32_t</td>
+        <td>PID hypothesis used during tracking. See the constants in the class PID in PID.h</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::IsPVContributor</td>
+        <td>D</td>
+        <td>isPVContributor</td>
+        <td>bool</td>
+        <td>Run 3: Has this track contributed to the collision vertex fit</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::HasITS</td>
+        <td>D</td>
+        <td>hasITS</td>
+        <td>bool</td>
+        <td>Flag to check if track has a ITS match</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::HasTPC</td>
+        <td>D</td>
+        <td>hasTPC</td>
+        <td>bool</td>
+        <td>Flag to check if track has a TPC match</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::HasTRD</td>
+        <td>D</td>
+        <td>hasTRD</td>
+        <td>bool</td>
+        <td>Flag to check if track has a TRD match</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::HasTOF</td>
+        <td>D</td>
+        <td>hasTOF</td>
+        <td>bool</td>
+        <td>Flag to check if track has a TOF measurement</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::TPCNClsFound</td>
+        <td>D</td>
+        <td>tpcNClsFound</td>
+        <td>int16_t</td>
+        <td>Number of found TPC clusters</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::TPCNClsCrossedRows</td>
+        <td>D</td>
+        <td>tpcNClsCrossedRows</td>
+        <td>int16_t</td>
+        <td>Number of crossed TPC Rows</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::v001::ITSClusterMap</td>
+        <td>D</td>
+        <td>itsClusterMap</td>
+        <td>uint8_t</td>
+        <td>ITS cluster map, one bit per a layer, starting from the innermost</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::v001::ITSNCls</td>
+        <td>D</td>
+        <td>itsNCls</td>
+        <td>uint8_t</td>
+        <td>Number of ITS clusters</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::v001::ITSNClsInnerBarrel</td>
+        <td>D</td>
+        <td>itsNClsInnerBarrel</td>
+        <td>uint8_t</td>
+        <td>Number of ITS clusters in the Inner Barrel</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::v001::ITSClsSizeInLayer</td>
+        <td>D</td>
+        <td>itsClsSizeInLayer</td>
+        <td>uint8_t</td>
+        <td>Size of the ITS cluster in a given layer</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::v001::IsITSAfterburner</td>
+        <td>D</td>
+        <td>isITSAfterburner</td>
+        <td>bool</td>
+        <td>If the track used the afterburner in the ITS</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::TOFExpTime</td>
+        <td>D</td>
+        <td>tofExpTime</td>
+        <td>float</td>
+        <td>Expected time for the track to reach the TOF</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::TOFExpTimePi</td>
+        <td>D</td>
+        <td>tofExpTimePi</td>
+        <td>float</td>
+        <td>Expected time for the track to reach the TOF under the pion hypothesis</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::TOFExpTimeKa</td>
+        <td>D</td>
+        <td>tofExpTimeKa</td>
+        <td>float</td>
+        <td>Expected time for the track to reach the TOF under the kaon hypothesis</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::TOFExpTimePr</td>
+        <td>D</td>
+        <td>tofExpTimePr</td>
+        <td>float</td>
+        <td>Expected time for the track to reach the TOF under the proton hypothesis</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::TPCCrossedRowsOverFindableCls</td>
+        <td>D</td>
+        <td>tpcCrossedRowsOverFindableCls</td>
+        <td>float</td>
+        <td>Ratio crossed rows over findable clusters</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::TPCFoundOverFindableCls</td>
+        <td>D</td>
+        <td>tpcFoundOverFindableCls</td>
+        <td>float</td>
+        <td>Ratio of found over findable clusters</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::TPCFractionSharedCls</td>
+        <td>D</td>
+        <td>tpcFractionSharedCls</td>
+        <td>float</td>
+        <td>Fraction of shared TPC clusters</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::TrackEtaEMCAL</td>
+        <td></td>
+        <td>trackEtaEmcal</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::TrackPhiEMCAL</td>
+        <td></td>
+        <td>trackPhiEmcal</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::TrackTime</td>
+        <td></td>
+        <td>trackTime</td>
+        <td>float</td>
+        <td>Estimated time of the track in ns wrt collision().bc() or ambiguoustrack.bcSlice()[0]</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::TrackTimeRes</td>
+        <td></td>
+        <td>trackTimeRes</td>
+        <td>float</td>
+        <td>Resolution of the track time in ns (see TrackFlags::TrackTimeResIsRange)</td>
+      </tr>
+    </table>
+  </div>
+
+</div>
+
+##  o2-analysis-v0converter
+Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/TableProducer/Converters//v0converter.cxx" target="_blank">v0converter.cxx</a>
+<div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::V0s_002</button>
+  <div class="panel">
+    <div>
+       Run 3 V0 table (version 002)
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev//Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::V0s = o2::aod::V0s_002</li>
+      </ul>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::soa::Index</td>
+        <td>GI</td>
+        <td>globalIndex</td>
+        <td>int64_t</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::v0::CollisionId</td>
+        <td>I</td>
+        <td>collisionId</td>
+        <td>int32</td>
+        <td>Collision index</td>
+      </tr>
+      <tr>
+        <td>o2::aod::v0::PosTrackId</td>
+        <td>I</td>
+        <td>posTrackId</td>
+        <td>int</td>
+        <td>Positive track</td>
+      </tr>
+      <tr>
+        <td>o2::aod::v0::NegTrackId</td>
+        <td>I</td>
+        <td>negTrackId</td>
+        <td>int</td>
+        <td>Negative track</td>
+      </tr>
+      <tr>
+        <td>o2::aod::v0::V0Type</td>
+        <td></td>
+        <td>v0Type</td>
+        <td>uint8_t</td>
+        <td>custom bitmap for various selections (see below)</td>
+      </tr>
+      <tr>
+        <td>o2::aod::v0::IsStandardV0</td>
+        <td>D</td>
+        <td>isStandardV0</td>
+        <td>bool</td>
+        <td>is standard V0</td>
+      </tr>
+      <tr>
+        <td>o2::aod::v0::IsPhotonV0</td>
+        <td>D</td>
+        <td>isPhotonV0</td>
+        <td>bool</td>
+        <td>is TPC-only V0 for which the photon-mass-hypothesis was good</td>
+      </tr>
+      <tr>
+        <td>o2::aod::v0::IsCollinearV0</td>
+        <td>D</td>
+        <td>isCollinearV0</td>
+        <td>bool</td>
+        <td>is V0 for which the photon-mass-hypothesis was good and was fitted collinearly</td>
+      </tr>
+    </table>
+  </div>
+
+</div>
+
+##  o2-analysis-zdc-converter
+Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/TableProducer/Converters//zdcConverter.cxx" target="_blank">zdcConverter.cxx</a>
+<div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::Zdcs_001</button>
+  <div class="panel">
+    <div>
+       ZDC information, version 1, std::vector format
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev//Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::Zdcs = o2::aod::Zdcs_001</li>
+      </ul>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::soa::Index</td>
+        <td>GI</td>
+        <td>globalIndex</td>
+        <td>int64_t</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::zdc::BCId</td>
+        <td>I</td>
+        <td>bcId</td>
+        <td>int32</td>
+        <td>BC index, to be used by both legacy and new table</td>
+      </tr>
+      <tr>
+        <td>o2::aod::zdc::Energy</td>
+        <td></td>
+        <td>energy</td>
+        <td>std::vector&lt;float&gt;</td>
+        <td>Energy of non-zero channels. The channel IDs are given in ChannelE (at the same index)</td>
+      </tr>
+      <tr>
+        <td>o2::aod::zdc::ChannelE</td>
+        <td></td>
+        <td>channelE</td>
+        <td>std::vector&lt;uint8_t&gt;</td>
+        <td>Channel IDs which have reconstructed energy. There are at maximum 26 channels.</td>
+      </tr>
+      <tr>
+        <td>o2::aod::zdc::Amplitude</td>
+        <td></td>
+        <td>amplitude</td>
+        <td>std::vector&lt;float&gt;</td>
+        <td>Amplitudes of non-zero channels. The channel IDs are given in ChannelT (at the same index)</td>
+      </tr>
+      <tr>
+        <td>o2::aod::zdc::Time</td>
+        <td></td>
+        <td>time</td>
+        <td>std::vector&lt;float&gt;</td>
+        <td>Times of non-zero channels. The channel IDs are given in ChannelT (at the same index)</td>
+      </tr>
+      <tr>
+        <td>o2::aod::zdc::ChannelT</td>
+        <td></td>
+        <td>channelT</td>
+        <td>std::vector&lt;uint8_t&gt;</td>
+        <td>Channel IDs which had non-zero amplitudes. There are at maximum 26 channels.</td>
+      </tr>
+      <tr>
+        <td>o2::aod::zdc::DyEnergyZEM1</td>
+        <td>D</td>
+        <td>energyZEM1</td>
+        <td>float</td>
+        <td>return ZEM1 energy</td>
+      </tr>
+      <tr>
+        <td>o2::aod::zdc::DyEnergyZEM2</td>
+        <td>D</td>
+        <td>energyZEM2</td>
+        <td>float</td>
+        <td>return ZEM2 energy</td>
+      </tr>
+      <tr>
+        <td>o2::aod::zdc::DyEnergyCommonZNA</td>
+        <td>D</td>
+        <td>energyCommonZNA</td>
+        <td>float</td>
+        <td>return common ZNA energy</td>
+      </tr>
+      <tr>
+        <td>o2::aod::zdc::DyEnergyCommonZNC</td>
+        <td>D</td>
+        <td>energyCommonZNC</td>
+        <td>float</td>
+        <td>return common ZNC energy</td>
+      </tr>
+      <tr>
+        <td>o2::aod::zdc::DyEnergyCommonZPA</td>
+        <td>D</td>
+        <td>energyCommonZPA</td>
+        <td>float</td>
+        <td>return common ZPA energy</td>
+      </tr>
+      <tr>
+        <td>o2::aod::zdc::DyEnergyCommonZPC</td>
+        <td>D</td>
+        <td>energyCommonZPC</td>
+        <td>float</td>
+        <td>return common ZPC energy</td>
+      </tr>
+      <tr>
+        <td>o2::aod::zdc::DyEnergySectorZNA</td>
+        <td>D</td>
+        <td>energySectorZNA</td>
+        <td>std::array&lt;float,4&gt;</td>
+        <td>return sector ZNA energy (array of 4 floats)</td>
+      </tr>
+      <tr>
+        <td>o2::aod::zdc::DyEnergySectorZNC</td>
+        <td>D</td>
+        <td>energySectorZNC</td>
+        <td>std::array&lt;float,4&gt;</td>
+        <td>return sector ZNC energy (array of 4 floats)</td>
+      </tr>
+      <tr>
+        <td>o2::aod::zdc::DyEnergySectorZPA</td>
+        <td>D</td>
+        <td>energySectorZPA</td>
+        <td>std::array&lt;float,4&gt;</td>
+        <td>return sector ZPA energy (array of 4 floats)</td>
+      </tr>
+      <tr>
+        <td>o2::aod::zdc::DyEnergySectorZPC</td>
+        <td>D</td>
+        <td>energySectorZPC</td>
+        <td>std::array&lt;float,4&gt;</td>
+        <td>return sector ZPC energy (array of 4 floats)</td>
+      </tr>
+      <tr>
+        <td>o2::aod::zdc::DyTimeZEM1</td>
+        <td>D</td>
+        <td>timeZEM1</td>
+        <td>float</td>
+        <td>return ZEM1 time information</td>
+      </tr>
+      <tr>
+        <td>o2::aod::zdc::DyTimeZEM2</td>
+        <td>D</td>
+        <td>timeZEM2</td>
+        <td>float</td>
+        <td>return ZEM2 time information</td>
+      </tr>
+      <tr>
+        <td>o2::aod::zdc::DyTimeZNA</td>
+        <td>D</td>
+        <td>timeZNA</td>
+        <td>float</td>
+        <td>return ZNA time information</td>
+      </tr>
+      <tr>
+        <td>o2::aod::zdc::DyTimeZNC</td>
+        <td>D</td>
+        <td>timeZNC</td>
+        <td>float</td>
+        <td>return ZNC time information</td>
+      </tr>
+      <tr>
+        <td>o2::aod::zdc::DyTimeZPA</td>
+        <td>D</td>
+        <td>timeZPA</td>
+        <td>float</td>
+        <td>return ZPA time information</td>
+      </tr>
+      <tr>
+        <td>o2::aod::zdc::DyTimeZPC</td>
+        <td>D</td>
+        <td>timeZPC</td>
+        <td>float</td>
+        <td>return ZPC time information</td>
+      </tr>
+      <tr>
+        <td>o2::aod::zdc::DyAmplitudeZEM1</td>
+        <td>D</td>
+        <td>amplitudeZEM1</td>
+        <td>float</td>
+        <td>return ZEM1 amplitude</td>
+      </tr>
+      <tr>
+        <td>o2::aod::zdc::DyAmplitudeZEM2</td>
+        <td>D</td>
+        <td>amplitudeZEM2</td>
+        <td>float</td>
+        <td>return ZEM2 amplitude</td>
+      </tr>
+      <tr>
+        <td>o2::aod::zdc::DyAmplitudeZNA</td>
+        <td>D</td>
+        <td>amplitudeZNA</td>
+        <td>float</td>
+        <td>return ZNA amplitude</td>
+      </tr>
+      <tr>
+        <td>o2::aod::zdc::DyAmplitudeZNC</td>
+        <td>D</td>
+        <td>amplitudeZNC</td>
+        <td>float</td>
+        <td>return ZNC amplitude</td>
+      </tr>
+      <tr>
+        <td>o2::aod::zdc::DyAmplitudeZPA</td>
+        <td>D</td>
+        <td>amplitudeZPA</td>
+        <td>float</td>
+        <td>return ZPA amplitude</td>
+      </tr>
+      <tr>
+        <td>o2::aod::zdc::DyAmplitudeZPC</td>
+        <td>D</td>
+        <td>amplitudeZPC</td>
+        <td>float</td>
+        <td>return ZPC amplitude</td>
       </tr>
     </table>
   </div>
