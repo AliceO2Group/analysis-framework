@@ -341,7 +341,7 @@ Event selection task supports several configurables:
 * _isMC_ allows to suppress several checks for Run 2 MC, see [Event selection decisions](#event-selection-decisions):
 
   ``` c++
-  Configurable<bool> isMC{"isMC", 0, "0 - data, 1 - MC"};
+  Configurable<int> isMC{"isMC", 0, "-1 - autoset, 0 - data, 1 - MC"};
   ```
 
   Note that one has to enable _isRun2MC_ flag in the timestamp task in this case:
