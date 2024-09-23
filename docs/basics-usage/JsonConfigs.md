@@ -20,7 +20,7 @@ that one wishes to execute.
         "start-value-enumeration": "0",
         "end-value-enumeration": "-1",
         "step-value-enumeration": "1",
-        "aod-file": "@inputs-sim.txt"
+        "aod-file-private": "@inputs-sim.txt"
     },
     "internal-dpl-aod-spawner": "",
     "internal-dpl-aod-index-builder": "",
