@@ -63,7 +63,7 @@ The table MinMaxPt is produced in task ProduceMinMaxPt but not consumed, means t
 Writing out dangling tables is easy. For this use
 
 ```csh
-o2-analysistutorial-tablio-write --aod-file AO2D.root --aod-writer-keep dangling
+o2-analysistutorial-tableio-write --aod-file AO2D.root --aod-writer-keep dangling
 ```
 
 As a result the file AnalysisResults_trees.root is created with directories DF_x, one directory for each processed data frame. And within the directories a tree O2minpaxpt with branches fMinpt and fMaxpt is created which holds the values of the dangling MinMaxPt table. The tree and column names are deduced from the table and column names.
@@ -77,7 +77,7 @@ The --aod-writer-keep argument is however more powerful than that and allows to 
 With the following command the non-dangling table MinMaxEta will be saved to file TemporaryResults_trees.root into tree etarange. In this case both columns of table MinMaxEta are listed in the argument value and hence two branches are created.
 
 ```csh
-o2-analysistutorial-tablio-write --aod-file AO2D.root --aod-writer-keep AOD/MINMAXETA/0:etarange:fMineta/fMaxeta:TemporaryResults_trees
+o2-analysistutorial-tableio-write --aod-file AO2D.root --aod-writer-keep AOD/MINMAXETA/0:etarange:fMineta/fMaxeta:TemporaryResults_trees
 ```
 
 The exact syntax of the argument string is described
