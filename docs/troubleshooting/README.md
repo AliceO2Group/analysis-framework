@@ -47,6 +47,9 @@ You can inspect a failing [AliHyperloop test](../hyperloop/userdocumentation.md#
 
 See the [Support](../gettingstarted/support.md) section for the list of Mattermost channels where you can ask for help.
 
+When asking for help with compilation or with running a local analysis, it may be useful to provide basic information about your O2Physics setup.
+You can generate it by running the [`summarise_o2p_setup.sh`](summarise_o2p_setup.sh) bash script in your `alice` directory.
+
 When posting on Mattermost:
 
 - Do not paste the entire content of files or any long blocks of log lines or code directly in the message. If needed, attach the file.
