@@ -11,12 +11,21 @@ else
 fi
 
 for repo in alidist O2 O2Physics; do
-  [[ -d "${repo}" ]] || { echo "Directory ${repo} not found."; continue; }
+  [[ -d "${repo}" ]] || { echo "Directory ${repo} not found in the current directory."; continue; }
   echo "Last commit of ${repo}: $(cd "${repo}" && git log -n 1 --pretty="format:%ci %h")"
 done
 
-for pkg in O2 O2Physics; do
-  log="$ALIBUILD_WORK_DIR/BUILD/${pkg}-latest/log"
-  [[ -f "${log}" ]] || { echo "Log file ${log} not found."; continue; }
-  echo "Last build of ${pkg}: $(stat -c "%y" "${log}")"
-done
+cmdStat=""
+if [[ "$OSTYPE" == "linux-gnu"* ]]; then
+  cmdStat="stat -c %y"
+elif [[ "$OSTYPE" == "darwin"* ]]; then
+  cmdStat="stat -f %Sm"
+fi
+
+if [[ -n "$cmdStat" ]]; then
+  for pkg in O2 O2Physics; do
+    log="$ALIBUILD_WORK_DIR/BUILD/${pkg}-latest/log"
+    [[ -f "${log}" ]] || { echo "Log file ${log} not found."; continue; }
+    echo "Last build of ${pkg}: $($cmdStat "${log}")"
+  done
+fi
