@@ -159,7 +159,7 @@ Verify whether:
 How to check the timestamp?
 ```
 
-### Alien connection failed
+### AliEn connection failed
 
 Error message:
 
@@ -167,5 +167,6 @@ Error message:
 Alien Token Check failed - Please get an alien token before running with https CCDB endpoint, or alice-ccdb.cern.ch!
 ```
 
-- Create an Alien token by executing the `alien-token-init` command inside the O2Physics environment.
-- Verify that the connection can be established by executing `alien.py`. You should be greeted with `Welcome to the ALICE GRID`. Exit with `exit`.
+- Create the AliEn token by executing the `alien.py` command inside the O2Physics environment.
+- You should be greeted with `Welcome to the ALICE GRID`.
+- Exit with `exit`.
