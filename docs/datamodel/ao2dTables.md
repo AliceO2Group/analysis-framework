@@ -1486,11 +1486,18 @@ For better overview the tables are grouped into the following categories: \| [Ge
         <td>Number of crossed TPC Rows</td>
       </tr>
       <tr>
-        <td>o2::aod::track::TOFExpTime</td>
+        <td>o2::aod::track::TOFExpTimeEl</td>
         <td>D</td>
-        <td>tofExpTime</td>
+        <td>tofExpTimeEl</td>
         <td>float</td>
-        <td>Expected time for the track to reach the TOF</td>
+        <td>Expected time for the track to reach the TOF under the electron hypothesis</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::TOFExpTimeMu</td>
+        <td>D</td>
+        <td>tofExpTimeMu</td>
+        <td>float</td>
+        <td>Expected time for the track to reach the TOF under the muon hypothesis</td>
       </tr>
       <tr>
         <td>o2::aod::track::TOFExpTimePi</td>
@@ -1512,6 +1519,34 @@ For better overview the tables are grouped into the following categories: \| [Ge
         <td>tofExpTimePr</td>
         <td>float</td>
         <td>Expected time for the track to reach the TOF under the proton hypothesis</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::TOFExpTimeDe</td>
+        <td>D</td>
+        <td>tofExpTimeDe</td>
+        <td>float</td>
+        <td>Expected time for the track to reach the TOF under the deuteron hypothesis</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::TOFExpTimeTr</td>
+        <td>D</td>
+        <td>tofExpTimeTr</td>
+        <td>float</td>
+        <td>Expected time for the track to reach the TOF under the triton hypothesis</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::TOFExpTimeHe</td>
+        <td>D</td>
+        <td>tofExpTimeHe</td>
+        <td>float</td>
+        <td>Expected time for the track to reach the TOF under the helium3 hypothesis</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::TOFExpTimeAl</td>
+        <td>D</td>
+        <td>tofExpTimeAl</td>
+        <td>float</td>
+        <td>Expected time for the track to reach the TOF under the helium4 hypothesis</td>
       </tr>
       <tr>
         <td>o2::aod::track::ITSNCls</td>
@@ -1831,11 +1866,18 @@ For better overview the tables are grouped into the following categories: \| [Ge
         <td>If the track used the afterburner in the ITS</td>
       </tr>
       <tr>
-        <td>o2::aod::track::TOFExpTime</td>
+        <td>o2::aod::track::TOFExpTimeEl</td>
         <td>D</td>
-        <td>tofExpTime</td>
+        <td>tofExpTimeEl</td>
         <td>float</td>
-        <td>Expected time for the track to reach the TOF</td>
+        <td>Expected time for the track to reach the TOF under the electron hypothesis</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::TOFExpTimeMu</td>
+        <td>D</td>
+        <td>tofExpTimeMu</td>
+        <td>float</td>
+        <td>Expected time for the track to reach the TOF under the muon hypothesis</td>
       </tr>
       <tr>
         <td>o2::aod::track::TOFExpTimePi</td>
@@ -1857,6 +1899,34 @@ For better overview the tables are grouped into the following categories: \| [Ge
         <td>tofExpTimePr</td>
         <td>float</td>
         <td>Expected time for the track to reach the TOF under the proton hypothesis</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::TOFExpTimeDe</td>
+        <td>D</td>
+        <td>tofExpTimeDe</td>
+        <td>float</td>
+        <td>Expected time for the track to reach the TOF under the deuteron hypothesis</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::TOFExpTimeTr</td>
+        <td>D</td>
+        <td>tofExpTimeTr</td>
+        <td>float</td>
+        <td>Expected time for the track to reach the TOF under the triton hypothesis</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::TOFExpTimeHe</td>
+        <td>D</td>
+        <td>tofExpTimeHe</td>
+        <td>float</td>
+        <td>Expected time for the track to reach the TOF under the helium3 hypothesis</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::TOFExpTimeAl</td>
+        <td>D</td>
+        <td>tofExpTimeAl</td>
+        <td>float</td>
+        <td>Expected time for the track to reach the TOF under the helium4 hypothesis</td>
       </tr>
       <tr>
         <td>o2::aod::track::TPCCrossedRowsOverFindableCls</td>
@@ -2645,11 +2715,18 @@ For better overview the tables are grouped into the following categories: \| [Ge
         <td>Number of crossed TPC Rows</td>
       </tr>
       <tr>
-        <td>o2::aod::track::TOFExpTime</td>
+        <td>o2::aod::track::TOFExpTimeEl</td>
         <td>D</td>
-        <td>tofExpTime</td>
+        <td>tofExpTimeEl</td>
         <td>float</td>
-        <td>Expected time for the track to reach the TOF</td>
+        <td>Expected time for the track to reach the TOF under the electron hypothesis</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::TOFExpTimeMu</td>
+        <td>D</td>
+        <td>tofExpTimeMu</td>
+        <td>float</td>
+        <td>Expected time for the track to reach the TOF under the muon hypothesis</td>
       </tr>
       <tr>
         <td>o2::aod::track::TOFExpTimePi</td>
@@ -2671,6 +2748,34 @@ For better overview the tables are grouped into the following categories: \| [Ge
         <td>tofExpTimePr</td>
         <td>float</td>
         <td>Expected time for the track to reach the TOF under the proton hypothesis</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::TOFExpTimeDe</td>
+        <td>D</td>
+        <td>tofExpTimeDe</td>
+        <td>float</td>
+        <td>Expected time for the track to reach the TOF under the deuteron hypothesis</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::TOFExpTimeTr</td>
+        <td>D</td>
+        <td>tofExpTimeTr</td>
+        <td>float</td>
+        <td>Expected time for the track to reach the TOF under the triton hypothesis</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::TOFExpTimeHe</td>
+        <td>D</td>
+        <td>tofExpTimeHe</td>
+        <td>float</td>
+        <td>Expected time for the track to reach the TOF under the helium3 hypothesis</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::TOFExpTimeAl</td>
+        <td>D</td>
+        <td>tofExpTimeAl</td>
+        <td>float</td>
+        <td>Expected time for the track to reach the TOF under the helium4 hypothesis</td>
       </tr>
       <tr>
         <td>o2::aod::track::ITSNCls</td>
@@ -2978,11 +3083,18 @@ For better overview the tables are grouped into the following categories: \| [Ge
         <td>If the track used the afterburner in the ITS</td>
       </tr>
       <tr>
-        <td>o2::aod::track::TOFExpTime</td>
+        <td>o2::aod::track::TOFExpTimeEl</td>
         <td>D</td>
-        <td>tofExpTime</td>
+        <td>tofExpTimeEl</td>
         <td>float</td>
-        <td>Expected time for the track to reach the TOF</td>
+        <td>Expected time for the track to reach the TOF under the electron hypothesis</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::TOFExpTimeMu</td>
+        <td>D</td>
+        <td>tofExpTimeMu</td>
+        <td>float</td>
+        <td>Expected time for the track to reach the TOF under the muon hypothesis</td>
       </tr>
       <tr>
         <td>o2::aod::track::TOFExpTimePi</td>
@@ -3004,6 +3116,34 @@ For better overview the tables are grouped into the following categories: \| [Ge
         <td>tofExpTimePr</td>
         <td>float</td>
         <td>Expected time for the track to reach the TOF under the proton hypothesis</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::TOFExpTimeDe</td>
+        <td>D</td>
+        <td>tofExpTimeDe</td>
+        <td>float</td>
+        <td>Expected time for the track to reach the TOF under the deuteron hypothesis</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::TOFExpTimeTr</td>
+        <td>D</td>
+        <td>tofExpTimeTr</td>
+        <td>float</td>
+        <td>Expected time for the track to reach the TOF under the triton hypothesis</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::TOFExpTimeHe</td>
+        <td>D</td>
+        <td>tofExpTimeHe</td>
+        <td>float</td>
+        <td>Expected time for the track to reach the TOF under the helium3 hypothesis</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::TOFExpTimeAl</td>
+        <td>D</td>
+        <td>tofExpTimeAl</td>
+        <td>float</td>
+        <td>Expected time for the track to reach the TOF under the helium4 hypothesis</td>
       </tr>
       <tr>
         <td>o2::aod::track::TPCCrossedRowsOverFindableCls</td>
@@ -6523,6 +6663,8 @@ For better overview the tables are grouped into the following categories: \| [Ge
         <li>o2::aod::Decay3Body = o2::aod::Decay3Bodys::iterator</li>
         <li>o2::aod::Decay3BodysLinked = soa::Join<o2::aod::Decay3Bodys, o2::aod::Decay3BodyDataLink></li>
         <li>o2::aod::Decay3BodyLinked = soa::Join<o2::aod::Decay3Bodys, o2::aod::Decay3BodyDataLink>::iterator</li>
+        <li>o2::aod::KFDecay3BodysLinked = soa::Join<o2::aod::Decay3Bodys, o2::aod::KFDecay3BodyDataLink></li>
+        <li>o2::aod::KFDecay3BodyLinked = soa::Join<o2::aod::Decay3Bodys, o2::aod::KFDecay3BodyDataLink>::iterator</li>
       </ul>
     </div>
     <table class=DataModel>
