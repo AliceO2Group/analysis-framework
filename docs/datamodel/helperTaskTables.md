@@ -742,6 +742,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
     <div>Is used in:
       <ul>
         <li>o2::aod::CentFT0M = o2::aod::CentFT0Ms::iterator</li>
+        <li>o2::aod::pid_tpc_tof_utils::McCollisionsFT0Ms = soa::Join<o2::aod::Collisions, o2::aod::EvSels, o2::aod::McCollisionLabels, o2::aod::CentFT0Ms></li>
       </ul>
     </div>
     <table class=DataModel>
@@ -804,6 +805,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
     <div>Is used in:
       <ul>
         <li>o2::aod::CentFT0C = o2::aod::CentFT0Cs::iterator</li>
+        <li>o2::aod::pid_tpc_tof_utils::McCollisionsFT0Cs = soa::Join<o2::aod::Collisions, o2::aod::EvSels, o2::aod::McCollisionLabels, o2::aod::CentFT0Cs></li>
       </ul>
     </div>
     <table class=DataModel>
@@ -888,6 +890,150 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
 
 </div>
 
+##  o2-analysis-ese-table-producer
+Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/TableProducer//eseTableProducer.cxx" target="_blank">eseTableProducer.cxx</a>
+<div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::QVecFV0As</button>
+  <div class="panel">
+    <div>
+
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/DataModel/EseTable.h" target="_blank">Common/DataModel/EseTable.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::QVecFV0A = o2::aod::QVecFV0As::iterator</li>
+      </ul>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::q_vector::QFV0ARe</td>
+        <td></td>
+        <td>qFV0ARe</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::q_vector::QFV0AIm</td>
+        <td></td>
+        <td>qFV0AIm</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::QVecFT0Cs</button>
+  <div class="panel">
+    <div>
+
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/DataModel/EseTable.h" target="_blank">Common/DataModel/EseTable.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::QVecFT0C = o2::aod::QVecFT0Cs::iterator</li>
+      </ul>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::q_vector::QFT0CRe</td>
+        <td></td>
+        <td>qFT0CRe</td>
+        <td>std::vector&lt;float&gt;</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::q_vector::QFT0CIm</td>
+        <td></td>
+        <td>qFT0CIm</td>
+        <td>std::vector&lt;float&gt;</td>
+        <td></td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::QPercentileFT0Cs</button>
+  <div class="panel">
+    <div>
+
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/DataModel/EseTable.h" target="_blank">Common/DataModel/EseTable.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::QPercentileFT0C = o2::aod::QPercentileFT0Cs::iterator</li>
+      </ul>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::q_vector::QPERCFT0C</td>
+        <td></td>
+        <td>qPERCFT0C</td>
+        <td>std::vector&lt;float&gt;</td>
+        <td></td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::FEseCols</button>
+  <div class="panel">
+    <div>
+
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/DataModel/EseTable.h" target="_blank">Common/DataModel/EseTable.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::FEseCol = o2::aod::FEseCols::iterator</li>
+      </ul>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::q_vector::FESECOL</td>
+        <td></td>
+        <td>fESECOL</td>
+        <td>std::vector&lt;int&gt;</td>
+        <td></td>
+      </tr>
+    </table>
+  </div>
+
+</div>
+
 ##  o2-analysis-event-selection
 Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/TableProducer//eventSelection.cxx" target="_blank">eventSelection.cxx</a>
 <div>
@@ -903,6 +1049,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
     <div>Is used in:
       <ul>
         <li>o2::aod::BcSel = o2::aod::BcSels::iterator</li>
+        <li>o2::aod::pid_tpc_tof_utils::BCsInfo = soa::Join<o2::aod::BCs, o2::aod::Timestamps, o2::aod::BcSels></li>
       </ul>
     </div>
     <table class=DataModel>
@@ -969,6 +1116,9 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
     <div>Is used in:
       <ul>
         <li>o2::aod::EvSel = o2::aod::EvSels::iterator</li>
+        <li>o2::aod::pid_tpc_tof_utils::McCollisionsNoCents = soa::Join<o2::aod::Collisions, o2::aod::EvSels, o2::aod::McCollisionLabels></li>
+        <li>o2::aod::pid_tpc_tof_utils::McCollisionsFT0Cs = soa::Join<o2::aod::Collisions, o2::aod::EvSels, o2::aod::McCollisionLabels, o2::aod::CentFT0Cs></li>
+        <li>o2::aod::pid_tpc_tof_utils::McCollisionsFT0Ms = soa::Join<o2::aod::Collisions, o2::aod::EvSels, o2::aod::McCollisionLabels, o2::aod::CentFT0Ms></li>
       </ul>
     </div>
     <table class=DataModel>
@@ -1043,11 +1193,25 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
         <td>ZDC entry index in ZDCs table (-1 if doesn't exist)</td>
       </tr>
       <tr>
+        <td>o2::aod::evsel::BcInTF</td>
+        <td></td>
+        <td>bcInTF</td>
+        <td>int</td>
+        <td>Position of a (found) bunch crossing inside a given timeframe</td>
+      </tr>
+      <tr>
         <td>o2::aod::evsel::NumTracksInTimeRange</td>
         <td></td>
         <td>trackOccupancyInTimeRange</td>
         <td>int</td>
-        <td>Occupancy in specified time interval</td>
+        <td>Occupancy in specified time interval by a number of tracks from nearby collisions</td>
+      </tr>
+      <tr>
+        <td>o2::aod::evsel::SumAmpFT0CInTimeRange</td>
+        <td></td>
+        <td>ft0cOccupancyInTimeRange</td>
+        <td>float</td>
+        <td>Occupancy in specified time interval by a sum of FT0C amplitudes from nearby collisions</td>
       </tr>
     </table>
   </div>
@@ -2313,149 +2477,6 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
         <td>isInelGt1</td>
         <td>bool</td>
         <td>is INEL > 1</td>
-      </tr>
-    </table>
-  </div>
-
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::MultsExtra</button>
-  <div class="panel">
-    <div>
-
-    </div>
-    <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/DataModel/Multiplicity.h" target="_blank">Common/DataModel/Multiplicity.h</a>
-    </div>
-    <div>Is used in:
-      <ul>
-        <li>o2::aod::MultExtra = o2::aod::MultsExtra::iterator</li>
-      </ul>
-    </div>
-    <table class=DataModel>
-      <tr>
-        <th>Name</th>
-        <th></th>
-        <th>Getter</th>
-        <th>Type</th>
-        <th>Comment</th>
-      </tr>
-      <tr>
-        <td>o2::aod::mult::MultPVTotalContributors</td>
-        <td></td>
-        <td>multPVTotalContributors</td>
-        <td>int</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::mult::MultPVChi2</td>
-        <td></td>
-        <td>multPVChi2</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::mult::MultCollisionTimeRes</td>
-        <td></td>
-        <td>multCollisionTimeRes</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::mult::MultRunNumber</td>
-        <td></td>
-        <td>multRunNumber</td>
-        <td>int</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::mult::MultPVz</td>
-        <td></td>
-        <td>multPVz</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::mult::MultSel8</td>
-        <td></td>
-        <td>multSel8</td>
-        <td>bool</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::mult::MultNTracksHasITS</td>
-        <td></td>
-        <td>multNTracksHasITS</td>
-        <td>int</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::mult::MultNTracksHasTPC</td>
-        <td></td>
-        <td>multNTracksHasTPC</td>
-        <td>int</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::mult::MultNTracksHasTOF</td>
-        <td></td>
-        <td>multNTracksHasTOF</td>
-        <td>int</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::mult::MultNTracksHasTRD</td>
-        <td></td>
-        <td>multNTracksHasTRD</td>
-        <td>int</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::mult::MultNTracksITSOnly</td>
-        <td></td>
-        <td>multNTracksITSOnly</td>
-        <td>int</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::mult::MultNTracksTPCOnly</td>
-        <td></td>
-        <td>multNTracksTPCOnly</td>
-        <td>int</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::mult::MultNTracksITSTPC</td>
-        <td></td>
-        <td>multNTracksITSTPC</td>
-        <td>int</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::mult::MultAllTracksTPCOnly</td>
-        <td></td>
-        <td>multAllTracksTPCOnly</td>
-        <td>int</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::mult::MultAllTracksITSTPC</td>
-        <td></td>
-        <td>multAllTracksITSTPC</td>
-        <td>int</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::evsel::NumTracksInTimeRange</td>
-        <td></td>
-        <td>trackOccupancyInTimeRange</td>
-        <td>int</td>
-        <td>Occupancy in specified time interval</td>
-      </tr>
-      <tr>
-        <td>o2::aod::&zwnj;collision::Flags</td>
-        <td></td>
-        <td>flags</td>
-        <td>uint16_t</td>
-        <td>Run 2: see CollisionFlagsRun2 | Run 3: see Vertex::Flags</td>
       </tr>
     </table>
   </div>
@@ -3995,6 +4016,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
     <div>Is used in:
       <ul>
         <li>o2::aod::BCsWithTimestamps = soa::Join<o2::aod::BCs, o2::aod::Timestamps></li>
+        <li>o2::aod::pid_tpc_tof_utils::BCsInfo = soa::Join<o2::aod::BCs, o2::aod::Timestamps, o2::aod::BcSels></li>
       </ul>
     </div>
     <table class=DataModel>
@@ -9246,6 +9268,162 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
 
 </div>
 
+##  o2-analysis-multsextra-converter
+Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/TableProducer/Converters//multsExtraConverter.cxx" target="_blank">multsExtraConverter.cxx</a>
+<div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::MultsExtra_001</button>
+  <div class="panel">
+    <div>
+       debug information
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/DataModel/Multiplicity.h" target="_blank">Common/DataModel/Multiplicity.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::MultsExtra = o2::aod::MultsExtra_001</li>
+      </ul>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::mult::MultPVTotalContributors</td>
+        <td></td>
+        <td>multPVTotalContributors</td>
+        <td>int</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::mult::MultPVChi2</td>
+        <td></td>
+        <td>multPVChi2</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::mult::MultCollisionTimeRes</td>
+        <td></td>
+        <td>multCollisionTimeRes</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::mult::MultRunNumber</td>
+        <td></td>
+        <td>multRunNumber</td>
+        <td>int</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::mult::MultPVz</td>
+        <td></td>
+        <td>multPVz</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::mult::MultSel8</td>
+        <td></td>
+        <td>multSel8</td>
+        <td>bool</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::mult::MultNTracksHasITS</td>
+        <td></td>
+        <td>multNTracksHasITS</td>
+        <td>int</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::mult::MultNTracksHasTPC</td>
+        <td></td>
+        <td>multNTracksHasTPC</td>
+        <td>int</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::mult::MultNTracksHasTOF</td>
+        <td></td>
+        <td>multNTracksHasTOF</td>
+        <td>int</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::mult::MultNTracksHasTRD</td>
+        <td></td>
+        <td>multNTracksHasTRD</td>
+        <td>int</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::mult::MultNTracksITSOnly</td>
+        <td></td>
+        <td>multNTracksITSOnly</td>
+        <td>int</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::mult::MultNTracksTPCOnly</td>
+        <td></td>
+        <td>multNTracksTPCOnly</td>
+        <td>int</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::mult::MultNTracksITSTPC</td>
+        <td></td>
+        <td>multNTracksITSTPC</td>
+        <td>int</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::mult::MultAllTracksTPCOnly</td>
+        <td></td>
+        <td>multAllTracksTPCOnly</td>
+        <td>int</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::mult::MultAllTracksITSTPC</td>
+        <td></td>
+        <td>multAllTracksITSTPC</td>
+        <td>int</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::evsel::NumTracksInTimeRange</td>
+        <td></td>
+        <td>trackOccupancyInTimeRange</td>
+        <td>int</td>
+        <td>Occupancy in specified time interval by a number of tracks from nearby collisions</td>
+      </tr>
+      <tr>
+        <td>o2::aod::evsel::SumAmpFT0CInTimeRange</td>
+        <td></td>
+        <td>ft0cOccupancyInTimeRange</td>
+        <td>float</td>
+        <td>Occupancy in specified time interval by a sum of FT0C amplitudes from nearby collisions</td>
+      </tr>
+      <tr>
+        <td>o2::aod::&zwnj;collision::Flags</td>
+        <td></td>
+        <td>flags</td>
+        <td>uint16_t</td>
+        <td>Run 2: see CollisionFlagsRun2 | Run 3: see Vertex::Flags</td>
+      </tr>
+    </table>
+  </div>
+
+</div>
+
 ##  o2-analysis-tracks-extra-converter
 Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Common/TableProducer/Converters//tracksExtraConverter.cxx" target="_blank">tracksExtraConverter.cxx</a>
 <div>
@@ -9489,11 +9667,18 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
         <td>If the track used the afterburner in the ITS</td>
       </tr>
       <tr>
-        <td>o2::aod::track::TOFExpTime</td>
+        <td>o2::aod::track::TOFExpTimeEl</td>
         <td>D</td>
-        <td>tofExpTime</td>
+        <td>tofExpTimeEl</td>
         <td>float</td>
-        <td>Expected time for the track to reach the TOF</td>
+        <td>Expected time for the track to reach the TOF under the electron hypothesis</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::TOFExpTimeMu</td>
+        <td>D</td>
+        <td>tofExpTimeMu</td>
+        <td>float</td>
+        <td>Expected time for the track to reach the TOF under the muon hypothesis</td>
       </tr>
       <tr>
         <td>o2::aod::track::TOFExpTimePi</td>
@@ -9515,6 +9700,34 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//Commo
         <td>tofExpTimePr</td>
         <td>float</td>
         <td>Expected time for the track to reach the TOF under the proton hypothesis</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::TOFExpTimeDe</td>
+        <td>D</td>
+        <td>tofExpTimeDe</td>
+        <td>float</td>
+        <td>Expected time for the track to reach the TOF under the deuteron hypothesis</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::TOFExpTimeTr</td>
+        <td>D</td>
+        <td>tofExpTimeTr</td>
+        <td>float</td>
+        <td>Expected time for the track to reach the TOF under the triton hypothesis</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::TOFExpTimeHe</td>
+        <td>D</td>
+        <td>tofExpTimeHe</td>
+        <td>float</td>
+        <td>Expected time for the track to reach the TOF under the helium3 hypothesis</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::TOFExpTimeAl</td>
+        <td>D</td>
+        <td>tofExpTimeAl</td>
+        <td>float</td>
+        <td>Expected time for the track to reach the TOF under the helium4 hypothesis</td>
       </tr>
       <tr>
         <td>o2::aod::track::TPCCrossedRowsOverFindableCls</td>
