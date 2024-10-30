@@ -279,7 +279,5 @@ Example:
 
 - Update your branch and test it before creating a PR.
 - Give your PR a short meaningful title.
-  - Add the “PWGHF: ” prefix in the title of your PR. (It helps to search for PWGHF-related PRs in the commit history of the main branch.)
-    - Note: If your PR has only one commit, add the prefix also in the commit title (because that is the title that will appear in the history after merging, unless the person merging the PR changes it by hand).
 - Give further useful details about your changes in the PR description.
   - Add links to all related PRs (e.g. O2Physics, O2, AliPhysics, Run3Analysisvalidation) in the PR description.

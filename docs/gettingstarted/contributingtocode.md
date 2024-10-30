@@ -62,7 +62,6 @@ __Give your pull request a short and meaningful title.__
 
 - The title should be informative enough to give an idea of _what_ was changed and _where_.
 - Further details (e.g. _why_ this change is needed or related links) can be provided in the description below the title.
-- It is useful to put the PWG name at the beginning of the PR title to specify the scope of the changes, which makes it easier to filter PRs related to the PWG in the PR history and also in the commit history of the main branch.
 - Examples of too vague titles: "Test", "Fix bug", "Add new parameter", "Update cuts", "Improve code".
 
 ### Automatic checks
