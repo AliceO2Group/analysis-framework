@@ -611,24 +611,31 @@ Click on the labels to display the definitions. Click buttons to
     </ul>
   </div>
 
-  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::QVecFV0A</button>
-  <div class="panel">
-    <ul>
-        <li>o2::aod::QVecFV0A = o2::aod::QVecFV0As::iterator</li>
-    </ul>
-  </div>
-
-  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::QVecFT0C</button>
-  <div class="panel">
-    <ul>
-        <li>o2::aod::QVecFT0C = o2::aod::QVecFT0Cs::iterator</li>
-    </ul>
-  </div>
-
   <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::QPercentileFT0C</button>
   <div class="panel">
     <ul>
         <li>o2::aod::QPercentileFT0C = o2::aod::QPercentileFT0Cs::iterator</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::QPercentileFT0A</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::QPercentileFT0A = o2::aod::QPercentileFT0As::iterator</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::QPercentileFV0A</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::QPercentileFV0A = o2::aod::QPercentileFV0As::iterator</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::QPercentileTPC</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::QPercentileTPC = o2::aod::QPercentileTPCs::iterator</li>
     </ul>
   </div>
 
@@ -1472,6 +1479,13 @@ Click on the labels to display the definitions. Click buttons to
     </ul>
   </div>
 
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::EMEvents</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::EMEvents = o2::aod::EMEvents_001</li>
+    </ul>
+  </div>
+
   <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::EMEvent</button>
   <div class="panel">
     <ul>
@@ -1616,6 +1630,13 @@ Click on the labels to display the definitions. Click buttons to
   <div class="panel">
     <ul>
         <li>o2::aod::EMPrimaryMuonMCLabel = o2::aod::EMPrimaryMuonMCLabels::iterator</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::EMPrimaryElectrons</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::EMPrimaryElectrons = o2::aod::EMPrimaryElectrons_001</li>
     </ul>
   </div>
 
@@ -5571,6 +5592,20 @@ Click on the labels to display the definitions. Click buttons to
   <div class="panel">
     <ul>
         <li>o2::aod::KFCascadeLinked = soa::Join<o2::aod::Cascades, o2::aod::KFCascDataLink>::iterator</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::TraCascadesLinked</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::TraCascadesLinked = soa::Join<o2::aod::Cascades, o2::aod::TraCascDataLink></li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::TraCascadeLinked</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::TraCascadeLinked = soa::Join<o2::aod::Cascades, o2::aod::TraCascDataLink>::iterator</li>
     </ul>
   </div>
 

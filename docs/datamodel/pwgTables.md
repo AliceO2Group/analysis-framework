@@ -8437,6 +8437,184 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGDQ
     </table>
   </div>
 
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::RedJpDmDmDau0s</button>
+  <div class="panel">
+    <div>
+
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGDQ/DataModel/ReducedInfoTables.h" target="_blank">PWGDQ/DataModel/ReducedInfoTables.h</a>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::jpsidmescorr::PtDmesProng0</td>
+        <td></td>
+        <td>ptDmesProng0</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::jpsidmescorr::EtaDmesProng0</td>
+        <td></td>
+        <td>etaDmesProng0</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::jpsidmescorr::NumItsClsDmesProng0</td>
+        <td></td>
+        <td>numItsClsDmesProng0</td>
+        <td>int</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::jpsidmescorr::NumTpcCrossedRowsDmesProng0</td>
+        <td></td>
+        <td>numTpcCrossedRowsDmesProng0</td>
+        <td>int</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::jpsidmescorr::NumSigmaTpcPiProng0</td>
+        <td></td>
+        <td>numSigmaTpcPiProng0</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::jpsidmescorr::NumSigmaTofPiProng0</td>
+        <td></td>
+        <td>numSigmaTofPiProng0</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::jpsidmescorr::NumSigmaTpcKaProng0</td>
+        <td></td>
+        <td>numSigmaTpcKaProng0</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::jpsidmescorr::NumSigmaTofKaProng0</td>
+        <td></td>
+        <td>numSigmaTofKaProng0</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::jpsidmescorr::NumSigmaTpcTofPiProng0</td>
+        <td>D</td>
+        <td>numSigmaTpcTofPiProng0</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::jpsidmescorr::NumSigmaTpcTofKaProng0</td>
+        <td>D</td>
+        <td>numSigmaTpcTofKaProng0</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::RedJpDmDmDau1s</button>
+  <div class="panel">
+    <div>
+
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGDQ/DataModel/ReducedInfoTables.h" target="_blank">PWGDQ/DataModel/ReducedInfoTables.h</a>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::jpsidmescorr::PtDmesProng1</td>
+        <td></td>
+        <td>ptDmesProng1</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::jpsidmescorr::EtaDmesProng1</td>
+        <td></td>
+        <td>etaDmesProng1</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::jpsidmescorr::NumItsClsDmesProng1</td>
+        <td></td>
+        <td>numItsClsDmesProng1</td>
+        <td>int</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::jpsidmescorr::NumTpcCrossedRowsDmesProng1</td>
+        <td></td>
+        <td>numTpcCrossedRowsDmesProng1</td>
+        <td>int</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::jpsidmescorr::NumSigmaTpcPiProng1</td>
+        <td></td>
+        <td>numSigmaTpcPiProng1</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::jpsidmescorr::NumSigmaTofPiProng1</td>
+        <td></td>
+        <td>numSigmaTofPiProng1</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::jpsidmescorr::NumSigmaTpcKaProng1</td>
+        <td></td>
+        <td>numSigmaTpcKaProng1</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::jpsidmescorr::NumSigmaTofKaProng1</td>
+        <td></td>
+        <td>numSigmaTofKaProng1</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::jpsidmescorr::NumSigmaTpcTofPiProng1</td>
+        <td>D</td>
+        <td>numSigmaTpcTofPiProng1</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::jpsidmescorr::NumSigmaTpcTofKaProng1</td>
+        <td>D</td>
+        <td>numSigmaTpcTofKaProng1</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+    </table>
+  </div>
+
   <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::RedJpDmD0Masss</button>
   <div class="panel">
     <div>
@@ -15292,121 +15470,6 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGEM
 Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGEM/PhotonMeson/TableProducer//createEMEventPhoton.cxx" target="_blank">createEMEventPhoton.cxx</a>
 <div>
 
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::EMEvents</button>
-  <div class="panel">
-    <div>
-       Main event information table
-    </div>
-    <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGEM/Dilepton/DataModel/dileptonTables.h" target="_blank">PWGEM/Dilepton/DataModel/dileptonTables.h</a>
-    </div>
-    <div>Is used in:
-      <ul>
-        <li>o2::aod::EMEvent = o2::aod::EMEvents::iterator</li>
-      </ul>
-    </div>
-    <table class=DataModel>
-      <tr>
-        <th>Name</th>
-        <th></th>
-        <th>Getter</th>
-        <th>Type</th>
-        <th>Comment</th>
-      </tr>
-      <tr>
-        <td>o2::soa::Index</td>
-        <td>GI</td>
-        <td>globalIndex</td>
-        <td>int64_t</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::emevent::CollisionId</td>
-        <td></td>
-        <td>collisionId</td>
-        <td>int</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::bc::RunNumber</td>
-        <td></td>
-        <td>runNumber</td>
-        <td>int</td>
-        <td>Run number</td>
-      </tr>
-      <tr>
-        <td>o2::aod::bc::GlobalBC</td>
-        <td></td>
-        <td>globalBC</td>
-        <td>uint64_t</td>
-        <td>Bunch crossing number (globally unique in this run)</td>
-      </tr>
-      <tr>
-        <td>o2::aod::evsel::Alias</td>
-        <td>GI</td>
-        <td></td>
-        <td>?</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::evsel::Selection</td>
-        <td>GI</td>
-        <td></td>
-        <td>?</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::timestamp::Timestamp</td>
-        <td></td>
-        <td>timestamp</td>
-        <td>uint64_t</td>
-        <td>Timestamp of a BC in ms (epoch style)</td>
-      </tr>
-      <tr>
-        <td>o2::aod::&zwnj;collision::PosX</td>
-        <td></td>
-        <td>posX</td>
-        <td>float</td>
-        <td>X Vertex position in cm</td>
-      </tr>
-      <tr>
-        <td>o2::aod::&zwnj;collision::PosY</td>
-        <td></td>
-        <td>posY</td>
-        <td>float</td>
-        <td>Y Vertex position in cm</td>
-      </tr>
-      <tr>
-        <td>o2::aod::&zwnj;collision::PosZ</td>
-        <td></td>
-        <td>posZ</td>
-        <td>float</td>
-        <td>Z Vertex position in cm</td>
-      </tr>
-      <tr>
-        <td>o2::aod::&zwnj;collision::NumContrib</td>
-        <td></td>
-        <td>numContrib</td>
-        <td>uint16_t</td>
-        <td>Number of tracks used for the vertex</td>
-      </tr>
-      <tr>
-        <td>o2::aod::evsel::NumTracksInTimeRange</td>
-        <td></td>
-        <td>trackOccupancyInTimeRange</td>
-        <td>int</td>
-        <td>Occupancy in specified time interval by a number of tracks from nearby collisions</td>
-      </tr>
-      <tr>
-        <td>o2::aod::emevent::Sel8</td>
-        <td>D</td>
-        <td>sel8</td>
-        <td>bool</td>
-        <td></td>
-      </tr>
-    </table>
-  </div>
-
   <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::EMEventsCov</button>
   <div class="panel">
     <div>
@@ -20047,121 +20110,6 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGEM
 Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGEM/Dilepton/TableProducer//createEMEventDilepton.cxx" target="_blank">createEMEventDilepton.cxx</a>
 <div>
 
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::EMEvents</button>
-  <div class="panel">
-    <div>
-       Main event information table
-    </div>
-    <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGEM/Dilepton/DataModel/dileptonTables.h" target="_blank">PWGEM/Dilepton/DataModel/dileptonTables.h</a>
-    </div>
-    <div>Is used in:
-      <ul>
-        <li>o2::aod::EMEvent = o2::aod::EMEvents::iterator</li>
-      </ul>
-    </div>
-    <table class=DataModel>
-      <tr>
-        <th>Name</th>
-        <th></th>
-        <th>Getter</th>
-        <th>Type</th>
-        <th>Comment</th>
-      </tr>
-      <tr>
-        <td>o2::soa::Index</td>
-        <td>GI</td>
-        <td>globalIndex</td>
-        <td>int64_t</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::emevent::CollisionId</td>
-        <td></td>
-        <td>collisionId</td>
-        <td>int</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::bc::RunNumber</td>
-        <td></td>
-        <td>runNumber</td>
-        <td>int</td>
-        <td>Run number</td>
-      </tr>
-      <tr>
-        <td>o2::aod::bc::GlobalBC</td>
-        <td></td>
-        <td>globalBC</td>
-        <td>uint64_t</td>
-        <td>Bunch crossing number (globally unique in this run)</td>
-      </tr>
-      <tr>
-        <td>o2::aod::evsel::Alias</td>
-        <td>GI</td>
-        <td></td>
-        <td>?</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::evsel::Selection</td>
-        <td>GI</td>
-        <td></td>
-        <td>?</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::timestamp::Timestamp</td>
-        <td></td>
-        <td>timestamp</td>
-        <td>uint64_t</td>
-        <td>Timestamp of a BC in ms (epoch style)</td>
-      </tr>
-      <tr>
-        <td>o2::aod::&zwnj;collision::PosX</td>
-        <td></td>
-        <td>posX</td>
-        <td>float</td>
-        <td>X Vertex position in cm</td>
-      </tr>
-      <tr>
-        <td>o2::aod::&zwnj;collision::PosY</td>
-        <td></td>
-        <td>posY</td>
-        <td>float</td>
-        <td>Y Vertex position in cm</td>
-      </tr>
-      <tr>
-        <td>o2::aod::&zwnj;collision::PosZ</td>
-        <td></td>
-        <td>posZ</td>
-        <td>float</td>
-        <td>Z Vertex position in cm</td>
-      </tr>
-      <tr>
-        <td>o2::aod::&zwnj;collision::NumContrib</td>
-        <td></td>
-        <td>numContrib</td>
-        <td>uint16_t</td>
-        <td>Number of tracks used for the vertex</td>
-      </tr>
-      <tr>
-        <td>o2::aod::evsel::NumTracksInTimeRange</td>
-        <td></td>
-        <td>trackOccupancyInTimeRange</td>
-        <td>int</td>
-        <td>Occupancy in specified time interval by a number of tracks from nearby collisions</td>
-      </tr>
-      <tr>
-        <td>o2::aod::emevent::Sel8</td>
-        <td>D</td>
-        <td>sel8</td>
-        <td>bool</td>
-        <td></td>
-      </tr>
-    </table>
-  </div>
-
   <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::EMEventsMult</button>
   <div class="panel">
     <div>
@@ -20868,121 +20816,6 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGEM
 Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGEM/Dilepton/TableProducer//filterDielectronEvent.cxx" target="_blank">filterDielectronEvent.cxx</a>
 <div>
 
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::EMEvents</button>
-  <div class="panel">
-    <div>
-       Main event information table
-    </div>
-    <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGEM/Dilepton/DataModel/dileptonTables.h" target="_blank">PWGEM/Dilepton/DataModel/dileptonTables.h</a>
-    </div>
-    <div>Is used in:
-      <ul>
-        <li>o2::aod::EMEvent = o2::aod::EMEvents::iterator</li>
-      </ul>
-    </div>
-    <table class=DataModel>
-      <tr>
-        <th>Name</th>
-        <th></th>
-        <th>Getter</th>
-        <th>Type</th>
-        <th>Comment</th>
-      </tr>
-      <tr>
-        <td>o2::soa::Index</td>
-        <td>GI</td>
-        <td>globalIndex</td>
-        <td>int64_t</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::emevent::CollisionId</td>
-        <td></td>
-        <td>collisionId</td>
-        <td>int</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::bc::RunNumber</td>
-        <td></td>
-        <td>runNumber</td>
-        <td>int</td>
-        <td>Run number</td>
-      </tr>
-      <tr>
-        <td>o2::aod::bc::GlobalBC</td>
-        <td></td>
-        <td>globalBC</td>
-        <td>uint64_t</td>
-        <td>Bunch crossing number (globally unique in this run)</td>
-      </tr>
-      <tr>
-        <td>o2::aod::evsel::Alias</td>
-        <td>GI</td>
-        <td></td>
-        <td>?</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::evsel::Selection</td>
-        <td>GI</td>
-        <td></td>
-        <td>?</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::timestamp::Timestamp</td>
-        <td></td>
-        <td>timestamp</td>
-        <td>uint64_t</td>
-        <td>Timestamp of a BC in ms (epoch style)</td>
-      </tr>
-      <tr>
-        <td>o2::aod::&zwnj;collision::PosX</td>
-        <td></td>
-        <td>posX</td>
-        <td>float</td>
-        <td>X Vertex position in cm</td>
-      </tr>
-      <tr>
-        <td>o2::aod::&zwnj;collision::PosY</td>
-        <td></td>
-        <td>posY</td>
-        <td>float</td>
-        <td>Y Vertex position in cm</td>
-      </tr>
-      <tr>
-        <td>o2::aod::&zwnj;collision::PosZ</td>
-        <td></td>
-        <td>posZ</td>
-        <td>float</td>
-        <td>Z Vertex position in cm</td>
-      </tr>
-      <tr>
-        <td>o2::aod::&zwnj;collision::NumContrib</td>
-        <td></td>
-        <td>numContrib</td>
-        <td>uint16_t</td>
-        <td>Number of tracks used for the vertex</td>
-      </tr>
-      <tr>
-        <td>o2::aod::evsel::NumTracksInTimeRange</td>
-        <td></td>
-        <td>trackOccupancyInTimeRange</td>
-        <td>int</td>
-        <td>Occupancy in specified time interval by a number of tracks from nearby collisions</td>
-      </tr>
-      <tr>
-        <td>o2::aod::emevent::Sel8</td>
-        <td>D</td>
-        <td>sel8</td>
-        <td>bool</td>
-        <td></td>
-      </tr>
-    </table>
-  </div>
-
   <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::EMEventsMult</button>
   <div class="panel">
     <div>
@@ -21467,436 +21300,6 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGEM
     </table>
   </div>
 
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::EMPrimaryElectrons</button>
-  <div class="panel">
-    <div>
-
-    </div>
-    <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGEM/Dilepton/DataModel/dileptonTables.h" target="_blank">PWGEM/Dilepton/DataModel/dileptonTables.h</a>
-    </div>
-    <div>Is used in:
-      <ul>
-        <li>o2::aod::EMPrimaryElectron = o2::aod::EMPrimaryElectrons::iterator</li>
-      </ul>
-    </div>
-    <table class=DataModel>
-      <tr>
-        <th>Name</th>
-        <th></th>
-        <th>Getter</th>
-        <th>Type</th>
-        <th>Comment</th>
-      </tr>
-      <tr>
-        <td>o2::soa::Index</td>
-        <td>GI</td>
-        <td>globalIndex</td>
-        <td>int64_t</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::emprimaryelectron::CollisionId</td>
-        <td></td>
-        <td>collisionId</td>
-        <td>int</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::emprimaryelectron::TrackId</td>
-        <td></td>
-        <td>trackId</td>
-        <td>int</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::emprimaryelectron::Sign</td>
-        <td></td>
-        <td>sign</td>
-        <td>int8_t</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::Pt</td>
-        <td>E</td>
-        <td>pt</td>
-        <td>float</td>
-        <td>Transverse momentum of the track in GeV/c</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::Eta</td>
-        <td>E</td>
-        <td>eta</td>
-        <td>float</td>
-        <td>Pseudorapidity</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::Phi</td>
-        <td>E</td>
-        <td>phi</td>
-        <td>float</td>
-        <td>Phi of the track, in radians within [0, 2pi)</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::DcaXY</td>
-        <td></td>
-        <td>dcaXY</td>
-        <td>float</td>
-        <td>Impact parameter in XY of the track to the primary vertex</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::DcaZ</td>
-        <td></td>
-        <td>dcaZ</td>
-        <td>float</td>
-        <td>Impact parameter in Z of the track to the primary vertex</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::TPCNClsFindable</td>
-        <td></td>
-        <td>tpcNClsFindable</td>
-        <td>uint8_t</td>
-        <td>Findable TPC clusters for this track geometry</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::TPCNClsFindableMinusFound</td>
-        <td></td>
-        <td>tpcNClsFindableMinusFound</td>
-        <td>int8_t</td>
-        <td>TPC Clusters: Findable - Found</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::TPCNClsFindableMinusCrossedRows</td>
-        <td></td>
-        <td>tpcNClsFindableMinusCrossedRows</td>
-        <td>int8_t</td>
-        <td>TPC Clusters: Findable - crossed rows</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::TPCNClsShared</td>
-        <td></td>
-        <td>tpcNClsShared</td>
-        <td>uint8_t</td>
-        <td>Number of shared TPC clusters</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::TPCChi2NCl</td>
-        <td></td>
-        <td>tpcChi2NCl</td>
-        <td>float</td>
-        <td>Chi2 / cluster for the TPC track segment</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::TPCInnerParam</td>
-        <td></td>
-        <td>tpcInnerParam</td>
-        <td>float</td>
-        <td>Momentum at inner wall of the TPC</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::TPCSignal</td>
-        <td></td>
-        <td>tpcSignal</td>
-        <td>float</td>
-        <td>dE/dx signal in the TPC</td>
-      </tr>
-      <tr>
-        <td>o2::aod::pidtpc::TPCNSigmaEl</td>
-        <td></td>
-        <td>tpcNSigmaEl</td>
-        <td>float</td>
-        <td>Nsigma separation with the TPC detector for electron</td>
-      </tr>
-      <tr>
-        <td>o2::aod::pidtpc::TPCNSigmaMu</td>
-        <td></td>
-        <td>tpcNSigmaMu</td>
-        <td>float</td>
-        <td>Nsigma separation with the TPC detector for muon</td>
-      </tr>
-      <tr>
-        <td>o2::aod::pidtpc::TPCNSigmaPi</td>
-        <td></td>
-        <td>tpcNSigmaPi</td>
-        <td>float</td>
-        <td>Nsigma separation with the TPC detector for pion</td>
-      </tr>
-      <tr>
-        <td>o2::aod::pidtpc::TPCNSigmaKa</td>
-        <td></td>
-        <td>tpcNSigmaKa</td>
-        <td>float</td>
-        <td>Nsigma separation with the TPC detector for kaon</td>
-      </tr>
-      <tr>
-        <td>o2::aod::pidtpc::TPCNSigmaPr</td>
-        <td></td>
-        <td>tpcNSigmaPr</td>
-        <td>float</td>
-        <td>Nsigma separation with the TPC detector for proton</td>
-      </tr>
-      <tr>
-        <td>o2::aod::pidtofbeta::Beta</td>
-        <td></td>
-        <td>beta</td>
-        <td>float</td>
-        <td>TOF beta</td>
-      </tr>
-      <tr>
-        <td>o2::aod::pidtof::TOFNSigmaEl</td>
-        <td></td>
-        <td>tofNSigmaEl</td>
-        <td>float</td>
-        <td>Nsigma separation with the TOF detector for electron</td>
-      </tr>
-      <tr>
-        <td>o2::aod::pidtof::TOFNSigmaMu</td>
-        <td></td>
-        <td>tofNSigmaMu</td>
-        <td>float</td>
-        <td>Nsigma separation with the TOF detector for muon</td>
-      </tr>
-      <tr>
-        <td>o2::aod::pidtof::TOFNSigmaPi</td>
-        <td></td>
-        <td>tofNSigmaPi</td>
-        <td>float</td>
-        <td>Nsigma separation with the TOF detector for pion</td>
-      </tr>
-      <tr>
-        <td>o2::aod::pidtof::TOFNSigmaKa</td>
-        <td></td>
-        <td>tofNSigmaKa</td>
-        <td>float</td>
-        <td>Nsigma separation with the TOF detector for kaon</td>
-      </tr>
-      <tr>
-        <td>o2::aod::pidtof::TOFNSigmaPr</td>
-        <td></td>
-        <td>tofNSigmaPr</td>
-        <td>float</td>
-        <td>Nsigma separation with the TOF detector for proton</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::ITSClusterSizes</td>
-        <td></td>
-        <td>itsClusterSizes</td>
-        <td>uint32_t</td>
-        <td>Clusters sizes, four bits per a layer, starting from the innermost</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::ITSChi2NCl</td>
-        <td></td>
-        <td>itsChi2NCl</td>
-        <td>float</td>
-        <td>Chi2 / cluster for the ITS track segment</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::DetectorMap</td>
-        <td>E</td>
-        <td>detectorMap</td>
-        <td>uint8_t</td>
-        <td>Detector map: see enum DetectorMapEnum</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::X</td>
-        <td></td>
-        <td>x</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::Alpha</td>
-        <td></td>
-        <td>alpha</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::Y</td>
-        <td></td>
-        <td>y</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::Z</td>
-        <td></td>
-        <td>z</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::Snp</td>
-        <td></td>
-        <td>snp</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::Tgl</td>
-        <td></td>
-        <td>tgl</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::emprimaryelectron::IsAssociatedToMPC</td>
-        <td></td>
-        <td>isAssociatedToMPC</td>
-        <td>bool</td>
-        <td>is associated to most probable collision</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::TPCNClsFound</td>
-        <td>D</td>
-        <td>tpcNClsFound</td>
-        <td>int16_t</td>
-        <td>Number of found TPC clusters</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::TPCNClsCrossedRows</td>
-        <td>D</td>
-        <td>tpcNClsCrossedRows</td>
-        <td>int16_t</td>
-        <td>Number of crossed TPC Rows</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::TPCCrossedRowsOverFindableCls</td>
-        <td>D</td>
-        <td>tpcCrossedRowsOverFindableCls</td>
-        <td>float</td>
-        <td>Ratio crossed rows over findable clusters</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::TPCFoundOverFindableCls</td>
-        <td>D</td>
-        <td>tpcFoundOverFindableCls</td>
-        <td>float</td>
-        <td>Ratio of found over findable clusters</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::TPCFractionSharedCls</td>
-        <td>D</td>
-        <td>tpcFractionSharedCls</td>
-        <td>float</td>
-        <td>Fraction of shared TPC clusters</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::v001::ITSClusterMap</td>
-        <td>D</td>
-        <td>itsClusterMap</td>
-        <td>uint8_t</td>
-        <td>ITS cluster map, one bit per a layer, starting from the innermost</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::v001::ITSNCls</td>
-        <td>D</td>
-        <td>itsNCls</td>
-        <td>uint8_t</td>
-        <td>Number of ITS clusters</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::v001::ITSNClsInnerBarrel</td>
-        <td>D</td>
-        <td>itsNClsInnerBarrel</td>
-        <td>uint8_t</td>
-        <td>Number of ITS clusters in the Inner Barrel</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::HasITS</td>
-        <td>D</td>
-        <td>hasITS</td>
-        <td>bool</td>
-        <td>Flag to check if track has a ITS match</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::HasTPC</td>
-        <td>D</td>
-        <td>hasTPC</td>
-        <td>bool</td>
-        <td>Flag to check if track has a TPC match</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::HasTRD</td>
-        <td>D</td>
-        <td>hasTRD</td>
-        <td>bool</td>
-        <td>Flag to check if track has a TRD match</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::HasTOF</td>
-        <td>D</td>
-        <td>hasTOF</td>
-        <td>bool</td>
-        <td>Flag to check if track has a TOF measurement</td>
-      </tr>
-      <tr>
-        <td>o2::aod::emprimaryelectron::Signed1Pt</td>
-        <td>D</td>
-        <td>signed1Pt</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::emprimaryelectron::P</td>
-        <td>D</td>
-        <td>p</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::emprimaryelectron::Px</td>
-        <td>D</td>
-        <td>px</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::emprimaryelectron::Py</td>
-        <td>D</td>
-        <td>py</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::emprimaryelectron::Pz</td>
-        <td>D</td>
-        <td>pz</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::emprimaryelectron::Theta</td>
-        <td>D</td>
-        <td>theta</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::emprimaryelectron::MeanClusterSizeITS</td>
-        <td>D</td>
-        <td>meanClusterSizeITS</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::emprimaryelectron::MeanClusterSizeITSib</td>
-        <td>D</td>
-        <td>meanClusterSizeITSib</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::emprimaryelectron::MeanClusterSizeITSob</td>
-        <td>D</td>
-        <td>meanClusterSizeITSob</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-    </table>
-  </div>
-
   <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::EMPrimaryElectronsCov</button>
   <div class="panel">
     <div>
@@ -22236,436 +21639,6 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGEM
 ###  o2-analysis-em-skimmer-primary-electron
 Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGEM/Dilepton/TableProducer//skimmerPrimaryElectron.cxx" target="_blank">skimmerPrimaryElectron.cxx</a>
 <div>
-
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::EMPrimaryElectrons</button>
-  <div class="panel">
-    <div>
-
-    </div>
-    <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGEM/Dilepton/DataModel/dileptonTables.h" target="_blank">PWGEM/Dilepton/DataModel/dileptonTables.h</a>
-    </div>
-    <div>Is used in:
-      <ul>
-        <li>o2::aod::EMPrimaryElectron = o2::aod::EMPrimaryElectrons::iterator</li>
-      </ul>
-    </div>
-    <table class=DataModel>
-      <tr>
-        <th>Name</th>
-        <th></th>
-        <th>Getter</th>
-        <th>Type</th>
-        <th>Comment</th>
-      </tr>
-      <tr>
-        <td>o2::soa::Index</td>
-        <td>GI</td>
-        <td>globalIndex</td>
-        <td>int64_t</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::emprimaryelectron::CollisionId</td>
-        <td></td>
-        <td>collisionId</td>
-        <td>int</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::emprimaryelectron::TrackId</td>
-        <td></td>
-        <td>trackId</td>
-        <td>int</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::emprimaryelectron::Sign</td>
-        <td></td>
-        <td>sign</td>
-        <td>int8_t</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::Pt</td>
-        <td>E</td>
-        <td>pt</td>
-        <td>float</td>
-        <td>Transverse momentum of the track in GeV/c</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::Eta</td>
-        <td>E</td>
-        <td>eta</td>
-        <td>float</td>
-        <td>Pseudorapidity</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::Phi</td>
-        <td>E</td>
-        <td>phi</td>
-        <td>float</td>
-        <td>Phi of the track, in radians within [0, 2pi)</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::DcaXY</td>
-        <td></td>
-        <td>dcaXY</td>
-        <td>float</td>
-        <td>Impact parameter in XY of the track to the primary vertex</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::DcaZ</td>
-        <td></td>
-        <td>dcaZ</td>
-        <td>float</td>
-        <td>Impact parameter in Z of the track to the primary vertex</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::TPCNClsFindable</td>
-        <td></td>
-        <td>tpcNClsFindable</td>
-        <td>uint8_t</td>
-        <td>Findable TPC clusters for this track geometry</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::TPCNClsFindableMinusFound</td>
-        <td></td>
-        <td>tpcNClsFindableMinusFound</td>
-        <td>int8_t</td>
-        <td>TPC Clusters: Findable - Found</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::TPCNClsFindableMinusCrossedRows</td>
-        <td></td>
-        <td>tpcNClsFindableMinusCrossedRows</td>
-        <td>int8_t</td>
-        <td>TPC Clusters: Findable - crossed rows</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::TPCNClsShared</td>
-        <td></td>
-        <td>tpcNClsShared</td>
-        <td>uint8_t</td>
-        <td>Number of shared TPC clusters</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::TPCChi2NCl</td>
-        <td></td>
-        <td>tpcChi2NCl</td>
-        <td>float</td>
-        <td>Chi2 / cluster for the TPC track segment</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::TPCInnerParam</td>
-        <td></td>
-        <td>tpcInnerParam</td>
-        <td>float</td>
-        <td>Momentum at inner wall of the TPC</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::TPCSignal</td>
-        <td></td>
-        <td>tpcSignal</td>
-        <td>float</td>
-        <td>dE/dx signal in the TPC</td>
-      </tr>
-      <tr>
-        <td>o2::aod::pidtpc::TPCNSigmaEl</td>
-        <td></td>
-        <td>tpcNSigmaEl</td>
-        <td>float</td>
-        <td>Nsigma separation with the TPC detector for electron</td>
-      </tr>
-      <tr>
-        <td>o2::aod::pidtpc::TPCNSigmaMu</td>
-        <td></td>
-        <td>tpcNSigmaMu</td>
-        <td>float</td>
-        <td>Nsigma separation with the TPC detector for muon</td>
-      </tr>
-      <tr>
-        <td>o2::aod::pidtpc::TPCNSigmaPi</td>
-        <td></td>
-        <td>tpcNSigmaPi</td>
-        <td>float</td>
-        <td>Nsigma separation with the TPC detector for pion</td>
-      </tr>
-      <tr>
-        <td>o2::aod::pidtpc::TPCNSigmaKa</td>
-        <td></td>
-        <td>tpcNSigmaKa</td>
-        <td>float</td>
-        <td>Nsigma separation with the TPC detector for kaon</td>
-      </tr>
-      <tr>
-        <td>o2::aod::pidtpc::TPCNSigmaPr</td>
-        <td></td>
-        <td>tpcNSigmaPr</td>
-        <td>float</td>
-        <td>Nsigma separation with the TPC detector for proton</td>
-      </tr>
-      <tr>
-        <td>o2::aod::pidtofbeta::Beta</td>
-        <td></td>
-        <td>beta</td>
-        <td>float</td>
-        <td>TOF beta</td>
-      </tr>
-      <tr>
-        <td>o2::aod::pidtof::TOFNSigmaEl</td>
-        <td></td>
-        <td>tofNSigmaEl</td>
-        <td>float</td>
-        <td>Nsigma separation with the TOF detector for electron</td>
-      </tr>
-      <tr>
-        <td>o2::aod::pidtof::TOFNSigmaMu</td>
-        <td></td>
-        <td>tofNSigmaMu</td>
-        <td>float</td>
-        <td>Nsigma separation with the TOF detector for muon</td>
-      </tr>
-      <tr>
-        <td>o2::aod::pidtof::TOFNSigmaPi</td>
-        <td></td>
-        <td>tofNSigmaPi</td>
-        <td>float</td>
-        <td>Nsigma separation with the TOF detector for pion</td>
-      </tr>
-      <tr>
-        <td>o2::aod::pidtof::TOFNSigmaKa</td>
-        <td></td>
-        <td>tofNSigmaKa</td>
-        <td>float</td>
-        <td>Nsigma separation with the TOF detector for kaon</td>
-      </tr>
-      <tr>
-        <td>o2::aod::pidtof::TOFNSigmaPr</td>
-        <td></td>
-        <td>tofNSigmaPr</td>
-        <td>float</td>
-        <td>Nsigma separation with the TOF detector for proton</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::ITSClusterSizes</td>
-        <td></td>
-        <td>itsClusterSizes</td>
-        <td>uint32_t</td>
-        <td>Clusters sizes, four bits per a layer, starting from the innermost</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::ITSChi2NCl</td>
-        <td></td>
-        <td>itsChi2NCl</td>
-        <td>float</td>
-        <td>Chi2 / cluster for the ITS track segment</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::DetectorMap</td>
-        <td>E</td>
-        <td>detectorMap</td>
-        <td>uint8_t</td>
-        <td>Detector map: see enum DetectorMapEnum</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::X</td>
-        <td></td>
-        <td>x</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::Alpha</td>
-        <td></td>
-        <td>alpha</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::Y</td>
-        <td></td>
-        <td>y</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::Z</td>
-        <td></td>
-        <td>z</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::Snp</td>
-        <td></td>
-        <td>snp</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::Tgl</td>
-        <td></td>
-        <td>tgl</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::emprimaryelectron::IsAssociatedToMPC</td>
-        <td></td>
-        <td>isAssociatedToMPC</td>
-        <td>bool</td>
-        <td>is associated to most probable collision</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::TPCNClsFound</td>
-        <td>D</td>
-        <td>tpcNClsFound</td>
-        <td>int16_t</td>
-        <td>Number of found TPC clusters</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::TPCNClsCrossedRows</td>
-        <td>D</td>
-        <td>tpcNClsCrossedRows</td>
-        <td>int16_t</td>
-        <td>Number of crossed TPC Rows</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::TPCCrossedRowsOverFindableCls</td>
-        <td>D</td>
-        <td>tpcCrossedRowsOverFindableCls</td>
-        <td>float</td>
-        <td>Ratio crossed rows over findable clusters</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::TPCFoundOverFindableCls</td>
-        <td>D</td>
-        <td>tpcFoundOverFindableCls</td>
-        <td>float</td>
-        <td>Ratio of found over findable clusters</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::TPCFractionSharedCls</td>
-        <td>D</td>
-        <td>tpcFractionSharedCls</td>
-        <td>float</td>
-        <td>Fraction of shared TPC clusters</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::v001::ITSClusterMap</td>
-        <td>D</td>
-        <td>itsClusterMap</td>
-        <td>uint8_t</td>
-        <td>ITS cluster map, one bit per a layer, starting from the innermost</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::v001::ITSNCls</td>
-        <td>D</td>
-        <td>itsNCls</td>
-        <td>uint8_t</td>
-        <td>Number of ITS clusters</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::v001::ITSNClsInnerBarrel</td>
-        <td>D</td>
-        <td>itsNClsInnerBarrel</td>
-        <td>uint8_t</td>
-        <td>Number of ITS clusters in the Inner Barrel</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::HasITS</td>
-        <td>D</td>
-        <td>hasITS</td>
-        <td>bool</td>
-        <td>Flag to check if track has a ITS match</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::HasTPC</td>
-        <td>D</td>
-        <td>hasTPC</td>
-        <td>bool</td>
-        <td>Flag to check if track has a TPC match</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::HasTRD</td>
-        <td>D</td>
-        <td>hasTRD</td>
-        <td>bool</td>
-        <td>Flag to check if track has a TRD match</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::HasTOF</td>
-        <td>D</td>
-        <td>hasTOF</td>
-        <td>bool</td>
-        <td>Flag to check if track has a TOF measurement</td>
-      </tr>
-      <tr>
-        <td>o2::aod::emprimaryelectron::Signed1Pt</td>
-        <td>D</td>
-        <td>signed1Pt</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::emprimaryelectron::P</td>
-        <td>D</td>
-        <td>p</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::emprimaryelectron::Px</td>
-        <td>D</td>
-        <td>px</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::emprimaryelectron::Py</td>
-        <td>D</td>
-        <td>py</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::emprimaryelectron::Pz</td>
-        <td>D</td>
-        <td>pz</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::emprimaryelectron::Theta</td>
-        <td>D</td>
-        <td>theta</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::emprimaryelectron::MeanClusterSizeITS</td>
-        <td>D</td>
-        <td>meanClusterSizeITS</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::emprimaryelectron::MeanClusterSizeITSib</td>
-        <td>D</td>
-        <td>meanClusterSizeITSib</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::emprimaryelectron::MeanClusterSizeITSob</td>
-        <td>D</td>
-        <td>meanClusterSizeITSob</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-    </table>
-  </div>
 
   <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::EMPrimaryElectronsCov</button>
   <div class="panel">
@@ -23306,121 +22279,6 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGEM
 Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGEM/Dilepton/TableProducer//skimmerSecondaryElectron.cxx" target="_blank">skimmerSecondaryElectron.cxx</a>
 <div>
 
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::EMEvents</button>
-  <div class="panel">
-    <div>
-       Main event information table
-    </div>
-    <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGEM/Dilepton/DataModel/dileptonTables.h" target="_blank">PWGEM/Dilepton/DataModel/dileptonTables.h</a>
-    </div>
-    <div>Is used in:
-      <ul>
-        <li>o2::aod::EMEvent = o2::aod::EMEvents::iterator</li>
-      </ul>
-    </div>
-    <table class=DataModel>
-      <tr>
-        <th>Name</th>
-        <th></th>
-        <th>Getter</th>
-        <th>Type</th>
-        <th>Comment</th>
-      </tr>
-      <tr>
-        <td>o2::soa::Index</td>
-        <td>GI</td>
-        <td>globalIndex</td>
-        <td>int64_t</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::emevent::CollisionId</td>
-        <td></td>
-        <td>collisionId</td>
-        <td>int</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::bc::RunNumber</td>
-        <td></td>
-        <td>runNumber</td>
-        <td>int</td>
-        <td>Run number</td>
-      </tr>
-      <tr>
-        <td>o2::aod::bc::GlobalBC</td>
-        <td></td>
-        <td>globalBC</td>
-        <td>uint64_t</td>
-        <td>Bunch crossing number (globally unique in this run)</td>
-      </tr>
-      <tr>
-        <td>o2::aod::evsel::Alias</td>
-        <td>GI</td>
-        <td></td>
-        <td>?</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::evsel::Selection</td>
-        <td>GI</td>
-        <td></td>
-        <td>?</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::timestamp::Timestamp</td>
-        <td></td>
-        <td>timestamp</td>
-        <td>uint64_t</td>
-        <td>Timestamp of a BC in ms (epoch style)</td>
-      </tr>
-      <tr>
-        <td>o2::aod::&zwnj;collision::PosX</td>
-        <td></td>
-        <td>posX</td>
-        <td>float</td>
-        <td>X Vertex position in cm</td>
-      </tr>
-      <tr>
-        <td>o2::aod::&zwnj;collision::PosY</td>
-        <td></td>
-        <td>posY</td>
-        <td>float</td>
-        <td>Y Vertex position in cm</td>
-      </tr>
-      <tr>
-        <td>o2::aod::&zwnj;collision::PosZ</td>
-        <td></td>
-        <td>posZ</td>
-        <td>float</td>
-        <td>Z Vertex position in cm</td>
-      </tr>
-      <tr>
-        <td>o2::aod::&zwnj;collision::NumContrib</td>
-        <td></td>
-        <td>numContrib</td>
-        <td>uint16_t</td>
-        <td>Number of tracks used for the vertex</td>
-      </tr>
-      <tr>
-        <td>o2::aod::evsel::NumTracksInTimeRange</td>
-        <td></td>
-        <td>trackOccupancyInTimeRange</td>
-        <td>int</td>
-        <td>Occupancy in specified time interval by a number of tracks from nearby collisions</td>
-      </tr>
-      <tr>
-        <td>o2::aod::emevent::Sel8</td>
-        <td>D</td>
-        <td>sel8</td>
-        <td>bool</td>
-        <td></td>
-      </tr>
-    </table>
-  </div>
-
   <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::EMEventsMult</button>
   <div class="panel">
     <div>
@@ -23894,436 +22752,6 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGEM
     </table>
   </div>
 
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::EMPrimaryElectrons</button>
-  <div class="panel">
-    <div>
-
-    </div>
-    <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGEM/Dilepton/DataModel/dileptonTables.h" target="_blank">PWGEM/Dilepton/DataModel/dileptonTables.h</a>
-    </div>
-    <div>Is used in:
-      <ul>
-        <li>o2::aod::EMPrimaryElectron = o2::aod::EMPrimaryElectrons::iterator</li>
-      </ul>
-    </div>
-    <table class=DataModel>
-      <tr>
-        <th>Name</th>
-        <th></th>
-        <th>Getter</th>
-        <th>Type</th>
-        <th>Comment</th>
-      </tr>
-      <tr>
-        <td>o2::soa::Index</td>
-        <td>GI</td>
-        <td>globalIndex</td>
-        <td>int64_t</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::emprimaryelectron::CollisionId</td>
-        <td></td>
-        <td>collisionId</td>
-        <td>int</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::emprimaryelectron::TrackId</td>
-        <td></td>
-        <td>trackId</td>
-        <td>int</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::emprimaryelectron::Sign</td>
-        <td></td>
-        <td>sign</td>
-        <td>int8_t</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::Pt</td>
-        <td>E</td>
-        <td>pt</td>
-        <td>float</td>
-        <td>Transverse momentum of the track in GeV/c</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::Eta</td>
-        <td>E</td>
-        <td>eta</td>
-        <td>float</td>
-        <td>Pseudorapidity</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::Phi</td>
-        <td>E</td>
-        <td>phi</td>
-        <td>float</td>
-        <td>Phi of the track, in radians within [0, 2pi)</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::DcaXY</td>
-        <td></td>
-        <td>dcaXY</td>
-        <td>float</td>
-        <td>Impact parameter in XY of the track to the primary vertex</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::DcaZ</td>
-        <td></td>
-        <td>dcaZ</td>
-        <td>float</td>
-        <td>Impact parameter in Z of the track to the primary vertex</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::TPCNClsFindable</td>
-        <td></td>
-        <td>tpcNClsFindable</td>
-        <td>uint8_t</td>
-        <td>Findable TPC clusters for this track geometry</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::TPCNClsFindableMinusFound</td>
-        <td></td>
-        <td>tpcNClsFindableMinusFound</td>
-        <td>int8_t</td>
-        <td>TPC Clusters: Findable - Found</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::TPCNClsFindableMinusCrossedRows</td>
-        <td></td>
-        <td>tpcNClsFindableMinusCrossedRows</td>
-        <td>int8_t</td>
-        <td>TPC Clusters: Findable - crossed rows</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::TPCNClsShared</td>
-        <td></td>
-        <td>tpcNClsShared</td>
-        <td>uint8_t</td>
-        <td>Number of shared TPC clusters</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::TPCChi2NCl</td>
-        <td></td>
-        <td>tpcChi2NCl</td>
-        <td>float</td>
-        <td>Chi2 / cluster for the TPC track segment</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::TPCInnerParam</td>
-        <td></td>
-        <td>tpcInnerParam</td>
-        <td>float</td>
-        <td>Momentum at inner wall of the TPC</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::TPCSignal</td>
-        <td></td>
-        <td>tpcSignal</td>
-        <td>float</td>
-        <td>dE/dx signal in the TPC</td>
-      </tr>
-      <tr>
-        <td>o2::aod::pidtpc::TPCNSigmaEl</td>
-        <td></td>
-        <td>tpcNSigmaEl</td>
-        <td>float</td>
-        <td>Nsigma separation with the TPC detector for electron</td>
-      </tr>
-      <tr>
-        <td>o2::aod::pidtpc::TPCNSigmaMu</td>
-        <td></td>
-        <td>tpcNSigmaMu</td>
-        <td>float</td>
-        <td>Nsigma separation with the TPC detector for muon</td>
-      </tr>
-      <tr>
-        <td>o2::aod::pidtpc::TPCNSigmaPi</td>
-        <td></td>
-        <td>tpcNSigmaPi</td>
-        <td>float</td>
-        <td>Nsigma separation with the TPC detector for pion</td>
-      </tr>
-      <tr>
-        <td>o2::aod::pidtpc::TPCNSigmaKa</td>
-        <td></td>
-        <td>tpcNSigmaKa</td>
-        <td>float</td>
-        <td>Nsigma separation with the TPC detector for kaon</td>
-      </tr>
-      <tr>
-        <td>o2::aod::pidtpc::TPCNSigmaPr</td>
-        <td></td>
-        <td>tpcNSigmaPr</td>
-        <td>float</td>
-        <td>Nsigma separation with the TPC detector for proton</td>
-      </tr>
-      <tr>
-        <td>o2::aod::pidtofbeta::Beta</td>
-        <td></td>
-        <td>beta</td>
-        <td>float</td>
-        <td>TOF beta</td>
-      </tr>
-      <tr>
-        <td>o2::aod::pidtof::TOFNSigmaEl</td>
-        <td></td>
-        <td>tofNSigmaEl</td>
-        <td>float</td>
-        <td>Nsigma separation with the TOF detector for electron</td>
-      </tr>
-      <tr>
-        <td>o2::aod::pidtof::TOFNSigmaMu</td>
-        <td></td>
-        <td>tofNSigmaMu</td>
-        <td>float</td>
-        <td>Nsigma separation with the TOF detector for muon</td>
-      </tr>
-      <tr>
-        <td>o2::aod::pidtof::TOFNSigmaPi</td>
-        <td></td>
-        <td>tofNSigmaPi</td>
-        <td>float</td>
-        <td>Nsigma separation with the TOF detector for pion</td>
-      </tr>
-      <tr>
-        <td>o2::aod::pidtof::TOFNSigmaKa</td>
-        <td></td>
-        <td>tofNSigmaKa</td>
-        <td>float</td>
-        <td>Nsigma separation with the TOF detector for kaon</td>
-      </tr>
-      <tr>
-        <td>o2::aod::pidtof::TOFNSigmaPr</td>
-        <td></td>
-        <td>tofNSigmaPr</td>
-        <td>float</td>
-        <td>Nsigma separation with the TOF detector for proton</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::ITSClusterSizes</td>
-        <td></td>
-        <td>itsClusterSizes</td>
-        <td>uint32_t</td>
-        <td>Clusters sizes, four bits per a layer, starting from the innermost</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::ITSChi2NCl</td>
-        <td></td>
-        <td>itsChi2NCl</td>
-        <td>float</td>
-        <td>Chi2 / cluster for the ITS track segment</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::DetectorMap</td>
-        <td>E</td>
-        <td>detectorMap</td>
-        <td>uint8_t</td>
-        <td>Detector map: see enum DetectorMapEnum</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::X</td>
-        <td></td>
-        <td>x</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::Alpha</td>
-        <td></td>
-        <td>alpha</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::Y</td>
-        <td></td>
-        <td>y</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::Z</td>
-        <td></td>
-        <td>z</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::Snp</td>
-        <td></td>
-        <td>snp</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::Tgl</td>
-        <td></td>
-        <td>tgl</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::emprimaryelectron::IsAssociatedToMPC</td>
-        <td></td>
-        <td>isAssociatedToMPC</td>
-        <td>bool</td>
-        <td>is associated to most probable collision</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::TPCNClsFound</td>
-        <td>D</td>
-        <td>tpcNClsFound</td>
-        <td>int16_t</td>
-        <td>Number of found TPC clusters</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::TPCNClsCrossedRows</td>
-        <td>D</td>
-        <td>tpcNClsCrossedRows</td>
-        <td>int16_t</td>
-        <td>Number of crossed TPC Rows</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::TPCCrossedRowsOverFindableCls</td>
-        <td>D</td>
-        <td>tpcCrossedRowsOverFindableCls</td>
-        <td>float</td>
-        <td>Ratio crossed rows over findable clusters</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::TPCFoundOverFindableCls</td>
-        <td>D</td>
-        <td>tpcFoundOverFindableCls</td>
-        <td>float</td>
-        <td>Ratio of found over findable clusters</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::TPCFractionSharedCls</td>
-        <td>D</td>
-        <td>tpcFractionSharedCls</td>
-        <td>float</td>
-        <td>Fraction of shared TPC clusters</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::v001::ITSClusterMap</td>
-        <td>D</td>
-        <td>itsClusterMap</td>
-        <td>uint8_t</td>
-        <td>ITS cluster map, one bit per a layer, starting from the innermost</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::v001::ITSNCls</td>
-        <td>D</td>
-        <td>itsNCls</td>
-        <td>uint8_t</td>
-        <td>Number of ITS clusters</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::v001::ITSNClsInnerBarrel</td>
-        <td>D</td>
-        <td>itsNClsInnerBarrel</td>
-        <td>uint8_t</td>
-        <td>Number of ITS clusters in the Inner Barrel</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::HasITS</td>
-        <td>D</td>
-        <td>hasITS</td>
-        <td>bool</td>
-        <td>Flag to check if track has a ITS match</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::HasTPC</td>
-        <td>D</td>
-        <td>hasTPC</td>
-        <td>bool</td>
-        <td>Flag to check if track has a TPC match</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::HasTRD</td>
-        <td>D</td>
-        <td>hasTRD</td>
-        <td>bool</td>
-        <td>Flag to check if track has a TRD match</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::HasTOF</td>
-        <td>D</td>
-        <td>hasTOF</td>
-        <td>bool</td>
-        <td>Flag to check if track has a TOF measurement</td>
-      </tr>
-      <tr>
-        <td>o2::aod::emprimaryelectron::Signed1Pt</td>
-        <td>D</td>
-        <td>signed1Pt</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::emprimaryelectron::P</td>
-        <td>D</td>
-        <td>p</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::emprimaryelectron::Px</td>
-        <td>D</td>
-        <td>px</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::emprimaryelectron::Py</td>
-        <td>D</td>
-        <td>py</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::emprimaryelectron::Pz</td>
-        <td>D</td>
-        <td>pz</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::emprimaryelectron::Theta</td>
-        <td>D</td>
-        <td>theta</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::emprimaryelectron::MeanClusterSizeITS</td>
-        <td>D</td>
-        <td>meanClusterSizeITS</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::emprimaryelectron::MeanClusterSizeITSib</td>
-        <td>D</td>
-        <td>meanClusterSizeITSib</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::emprimaryelectron::MeanClusterSizeITSob</td>
-        <td>D</td>
-        <td>meanClusterSizeITSob</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-    </table>
-  </div>
-
   <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::EMPrimaryElectronsCov</button>
   <div class="panel">
     <div>
@@ -24718,6 +23146,13 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGEM
         <td>Chi2 / cluster for the ITS track segment</td>
       </tr>
       <tr>
+        <td>o2::aod::track::TOFChi2</td>
+        <td></td>
+        <td>tofChi2</td>
+        <td>float</td>
+        <td>Chi2 for the TOF track segment</td>
+      </tr>
+      <tr>
         <td>o2::aod::track::DetectorMap</td>
         <td>E</td>
         <td>detectorMap</td>
@@ -24751,713 +23186,6 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGEM
         <td>meanClusterSizeITS</td>
         <td>float</td>
         <td></td>
-      </tr>
-    </table>
-  </div>
-
-</div>
-
-###  o2-analysis-em-tree-creator-single-electron-qa
-Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGEM/Dilepton/TableProducer//treeCreatorSingleElectronQA.cxx" target="_blank">treeCreatorSingleElectronQA.cxx</a>
-<div>
-
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::EMEvents</button>
-  <div class="panel">
-    <div>
-       Main event information table
-    </div>
-    <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGEM/Dilepton/DataModel/dileptonTables.h" target="_blank">PWGEM/Dilepton/DataModel/dileptonTables.h</a>
-    </div>
-    <div>Is used in:
-      <ul>
-        <li>o2::aod::EMEvent = o2::aod::EMEvents::iterator</li>
-      </ul>
-    </div>
-    <table class=DataModel>
-      <tr>
-        <th>Name</th>
-        <th></th>
-        <th>Getter</th>
-        <th>Type</th>
-        <th>Comment</th>
-      </tr>
-      <tr>
-        <td>o2::soa::Index</td>
-        <td>GI</td>
-        <td>globalIndex</td>
-        <td>int64_t</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::emevent::CollisionId</td>
-        <td></td>
-        <td>collisionId</td>
-        <td>int</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::bc::RunNumber</td>
-        <td></td>
-        <td>runNumber</td>
-        <td>int</td>
-        <td>Run number</td>
-      </tr>
-      <tr>
-        <td>o2::aod::bc::GlobalBC</td>
-        <td></td>
-        <td>globalBC</td>
-        <td>uint64_t</td>
-        <td>Bunch crossing number (globally unique in this run)</td>
-      </tr>
-      <tr>
-        <td>o2::aod::evsel::Alias</td>
-        <td>GI</td>
-        <td></td>
-        <td>?</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::evsel::Selection</td>
-        <td>GI</td>
-        <td></td>
-        <td>?</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::timestamp::Timestamp</td>
-        <td></td>
-        <td>timestamp</td>
-        <td>uint64_t</td>
-        <td>Timestamp of a BC in ms (epoch style)</td>
-      </tr>
-      <tr>
-        <td>o2::aod::&zwnj;collision::PosX</td>
-        <td></td>
-        <td>posX</td>
-        <td>float</td>
-        <td>X Vertex position in cm</td>
-      </tr>
-      <tr>
-        <td>o2::aod::&zwnj;collision::PosY</td>
-        <td></td>
-        <td>posY</td>
-        <td>float</td>
-        <td>Y Vertex position in cm</td>
-      </tr>
-      <tr>
-        <td>o2::aod::&zwnj;collision::PosZ</td>
-        <td></td>
-        <td>posZ</td>
-        <td>float</td>
-        <td>Z Vertex position in cm</td>
-      </tr>
-      <tr>
-        <td>o2::aod::&zwnj;collision::NumContrib</td>
-        <td></td>
-        <td>numContrib</td>
-        <td>uint16_t</td>
-        <td>Number of tracks used for the vertex</td>
-      </tr>
-      <tr>
-        <td>o2::aod::evsel::NumTracksInTimeRange</td>
-        <td></td>
-        <td>trackOccupancyInTimeRange</td>
-        <td>int</td>
-        <td>Occupancy in specified time interval by a number of tracks from nearby collisions</td>
-      </tr>
-      <tr>
-        <td>o2::aod::emevent::Sel8</td>
-        <td>D</td>
-        <td>sel8</td>
-        <td>bool</td>
-        <td></td>
-      </tr>
-    </table>
-  </div>
-
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::EMEventsMult</button>
-  <div class="panel">
-    <div>
-       event multiplicity table, joinable to EMEvents
-    </div>
-    <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGEM/Dilepton/DataModel/dileptonTables.h" target="_blank">PWGEM/Dilepton/DataModel/dileptonTables.h</a>
-    </div>
-    <div>Is used in:
-      <ul>
-        <li>o2::aod::EMEventMult = o2::aod::EMEventsMult::iterator</li>
-      </ul>
-    </div>
-    <table class=DataModel>
-      <tr>
-        <th>Name</th>
-        <th></th>
-        <th>Getter</th>
-        <th>Type</th>
-        <th>Comment</th>
-      </tr>
-      <tr>
-        <td>o2::aod::mult::MultFT0A</td>
-        <td></td>
-        <td>multFT0A</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::mult::MultFT0C</td>
-        <td></td>
-        <td>multFT0C</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::mult::MultNTracksPV</td>
-        <td></td>
-        <td>multNTracksPV</td>
-        <td>int</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::mult::MultNTracksPVeta1</td>
-        <td></td>
-        <td>multNTracksPVeta1</td>
-        <td>int</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::mult::MultNTracksPVetaHalf</td>
-        <td></td>
-        <td>multNTracksPVetaHalf</td>
-        <td>int</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::mult::IsInelGt0</td>
-        <td>D</td>
-        <td>isInelGt0</td>
-        <td>bool</td>
-        <td>is INEL > 0</td>
-      </tr>
-      <tr>
-        <td>o2::aod::mult::IsInelGt1</td>
-        <td>D</td>
-        <td>isInelGt1</td>
-        <td>bool</td>
-        <td>is INEL > 1</td>
-      </tr>
-      <tr>
-        <td>o2::aod::mult::MultFT0M</td>
-        <td>D</td>
-        <td>multFT0M</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-    </table>
-  </div>
-
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::EMEventsCent</button>
-  <div class="panel">
-    <div>
-       event centrality table, joinable to EMEvents
-    </div>
-    <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGEM/Dilepton/DataModel/dileptonTables.h" target="_blank">PWGEM/Dilepton/DataModel/dileptonTables.h</a>
-    </div>
-    <div>Is used in:
-      <ul>
-        <li>o2::aod::EMEventCent = o2::aod::EMEventsCent::iterator</li>
-      </ul>
-    </div>
-    <table class=DataModel>
-      <tr>
-        <th>Name</th>
-        <th></th>
-        <th>Getter</th>
-        <th>Type</th>
-        <th>Comment</th>
-      </tr>
-      <tr>
-        <td>o2::aod::cent::CentFT0M</td>
-        <td></td>
-        <td>centFT0M</td>
-        <td>float</td>
-        <td>Run3 centrality percentile estimated from FT0A+FT0C multiplicities</td>
-      </tr>
-      <tr>
-        <td>o2::aod::cent::CentFT0A</td>
-        <td></td>
-        <td>centFT0A</td>
-        <td>float</td>
-        <td>Run3 centrality percentile estimated from FT0A multiplicity</td>
-      </tr>
-      <tr>
-        <td>o2::aod::cent::CentFT0C</td>
-        <td></td>
-        <td>centFT0C</td>
-        <td>float</td>
-        <td>Run3 centrality percentile estimated from FT0C multiplicity</td>
-      </tr>
-    </table>
-  </div>
-
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::EMPrimaryElectrons</button>
-  <div class="panel">
-    <div>
-
-    </div>
-    <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGEM/Dilepton/DataModel/dileptonTables.h" target="_blank">PWGEM/Dilepton/DataModel/dileptonTables.h</a>
-    </div>
-    <div>Is used in:
-      <ul>
-        <li>o2::aod::EMPrimaryElectron = o2::aod::EMPrimaryElectrons::iterator</li>
-      </ul>
-    </div>
-    <table class=DataModel>
-      <tr>
-        <th>Name</th>
-        <th></th>
-        <th>Getter</th>
-        <th>Type</th>
-        <th>Comment</th>
-      </tr>
-      <tr>
-        <td>o2::soa::Index</td>
-        <td>GI</td>
-        <td>globalIndex</td>
-        <td>int64_t</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::emprimaryelectron::CollisionId</td>
-        <td></td>
-        <td>collisionId</td>
-        <td>int</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::emprimaryelectron::TrackId</td>
-        <td></td>
-        <td>trackId</td>
-        <td>int</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::emprimaryelectron::Sign</td>
-        <td></td>
-        <td>sign</td>
-        <td>int8_t</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::Pt</td>
-        <td>E</td>
-        <td>pt</td>
-        <td>float</td>
-        <td>Transverse momentum of the track in GeV/c</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::Eta</td>
-        <td>E</td>
-        <td>eta</td>
-        <td>float</td>
-        <td>Pseudorapidity</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::Phi</td>
-        <td>E</td>
-        <td>phi</td>
-        <td>float</td>
-        <td>Phi of the track, in radians within [0, 2pi)</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::DcaXY</td>
-        <td></td>
-        <td>dcaXY</td>
-        <td>float</td>
-        <td>Impact parameter in XY of the track to the primary vertex</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::DcaZ</td>
-        <td></td>
-        <td>dcaZ</td>
-        <td>float</td>
-        <td>Impact parameter in Z of the track to the primary vertex</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::TPCNClsFindable</td>
-        <td></td>
-        <td>tpcNClsFindable</td>
-        <td>uint8_t</td>
-        <td>Findable TPC clusters for this track geometry</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::TPCNClsFindableMinusFound</td>
-        <td></td>
-        <td>tpcNClsFindableMinusFound</td>
-        <td>int8_t</td>
-        <td>TPC Clusters: Findable - Found</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::TPCNClsFindableMinusCrossedRows</td>
-        <td></td>
-        <td>tpcNClsFindableMinusCrossedRows</td>
-        <td>int8_t</td>
-        <td>TPC Clusters: Findable - crossed rows</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::TPCNClsShared</td>
-        <td></td>
-        <td>tpcNClsShared</td>
-        <td>uint8_t</td>
-        <td>Number of shared TPC clusters</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::TPCChi2NCl</td>
-        <td></td>
-        <td>tpcChi2NCl</td>
-        <td>float</td>
-        <td>Chi2 / cluster for the TPC track segment</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::TPCInnerParam</td>
-        <td></td>
-        <td>tpcInnerParam</td>
-        <td>float</td>
-        <td>Momentum at inner wall of the TPC</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::TPCSignal</td>
-        <td></td>
-        <td>tpcSignal</td>
-        <td>float</td>
-        <td>dE/dx signal in the TPC</td>
-      </tr>
-      <tr>
-        <td>o2::aod::pidtpc::TPCNSigmaEl</td>
-        <td></td>
-        <td>tpcNSigmaEl</td>
-        <td>float</td>
-        <td>Nsigma separation with the TPC detector for electron</td>
-      </tr>
-      <tr>
-        <td>o2::aod::pidtpc::TPCNSigmaMu</td>
-        <td></td>
-        <td>tpcNSigmaMu</td>
-        <td>float</td>
-        <td>Nsigma separation with the TPC detector for muon</td>
-      </tr>
-      <tr>
-        <td>o2::aod::pidtpc::TPCNSigmaPi</td>
-        <td></td>
-        <td>tpcNSigmaPi</td>
-        <td>float</td>
-        <td>Nsigma separation with the TPC detector for pion</td>
-      </tr>
-      <tr>
-        <td>o2::aod::pidtpc::TPCNSigmaKa</td>
-        <td></td>
-        <td>tpcNSigmaKa</td>
-        <td>float</td>
-        <td>Nsigma separation with the TPC detector for kaon</td>
-      </tr>
-      <tr>
-        <td>o2::aod::pidtpc::TPCNSigmaPr</td>
-        <td></td>
-        <td>tpcNSigmaPr</td>
-        <td>float</td>
-        <td>Nsigma separation with the TPC detector for proton</td>
-      </tr>
-      <tr>
-        <td>o2::aod::pidtofbeta::Beta</td>
-        <td></td>
-        <td>beta</td>
-        <td>float</td>
-        <td>TOF beta</td>
-      </tr>
-      <tr>
-        <td>o2::aod::pidtof::TOFNSigmaEl</td>
-        <td></td>
-        <td>tofNSigmaEl</td>
-        <td>float</td>
-        <td>Nsigma separation with the TOF detector for electron</td>
-      </tr>
-      <tr>
-        <td>o2::aod::pidtof::TOFNSigmaMu</td>
-        <td></td>
-        <td>tofNSigmaMu</td>
-        <td>float</td>
-        <td>Nsigma separation with the TOF detector for muon</td>
-      </tr>
-      <tr>
-        <td>o2::aod::pidtof::TOFNSigmaPi</td>
-        <td></td>
-        <td>tofNSigmaPi</td>
-        <td>float</td>
-        <td>Nsigma separation with the TOF detector for pion</td>
-      </tr>
-      <tr>
-        <td>o2::aod::pidtof::TOFNSigmaKa</td>
-        <td></td>
-        <td>tofNSigmaKa</td>
-        <td>float</td>
-        <td>Nsigma separation with the TOF detector for kaon</td>
-      </tr>
-      <tr>
-        <td>o2::aod::pidtof::TOFNSigmaPr</td>
-        <td></td>
-        <td>tofNSigmaPr</td>
-        <td>float</td>
-        <td>Nsigma separation with the TOF detector for proton</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::ITSClusterSizes</td>
-        <td></td>
-        <td>itsClusterSizes</td>
-        <td>uint32_t</td>
-        <td>Clusters sizes, four bits per a layer, starting from the innermost</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::ITSChi2NCl</td>
-        <td></td>
-        <td>itsChi2NCl</td>
-        <td>float</td>
-        <td>Chi2 / cluster for the ITS track segment</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::DetectorMap</td>
-        <td>E</td>
-        <td>detectorMap</td>
-        <td>uint8_t</td>
-        <td>Detector map: see enum DetectorMapEnum</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::X</td>
-        <td></td>
-        <td>x</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::Alpha</td>
-        <td></td>
-        <td>alpha</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::Y</td>
-        <td></td>
-        <td>y</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::Z</td>
-        <td></td>
-        <td>z</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::Snp</td>
-        <td></td>
-        <td>snp</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::Tgl</td>
-        <td></td>
-        <td>tgl</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::emprimaryelectron::IsAssociatedToMPC</td>
-        <td></td>
-        <td>isAssociatedToMPC</td>
-        <td>bool</td>
-        <td>is associated to most probable collision</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::TPCNClsFound</td>
-        <td>D</td>
-        <td>tpcNClsFound</td>
-        <td>int16_t</td>
-        <td>Number of found TPC clusters</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::TPCNClsCrossedRows</td>
-        <td>D</td>
-        <td>tpcNClsCrossedRows</td>
-        <td>int16_t</td>
-        <td>Number of crossed TPC Rows</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::TPCCrossedRowsOverFindableCls</td>
-        <td>D</td>
-        <td>tpcCrossedRowsOverFindableCls</td>
-        <td>float</td>
-        <td>Ratio crossed rows over findable clusters</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::TPCFoundOverFindableCls</td>
-        <td>D</td>
-        <td>tpcFoundOverFindableCls</td>
-        <td>float</td>
-        <td>Ratio of found over findable clusters</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::TPCFractionSharedCls</td>
-        <td>D</td>
-        <td>tpcFractionSharedCls</td>
-        <td>float</td>
-        <td>Fraction of shared TPC clusters</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::v001::ITSClusterMap</td>
-        <td>D</td>
-        <td>itsClusterMap</td>
-        <td>uint8_t</td>
-        <td>ITS cluster map, one bit per a layer, starting from the innermost</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::v001::ITSNCls</td>
-        <td>D</td>
-        <td>itsNCls</td>
-        <td>uint8_t</td>
-        <td>Number of ITS clusters</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::v001::ITSNClsInnerBarrel</td>
-        <td>D</td>
-        <td>itsNClsInnerBarrel</td>
-        <td>uint8_t</td>
-        <td>Number of ITS clusters in the Inner Barrel</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::HasITS</td>
-        <td>D</td>
-        <td>hasITS</td>
-        <td>bool</td>
-        <td>Flag to check if track has a ITS match</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::HasTPC</td>
-        <td>D</td>
-        <td>hasTPC</td>
-        <td>bool</td>
-        <td>Flag to check if track has a TPC match</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::HasTRD</td>
-        <td>D</td>
-        <td>hasTRD</td>
-        <td>bool</td>
-        <td>Flag to check if track has a TRD match</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::HasTOF</td>
-        <td>D</td>
-        <td>hasTOF</td>
-        <td>bool</td>
-        <td>Flag to check if track has a TOF measurement</td>
-      </tr>
-      <tr>
-        <td>o2::aod::emprimaryelectron::Signed1Pt</td>
-        <td>D</td>
-        <td>signed1Pt</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::emprimaryelectron::P</td>
-        <td>D</td>
-        <td>p</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::emprimaryelectron::Px</td>
-        <td>D</td>
-        <td>px</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::emprimaryelectron::Py</td>
-        <td>D</td>
-        <td>py</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::emprimaryelectron::Pz</td>
-        <td>D</td>
-        <td>pz</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::emprimaryelectron::Theta</td>
-        <td>D</td>
-        <td>theta</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::emprimaryelectron::MeanClusterSizeITS</td>
-        <td>D</td>
-        <td>meanClusterSizeITS</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::emprimaryelectron::MeanClusterSizeITSib</td>
-        <td>D</td>
-        <td>meanClusterSizeITSib</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::emprimaryelectron::MeanClusterSizeITSob</td>
-        <td>D</td>
-        <td>meanClusterSizeITSob</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-    </table>
-  </div>
-
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::EMPrimaryElectronEMEventIds</button>
-  <div class="panel">
-    <div>
-
-    </div>
-    <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGEM/Dilepton/DataModel/dileptonTables.h" target="_blank">PWGEM/Dilepton/DataModel/dileptonTables.h</a>
-    </div>
-    <div>Is used in:
-      <ul>
-        <li>o2::aod::EMPrimaryElectronEMEventId = o2::aod::EMPrimaryElectronEMEventIds::iterator</li>
-      </ul>
-    </div>
-    <table class=DataModel>
-      <tr>
-        <th>Name</th>
-        <th></th>
-        <th>Getter</th>
-        <th>Type</th>
-        <th>Comment</th>
-      </tr>
-      <tr>
-        <td>o2::aod::emprimaryelectron::EMEventId</td>
-        <td>I</td>
-        <td>emeventId</td>
-        <td>int32</td>
-        <td>Pointer into EMEvents</td>
       </tr>
     </table>
   </div>
@@ -86558,6 +84286,13 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGLF
         <td></td>
       </tr>
       <tr>
+        <td>o2::aod::hyperrec::TOFMass</td>
+        <td></td>
+        <td>tofMass</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
         <td>o2::aod::hyperrec::ITSclusterSizesHe</td>
         <td></td>
         <td>itsClusterSizesHe</td>
@@ -86848,6 +84583,13 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGLF
         <td></td>
       </tr>
       <tr>
+        <td>o2::aod::hyperrec::TOFMass</td>
+        <td></td>
+        <td>tofMass</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
         <td>o2::aod::hyperrec::ITSclusterSizesHe</td>
         <td></td>
         <td>itsClusterSizesHe</td>
@@ -87092,6 +84834,13 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGLF
         <td>o2::aod::hyperrec::TPCChi2He</td>
         <td></td>
         <td>tpcChi2He</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hyperrec::TOFMass</td>
+        <td></td>
+        <td>tofMass</td>
         <td>float</td>
         <td></td>
       </tr>
@@ -95799,14 +93548,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGLF
         <td>avoid bach-baryon correlated inv mass structure in analysis</td>
       </tr>
       <tr>
-        <td>o2::aod::cascdata::BachBaryonDCAxyToPV)DECLARE_SOA_TABLE_FULL(CascCovs</td>
-        <td>GI</td>
-        <td></td>
-        <td>?</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::``CascCovs''</td>
+        <td>o2::aod::cascdata::BachBaryonDCAxyToPV)DECLARE_SOA_TABLE(CascCovs</td>
         <td>GI</td>
         <td></td>
         <td>?</td>
@@ -95827,18 +93569,25 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGLF
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::cascdata::PositionCovMat</td>
+        <td>o2::aod::cascdata::CovMat</td>
         <td></td>
-        <td>positionCovMat</td>
-        <td>float[6]</td>
+        <td>covMat</td>
+        <td>float[21]</td>
         <td>covariance matrix elements</td>
       </tr>
       <tr>
+        <td>o2::aod::cascdata::PositionCovMat</td>
+        <td>D</td>
+        <td>positionCovMat</td>
+        <td>std::vector&lt;float&gt;</td>
+        <td>for transparent handling</td>
+      </tr>
+      <tr>
         <td>o2::aod::cascdata::MomentumCovMat</td>
-        <td></td>
+        <td>D</td>
         <td>momentumCovMat</td>
-        <td>float[6]</td>
-        <td>covariance matrix elements</td>
+        <td>std::vector&lt;float&gt;</td>
+        <td>for transparent handling</td>
       </tr>
     </table>
   </div>
@@ -95860,18 +93609,25 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGLF
         <th>Comment</th>
       </tr>
       <tr>
-        <td>o2::aod::cascdata::PositionCovMat</td>
+        <td>o2::aod::cascdata::CovMat</td>
         <td></td>
-        <td>positionCovMat</td>
-        <td>float[6]</td>
+        <td>covMat</td>
+        <td>float[21]</td>
         <td>covariance matrix elements</td>
       </tr>
       <tr>
+        <td>o2::aod::cascdata::PositionCovMat</td>
+        <td>D</td>
+        <td>positionCovMat</td>
+        <td>std::vector&lt;float&gt;</td>
+        <td>for transparent handling</td>
+      </tr>
+      <tr>
         <td>o2::aod::cascdata::MomentumCovMat</td>
-        <td></td>
+        <td>D</td>
         <td>momentumCovMat</td>
-        <td>float[6]</td>
-        <td>covariance matrix elements</td>
+        <td>std::vector&lt;float&gt;</td>
+        <td>for transparent handling</td>
       </tr>
     </table>
   </div>
@@ -95919,6 +93675,46 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGLF
         <td>kfTrackCovMatV0DauNeg</td>
         <td>float[21]</td>
         <td>covariance matrix elements for KF method (V0 neg daughter)</td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::TraCascCovs</button>
+  <div class="panel">
+    <div>
+
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGLF/DataModel/LFStrangenessTables.h" target="_blank">PWGLF/DataModel/LFStrangenessTables.h</a>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::cascdata::CovMat</td>
+        <td></td>
+        <td>covMat</td>
+        <td>float[21]</td>
+        <td>covariance matrix elements</td>
+      </tr>
+      <tr>
+        <td>o2::aod::cascdata::PositionCovMat</td>
+        <td>D</td>
+        <td>positionCovMat</td>
+        <td>std::vector&lt;float&gt;</td>
+        <td>for transparent handling</td>
+      </tr>
+      <tr>
+        <td>o2::aod::cascdata::MomentumCovMat</td>
+        <td>D</td>
+        <td>momentumCovMat</td>
+        <td>std::vector&lt;float&gt;</td>
+        <td>for transparent handling</td>
       </tr>
     </table>
   </div>
@@ -95996,6 +93792,12 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGLF
     </div>
     <div>
       Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGLF/DataModel/LFStrangenessTables.h" target="_blank">PWGLF/DataModel/LFStrangenessTables.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::TraCascadesLinked = soa::Join<o2::aod::Cascades, o2::aod::TraCascDataLink></li>
+        <li>o2::aod::TraCascadeLinked = soa::Join<o2::aod::Cascades, o2::aod::TraCascDataLink>::iterator</li>
+      </ul>
     </div>
     <table class=DataModel>
       <tr>
