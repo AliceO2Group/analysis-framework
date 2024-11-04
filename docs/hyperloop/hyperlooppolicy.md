@@ -15,12 +15,16 @@ The image below summarizes the policy:
 
 In general, four categories of trains exist: 
 
-* Trains below 30 TB and taking more than 1.5y of CPU time (red shaded area) are very strongly discouraged. In those cases, please resort to very small trains (where throughputs of even 100 KB/s are allowed with autosubmission) to run. 
-* Trains that are lower than 1.5y in CPU usage and loop over less than 200 TB are free to execute and can be executed on Hyperloop via autosubmission. In a certain region between 30-200 TB, slightly more than 1.5y in CPU time is allowed as long as performance is better than 1 MB/s (green shaded area). 
-* Trains that loop over more than 200 TB and have a throughput of at least 3 MB/s can run, provided that PWG conveners approve them (pink shaded area). 
-* Heavy trains looping over datasets bigger than 200 TB or with low throughput above 30 TB, as marked in the blue region in the plot, require Physics Board approval to run. For those trains, a special analysis budget can be negotiated with the Physics Board.
-
-***Exceptionally***, trains based on metadata (i.e. trains covering multiple periods) are allowed to have throughput between 1 MB/s and 3 MB/s (and not just above 3 MB/s) for a few selected high-priority datasets. This is to provide incentives to running over master datasets and therefore will also increase the likelihood of running common trains with more than one wagon at a time. This exception is marked in the resource group map above.
+* Trains below 30 TB and taking more than 2.0y of CPU time (red shaded area) are very strongly discouraged. In those cases, please resort to very small trains (where throughputs of even 100 KB/s are allowed with autosubmission) to run. 
+* Trains that are lower than 2y in CPU usage and loop over less than 200 TB are free to execute and can be executed on Hyperloop via autosubmission. In a certain region between 30-200 TB, slightly more than 2y in CPU time is allowed (see sketch).
+* Trains that loop over more than 200 TB and less than 800 TB are dealt with as follows: 
+   * if they require less than 10 years of CPU time, they need only PWG convener approval. 
+   * if they require more than 10 years of CPU time but less than 200 years, they need Analysis and Physics Coordinator approval to run.
+   * if they require over 200 years of CPU, they need excplicit PB approval. 
+* Heavy trains looping over datasets bigger than 800 TB are dealt with as follows: 
+   * if they require less than 20 years of CPU time, they need only PWG approval. 
+   * if they require between 20 to 200y of CPU, they can be approved offline by Analysis and Physics Coordination.
+   * if  they require over 200 years of CPU, they need explicit PB approval. 
 
 ## <a name="implementation"></a>Implementation in Hyperloop datasets
 
