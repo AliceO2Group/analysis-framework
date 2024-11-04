@@ -9196,6 +9196,38 @@ For better overview the tables are grouped into the following categories: \| [Ge
   </div>
 
 
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::Run2TrackExtras</button>
+  <div class="panel">
+    <div>
+
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev//Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::Run2TrackExtra = o2::aod::Run2TrackExtras::iterator</li>
+      </ul>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::track::ITSSignal</td>
+        <td></td>
+        <td>itsSignal</td>
+        <td>float</td>
+        <td>dE/dx signal in the ITS (Run 2)</td>
+      </tr>
+    </table>
+  </div>
+
+
   <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::TracksQA</button>
   <div class="panel">
     <div>

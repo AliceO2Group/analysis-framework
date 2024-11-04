@@ -100,6 +100,13 @@ Click on the labels to display the definitions. Click buttons to
     </ul>
   </div>
 
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::Run2TrackExtra</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::Run2TrackExtra = o2::aod::Run2TrackExtras::iterator</li>
+    </ul>
+  </div>
+
   <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::FullTracks</button>
   <div class="panel">
     <ul>
@@ -1038,10 +1045,10 @@ Click on the labels to display the definitions. Click buttons to
     </ul>
   </div>
 
-  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::Hash</button>
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::MixingHash</button>
   <div class="panel">
     <ul>
-        <li>o2::aod::Hash = o2::aod::Hashes::iterator</li>
+        <li>o2::aod::MixingHash = o2::aod::MixingHashes::iterator</li>
     </ul>
   </div>
 
@@ -2242,31 +2249,17 @@ Click on the labels to display the definitions. Click buttons to
     </ul>
   </div>
 
-  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::Hf3PCollBase</button>
-  <div class="panel">
-    <ul>
-        <li>o2::aod::Hf3PCollBase = o2::aod::Hf3PCollBases::iterator</li>
-    </ul>
-  </div>
-
-  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::HfD0McCollBase</button>
-  <div class="panel">
-    <ul>
-        <li>o2::aod::HfD0McCollBase = o2::aod::HfD0McCollBases::iterator</li>
-    </ul>
-  </div>
-
-  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::Hf3PMcCollBase</button>
-  <div class="panel">
-    <ul>
-        <li>o2::aod::Hf3PMcCollBase = o2::aod::Hf3PMcCollBases::iterator</li>
-    </ul>
-  </div>
-
   <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::StoredHfD0CollBase</button>
   <div class="panel">
     <ul>
         <li>o2::aod::StoredHfD0CollBase = o2::aod::StoredHfD0CollBases::iterator</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::Hf3PCollBase</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::Hf3PCollBase = o2::aod::Hf3PCollBases::iterator</li>
     </ul>
   </div>
 
@@ -2277,10 +2270,24 @@ Click on the labels to display the definitions. Click buttons to
     </ul>
   </div>
 
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::HfD0McCollBase</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::HfD0McCollBase = o2::aod::HfD0McCollBases::iterator</li>
+    </ul>
+  </div>
+
   <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::StoredHfD0McCollBase</button>
   <div class="panel">
     <ul>
         <li>o2::aod::StoredHfD0McCollBase = o2::aod::StoredHfD0McCollBases::iterator</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::Hf3PMcCollBase</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::Hf3PMcCollBase = o2::aod::Hf3PMcCollBases::iterator</li>
     </ul>
   </div>
 
@@ -6820,10 +6827,24 @@ Click on the labels to display the definitions. Click buttons to
     </ul>
   </div>
 
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::hf_evsel::MyTraCascTable</button>
+  <div class="panel">
+    <ul>
+        <li>o2::hf_evsel::MyTraCascTable = soa::Join<o2::hf_evsel::aod::TraCascDatas, o2::hf_evsel::aod::TraCascCovs></li>
+    </ul>
+  </div>
+
   <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::hf_evsel::CascadesLinked</button>
   <div class="panel">
     <ul>
         <li>o2::hf_evsel::CascadesLinked = soa::Join<o2::hf_evsel::Cascades, o2::hf_evsel::CascDataLink></li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::hf_evsel::TraCascadesLinked</button>
+  <div class="panel">
+    <ul>
+        <li>o2::hf_evsel::TraCascadesLinked = soa::Join<o2::hf_evsel::Cascades, o2::hf_evsel::TraCascDataLink></li>
     </ul>
   </div>
 
