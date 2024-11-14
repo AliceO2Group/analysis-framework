@@ -56,41 +56,51 @@ See the [Troubleshooting](../troubleshooting/README.md) section for debugging ti
 
 ## Use your local software installations
 
-You will not find the packages you have built immediately available on your shell: we provide a tool
-called `alienv` that configures your shell according to the packages you want to load. `alienv` is
-capable of switching between different versions of the same package without a hassle.
+You will not find the packages you have built immediately available on your shell.
+We provide a tool called `alienv` that configures your shell according to the packages you want to load.
+`alienv` is capable of switching between different versions of the same package without a hassle.
 
-**List your available packages with:**
-
-```bash
-alienv q
-```
-
-**Load the latest version you have built of a package (O2Physics for instance):**
+Load the latest O2Physics version you have built.
 
 ```bash
 alienv enter O2Physics/latest
 ```
 
-_⚠️  Dependencies are loaded automatically. Do not attempt to load O2 or ROOT as well, you will
-find them automatically in the environment! `alienv enter` is verbose and will inform you about the
-loaded packages if you have doubts._
-
-The `alienv enter` command drops you to a new shell. Unload the packages by simply exiting it with
+The `alienv enter` command drops you to a new shell with the O2Physics environment. Unload the packages by simply exiting the environment with
 the `exit` command.
+
+```warning
+Dependencies are loaded automatically. Do not attempt to load O2 or ROOT as well! You will find them automatically in the environment. `alienv enter` is verbose and will inform you about the loaded packages.
+```
+
+```tip
+If you have built several Git branches of O2Physics, you can enter the environment of a given branch `[branch]` with `alienv enter O2Physics/latest-[branch]-o2`.
+
+You can list all your available packages with `alienv q`.
+```
 
 ## Building partially for development using ninja
 
-This requires that the O2Physics build succeeded. Enter the environment as explained in the previous step specifying in addition the ninja package:
+```note
+This requires that you have successfully built Git branch `[branch]` (e.g. `master`) of O2Physics with aliBuild (see Section [Build and rebuild](#build-and-rebuild)).
 
-```bash
-alienv enter O2Physics/latest ninja/latest
+You also need to have [`direnv`](https://direnv.net/docs/installation.html) installed to load the correct build environment automatically when you enter the build directory (and to unload it when you exit).
 ```
 
-Go to the build directory
+```warning
+This only builds O2Physics. If you have updated O2 or alidist, you first need to do a full build with aliBuild.
+```
+
+Go to the build directory.
 
 ```bash
-cd ~/alice/sw/BUILD/O2Physics-latest/O2Physics
+cd "$ALIBUILD_WORK_DIR/BUILD/O2Physics-latest-[branch]/O2Physics"
+```
+
+Allow `direnv` to load the build environment. (Needed only once in a given directory.)
+
+```bash
+direnv allow
 ```
 
 You can now rebuild and install entire O2Physics with
@@ -105,13 +115,9 @@ or just a specific directory with
 ninja <directory>/install
 ```
 
-For example:
+For example: `ninja PWGCF/Tasks/install`
 
-```bash
-ninja PWGCF/Tasks/install
-```
-
-You can redirect the terminal output to the standard aliBuild log file and see whether the build succeeded:
+**Tip:** You can redirect the terminal output to the standard aliBuild log file and see whether the build succeeded:
 
 ```bash
 ninja install > ../log 2>&1 && echo "Good" || echo "Bad"
@@ -123,18 +129,10 @@ A specific executable can be built in the staging directory `stage/bin` with
 ninja stage/bin/<target>
 ```
 
-For example:
-
-```bash
-ninja stage/bin/o2-analysis-cf-correlations
-```
+For example: `ninja stage/bin/o2-analysis-cf-correlations`
 
 The executable can then be executed directly from the staging directory:
 
 ```bash
-./stage/bin/o2-analysis-cf-correlations
-```
-
-```danger
-This only builds O2Physics. If you have updated O2 or alidist, you first need to do a full build with aliBuild. Then enter the environment again before using ninja.
+stage/bin/<target>
 ```
