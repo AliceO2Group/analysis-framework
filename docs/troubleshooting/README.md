@@ -34,7 +34,7 @@ o2-analysis-... > stdout.log 2>&1
 Search for keywords related to problems in the log file using the `grep` command:
 
 ```bash
-grep -e "\\[ERROR\\]" -e "\\[FATAL\\]" -e "segmentation" -e "Segmentation" -e "SEGMENTATION" -e "command not found" -e "Program crashed" -e "Error:" -e "Error in " -e "\\[WARN\\]" stdout.log
+grep -e "\\[ERROR\\]" -e "\\[FATAL\\]" -e "segmentation" -e "Segmentation" -e "SEGMENTATION" -e "command not found" -e "Program crashed" -e "Error:" -e "Error in " -e "\\[WARN\\]" -e "Warning in " stdout.log
 ```
 
 Try to understand and resolve the first reported problem.
