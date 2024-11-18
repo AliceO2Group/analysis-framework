@@ -4,10 +4,10 @@
 
 # System info
 
-systemName=""
-user=""
+systemName="Failed to get"
+user="Failed to get"
 if [[ "$OSTYPE" == "linux-gnu"* ]]; then
-  systemName="$(lsb_release -ds)"
+  [[ -n "$(which lsb_release)" ]] && systemName="$(lsb_release -ds)"
   user="$(whoami)"
 elif [[ "$OSTYPE" == "darwin"* ]]; then
   systemName="$(sw_vers -productName) $(sw_vers -productVersion)"
