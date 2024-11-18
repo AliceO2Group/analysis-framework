@@ -34,8 +34,8 @@ Where appropriate, when one tour ends, the next will begin to explain the next s
 ## <a name="my-analyses"></a>My Analyses
 
 * [**My Analyses**](https://alimonitor.cern.ch/hyperloop/) is a personalized webpage which displays all the analyses where the user belongs to.
-* The analyses display can be expanded/collapsed and reordered with the buttons `✚/-`,`⇧` and `⇩`, or by dragging and dropping. This configuration is saved per user.
-* The user can add/remove, configure and enable/disable wagons in this page.
+* Analyses can be expanded/collapsed with the buttons `✚` `-` and they can be reordered with the buttons `⇧` `⇩` or by dragging and dropping. This configuration is saved per user.
+* The user can create/delete, configure and enable/disable wagons in this page.
 * The user can add/remove datasets per analysis.
 * Receiving emails on wagon test failure can be configured per analysis in `Datasets and Settings 📝`. It can be set to: none, all analyzers or only user who enabled the wagon.
 
@@ -312,8 +312,9 @@ When a wagon test finishes in warning, this means that the wagon will not be inc
     <img src="../images/warnignMemory.png" width="40%">
  </div>
  
- * The memory consumption is larger than the allowed memory on the current target queue (e.g. Grid - Single core). The usual limit fora user wagon is 2 GB.
- * For Grid - Single core and 2 core: If the average PSS memory is not significantly larger ( <=  3.2 GB ), then operators will compose your train on request on Grid - Single core. Otherwise, if it is > 3.2 GB and <= 4 GB, the operators will compose the train on request on Grid - 2 core. If larger than 4 GB, then the train cannot be composed. The user should check for ways of improving memory consumption.
+ * The memory consumption is larger than the limit. In wagon tests, the limit is the memory allowance of a two core target minus a small buffer, which is ~ 3.6GB. 
+ * In the train test, the limit is the memory allowance of the train target. For Grid - Single core and 2 core, trains may be submitted even with the warning: If the average PSS memory is <=  3.2 GB, then operators will compose your train on Grid - Single core. Otherwise, if it is > 3.2 GB and <= 4 GB, the operators will compose the train on request on Grid - 2 core. If larger than 4 GB, then the train cannot be composed. The user should check for ways of improving memory consumption.
+
  * For the other target queues, trains can only be composed if the memory consumption is within the target limits.
  * For the cases when the train cannot be composed due to high memory consumption, the user can review the test. One can check the logs and look for any possible improvements that can be done for a lower memory consumption.
  
@@ -323,7 +324,7 @@ When a wagon test finishes in warning, this means that the wagon will not be inc
     <img src="../images/warningPSS.png" width="40%">
   </div>
  
- * The maximum PSS memory consumption is larger than 30% of the average PSS, therefore the train cannot be automatically composed. The test will be checked by the operator and, if there is no memory leak, the train can be composed. Otherwise, they will advise the user to check for possible causes and improvements before requesting again.
+ * The maximum PSS memory consumption is more than 30% larger than the average PSS, therefore the train cannot be automatically composed. This warning means that a memory leak is possible, so it must be checked by an operator. If there is no memory leak, the train can be composed. Otherwise, the operator will advise the user to check for possible causes and improvements before requesting again.
 
 ### 3. <a name="warning-cpu"></a> CPU usage too large
  
@@ -331,7 +332,7 @@ When a wagon test finishes in warning, this means that the wagon will not be inc
     <img src="../images/warningCPU.png" width="40%">
   </div>
  
- * The CPU usage limit is set per dataset and all trains running on a specific dataset must respect this constraint. If the limit is not respected, the train cannot be composed without PWG approval. Therefore, the user should discuss the details and requirements for this train with the PWG before requesting again. Depending on the amount of total resources, an approval in the Physics Board (PB) may also be needed.
+ * The CPU usage limit is set per dataset and all trains running on a specific dataset must respect this constraint. If the limit is not respected, the train cannot be composed without PWG approval. Therefore, the user should discuss the details and requirements for this train with the PWG before requesting again. Depending on the amount of total resources, an approval in the Physics Board (PB) may also be needed. The CPU limit of a dataset may be viewed on the dataset page.
  
 ### 4. <a name="warning-ccdb"></a> Too many CCDB calls
  
@@ -347,7 +348,7 @@ When a wagon test finishes in warning, this means that the wagon will not be inc
     <img src="../images/warningReductionFactor.png" width="40%">
   </div>
  
- * This occurs when the reduction factor is lower than 50. If the expected output size is below 10 GB, the operator can compose the train on request. If larger, the train cannot be composed.
+ * This occurs when the reduction factor is lower than 50. If the expected output size is below 50 GB, the operator can compose the train on request. If larger, the train cannot be composed.
  
 ### 6. <a name="warning-log-file"></a> Log output too large
  
@@ -372,8 +373,19 @@ When a wagon test finishes in warning, this means that the wagon will not be inc
   </div>
  
  * For derived data trains, it notifies the detection of unbound columns during AO2D merging. This means that one of the output tables which has been asked to be stored has index columns to tables which are not within the output. This usually points to a bad or broken data model definition and should be fixed. The only case where this is expected and not worrisome is linked derived data. For both slim derived data and standard derived data, the data model should be fixed.
+
+
+### 9. <a name="warning-25-input-files"></a>Too many input files expected to go to derived output
  
-It is possible that a wagon test will produce multiple warnings. In that case, the same checks above will be done for each warning present, and the decision making regarding train submission will be done considering all the exceptions.
+  <div align="center">
+    <img src="../images/linkedFilesDerivedOutput.png" width="37%">
+  </div>
+ 
+ * This warning only appears for linked derived data. The maximum number of input files which can go to derived output is 25. The warning will display how many are expected. If this warning appears, the train cannot be submitted.
+
+### <a name="multiple-warnings"></a>Multiple warnings
+ 
+It is possible that a wagon test or train test will produce multiple warnings. In that case, the checks above will be done for each warning present, and the decision making regarding train submission will be done considering all the exceptions.
  
   
   <div align="center">
@@ -479,7 +491,7 @@ It is possible that a wagon test will produce multiple warnings. In that case, t
    <img src="../images/trainModalDerived.png" width="70%">
 </div>
 
-* <a name="trainmergedoutput"></a>_Merged output_ displays the jobs status after submitting the train. The mergelists are defined in the dataset settings.
+* <a name="trainmergedoutput"></a>_Merged output_ displays the merging jobs and the output directories. A merged output is created for every mergelist and final mergelist in the dataset, along with the full train merge. The mergelists and final mergelists are defined in the dataset settings. Mergelists contain lists of runs from a single runlist, while final mergelists are used to combine mergelists across productions. 
 
 <div align="center">
    <img src="../images/mergedOutput.png" width="80%">
@@ -538,5 +550,29 @@ It is possible that a wagon test will produce multiple warnings. In that case, t
  ```bash
  /my/path/run_train.sh --skip-perf
  ```
+
+
+## <a name="train-slots-per-week"></a>Train slots per week
+
+For a given analysis, every dataset has a train slots per week limit. This limit is shown in the dataset under 'Maximal train slots per analysis per week'. This limit is to ensure fair usage of resources, and is calculated on a rolling basis. You may view how many slots have been used here:
+
+<div align="center">
+<img src="../images/trainSlots.png" width="60%">
+</div>
+
+
+Trains may use more than one slot. The number of slots is calculated as the number of wagons from the analysis in the train, capped by the number of cores that the train runs with. The slots used per analysis may be viewed in the train 'Test - Full Test' tab:
+
+<div align="center">
+<img src="../images/weeklySlots.png" width="60%">
+</div>
+
+If a single user wagon needs more memory than available in a single core queue, it can still be composed by hyperloop to the two core queue but it will count as a **heavy wagon**. Heavy wagons count as two slots. These wagons are listed in red in the train 'Test - Per Wagon' tab:
+
+<div align="center">
+<img src="../images/heavyWagon.png" width="50%">
+</div>
+
+
 ## <a name="merge-scripts"></a>Local merging scripts
  [Here](https://github.com/romainschotter/HYRunByRunMerging/tree/main) is a repository containing scripts to download all output files from a Hyperloop train run by run, and to merge locally only the files associated to a given run list.
