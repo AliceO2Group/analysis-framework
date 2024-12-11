@@ -156,6 +156,105 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGCF
     </table>
   </div>
 
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::SinglePIDsITSPi</button>
+  <div class="panel">
+    <div>
+
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGCF/Femto3D/DataModel/singletrackselector.h" target="_blank">PWGCF/Femto3D/DataModel/singletrackselector.h</a>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::singletrackselector::StoredITSNSigmaPi_v1</td>
+        <td></td>
+        <td>storedItsNSigmaPi_v1</td>
+        <td>binning::nsigma::binned_t</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::singletrackselector::ITSNSigmaPi_v1</td>
+        <td>D</td>
+        <td>itsNSigmaPi</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::SinglePIDsITSKa</button>
+  <div class="panel">
+    <div>
+
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGCF/Femto3D/DataModel/singletrackselector.h" target="_blank">PWGCF/Femto3D/DataModel/singletrackselector.h</a>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::singletrackselector::StoredITSNSigmaKa_v1</td>
+        <td></td>
+        <td>storedItsNSigmaKa_v1</td>
+        <td>binning::nsigma::binned_t</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::singletrackselector::ITSNSigmaKa_v1</td>
+        <td>D</td>
+        <td>itsNSigmaKa</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::SinglePIDsITSPr</button>
+  <div class="panel">
+    <div>
+
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGCF/Femto3D/DataModel/singletrackselector.h" target="_blank">PWGCF/Femto3D/DataModel/singletrackselector.h</a>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::singletrackselector::StoredITSNSigmaPr_v1</td>
+        <td></td>
+        <td>storedItsNSigmaPr_v1</td>
+        <td>binning::nsigma::binned_t</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::singletrackselector::ITSNSigmaPr_v1</td>
+        <td>D</td>
+        <td>itsNSigmaPr</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+    </table>
+  </div>
+
   <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::SingleTrkMCs</button>
   <div class="panel">
     <div>
@@ -256,7 +355,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGCF
 
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGCF/DataModel/FemtoDerived.h" target="_blank">PWGCF/DataModel/FemtoDerived.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGCF/FemtoUniverse/DataModel/FemtoDerived.h" target="_blank">PWGCF/FemtoUniverse/DataModel/FemtoDerived.h</a>
     </div>
     <div>Is used in:
       <ul>
@@ -286,28 +385,28 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGCF
         <td>Z Vertex position in cm</td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamcollision::MultV0M</td>
+        <td>o2::aod::femtouniversecollision::MultV0M</td>
         <td></td>
         <td>multV0M</td>
         <td>float</td>
         <td>V0M multiplicity</td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamcollision::MultNtr</td>
+        <td>o2::aod::femtouniversecollision::MultNtr</td>
         <td></td>
         <td>multNtr</td>
         <td>int</td>
         <td>multiplicity of charged tracks as defined in the producer</td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamcollision::Sphericity</td>
+        <td>o2::aod::femtouniversecollision::Sphericity</td>
         <td></td>
         <td>sphericity</td>
         <td>float</td>
         <td>Sphericity of the event</td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamcollision::MagField</td>
+        <td>o2::aod::femtouniversecollision::MagField</td>
         <td></td>
         <td>magField</td>
         <td>float</td>
@@ -322,7 +421,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGCF
 
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGCF/DataModel/FemtoDerived.h" target="_blank">PWGCF/DataModel/FemtoDerived.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGCF/FemtoUniverse/DataModel/FemtoDerived.h" target="_blank">PWGCF/FemtoUniverse/DataModel/FemtoDerived.h</a>
     </div>
     <div>Is used in:
       <ul>
@@ -345,112 +444,112 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGCF
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamparticle::FDCollisionId</td>
+        <td>o2::aod::femtouniverseparticle::FDCollisionId</td>
         <td>I</td>
         <td>fdCollisionId</td>
         <td>int32</td>
         <td>Pointer into FDCollisions</td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamparticle::Pt</td>
+        <td>o2::aod::femtouniverseparticle::Pt</td>
         <td></td>
         <td>pt</td>
         <td>float</td>
         <td>p_T (GeV/c)</td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamparticle::Eta</td>
+        <td>o2::aod::femtouniverseparticle::Eta</td>
         <td></td>
         <td>eta</td>
         <td>float</td>
         <td>Eta</td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamparticle::Phi</td>
+        <td>o2::aod::femtouniverseparticle::Phi</td>
         <td></td>
         <td>phi</td>
         <td>float</td>
         <td>Phi</td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamparticle::PartType</td>
+        <td>o2::aod::femtouniverseparticle::PartType</td>
         <td></td>
         <td>partType</td>
         <td>uint8_t</td>
-        <td>Type of the particle, according to femtodreamparticle::ParticleType</td>
+        <td>Type of the particle, according to femtouniverseparticle::ParticleType</td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamparticle::Cut</td>
+        <td>o2::aod::femtouniverseparticle::Cut</td>
         <td></td>
         <td>cut</td>
         <td>cutContainerType</td>
         <td>Bit-wise container for the different selection criteria</td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamparticle::PIDCut</td>
+        <td>o2::aod::femtouniverseparticle::PIDCut</td>
         <td></td>
         <td>pidcut</td>
         <td>cutContainerType</td>
         <td>Bit-wise container for the different PID selection criteria \todo since bit-masking cannot be done yet with filters we use a second field for the PID</td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamparticle::TempFitVar</td>
+        <td>o2::aod::femtouniverseparticle::TempFitVar</td>
         <td></td>
         <td>tempFitVar</td>
         <td>float</td>
         <td>Observable for the template fitting (Track: DCA_xy, V0: CPA)</td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamparticle::ChildrenIds</td>
+        <td>o2::aod::femtouniverseparticle::ChildrenIds</td>
         <td>SAI</td>
         <td>childrenIds</td>
         <td></td>
         <td>Field for the track indices to remove auto-correlations</td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamparticle::MLambda</td>
+        <td>o2::aod::femtouniverseparticle::MLambda</td>
         <td></td>
         <td>mLambda</td>
         <td>float</td>
         <td>The invariant mass of V0 candidate, assuming lambda</td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamparticle::MAntiLambda</td>
+        <td>o2::aod::femtouniverseparticle::MAntiLambda</td>
         <td></td>
         <td>mAntiLambda</td>
         <td>float</td>
         <td>The invariant mass of V0 candidate, assuming antilambda</td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamparticle::Theta</td>
+        <td>o2::aod::femtouniverseparticle::Theta</td>
         <td>D</td>
         <td>theta</td>
         <td>float</td>
         <td>Compute the theta of the track</td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamparticle::Px</td>
+        <td>o2::aod::femtouniverseparticle::Px</td>
         <td>D</td>
         <td>px</td>
         <td>float</td>
         <td>Compute the momentum in x in GeV/c</td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamparticle::Py</td>
+        <td>o2::aod::femtouniverseparticle::Py</td>
         <td>D</td>
         <td>py</td>
         <td>float</td>
         <td>Compute the momentum in y in GeV/c</td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamparticle::Pz</td>
+        <td>o2::aod::femtouniverseparticle::Pz</td>
         <td>D</td>
         <td>pz</td>
         <td>float</td>
         <td>Compute the momentum in z in GeV/c</td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamparticle::P</td>
+        <td>o2::aod::femtouniverseparticle::P</td>
         <td>D</td>
         <td>p</td>
         <td>float</td>
@@ -465,7 +564,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGCF
 
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGCF/DataModel/FemtoDerived.h" target="_blank">PWGCF/DataModel/FemtoDerived.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGCF/FemtoUniverse/DataModel/FemtoDerived.h" target="_blank">PWGCF/FemtoUniverse/DataModel/FemtoDerived.h</a>
     </div>
     <div>Is used in:
       <ul>
@@ -481,14 +580,14 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGCF
         <th>Comment</th>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamparticle::Sign</td>
+        <td>o2::aod::femtouniverseparticle::Sign</td>
         <td></td>
         <td>sign</td>
         <td>int8_t</td>
         <td>Sign of the track charge</td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamparticle::TPCNClsFound</td>
+        <td>o2::aod::femtouniverseparticle::TPCNClsFound</td>
         <td></td>
         <td>tpcNClsFound</td>
         <td>uint8_t</td>
@@ -502,7 +601,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGCF
         <td>Findable TPC clusters for this track geometry</td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamparticle::TPCNClsCrossedRows</td>
+        <td>o2::aod::femtouniverseparticle::TPCNClsCrossedRows</td>
         <td></td>
         <td>tpcNClsCrossedRows</td>
         <td>uint8_t</td>
@@ -523,14 +622,14 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGCF
         <td>Momentum at inner wall of the TPC</td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamparticle::ITSNCls</td>
+        <td>o2::aod::femtouniverseparticle::ITSNCls</td>
         <td></td>
         <td>itsNCls</td>
         <td>uint8_t</td>
         <td>Number of ITS clusters</td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamparticle::ITSNClsInnerBarrel</td>
+        <td>o2::aod::femtouniverseparticle::ITSNClsInnerBarrel</td>
         <td></td>
         <td>itsNClsInnerBarrel</td>
         <td>uint8_t</td>
@@ -558,207 +657,193 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGCF
         <td>dE/dx signal in the TPC</td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamparticle::TPCNSigmaEl</td>
+        <td>o2::aod::pidtpc_tiny::TPCNSigmaStoreEl</td>
         <td></td>
-        <td>tpcNSigmaEl</td>
-        <td>float</td>
-        <td>Nsigma separation with the TPC detector for electron</td>
+        <td>tpcNSigmaStoreEl</td>
+        <td>binning::binned_t</td>
+        <td>Stored binned nsigma with the TPC detector for electron</td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamparticle::TPCNSigmaPi</td>
+        <td>o2::aod::pidtpc_tiny::TPCNSigmaStorePi</td>
         <td></td>
-        <td>tpcNSigmaPi</td>
-        <td>float</td>
-        <td>Nsigma separation with the TPC detector for pion</td>
+        <td>tpcNSigmaStorePi</td>
+        <td>binning::binned_t</td>
+        <td>Stored binned nsigma with the TPC detector for pion</td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamparticle::TPCNSigmaKa</td>
+        <td>o2::aod::pidtpc_tiny::TPCNSigmaStoreKa</td>
         <td></td>
-        <td>tpcNSigmaKa</td>
-        <td>float</td>
-        <td>Nsigma separation with the TPC detector for kaon</td>
+        <td>tpcNSigmaStoreKa</td>
+        <td>binning::binned_t</td>
+        <td>Stored binned nsigma with the TPC detector for kaon</td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamparticle::TPCNSigmaPr</td>
+        <td>o2::aod::pidtpc_tiny::TPCNSigmaStorePr</td>
         <td></td>
-        <td>tpcNSigmaPr</td>
-        <td>float</td>
-        <td>Nsigma separation with the TPC detector for proton</td>
+        <td>tpcNSigmaStorePr</td>
+        <td>binning::binned_t</td>
+        <td>Stored binned nsigma with the TPC detector for proton</td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamparticle::TPCNSigmaDe</td>
+        <td>o2::aod::pidtpc_tiny::TPCNSigmaStoreDe</td>
         <td></td>
-        <td>tpcNSigmaDe</td>
-        <td>float</td>
-        <td>Nsigma separation with the TPC detector for deuteron</td>
+        <td>tpcNSigmaStoreDe</td>
+        <td>binning::binned_t</td>
+        <td>Stored binned nsigma with the TPC detector for deuteron</td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamparticle::TPCNSigmaTr</td>
+        <td>o2::aod::pidtof_tiny::TOFNSigmaStoreEl</td>
         <td></td>
-        <td>tpcNSigmaTr</td>
-        <td>float</td>
-        <td>Nsigma separation with the TPC detector for triton</td>
+        <td>tofNSigmaStoreEl</td>
+        <td>binning::binned_t</td>
+        <td>Stored binned nsigma with the TOF detector for electron</td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamparticle::TPCNSigmaHe</td>
+        <td>o2::aod::pidtof_tiny::TOFNSigmaStorePi</td>
         <td></td>
-        <td>tpcNSigmaHe</td>
-        <td>float</td>
-        <td>Nsigma separation with the TPC detector for helium3</td>
+        <td>tofNSigmaStorePi</td>
+        <td>binning::binned_t</td>
+        <td>Stored binned nsigma with the TOF detector for pion</td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamparticle::TOFNSigmaEl</td>
+        <td>o2::aod::pidtof_tiny::TOFNSigmaStoreKa</td>
         <td></td>
-        <td>tofNSigmaEl</td>
-        <td>float</td>
-        <td>Nsigma separation with the TOF detector for electron</td>
+        <td>tofNSigmaStoreKa</td>
+        <td>binning::binned_t</td>
+        <td>Stored binned nsigma with the TOF detector for kaon</td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamparticle::TOFNSigmaPi</td>
+        <td>o2::aod::pidtof_tiny::TOFNSigmaStorePr</td>
         <td></td>
-        <td>tofNSigmaPi</td>
-        <td>float</td>
-        <td>Nsigma separation with the TOF detector for pion</td>
+        <td>tofNSigmaStorePr</td>
+        <td>binning::binned_t</td>
+        <td>Stored binned nsigma with the TOF detector for proton</td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamparticle::TOFNSigmaKa</td>
+        <td>o2::aod::pidtof_tiny::TOFNSigmaStoreDe</td>
         <td></td>
-        <td>tofNSigmaKa</td>
-        <td>float</td>
-        <td>Nsigma separation with the TOF detector for kaon</td>
+        <td>tofNSigmaStoreDe</td>
+        <td>binning::binned_t</td>
+        <td>Stored binned nsigma with the TOF detector for deuteron</td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamparticle::TOFNSigmaPr</td>
-        <td></td>
-        <td>tofNSigmaPr</td>
-        <td>float</td>
-        <td>Nsigma separation with the TOF detector for proton</td>
-      </tr>
-      <tr>
-        <td>o2::aod::femtodreamparticle::TOFNSigmaDe</td>
-        <td></td>
-        <td>tofNSigmaDe</td>
-        <td>float</td>
-        <td>Nsigma separation with the TOF detector for deuteron</td>
-      </tr>
-      <tr>
-        <td>o2::aod::femtodreamparticle::TOFNSigmaTr</td>
-        <td></td>
-        <td>tofNSigmaTr</td>
-        <td>float</td>
-        <td>Nsigma separation with the TOF detector for triton</td>
-      </tr>
-      <tr>
-        <td>o2::aod::femtodreamparticle::TOFNSigmaHe</td>
-        <td></td>
-        <td>tofNSigmaHe</td>
-        <td>float</td>
-        <td>Nsigma separation with the TOF detector for helium3</td>
-      </tr>
-      <tr>
-        <td>o2::aod::femtodreamparticle::DaughDCA</td>
+        <td>o2::aod::femtouniverseparticle::DaughDCA</td>
         <td></td>
         <td>daughDCA</td>
         <td>float</td>
         <td>DCA between daughters</td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamparticle::TransRadius</td>
+        <td>o2::aod::femtouniverseparticle::TransRadius</td>
         <td></td>
         <td>transRadius</td>
         <td>float</td>
         <td>Transverse radius of the decay vertex</td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamparticle::DecayVtxX</td>
+        <td>o2::aod::femtouniverseparticle::DecayVtxX</td>
         <td></td>
         <td>decayVtxX</td>
         <td>float</td>
         <td>X position of the decay vertex</td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamparticle::DecayVtxY</td>
+        <td>o2::aod::femtouniverseparticle::DecayVtxY</td>
         <td></td>
         <td>decayVtxY</td>
         <td>float</td>
         <td>Y position of the decay vertex</td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamparticle::DecayVtxZ</td>
+        <td>o2::aod::femtouniverseparticle::DecayVtxZ</td>
         <td></td>
         <td>decayVtxZ</td>
         <td>float</td>
         <td>Z position of the decay vertex</td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamparticle::MKaon</td>
+        <td>o2::aod::femtouniverseparticle::MKaon</td>
         <td></td>
         <td>mKaon</td>
         <td>float</td>
         <td>The invariant mass of V0 candidate, assuming kaon</td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamparticle::TPCCrossedRowsOverFindableCls</td>
+        <td>o2::aod::femtouniverseparticle::TPCCrossedRowsOverFindableCls</td>
         <td>D</td>
         <td>tpcCrossedRowsOverFindableCls</td>
         <td>float</td>
         <td>Compute the number of crossed rows over findable TPC clusters</td>
       </tr>
       <tr>
-        <td>o2::aod::``AOD''</td>
+        <td>o2::aod::pidtpc_tiny::TPCNSigmaEl</td>
         <td>GI</td>
         <td></td>
         <td>?</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::``FDMCPARTICLE''</td>
+        <td>o2::aod::pidtpc_tiny::TPCNSigmaPi</td>
         <td>GI</td>
         <td></td>
         <td>?</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::soa::Index</td>
+        <td>o2::aod::pidtpc_tiny::TPCNSigmaKa</td>
         <td>GI</td>
-        <td>globalIndex</td>
-        <td>int64_t</td>
+        <td></td>
+        <td>?</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamMCparticle::PartOriginMCTruth</td>
+        <td>o2::aod::pidtpc_tiny::TPCNSigmaPr</td>
+        <td>GI</td>
         <td></td>
-        <td>partOriginMCTruth</td>
-        <td>uint8_t</td>
-        <td>Origin of the particle, according to femtodreamparticle::ParticleOriginMCTruth</td>
+        <td>?</td>
+        <td></td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamMCparticle::PDGMCTruth</td>
+        <td>o2::aod::pidtpc_tiny::TPCNSigmaDe</td>
+        <td>GI</td>
         <td></td>
-        <td>pdgMCTruth</td>
-        <td>int</td>
-        <td>Particle PDG</td>
+        <td>?</td>
+        <td></td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamparticle::Pt</td>
+        <td>o2::aod::pidtof_tiny::TOFNSigmaEl</td>
+        <td>GI</td>
         <td></td>
-        <td>pt</td>
-        <td>float</td>
-        <td>p_T (GeV/c)</td>
+        <td>?</td>
+        <td></td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamparticle::Eta</td>
+        <td>o2::aod::pidtof_tiny::TOFNSigmaPi</td>
+        <td>GI</td>
         <td></td>
-        <td>eta</td>
-        <td>float</td>
-        <td>Eta</td>
+        <td>?</td>
+        <td></td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamparticle::Phi</td>
+        <td>o2::aod::pidtof_tiny::TOFNSigmaKa</td>
+        <td>GI</td>
         <td></td>
-        <td>phi</td>
-        <td>float</td>
-        <td>Phi</td>
+        <td>?</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::pidtof_tiny::TOFNSigmaPr</td>
+        <td>GI</td>
+        <td></td>
+        <td>?</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::pidtof_tiny::TOFNSigmaDe</td>
+        <td>GI</td>
+        <td></td>
+        <td>?</td>
+        <td></td>
       </tr>
     </table>
   </div>
@@ -769,7 +854,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGCF
 
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGCF/DataModel/FemtoDerived.h" target="_blank">PWGCF/DataModel/FemtoDerived.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGCF/FemtoUniverse/DataModel/FemtoDerived.h" target="_blank">PWGCF/FemtoUniverse/DataModel/FemtoDerived.h</a>
     </div>
     <div>Is used in:
       <ul>
@@ -792,35 +877,35 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGCF
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamMCparticle::PartOriginMCTruth</td>
+        <td>o2::aod::femtouniverseMCparticle::PartOriginMCTruth</td>
         <td></td>
         <td>partOriginMCTruth</td>
         <td>uint8_t</td>
-        <td>Origin of the particle, according to femtodreamparticle::ParticleOriginMCTruth</td>
+        <td>Origin of the particle, according to femtouniverseparticle::ParticleOriginMCTruth</td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamMCparticle::PDGMCTruth</td>
+        <td>o2::aod::femtouniverseMCparticle::PDGMCTruth</td>
         <td></td>
         <td>pdgMCTruth</td>
         <td>int</td>
         <td>Particle PDG</td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamparticle::Pt</td>
+        <td>o2::aod::femtouniverseparticle::Pt</td>
         <td></td>
         <td>pt</td>
         <td>float</td>
         <td>p_T (GeV/c)</td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamparticle::Eta</td>
+        <td>o2::aod::femtouniverseparticle::Eta</td>
         <td></td>
         <td>eta</td>
         <td>float</td>
         <td>Eta</td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamparticle::Phi</td>
+        <td>o2::aod::femtouniverseparticle::Phi</td>
         <td></td>
         <td>phi</td>
         <td>float</td>
@@ -835,7 +920,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGCF
 
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGCF/DataModel/FemtoDerived.h" target="_blank">PWGCF/DataModel/FemtoDerived.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGCF/FemtoUniverse/DataModel/FemtoDerived.h" target="_blank">PWGCF/FemtoUniverse/DataModel/FemtoDerived.h</a>
     </div>
     <div>Is used in:
       <ul>
@@ -851,7 +936,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGCF
         <th>Comment</th>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamMCparticle::MotherPDG</td>
+        <td>o2::aod::femtouniverseMCparticle::MotherPDG</td>
         <td></td>
         <td>motherPDG</td>
         <td>int</td>
@@ -863,10 +948,10 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGCF
   <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::FDMCLabels</button>
   <div class="panel">
     <div>
-       Table joinable to FemtoDreamParticle containing the MC labels
+       Table joinable to FemtoUniverseParticle containing the MC labels
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGCF/DataModel/FemtoDerived.h" target="_blank">PWGCF/DataModel/FemtoDerived.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGCF/FemtoUniverse/DataModel/FemtoDerived.h" target="_blank">PWGCF/FemtoUniverse/DataModel/FemtoDerived.h</a>
     </div>
     <table class=DataModel>
       <tr>
@@ -891,706 +976,6 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGCF
 ###  o2-analysis-cf-femtodream-producer
 Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGCF/FemtoDream/TableProducer//femtoDreamProducerTask.cxx" target="_blank">femtoDreamProducerTask.cxx</a>
 <div>
-
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::FDCollisions</button>
-  <div class="panel">
-    <div>
-
-    </div>
-    <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGCF/DataModel/FemtoDerived.h" target="_blank">PWGCF/DataModel/FemtoDerived.h</a>
-    </div>
-    <div>Is used in:
-      <ul>
-        <li>o2::aod::FDCollision = o2::aod::FDCollisions::iterator</li>
-      </ul>
-    </div>
-    <table class=DataModel>
-      <tr>
-        <th>Name</th>
-        <th></th>
-        <th>Getter</th>
-        <th>Type</th>
-        <th>Comment</th>
-      </tr>
-      <tr>
-        <td>o2::soa::Index</td>
-        <td>GI</td>
-        <td>globalIndex</td>
-        <td>int64_t</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::&zwnj;collision::PosZ</td>
-        <td></td>
-        <td>posZ</td>
-        <td>float</td>
-        <td>Z Vertex position in cm</td>
-      </tr>
-      <tr>
-        <td>o2::aod::femtodreamcollision::MultV0M</td>
-        <td></td>
-        <td>multV0M</td>
-        <td>float</td>
-        <td>V0M multiplicity</td>
-      </tr>
-      <tr>
-        <td>o2::aod::femtodreamcollision::MultNtr</td>
-        <td></td>
-        <td>multNtr</td>
-        <td>int</td>
-        <td>multiplicity of charged tracks as defined in the producer</td>
-      </tr>
-      <tr>
-        <td>o2::aod::femtodreamcollision::Sphericity</td>
-        <td></td>
-        <td>sphericity</td>
-        <td>float</td>
-        <td>Sphericity of the event</td>
-      </tr>
-      <tr>
-        <td>o2::aod::femtodreamcollision::MagField</td>
-        <td></td>
-        <td>magField</td>
-        <td>float</td>
-        <td>Magnetic field of the event</td>
-      </tr>
-    </table>
-  </div>
-
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::FDMCCollisions</button>
-  <div class="panel">
-    <div>
-
-    </div>
-    <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGCF/DataModel/FemtoDerived.h" target="_blank">PWGCF/DataModel/FemtoDerived.h</a>
-    </div>
-    <div>Is used in:
-      <ul>
-        <li>o2::aod::FDMCCollision = o2::aod::FDMCCollisions::iterator</li>
-      </ul>
-    </div>
-    <table class=DataModel>
-      <tr>
-        <th>Name</th>
-        <th></th>
-        <th>Getter</th>
-        <th>Type</th>
-        <th>Comment</th>
-      </tr>
-      <tr>
-        <td>o2::soa::Index</td>
-        <td>GI</td>
-        <td>globalIndex</td>
-        <td>int64_t</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::femtodreamMCcollision::MultMCgenPartEta08</td>
-        <td></td>
-        <td>multMCgenPartEta08</td>
-        <td>int</td>
-        <td>Multiplicity of the event as given by the generator in |eta|<0.8</td>
-      </tr>
-    </table>
-  </div>
-
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::FDMCCollLabels</button>
-  <div class="panel">
-    <div>
-
-    </div>
-    <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGCF/DataModel/FemtoDerived.h" target="_blank">PWGCF/DataModel/FemtoDerived.h</a>
-    </div>
-    <table class=DataModel>
-      <tr>
-        <th>Name</th>
-        <th></th>
-        <th>Getter</th>
-        <th>Type</th>
-        <th>Comment</th>
-      </tr>
-      <tr>
-        <td>o2::aod::mcfdcolllabel::FDMCCollisionId</td>
-        <td>I</td>
-        <td>fdMCCollisionId</td>
-        <td>int32</td>
-        <td>MC collision for femtodreamcollision</td>
-      </tr>
-    </table>
-  </div>
-
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::FDParticles</button>
-  <div class="panel">
-    <div>
-
-    </div>
-    <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGCF/DataModel/FemtoDerived.h" target="_blank">PWGCF/DataModel/FemtoDerived.h</a>
-    </div>
-    <div>Is used in:
-      <ul>
-        <li>o2::aod::FDParticle = o2::aod::FDParticles::iterator</li>
-      </ul>
-    </div>
-    <table class=DataModel>
-      <tr>
-        <th>Name</th>
-        <th></th>
-        <th>Getter</th>
-        <th>Type</th>
-        <th>Comment</th>
-      </tr>
-      <tr>
-        <td>o2::soa::Index</td>
-        <td>GI</td>
-        <td>globalIndex</td>
-        <td>int64_t</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::femtodreamparticle::FDCollisionId</td>
-        <td>I</td>
-        <td>fdCollisionId</td>
-        <td>int32</td>
-        <td>Pointer into FDCollisions</td>
-      </tr>
-      <tr>
-        <td>o2::aod::femtodreamparticle::Pt</td>
-        <td></td>
-        <td>pt</td>
-        <td>float</td>
-        <td>p_T (GeV/c)</td>
-      </tr>
-      <tr>
-        <td>o2::aod::femtodreamparticle::Eta</td>
-        <td></td>
-        <td>eta</td>
-        <td>float</td>
-        <td>Eta</td>
-      </tr>
-      <tr>
-        <td>o2::aod::femtodreamparticle::Phi</td>
-        <td></td>
-        <td>phi</td>
-        <td>float</td>
-        <td>Phi</td>
-      </tr>
-      <tr>
-        <td>o2::aod::femtodreamparticle::PartType</td>
-        <td></td>
-        <td>partType</td>
-        <td>uint8_t</td>
-        <td>Type of the particle, according to femtodreamparticle::ParticleType</td>
-      </tr>
-      <tr>
-        <td>o2::aod::femtodreamparticle::Cut</td>
-        <td></td>
-        <td>cut</td>
-        <td>cutContainerType</td>
-        <td>Bit-wise container for the different selection criteria</td>
-      </tr>
-      <tr>
-        <td>o2::aod::femtodreamparticle::PIDCut</td>
-        <td></td>
-        <td>pidcut</td>
-        <td>cutContainerType</td>
-        <td>Bit-wise container for the different PID selection criteria \todo since bit-masking cannot be done yet with filters we use a second field for the PID</td>
-      </tr>
-      <tr>
-        <td>o2::aod::femtodreamparticle::TempFitVar</td>
-        <td></td>
-        <td>tempFitVar</td>
-        <td>float</td>
-        <td>Observable for the template fitting (Track: DCA_xy, V0: CPA)</td>
-      </tr>
-      <tr>
-        <td>o2::aod::femtodreamparticle::ChildrenIds</td>
-        <td>SAI</td>
-        <td>childrenIds</td>
-        <td></td>
-        <td>Field for the track indices to remove auto-correlations</td>
-      </tr>
-      <tr>
-        <td>o2::aod::femtodreamparticle::MLambda</td>
-        <td></td>
-        <td>mLambda</td>
-        <td>float</td>
-        <td>The invariant mass of V0 candidate, assuming lambda</td>
-      </tr>
-      <tr>
-        <td>o2::aod::femtodreamparticle::MAntiLambda</td>
-        <td></td>
-        <td>mAntiLambda</td>
-        <td>float</td>
-        <td>The invariant mass of V0 candidate, assuming antilambda</td>
-      </tr>
-      <tr>
-        <td>o2::aod::femtodreamparticle::Theta</td>
-        <td>D</td>
-        <td>theta</td>
-        <td>float</td>
-        <td>Compute the theta of the track</td>
-      </tr>
-      <tr>
-        <td>o2::aod::femtodreamparticle::Px</td>
-        <td>D</td>
-        <td>px</td>
-        <td>float</td>
-        <td>Compute the momentum in x in GeV/c</td>
-      </tr>
-      <tr>
-        <td>o2::aod::femtodreamparticle::Py</td>
-        <td>D</td>
-        <td>py</td>
-        <td>float</td>
-        <td>Compute the momentum in y in GeV/c</td>
-      </tr>
-      <tr>
-        <td>o2::aod::femtodreamparticle::Pz</td>
-        <td>D</td>
-        <td>pz</td>
-        <td>float</td>
-        <td>Compute the momentum in z in GeV/c</td>
-      </tr>
-      <tr>
-        <td>o2::aod::femtodreamparticle::P</td>
-        <td>D</td>
-        <td>p</td>
-        <td>float</td>
-        <td>Compute the overall momentum in GeV/c</td>
-      </tr>
-    </table>
-  </div>
-
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::FDExtParticles</button>
-  <div class="panel">
-    <div>
-
-    </div>
-    <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGCF/DataModel/FemtoDerived.h" target="_blank">PWGCF/DataModel/FemtoDerived.h</a>
-    </div>
-    <div>Is used in:
-      <ul>
-        <li>o2::aod::FDFullParticle = o2::aod::FDExtParticles::iterator</li>
-      </ul>
-    </div>
-    <table class=DataModel>
-      <tr>
-        <th>Name</th>
-        <th></th>
-        <th>Getter</th>
-        <th>Type</th>
-        <th>Comment</th>
-      </tr>
-      <tr>
-        <td>o2::aod::femtodreamparticle::Sign</td>
-        <td></td>
-        <td>sign</td>
-        <td>int8_t</td>
-        <td>Sign of the track charge</td>
-      </tr>
-      <tr>
-        <td>o2::aod::femtodreamparticle::TPCNClsFound</td>
-        <td></td>
-        <td>tpcNClsFound</td>
-        <td>uint8_t</td>
-        <td>Number of TPC clusters</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::TPCNClsFindable</td>
-        <td></td>
-        <td>tpcNClsFindable</td>
-        <td>uint8_t</td>
-        <td>Findable TPC clusters for this track geometry</td>
-      </tr>
-      <tr>
-        <td>o2::aod::femtodreamparticle::TPCNClsCrossedRows</td>
-        <td></td>
-        <td>tpcNClsCrossedRows</td>
-        <td>uint8_t</td>
-        <td>Number of TPC crossed rows</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::TPCNClsShared</td>
-        <td></td>
-        <td>tpcNClsShared</td>
-        <td>uint8_t</td>
-        <td>Number of shared TPC clusters</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::TPCInnerParam</td>
-        <td></td>
-        <td>tpcInnerParam</td>
-        <td>float</td>
-        <td>Momentum at inner wall of the TPC</td>
-      </tr>
-      <tr>
-        <td>o2::aod::femtodreamparticle::ITSNCls</td>
-        <td></td>
-        <td>itsNCls</td>
-        <td>uint8_t</td>
-        <td>Number of ITS clusters</td>
-      </tr>
-      <tr>
-        <td>o2::aod::femtodreamparticle::ITSNClsInnerBarrel</td>
-        <td></td>
-        <td>itsNClsInnerBarrel</td>
-        <td>uint8_t</td>
-        <td>Number of ITS clusters in the inner barrel   TPC signal</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::DcaXY</td>
-        <td></td>
-        <td>dcaXY</td>
-        <td>float</td>
-        <td>Impact parameter in XY of the track to the primary vertex</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::DcaZ</td>
-        <td></td>
-        <td>dcaZ</td>
-        <td>float</td>
-        <td>Impact parameter in Z of the track to the primary vertex</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::TPCSignal</td>
-        <td></td>
-        <td>tpcSignal</td>
-        <td>float</td>
-        <td>dE/dx signal in the TPC</td>
-      </tr>
-      <tr>
-        <td>o2::aod::femtodreamparticle::TPCNSigmaEl</td>
-        <td></td>
-        <td>tpcNSigmaEl</td>
-        <td>float</td>
-        <td>Nsigma separation with the TPC detector for electron</td>
-      </tr>
-      <tr>
-        <td>o2::aod::femtodreamparticle::TPCNSigmaPi</td>
-        <td></td>
-        <td>tpcNSigmaPi</td>
-        <td>float</td>
-        <td>Nsigma separation with the TPC detector for pion</td>
-      </tr>
-      <tr>
-        <td>o2::aod::femtodreamparticle::TPCNSigmaKa</td>
-        <td></td>
-        <td>tpcNSigmaKa</td>
-        <td>float</td>
-        <td>Nsigma separation with the TPC detector for kaon</td>
-      </tr>
-      <tr>
-        <td>o2::aod::femtodreamparticle::TPCNSigmaPr</td>
-        <td></td>
-        <td>tpcNSigmaPr</td>
-        <td>float</td>
-        <td>Nsigma separation with the TPC detector for proton</td>
-      </tr>
-      <tr>
-        <td>o2::aod::femtodreamparticle::TPCNSigmaDe</td>
-        <td></td>
-        <td>tpcNSigmaDe</td>
-        <td>float</td>
-        <td>Nsigma separation with the TPC detector for deuteron</td>
-      </tr>
-      <tr>
-        <td>o2::aod::femtodreamparticle::TPCNSigmaTr</td>
-        <td></td>
-        <td>tpcNSigmaTr</td>
-        <td>float</td>
-        <td>Nsigma separation with the TPC detector for triton</td>
-      </tr>
-      <tr>
-        <td>o2::aod::femtodreamparticle::TPCNSigmaHe</td>
-        <td></td>
-        <td>tpcNSigmaHe</td>
-        <td>float</td>
-        <td>Nsigma separation with the TPC detector for helium3</td>
-      </tr>
-      <tr>
-        <td>o2::aod::femtodreamparticle::TOFNSigmaEl</td>
-        <td></td>
-        <td>tofNSigmaEl</td>
-        <td>float</td>
-        <td>Nsigma separation with the TOF detector for electron</td>
-      </tr>
-      <tr>
-        <td>o2::aod::femtodreamparticle::TOFNSigmaPi</td>
-        <td></td>
-        <td>tofNSigmaPi</td>
-        <td>float</td>
-        <td>Nsigma separation with the TOF detector for pion</td>
-      </tr>
-      <tr>
-        <td>o2::aod::femtodreamparticle::TOFNSigmaKa</td>
-        <td></td>
-        <td>tofNSigmaKa</td>
-        <td>float</td>
-        <td>Nsigma separation with the TOF detector for kaon</td>
-      </tr>
-      <tr>
-        <td>o2::aod::femtodreamparticle::TOFNSigmaPr</td>
-        <td></td>
-        <td>tofNSigmaPr</td>
-        <td>float</td>
-        <td>Nsigma separation with the TOF detector for proton</td>
-      </tr>
-      <tr>
-        <td>o2::aod::femtodreamparticle::TOFNSigmaDe</td>
-        <td></td>
-        <td>tofNSigmaDe</td>
-        <td>float</td>
-        <td>Nsigma separation with the TOF detector for deuteron</td>
-      </tr>
-      <tr>
-        <td>o2::aod::femtodreamparticle::TOFNSigmaTr</td>
-        <td></td>
-        <td>tofNSigmaTr</td>
-        <td>float</td>
-        <td>Nsigma separation with the TOF detector for triton</td>
-      </tr>
-      <tr>
-        <td>o2::aod::femtodreamparticle::TOFNSigmaHe</td>
-        <td></td>
-        <td>tofNSigmaHe</td>
-        <td>float</td>
-        <td>Nsigma separation with the TOF detector for helium3</td>
-      </tr>
-      <tr>
-        <td>o2::aod::femtodreamparticle::DaughDCA</td>
-        <td></td>
-        <td>daughDCA</td>
-        <td>float</td>
-        <td>DCA between daughters</td>
-      </tr>
-      <tr>
-        <td>o2::aod::femtodreamparticle::TransRadius</td>
-        <td></td>
-        <td>transRadius</td>
-        <td>float</td>
-        <td>Transverse radius of the decay vertex</td>
-      </tr>
-      <tr>
-        <td>o2::aod::femtodreamparticle::DecayVtxX</td>
-        <td></td>
-        <td>decayVtxX</td>
-        <td>float</td>
-        <td>X position of the decay vertex</td>
-      </tr>
-      <tr>
-        <td>o2::aod::femtodreamparticle::DecayVtxY</td>
-        <td></td>
-        <td>decayVtxY</td>
-        <td>float</td>
-        <td>Y position of the decay vertex</td>
-      </tr>
-      <tr>
-        <td>o2::aod::femtodreamparticle::DecayVtxZ</td>
-        <td></td>
-        <td>decayVtxZ</td>
-        <td>float</td>
-        <td>Z position of the decay vertex</td>
-      </tr>
-      <tr>
-        <td>o2::aod::femtodreamparticle::MKaon</td>
-        <td></td>
-        <td>mKaon</td>
-        <td>float</td>
-        <td>The invariant mass of V0 candidate, assuming kaon</td>
-      </tr>
-      <tr>
-        <td>o2::aod::femtodreamparticle::TPCCrossedRowsOverFindableCls</td>
-        <td>D</td>
-        <td>tpcCrossedRowsOverFindableCls</td>
-        <td>float</td>
-        <td>Compute the number of crossed rows over findable TPC clusters</td>
-      </tr>
-      <tr>
-        <td>o2::aod::``AOD''</td>
-        <td>GI</td>
-        <td></td>
-        <td>?</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::``FDMCPARTICLE''</td>
-        <td>GI</td>
-        <td></td>
-        <td>?</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::soa::Index</td>
-        <td>GI</td>
-        <td>globalIndex</td>
-        <td>int64_t</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::femtodreamMCparticle::PartOriginMCTruth</td>
-        <td></td>
-        <td>partOriginMCTruth</td>
-        <td>uint8_t</td>
-        <td>Origin of the particle, according to femtodreamparticle::ParticleOriginMCTruth</td>
-      </tr>
-      <tr>
-        <td>o2::aod::femtodreamMCparticle::PDGMCTruth</td>
-        <td></td>
-        <td>pdgMCTruth</td>
-        <td>int</td>
-        <td>Particle PDG</td>
-      </tr>
-      <tr>
-        <td>o2::aod::femtodreamparticle::Pt</td>
-        <td></td>
-        <td>pt</td>
-        <td>float</td>
-        <td>p_T (GeV/c)</td>
-      </tr>
-      <tr>
-        <td>o2::aod::femtodreamparticle::Eta</td>
-        <td></td>
-        <td>eta</td>
-        <td>float</td>
-        <td>Eta</td>
-      </tr>
-      <tr>
-        <td>o2::aod::femtodreamparticle::Phi</td>
-        <td></td>
-        <td>phi</td>
-        <td>float</td>
-        <td>Phi</td>
-      </tr>
-    </table>
-  </div>
-
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::FDMCParticles</button>
-  <div class="panel">
-    <div>
-
-    </div>
-    <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGCF/DataModel/FemtoDerived.h" target="_blank">PWGCF/DataModel/FemtoDerived.h</a>
-    </div>
-    <div>Is used in:
-      <ul>
-        <li>o2::aod::FDMCParticle = o2::aod::FDMCParticles::iterator</li>
-      </ul>
-    </div>
-    <table class=DataModel>
-      <tr>
-        <th>Name</th>
-        <th></th>
-        <th>Getter</th>
-        <th>Type</th>
-        <th>Comment</th>
-      </tr>
-      <tr>
-        <td>o2::soa::Index</td>
-        <td>GI</td>
-        <td>globalIndex</td>
-        <td>int64_t</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::femtodreamMCparticle::PartOriginMCTruth</td>
-        <td></td>
-        <td>partOriginMCTruth</td>
-        <td>uint8_t</td>
-        <td>Origin of the particle, according to femtodreamparticle::ParticleOriginMCTruth</td>
-      </tr>
-      <tr>
-        <td>o2::aod::femtodreamMCparticle::PDGMCTruth</td>
-        <td></td>
-        <td>pdgMCTruth</td>
-        <td>int</td>
-        <td>Particle PDG</td>
-      </tr>
-      <tr>
-        <td>o2::aod::femtodreamparticle::Pt</td>
-        <td></td>
-        <td>pt</td>
-        <td>float</td>
-        <td>p_T (GeV/c)</td>
-      </tr>
-      <tr>
-        <td>o2::aod::femtodreamparticle::Eta</td>
-        <td></td>
-        <td>eta</td>
-        <td>float</td>
-        <td>Eta</td>
-      </tr>
-      <tr>
-        <td>o2::aod::femtodreamparticle::Phi</td>
-        <td></td>
-        <td>phi</td>
-        <td>float</td>
-        <td>Phi</td>
-      </tr>
-    </table>
-  </div>
-
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::FDExtMCParticles</button>
-  <div class="panel">
-    <div>
-
-    </div>
-    <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGCF/DataModel/FemtoDerived.h" target="_blank">PWGCF/DataModel/FemtoDerived.h</a>
-    </div>
-    <div>Is used in:
-      <ul>
-        <li>o2::aod::FDExtMCParticle = o2::aod::FDExtMCParticles::iterator</li>
-      </ul>
-    </div>
-    <table class=DataModel>
-      <tr>
-        <th>Name</th>
-        <th></th>
-        <th>Getter</th>
-        <th>Type</th>
-        <th>Comment</th>
-      </tr>
-      <tr>
-        <td>o2::aod::femtodreamMCparticle::MotherPDG</td>
-        <td></td>
-        <td>motherPDG</td>
-        <td>int</td>
-        <td>Checks mother PDG, where mother is the primary particle for that decay chain</td>
-      </tr>
-    </table>
-  </div>
-
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::FDMCLabels</button>
-  <div class="panel">
-    <div>
-       Table joinable to FemtoDreamParticle containing the MC labels
-    </div>
-    <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGCF/DataModel/FemtoDerived.h" target="_blank">PWGCF/DataModel/FemtoDerived.h</a>
-    </div>
-    <table class=DataModel>
-      <tr>
-        <th>Name</th>
-        <th></th>
-        <th>Getter</th>
-        <th>Type</th>
-        <th>Comment</th>
-      </tr>
-      <tr>
-        <td>o2::aod::mcfdlabel::FDMCParticleId</td>
-        <td>I</td>
-        <td>fdMCParticleId</td>
-        <td>int32</td>
-        <td>MC particle for femtodreamparticle</td>
-      </tr>
-    </table>
-  </div>
 
   <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::FDExtMCLabels</button>
   <div class="panel">
@@ -1618,19 +1003,13 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGCF
     </table>
   </div>
 
-</div>
-
-###  o2-analysis-cf-femtouniverse-mctruth-producer
-Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGCF/FemtoUniverse/TableProducer//femtoUniverseProducerMCTruthTask.cxx" target="_blank">femtoUniverseProducerMCTruthTask.cxx</a>
-<div>
-
   <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::FDCollisions</button>
   <div class="panel">
     <div>
 
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGCF/DataModel/FemtoDerived.h" target="_blank">PWGCF/DataModel/FemtoDerived.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGCF/FemtoUniverse/DataModel/FemtoDerived.h" target="_blank">PWGCF/FemtoUniverse/DataModel/FemtoDerived.h</a>
     </div>
     <div>Is used in:
       <ul>
@@ -1660,28 +1039,28 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGCF
         <td>Z Vertex position in cm</td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamcollision::MultV0M</td>
+        <td>o2::aod::femtouniversecollision::MultV0M</td>
         <td></td>
         <td>multV0M</td>
         <td>float</td>
         <td>V0M multiplicity</td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamcollision::MultNtr</td>
+        <td>o2::aod::femtouniversecollision::MultNtr</td>
         <td></td>
         <td>multNtr</td>
         <td>int</td>
         <td>multiplicity of charged tracks as defined in the producer</td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamcollision::Sphericity</td>
+        <td>o2::aod::femtouniversecollision::Sphericity</td>
         <td></td>
         <td>sphericity</td>
         <td>float</td>
         <td>Sphericity of the event</td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamcollision::MagField</td>
+        <td>o2::aod::femtouniversecollision::MagField</td>
         <td></td>
         <td>magField</td>
         <td>float</td>
@@ -1696,7 +1075,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGCF
 
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGCF/DataModel/FemtoDerived.h" target="_blank">PWGCF/DataModel/FemtoDerived.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGCF/FemtoUniverse/DataModel/FemtoDerived.h" target="_blank">PWGCF/FemtoUniverse/DataModel/FemtoDerived.h</a>
     </div>
     <div>Is used in:
       <ul>
@@ -1719,327 +1098,112 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGCF
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamparticle::FDCollisionId</td>
+        <td>o2::aod::femtouniverseparticle::FDCollisionId</td>
         <td>I</td>
         <td>fdCollisionId</td>
         <td>int32</td>
         <td>Pointer into FDCollisions</td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamparticle::Pt</td>
+        <td>o2::aod::femtouniverseparticle::Pt</td>
         <td></td>
         <td>pt</td>
         <td>float</td>
         <td>p_T (GeV/c)</td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamparticle::Eta</td>
+        <td>o2::aod::femtouniverseparticle::Eta</td>
         <td></td>
         <td>eta</td>
         <td>float</td>
         <td>Eta</td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamparticle::Phi</td>
+        <td>o2::aod::femtouniverseparticle::Phi</td>
         <td></td>
         <td>phi</td>
         <td>float</td>
         <td>Phi</td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamparticle::PartType</td>
+        <td>o2::aod::femtouniverseparticle::PartType</td>
         <td></td>
         <td>partType</td>
         <td>uint8_t</td>
-        <td>Type of the particle, according to femtodreamparticle::ParticleType</td>
+        <td>Type of the particle, according to femtouniverseparticle::ParticleType</td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamparticle::Cut</td>
+        <td>o2::aod::femtouniverseparticle::Cut</td>
         <td></td>
         <td>cut</td>
         <td>cutContainerType</td>
         <td>Bit-wise container for the different selection criteria</td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamparticle::PIDCut</td>
+        <td>o2::aod::femtouniverseparticle::PIDCut</td>
         <td></td>
         <td>pidcut</td>
         <td>cutContainerType</td>
         <td>Bit-wise container for the different PID selection criteria \todo since bit-masking cannot be done yet with filters we use a second field for the PID</td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamparticle::TempFitVar</td>
+        <td>o2::aod::femtouniverseparticle::TempFitVar</td>
         <td></td>
         <td>tempFitVar</td>
         <td>float</td>
         <td>Observable for the template fitting (Track: DCA_xy, V0: CPA)</td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamparticle::ChildrenIds</td>
+        <td>o2::aod::femtouniverseparticle::ChildrenIds</td>
         <td>SAI</td>
         <td>childrenIds</td>
         <td></td>
         <td>Field for the track indices to remove auto-correlations</td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamparticle::MLambda</td>
+        <td>o2::aod::femtouniverseparticle::MLambda</td>
         <td></td>
         <td>mLambda</td>
         <td>float</td>
         <td>The invariant mass of V0 candidate, assuming lambda</td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamparticle::MAntiLambda</td>
+        <td>o2::aod::femtouniverseparticle::MAntiLambda</td>
         <td></td>
         <td>mAntiLambda</td>
         <td>float</td>
         <td>The invariant mass of V0 candidate, assuming antilambda</td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamparticle::Theta</td>
+        <td>o2::aod::femtouniverseparticle::Theta</td>
         <td>D</td>
         <td>theta</td>
         <td>float</td>
         <td>Compute the theta of the track</td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamparticle::Px</td>
+        <td>o2::aod::femtouniverseparticle::Px</td>
         <td>D</td>
         <td>px</td>
         <td>float</td>
         <td>Compute the momentum in x in GeV/c</td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamparticle::Py</td>
+        <td>o2::aod::femtouniverseparticle::Py</td>
         <td>D</td>
         <td>py</td>
         <td>float</td>
         <td>Compute the momentum in y in GeV/c</td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamparticle::Pz</td>
+        <td>o2::aod::femtouniverseparticle::Pz</td>
         <td>D</td>
         <td>pz</td>
         <td>float</td>
         <td>Compute the momentum in z in GeV/c</td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamparticle::P</td>
-        <td>D</td>
-        <td>p</td>
-        <td>float</td>
-        <td>Compute the overall momentum in GeV/c</td>
-      </tr>
-    </table>
-  </div>
-
-</div>
-
-###  o2-analysis-cf-femtouniverse-producer-reduced
-Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGCF/FemtoUniverse/TableProducer//femtoUniverseProducerReducedTask.cxx" target="_blank">femtoUniverseProducerReducedTask.cxx</a>
-<div>
-
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::FDCollisions</button>
-  <div class="panel">
-    <div>
-
-    </div>
-    <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGCF/DataModel/FemtoDerived.h" target="_blank">PWGCF/DataModel/FemtoDerived.h</a>
-    </div>
-    <div>Is used in:
-      <ul>
-        <li>o2::aod::FDCollision = o2::aod::FDCollisions::iterator</li>
-      </ul>
-    </div>
-    <table class=DataModel>
-      <tr>
-        <th>Name</th>
-        <th></th>
-        <th>Getter</th>
-        <th>Type</th>
-        <th>Comment</th>
-      </tr>
-      <tr>
-        <td>o2::soa::Index</td>
-        <td>GI</td>
-        <td>globalIndex</td>
-        <td>int64_t</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::&zwnj;collision::PosZ</td>
-        <td></td>
-        <td>posZ</td>
-        <td>float</td>
-        <td>Z Vertex position in cm</td>
-      </tr>
-      <tr>
-        <td>o2::aod::femtodreamcollision::MultV0M</td>
-        <td></td>
-        <td>multV0M</td>
-        <td>float</td>
-        <td>V0M multiplicity</td>
-      </tr>
-      <tr>
-        <td>o2::aod::femtodreamcollision::MultNtr</td>
-        <td></td>
-        <td>multNtr</td>
-        <td>int</td>
-        <td>multiplicity of charged tracks as defined in the producer</td>
-      </tr>
-      <tr>
-        <td>o2::aod::femtodreamcollision::Sphericity</td>
-        <td></td>
-        <td>sphericity</td>
-        <td>float</td>
-        <td>Sphericity of the event</td>
-      </tr>
-      <tr>
-        <td>o2::aod::femtodreamcollision::MagField</td>
-        <td></td>
-        <td>magField</td>
-        <td>float</td>
-        <td>Magnetic field of the event</td>
-      </tr>
-    </table>
-  </div>
-
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::FDParticles</button>
-  <div class="panel">
-    <div>
-
-    </div>
-    <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGCF/DataModel/FemtoDerived.h" target="_blank">PWGCF/DataModel/FemtoDerived.h</a>
-    </div>
-    <div>Is used in:
-      <ul>
-        <li>o2::aod::FDParticle = o2::aod::FDParticles::iterator</li>
-      </ul>
-    </div>
-    <table class=DataModel>
-      <tr>
-        <th>Name</th>
-        <th></th>
-        <th>Getter</th>
-        <th>Type</th>
-        <th>Comment</th>
-      </tr>
-      <tr>
-        <td>o2::soa::Index</td>
-        <td>GI</td>
-        <td>globalIndex</td>
-        <td>int64_t</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::femtodreamparticle::FDCollisionId</td>
-        <td>I</td>
-        <td>fdCollisionId</td>
-        <td>int32</td>
-        <td>Pointer into FDCollisions</td>
-      </tr>
-      <tr>
-        <td>o2::aod::femtodreamparticle::Pt</td>
-        <td></td>
-        <td>pt</td>
-        <td>float</td>
-        <td>p_T (GeV/c)</td>
-      </tr>
-      <tr>
-        <td>o2::aod::femtodreamparticle::Eta</td>
-        <td></td>
-        <td>eta</td>
-        <td>float</td>
-        <td>Eta</td>
-      </tr>
-      <tr>
-        <td>o2::aod::femtodreamparticle::Phi</td>
-        <td></td>
-        <td>phi</td>
-        <td>float</td>
-        <td>Phi</td>
-      </tr>
-      <tr>
-        <td>o2::aod::femtodreamparticle::PartType</td>
-        <td></td>
-        <td>partType</td>
-        <td>uint8_t</td>
-        <td>Type of the particle, according to femtodreamparticle::ParticleType</td>
-      </tr>
-      <tr>
-        <td>o2::aod::femtodreamparticle::Cut</td>
-        <td></td>
-        <td>cut</td>
-        <td>cutContainerType</td>
-        <td>Bit-wise container for the different selection criteria</td>
-      </tr>
-      <tr>
-        <td>o2::aod::femtodreamparticle::PIDCut</td>
-        <td></td>
-        <td>pidcut</td>
-        <td>cutContainerType</td>
-        <td>Bit-wise container for the different PID selection criteria \todo since bit-masking cannot be done yet with filters we use a second field for the PID</td>
-      </tr>
-      <tr>
-        <td>o2::aod::femtodreamparticle::TempFitVar</td>
-        <td></td>
-        <td>tempFitVar</td>
-        <td>float</td>
-        <td>Observable for the template fitting (Track: DCA_xy, V0: CPA)</td>
-      </tr>
-      <tr>
-        <td>o2::aod::femtodreamparticle::ChildrenIds</td>
-        <td>SAI</td>
-        <td>childrenIds</td>
-        <td></td>
-        <td>Field for the track indices to remove auto-correlations</td>
-      </tr>
-      <tr>
-        <td>o2::aod::femtodreamparticle::MLambda</td>
-        <td></td>
-        <td>mLambda</td>
-        <td>float</td>
-        <td>The invariant mass of V0 candidate, assuming lambda</td>
-      </tr>
-      <tr>
-        <td>o2::aod::femtodreamparticle::MAntiLambda</td>
-        <td></td>
-        <td>mAntiLambda</td>
-        <td>float</td>
-        <td>The invariant mass of V0 candidate, assuming antilambda</td>
-      </tr>
-      <tr>
-        <td>o2::aod::femtodreamparticle::Theta</td>
-        <td>D</td>
-        <td>theta</td>
-        <td>float</td>
-        <td>Compute the theta of the track</td>
-      </tr>
-      <tr>
-        <td>o2::aod::femtodreamparticle::Px</td>
-        <td>D</td>
-        <td>px</td>
-        <td>float</td>
-        <td>Compute the momentum in x in GeV/c</td>
-      </tr>
-      <tr>
-        <td>o2::aod::femtodreamparticle::Py</td>
-        <td>D</td>
-        <td>py</td>
-        <td>float</td>
-        <td>Compute the momentum in y in GeV/c</td>
-      </tr>
-      <tr>
-        <td>o2::aod::femtodreamparticle::Pz</td>
-        <td>D</td>
-        <td>pz</td>
-        <td>float</td>
-        <td>Compute the momentum in z in GeV/c</td>
-      </tr>
-      <tr>
-        <td>o2::aod::femtodreamparticle::P</td>
+        <td>o2::aod::femtouniverseparticle::P</td>
         <td>D</td>
         <td>p</td>
         <td>float</td>
@@ -2054,7 +1218,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGCF
 
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGCF/DataModel/FemtoDerived.h" target="_blank">PWGCF/DataModel/FemtoDerived.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGCF/FemtoUniverse/DataModel/FemtoDerived.h" target="_blank">PWGCF/FemtoUniverse/DataModel/FemtoDerived.h</a>
     </div>
     <div>Is used in:
       <ul>
@@ -2070,14 +1234,14 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGCF
         <th>Comment</th>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamparticle::Sign</td>
+        <td>o2::aod::femtouniverseparticle::Sign</td>
         <td></td>
         <td>sign</td>
         <td>int8_t</td>
         <td>Sign of the track charge</td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamparticle::TPCNClsFound</td>
+        <td>o2::aod::femtouniverseparticle::TPCNClsFound</td>
         <td></td>
         <td>tpcNClsFound</td>
         <td>uint8_t</td>
@@ -2091,7 +1255,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGCF
         <td>Findable TPC clusters for this track geometry</td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamparticle::TPCNClsCrossedRows</td>
+        <td>o2::aod::femtouniverseparticle::TPCNClsCrossedRows</td>
         <td></td>
         <td>tpcNClsCrossedRows</td>
         <td>uint8_t</td>
@@ -2112,14 +1276,14 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGCF
         <td>Momentum at inner wall of the TPC</td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamparticle::ITSNCls</td>
+        <td>o2::aod::femtouniverseparticle::ITSNCls</td>
         <td></td>
         <td>itsNCls</td>
         <td>uint8_t</td>
         <td>Number of ITS clusters</td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamparticle::ITSNClsInnerBarrel</td>
+        <td>o2::aod::femtouniverseparticle::ITSNClsInnerBarrel</td>
         <td></td>
         <td>itsNClsInnerBarrel</td>
         <td>uint8_t</td>
@@ -2147,207 +1311,193 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGCF
         <td>dE/dx signal in the TPC</td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamparticle::TPCNSigmaEl</td>
+        <td>o2::aod::pidtpc_tiny::TPCNSigmaStoreEl</td>
         <td></td>
-        <td>tpcNSigmaEl</td>
-        <td>float</td>
-        <td>Nsigma separation with the TPC detector for electron</td>
+        <td>tpcNSigmaStoreEl</td>
+        <td>binning::binned_t</td>
+        <td>Stored binned nsigma with the TPC detector for electron</td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamparticle::TPCNSigmaPi</td>
+        <td>o2::aod::pidtpc_tiny::TPCNSigmaStorePi</td>
         <td></td>
-        <td>tpcNSigmaPi</td>
-        <td>float</td>
-        <td>Nsigma separation with the TPC detector for pion</td>
+        <td>tpcNSigmaStorePi</td>
+        <td>binning::binned_t</td>
+        <td>Stored binned nsigma with the TPC detector for pion</td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamparticle::TPCNSigmaKa</td>
+        <td>o2::aod::pidtpc_tiny::TPCNSigmaStoreKa</td>
         <td></td>
-        <td>tpcNSigmaKa</td>
-        <td>float</td>
-        <td>Nsigma separation with the TPC detector for kaon</td>
+        <td>tpcNSigmaStoreKa</td>
+        <td>binning::binned_t</td>
+        <td>Stored binned nsigma with the TPC detector for kaon</td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamparticle::TPCNSigmaPr</td>
+        <td>o2::aod::pidtpc_tiny::TPCNSigmaStorePr</td>
         <td></td>
-        <td>tpcNSigmaPr</td>
-        <td>float</td>
-        <td>Nsigma separation with the TPC detector for proton</td>
+        <td>tpcNSigmaStorePr</td>
+        <td>binning::binned_t</td>
+        <td>Stored binned nsigma with the TPC detector for proton</td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamparticle::TPCNSigmaDe</td>
+        <td>o2::aod::pidtpc_tiny::TPCNSigmaStoreDe</td>
         <td></td>
-        <td>tpcNSigmaDe</td>
-        <td>float</td>
-        <td>Nsigma separation with the TPC detector for deuteron</td>
+        <td>tpcNSigmaStoreDe</td>
+        <td>binning::binned_t</td>
+        <td>Stored binned nsigma with the TPC detector for deuteron</td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamparticle::TPCNSigmaTr</td>
+        <td>o2::aod::pidtof_tiny::TOFNSigmaStoreEl</td>
         <td></td>
-        <td>tpcNSigmaTr</td>
-        <td>float</td>
-        <td>Nsigma separation with the TPC detector for triton</td>
+        <td>tofNSigmaStoreEl</td>
+        <td>binning::binned_t</td>
+        <td>Stored binned nsigma with the TOF detector for electron</td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamparticle::TPCNSigmaHe</td>
+        <td>o2::aod::pidtof_tiny::TOFNSigmaStorePi</td>
         <td></td>
-        <td>tpcNSigmaHe</td>
-        <td>float</td>
-        <td>Nsigma separation with the TPC detector for helium3</td>
+        <td>tofNSigmaStorePi</td>
+        <td>binning::binned_t</td>
+        <td>Stored binned nsigma with the TOF detector for pion</td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamparticle::TOFNSigmaEl</td>
+        <td>o2::aod::pidtof_tiny::TOFNSigmaStoreKa</td>
         <td></td>
-        <td>tofNSigmaEl</td>
-        <td>float</td>
-        <td>Nsigma separation with the TOF detector for electron</td>
+        <td>tofNSigmaStoreKa</td>
+        <td>binning::binned_t</td>
+        <td>Stored binned nsigma with the TOF detector for kaon</td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamparticle::TOFNSigmaPi</td>
+        <td>o2::aod::pidtof_tiny::TOFNSigmaStorePr</td>
         <td></td>
-        <td>tofNSigmaPi</td>
-        <td>float</td>
-        <td>Nsigma separation with the TOF detector for pion</td>
+        <td>tofNSigmaStorePr</td>
+        <td>binning::binned_t</td>
+        <td>Stored binned nsigma with the TOF detector for proton</td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamparticle::TOFNSigmaKa</td>
+        <td>o2::aod::pidtof_tiny::TOFNSigmaStoreDe</td>
         <td></td>
-        <td>tofNSigmaKa</td>
-        <td>float</td>
-        <td>Nsigma separation with the TOF detector for kaon</td>
+        <td>tofNSigmaStoreDe</td>
+        <td>binning::binned_t</td>
+        <td>Stored binned nsigma with the TOF detector for deuteron</td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamparticle::TOFNSigmaPr</td>
-        <td></td>
-        <td>tofNSigmaPr</td>
-        <td>float</td>
-        <td>Nsigma separation with the TOF detector for proton</td>
-      </tr>
-      <tr>
-        <td>o2::aod::femtodreamparticle::TOFNSigmaDe</td>
-        <td></td>
-        <td>tofNSigmaDe</td>
-        <td>float</td>
-        <td>Nsigma separation with the TOF detector for deuteron</td>
-      </tr>
-      <tr>
-        <td>o2::aod::femtodreamparticle::TOFNSigmaTr</td>
-        <td></td>
-        <td>tofNSigmaTr</td>
-        <td>float</td>
-        <td>Nsigma separation with the TOF detector for triton</td>
-      </tr>
-      <tr>
-        <td>o2::aod::femtodreamparticle::TOFNSigmaHe</td>
-        <td></td>
-        <td>tofNSigmaHe</td>
-        <td>float</td>
-        <td>Nsigma separation with the TOF detector for helium3</td>
-      </tr>
-      <tr>
-        <td>o2::aod::femtodreamparticle::DaughDCA</td>
+        <td>o2::aod::femtouniverseparticle::DaughDCA</td>
         <td></td>
         <td>daughDCA</td>
         <td>float</td>
         <td>DCA between daughters</td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamparticle::TransRadius</td>
+        <td>o2::aod::femtouniverseparticle::TransRadius</td>
         <td></td>
         <td>transRadius</td>
         <td>float</td>
         <td>Transverse radius of the decay vertex</td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamparticle::DecayVtxX</td>
+        <td>o2::aod::femtouniverseparticle::DecayVtxX</td>
         <td></td>
         <td>decayVtxX</td>
         <td>float</td>
         <td>X position of the decay vertex</td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamparticle::DecayVtxY</td>
+        <td>o2::aod::femtouniverseparticle::DecayVtxY</td>
         <td></td>
         <td>decayVtxY</td>
         <td>float</td>
         <td>Y position of the decay vertex</td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamparticle::DecayVtxZ</td>
+        <td>o2::aod::femtouniverseparticle::DecayVtxZ</td>
         <td></td>
         <td>decayVtxZ</td>
         <td>float</td>
         <td>Z position of the decay vertex</td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamparticle::MKaon</td>
+        <td>o2::aod::femtouniverseparticle::MKaon</td>
         <td></td>
         <td>mKaon</td>
         <td>float</td>
         <td>The invariant mass of V0 candidate, assuming kaon</td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamparticle::TPCCrossedRowsOverFindableCls</td>
+        <td>o2::aod::femtouniverseparticle::TPCCrossedRowsOverFindableCls</td>
         <td>D</td>
         <td>tpcCrossedRowsOverFindableCls</td>
         <td>float</td>
         <td>Compute the number of crossed rows over findable TPC clusters</td>
       </tr>
       <tr>
-        <td>o2::aod::``AOD''</td>
+        <td>o2::aod::pidtpc_tiny::TPCNSigmaEl</td>
         <td>GI</td>
         <td></td>
         <td>?</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::``FDMCPARTICLE''</td>
+        <td>o2::aod::pidtpc_tiny::TPCNSigmaPi</td>
         <td>GI</td>
         <td></td>
         <td>?</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::soa::Index</td>
+        <td>o2::aod::pidtpc_tiny::TPCNSigmaKa</td>
         <td>GI</td>
-        <td>globalIndex</td>
-        <td>int64_t</td>
+        <td></td>
+        <td>?</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamMCparticle::PartOriginMCTruth</td>
+        <td>o2::aod::pidtpc_tiny::TPCNSigmaPr</td>
+        <td>GI</td>
         <td></td>
-        <td>partOriginMCTruth</td>
-        <td>uint8_t</td>
-        <td>Origin of the particle, according to femtodreamparticle::ParticleOriginMCTruth</td>
+        <td>?</td>
+        <td></td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamMCparticle::PDGMCTruth</td>
+        <td>o2::aod::pidtpc_tiny::TPCNSigmaDe</td>
+        <td>GI</td>
         <td></td>
-        <td>pdgMCTruth</td>
-        <td>int</td>
-        <td>Particle PDG</td>
+        <td>?</td>
+        <td></td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamparticle::Pt</td>
+        <td>o2::aod::pidtof_tiny::TOFNSigmaEl</td>
+        <td>GI</td>
         <td></td>
-        <td>pt</td>
-        <td>float</td>
-        <td>p_T (GeV/c)</td>
+        <td>?</td>
+        <td></td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamparticle::Eta</td>
+        <td>o2::aod::pidtof_tiny::TOFNSigmaPi</td>
+        <td>GI</td>
         <td></td>
-        <td>eta</td>
-        <td>float</td>
-        <td>Eta</td>
+        <td>?</td>
+        <td></td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamparticle::Phi</td>
+        <td>o2::aod::pidtof_tiny::TOFNSigmaKa</td>
+        <td>GI</td>
         <td></td>
-        <td>phi</td>
-        <td>float</td>
-        <td>Phi</td>
+        <td>?</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::pidtof_tiny::TOFNSigmaPr</td>
+        <td>GI</td>
+        <td></td>
+        <td>?</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::pidtof_tiny::TOFNSigmaDe</td>
+        <td>GI</td>
+        <td></td>
+        <td>?</td>
+        <td></td>
       </tr>
     </table>
   </div>
@@ -2358,7 +1508,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGCF
 
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGCF/DataModel/FemtoDerived.h" target="_blank">PWGCF/DataModel/FemtoDerived.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGCF/FemtoUniverse/DataModel/FemtoDerived.h" target="_blank">PWGCF/FemtoUniverse/DataModel/FemtoDerived.h</a>
     </div>
     <div>Is used in:
       <ul>
@@ -2381,35 +1531,35 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGCF
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamMCparticle::PartOriginMCTruth</td>
+        <td>o2::aod::femtouniverseMCparticle::PartOriginMCTruth</td>
         <td></td>
         <td>partOriginMCTruth</td>
         <td>uint8_t</td>
-        <td>Origin of the particle, according to femtodreamparticle::ParticleOriginMCTruth</td>
+        <td>Origin of the particle, according to femtouniverseparticle::ParticleOriginMCTruth</td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamMCparticle::PDGMCTruth</td>
+        <td>o2::aod::femtouniverseMCparticle::PDGMCTruth</td>
         <td></td>
         <td>pdgMCTruth</td>
         <td>int</td>
         <td>Particle PDG</td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamparticle::Pt</td>
+        <td>o2::aod::femtouniverseparticle::Pt</td>
         <td></td>
         <td>pt</td>
         <td>float</td>
         <td>p_T (GeV/c)</td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamparticle::Eta</td>
+        <td>o2::aod::femtouniverseparticle::Eta</td>
         <td></td>
         <td>eta</td>
         <td>float</td>
         <td>Eta</td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamparticle::Phi</td>
+        <td>o2::aod::femtouniverseparticle::Phi</td>
         <td></td>
         <td>phi</td>
         <td>float</td>
@@ -2424,7 +1574,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGCF
 
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGCF/DataModel/FemtoDerived.h" target="_blank">PWGCF/DataModel/FemtoDerived.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGCF/FemtoUniverse/DataModel/FemtoDerived.h" target="_blank">PWGCF/FemtoUniverse/DataModel/FemtoDerived.h</a>
     </div>
     <div>Is used in:
       <ul>
@@ -2440,7 +1590,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGCF
         <th>Comment</th>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamMCparticle::MotherPDG</td>
+        <td>o2::aod::femtouniverseMCparticle::MotherPDG</td>
         <td></td>
         <td>motherPDG</td>
         <td>int</td>
@@ -2452,10 +1602,859 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGCF
   <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::FDMCLabels</button>
   <div class="panel">
     <div>
-       Table joinable to FemtoDreamParticle containing the MC labels
+       Table joinable to FemtoUniverseParticle containing the MC labels
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGCF/DataModel/FemtoDerived.h" target="_blank">PWGCF/DataModel/FemtoDerived.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGCF/FemtoUniverse/DataModel/FemtoDerived.h" target="_blank">PWGCF/FemtoUniverse/DataModel/FemtoDerived.h</a>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::mcfdlabel::FDMCParticleId</td>
+        <td>I</td>
+        <td>fdMCParticleId</td>
+        <td>int32</td>
+        <td>MC particle for femtodreamparticle</td>
+      </tr>
+    </table>
+  </div>
+
+</div>
+
+###  o2-analysis-cf-femtodream-producer-for-specific-analysis
+Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGCF/FemtoDream/TableProducer//femtoDreamProducerTaskForSpecificAnalysis.cxx" target="_blank">femtoDreamProducerTaskForSpecificAnalysis.cxx</a>
+<div>
+
+</div>
+
+###  o2-analysis-cf-femtouniverse-mctruth-producer
+Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGCF/FemtoUniverse/TableProducer//femtoUniverseProducerMCTruthTask.cxx" target="_blank">femtoUniverseProducerMCTruthTask.cxx</a>
+<div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::FDCollisions</button>
+  <div class="panel">
+    <div>
+
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGCF/FemtoUniverse/DataModel/FemtoDerived.h" target="_blank">PWGCF/FemtoUniverse/DataModel/FemtoDerived.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::FDCollision = o2::aod::FDCollisions::iterator</li>
+      </ul>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::soa::Index</td>
+        <td>GI</td>
+        <td>globalIndex</td>
+        <td>int64_t</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::&zwnj;collision::PosZ</td>
+        <td></td>
+        <td>posZ</td>
+        <td>float</td>
+        <td>Z Vertex position in cm</td>
+      </tr>
+      <tr>
+        <td>o2::aod::femtouniversecollision::MultV0M</td>
+        <td></td>
+        <td>multV0M</td>
+        <td>float</td>
+        <td>V0M multiplicity</td>
+      </tr>
+      <tr>
+        <td>o2::aod::femtouniversecollision::MultNtr</td>
+        <td></td>
+        <td>multNtr</td>
+        <td>int</td>
+        <td>multiplicity of charged tracks as defined in the producer</td>
+      </tr>
+      <tr>
+        <td>o2::aod::femtouniversecollision::Sphericity</td>
+        <td></td>
+        <td>sphericity</td>
+        <td>float</td>
+        <td>Sphericity of the event</td>
+      </tr>
+      <tr>
+        <td>o2::aod::femtouniversecollision::MagField</td>
+        <td></td>
+        <td>magField</td>
+        <td>float</td>
+        <td>Magnetic field of the event</td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::FDParticles</button>
+  <div class="panel">
+    <div>
+
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGCF/FemtoUniverse/DataModel/FemtoDerived.h" target="_blank">PWGCF/FemtoUniverse/DataModel/FemtoDerived.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::FDParticle = o2::aod::FDParticles::iterator</li>
+      </ul>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::soa::Index</td>
+        <td>GI</td>
+        <td>globalIndex</td>
+        <td>int64_t</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::femtouniverseparticle::FDCollisionId</td>
+        <td>I</td>
+        <td>fdCollisionId</td>
+        <td>int32</td>
+        <td>Pointer into FDCollisions</td>
+      </tr>
+      <tr>
+        <td>o2::aod::femtouniverseparticle::Pt</td>
+        <td></td>
+        <td>pt</td>
+        <td>float</td>
+        <td>p_T (GeV/c)</td>
+      </tr>
+      <tr>
+        <td>o2::aod::femtouniverseparticle::Eta</td>
+        <td></td>
+        <td>eta</td>
+        <td>float</td>
+        <td>Eta</td>
+      </tr>
+      <tr>
+        <td>o2::aod::femtouniverseparticle::Phi</td>
+        <td></td>
+        <td>phi</td>
+        <td>float</td>
+        <td>Phi</td>
+      </tr>
+      <tr>
+        <td>o2::aod::femtouniverseparticle::PartType</td>
+        <td></td>
+        <td>partType</td>
+        <td>uint8_t</td>
+        <td>Type of the particle, according to femtouniverseparticle::ParticleType</td>
+      </tr>
+      <tr>
+        <td>o2::aod::femtouniverseparticle::Cut</td>
+        <td></td>
+        <td>cut</td>
+        <td>cutContainerType</td>
+        <td>Bit-wise container for the different selection criteria</td>
+      </tr>
+      <tr>
+        <td>o2::aod::femtouniverseparticle::PIDCut</td>
+        <td></td>
+        <td>pidcut</td>
+        <td>cutContainerType</td>
+        <td>Bit-wise container for the different PID selection criteria \todo since bit-masking cannot be done yet with filters we use a second field for the PID</td>
+      </tr>
+      <tr>
+        <td>o2::aod::femtouniverseparticle::TempFitVar</td>
+        <td></td>
+        <td>tempFitVar</td>
+        <td>float</td>
+        <td>Observable for the template fitting (Track: DCA_xy, V0: CPA)</td>
+      </tr>
+      <tr>
+        <td>o2::aod::femtouniverseparticle::ChildrenIds</td>
+        <td>SAI</td>
+        <td>childrenIds</td>
+        <td></td>
+        <td>Field for the track indices to remove auto-correlations</td>
+      </tr>
+      <tr>
+        <td>o2::aod::femtouniverseparticle::MLambda</td>
+        <td></td>
+        <td>mLambda</td>
+        <td>float</td>
+        <td>The invariant mass of V0 candidate, assuming lambda</td>
+      </tr>
+      <tr>
+        <td>o2::aod::femtouniverseparticle::MAntiLambda</td>
+        <td></td>
+        <td>mAntiLambda</td>
+        <td>float</td>
+        <td>The invariant mass of V0 candidate, assuming antilambda</td>
+      </tr>
+      <tr>
+        <td>o2::aod::femtouniverseparticle::Theta</td>
+        <td>D</td>
+        <td>theta</td>
+        <td>float</td>
+        <td>Compute the theta of the track</td>
+      </tr>
+      <tr>
+        <td>o2::aod::femtouniverseparticle::Px</td>
+        <td>D</td>
+        <td>px</td>
+        <td>float</td>
+        <td>Compute the momentum in x in GeV/c</td>
+      </tr>
+      <tr>
+        <td>o2::aod::femtouniverseparticle::Py</td>
+        <td>D</td>
+        <td>py</td>
+        <td>float</td>
+        <td>Compute the momentum in y in GeV/c</td>
+      </tr>
+      <tr>
+        <td>o2::aod::femtouniverseparticle::Pz</td>
+        <td>D</td>
+        <td>pz</td>
+        <td>float</td>
+        <td>Compute the momentum in z in GeV/c</td>
+      </tr>
+      <tr>
+        <td>o2::aod::femtouniverseparticle::P</td>
+        <td>D</td>
+        <td>p</td>
+        <td>float</td>
+        <td>Compute the overall momentum in GeV/c</td>
+      </tr>
+    </table>
+  </div>
+
+</div>
+
+###  o2-analysis-cf-femtouniverse-producer-reduced
+Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGCF/FemtoUniverse/TableProducer//femtoUniverseProducerReducedTask.cxx" target="_blank">femtoUniverseProducerReducedTask.cxx</a>
+<div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::FDCollisions</button>
+  <div class="panel">
+    <div>
+
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGCF/FemtoUniverse/DataModel/FemtoDerived.h" target="_blank">PWGCF/FemtoUniverse/DataModel/FemtoDerived.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::FDCollision = o2::aod::FDCollisions::iterator</li>
+      </ul>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::soa::Index</td>
+        <td>GI</td>
+        <td>globalIndex</td>
+        <td>int64_t</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::&zwnj;collision::PosZ</td>
+        <td></td>
+        <td>posZ</td>
+        <td>float</td>
+        <td>Z Vertex position in cm</td>
+      </tr>
+      <tr>
+        <td>o2::aod::femtouniversecollision::MultV0M</td>
+        <td></td>
+        <td>multV0M</td>
+        <td>float</td>
+        <td>V0M multiplicity</td>
+      </tr>
+      <tr>
+        <td>o2::aod::femtouniversecollision::MultNtr</td>
+        <td></td>
+        <td>multNtr</td>
+        <td>int</td>
+        <td>multiplicity of charged tracks as defined in the producer</td>
+      </tr>
+      <tr>
+        <td>o2::aod::femtouniversecollision::Sphericity</td>
+        <td></td>
+        <td>sphericity</td>
+        <td>float</td>
+        <td>Sphericity of the event</td>
+      </tr>
+      <tr>
+        <td>o2::aod::femtouniversecollision::MagField</td>
+        <td></td>
+        <td>magField</td>
+        <td>float</td>
+        <td>Magnetic field of the event</td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::FDParticles</button>
+  <div class="panel">
+    <div>
+
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGCF/FemtoUniverse/DataModel/FemtoDerived.h" target="_blank">PWGCF/FemtoUniverse/DataModel/FemtoDerived.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::FDParticle = o2::aod::FDParticles::iterator</li>
+      </ul>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::soa::Index</td>
+        <td>GI</td>
+        <td>globalIndex</td>
+        <td>int64_t</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::femtouniverseparticle::FDCollisionId</td>
+        <td>I</td>
+        <td>fdCollisionId</td>
+        <td>int32</td>
+        <td>Pointer into FDCollisions</td>
+      </tr>
+      <tr>
+        <td>o2::aod::femtouniverseparticle::Pt</td>
+        <td></td>
+        <td>pt</td>
+        <td>float</td>
+        <td>p_T (GeV/c)</td>
+      </tr>
+      <tr>
+        <td>o2::aod::femtouniverseparticle::Eta</td>
+        <td></td>
+        <td>eta</td>
+        <td>float</td>
+        <td>Eta</td>
+      </tr>
+      <tr>
+        <td>o2::aod::femtouniverseparticle::Phi</td>
+        <td></td>
+        <td>phi</td>
+        <td>float</td>
+        <td>Phi</td>
+      </tr>
+      <tr>
+        <td>o2::aod::femtouniverseparticle::PartType</td>
+        <td></td>
+        <td>partType</td>
+        <td>uint8_t</td>
+        <td>Type of the particle, according to femtouniverseparticle::ParticleType</td>
+      </tr>
+      <tr>
+        <td>o2::aod::femtouniverseparticle::Cut</td>
+        <td></td>
+        <td>cut</td>
+        <td>cutContainerType</td>
+        <td>Bit-wise container for the different selection criteria</td>
+      </tr>
+      <tr>
+        <td>o2::aod::femtouniverseparticle::PIDCut</td>
+        <td></td>
+        <td>pidcut</td>
+        <td>cutContainerType</td>
+        <td>Bit-wise container for the different PID selection criteria \todo since bit-masking cannot be done yet with filters we use a second field for the PID</td>
+      </tr>
+      <tr>
+        <td>o2::aod::femtouniverseparticle::TempFitVar</td>
+        <td></td>
+        <td>tempFitVar</td>
+        <td>float</td>
+        <td>Observable for the template fitting (Track: DCA_xy, V0: CPA)</td>
+      </tr>
+      <tr>
+        <td>o2::aod::femtouniverseparticle::ChildrenIds</td>
+        <td>SAI</td>
+        <td>childrenIds</td>
+        <td></td>
+        <td>Field for the track indices to remove auto-correlations</td>
+      </tr>
+      <tr>
+        <td>o2::aod::femtouniverseparticle::MLambda</td>
+        <td></td>
+        <td>mLambda</td>
+        <td>float</td>
+        <td>The invariant mass of V0 candidate, assuming lambda</td>
+      </tr>
+      <tr>
+        <td>o2::aod::femtouniverseparticle::MAntiLambda</td>
+        <td></td>
+        <td>mAntiLambda</td>
+        <td>float</td>
+        <td>The invariant mass of V0 candidate, assuming antilambda</td>
+      </tr>
+      <tr>
+        <td>o2::aod::femtouniverseparticle::Theta</td>
+        <td>D</td>
+        <td>theta</td>
+        <td>float</td>
+        <td>Compute the theta of the track</td>
+      </tr>
+      <tr>
+        <td>o2::aod::femtouniverseparticle::Px</td>
+        <td>D</td>
+        <td>px</td>
+        <td>float</td>
+        <td>Compute the momentum in x in GeV/c</td>
+      </tr>
+      <tr>
+        <td>o2::aod::femtouniverseparticle::Py</td>
+        <td>D</td>
+        <td>py</td>
+        <td>float</td>
+        <td>Compute the momentum in y in GeV/c</td>
+      </tr>
+      <tr>
+        <td>o2::aod::femtouniverseparticle::Pz</td>
+        <td>D</td>
+        <td>pz</td>
+        <td>float</td>
+        <td>Compute the momentum in z in GeV/c</td>
+      </tr>
+      <tr>
+        <td>o2::aod::femtouniverseparticle::P</td>
+        <td>D</td>
+        <td>p</td>
+        <td>float</td>
+        <td>Compute the overall momentum in GeV/c</td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::FDExtParticles</button>
+  <div class="panel">
+    <div>
+
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGCF/FemtoUniverse/DataModel/FemtoDerived.h" target="_blank">PWGCF/FemtoUniverse/DataModel/FemtoDerived.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::FDFullParticle = o2::aod::FDExtParticles::iterator</li>
+      </ul>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::femtouniverseparticle::Sign</td>
+        <td></td>
+        <td>sign</td>
+        <td>int8_t</td>
+        <td>Sign of the track charge</td>
+      </tr>
+      <tr>
+        <td>o2::aod::femtouniverseparticle::TPCNClsFound</td>
+        <td></td>
+        <td>tpcNClsFound</td>
+        <td>uint8_t</td>
+        <td>Number of TPC clusters</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::TPCNClsFindable</td>
+        <td></td>
+        <td>tpcNClsFindable</td>
+        <td>uint8_t</td>
+        <td>Findable TPC clusters for this track geometry</td>
+      </tr>
+      <tr>
+        <td>o2::aod::femtouniverseparticle::TPCNClsCrossedRows</td>
+        <td></td>
+        <td>tpcNClsCrossedRows</td>
+        <td>uint8_t</td>
+        <td>Number of TPC crossed rows</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::TPCNClsShared</td>
+        <td></td>
+        <td>tpcNClsShared</td>
+        <td>uint8_t</td>
+        <td>Number of shared TPC clusters</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::TPCInnerParam</td>
+        <td></td>
+        <td>tpcInnerParam</td>
+        <td>float</td>
+        <td>Momentum at inner wall of the TPC</td>
+      </tr>
+      <tr>
+        <td>o2::aod::femtouniverseparticle::ITSNCls</td>
+        <td></td>
+        <td>itsNCls</td>
+        <td>uint8_t</td>
+        <td>Number of ITS clusters</td>
+      </tr>
+      <tr>
+        <td>o2::aod::femtouniverseparticle::ITSNClsInnerBarrel</td>
+        <td></td>
+        <td>itsNClsInnerBarrel</td>
+        <td>uint8_t</td>
+        <td>Number of ITS clusters in the inner barrel   TPC signal</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::DcaXY</td>
+        <td></td>
+        <td>dcaXY</td>
+        <td>float</td>
+        <td>Impact parameter in XY of the track to the primary vertex</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::DcaZ</td>
+        <td></td>
+        <td>dcaZ</td>
+        <td>float</td>
+        <td>Impact parameter in Z of the track to the primary vertex</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::TPCSignal</td>
+        <td></td>
+        <td>tpcSignal</td>
+        <td>float</td>
+        <td>dE/dx signal in the TPC</td>
+      </tr>
+      <tr>
+        <td>o2::aod::pidtpc_tiny::TPCNSigmaStoreEl</td>
+        <td></td>
+        <td>tpcNSigmaStoreEl</td>
+        <td>binning::binned_t</td>
+        <td>Stored binned nsigma with the TPC detector for electron</td>
+      </tr>
+      <tr>
+        <td>o2::aod::pidtpc_tiny::TPCNSigmaStorePi</td>
+        <td></td>
+        <td>tpcNSigmaStorePi</td>
+        <td>binning::binned_t</td>
+        <td>Stored binned nsigma with the TPC detector for pion</td>
+      </tr>
+      <tr>
+        <td>o2::aod::pidtpc_tiny::TPCNSigmaStoreKa</td>
+        <td></td>
+        <td>tpcNSigmaStoreKa</td>
+        <td>binning::binned_t</td>
+        <td>Stored binned nsigma with the TPC detector for kaon</td>
+      </tr>
+      <tr>
+        <td>o2::aod::pidtpc_tiny::TPCNSigmaStorePr</td>
+        <td></td>
+        <td>tpcNSigmaStorePr</td>
+        <td>binning::binned_t</td>
+        <td>Stored binned nsigma with the TPC detector for proton</td>
+      </tr>
+      <tr>
+        <td>o2::aod::pidtpc_tiny::TPCNSigmaStoreDe</td>
+        <td></td>
+        <td>tpcNSigmaStoreDe</td>
+        <td>binning::binned_t</td>
+        <td>Stored binned nsigma with the TPC detector for deuteron</td>
+      </tr>
+      <tr>
+        <td>o2::aod::pidtof_tiny::TOFNSigmaStoreEl</td>
+        <td></td>
+        <td>tofNSigmaStoreEl</td>
+        <td>binning::binned_t</td>
+        <td>Stored binned nsigma with the TOF detector for electron</td>
+      </tr>
+      <tr>
+        <td>o2::aod::pidtof_tiny::TOFNSigmaStorePi</td>
+        <td></td>
+        <td>tofNSigmaStorePi</td>
+        <td>binning::binned_t</td>
+        <td>Stored binned nsigma with the TOF detector for pion</td>
+      </tr>
+      <tr>
+        <td>o2::aod::pidtof_tiny::TOFNSigmaStoreKa</td>
+        <td></td>
+        <td>tofNSigmaStoreKa</td>
+        <td>binning::binned_t</td>
+        <td>Stored binned nsigma with the TOF detector for kaon</td>
+      </tr>
+      <tr>
+        <td>o2::aod::pidtof_tiny::TOFNSigmaStorePr</td>
+        <td></td>
+        <td>tofNSigmaStorePr</td>
+        <td>binning::binned_t</td>
+        <td>Stored binned nsigma with the TOF detector for proton</td>
+      </tr>
+      <tr>
+        <td>o2::aod::pidtof_tiny::TOFNSigmaStoreDe</td>
+        <td></td>
+        <td>tofNSigmaStoreDe</td>
+        <td>binning::binned_t</td>
+        <td>Stored binned nsigma with the TOF detector for deuteron</td>
+      </tr>
+      <tr>
+        <td>o2::aod::femtouniverseparticle::DaughDCA</td>
+        <td></td>
+        <td>daughDCA</td>
+        <td>float</td>
+        <td>DCA between daughters</td>
+      </tr>
+      <tr>
+        <td>o2::aod::femtouniverseparticle::TransRadius</td>
+        <td></td>
+        <td>transRadius</td>
+        <td>float</td>
+        <td>Transverse radius of the decay vertex</td>
+      </tr>
+      <tr>
+        <td>o2::aod::femtouniverseparticle::DecayVtxX</td>
+        <td></td>
+        <td>decayVtxX</td>
+        <td>float</td>
+        <td>X position of the decay vertex</td>
+      </tr>
+      <tr>
+        <td>o2::aod::femtouniverseparticle::DecayVtxY</td>
+        <td></td>
+        <td>decayVtxY</td>
+        <td>float</td>
+        <td>Y position of the decay vertex</td>
+      </tr>
+      <tr>
+        <td>o2::aod::femtouniverseparticle::DecayVtxZ</td>
+        <td></td>
+        <td>decayVtxZ</td>
+        <td>float</td>
+        <td>Z position of the decay vertex</td>
+      </tr>
+      <tr>
+        <td>o2::aod::femtouniverseparticle::MKaon</td>
+        <td></td>
+        <td>mKaon</td>
+        <td>float</td>
+        <td>The invariant mass of V0 candidate, assuming kaon</td>
+      </tr>
+      <tr>
+        <td>o2::aod::femtouniverseparticle::TPCCrossedRowsOverFindableCls</td>
+        <td>D</td>
+        <td>tpcCrossedRowsOverFindableCls</td>
+        <td>float</td>
+        <td>Compute the number of crossed rows over findable TPC clusters</td>
+      </tr>
+      <tr>
+        <td>o2::aod::pidtpc_tiny::TPCNSigmaEl</td>
+        <td>GI</td>
+        <td></td>
+        <td>?</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::pidtpc_tiny::TPCNSigmaPi</td>
+        <td>GI</td>
+        <td></td>
+        <td>?</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::pidtpc_tiny::TPCNSigmaKa</td>
+        <td>GI</td>
+        <td></td>
+        <td>?</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::pidtpc_tiny::TPCNSigmaPr</td>
+        <td>GI</td>
+        <td></td>
+        <td>?</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::pidtpc_tiny::TPCNSigmaDe</td>
+        <td>GI</td>
+        <td></td>
+        <td>?</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::pidtof_tiny::TOFNSigmaEl</td>
+        <td>GI</td>
+        <td></td>
+        <td>?</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::pidtof_tiny::TOFNSigmaPi</td>
+        <td>GI</td>
+        <td></td>
+        <td>?</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::pidtof_tiny::TOFNSigmaKa</td>
+        <td>GI</td>
+        <td></td>
+        <td>?</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::pidtof_tiny::TOFNSigmaPr</td>
+        <td>GI</td>
+        <td></td>
+        <td>?</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::pidtof_tiny::TOFNSigmaDe</td>
+        <td>GI</td>
+        <td></td>
+        <td>?</td>
+        <td></td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::FDMCParticles</button>
+  <div class="panel">
+    <div>
+
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGCF/FemtoUniverse/DataModel/FemtoDerived.h" target="_blank">PWGCF/FemtoUniverse/DataModel/FemtoDerived.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::FDMCParticle = o2::aod::FDMCParticles::iterator</li>
+      </ul>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::soa::Index</td>
+        <td>GI</td>
+        <td>globalIndex</td>
+        <td>int64_t</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::femtouniverseMCparticle::PartOriginMCTruth</td>
+        <td></td>
+        <td>partOriginMCTruth</td>
+        <td>uint8_t</td>
+        <td>Origin of the particle, according to femtouniverseparticle::ParticleOriginMCTruth</td>
+      </tr>
+      <tr>
+        <td>o2::aod::femtouniverseMCparticle::PDGMCTruth</td>
+        <td></td>
+        <td>pdgMCTruth</td>
+        <td>int</td>
+        <td>Particle PDG</td>
+      </tr>
+      <tr>
+        <td>o2::aod::femtouniverseparticle::Pt</td>
+        <td></td>
+        <td>pt</td>
+        <td>float</td>
+        <td>p_T (GeV/c)</td>
+      </tr>
+      <tr>
+        <td>o2::aod::femtouniverseparticle::Eta</td>
+        <td></td>
+        <td>eta</td>
+        <td>float</td>
+        <td>Eta</td>
+      </tr>
+      <tr>
+        <td>o2::aod::femtouniverseparticle::Phi</td>
+        <td></td>
+        <td>phi</td>
+        <td>float</td>
+        <td>Phi</td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::FDExtMCParticles</button>
+  <div class="panel">
+    <div>
+
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGCF/FemtoUniverse/DataModel/FemtoDerived.h" target="_blank">PWGCF/FemtoUniverse/DataModel/FemtoDerived.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::FDExtMCParticle = o2::aod::FDExtMCParticles::iterator</li>
+      </ul>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::femtouniverseMCparticle::MotherPDG</td>
+        <td></td>
+        <td>motherPDG</td>
+        <td>int</td>
+        <td>Checks mother PDG, where mother is the primary particle for that decay chain</td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::FDMCLabels</button>
+  <div class="panel">
+    <div>
+       Table joinable to FemtoUniverseParticle containing the MC labels
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGCF/FemtoUniverse/DataModel/FemtoDerived.h" target="_blank">PWGCF/FemtoUniverse/DataModel/FemtoDerived.h</a>
     </div>
     <table class=DataModel>
       <tr>
@@ -2487,7 +2486,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGCF
 
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGCF/DataModel/FemtoDerived.h" target="_blank">PWGCF/DataModel/FemtoDerived.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGCF/FemtoUniverse/DataModel/FemtoDerived.h" target="_blank">PWGCF/FemtoUniverse/DataModel/FemtoDerived.h</a>
     </div>
     <div>Is used in:
       <ul>
@@ -2517,32 +2516,70 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGCF
         <td>Z Vertex position in cm</td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamcollision::MultV0M</td>
+        <td>o2::aod::femtouniversecollision::MultV0M</td>
         <td></td>
         <td>multV0M</td>
         <td>float</td>
         <td>V0M multiplicity</td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamcollision::MultNtr</td>
+        <td>o2::aod::femtouniversecollision::MultNtr</td>
         <td></td>
         <td>multNtr</td>
         <td>int</td>
         <td>multiplicity of charged tracks as defined in the producer</td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamcollision::Sphericity</td>
+        <td>o2::aod::femtouniversecollision::Sphericity</td>
         <td></td>
         <td>sphericity</td>
         <td>float</td>
         <td>Sphericity of the event</td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamcollision::MagField</td>
+        <td>o2::aod::femtouniversecollision::MagField</td>
         <td></td>
         <td>magField</td>
         <td>float</td>
         <td>Magnetic field of the event</td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::FDExtCollisions</button>
+  <div class="panel">
+    <div>
+
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGCF/FemtoUniverse/DataModel/FemtoDerived.h" target="_blank">PWGCF/FemtoUniverse/DataModel/FemtoDerived.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::FDExtCollision = o2::aod::FDExtCollisions::iterator</li>
+      </ul>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::femtouniversecollision::IRrate</td>
+        <td></td>
+        <td>irrate</td>
+        <td>float</td>
+        <td>Interaction rate</td>
+      </tr>
+      <tr>
+        <td>o2::aod::femtouniversecollision::Occupancy</td>
+        <td></td>
+        <td>occupancy</td>
+        <td>int</td>
+        <td>TPC occupancy</td>
       </tr>
     </table>
   </div>
@@ -2553,7 +2590,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGCF
 
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGCF/DataModel/FemtoDerived.h" target="_blank">PWGCF/DataModel/FemtoDerived.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGCF/FemtoUniverse/DataModel/FemtoDerived.h" target="_blank">PWGCF/FemtoUniverse/DataModel/FemtoDerived.h</a>
     </div>
     <div>Is used in:
       <ul>
@@ -2576,112 +2613,112 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGCF
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamparticle::FDCollisionId</td>
+        <td>o2::aod::femtouniverseparticle::FDCollisionId</td>
         <td>I</td>
         <td>fdCollisionId</td>
         <td>int32</td>
         <td>Pointer into FDCollisions</td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamparticle::Pt</td>
+        <td>o2::aod::femtouniverseparticle::Pt</td>
         <td></td>
         <td>pt</td>
         <td>float</td>
         <td>p_T (GeV/c)</td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamparticle::Eta</td>
+        <td>o2::aod::femtouniverseparticle::Eta</td>
         <td></td>
         <td>eta</td>
         <td>float</td>
         <td>Eta</td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamparticle::Phi</td>
+        <td>o2::aod::femtouniverseparticle::Phi</td>
         <td></td>
         <td>phi</td>
         <td>float</td>
         <td>Phi</td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamparticle::PartType</td>
+        <td>o2::aod::femtouniverseparticle::PartType</td>
         <td></td>
         <td>partType</td>
         <td>uint8_t</td>
-        <td>Type of the particle, according to femtodreamparticle::ParticleType</td>
+        <td>Type of the particle, according to femtouniverseparticle::ParticleType</td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamparticle::Cut</td>
+        <td>o2::aod::femtouniverseparticle::Cut</td>
         <td></td>
         <td>cut</td>
         <td>cutContainerType</td>
         <td>Bit-wise container for the different selection criteria</td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamparticle::PIDCut</td>
+        <td>o2::aod::femtouniverseparticle::PIDCut</td>
         <td></td>
         <td>pidcut</td>
         <td>cutContainerType</td>
         <td>Bit-wise container for the different PID selection criteria \todo since bit-masking cannot be done yet with filters we use a second field for the PID</td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamparticle::TempFitVar</td>
+        <td>o2::aod::femtouniverseparticle::TempFitVar</td>
         <td></td>
         <td>tempFitVar</td>
         <td>float</td>
         <td>Observable for the template fitting (Track: DCA_xy, V0: CPA)</td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamparticle::ChildrenIds</td>
+        <td>o2::aod::femtouniverseparticle::ChildrenIds</td>
         <td>SAI</td>
         <td>childrenIds</td>
         <td></td>
         <td>Field for the track indices to remove auto-correlations</td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamparticle::MLambda</td>
+        <td>o2::aod::femtouniverseparticle::MLambda</td>
         <td></td>
         <td>mLambda</td>
         <td>float</td>
         <td>The invariant mass of V0 candidate, assuming lambda</td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamparticle::MAntiLambda</td>
+        <td>o2::aod::femtouniverseparticle::MAntiLambda</td>
         <td></td>
         <td>mAntiLambda</td>
         <td>float</td>
         <td>The invariant mass of V0 candidate, assuming antilambda</td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamparticle::Theta</td>
+        <td>o2::aod::femtouniverseparticle::Theta</td>
         <td>D</td>
         <td>theta</td>
         <td>float</td>
         <td>Compute the theta of the track</td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamparticle::Px</td>
+        <td>o2::aod::femtouniverseparticle::Px</td>
         <td>D</td>
         <td>px</td>
         <td>float</td>
         <td>Compute the momentum in x in GeV/c</td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamparticle::Py</td>
+        <td>o2::aod::femtouniverseparticle::Py</td>
         <td>D</td>
         <td>py</td>
         <td>float</td>
         <td>Compute the momentum in y in GeV/c</td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamparticle::Pz</td>
+        <td>o2::aod::femtouniverseparticle::Pz</td>
         <td>D</td>
         <td>pz</td>
         <td>float</td>
         <td>Compute the momentum in z in GeV/c</td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamparticle::P</td>
+        <td>o2::aod::femtouniverseparticle::P</td>
         <td>D</td>
         <td>p</td>
         <td>float</td>
@@ -2696,7 +2733,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGCF
 
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGCF/DataModel/FemtoDerived.h" target="_blank">PWGCF/DataModel/FemtoDerived.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGCF/FemtoUniverse/DataModel/FemtoDerived.h" target="_blank">PWGCF/FemtoUniverse/DataModel/FemtoDerived.h</a>
     </div>
     <div>Is used in:
       <ul>
@@ -2712,14 +2749,14 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGCF
         <th>Comment</th>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamparticle::Sign</td>
+        <td>o2::aod::femtouniverseparticle::Sign</td>
         <td></td>
         <td>sign</td>
         <td>int8_t</td>
         <td>Sign of the track charge</td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamparticle::TPCNClsFound</td>
+        <td>o2::aod::femtouniverseparticle::TPCNClsFound</td>
         <td></td>
         <td>tpcNClsFound</td>
         <td>uint8_t</td>
@@ -2733,7 +2770,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGCF
         <td>Findable TPC clusters for this track geometry</td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamparticle::TPCNClsCrossedRows</td>
+        <td>o2::aod::femtouniverseparticle::TPCNClsCrossedRows</td>
         <td></td>
         <td>tpcNClsCrossedRows</td>
         <td>uint8_t</td>
@@ -2754,14 +2791,14 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGCF
         <td>Momentum at inner wall of the TPC</td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamparticle::ITSNCls</td>
+        <td>o2::aod::femtouniverseparticle::ITSNCls</td>
         <td></td>
         <td>itsNCls</td>
         <td>uint8_t</td>
         <td>Number of ITS clusters</td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamparticle::ITSNClsInnerBarrel</td>
+        <td>o2::aod::femtouniverseparticle::ITSNClsInnerBarrel</td>
         <td></td>
         <td>itsNClsInnerBarrel</td>
         <td>uint8_t</td>
@@ -2789,330 +2826,193 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGCF
         <td>dE/dx signal in the TPC</td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamparticle::TPCNSigmaEl</td>
+        <td>o2::aod::pidtpc_tiny::TPCNSigmaStoreEl</td>
         <td></td>
-        <td>tpcNSigmaEl</td>
-        <td>float</td>
-        <td>Nsigma separation with the TPC detector for electron</td>
+        <td>tpcNSigmaStoreEl</td>
+        <td>binning::binned_t</td>
+        <td>Stored binned nsigma with the TPC detector for electron</td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamparticle::TPCNSigmaPi</td>
+        <td>o2::aod::pidtpc_tiny::TPCNSigmaStorePi</td>
         <td></td>
-        <td>tpcNSigmaPi</td>
-        <td>float</td>
-        <td>Nsigma separation with the TPC detector for pion</td>
+        <td>tpcNSigmaStorePi</td>
+        <td>binning::binned_t</td>
+        <td>Stored binned nsigma with the TPC detector for pion</td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamparticle::TPCNSigmaKa</td>
+        <td>o2::aod::pidtpc_tiny::TPCNSigmaStoreKa</td>
         <td></td>
-        <td>tpcNSigmaKa</td>
-        <td>float</td>
-        <td>Nsigma separation with the TPC detector for kaon</td>
+        <td>tpcNSigmaStoreKa</td>
+        <td>binning::binned_t</td>
+        <td>Stored binned nsigma with the TPC detector for kaon</td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamparticle::TPCNSigmaPr</td>
+        <td>o2::aod::pidtpc_tiny::TPCNSigmaStorePr</td>
         <td></td>
-        <td>tpcNSigmaPr</td>
-        <td>float</td>
-        <td>Nsigma separation with the TPC detector for proton</td>
+        <td>tpcNSigmaStorePr</td>
+        <td>binning::binned_t</td>
+        <td>Stored binned nsigma with the TPC detector for proton</td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamparticle::TPCNSigmaDe</td>
+        <td>o2::aod::pidtpc_tiny::TPCNSigmaStoreDe</td>
         <td></td>
-        <td>tpcNSigmaDe</td>
-        <td>float</td>
-        <td>Nsigma separation with the TPC detector for deuteron</td>
+        <td>tpcNSigmaStoreDe</td>
+        <td>binning::binned_t</td>
+        <td>Stored binned nsigma with the TPC detector for deuteron</td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamparticle::TPCNSigmaTr</td>
+        <td>o2::aod::pidtof_tiny::TOFNSigmaStoreEl</td>
         <td></td>
-        <td>tpcNSigmaTr</td>
-        <td>float</td>
-        <td>Nsigma separation with the TPC detector for triton</td>
+        <td>tofNSigmaStoreEl</td>
+        <td>binning::binned_t</td>
+        <td>Stored binned nsigma with the TOF detector for electron</td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamparticle::TPCNSigmaHe</td>
+        <td>o2::aod::pidtof_tiny::TOFNSigmaStorePi</td>
         <td></td>
-        <td>tpcNSigmaHe</td>
-        <td>float</td>
-        <td>Nsigma separation with the TPC detector for helium3</td>
+        <td>tofNSigmaStorePi</td>
+        <td>binning::binned_t</td>
+        <td>Stored binned nsigma with the TOF detector for pion</td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamparticle::TOFNSigmaEl</td>
+        <td>o2::aod::pidtof_tiny::TOFNSigmaStoreKa</td>
         <td></td>
-        <td>tofNSigmaEl</td>
-        <td>float</td>
-        <td>Nsigma separation with the TOF detector for electron</td>
+        <td>tofNSigmaStoreKa</td>
+        <td>binning::binned_t</td>
+        <td>Stored binned nsigma with the TOF detector for kaon</td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamparticle::TOFNSigmaPi</td>
+        <td>o2::aod::pidtof_tiny::TOFNSigmaStorePr</td>
         <td></td>
-        <td>tofNSigmaPi</td>
-        <td>float</td>
-        <td>Nsigma separation with the TOF detector for pion</td>
+        <td>tofNSigmaStorePr</td>
+        <td>binning::binned_t</td>
+        <td>Stored binned nsigma with the TOF detector for proton</td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamparticle::TOFNSigmaKa</td>
+        <td>o2::aod::pidtof_tiny::TOFNSigmaStoreDe</td>
         <td></td>
-        <td>tofNSigmaKa</td>
-        <td>float</td>
-        <td>Nsigma separation with the TOF detector for kaon</td>
+        <td>tofNSigmaStoreDe</td>
+        <td>binning::binned_t</td>
+        <td>Stored binned nsigma with the TOF detector for deuteron</td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamparticle::TOFNSigmaPr</td>
-        <td></td>
-        <td>tofNSigmaPr</td>
-        <td>float</td>
-        <td>Nsigma separation with the TOF detector for proton</td>
-      </tr>
-      <tr>
-        <td>o2::aod::femtodreamparticle::TOFNSigmaDe</td>
-        <td></td>
-        <td>tofNSigmaDe</td>
-        <td>float</td>
-        <td>Nsigma separation with the TOF detector for deuteron</td>
-      </tr>
-      <tr>
-        <td>o2::aod::femtodreamparticle::TOFNSigmaTr</td>
-        <td></td>
-        <td>tofNSigmaTr</td>
-        <td>float</td>
-        <td>Nsigma separation with the TOF detector for triton</td>
-      </tr>
-      <tr>
-        <td>o2::aod::femtodreamparticle::TOFNSigmaHe</td>
-        <td></td>
-        <td>tofNSigmaHe</td>
-        <td>float</td>
-        <td>Nsigma separation with the TOF detector for helium3</td>
-      </tr>
-      <tr>
-        <td>o2::aod::femtodreamparticle::DaughDCA</td>
+        <td>o2::aod::femtouniverseparticle::DaughDCA</td>
         <td></td>
         <td>daughDCA</td>
         <td>float</td>
         <td>DCA between daughters</td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamparticle::TransRadius</td>
+        <td>o2::aod::femtouniverseparticle::TransRadius</td>
         <td></td>
         <td>transRadius</td>
         <td>float</td>
         <td>Transverse radius of the decay vertex</td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamparticle::DecayVtxX</td>
+        <td>o2::aod::femtouniverseparticle::DecayVtxX</td>
         <td></td>
         <td>decayVtxX</td>
         <td>float</td>
         <td>X position of the decay vertex</td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamparticle::DecayVtxY</td>
+        <td>o2::aod::femtouniverseparticle::DecayVtxY</td>
         <td></td>
         <td>decayVtxY</td>
         <td>float</td>
         <td>Y position of the decay vertex</td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamparticle::DecayVtxZ</td>
+        <td>o2::aod::femtouniverseparticle::DecayVtxZ</td>
         <td></td>
         <td>decayVtxZ</td>
         <td>float</td>
         <td>Z position of the decay vertex</td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamparticle::MKaon</td>
+        <td>o2::aod::femtouniverseparticle::MKaon</td>
         <td></td>
         <td>mKaon</td>
         <td>float</td>
         <td>The invariant mass of V0 candidate, assuming kaon</td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamparticle::TPCCrossedRowsOverFindableCls</td>
+        <td>o2::aod::femtouniverseparticle::TPCCrossedRowsOverFindableCls</td>
         <td>D</td>
         <td>tpcCrossedRowsOverFindableCls</td>
         <td>float</td>
         <td>Compute the number of crossed rows over findable TPC clusters</td>
       </tr>
       <tr>
-        <td>o2::aod::``AOD''</td>
+        <td>o2::aod::pidtpc_tiny::TPCNSigmaEl</td>
         <td>GI</td>
         <td></td>
         <td>?</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::``FDMCPARTICLE''</td>
+        <td>o2::aod::pidtpc_tiny::TPCNSigmaPi</td>
         <td>GI</td>
         <td></td>
         <td>?</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::soa::Index</td>
+        <td>o2::aod::pidtpc_tiny::TPCNSigmaKa</td>
         <td>GI</td>
-        <td>globalIndex</td>
-        <td>int64_t</td>
+        <td></td>
+        <td>?</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamMCparticle::PartOriginMCTruth</td>
-        <td></td>
-        <td>partOriginMCTruth</td>
-        <td>uint8_t</td>
-        <td>Origin of the particle, according to femtodreamparticle::ParticleOriginMCTruth</td>
-      </tr>
-      <tr>
-        <td>o2::aod::femtodreamMCparticle::PDGMCTruth</td>
-        <td></td>
-        <td>pdgMCTruth</td>
-        <td>int</td>
-        <td>Particle PDG</td>
-      </tr>
-      <tr>
-        <td>o2::aod::femtodreamparticle::Pt</td>
-        <td></td>
-        <td>pt</td>
-        <td>float</td>
-        <td>p_T (GeV/c)</td>
-      </tr>
-      <tr>
-        <td>o2::aod::femtodreamparticle::Eta</td>
-        <td></td>
-        <td>eta</td>
-        <td>float</td>
-        <td>Eta</td>
-      </tr>
-      <tr>
-        <td>o2::aod::femtodreamparticle::Phi</td>
-        <td></td>
-        <td>phi</td>
-        <td>float</td>
-        <td>Phi</td>
-      </tr>
-    </table>
-  </div>
-
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::FDMCParticles</button>
-  <div class="panel">
-    <div>
-
-    </div>
-    <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGCF/DataModel/FemtoDerived.h" target="_blank">PWGCF/DataModel/FemtoDerived.h</a>
-    </div>
-    <div>Is used in:
-      <ul>
-        <li>o2::aod::FDMCParticle = o2::aod::FDMCParticles::iterator</li>
-      </ul>
-    </div>
-    <table class=DataModel>
-      <tr>
-        <th>Name</th>
-        <th></th>
-        <th>Getter</th>
-        <th>Type</th>
-        <th>Comment</th>
-      </tr>
-      <tr>
-        <td>o2::soa::Index</td>
+        <td>o2::aod::pidtpc_tiny::TPCNSigmaPr</td>
         <td>GI</td>
-        <td>globalIndex</td>
-        <td>int64_t</td>
+        <td></td>
+        <td>?</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamMCparticle::PartOriginMCTruth</td>
+        <td>o2::aod::pidtpc_tiny::TPCNSigmaDe</td>
+        <td>GI</td>
         <td></td>
-        <td>partOriginMCTruth</td>
-        <td>uint8_t</td>
-        <td>Origin of the particle, according to femtodreamparticle::ParticleOriginMCTruth</td>
-      </tr>
-      <tr>
-        <td>o2::aod::femtodreamMCparticle::PDGMCTruth</td>
+        <td>?</td>
         <td></td>
-        <td>pdgMCTruth</td>
-        <td>int</td>
-        <td>Particle PDG</td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamparticle::Pt</td>
+        <td>o2::aod::pidtof_tiny::TOFNSigmaEl</td>
+        <td>GI</td>
         <td></td>
-        <td>pt</td>
-        <td>float</td>
-        <td>p_T (GeV/c)</td>
-      </tr>
-      <tr>
-        <td>o2::aod::femtodreamparticle::Eta</td>
+        <td>?</td>
         <td></td>
-        <td>eta</td>
-        <td>float</td>
-        <td>Eta</td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamparticle::Phi</td>
+        <td>o2::aod::pidtof_tiny::TOFNSigmaPi</td>
+        <td>GI</td>
         <td></td>
-        <td>phi</td>
-        <td>float</td>
-        <td>Phi</td>
-      </tr>
-    </table>
-  </div>
-
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::FDExtMCParticles</button>
-  <div class="panel">
-    <div>
-
-    </div>
-    <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGCF/DataModel/FemtoDerived.h" target="_blank">PWGCF/DataModel/FemtoDerived.h</a>
-    </div>
-    <div>Is used in:
-      <ul>
-        <li>o2::aod::FDExtMCParticle = o2::aod::FDExtMCParticles::iterator</li>
-      </ul>
-    </div>
-    <table class=DataModel>
-      <tr>
-        <th>Name</th>
-        <th></th>
-        <th>Getter</th>
-        <th>Type</th>
-        <th>Comment</th>
-      </tr>
-      <tr>
-        <td>o2::aod::femtodreamMCparticle::MotherPDG</td>
+        <td>?</td>
         <td></td>
-        <td>motherPDG</td>
-        <td>int</td>
-        <td>Checks mother PDG, where mother is the primary particle for that decay chain</td>
-      </tr>
-    </table>
-  </div>
-
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::FDMCLabels</button>
-  <div class="panel">
-    <div>
-       Table joinable to FemtoDreamParticle containing the MC labels
-    </div>
-    <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGCF/DataModel/FemtoDerived.h" target="_blank">PWGCF/DataModel/FemtoDerived.h</a>
-    </div>
-    <table class=DataModel>
-      <tr>
-        <th>Name</th>
-        <th></th>
-        <th>Getter</th>
-        <th>Type</th>
-        <th>Comment</th>
       </tr>
       <tr>
-        <td>o2::aod::mcfdlabel::FDMCParticleId</td>
-        <td>I</td>
-        <td>fdMCParticleId</td>
-        <td>int32</td>
-        <td>MC particle for femtodreamparticle</td>
+        <td>o2::aod::pidtof_tiny::TOFNSigmaKa</td>
+        <td>GI</td>
+        <td></td>
+        <td>?</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::pidtof_tiny::TOFNSigmaPr</td>
+        <td>GI</td>
+        <td></td>
+        <td>?</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::pidtof_tiny::TOFNSigmaDe</td>
+        <td>GI</td>
+        <td></td>
+        <td>?</td>
+        <td></td>
       </tr>
     </table>
   </div>
@@ -3330,6 +3230,129 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGCF
     </table>
   </div>
 
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::FDMCParticles</button>
+  <div class="panel">
+    <div>
+
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGCF/FemtoUniverse/DataModel/FemtoDerived.h" target="_blank">PWGCF/FemtoUniverse/DataModel/FemtoDerived.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::FDMCParticle = o2::aod::FDMCParticles::iterator</li>
+      </ul>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::soa::Index</td>
+        <td>GI</td>
+        <td>globalIndex</td>
+        <td>int64_t</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::femtouniverseMCparticle::PartOriginMCTruth</td>
+        <td></td>
+        <td>partOriginMCTruth</td>
+        <td>uint8_t</td>
+        <td>Origin of the particle, according to femtouniverseparticle::ParticleOriginMCTruth</td>
+      </tr>
+      <tr>
+        <td>o2::aod::femtouniverseMCparticle::PDGMCTruth</td>
+        <td></td>
+        <td>pdgMCTruth</td>
+        <td>int</td>
+        <td>Particle PDG</td>
+      </tr>
+      <tr>
+        <td>o2::aod::femtouniverseparticle::Pt</td>
+        <td></td>
+        <td>pt</td>
+        <td>float</td>
+        <td>p_T (GeV/c)</td>
+      </tr>
+      <tr>
+        <td>o2::aod::femtouniverseparticle::Eta</td>
+        <td></td>
+        <td>eta</td>
+        <td>float</td>
+        <td>Eta</td>
+      </tr>
+      <tr>
+        <td>o2::aod::femtouniverseparticle::Phi</td>
+        <td></td>
+        <td>phi</td>
+        <td>float</td>
+        <td>Phi</td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::FDExtMCParticles</button>
+  <div class="panel">
+    <div>
+
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGCF/FemtoUniverse/DataModel/FemtoDerived.h" target="_blank">PWGCF/FemtoUniverse/DataModel/FemtoDerived.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::FDExtMCParticle = o2::aod::FDExtMCParticles::iterator</li>
+      </ul>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::femtouniverseMCparticle::MotherPDG</td>
+        <td></td>
+        <td>motherPDG</td>
+        <td>int</td>
+        <td>Checks mother PDG, where mother is the primary particle for that decay chain</td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::FDMCLabels</button>
+  <div class="panel">
+    <div>
+       Table joinable to FemtoUniverseParticle containing the MC labels
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGCF/FemtoUniverse/DataModel/FemtoDerived.h" target="_blank">PWGCF/FemtoUniverse/DataModel/FemtoDerived.h</a>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::mcfdlabel::FDMCParticleId</td>
+        <td>I</td>
+        <td>fdMCParticleId</td>
+        <td>int32</td>
+        <td>MC particle for femtodreamparticle</td>
+      </tr>
+    </table>
+  </div>
+
 </div>
 
 ###  o2-analysis-cf-femtouniverse-producer-v0
@@ -3342,7 +3365,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGCF
 
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGCF/DataModel/FemtoDerived.h" target="_blank">PWGCF/DataModel/FemtoDerived.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGCF/FemtoUniverse/DataModel/FemtoDerived.h" target="_blank">PWGCF/FemtoUniverse/DataModel/FemtoDerived.h</a>
     </div>
     <div>Is used in:
       <ul>
@@ -3372,28 +3395,28 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGCF
         <td>Z Vertex position in cm</td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamcollision::MultV0M</td>
+        <td>o2::aod::femtouniversecollision::MultV0M</td>
         <td></td>
         <td>multV0M</td>
         <td>float</td>
         <td>V0M multiplicity</td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamcollision::MultNtr</td>
+        <td>o2::aod::femtouniversecollision::MultNtr</td>
         <td></td>
         <td>multNtr</td>
         <td>int</td>
         <td>multiplicity of charged tracks as defined in the producer</td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamcollision::Sphericity</td>
+        <td>o2::aod::femtouniversecollision::Sphericity</td>
         <td></td>
         <td>sphericity</td>
         <td>float</td>
         <td>Sphericity of the event</td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamcollision::MagField</td>
+        <td>o2::aod::femtouniversecollision::MagField</td>
         <td></td>
         <td>magField</td>
         <td>float</td>
@@ -3408,7 +3431,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGCF
 
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGCF/DataModel/FemtoDerived.h" target="_blank">PWGCF/DataModel/FemtoDerived.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGCF/FemtoUniverse/DataModel/FemtoDerived.h" target="_blank">PWGCF/FemtoUniverse/DataModel/FemtoDerived.h</a>
     </div>
     <div>Is used in:
       <ul>
@@ -3431,112 +3454,112 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGCF
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamparticle::FDCollisionId</td>
+        <td>o2::aod::femtouniverseparticle::FDCollisionId</td>
         <td>I</td>
         <td>fdCollisionId</td>
         <td>int32</td>
         <td>Pointer into FDCollisions</td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamparticle::Pt</td>
+        <td>o2::aod::femtouniverseparticle::Pt</td>
         <td></td>
         <td>pt</td>
         <td>float</td>
         <td>p_T (GeV/c)</td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamparticle::Eta</td>
+        <td>o2::aod::femtouniverseparticle::Eta</td>
         <td></td>
         <td>eta</td>
         <td>float</td>
         <td>Eta</td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamparticle::Phi</td>
+        <td>o2::aod::femtouniverseparticle::Phi</td>
         <td></td>
         <td>phi</td>
         <td>float</td>
         <td>Phi</td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamparticle::PartType</td>
+        <td>o2::aod::femtouniverseparticle::PartType</td>
         <td></td>
         <td>partType</td>
         <td>uint8_t</td>
-        <td>Type of the particle, according to femtodreamparticle::ParticleType</td>
+        <td>Type of the particle, according to femtouniverseparticle::ParticleType</td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamparticle::Cut</td>
+        <td>o2::aod::femtouniverseparticle::Cut</td>
         <td></td>
         <td>cut</td>
         <td>cutContainerType</td>
         <td>Bit-wise container for the different selection criteria</td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamparticle::PIDCut</td>
+        <td>o2::aod::femtouniverseparticle::PIDCut</td>
         <td></td>
         <td>pidcut</td>
         <td>cutContainerType</td>
         <td>Bit-wise container for the different PID selection criteria \todo since bit-masking cannot be done yet with filters we use a second field for the PID</td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamparticle::TempFitVar</td>
+        <td>o2::aod::femtouniverseparticle::TempFitVar</td>
         <td></td>
         <td>tempFitVar</td>
         <td>float</td>
         <td>Observable for the template fitting (Track: DCA_xy, V0: CPA)</td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamparticle::ChildrenIds</td>
+        <td>o2::aod::femtouniverseparticle::ChildrenIds</td>
         <td>SAI</td>
         <td>childrenIds</td>
         <td></td>
         <td>Field for the track indices to remove auto-correlations</td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamparticle::MLambda</td>
+        <td>o2::aod::femtouniverseparticle::MLambda</td>
         <td></td>
         <td>mLambda</td>
         <td>float</td>
         <td>The invariant mass of V0 candidate, assuming lambda</td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamparticle::MAntiLambda</td>
+        <td>o2::aod::femtouniverseparticle::MAntiLambda</td>
         <td></td>
         <td>mAntiLambda</td>
         <td>float</td>
         <td>The invariant mass of V0 candidate, assuming antilambda</td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamparticle::Theta</td>
+        <td>o2::aod::femtouniverseparticle::Theta</td>
         <td>D</td>
         <td>theta</td>
         <td>float</td>
         <td>Compute the theta of the track</td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamparticle::Px</td>
+        <td>o2::aod::femtouniverseparticle::Px</td>
         <td>D</td>
         <td>px</td>
         <td>float</td>
         <td>Compute the momentum in x in GeV/c</td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamparticle::Py</td>
+        <td>o2::aod::femtouniverseparticle::Py</td>
         <td>D</td>
         <td>py</td>
         <td>float</td>
         <td>Compute the momentum in y in GeV/c</td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamparticle::Pz</td>
+        <td>o2::aod::femtouniverseparticle::Pz</td>
         <td>D</td>
         <td>pz</td>
         <td>float</td>
         <td>Compute the momentum in z in GeV/c</td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamparticle::P</td>
+        <td>o2::aod::femtouniverseparticle::P</td>
         <td>D</td>
         <td>p</td>
         <td>float</td>
@@ -3551,7 +3574,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGCF
 
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGCF/DataModel/FemtoDerived.h" target="_blank">PWGCF/DataModel/FemtoDerived.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGCF/FemtoUniverse/DataModel/FemtoDerived.h" target="_blank">PWGCF/FemtoUniverse/DataModel/FemtoDerived.h</a>
     </div>
     <div>Is used in:
       <ul>
@@ -3567,14 +3590,14 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGCF
         <th>Comment</th>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamparticle::Sign</td>
+        <td>o2::aod::femtouniverseparticle::Sign</td>
         <td></td>
         <td>sign</td>
         <td>int8_t</td>
         <td>Sign of the track charge</td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamparticle::TPCNClsFound</td>
+        <td>o2::aod::femtouniverseparticle::TPCNClsFound</td>
         <td></td>
         <td>tpcNClsFound</td>
         <td>uint8_t</td>
@@ -3588,7 +3611,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGCF
         <td>Findable TPC clusters for this track geometry</td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamparticle::TPCNClsCrossedRows</td>
+        <td>o2::aod::femtouniverseparticle::TPCNClsCrossedRows</td>
         <td></td>
         <td>tpcNClsCrossedRows</td>
         <td>uint8_t</td>
@@ -3609,14 +3632,14 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGCF
         <td>Momentum at inner wall of the TPC</td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamparticle::ITSNCls</td>
+        <td>o2::aod::femtouniverseparticle::ITSNCls</td>
         <td></td>
         <td>itsNCls</td>
         <td>uint8_t</td>
         <td>Number of ITS clusters</td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamparticle::ITSNClsInnerBarrel</td>
+        <td>o2::aod::femtouniverseparticle::ITSNClsInnerBarrel</td>
         <td></td>
         <td>itsNClsInnerBarrel</td>
         <td>uint8_t</td>
@@ -3644,207 +3667,193 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGCF
         <td>dE/dx signal in the TPC</td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamparticle::TPCNSigmaEl</td>
+        <td>o2::aod::pidtpc_tiny::TPCNSigmaStoreEl</td>
         <td></td>
-        <td>tpcNSigmaEl</td>
-        <td>float</td>
-        <td>Nsigma separation with the TPC detector for electron</td>
+        <td>tpcNSigmaStoreEl</td>
+        <td>binning::binned_t</td>
+        <td>Stored binned nsigma with the TPC detector for electron</td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamparticle::TPCNSigmaPi</td>
+        <td>o2::aod::pidtpc_tiny::TPCNSigmaStorePi</td>
         <td></td>
-        <td>tpcNSigmaPi</td>
-        <td>float</td>
-        <td>Nsigma separation with the TPC detector for pion</td>
+        <td>tpcNSigmaStorePi</td>
+        <td>binning::binned_t</td>
+        <td>Stored binned nsigma with the TPC detector for pion</td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamparticle::TPCNSigmaKa</td>
+        <td>o2::aod::pidtpc_tiny::TPCNSigmaStoreKa</td>
         <td></td>
-        <td>tpcNSigmaKa</td>
-        <td>float</td>
-        <td>Nsigma separation with the TPC detector for kaon</td>
+        <td>tpcNSigmaStoreKa</td>
+        <td>binning::binned_t</td>
+        <td>Stored binned nsigma with the TPC detector for kaon</td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamparticle::TPCNSigmaPr</td>
+        <td>o2::aod::pidtpc_tiny::TPCNSigmaStorePr</td>
         <td></td>
-        <td>tpcNSigmaPr</td>
-        <td>float</td>
-        <td>Nsigma separation with the TPC detector for proton</td>
+        <td>tpcNSigmaStorePr</td>
+        <td>binning::binned_t</td>
+        <td>Stored binned nsigma with the TPC detector for proton</td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamparticle::TPCNSigmaDe</td>
+        <td>o2::aod::pidtpc_tiny::TPCNSigmaStoreDe</td>
         <td></td>
-        <td>tpcNSigmaDe</td>
-        <td>float</td>
-        <td>Nsigma separation with the TPC detector for deuteron</td>
+        <td>tpcNSigmaStoreDe</td>
+        <td>binning::binned_t</td>
+        <td>Stored binned nsigma with the TPC detector for deuteron</td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamparticle::TPCNSigmaTr</td>
+        <td>o2::aod::pidtof_tiny::TOFNSigmaStoreEl</td>
         <td></td>
-        <td>tpcNSigmaTr</td>
-        <td>float</td>
-        <td>Nsigma separation with the TPC detector for triton</td>
+        <td>tofNSigmaStoreEl</td>
+        <td>binning::binned_t</td>
+        <td>Stored binned nsigma with the TOF detector for electron</td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamparticle::TPCNSigmaHe</td>
+        <td>o2::aod::pidtof_tiny::TOFNSigmaStorePi</td>
         <td></td>
-        <td>tpcNSigmaHe</td>
-        <td>float</td>
-        <td>Nsigma separation with the TPC detector for helium3</td>
+        <td>tofNSigmaStorePi</td>
+        <td>binning::binned_t</td>
+        <td>Stored binned nsigma with the TOF detector for pion</td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamparticle::TOFNSigmaEl</td>
+        <td>o2::aod::pidtof_tiny::TOFNSigmaStoreKa</td>
         <td></td>
-        <td>tofNSigmaEl</td>
-        <td>float</td>
-        <td>Nsigma separation with the TOF detector for electron</td>
+        <td>tofNSigmaStoreKa</td>
+        <td>binning::binned_t</td>
+        <td>Stored binned nsigma with the TOF detector for kaon</td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamparticle::TOFNSigmaPi</td>
+        <td>o2::aod::pidtof_tiny::TOFNSigmaStorePr</td>
         <td></td>
-        <td>tofNSigmaPi</td>
-        <td>float</td>
-        <td>Nsigma separation with the TOF detector for pion</td>
+        <td>tofNSigmaStorePr</td>
+        <td>binning::binned_t</td>
+        <td>Stored binned nsigma with the TOF detector for proton</td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamparticle::TOFNSigmaKa</td>
+        <td>o2::aod::pidtof_tiny::TOFNSigmaStoreDe</td>
         <td></td>
-        <td>tofNSigmaKa</td>
-        <td>float</td>
-        <td>Nsigma separation with the TOF detector for kaon</td>
+        <td>tofNSigmaStoreDe</td>
+        <td>binning::binned_t</td>
+        <td>Stored binned nsigma with the TOF detector for deuteron</td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamparticle::TOFNSigmaPr</td>
-        <td></td>
-        <td>tofNSigmaPr</td>
-        <td>float</td>
-        <td>Nsigma separation with the TOF detector for proton</td>
-      </tr>
-      <tr>
-        <td>o2::aod::femtodreamparticle::TOFNSigmaDe</td>
-        <td></td>
-        <td>tofNSigmaDe</td>
-        <td>float</td>
-        <td>Nsigma separation with the TOF detector for deuteron</td>
-      </tr>
-      <tr>
-        <td>o2::aod::femtodreamparticle::TOFNSigmaTr</td>
-        <td></td>
-        <td>tofNSigmaTr</td>
-        <td>float</td>
-        <td>Nsigma separation with the TOF detector for triton</td>
-      </tr>
-      <tr>
-        <td>o2::aod::femtodreamparticle::TOFNSigmaHe</td>
-        <td></td>
-        <td>tofNSigmaHe</td>
-        <td>float</td>
-        <td>Nsigma separation with the TOF detector for helium3</td>
-      </tr>
-      <tr>
-        <td>o2::aod::femtodreamparticle::DaughDCA</td>
+        <td>o2::aod::femtouniverseparticle::DaughDCA</td>
         <td></td>
         <td>daughDCA</td>
         <td>float</td>
         <td>DCA between daughters</td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamparticle::TransRadius</td>
+        <td>o2::aod::femtouniverseparticle::TransRadius</td>
         <td></td>
         <td>transRadius</td>
         <td>float</td>
         <td>Transverse radius of the decay vertex</td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamparticle::DecayVtxX</td>
+        <td>o2::aod::femtouniverseparticle::DecayVtxX</td>
         <td></td>
         <td>decayVtxX</td>
         <td>float</td>
         <td>X position of the decay vertex</td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamparticle::DecayVtxY</td>
+        <td>o2::aod::femtouniverseparticle::DecayVtxY</td>
         <td></td>
         <td>decayVtxY</td>
         <td>float</td>
         <td>Y position of the decay vertex</td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamparticle::DecayVtxZ</td>
+        <td>o2::aod::femtouniverseparticle::DecayVtxZ</td>
         <td></td>
         <td>decayVtxZ</td>
         <td>float</td>
         <td>Z position of the decay vertex</td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamparticle::MKaon</td>
+        <td>o2::aod::femtouniverseparticle::MKaon</td>
         <td></td>
         <td>mKaon</td>
         <td>float</td>
         <td>The invariant mass of V0 candidate, assuming kaon</td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamparticle::TPCCrossedRowsOverFindableCls</td>
+        <td>o2::aod::femtouniverseparticle::TPCCrossedRowsOverFindableCls</td>
         <td>D</td>
         <td>tpcCrossedRowsOverFindableCls</td>
         <td>float</td>
         <td>Compute the number of crossed rows over findable TPC clusters</td>
       </tr>
       <tr>
-        <td>o2::aod::``AOD''</td>
+        <td>o2::aod::pidtpc_tiny::TPCNSigmaEl</td>
         <td>GI</td>
         <td></td>
         <td>?</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::``FDMCPARTICLE''</td>
+        <td>o2::aod::pidtpc_tiny::TPCNSigmaPi</td>
         <td>GI</td>
         <td></td>
         <td>?</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::soa::Index</td>
+        <td>o2::aod::pidtpc_tiny::TPCNSigmaKa</td>
         <td>GI</td>
-        <td>globalIndex</td>
-        <td>int64_t</td>
+        <td></td>
+        <td>?</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamMCparticle::PartOriginMCTruth</td>
+        <td>o2::aod::pidtpc_tiny::TPCNSigmaPr</td>
+        <td>GI</td>
         <td></td>
-        <td>partOriginMCTruth</td>
-        <td>uint8_t</td>
-        <td>Origin of the particle, according to femtodreamparticle::ParticleOriginMCTruth</td>
+        <td>?</td>
+        <td></td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamMCparticle::PDGMCTruth</td>
+        <td>o2::aod::pidtpc_tiny::TPCNSigmaDe</td>
+        <td>GI</td>
         <td></td>
-        <td>pdgMCTruth</td>
-        <td>int</td>
-        <td>Particle PDG</td>
+        <td>?</td>
+        <td></td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamparticle::Pt</td>
+        <td>o2::aod::pidtof_tiny::TOFNSigmaEl</td>
+        <td>GI</td>
         <td></td>
-        <td>pt</td>
-        <td>float</td>
-        <td>p_T (GeV/c)</td>
+        <td>?</td>
+        <td></td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamparticle::Eta</td>
+        <td>o2::aod::pidtof_tiny::TOFNSigmaPi</td>
+        <td>GI</td>
         <td></td>
-        <td>eta</td>
-        <td>float</td>
-        <td>Eta</td>
+        <td>?</td>
+        <td></td>
       </tr>
       <tr>
-        <td>o2::aod::femtodreamparticle::Phi</td>
+        <td>o2::aod::pidtof_tiny::TOFNSigmaKa</td>
+        <td>GI</td>
         <td></td>
-        <td>phi</td>
-        <td>float</td>
-        <td>Phi</td>
+        <td>?</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::pidtof_tiny::TOFNSigmaPr</td>
+        <td>GI</td>
+        <td></td>
+        <td>?</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::pidtof_tiny::TOFNSigmaDe</td>
+        <td>GI</td>
+        <td></td>
+        <td>?</td>
+        <td></td>
       </tr>
     </table>
   </div>
@@ -6405,6 +6414,220 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGCF
 
 ## PWG-DQ
 
+###  o2-analysis-dq-generated-quarkonia-mc
+Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGDQ/TableProducer//generatedQuarkoniaMC.cxx" target="_blank">generatedQuarkoniaMC.cxx</a>
+<div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::GeEtaC1S</button>
+  <div class="panel">
+    <div>
+
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGDQ/DataModel/ReducedInfoTables.h" target="_blank">PWGDQ/DataModel/ReducedInfoTables.h</a>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::generatedquarkoniamc::GeneratedEtaC1S</td>
+        <td></td>
+        <td>generatedEtaC1S</td>
+        <td>std::vector&lt;uint32_t&gt;</td>
+        <td>Eta(1S) binned generated data</td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::GeJPsi</button>
+  <div class="panel">
+    <div>
+
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGDQ/DataModel/ReducedInfoTables.h" target="_blank">PWGDQ/DataModel/ReducedInfoTables.h</a>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::generatedquarkoniamc::GeneratedJPsi</td>
+        <td></td>
+        <td>generatedJPsi</td>
+        <td>std::vector&lt;uint32_t&gt;</td>
+        <td>J/Psi binned generated data</td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::GeChiC0</button>
+  <div class="panel">
+    <div>
+
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGDQ/DataModel/ReducedInfoTables.h" target="_blank">PWGDQ/DataModel/ReducedInfoTables.h</a>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::generatedquarkoniamc::GeneratedChiC0</td>
+        <td></td>
+        <td>generatedChiC0</td>
+        <td>std::vector&lt;uint32_t&gt;</td>
+        <td>ChiC0(1P) binned generated data</td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::GeChiC1</button>
+  <div class="panel">
+    <div>
+
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGDQ/DataModel/ReducedInfoTables.h" target="_blank">PWGDQ/DataModel/ReducedInfoTables.h</a>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::generatedquarkoniamc::GeneratedChiC1</td>
+        <td></td>
+        <td>generatedChiC1</td>
+        <td>std::vector&lt;uint32_t&gt;</td>
+        <td>ChiC1(1P) binned generated data</td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::GeHC</button>
+  <div class="panel">
+    <div>
+
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGDQ/DataModel/ReducedInfoTables.h" target="_blank">PWGDQ/DataModel/ReducedInfoTables.h</a>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::generatedquarkoniamc::GeneratedHC</td>
+        <td></td>
+        <td>generatedHC</td>
+        <td>std::vector&lt;uint32_t&gt;</td>
+        <td>hC binned generated data</td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::GeChiC2</button>
+  <div class="panel">
+    <div>
+
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGDQ/DataModel/ReducedInfoTables.h" target="_blank">PWGDQ/DataModel/ReducedInfoTables.h</a>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::generatedquarkoniamc::GeneratedChiC2</td>
+        <td></td>
+        <td>generatedChiC2</td>
+        <td>std::vector&lt;uint32_t&gt;</td>
+        <td>ChiC2(1P) binned generated data</td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::GeEtaC2S</button>
+  <div class="panel">
+    <div>
+
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGDQ/DataModel/ReducedInfoTables.h" target="_blank">PWGDQ/DataModel/ReducedInfoTables.h</a>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::generatedquarkoniamc::GeneratedEtaC2S</td>
+        <td></td>
+        <td>generatedEtaC2S</td>
+        <td>std::vector&lt;uint32_t&gt;</td>
+        <td>EtaC(2S) binned generated data</td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::GePsi2S</button>
+  <div class="panel">
+    <div>
+
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGDQ/DataModel/ReducedInfoTables.h" target="_blank">PWGDQ/DataModel/ReducedInfoTables.h</a>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::generatedquarkoniamc::GeneratedPsi2S</td>
+        <td></td>
+        <td>generatedPsi2S</td>
+        <td>std::vector&lt;uint32_t&gt;</td>
+        <td>Psi(2S) binned generated data</td>
+      </tr>
+    </table>
+  </div>
+
+</div>
+
 ###  o2-analysis-dq-table-maker
 Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGDQ/TableProducer//tableMaker.cxx" target="_blank">tableMaker.cxx</a>
 <div>
@@ -6668,46 +6891,88 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGDQ
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::reducedevent::NTPCpileupContribA</td>
+        <td>o2::aod::reducedevent::NTPCoccupContribLongA</td>
         <td></td>
-        <td>nTPCpileupContribA</td>
+        <td>nTPCoccupContribLongA</td>
         <td>int</td>
-        <td>Number of TPC pileup tracks on A side</td>
+        <td>TPC pileup occupancy on A side (long time range)</td>
       </tr>
       <tr>
-        <td>o2::aod::reducedevent::NTPCpileupContribC</td>
+        <td>o2::aod::reducedevent::NTPCoccupContribLongC</td>
         <td></td>
-        <td>nTPCpileupContribC</td>
+        <td>nTPCoccupContribLongC</td>
         <td>int</td>
-        <td>Number of TPC pileup tracks on C side</td>
+        <td>TPC pileup occupancy on C side (long time range)</td>
       </tr>
       <tr>
-        <td>o2::aod::reducedevent::NTPCpileupZA</td>
+        <td>o2::aod::reducedevent::NTPCoccupMeanTimeLongA</td>
         <td></td>
-        <td>nTPCpileupZA</td>
+        <td>nTPCoccupMeanTimeLongA</td>
         <td>float</td>
-        <td>Median Z position of pileup tracks on A side</td>
+        <td>TPC pileup mean time on A side (long time range)</td>
       </tr>
       <tr>
-        <td>o2::aod::reducedevent::NTPCpileupZC</td>
+        <td>o2::aod::reducedevent::NTPCoccupMeanTimeLongC</td>
         <td></td>
-        <td>nTPCpileupZC</td>
+        <td>nTPCoccupMeanTimeLongC</td>
         <td>float</td>
-        <td>Median Z position of pileup tracks on C side</td>
+        <td>TPC pileup mean time on C side (long time range)</td>
       </tr>
       <tr>
-        <td>o2::aod::reducedevent::NTPCtracksInPast</td>
+        <td>o2::aod::reducedevent::NTPCoccupMedianTimeLongA</td>
         <td></td>
-        <td>nTPCtracksInPast</td>
-        <td>int</td>
-        <td>Number of TPC tracks in the past events (configurable, but e.g. one drift time)</td>
+        <td>nTPCoccupMedianTimeLongA</td>
+        <td>float</td>
+        <td>TPC pileup median time on A side (long time range)</td>
       </tr>
       <tr>
-        <td>o2::aod::reducedevent::NTPCtracksInFuture</td>
+        <td>o2::aod::reducedevent::NTPCoccupMedianTimeLongC</td>
         <td></td>
-        <td>nTPCtracksInFuture</td>
+        <td>nTPCoccupMedianTimeLongC</td>
+        <td>float</td>
+        <td>TPC pileup median time on C side (long time range)</td>
+      </tr>
+      <tr>
+        <td>o2::aod::reducedevent::NTPCoccupContribShortA</td>
+        <td></td>
+        <td>nTPCoccupContribShortA</td>
         <td>int</td>
-        <td>Number of TPC tracks in the future events (configurable, but e.g. one drift time)</td>
+        <td>TPC pileup occupancy on A side (short time range)</td>
+      </tr>
+      <tr>
+        <td>o2::aod::reducedevent::NTPCoccupContribShortC</td>
+        <td></td>
+        <td>nTPCoccupContribShortC</td>
+        <td>int</td>
+        <td>TPC pileup occupancy on C side (short time range)</td>
+      </tr>
+      <tr>
+        <td>o2::aod::reducedevent::NTPCoccupMeanTimeShortA</td>
+        <td></td>
+        <td>nTPCoccupMeanTimeShortA</td>
+        <td>float</td>
+        <td>TPC pileup mean time on A side (short time range)</td>
+      </tr>
+      <tr>
+        <td>o2::aod::reducedevent::NTPCoccupMeanTimeShortC</td>
+        <td></td>
+        <td>nTPCoccupMeanTimeShortC</td>
+        <td>float</td>
+        <td>TPC pileup mean time on C side (short time range)</td>
+      </tr>
+      <tr>
+        <td>o2::aod::reducedevent::NTPCoccupMedianTimeShortA</td>
+        <td></td>
+        <td>nTPCoccupMedianTimeShortA</td>
+        <td>float</td>
+        <td>TPC pileup median time on A side (short time range)</td>
+      </tr>
+      <tr>
+        <td>o2::aod::reducedevent::NTPCoccupMedianTimeShortC</td>
+        <td></td>
+        <td>nTPCoccupMedianTimeShortC</td>
+        <td>float</td>
+        <td>TPC pileup median time on C side (short time range)</td>
       </tr>
     </table>
   </div>
@@ -7557,6 +7822,11 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGDQ
     </div>
     <div>
       Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGDQ/DataModel/ReducedInfoTables.h" target="_blank">PWGDQ/DataModel/ReducedInfoTables.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::ReducedMFTExtra = o2::aod::ReducedMFTsExtra::iterator</li>
+      </ul>
     </div>
     <table class=DataModel>
       <tr>
@@ -8886,1970 +9156,88 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGDQ
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::reducedevent::NTPCpileupContribA</td>
+        <td>o2::aod::reducedevent::NTPCoccupContribLongA</td>
         <td></td>
-        <td>nTPCpileupContribA</td>
+        <td>nTPCoccupContribLongA</td>
         <td>int</td>
-        <td>Number of TPC pileup tracks on A side</td>
+        <td>TPC pileup occupancy on A side (long time range)</td>
       </tr>
       <tr>
-        <td>o2::aod::reducedevent::NTPCpileupContribC</td>
+        <td>o2::aod::reducedevent::NTPCoccupContribLongC</td>
         <td></td>
-        <td>nTPCpileupContribC</td>
+        <td>nTPCoccupContribLongC</td>
         <td>int</td>
-        <td>Number of TPC pileup tracks on C side</td>
+        <td>TPC pileup occupancy on C side (long time range)</td>
       </tr>
       <tr>
-        <td>o2::aod::reducedevent::NTPCpileupZA</td>
+        <td>o2::aod::reducedevent::NTPCoccupMeanTimeLongA</td>
         <td></td>
-        <td>nTPCpileupZA</td>
+        <td>nTPCoccupMeanTimeLongA</td>
         <td>float</td>
-        <td>Median Z position of pileup tracks on A side</td>
+        <td>TPC pileup mean time on A side (long time range)</td>
       </tr>
       <tr>
-        <td>o2::aod::reducedevent::NTPCpileupZC</td>
+        <td>o2::aod::reducedevent::NTPCoccupMeanTimeLongC</td>
         <td></td>
-        <td>nTPCpileupZC</td>
+        <td>nTPCoccupMeanTimeLongC</td>
         <td>float</td>
-        <td>Median Z position of pileup tracks on C side</td>
+        <td>TPC pileup mean time on C side (long time range)</td>
       </tr>
       <tr>
-        <td>o2::aod::reducedevent::NTPCtracksInPast</td>
+        <td>o2::aod::reducedevent::NTPCoccupMedianTimeLongA</td>
         <td></td>
-        <td>nTPCtracksInPast</td>
+        <td>nTPCoccupMedianTimeLongA</td>
+        <td>float</td>
+        <td>TPC pileup median time on A side (long time range)</td>
+      </tr>
+      <tr>
+        <td>o2::aod::reducedevent::NTPCoccupMedianTimeLongC</td>
+        <td></td>
+        <td>nTPCoccupMedianTimeLongC</td>
+        <td>float</td>
+        <td>TPC pileup median time on C side (long time range)</td>
+      </tr>
+      <tr>
+        <td>o2::aod::reducedevent::NTPCoccupContribShortA</td>
+        <td></td>
+        <td>nTPCoccupContribShortA</td>
         <td>int</td>
-        <td>Number of TPC tracks in the past events (configurable, but e.g. one drift time)</td>
+        <td>TPC pileup occupancy on A side (short time range)</td>
       </tr>
       <tr>
-        <td>o2::aod::reducedevent::NTPCtracksInFuture</td>
+        <td>o2::aod::reducedevent::NTPCoccupContribShortC</td>
         <td></td>
-        <td>nTPCtracksInFuture</td>
+        <td>nTPCoccupContribShortC</td>
         <td>int</td>
-        <td>Number of TPC tracks in the future events (configurable, but e.g. one drift time)</td>
+        <td>TPC pileup occupancy on C side (short time range)</td>
       </tr>
-    </table>
-  </div>
-
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::ReducedEventsVtxCov</button>
-  <div class="panel">
-    <div>
-       Event vertex covariance matrix
-    </div>
-    <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGDQ/DataModel/ReducedInfoTables.h" target="_blank">PWGDQ/DataModel/ReducedInfoTables.h</a>
-    </div>
-    <div>Is used in:
-      <ul>
-        <li>o2::aod::ReducedEventVtxCov = o2::aod::ReducedEventsVtxCov::iterator</li>
-      </ul>
-    </div>
-    <table class=DataModel>
       <tr>
-        <th>Name</th>
-        <th></th>
-        <th>Getter</th>
-        <th>Type</th>
-        <th>Comment</th>
-      </tr>
-      <tr>
-        <td>o2::aod::&zwnj;collision::CovXX</td>
-        <td></td>
-        <td>covXX</td>
-        <td>float</td>
-        <td>Vertex covariance matrix</td>
-      </tr>
-      <tr>
-        <td>o2::aod::&zwnj;collision::CovXY</td>
-        <td></td>
-        <td>covXY</td>
-        <td>float</td>
-        <td>Vertex covariance matrix</td>
-      </tr>
-      <tr>
-        <td>o2::aod::&zwnj;collision::CovXZ</td>
-        <td></td>
-        <td>covXZ</td>
-        <td>float</td>
-        <td>Vertex covariance matrix</td>
-      </tr>
-      <tr>
-        <td>o2::aod::&zwnj;collision::CovYY</td>
-        <td></td>
-        <td>covYY</td>
-        <td>float</td>
-        <td>Vertex covariance matrix</td>
-      </tr>
-      <tr>
-        <td>o2::aod::&zwnj;collision::CovYZ</td>
-        <td></td>
-        <td>covYZ</td>
-        <td>float</td>
-        <td>Vertex covariance matrix</td>
-      </tr>
-      <tr>
-        <td>o2::aod::&zwnj;collision::CovZZ</td>
-        <td></td>
-        <td>covZZ</td>
-        <td>float</td>
-        <td>Vertex covariance matrix</td>
-      </tr>
-      <tr>
-        <td>o2::aod::&zwnj;collision::Chi2</td>
-        <td></td>
-        <td>chi2</td>
-        <td>float</td>
-        <td>Chi2 of vertex fit</td>
-      </tr>
-    </table>
-  </div>
-
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::ReducedEventsInfo</button>
-  <div class="panel">
-    <div>
-       Main event index table
-    </div>
-    <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGDQ/DataModel/ReducedInfoTables.h" target="_blank">PWGDQ/DataModel/ReducedInfoTables.h</a>
-    </div>
-    <table class=DataModel>
-      <tr>
-        <th>Name</th>
-        <th></th>
-        <th>Getter</th>
-        <th>Type</th>
-        <th>Comment</th>
-      </tr>
-      <tr>
-        <td>o2::aod::reducedevent::CollisionId</td>
-        <td>I</td>
-        <td>collisionId</td>
-        <td>int32</td>
-        <td>Pointer into Collisions</td>
-      </tr>
-    </table>
-  </div>
-
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::ReducedMCEvents</button>
-  <div class="panel">
-    <div>
-       Event level MC truth information
-    </div>
-    <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGDQ/DataModel/ReducedInfoTables.h" target="_blank">PWGDQ/DataModel/ReducedInfoTables.h</a>
-    </div>
-    <div>Is used in:
-      <ul>
-        <li>o2::aod::ReducedMCEvent = o2::aod::ReducedMCEvents::iterator</li>
-      </ul>
-    </div>
-    <table class=DataModel>
-      <tr>
-        <th>Name</th>
-        <th></th>
-        <th>Getter</th>
-        <th>Type</th>
-        <th>Comment</th>
-      </tr>
-      <tr>
-        <td>o2::soa::Index</td>
-        <td>GI</td>
-        <td>globalIndex</td>
-        <td>int64_t</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::mccollision::GeneratorsID</td>
-        <td></td>
-        <td>generatorsID</td>
-        <td>short</td>
-        <td>disentangled generator IDs should be accessed using getGeneratorId, getSubGeneratorId and getSourceId</td>
-      </tr>
-      <tr>
-        <td>o2::aod::reducedevent::MCPosX</td>
-        <td></td>
-        <td>mcPosX</td>
-        <td>float</td>
-        <td>MC event position X</td>
-      </tr>
-      <tr>
-        <td>o2::aod::reducedevent::MCPosY</td>
-        <td></td>
-        <td>mcPosY</td>
-        <td>float</td>
-        <td>MC event position Y</td>
-      </tr>
-      <tr>
-        <td>o2::aod::reducedevent::MCPosZ</td>
-        <td></td>
-        <td>mcPosZ</td>
-        <td>float</td>
-        <td>MC event position Z</td>
-      </tr>
-      <tr>
-        <td>o2::aod::mccollision::T</td>
-        <td></td>
-        <td>t</td>
-        <td>float</td>
-        <td>Collision time relative to given bc in ns</td>
-      </tr>
-      <tr>
-        <td>o2::aod::mccollision::Weight</td>
-        <td></td>
-        <td>weight</td>
-        <td>float</td>
-        <td>MC weight</td>
-      </tr>
-      <tr>
-        <td>o2::aod::mccollision::ImpactParameter</td>
-        <td></td>
-        <td>impactParameter</td>
-        <td>float</td>
-        <td>Impact parameter for A-A</td>
-      </tr>
-    </table>
-  </div>
-
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::ReducedMCEventLabels</button>
-  <div class="panel">
-    <div>
-       Table joined to the ReducedEvents table containing the MC index
-    </div>
-    <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGDQ/DataModel/ReducedInfoTables.h" target="_blank">PWGDQ/DataModel/ReducedInfoTables.h</a>
-    </div>
-    <div>Is used in:
-      <ul>
-        <li>o2::aod::ReducedMCEventLabel = o2::aod::ReducedMCEventLabels::iterator</li>
-      </ul>
-    </div>
-    <table class=DataModel>
-      <tr>
-        <th>Name</th>
-        <th></th>
-        <th>Getter</th>
-        <th>Type</th>
-        <th>Comment</th>
-      </tr>
-      <tr>
-        <td>o2::aod::reducedeventlabel::ReducedMCEventId</td>
-        <td>I</td>
-        <td>reducedMCeventId</td>
-        <td>int32</td>
-        <td>MC collision</td>
-      </tr>
-      <tr>
-        <td>o2::aod::reducedeventlabel::McMask</td>
-        <td></td>
-        <td>mcMask</td>
-        <td>uint16_t</td>
-        <td>Bit mask to indicate collision mismatches (bit ON means mismatch). Bit 15: indicates negative label</td>
-      </tr>
-    </table>
-  </div>
-
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::ReducedTracks</button>
-  <div class="panel">
-    <div>
-
-    </div>
-    <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGDQ/DataModel/ReducedInfoTables.h" target="_blank">PWGDQ/DataModel/ReducedInfoTables.h</a>
-    </div>
-    <div>Is used in:
-      <ul>
-        <li>o2::aod::ReducedTrack = o2::aod::ReducedTracks::iterator</li>
-      </ul>
-    </div>
-    <table class=DataModel>
-      <tr>
-        <th>Name</th>
-        <th></th>
-        <th>Getter</th>
-        <th>Type</th>
-        <th>Comment</th>
-      </tr>
-      <tr>
-        <td>o2::soa::Index</td>
-        <td>GI</td>
-        <td>globalIndex</td>
-        <td>int64_t</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::reducedtrack::ReducedEventId</td>
-        <td>I</td>
-        <td>reducedeventId</td>
-        <td>int32</td>
-        <td>Pointer into ReducedEvents</td>
-      </tr>
-      <tr>
-        <td>o2::aod::reducedtrack::FilteringFlags</td>
-        <td>GI</td>
-        <td></td>
-        <td>?</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::reducedtrack::Pt</td>
-        <td></td>
-        <td>pt</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::reducedtrack::Eta</td>
-        <td></td>
-        <td>eta</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::reducedtrack::Phi</td>
-        <td></td>
-        <td>phi</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::reducedtrack::Sign</td>
-        <td></td>
-        <td>sign</td>
-        <td>int</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::reducedtrack::IsAmbiguous</td>
-        <td></td>
-        <td>isAmbiguous</td>
-        <td>int</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::reducedtrack::Px</td>
-        <td>D</td>
-        <td>px</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::reducedtrack::Py</td>
-        <td>D</td>
-        <td>py</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::reducedtrack::Pz</td>
-        <td>D</td>
-        <td>pz</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::reducedtrack::P</td>
-        <td>D</td>
-        <td>p</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-    </table>
-  </div>
-
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::ReducedTracksBarrel</button>
-  <div class="panel">
-    <div>
-
-    </div>
-    <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGDQ/DataModel/ReducedInfoTables.h" target="_blank">PWGDQ/DataModel/ReducedInfoTables.h</a>
-    </div>
-    <div>Is used in:
-      <ul>
-        <li>o2::aod::ReducedTrackBarrel = o2::aod::ReducedTracksBarrel::iterator</li>
-      </ul>
-    </div>
-    <table class=DataModel>
-      <tr>
-        <th>Name</th>
-        <th></th>
-        <th>Getter</th>
-        <th>Type</th>
-        <th>Comment</th>
-      </tr>
-      <tr>
-        <td>o2::aod::track::X</td>
-        <td></td>
-        <td>x</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::Alpha</td>
-        <td></td>
-        <td>alpha</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::IsWithinBeamPipe</td>
-        <td>D</td>
-        <td>isWithinBeamPipe</td>
-        <td>bool</td>
-        <td>Is the track within the beam pipe (= successfully propagated to a collision vertex)</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::Y</td>
-        <td></td>
-        <td>y</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::Z</td>
-        <td></td>
-        <td>z</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::Snp</td>
-        <td></td>
-        <td>snp</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::Tgl</td>
-        <td></td>
-        <td>tgl</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::Signed1Pt</td>
-        <td></td>
-        <td>signed1Pt</td>
-        <td>float</td>
-        <td>(sign of charge)/Pt in c/GeV. Use pt() and sign() instead</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::TPCInnerParam</td>
-        <td></td>
-        <td>tpcInnerParam</td>
-        <td>float</td>
-        <td>Momentum at inner wall of the TPC</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::Flags</td>
-        <td></td>
-        <td>flags</td>
-        <td>uint32_t</td>
-        <td>Track flags. Run 2: see TrackFlagsRun2Enum | Run 3: see TrackFlags</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::ITSClusterMap</td>
-        <td></td>
-        <td>itsClusterMap</td>
-        <td>uint8_t</td>
-        <td>Old cluster ITS cluster map, kept for version 0 compatibility</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::ITSChi2NCl</td>
-        <td></td>
-        <td>itsChi2NCl</td>
-        <td>float</td>
-        <td>Chi2 / cluster for the ITS track segment</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::TPCNClsFindable</td>
-        <td></td>
-        <td>tpcNClsFindable</td>
-        <td>uint8_t</td>
-        <td>Findable TPC clusters for this track geometry</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::TPCNClsFindableMinusFound</td>
-        <td></td>
-        <td>tpcNClsFindableMinusFound</td>
-        <td>int8_t</td>
-        <td>TPC Clusters: Findable - Found</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::TPCNClsFindableMinusCrossedRows</td>
-        <td></td>
-        <td>tpcNClsFindableMinusCrossedRows</td>
-        <td>int8_t</td>
-        <td>TPC Clusters: Findable - crossed rows</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::TPCNClsShared</td>
-        <td></td>
-        <td>tpcNClsShared</td>
-        <td>uint8_t</td>
-        <td>Number of shared TPC clusters</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::TPCChi2NCl</td>
-        <td></td>
-        <td>tpcChi2NCl</td>
-        <td>float</td>
-        <td>Chi2 / cluster for the TPC track segment</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::TRDChi2</td>
-        <td></td>
-        <td>trdChi2</td>
-        <td>float</td>
-        <td>Chi2 for the TRD track segment</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::TRDPattern</td>
-        <td></td>
-        <td>trdPattern</td>
-        <td>uint8_t</td>
-        <td>Contributor to the track on TRD layer in bits 0-5, starting from the innermost, bit 6 indicates a potentially split tracklet, bit 7 if the track crossed a padrow</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::TOFChi2</td>
-        <td></td>
-        <td>tofChi2</td>
-        <td>float</td>
-        <td>Chi2 for the TOF track segment</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::Length</td>
-        <td></td>
-        <td>length</td>
-        <td>float</td>
-        <td>Track length</td>
-      </tr>
-      <tr>
-        <td>o2::aod::reducedtrack::DcaXY</td>
-        <td></td>
-        <td>dcaXY</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::reducedtrack::DcaZ</td>
-        <td></td>
-        <td>dcaZ</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::TrackTime</td>
-        <td></td>
-        <td>trackTime</td>
-        <td>float</td>
-        <td>Estimated time of the track in ns wrt collision().bc() or ambiguoustrack.bcSlice()[0]</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::TrackTimeRes</td>
-        <td></td>
-        <td>trackTimeRes</td>
-        <td>float</td>
-        <td>Resolution of the track time in ns (see TrackFlags::TrackTimeResIsRange)</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::TOFExpMom</td>
-        <td></td>
-        <td>tofExpMom</td>
-        <td>float</td>
-        <td>TOF expected momentum obtained in tracking, used to compute the expected times</td>
-      </tr>
-      <tr>
-        <td>o2::aod::reducedtrack::DetectorMap</td>
-        <td></td>
-        <td>detectorMap</td>
-        <td>uint8_t</td>
-        <td>Detector map: see enum DetectorMapEnum</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::IsPVContributor</td>
-        <td>D</td>
-        <td>isPVContributor</td>
-        <td>bool</td>
-        <td>Run 3: Has this track contributed to the collision vertex fit</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::TPCNClsFound</td>
-        <td>D</td>
-        <td>tpcNClsFound</td>
-        <td>int16_t</td>
-        <td>Number of found TPC clusters</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::TPCNClsCrossedRows</td>
-        <td>D</td>
-        <td>tpcNClsCrossedRows</td>
-        <td>int16_t</td>
-        <td>Number of crossed TPC Rows</td>
-      </tr>
-      <tr>
-        <td>o2::aod::reducedtrack::HasITS</td>
-        <td>D</td>
-        <td>hasITS</td>
-        <td>bool</td>
-        <td>Flag to check if track has a ITS match</td>
-      </tr>
-      <tr>
-        <td>o2::aod::reducedtrack::HasTRD</td>
-        <td>D</td>
-        <td>hasTRD</td>
-        <td>bool</td>
-        <td>Flag to check if track has a TRD match</td>
-      </tr>
-      <tr>
-        <td>o2::aod::reducedtrack::HasTOF</td>
-        <td>D</td>
-        <td>hasTOF</td>
-        <td>bool</td>
-        <td>Flag to check if track has a TOF measurement</td>
-      </tr>
-      <tr>
-        <td>o2::aod::reducedtrack::HasTPC</td>
-        <td>D</td>
-        <td>hasTPC</td>
-        <td>bool</td>
-        <td>Flag to check if track has a TPC match</td>
-      </tr>
-    </table>
-  </div>
-
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::ReducedTracksBarrelCov</button>
-  <div class="panel">
-    <div>
-
-    </div>
-    <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGDQ/DataModel/ReducedInfoTables.h" target="_blank">PWGDQ/DataModel/ReducedInfoTables.h</a>
-    </div>
-    <div>Is used in:
-      <ul>
-        <li>o2::aod::ReducedTrackBarrelCov = o2::aod::ReducedTracksBarrelCov::iterator</li>
-      </ul>
-    </div>
-    <table class=DataModel>
-      <tr>
-        <th>Name</th>
-        <th></th>
-        <th>Getter</th>
-        <th>Type</th>
-        <th>Comment</th>
-      </tr>
-      <tr>
-        <td>o2::aod::track::CYY</td>
-        <td>E</td>
-        <td>cYY</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::CZY</td>
-        <td>E</td>
-        <td>cZY</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::CZZ</td>
-        <td>E</td>
-        <td>cZZ</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::CSnpY</td>
-        <td>E</td>
-        <td>cSnpY</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::CSnpZ</td>
-        <td>E</td>
-        <td>cSnpZ</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::CSnpSnp</td>
-        <td>E</td>
-        <td>cSnpSnp</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::CTglY</td>
-        <td>E</td>
-        <td>cTglY</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::CTglZ</td>
-        <td>E</td>
-        <td>cTglZ</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::CTglSnp</td>
-        <td>E</td>
-        <td>cTglSnp</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::CTglTgl</td>
-        <td>E</td>
-        <td>cTglTgl</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::C1PtY</td>
-        <td>E</td>
-        <td>c1PtY</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::C1PtZ</td>
-        <td>E</td>
-        <td>c1PtZ</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::C1PtSnp</td>
-        <td>E</td>
-        <td>c1PtSnp</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::C1PtTgl</td>
-        <td>E</td>
-        <td>c1PtTgl</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::C1Pt21Pt2</td>
-        <td>E</td>
-        <td>c1Pt21Pt2</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-    </table>
-  </div>
-
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::ReducedTracksBarrelPID</button>
-  <div class="panel">
-    <div>
-
-    </div>
-    <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGDQ/DataModel/ReducedInfoTables.h" target="_blank">PWGDQ/DataModel/ReducedInfoTables.h</a>
-    </div>
-    <div>Is used in:
-      <ul>
-        <li>o2::aod::ReducedTrackBarrelPID = o2::aod::ReducedTracksBarrelPID::iterator</li>
-      </ul>
-    </div>
-    <table class=DataModel>
-      <tr>
-        <th>Name</th>
-        <th></th>
-        <th>Getter</th>
-        <th>Type</th>
-        <th>Comment</th>
-      </tr>
-      <tr>
-        <td>o2::aod::track::TPCSignal</td>
-        <td></td>
-        <td>tpcSignal</td>
-        <td>float</td>
-        <td>dE/dx signal in the TPC</td>
-      </tr>
-      <tr>
-        <td>o2::aod::pidtpc::TPCNSigmaEl</td>
-        <td></td>
-        <td>tpcNSigmaEl</td>
-        <td>float</td>
-        <td>Nsigma separation with the TPC detector for electron</td>
-      </tr>
-      <tr>
-        <td>o2::aod::pidtpc::TPCNSigmaMu</td>
-        <td></td>
-        <td>tpcNSigmaMu</td>
-        <td>float</td>
-        <td>Nsigma separation with the TPC detector for muon</td>
-      </tr>
-      <tr>
-        <td>o2::aod::pidtpc::TPCNSigmaPi</td>
-        <td></td>
-        <td>tpcNSigmaPi</td>
-        <td>float</td>
-        <td>Nsigma separation with the TPC detector for pion</td>
-      </tr>
-      <tr>
-        <td>o2::aod::pidtpc::TPCNSigmaKa</td>
-        <td></td>
-        <td>tpcNSigmaKa</td>
-        <td>float</td>
-        <td>Nsigma separation with the TPC detector for kaon</td>
-      </tr>
-      <tr>
-        <td>o2::aod::pidtpc::TPCNSigmaPr</td>
-        <td></td>
-        <td>tpcNSigmaPr</td>
-        <td>float</td>
-        <td>Nsigma separation with the TPC detector for proton</td>
-      </tr>
-      <tr>
-        <td>o2::aod::pidtofbeta::Beta</td>
-        <td></td>
-        <td>beta</td>
-        <td>float</td>
-        <td>TOF beta</td>
-      </tr>
-      <tr>
-        <td>o2::aod::pidtof::TOFNSigmaEl</td>
-        <td></td>
-        <td>tofNSigmaEl</td>
-        <td>float</td>
-        <td>Nsigma separation with the TOF detector for electron</td>
-      </tr>
-      <tr>
-        <td>o2::aod::pidtof::TOFNSigmaMu</td>
-        <td></td>
-        <td>tofNSigmaMu</td>
-        <td>float</td>
-        <td>Nsigma separation with the TOF detector for muon</td>
-      </tr>
-      <tr>
-        <td>o2::aod::pidtof::TOFNSigmaPi</td>
-        <td></td>
-        <td>tofNSigmaPi</td>
-        <td>float</td>
-        <td>Nsigma separation with the TOF detector for pion</td>
-      </tr>
-      <tr>
-        <td>o2::aod::pidtof::TOFNSigmaKa</td>
-        <td></td>
-        <td>tofNSigmaKa</td>
-        <td>float</td>
-        <td>Nsigma separation with the TOF detector for kaon</td>
-      </tr>
-      <tr>
-        <td>o2::aod::pidtof::TOFNSigmaPr</td>
-        <td></td>
-        <td>tofNSigmaPr</td>
-        <td>float</td>
-        <td>Nsigma separation with the TOF detector for proton</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::TRDSignal</td>
-        <td></td>
-        <td>trdSignal</td>
-        <td>float</td>
-        <td>PID signal in the TRD</td>
-      </tr>
-    </table>
-  </div>
-
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::ReducedTracksBarrelInfo</button>
-  <div class="panel">
-    <div>
-
-    </div>
-    <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGDQ/DataModel/ReducedInfoTables.h" target="_blank">PWGDQ/DataModel/ReducedInfoTables.h</a>
-    </div>
-    <div>Is used in:
-      <ul>
-        <li>o2::aod::ReducedTrackBarrelInfo = o2::aod::ReducedTracksBarrelInfo::iterator</li>
-      </ul>
-    </div>
-    <table class=DataModel>
-      <tr>
-        <th>Name</th>
-        <th></th>
-        <th>Getter</th>
-        <th>Type</th>
-        <th>Comment</th>
-      </tr>
-      <tr>
-        <td>o2::aod::reducedtrack::CollisionId</td>
-        <td>I</td>
-        <td>collisionId</td>
-        <td>int32</td>
-        <td>Pointer into Collisions</td>
-      </tr>
-      <tr>
-        <td>o2::aod::&zwnj;collision::PosX</td>
-        <td></td>
-        <td>posX</td>
-        <td>float</td>
-        <td>X Vertex position in cm</td>
-      </tr>
-      <tr>
-        <td>o2::aod::&zwnj;collision::PosY</td>
-        <td></td>
-        <td>posY</td>
-        <td>float</td>
-        <td>Y Vertex position in cm</td>
-      </tr>
-      <tr>
-        <td>o2::aod::&zwnj;collision::PosZ</td>
-        <td></td>
-        <td>posZ</td>
-        <td>float</td>
-        <td>Z Vertex position in cm</td>
-      </tr>
-      <tr>
-        <td>o2::aod::reducedtrack::TrackId</td>
-        <td>I</td>
-        <td>trackId</td>
-        <td>int32</td>
-        <td>Pointer into Tracks</td>
-      </tr>
-    </table>
-  </div>
-
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::ReducedMCTracks</button>
-  <div class="panel">
-    <div>
-       MC track information (on disk)
-    </div>
-    <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGDQ/DataModel/ReducedInfoTables.h" target="_blank">PWGDQ/DataModel/ReducedInfoTables.h</a>
-    </div>
-    <div>Is used in:
-      <ul>
-        <li>o2::aod::ReducedMCTrack = o2::aod::ReducedMCTracks::iterator</li>
-      </ul>
-    </div>
-    <table class=DataModel>
-      <tr>
-        <th>Name</th>
-        <th></th>
-        <th>Getter</th>
-        <th>Type</th>
-        <th>Comment</th>
-      </tr>
-      <tr>
-        <td>o2::soa::Index</td>
-        <td>GI</td>
-        <td>globalIndex</td>
-        <td>int64_t</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::reducedtrackMC::ReducedMCEventId</td>
-        <td>I</td>
-        <td>reducedMCeventId</td>
-        <td>int32</td>
-        <td>Pointer into ReducedMCEvents</td>
-      </tr>
-      <tr>
-        <td>o2::aod::mcparticle::PdgCode</td>
-        <td></td>
-        <td>pdgCode</td>
-        <td>int</td>
-        <td>PDG code</td>
-      </tr>
-      <tr>
-        <td>o2::aod::mcparticle::StatusCode</td>
-        <td></td>
-        <td>statusCode</td>
-        <td>int</td>
-        <td>Generators status code or physics process. Do not use directly. Use dynamic columns getGenStatusCode() or getProcess()</td>
-      </tr>
-      <tr>
-        <td>o2::aod::mcparticle::Flags</td>
-        <td></td>
-        <td>flags</td>
-        <td>uint8_t</td>
-        <td>ALICE specific flags, see MCParticleFlags. Do not use directly. Use the dynamic columns, e.g. producedByGenerator()</td>
-      </tr>
-      <tr>
-        <td>o2::aod::reducedtrackMC::MothersIds</td>
-        <td>SAI</td>
-        <td>mothersIds</td>
-        <td></td>
-        <td>Mother tracks (possible empty) array. Iterate over mcParticle.mothers_as<aod::McParticles>())</td>
-      </tr>
-      <tr>
-        <td>o2::aod::reducedtrackMC::DaughtersIdSlice</td>
-        <td>SSLI</td>
-        <td>daughtersIds</td>
-        <td>int32_t</td>
-        <td>Daughter tracks (possibly empty) slice. Check for non-zero with mcParticle.has_daughters(). Iterate over mcParticle.daughters_as<aod::McParticles>())</td>
-      </tr>
-      <tr>
-        <td>o2::aod::mcparticle::Weight</td>
-        <td></td>
-        <td>weight</td>
-        <td>float</td>
-        <td>MC weight</td>
-      </tr>
-      <tr>
-        <td>o2::aod::reducedtrackMC::Pt</td>
-        <td></td>
-        <td>pt</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::reducedtrackMC::Eta</td>
-        <td></td>
-        <td>eta</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::reducedtrackMC::Phi</td>
-        <td></td>
-        <td>phi</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::reducedtrackMC::E</td>
-        <td></td>
-        <td>e</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::mcparticle::Vx</td>
-        <td></td>
-        <td>vx</td>
-        <td>float</td>
-        <td>X production vertex in cm</td>
-      </tr>
-      <tr>
-        <td>o2::aod::mcparticle::Vy</td>
-        <td></td>
-        <td>vy</td>
-        <td>float</td>
-        <td>Y production vertex in cm</td>
-      </tr>
-      <tr>
-        <td>o2::aod::mcparticle::Vz</td>
-        <td></td>
-        <td>vz</td>
-        <td>float</td>
-        <td>Z production vertex in cm</td>
-      </tr>
-      <tr>
-        <td>o2::aod::mcparticle::Vt</td>
-        <td></td>
-        <td>vt</td>
-        <td>float</td>
-        <td>Production time</td>
-      </tr>
-      <tr>
-        <td>o2::aod::reducedtrackMC::McReducedFlags</td>
-        <td></td>
-        <td>mcReducedFlags</td>
-        <td>uint16_t</td>
-        <td>Flags to hold compressed MC selection information</td>
-      </tr>
-      <tr>
-        <td>o2::aod::reducedtrackMC::Px</td>
-        <td>D</td>
-        <td>px</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::reducedtrackMC::Py</td>
-        <td>D</td>
-        <td>py</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::reducedtrackMC::Pz</td>
-        <td>D</td>
-        <td>pz</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::reducedtrackMC::P</td>
-        <td>D</td>
-        <td>p</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::reducedtrackMC::Y</td>
-        <td>D</td>
-        <td>y</td>
-        <td>float</td>
-        <td>Particle rapidity</td>
-      </tr>
-      <tr>
-        <td>o2::aod::mcparticle::ProducedByGenerator</td>
-        <td>D</td>
-        <td>producedByGenerator</td>
-        <td>bool</td>
-        <td>True if particle produced by the generator (==TMCProcess::kPrimary); False if by the transport code</td>
-      </tr>
-      <tr>
-        <td>o2::aod::mcparticle::FromBackgroundEvent</td>
-        <td>D</td>
-        <td>fromBackgroundEvent</td>
-        <td>bool</td>
-        <td>Particle from background event</td>
-      </tr>
-      <tr>
-        <td>o2::aod::mcparticle::GetGenStatusCode</td>
-        <td>D</td>
-        <td>getGenStatusCode</td>
-        <td>int</td>
-        <td>The native status code put by the generator, or -1 if a particle produced during transport</td>
-      </tr>
-      <tr>
-        <td>o2::aod::mcparticle::GetProcess</td>
-        <td>D</td>
-        <td>getProcess</td>
-        <td>int</td>
-        <td>The VMC physics code (as int) that generated this particle (see header TMCProcess.h in ROOT)</td>
-      </tr>
-      <tr>
-        <td>o2::aod::mcparticle::IsPhysicalPrimary</td>
-        <td>D</td>
-        <td>isPhysicalPrimary</td>
-        <td>bool</td>
-        <td>True if particle is considered a physical primary according to the ALICE definition</td>
-      </tr>
-    </table>
-  </div>
-
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::ReducedTracksBarrelLabels</button>
-  <div class="panel">
-    <div>
-
-    </div>
-    <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGDQ/DataModel/ReducedInfoTables.h" target="_blank">PWGDQ/DataModel/ReducedInfoTables.h</a>
-    </div>
-    <div>Is used in:
-      <ul>
-        <li>o2::aod::ReducedTrackBarrelLabel = o2::aod::ReducedTracksBarrelLabels::iterator</li>
-      </ul>
-    </div>
-    <table class=DataModel>
-      <tr>
-        <th>Name</th>
-        <th></th>
-        <th>Getter</th>
-        <th>Type</th>
-        <th>Comment</th>
-      </tr>
-      <tr>
-        <td>o2::aod::reducedbarreltracklabel::ReducedMCTrackId</td>
-        <td>I</td>
-        <td>reducedMCTrackId</td>
-        <td>int32</td>
-        <td>Pointer into ReducedMCTracks</td>
-      </tr>
-      <tr>
-        <td>o2::aod::reducedbarreltracklabel::McMask</td>
-        <td></td>
-        <td>mcMask</td>
-        <td>uint16_t</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::reducedtrackMC::McReducedFlags</td>
-        <td></td>
-        <td>mcReducedFlags</td>
-        <td>uint16_t</td>
-        <td>Flags to hold compressed MC selection information</td>
-      </tr>
-    </table>
-  </div>
-
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::ReducedMuons</button>
-  <div class="panel">
-    <div>
-
-    </div>
-    <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGDQ/DataModel/ReducedInfoTables.h" target="_blank">PWGDQ/DataModel/ReducedInfoTables.h</a>
-    </div>
-    <div>Is used in:
-      <ul>
-        <li>o2::aod::ReducedMuon = o2::aod::ReducedMuons::iterator</li>
-      </ul>
-    </div>
-    <table class=DataModel>
-      <tr>
-        <th>Name</th>
-        <th></th>
-        <th>Getter</th>
-        <th>Type</th>
-        <th>Comment</th>
-      </tr>
-      <tr>
-        <td>o2::soa::Index</td>
-        <td>GI</td>
-        <td>globalIndex</td>
-        <td>int64_t</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::reducedmuon::ReducedEventId</td>
-        <td>I</td>
-        <td>reducedeventId</td>
-        <td>int32</td>
-        <td>Pointer into ReducedEvents</td>
-      </tr>
-      <tr>
-        <td>o2::aod::reducedmuon::MatchMCHTrackId</td>
-        <td>SI</td>
-        <td>matchMCHTrackId</td>
-        <td>int</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::reducedmuon::ReducedMFTId</td>
-        <td>I</td>
-        <td>matchMFTTrackId</td>
-        <td>int32</td>
-        <td>matching index pointing to the ReducedMFTTrack table if filled</td>
-      </tr>
-      <tr>
-        <td>o2::aod::reducedmuon::FilteringFlags</td>
-        <td></td>
-        <td>filteringFlags</td>
-        <td>uint8_t</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::reducedmuon::Pt</td>
-        <td></td>
-        <td>pt</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::reducedmuon::Eta</td>
-        <td></td>
-        <td>eta</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::reducedmuon::Phi</td>
-        <td></td>
-        <td>phi</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::reducedmuon::Sign</td>
-        <td></td>
-        <td>sign</td>
-        <td>int</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::reducedmuon::IsAmbiguous</td>
-        <td></td>
-        <td>isAmbiguous</td>
-        <td>int</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::reducedmuon::Px</td>
-        <td>D</td>
-        <td>px</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::reducedmuon::Py</td>
-        <td>D</td>
-        <td>py</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::reducedmuon::Pz</td>
-        <td>D</td>
-        <td>pz</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::reducedmuon::P</td>
-        <td>D</td>
-        <td>p</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-    </table>
-  </div>
-
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::ReducedMuonsExtra</button>
-  <div class="panel">
-    <div>
-
-    </div>
-    <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGDQ/DataModel/ReducedInfoTables.h" target="_blank">PWGDQ/DataModel/ReducedInfoTables.h</a>
-    </div>
-    <div>Is used in:
-      <ul>
-        <li>o2::aod::ReducedMuonExtra = o2::aod::ReducedMuonsExtra::iterator</li>
-      </ul>
-    </div>
-    <table class=DataModel>
-      <tr>
-        <th>Name</th>
-        <th></th>
-        <th>Getter</th>
-        <th>Type</th>
-        <th>Comment</th>
-      </tr>
-      <tr>
-        <td>o2::aod::fwdtrack::NClusters</td>
-        <td></td>
-        <td>nClusters</td>
-        <td>int8_t</td>
-        <td>Number of clusters</td>
-      </tr>
-      <tr>
-        <td>o2::aod::fwdtrack::PDca</td>
-        <td></td>
-        <td>pDca</td>
-        <td>float</td>
-        <td>PDca for MUONStandalone</td>
-      </tr>
-      <tr>
-        <td>o2::aod::fwdtrack::RAtAbsorberEnd</td>
-        <td></td>
-        <td>rAtAbsorberEnd</td>
-        <td>float</td>
-        <td>RAtAbsorberEnd for MUONStandalone tracks and GlobalMuonTrackstracks</td>
-      </tr>
-      <tr>
-        <td>o2::aod::fwdtrack::Chi2</td>
-        <td></td>
-        <td>chi2</td>
-        <td>float</td>
-        <td>Track chi^2</td>
-      </tr>
-      <tr>
-        <td>o2::aod::fwdtrack::Chi2MatchMCHMID</td>
-        <td></td>
-        <td>chi2MatchMCHMID</td>
-        <td>float</td>
-        <td>MCH-MID Match Chi2 for MUONStandalone tracks</td>
-      </tr>
-      <tr>
-        <td>o2::aod::fwdtrack::Chi2MatchMCHMFT</td>
+        <td>o2::aod::reducedevent::NTPCoccupMeanTimeShortA</td>
         <td></td>
-        <td>chi2MatchMCHMFT</td>
+        <td>nTPCoccupMeanTimeShortA</td>
         <td>float</td>
-        <td>MCH-MFT Match Chi2 for GlobalMuonTracks</td>
+        <td>TPC pileup mean time on A side (short time range)</td>
       </tr>
       <tr>
-        <td>o2::aod::fwdtrack::MatchScoreMCHMFT</td>
+        <td>o2::aod::reducedevent::NTPCoccupMeanTimeShortC</td>
         <td></td>
-        <td>matchScoreMCHMFT</td>
+        <td>nTPCoccupMeanTimeShortC</td>
         <td>float</td>
-        <td>MCH-MFT Machine Learning Matching Score for GlobalMuonTracks</td>
+        <td>TPC pileup mean time on C side (short time range)</td>
       </tr>
       <tr>
-        <td>o2::aod::fwdtrack::MCHBitMap</td>
+        <td>o2::aod::reducedevent::NTPCoccupMedianTimeShortA</td>
         <td></td>
-        <td>mchBitMap</td>
-        <td>uint16_t</td>
-        <td>Fired muon trackig chambers bitmap</td>
-      </tr>
-      <tr>
-        <td>o2::aod::fwdtrack::MIDBitMap</td>
-        <td></td>
-        <td>midBitMap</td>
-        <td>uint8_t</td>
-        <td>MID bitmap: non-bending plane (4bit), bending plane (4bit)</td>
-      </tr>
-      <tr>
-        <td>o2::aod::fwdtrack::MIDBoards</td>
-        <td></td>
-        <td>midBoards</td>
-        <td>uint32_t</td>
-        <td>Local boards on each MID plane (8 bits per plane)</td>
-      </tr>
-      <tr>
-        <td>o2::aod::fwdtrack::TrackType</td>
-        <td></td>
-        <td>trackType</td>
-        <td>uint8_t</td>
-        <td>Type of track. See enum ForwardTrackTypeEnum</td>
-      </tr>
-      <tr>
-        <td>o2::aod::reducedmuon::FwdDcaX</td>
-        <td></td>
-        <td>fwdDcaX</td>
-        <td>float</td>
-        <td>Impact parameter in X of forward track to the primary vertex</td>
-      </tr>
-      <tr>
-        <td>o2::aod::reducedmuon::FwdDcaY</td>
-        <td></td>
-        <td>fwdDcaY</td>
-        <td>float</td>
-        <td>Impact parameter in Y of forward track to the primary vertex</td>
-      </tr>
-      <tr>
-        <td>o2::aod::fwdtrack::TrackTime</td>
-        <td></td>
-        <td>trackTime</td>
-        <td>float</td>
-        <td>Estimated time of the track in ns wrt collision().bc() or ambiguoustrack.bcSlice()[0]</td>
-      </tr>
-      <tr>
-        <td>o2::aod::fwdtrack::TrackTimeRes</td>
-        <td></td>
-        <td>trackTimeRes</td>
-        <td>float</td>
-        <td>Resolution of the track time in ns</td>
-      </tr>
-    </table>
-  </div>
-
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::ReducedMuonsCov</button>
-  <div class="panel">
-    <div>
-
-    </div>
-    <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGDQ/DataModel/ReducedInfoTables.h" target="_blank">PWGDQ/DataModel/ReducedInfoTables.h</a>
-    </div>
-    <div>Is used in:
-      <ul>
-        <li>o2::aod::ReducedMuonCov = o2::aod::ReducedMuonsCov::iterator</li>
-      </ul>
-    </div>
-    <table class=DataModel>
-      <tr>
-        <th>Name</th>
-        <th></th>
-        <th>Getter</th>
-        <th>Type</th>
-        <th>Comment</th>
-      </tr>
-      <tr>
-        <td>o2::aod::fwdtrack::X</td>
-        <td></td>
-        <td>x</td>
-        <td>float</td>
-        <td>TrackParFwd parameter x</td>
-      </tr>
-      <tr>
-        <td>o2::aod::fwdtrack::Y</td>
-        <td></td>
-        <td>y</td>
-        <td>float</td>
-        <td>TrackParFwd parameter y</td>
-      </tr>
-      <tr>
-        <td>o2::aod::fwdtrack::Z</td>
-        <td></td>
-        <td>z</td>
-        <td>float</td>
-        <td>TrackParFwd propagation parameter z</td>
-      </tr>
-      <tr>
-        <td>o2::aod::reducedmuon::RawPhi</td>
-        <td></td>
-        <td>rawPhi</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::fwdtrack::Tgl</td>
-        <td></td>
-        <td>tgl</td>
-        <td>float</td>
-        <td>TrackParFwd parameter tan(\lamba); (\lambda = 90 - \theta_{polar})</td>
-      </tr>
-      <tr>
-        <td>o2::aod::fwdtrack::Signed1Pt</td>
-        <td></td>
-        <td>signed1Pt</td>
-        <td>float</td>
-        <td>TrackParFwd parameter: charged inverse transverse momentum; (q/pt)</td>
-      </tr>
-      <tr>
-        <td>o2::aod::fwdtrack::CXX</td>
-        <td>E</td>
-        <td>cXX</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::fwdtrack::CXY</td>
-        <td>E</td>
-        <td>cXY</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::fwdtrack::CYY</td>
-        <td>E</td>
-        <td>cYY</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::fwdtrack::CPhiX</td>
-        <td>E</td>
-        <td>cPhiX</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::fwdtrack::CPhiY</td>
-        <td>E</td>
-        <td>cPhiY</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::fwdtrack::CPhiPhi</td>
-        <td>E</td>
-        <td>cPhiPhi</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::fwdtrack::CTglX</td>
-        <td>E</td>
-        <td>cTglX</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::fwdtrack::CTglY</td>
-        <td>E</td>
-        <td>cTglY</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::fwdtrack::CTglPhi</td>
-        <td>E</td>
-        <td>cTglPhi</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::fwdtrack::CTglTgl</td>
-        <td>E</td>
-        <td>cTglTgl</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::fwdtrack::C1PtX</td>
-        <td>E</td>
-        <td>c1PtX</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::fwdtrack::C1PtY</td>
-        <td>E</td>
-        <td>c1PtY</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::fwdtrack::C1PtPhi</td>
-        <td>E</td>
-        <td>c1PtPhi</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::fwdtrack::C1PtTgl</td>
-        <td>E</td>
-        <td>c1PtTgl</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::fwdtrack::C1Pt21Pt2</td>
-        <td>E</td>
-        <td>c1Pt21Pt2</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-    </table>
-  </div>
-
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::ReducedMuonsLabels</button>
-  <div class="panel">
-    <div>
-
-    </div>
-    <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGDQ/DataModel/ReducedInfoTables.h" target="_blank">PWGDQ/DataModel/ReducedInfoTables.h</a>
-    </div>
-    <div>Is used in:
-      <ul>
-        <li>o2::aod::ReducedMuonsLabel = o2::aod::ReducedMuonsLabels::iterator</li>
-      </ul>
-    </div>
-    <table class=DataModel>
-      <tr>
-        <th>Name</th>
-        <th></th>
-        <th>Getter</th>
-        <th>Type</th>
-        <th>Comment</th>
-      </tr>
-      <tr>
-        <td>o2::aod::reducedmuonlabel::ReducedMCTrackId</td>
-        <td>I</td>
-        <td>reducedMCTrackId</td>
-        <td>int32</td>
-        <td>Pointer into ReducedMCTracks</td>
-      </tr>
-      <tr>
-        <td>o2::aod::reducedmuonlabel::McMask</td>
-        <td></td>
-        <td>mcMask</td>
-        <td>uint16_t</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::reducedtrackMC::McReducedFlags</td>
-        <td></td>
-        <td>mcReducedFlags</td>
-        <td>uint16_t</td>
-        <td>Flags to hold compressed MC selection information</td>
-      </tr>
-    </table>
-  </div>
-
-</div>
-
-###  o2-analysis-dq-table-maker-mc-with-assoc
-Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGDQ/TableProducer//tableMakerMC_withAssoc.cxx" target="_blank">tableMakerMC_withAssoc.cxx</a>
-<div>
-
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::ReducedEventsExtended</button>
-  <div class="panel">
-    <div>
-       Extended event information
-    </div>
-    <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGDQ/DataModel/ReducedInfoTables.h" target="_blank">PWGDQ/DataModel/ReducedInfoTables.h</a>
-    </div>
-    <div>Is used in:
-      <ul>
-        <li>o2::aod::ReducedEventExtended = o2::aod::ReducedEventsExtended::iterator</li>
-      </ul>
-    </div>
-    <table class=DataModel>
-      <tr>
-        <th>Name</th>
-        <th></th>
-        <th>Getter</th>
-        <th>Type</th>
-        <th>Comment</th>
-      </tr>
-      <tr>
-        <td>o2::aod::bc::GlobalBC</td>
-        <td></td>
-        <td>globalBC</td>
-        <td>uint64_t</td>
-        <td>Bunch crossing number (globally unique in this run)</td>
-      </tr>
-      <tr>
-        <td>o2::aod::evsel::Alias</td>
-        <td>GI</td>
-        <td></td>
-        <td>?</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::evsel::Selection</td>
-        <td>GI</td>
-        <td></td>
-        <td>?</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::timestamp::Timestamp</td>
-        <td></td>
-        <td>timestamp</td>
-        <td>uint64_t</td>
-        <td>Timestamp of a BC in ms (epoch style)</td>
-      </tr>
-      <tr>
-        <td>o2::aod::cent::CentRun2V0M</td>
-        <td></td>
-        <td>centRun2V0M</td>
-        <td>float</td>
-        <td>Run2 Centrality percentile estimated from V0C+V0A multiplicities</td>
-      </tr>
-      <tr>
-        <td>o2::aod::mult::MultTPC</td>
-        <td></td>
-        <td>multTPC</td>
-        <td>int</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::mult::MultFV0A</td>
-        <td></td>
-        <td>multFV0A</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::mult::MultFV0C</td>
-        <td></td>
-        <td>multFV0C</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::mult::MultFT0A</td>
-        <td></td>
-        <td>multFT0A</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::mult::MultFT0C</td>
-        <td></td>
-        <td>multFT0C</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::mult::MultFDDA</td>
-        <td></td>
-        <td>multFDDA</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::mult::MultFDDC</td>
-        <td></td>
-        <td>multFDDC</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::mult::MultZNA</td>
-        <td></td>
-        <td>multZNA</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::mult::MultZNC</td>
-        <td></td>
-        <td>multZNC</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::mult::MultTracklets</td>
-        <td></td>
-        <td>multTracklets</td>
-        <td>int</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::mult::MultNTracksPV</td>
-        <td></td>
-        <td>multNTracksPV</td>
-        <td>int</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::cent::CentFT0C</td>
-        <td></td>
-        <td>centFT0C</td>
-        <td>float</td>
-        <td>Run3 centrality percentile estimated from FT0C multiplicity</td>
-      </tr>
-    </table>
-  </div>
-
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::ReducedEventsMultPV</button>
-  <div class="panel">
-    <div>
-       Multiplicity information for primary vertex
-    </div>
-    <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGDQ/DataModel/ReducedInfoTables.h" target="_blank">PWGDQ/DataModel/ReducedInfoTables.h</a>
-    </div>
-    <div>Is used in:
-      <ul>
-        <li>o2::aod::ReducedEventMultPV = o2::aod::ReducedEventsMultPV::iterator</li>
-      </ul>
-    </div>
-    <table class=DataModel>
-      <tr>
-        <th>Name</th>
-        <th></th>
-        <th>Getter</th>
-        <th>Type</th>
-        <th>Comment</th>
-      </tr>
-      <tr>
-        <td>o2::aod::mult::MultNTracksHasITS</td>
-        <td></td>
-        <td>multNTracksHasITS</td>
-        <td>int</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::mult::MultNTracksHasTPC</td>
-        <td></td>
-        <td>multNTracksHasTPC</td>
-        <td>int</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::mult::MultNTracksHasTOF</td>
-        <td></td>
-        <td>multNTracksHasTOF</td>
-        <td>int</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::mult::MultNTracksHasTRD</td>
-        <td></td>
-        <td>multNTracksHasTRD</td>
-        <td>int</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::mult::MultNTracksITSOnly</td>
-        <td></td>
-        <td>multNTracksITSOnly</td>
-        <td>int</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::mult::MultNTracksTPCOnly</td>
-        <td></td>
-        <td>multNTracksTPCOnly</td>
-        <td>int</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::mult::MultNTracksITSTPC</td>
-        <td></td>
-        <td>multNTracksITSTPC</td>
-        <td>int</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::evsel::NumTracksInTimeRange</td>
-        <td></td>
-        <td>trackOccupancyInTimeRange</td>
-        <td>int</td>
-        <td>Occupancy in specified time interval by a number of tracks from nearby collisions</td>
-      </tr>
-    </table>
-  </div>
-
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::ReducedEventsMultAll</button>
-  <div class="panel">
-    <div>
-       Multiplicity information for all tracks in the event
-    </div>
-    <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGDQ/DataModel/ReducedInfoTables.h" target="_blank">PWGDQ/DataModel/ReducedInfoTables.h</a>
-    </div>
-    <div>Is used in:
-      <ul>
-        <li>o2::aod::ReducedEventMultAll = o2::aod::ReducedEventsMultAll::iterator</li>
-      </ul>
-    </div>
-    <table class=DataModel>
-      <tr>
-        <th>Name</th>
-        <th></th>
-        <th>Getter</th>
-        <th>Type</th>
-        <th>Comment</th>
-      </tr>
-      <tr>
-        <td>o2::aod::mult::MultAllTracksTPCOnly</td>
-        <td></td>
-        <td>multAllTracksTPCOnly</td>
-        <td>int</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::mult::MultAllTracksITSTPC</td>
-        <td></td>
-        <td>multAllTracksITSTPC</td>
-        <td>int</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::reducedevent::NTPCpileupContribA</td>
-        <td></td>
-        <td>nTPCpileupContribA</td>
-        <td>int</td>
-        <td>Number of TPC pileup tracks on A side</td>
-      </tr>
-      <tr>
-        <td>o2::aod::reducedevent::NTPCpileupContribC</td>
-        <td></td>
-        <td>nTPCpileupContribC</td>
-        <td>int</td>
-        <td>Number of TPC pileup tracks on C side</td>
-      </tr>
-      <tr>
-        <td>o2::aod::reducedevent::NTPCpileupZA</td>
-        <td></td>
-        <td>nTPCpileupZA</td>
+        <td>nTPCoccupMedianTimeShortA</td>
         <td>float</td>
-        <td>Median Z position of pileup tracks on A side</td>
+        <td>TPC pileup median time on A side (short time range)</td>
       </tr>
       <tr>
-        <td>o2::aod::reducedevent::NTPCpileupZC</td>
+        <td>o2::aod::reducedevent::NTPCoccupMedianTimeShortC</td>
         <td></td>
-        <td>nTPCpileupZC</td>
+        <td>nTPCoccupMedianTimeShortC</td>
         <td>float</td>
-        <td>Median Z position of pileup tracks on C side</td>
-      </tr>
-      <tr>
-        <td>o2::aod::reducedevent::NTPCtracksInPast</td>
-        <td></td>
-        <td>nTPCtracksInPast</td>
-        <td>int</td>
-        <td>Number of TPC tracks in the past events (configurable, but e.g. one drift time)</td>
-      </tr>
-      <tr>
-        <td>o2::aod::reducedevent::NTPCtracksInFuture</td>
-        <td></td>
-        <td>nTPCtracksInFuture</td>
-        <td>int</td>
-        <td>Number of TPC tracks in the future events (configurable, but e.g. one drift time)</td>
+        <td>TPC pileup median time on C side (short time range)</td>
       </tr>
     </table>
   </div>
@@ -12075,6 +10463,2147 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGDQ
     </div>
     <div>
       Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGDQ/DataModel/ReducedInfoTables.h" target="_blank">PWGDQ/DataModel/ReducedInfoTables.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::ReducedMFTExtra = o2::aod::ReducedMFTsExtra::iterator</li>
+      </ul>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::reducedmft::MftClusterSizesAndTrackFlags</td>
+        <td></td>
+        <td>mftClusterSizesAndTrackFlags</td>
+        <td>uint64_t</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::reducedmft::Sign</td>
+        <td></td>
+        <td>sign</td>
+        <td>int</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::reducedmft::FwdDcaX</td>
+        <td></td>
+        <td>fwdDcaX</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::reducedmft::FwdDcaY</td>
+        <td></td>
+        <td>fwdDcaY</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::reducedmft::MftNClusters</td>
+        <td></td>
+        <td>mftNClusters</td>
+        <td>int</td>
+        <td></td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::ReducedMFTLabels</button>
+  <div class="panel">
+    <div>
+
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGDQ/DataModel/ReducedInfoTables.h" target="_blank">PWGDQ/DataModel/ReducedInfoTables.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::ReducedMFTLabel = o2::aod::ReducedMFTLabels::iterator</li>
+      </ul>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::reducedmft::ReducedMCTrackId</td>
+        <td>I</td>
+        <td>reducedMCTrackId</td>
+        <td>int32</td>
+        <td>Pointer into ReducedMCTracks</td>
+      </tr>
+      <tr>
+        <td>o2::aod::reducedmft::McMask</td>
+        <td></td>
+        <td>mcMask</td>
+        <td>uint16_t</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::reducedmft::McReducedFlags</td>
+        <td></td>
+        <td>mcReducedFlags</td>
+        <td>uint16_t</td>
+        <td></td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::ReducedMuons</button>
+  <div class="panel">
+    <div>
+
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGDQ/DataModel/ReducedInfoTables.h" target="_blank">PWGDQ/DataModel/ReducedInfoTables.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::ReducedMuon = o2::aod::ReducedMuons::iterator</li>
+      </ul>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::soa::Index</td>
+        <td>GI</td>
+        <td>globalIndex</td>
+        <td>int64_t</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::reducedmuon::ReducedEventId</td>
+        <td>I</td>
+        <td>reducedeventId</td>
+        <td>int32</td>
+        <td>Pointer into ReducedEvents</td>
+      </tr>
+      <tr>
+        <td>o2::aod::reducedmuon::MatchMCHTrackId</td>
+        <td>SI</td>
+        <td>matchMCHTrackId</td>
+        <td>int</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::reducedmuon::ReducedMFTId</td>
+        <td>I</td>
+        <td>matchMFTTrackId</td>
+        <td>int32</td>
+        <td>matching index pointing to the ReducedMFTTrack table if filled</td>
+      </tr>
+      <tr>
+        <td>o2::aod::reducedmuon::FilteringFlags</td>
+        <td></td>
+        <td>filteringFlags</td>
+        <td>uint8_t</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::reducedmuon::Pt</td>
+        <td></td>
+        <td>pt</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::reducedmuon::Eta</td>
+        <td></td>
+        <td>eta</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::reducedmuon::Phi</td>
+        <td></td>
+        <td>phi</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::reducedmuon::Sign</td>
+        <td></td>
+        <td>sign</td>
+        <td>int</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::reducedmuon::IsAmbiguous</td>
+        <td></td>
+        <td>isAmbiguous</td>
+        <td>int</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::reducedmuon::Px</td>
+        <td>D</td>
+        <td>px</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::reducedmuon::Py</td>
+        <td>D</td>
+        <td>py</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::reducedmuon::Pz</td>
+        <td>D</td>
+        <td>pz</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::reducedmuon::P</td>
+        <td>D</td>
+        <td>p</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::ReducedMuonsExtra</button>
+  <div class="panel">
+    <div>
+
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGDQ/DataModel/ReducedInfoTables.h" target="_blank">PWGDQ/DataModel/ReducedInfoTables.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::ReducedMuonExtra = o2::aod::ReducedMuonsExtra::iterator</li>
+      </ul>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::fwdtrack::NClusters</td>
+        <td></td>
+        <td>nClusters</td>
+        <td>int8_t</td>
+        <td>Number of clusters</td>
+      </tr>
+      <tr>
+        <td>o2::aod::fwdtrack::PDca</td>
+        <td></td>
+        <td>pDca</td>
+        <td>float</td>
+        <td>PDca for MUONStandalone</td>
+      </tr>
+      <tr>
+        <td>o2::aod::fwdtrack::RAtAbsorberEnd</td>
+        <td></td>
+        <td>rAtAbsorberEnd</td>
+        <td>float</td>
+        <td>RAtAbsorberEnd for MUONStandalone tracks and GlobalMuonTrackstracks</td>
+      </tr>
+      <tr>
+        <td>o2::aod::fwdtrack::Chi2</td>
+        <td></td>
+        <td>chi2</td>
+        <td>float</td>
+        <td>Track chi^2</td>
+      </tr>
+      <tr>
+        <td>o2::aod::fwdtrack::Chi2MatchMCHMID</td>
+        <td></td>
+        <td>chi2MatchMCHMID</td>
+        <td>float</td>
+        <td>MCH-MID Match Chi2 for MUONStandalone tracks</td>
+      </tr>
+      <tr>
+        <td>o2::aod::fwdtrack::Chi2MatchMCHMFT</td>
+        <td></td>
+        <td>chi2MatchMCHMFT</td>
+        <td>float</td>
+        <td>MCH-MFT Match Chi2 for GlobalMuonTracks</td>
+      </tr>
+      <tr>
+        <td>o2::aod::fwdtrack::MatchScoreMCHMFT</td>
+        <td></td>
+        <td>matchScoreMCHMFT</td>
+        <td>float</td>
+        <td>MCH-MFT Machine Learning Matching Score for GlobalMuonTracks</td>
+      </tr>
+      <tr>
+        <td>o2::aod::fwdtrack::MCHBitMap</td>
+        <td></td>
+        <td>mchBitMap</td>
+        <td>uint16_t</td>
+        <td>Fired muon trackig chambers bitmap</td>
+      </tr>
+      <tr>
+        <td>o2::aod::fwdtrack::MIDBitMap</td>
+        <td></td>
+        <td>midBitMap</td>
+        <td>uint8_t</td>
+        <td>MID bitmap: non-bending plane (4bit), bending plane (4bit)</td>
+      </tr>
+      <tr>
+        <td>o2::aod::fwdtrack::MIDBoards</td>
+        <td></td>
+        <td>midBoards</td>
+        <td>uint32_t</td>
+        <td>Local boards on each MID plane (8 bits per plane)</td>
+      </tr>
+      <tr>
+        <td>o2::aod::fwdtrack::TrackType</td>
+        <td></td>
+        <td>trackType</td>
+        <td>uint8_t</td>
+        <td>Type of track. See enum ForwardTrackTypeEnum</td>
+      </tr>
+      <tr>
+        <td>o2::aod::reducedmuon::FwdDcaX</td>
+        <td></td>
+        <td>fwdDcaX</td>
+        <td>float</td>
+        <td>Impact parameter in X of forward track to the primary vertex</td>
+      </tr>
+      <tr>
+        <td>o2::aod::reducedmuon::FwdDcaY</td>
+        <td></td>
+        <td>fwdDcaY</td>
+        <td>float</td>
+        <td>Impact parameter in Y of forward track to the primary vertex</td>
+      </tr>
+      <tr>
+        <td>o2::aod::fwdtrack::TrackTime</td>
+        <td></td>
+        <td>trackTime</td>
+        <td>float</td>
+        <td>Estimated time of the track in ns wrt collision().bc() or ambiguoustrack.bcSlice()[0]</td>
+      </tr>
+      <tr>
+        <td>o2::aod::fwdtrack::TrackTimeRes</td>
+        <td></td>
+        <td>trackTimeRes</td>
+        <td>float</td>
+        <td>Resolution of the track time in ns</td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::ReducedMuonsCov</button>
+  <div class="panel">
+    <div>
+
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGDQ/DataModel/ReducedInfoTables.h" target="_blank">PWGDQ/DataModel/ReducedInfoTables.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::ReducedMuonCov = o2::aod::ReducedMuonsCov::iterator</li>
+      </ul>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::fwdtrack::X</td>
+        <td></td>
+        <td>x</td>
+        <td>float</td>
+        <td>TrackParFwd parameter x</td>
+      </tr>
+      <tr>
+        <td>o2::aod::fwdtrack::Y</td>
+        <td></td>
+        <td>y</td>
+        <td>float</td>
+        <td>TrackParFwd parameter y</td>
+      </tr>
+      <tr>
+        <td>o2::aod::fwdtrack::Z</td>
+        <td></td>
+        <td>z</td>
+        <td>float</td>
+        <td>TrackParFwd propagation parameter z</td>
+      </tr>
+      <tr>
+        <td>o2::aod::reducedmuon::RawPhi</td>
+        <td></td>
+        <td>rawPhi</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::fwdtrack::Tgl</td>
+        <td></td>
+        <td>tgl</td>
+        <td>float</td>
+        <td>TrackParFwd parameter tan(\lamba); (\lambda = 90 - \theta_{polar})</td>
+      </tr>
+      <tr>
+        <td>o2::aod::fwdtrack::Signed1Pt</td>
+        <td></td>
+        <td>signed1Pt</td>
+        <td>float</td>
+        <td>TrackParFwd parameter: charged inverse transverse momentum; (q/pt)</td>
+      </tr>
+      <tr>
+        <td>o2::aod::fwdtrack::CXX</td>
+        <td>E</td>
+        <td>cXX</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::fwdtrack::CXY</td>
+        <td>E</td>
+        <td>cXY</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::fwdtrack::CYY</td>
+        <td>E</td>
+        <td>cYY</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::fwdtrack::CPhiX</td>
+        <td>E</td>
+        <td>cPhiX</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::fwdtrack::CPhiY</td>
+        <td>E</td>
+        <td>cPhiY</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::fwdtrack::CPhiPhi</td>
+        <td>E</td>
+        <td>cPhiPhi</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::fwdtrack::CTglX</td>
+        <td>E</td>
+        <td>cTglX</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::fwdtrack::CTglY</td>
+        <td>E</td>
+        <td>cTglY</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::fwdtrack::CTglPhi</td>
+        <td>E</td>
+        <td>cTglPhi</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::fwdtrack::CTglTgl</td>
+        <td>E</td>
+        <td>cTglTgl</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::fwdtrack::C1PtX</td>
+        <td>E</td>
+        <td>c1PtX</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::fwdtrack::C1PtY</td>
+        <td>E</td>
+        <td>c1PtY</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::fwdtrack::C1PtPhi</td>
+        <td>E</td>
+        <td>c1PtPhi</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::fwdtrack::C1PtTgl</td>
+        <td>E</td>
+        <td>c1PtTgl</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::fwdtrack::C1Pt21Pt2</td>
+        <td>E</td>
+        <td>c1Pt21Pt2</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::ReducedMuonsLabels</button>
+  <div class="panel">
+    <div>
+
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGDQ/DataModel/ReducedInfoTables.h" target="_blank">PWGDQ/DataModel/ReducedInfoTables.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::ReducedMuonsLabel = o2::aod::ReducedMuonsLabels::iterator</li>
+      </ul>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::reducedmuonlabel::ReducedMCTrackId</td>
+        <td>I</td>
+        <td>reducedMCTrackId</td>
+        <td>int32</td>
+        <td>Pointer into ReducedMCTracks</td>
+      </tr>
+      <tr>
+        <td>o2::aod::reducedmuonlabel::McMask</td>
+        <td></td>
+        <td>mcMask</td>
+        <td>uint16_t</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::reducedtrackMC::McReducedFlags</td>
+        <td></td>
+        <td>mcReducedFlags</td>
+        <td>uint16_t</td>
+        <td>Flags to hold compressed MC selection information</td>
+      </tr>
+    </table>
+  </div>
+
+</div>
+
+###  o2-analysis-dq-table-maker-mc-with-assoc
+Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGDQ/TableProducer//tableMakerMC_withAssoc.cxx" target="_blank">tableMakerMC_withAssoc.cxx</a>
+<div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::ReducedEventsExtended</button>
+  <div class="panel">
+    <div>
+       Extended event information
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGDQ/DataModel/ReducedInfoTables.h" target="_blank">PWGDQ/DataModel/ReducedInfoTables.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::ReducedEventExtended = o2::aod::ReducedEventsExtended::iterator</li>
+      </ul>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::bc::GlobalBC</td>
+        <td></td>
+        <td>globalBC</td>
+        <td>uint64_t</td>
+        <td>Bunch crossing number (globally unique in this run)</td>
+      </tr>
+      <tr>
+        <td>o2::aod::evsel::Alias</td>
+        <td>GI</td>
+        <td></td>
+        <td>?</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::evsel::Selection</td>
+        <td>GI</td>
+        <td></td>
+        <td>?</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::timestamp::Timestamp</td>
+        <td></td>
+        <td>timestamp</td>
+        <td>uint64_t</td>
+        <td>Timestamp of a BC in ms (epoch style)</td>
+      </tr>
+      <tr>
+        <td>o2::aod::cent::CentRun2V0M</td>
+        <td></td>
+        <td>centRun2V0M</td>
+        <td>float</td>
+        <td>Run2 Centrality percentile estimated from V0C+V0A multiplicities</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mult::MultTPC</td>
+        <td></td>
+        <td>multTPC</td>
+        <td>int</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::mult::MultFV0A</td>
+        <td></td>
+        <td>multFV0A</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::mult::MultFV0C</td>
+        <td></td>
+        <td>multFV0C</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::mult::MultFT0A</td>
+        <td></td>
+        <td>multFT0A</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::mult::MultFT0C</td>
+        <td></td>
+        <td>multFT0C</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::mult::MultFDDA</td>
+        <td></td>
+        <td>multFDDA</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::mult::MultFDDC</td>
+        <td></td>
+        <td>multFDDC</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::mult::MultZNA</td>
+        <td></td>
+        <td>multZNA</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::mult::MultZNC</td>
+        <td></td>
+        <td>multZNC</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::mult::MultTracklets</td>
+        <td></td>
+        <td>multTracklets</td>
+        <td>int</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::mult::MultNTracksPV</td>
+        <td></td>
+        <td>multNTracksPV</td>
+        <td>int</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::cent::CentFT0C</td>
+        <td></td>
+        <td>centFT0C</td>
+        <td>float</td>
+        <td>Run3 centrality percentile estimated from FT0C multiplicity</td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::ReducedEventsMultPV</button>
+  <div class="panel">
+    <div>
+       Multiplicity information for primary vertex
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGDQ/DataModel/ReducedInfoTables.h" target="_blank">PWGDQ/DataModel/ReducedInfoTables.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::ReducedEventMultPV = o2::aod::ReducedEventsMultPV::iterator</li>
+      </ul>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::mult::MultNTracksHasITS</td>
+        <td></td>
+        <td>multNTracksHasITS</td>
+        <td>int</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::mult::MultNTracksHasTPC</td>
+        <td></td>
+        <td>multNTracksHasTPC</td>
+        <td>int</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::mult::MultNTracksHasTOF</td>
+        <td></td>
+        <td>multNTracksHasTOF</td>
+        <td>int</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::mult::MultNTracksHasTRD</td>
+        <td></td>
+        <td>multNTracksHasTRD</td>
+        <td>int</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::mult::MultNTracksITSOnly</td>
+        <td></td>
+        <td>multNTracksITSOnly</td>
+        <td>int</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::mult::MultNTracksTPCOnly</td>
+        <td></td>
+        <td>multNTracksTPCOnly</td>
+        <td>int</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::mult::MultNTracksITSTPC</td>
+        <td></td>
+        <td>multNTracksITSTPC</td>
+        <td>int</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::evsel::NumTracksInTimeRange</td>
+        <td></td>
+        <td>trackOccupancyInTimeRange</td>
+        <td>int</td>
+        <td>Occupancy in specified time interval by a number of tracks from nearby collisions</td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::ReducedEventsMultAll</button>
+  <div class="panel">
+    <div>
+       Multiplicity information for all tracks in the event
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGDQ/DataModel/ReducedInfoTables.h" target="_blank">PWGDQ/DataModel/ReducedInfoTables.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::ReducedEventMultAll = o2::aod::ReducedEventsMultAll::iterator</li>
+      </ul>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::mult::MultAllTracksTPCOnly</td>
+        <td></td>
+        <td>multAllTracksTPCOnly</td>
+        <td>int</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::mult::MultAllTracksITSTPC</td>
+        <td></td>
+        <td>multAllTracksITSTPC</td>
+        <td>int</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::reducedevent::NTPCoccupContribLongA</td>
+        <td></td>
+        <td>nTPCoccupContribLongA</td>
+        <td>int</td>
+        <td>TPC pileup occupancy on A side (long time range)</td>
+      </tr>
+      <tr>
+        <td>o2::aod::reducedevent::NTPCoccupContribLongC</td>
+        <td></td>
+        <td>nTPCoccupContribLongC</td>
+        <td>int</td>
+        <td>TPC pileup occupancy on C side (long time range)</td>
+      </tr>
+      <tr>
+        <td>o2::aod::reducedevent::NTPCoccupMeanTimeLongA</td>
+        <td></td>
+        <td>nTPCoccupMeanTimeLongA</td>
+        <td>float</td>
+        <td>TPC pileup mean time on A side (long time range)</td>
+      </tr>
+      <tr>
+        <td>o2::aod::reducedevent::NTPCoccupMeanTimeLongC</td>
+        <td></td>
+        <td>nTPCoccupMeanTimeLongC</td>
+        <td>float</td>
+        <td>TPC pileup mean time on C side (long time range)</td>
+      </tr>
+      <tr>
+        <td>o2::aod::reducedevent::NTPCoccupMedianTimeLongA</td>
+        <td></td>
+        <td>nTPCoccupMedianTimeLongA</td>
+        <td>float</td>
+        <td>TPC pileup median time on A side (long time range)</td>
+      </tr>
+      <tr>
+        <td>o2::aod::reducedevent::NTPCoccupMedianTimeLongC</td>
+        <td></td>
+        <td>nTPCoccupMedianTimeLongC</td>
+        <td>float</td>
+        <td>TPC pileup median time on C side (long time range)</td>
+      </tr>
+      <tr>
+        <td>o2::aod::reducedevent::NTPCoccupContribShortA</td>
+        <td></td>
+        <td>nTPCoccupContribShortA</td>
+        <td>int</td>
+        <td>TPC pileup occupancy on A side (short time range)</td>
+      </tr>
+      <tr>
+        <td>o2::aod::reducedevent::NTPCoccupContribShortC</td>
+        <td></td>
+        <td>nTPCoccupContribShortC</td>
+        <td>int</td>
+        <td>TPC pileup occupancy on C side (short time range)</td>
+      </tr>
+      <tr>
+        <td>o2::aod::reducedevent::NTPCoccupMeanTimeShortA</td>
+        <td></td>
+        <td>nTPCoccupMeanTimeShortA</td>
+        <td>float</td>
+        <td>TPC pileup mean time on A side (short time range)</td>
+      </tr>
+      <tr>
+        <td>o2::aod::reducedevent::NTPCoccupMeanTimeShortC</td>
+        <td></td>
+        <td>nTPCoccupMeanTimeShortC</td>
+        <td>float</td>
+        <td>TPC pileup mean time on C side (short time range)</td>
+      </tr>
+      <tr>
+        <td>o2::aod::reducedevent::NTPCoccupMedianTimeShortA</td>
+        <td></td>
+        <td>nTPCoccupMedianTimeShortA</td>
+        <td>float</td>
+        <td>TPC pileup median time on A side (short time range)</td>
+      </tr>
+      <tr>
+        <td>o2::aod::reducedevent::NTPCoccupMedianTimeShortC</td>
+        <td></td>
+        <td>nTPCoccupMedianTimeShortC</td>
+        <td>float</td>
+        <td>TPC pileup median time on C side (short time range)</td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::ReducedEventsVtxCov</button>
+  <div class="panel">
+    <div>
+       Event vertex covariance matrix
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGDQ/DataModel/ReducedInfoTables.h" target="_blank">PWGDQ/DataModel/ReducedInfoTables.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::ReducedEventVtxCov = o2::aod::ReducedEventsVtxCov::iterator</li>
+      </ul>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::&zwnj;collision::CovXX</td>
+        <td></td>
+        <td>covXX</td>
+        <td>float</td>
+        <td>Vertex covariance matrix</td>
+      </tr>
+      <tr>
+        <td>o2::aod::&zwnj;collision::CovXY</td>
+        <td></td>
+        <td>covXY</td>
+        <td>float</td>
+        <td>Vertex covariance matrix</td>
+      </tr>
+      <tr>
+        <td>o2::aod::&zwnj;collision::CovXZ</td>
+        <td></td>
+        <td>covXZ</td>
+        <td>float</td>
+        <td>Vertex covariance matrix</td>
+      </tr>
+      <tr>
+        <td>o2::aod::&zwnj;collision::CovYY</td>
+        <td></td>
+        <td>covYY</td>
+        <td>float</td>
+        <td>Vertex covariance matrix</td>
+      </tr>
+      <tr>
+        <td>o2::aod::&zwnj;collision::CovYZ</td>
+        <td></td>
+        <td>covYZ</td>
+        <td>float</td>
+        <td>Vertex covariance matrix</td>
+      </tr>
+      <tr>
+        <td>o2::aod::&zwnj;collision::CovZZ</td>
+        <td></td>
+        <td>covZZ</td>
+        <td>float</td>
+        <td>Vertex covariance matrix</td>
+      </tr>
+      <tr>
+        <td>o2::aod::&zwnj;collision::Chi2</td>
+        <td></td>
+        <td>chi2</td>
+        <td>float</td>
+        <td>Chi2 of vertex fit</td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::ReducedEventsInfo</button>
+  <div class="panel">
+    <div>
+       Main event index table
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGDQ/DataModel/ReducedInfoTables.h" target="_blank">PWGDQ/DataModel/ReducedInfoTables.h</a>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::reducedevent::CollisionId</td>
+        <td>I</td>
+        <td>collisionId</td>
+        <td>int32</td>
+        <td>Pointer into Collisions</td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::ReducedMCEvents</button>
+  <div class="panel">
+    <div>
+       Event level MC truth information
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGDQ/DataModel/ReducedInfoTables.h" target="_blank">PWGDQ/DataModel/ReducedInfoTables.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::ReducedMCEvent = o2::aod::ReducedMCEvents::iterator</li>
+      </ul>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::soa::Index</td>
+        <td>GI</td>
+        <td>globalIndex</td>
+        <td>int64_t</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::mccollision::GeneratorsID</td>
+        <td></td>
+        <td>generatorsID</td>
+        <td>short</td>
+        <td>disentangled generator IDs should be accessed using getGeneratorId, getSubGeneratorId and getSourceId</td>
+      </tr>
+      <tr>
+        <td>o2::aod::reducedevent::MCPosX</td>
+        <td></td>
+        <td>mcPosX</td>
+        <td>float</td>
+        <td>MC event position X</td>
+      </tr>
+      <tr>
+        <td>o2::aod::reducedevent::MCPosY</td>
+        <td></td>
+        <td>mcPosY</td>
+        <td>float</td>
+        <td>MC event position Y</td>
+      </tr>
+      <tr>
+        <td>o2::aod::reducedevent::MCPosZ</td>
+        <td></td>
+        <td>mcPosZ</td>
+        <td>float</td>
+        <td>MC event position Z</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mccollision::T</td>
+        <td></td>
+        <td>t</td>
+        <td>float</td>
+        <td>Collision time relative to given bc in ns</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mccollision::Weight</td>
+        <td></td>
+        <td>weight</td>
+        <td>float</td>
+        <td>MC weight</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mccollision::ImpactParameter</td>
+        <td></td>
+        <td>impactParameter</td>
+        <td>float</td>
+        <td>Impact parameter for A-A</td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::ReducedMCEventLabels</button>
+  <div class="panel">
+    <div>
+       Table joined to the ReducedEvents table containing the MC index
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGDQ/DataModel/ReducedInfoTables.h" target="_blank">PWGDQ/DataModel/ReducedInfoTables.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::ReducedMCEventLabel = o2::aod::ReducedMCEventLabels::iterator</li>
+      </ul>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::reducedeventlabel::ReducedMCEventId</td>
+        <td>I</td>
+        <td>reducedMCeventId</td>
+        <td>int32</td>
+        <td>MC collision</td>
+      </tr>
+      <tr>
+        <td>o2::aod::reducedeventlabel::McMask</td>
+        <td></td>
+        <td>mcMask</td>
+        <td>uint16_t</td>
+        <td>Bit mask to indicate collision mismatches (bit ON means mismatch). Bit 15: indicates negative label</td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::ReducedTracks</button>
+  <div class="panel">
+    <div>
+
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGDQ/DataModel/ReducedInfoTables.h" target="_blank">PWGDQ/DataModel/ReducedInfoTables.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::ReducedTrack = o2::aod::ReducedTracks::iterator</li>
+      </ul>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::soa::Index</td>
+        <td>GI</td>
+        <td>globalIndex</td>
+        <td>int64_t</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::reducedtrack::ReducedEventId</td>
+        <td>I</td>
+        <td>reducedeventId</td>
+        <td>int32</td>
+        <td>Pointer into ReducedEvents</td>
+      </tr>
+      <tr>
+        <td>o2::aod::reducedtrack::FilteringFlags</td>
+        <td>GI</td>
+        <td></td>
+        <td>?</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::reducedtrack::Pt</td>
+        <td></td>
+        <td>pt</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::reducedtrack::Eta</td>
+        <td></td>
+        <td>eta</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::reducedtrack::Phi</td>
+        <td></td>
+        <td>phi</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::reducedtrack::Sign</td>
+        <td></td>
+        <td>sign</td>
+        <td>int</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::reducedtrack::IsAmbiguous</td>
+        <td></td>
+        <td>isAmbiguous</td>
+        <td>int</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::reducedtrack::Px</td>
+        <td>D</td>
+        <td>px</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::reducedtrack::Py</td>
+        <td>D</td>
+        <td>py</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::reducedtrack::Pz</td>
+        <td>D</td>
+        <td>pz</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::reducedtrack::P</td>
+        <td>D</td>
+        <td>p</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::ReducedTracksBarrel</button>
+  <div class="panel">
+    <div>
+
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGDQ/DataModel/ReducedInfoTables.h" target="_blank">PWGDQ/DataModel/ReducedInfoTables.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::ReducedTrackBarrel = o2::aod::ReducedTracksBarrel::iterator</li>
+      </ul>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::track::X</td>
+        <td></td>
+        <td>x</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::Alpha</td>
+        <td></td>
+        <td>alpha</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::IsWithinBeamPipe</td>
+        <td>D</td>
+        <td>isWithinBeamPipe</td>
+        <td>bool</td>
+        <td>Is the track within the beam pipe (= successfully propagated to a collision vertex)</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::Y</td>
+        <td></td>
+        <td>y</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::Z</td>
+        <td></td>
+        <td>z</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::Snp</td>
+        <td></td>
+        <td>snp</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::Tgl</td>
+        <td></td>
+        <td>tgl</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::Signed1Pt</td>
+        <td></td>
+        <td>signed1Pt</td>
+        <td>float</td>
+        <td>(sign of charge)/Pt in c/GeV. Use pt() and sign() instead</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::TPCInnerParam</td>
+        <td></td>
+        <td>tpcInnerParam</td>
+        <td>float</td>
+        <td>Momentum at inner wall of the TPC</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::Flags</td>
+        <td></td>
+        <td>flags</td>
+        <td>uint32_t</td>
+        <td>Track flags. Run 2: see TrackFlagsRun2Enum | Run 3: see TrackFlags</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::ITSClusterMap</td>
+        <td></td>
+        <td>itsClusterMap</td>
+        <td>uint8_t</td>
+        <td>Old cluster ITS cluster map, kept for version 0 compatibility</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::ITSChi2NCl</td>
+        <td></td>
+        <td>itsChi2NCl</td>
+        <td>float</td>
+        <td>Chi2 / cluster for the ITS track segment</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::TPCNClsFindable</td>
+        <td></td>
+        <td>tpcNClsFindable</td>
+        <td>uint8_t</td>
+        <td>Findable TPC clusters for this track geometry</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::TPCNClsFindableMinusFound</td>
+        <td></td>
+        <td>tpcNClsFindableMinusFound</td>
+        <td>int8_t</td>
+        <td>TPC Clusters: Findable - Found</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::TPCNClsFindableMinusCrossedRows</td>
+        <td></td>
+        <td>tpcNClsFindableMinusCrossedRows</td>
+        <td>int8_t</td>
+        <td>TPC Clusters: Findable - crossed rows</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::TPCNClsShared</td>
+        <td></td>
+        <td>tpcNClsShared</td>
+        <td>uint8_t</td>
+        <td>Number of shared TPC clusters</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::TPCChi2NCl</td>
+        <td></td>
+        <td>tpcChi2NCl</td>
+        <td>float</td>
+        <td>Chi2 / cluster for the TPC track segment</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::TRDChi2</td>
+        <td></td>
+        <td>trdChi2</td>
+        <td>float</td>
+        <td>Chi2 for the TRD track segment</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::TRDPattern</td>
+        <td></td>
+        <td>trdPattern</td>
+        <td>uint8_t</td>
+        <td>Contributor to the track on TRD layer in bits 0-5, starting from the innermost, bit 6 indicates a potentially split tracklet, bit 7 if the track crossed a padrow</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::TOFChi2</td>
+        <td></td>
+        <td>tofChi2</td>
+        <td>float</td>
+        <td>Chi2 for the TOF track segment</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::Length</td>
+        <td></td>
+        <td>length</td>
+        <td>float</td>
+        <td>Track length</td>
+      </tr>
+      <tr>
+        <td>o2::aod::reducedtrack::DcaXY</td>
+        <td></td>
+        <td>dcaXY</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::reducedtrack::DcaZ</td>
+        <td></td>
+        <td>dcaZ</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::TrackTime</td>
+        <td></td>
+        <td>trackTime</td>
+        <td>float</td>
+        <td>Estimated time of the track in ns wrt collision().bc() or ambiguoustrack.bcSlice()[0]</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::TrackTimeRes</td>
+        <td></td>
+        <td>trackTimeRes</td>
+        <td>float</td>
+        <td>Resolution of the track time in ns (see TrackFlags::TrackTimeResIsRange)</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::TOFExpMom</td>
+        <td></td>
+        <td>tofExpMom</td>
+        <td>float</td>
+        <td>TOF expected momentum obtained in tracking, used to compute the expected times</td>
+      </tr>
+      <tr>
+        <td>o2::aod::reducedtrack::DetectorMap</td>
+        <td></td>
+        <td>detectorMap</td>
+        <td>uint8_t</td>
+        <td>Detector map: see enum DetectorMapEnum</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::IsPVContributor</td>
+        <td>D</td>
+        <td>isPVContributor</td>
+        <td>bool</td>
+        <td>Run 3: Has this track contributed to the collision vertex fit</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::TPCNClsFound</td>
+        <td>D</td>
+        <td>tpcNClsFound</td>
+        <td>int16_t</td>
+        <td>Number of found TPC clusters</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::TPCNClsCrossedRows</td>
+        <td>D</td>
+        <td>tpcNClsCrossedRows</td>
+        <td>int16_t</td>
+        <td>Number of crossed TPC Rows</td>
+      </tr>
+      <tr>
+        <td>o2::aod::reducedtrack::HasITS</td>
+        <td>D</td>
+        <td>hasITS</td>
+        <td>bool</td>
+        <td>Flag to check if track has a ITS match</td>
+      </tr>
+      <tr>
+        <td>o2::aod::reducedtrack::HasTRD</td>
+        <td>D</td>
+        <td>hasTRD</td>
+        <td>bool</td>
+        <td>Flag to check if track has a TRD match</td>
+      </tr>
+      <tr>
+        <td>o2::aod::reducedtrack::HasTOF</td>
+        <td>D</td>
+        <td>hasTOF</td>
+        <td>bool</td>
+        <td>Flag to check if track has a TOF measurement</td>
+      </tr>
+      <tr>
+        <td>o2::aod::reducedtrack::HasTPC</td>
+        <td>D</td>
+        <td>hasTPC</td>
+        <td>bool</td>
+        <td>Flag to check if track has a TPC match</td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::ReducedTracksBarrelCov</button>
+  <div class="panel">
+    <div>
+
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGDQ/DataModel/ReducedInfoTables.h" target="_blank">PWGDQ/DataModel/ReducedInfoTables.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::ReducedTrackBarrelCov = o2::aod::ReducedTracksBarrelCov::iterator</li>
+      </ul>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::track::CYY</td>
+        <td>E</td>
+        <td>cYY</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::CZY</td>
+        <td>E</td>
+        <td>cZY</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::CZZ</td>
+        <td>E</td>
+        <td>cZZ</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::CSnpY</td>
+        <td>E</td>
+        <td>cSnpY</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::CSnpZ</td>
+        <td>E</td>
+        <td>cSnpZ</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::CSnpSnp</td>
+        <td>E</td>
+        <td>cSnpSnp</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::CTglY</td>
+        <td>E</td>
+        <td>cTglY</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::CTglZ</td>
+        <td>E</td>
+        <td>cTglZ</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::CTglSnp</td>
+        <td>E</td>
+        <td>cTglSnp</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::CTglTgl</td>
+        <td>E</td>
+        <td>cTglTgl</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::C1PtY</td>
+        <td>E</td>
+        <td>c1PtY</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::C1PtZ</td>
+        <td>E</td>
+        <td>c1PtZ</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::C1PtSnp</td>
+        <td>E</td>
+        <td>c1PtSnp</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::C1PtTgl</td>
+        <td>E</td>
+        <td>c1PtTgl</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::C1Pt21Pt2</td>
+        <td>E</td>
+        <td>c1Pt21Pt2</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::ReducedTracksBarrelPID</button>
+  <div class="panel">
+    <div>
+
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGDQ/DataModel/ReducedInfoTables.h" target="_blank">PWGDQ/DataModel/ReducedInfoTables.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::ReducedTrackBarrelPID = o2::aod::ReducedTracksBarrelPID::iterator</li>
+      </ul>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::track::TPCSignal</td>
+        <td></td>
+        <td>tpcSignal</td>
+        <td>float</td>
+        <td>dE/dx signal in the TPC</td>
+      </tr>
+      <tr>
+        <td>o2::aod::pidtpc::TPCNSigmaEl</td>
+        <td></td>
+        <td>tpcNSigmaEl</td>
+        <td>float</td>
+        <td>Nsigma separation with the TPC detector for electron</td>
+      </tr>
+      <tr>
+        <td>o2::aod::pidtpc::TPCNSigmaMu</td>
+        <td></td>
+        <td>tpcNSigmaMu</td>
+        <td>float</td>
+        <td>Nsigma separation with the TPC detector for muon</td>
+      </tr>
+      <tr>
+        <td>o2::aod::pidtpc::TPCNSigmaPi</td>
+        <td></td>
+        <td>tpcNSigmaPi</td>
+        <td>float</td>
+        <td>Nsigma separation with the TPC detector for pion</td>
+      </tr>
+      <tr>
+        <td>o2::aod::pidtpc::TPCNSigmaKa</td>
+        <td></td>
+        <td>tpcNSigmaKa</td>
+        <td>float</td>
+        <td>Nsigma separation with the TPC detector for kaon</td>
+      </tr>
+      <tr>
+        <td>o2::aod::pidtpc::TPCNSigmaPr</td>
+        <td></td>
+        <td>tpcNSigmaPr</td>
+        <td>float</td>
+        <td>Nsigma separation with the TPC detector for proton</td>
+      </tr>
+      <tr>
+        <td>o2::aod::pidtofbeta::Beta</td>
+        <td></td>
+        <td>beta</td>
+        <td>float</td>
+        <td>TOF beta</td>
+      </tr>
+      <tr>
+        <td>o2::aod::pidtof::TOFNSigmaEl</td>
+        <td></td>
+        <td>tofNSigmaEl</td>
+        <td>float</td>
+        <td>Nsigma separation with the TOF detector for electron</td>
+      </tr>
+      <tr>
+        <td>o2::aod::pidtof::TOFNSigmaMu</td>
+        <td></td>
+        <td>tofNSigmaMu</td>
+        <td>float</td>
+        <td>Nsigma separation with the TOF detector for muon</td>
+      </tr>
+      <tr>
+        <td>o2::aod::pidtof::TOFNSigmaPi</td>
+        <td></td>
+        <td>tofNSigmaPi</td>
+        <td>float</td>
+        <td>Nsigma separation with the TOF detector for pion</td>
+      </tr>
+      <tr>
+        <td>o2::aod::pidtof::TOFNSigmaKa</td>
+        <td></td>
+        <td>tofNSigmaKa</td>
+        <td>float</td>
+        <td>Nsigma separation with the TOF detector for kaon</td>
+      </tr>
+      <tr>
+        <td>o2::aod::pidtof::TOFNSigmaPr</td>
+        <td></td>
+        <td>tofNSigmaPr</td>
+        <td>float</td>
+        <td>Nsigma separation with the TOF detector for proton</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::TRDSignal</td>
+        <td></td>
+        <td>trdSignal</td>
+        <td>float</td>
+        <td>PID signal in the TRD</td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::ReducedTracksBarrelInfo</button>
+  <div class="panel">
+    <div>
+
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGDQ/DataModel/ReducedInfoTables.h" target="_blank">PWGDQ/DataModel/ReducedInfoTables.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::ReducedTrackBarrelInfo = o2::aod::ReducedTracksBarrelInfo::iterator</li>
+      </ul>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::reducedtrack::CollisionId</td>
+        <td>I</td>
+        <td>collisionId</td>
+        <td>int32</td>
+        <td>Pointer into Collisions</td>
+      </tr>
+      <tr>
+        <td>o2::aod::&zwnj;collision::PosX</td>
+        <td></td>
+        <td>posX</td>
+        <td>float</td>
+        <td>X Vertex position in cm</td>
+      </tr>
+      <tr>
+        <td>o2::aod::&zwnj;collision::PosY</td>
+        <td></td>
+        <td>posY</td>
+        <td>float</td>
+        <td>Y Vertex position in cm</td>
+      </tr>
+      <tr>
+        <td>o2::aod::&zwnj;collision::PosZ</td>
+        <td></td>
+        <td>posZ</td>
+        <td>float</td>
+        <td>Z Vertex position in cm</td>
+      </tr>
+      <tr>
+        <td>o2::aod::reducedtrack::TrackId</td>
+        <td>I</td>
+        <td>trackId</td>
+        <td>int32</td>
+        <td>Pointer into Tracks</td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::ReducedMCTracks</button>
+  <div class="panel">
+    <div>
+       MC track information (on disk)
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGDQ/DataModel/ReducedInfoTables.h" target="_blank">PWGDQ/DataModel/ReducedInfoTables.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::ReducedMCTrack = o2::aod::ReducedMCTracks::iterator</li>
+      </ul>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::soa::Index</td>
+        <td>GI</td>
+        <td>globalIndex</td>
+        <td>int64_t</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::reducedtrackMC::ReducedMCEventId</td>
+        <td>I</td>
+        <td>reducedMCeventId</td>
+        <td>int32</td>
+        <td>Pointer into ReducedMCEvents</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::PdgCode</td>
+        <td></td>
+        <td>pdgCode</td>
+        <td>int</td>
+        <td>PDG code</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::StatusCode</td>
+        <td></td>
+        <td>statusCode</td>
+        <td>int</td>
+        <td>Generators status code or physics process. Do not use directly. Use dynamic columns getGenStatusCode() or getProcess()</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::Flags</td>
+        <td></td>
+        <td>flags</td>
+        <td>uint8_t</td>
+        <td>ALICE specific flags, see MCParticleFlags. Do not use directly. Use the dynamic columns, e.g. producedByGenerator()</td>
+      </tr>
+      <tr>
+        <td>o2::aod::reducedtrackMC::MothersIds</td>
+        <td>SAI</td>
+        <td>mothersIds</td>
+        <td></td>
+        <td>Mother tracks (possible empty) array. Iterate over mcParticle.mothers_as<aod::McParticles>())</td>
+      </tr>
+      <tr>
+        <td>o2::aod::reducedtrackMC::DaughtersIdSlice</td>
+        <td>SSLI</td>
+        <td>daughtersIds</td>
+        <td>int32_t</td>
+        <td>Daughter tracks (possibly empty) slice. Check for non-zero with mcParticle.has_daughters(). Iterate over mcParticle.daughters_as<aod::McParticles>())</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::Weight</td>
+        <td></td>
+        <td>weight</td>
+        <td>float</td>
+        <td>MC weight</td>
+      </tr>
+      <tr>
+        <td>o2::aod::reducedtrackMC::Pt</td>
+        <td></td>
+        <td>pt</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::reducedtrackMC::Eta</td>
+        <td></td>
+        <td>eta</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::reducedtrackMC::Phi</td>
+        <td></td>
+        <td>phi</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::reducedtrackMC::E</td>
+        <td></td>
+        <td>e</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::Vx</td>
+        <td></td>
+        <td>vx</td>
+        <td>float</td>
+        <td>X production vertex in cm</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::Vy</td>
+        <td></td>
+        <td>vy</td>
+        <td>float</td>
+        <td>Y production vertex in cm</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::Vz</td>
+        <td></td>
+        <td>vz</td>
+        <td>float</td>
+        <td>Z production vertex in cm</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::Vt</td>
+        <td></td>
+        <td>vt</td>
+        <td>float</td>
+        <td>Production time</td>
+      </tr>
+      <tr>
+        <td>o2::aod::reducedtrackMC::McReducedFlags</td>
+        <td></td>
+        <td>mcReducedFlags</td>
+        <td>uint16_t</td>
+        <td>Flags to hold compressed MC selection information</td>
+      </tr>
+      <tr>
+        <td>o2::aod::reducedtrackMC::Px</td>
+        <td>D</td>
+        <td>px</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::reducedtrackMC::Py</td>
+        <td>D</td>
+        <td>py</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::reducedtrackMC::Pz</td>
+        <td>D</td>
+        <td>pz</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::reducedtrackMC::P</td>
+        <td>D</td>
+        <td>p</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::reducedtrackMC::Y</td>
+        <td>D</td>
+        <td>y</td>
+        <td>float</td>
+        <td>Particle rapidity</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::ProducedByGenerator</td>
+        <td>D</td>
+        <td>producedByGenerator</td>
+        <td>bool</td>
+        <td>True if particle produced by the generator (==TMCProcess::kPrimary); False if by the transport code</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::FromBackgroundEvent</td>
+        <td>D</td>
+        <td>fromBackgroundEvent</td>
+        <td>bool</td>
+        <td>Particle from background event</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::GetGenStatusCode</td>
+        <td>D</td>
+        <td>getGenStatusCode</td>
+        <td>int</td>
+        <td>The native status code put by the generator, or -1 if a particle produced during transport</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::GetProcess</td>
+        <td>D</td>
+        <td>getProcess</td>
+        <td>int</td>
+        <td>The VMC physics code (as int) that generated this particle (see header TMCProcess.h in ROOT)</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::IsPhysicalPrimary</td>
+        <td>D</td>
+        <td>isPhysicalPrimary</td>
+        <td>bool</td>
+        <td>True if particle is considered a physical primary according to the ALICE definition</td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::ReducedTracksBarrelLabels</button>
+  <div class="panel">
+    <div>
+
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGDQ/DataModel/ReducedInfoTables.h" target="_blank">PWGDQ/DataModel/ReducedInfoTables.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::ReducedTrackBarrelLabel = o2::aod::ReducedTracksBarrelLabels::iterator</li>
+      </ul>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::reducedbarreltracklabel::ReducedMCTrackId</td>
+        <td>I</td>
+        <td>reducedMCTrackId</td>
+        <td>int32</td>
+        <td>Pointer into ReducedMCTracks</td>
+      </tr>
+      <tr>
+        <td>o2::aod::reducedbarreltracklabel::McMask</td>
+        <td></td>
+        <td>mcMask</td>
+        <td>uint16_t</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::reducedtrackMC::McReducedFlags</td>
+        <td></td>
+        <td>mcReducedFlags</td>
+        <td>uint16_t</td>
+        <td>Flags to hold compressed MC selection information</td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::ReducedMFTs</button>
+  <div class="panel">
+    <div>
+
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGDQ/DataModel/ReducedInfoTables.h" target="_blank">PWGDQ/DataModel/ReducedInfoTables.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::ReducedMFT = o2::aod::ReducedMFTs::iterator</li>
+      </ul>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::soa::Index</td>
+        <td>GI</td>
+        <td>globalIndex</td>
+        <td>int64_t</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::reducedmft::ReducedEventId</td>
+        <td>I</td>
+        <td>reducedeventId</td>
+        <td>int32</td>
+        <td>Pointer into ReducedEvents</td>
+      </tr>
+      <tr>
+        <td>o2::aod::reducedmft::FilteringFlags</td>
+        <td></td>
+        <td>filteringFlags</td>
+        <td>uint8_t</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::reducedmft::Pt</td>
+        <td></td>
+        <td>pt</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::reducedmft::Eta</td>
+        <td></td>
+        <td>eta</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::reducedmft::Phi</td>
+        <td></td>
+        <td>phi</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::ReducedMFTsExtra</button>
+  <div class="panel">
+    <div>
+
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGDQ/DataModel/ReducedInfoTables.h" target="_blank">PWGDQ/DataModel/ReducedInfoTables.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::ReducedMFTExtra = o2::aod::ReducedMFTsExtra::iterator</li>
+      </ul>
     </div>
     <table class=DataModel>
       <tr>
@@ -13053,46 +13582,88 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGDQ
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::reducedevent::NTPCpileupContribA</td>
+        <td>o2::aod::reducedevent::NTPCoccupContribLongA</td>
         <td></td>
-        <td>nTPCpileupContribA</td>
+        <td>nTPCoccupContribLongA</td>
         <td>int</td>
-        <td>Number of TPC pileup tracks on A side</td>
+        <td>TPC pileup occupancy on A side (long time range)</td>
       </tr>
       <tr>
-        <td>o2::aod::reducedevent::NTPCpileupContribC</td>
+        <td>o2::aod::reducedevent::NTPCoccupContribLongC</td>
         <td></td>
-        <td>nTPCpileupContribC</td>
+        <td>nTPCoccupContribLongC</td>
         <td>int</td>
-        <td>Number of TPC pileup tracks on C side</td>
+        <td>TPC pileup occupancy on C side (long time range)</td>
       </tr>
       <tr>
-        <td>o2::aod::reducedevent::NTPCpileupZA</td>
+        <td>o2::aod::reducedevent::NTPCoccupMeanTimeLongA</td>
         <td></td>
-        <td>nTPCpileupZA</td>
+        <td>nTPCoccupMeanTimeLongA</td>
         <td>float</td>
-        <td>Median Z position of pileup tracks on A side</td>
+        <td>TPC pileup mean time on A side (long time range)</td>
       </tr>
       <tr>
-        <td>o2::aod::reducedevent::NTPCpileupZC</td>
+        <td>o2::aod::reducedevent::NTPCoccupMeanTimeLongC</td>
         <td></td>
-        <td>nTPCpileupZC</td>
+        <td>nTPCoccupMeanTimeLongC</td>
         <td>float</td>
-        <td>Median Z position of pileup tracks on C side</td>
+        <td>TPC pileup mean time on C side (long time range)</td>
       </tr>
       <tr>
-        <td>o2::aod::reducedevent::NTPCtracksInPast</td>
+        <td>o2::aod::reducedevent::NTPCoccupMedianTimeLongA</td>
         <td></td>
-        <td>nTPCtracksInPast</td>
-        <td>int</td>
-        <td>Number of TPC tracks in the past events (configurable, but e.g. one drift time)</td>
+        <td>nTPCoccupMedianTimeLongA</td>
+        <td>float</td>
+        <td>TPC pileup median time on A side (long time range)</td>
       </tr>
       <tr>
-        <td>o2::aod::reducedevent::NTPCtracksInFuture</td>
+        <td>o2::aod::reducedevent::NTPCoccupMedianTimeLongC</td>
         <td></td>
-        <td>nTPCtracksInFuture</td>
+        <td>nTPCoccupMedianTimeLongC</td>
+        <td>float</td>
+        <td>TPC pileup median time on C side (long time range)</td>
+      </tr>
+      <tr>
+        <td>o2::aod::reducedevent::NTPCoccupContribShortA</td>
+        <td></td>
+        <td>nTPCoccupContribShortA</td>
         <td>int</td>
-        <td>Number of TPC tracks in the future events (configurable, but e.g. one drift time)</td>
+        <td>TPC pileup occupancy on A side (short time range)</td>
+      </tr>
+      <tr>
+        <td>o2::aod::reducedevent::NTPCoccupContribShortC</td>
+        <td></td>
+        <td>nTPCoccupContribShortC</td>
+        <td>int</td>
+        <td>TPC pileup occupancy on C side (short time range)</td>
+      </tr>
+      <tr>
+        <td>o2::aod::reducedevent::NTPCoccupMeanTimeShortA</td>
+        <td></td>
+        <td>nTPCoccupMeanTimeShortA</td>
+        <td>float</td>
+        <td>TPC pileup mean time on A side (short time range)</td>
+      </tr>
+      <tr>
+        <td>o2::aod::reducedevent::NTPCoccupMeanTimeShortC</td>
+        <td></td>
+        <td>nTPCoccupMeanTimeShortC</td>
+        <td>float</td>
+        <td>TPC pileup mean time on C side (short time range)</td>
+      </tr>
+      <tr>
+        <td>o2::aod::reducedevent::NTPCoccupMedianTimeShortA</td>
+        <td></td>
+        <td>nTPCoccupMedianTimeShortA</td>
+        <td>float</td>
+        <td>TPC pileup median time on A side (short time range)</td>
+      </tr>
+      <tr>
+        <td>o2::aod::reducedevent::NTPCoccupMedianTimeShortC</td>
+        <td></td>
+        <td>nTPCoccupMedianTimeShortC</td>
+        <td>float</td>
+        <td>TPC pileup median time on C side (short time range)</td>
       </tr>
     </table>
   </div>
@@ -14022,6 +14593,11 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGDQ
     </div>
     <div>
       Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGDQ/DataModel/ReducedInfoTables.h" target="_blank">PWGDQ/DataModel/ReducedInfoTables.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::ReducedMFTExtra = o2::aod::ReducedMFTsExtra::iterator</li>
+      </ul>
     </div>
     <table class=DataModel>
       <tr>
@@ -17031,6 +17607,13 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGEM
         <td>collisionId</td>
         <td>int</td>
         <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::emccluster::Definition</td>
+        <td></td>
+        <td>definition</td>
+        <td>int</td>
+        <td>cluster definition, see EMCALClusterDefinition.h</td>
       </tr>
       <tr>
         <td>o2::aod::skimmedcluster::E</td>
@@ -20066,12 +20649,6 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGEM
       </tr>
     </table>
   </div>
-
-</div>
-
-###  o2-analysis-em-dielectron-ml
-Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGEM/Dilepton/TableProducer//dielectronMl.cxx" target="_blank">dielectronMl.cxx</a>
-<div>
 
 </div>
 
@@ -23215,6 +23792,13 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <td>int</td>
         <td>pdg of the first B-hadron mother particle (only in case of non-prompt)</td>
       </tr>
+      <tr>
+        <td>o2::aod::hf_cand::NTracksDecayed</td>
+        <td></td>
+        <td>nTracksDecayed</td>
+        <td>int8_t</td>
+        <td>number of tracks matched with kinked decay topology</td>
+      </tr>
     </table>
   </div>
 
@@ -23844,6 +24428,13 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <td>pdgBhadMotherPart</td>
         <td>int</td>
         <td>pdg of the first B-hadron mother particle (only in case of non-prompt)</td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_cand::NTracksDecayed</td>
+        <td></td>
+        <td>nTracksDecayed</td>
+        <td>int8_t</td>
+        <td>number of tracks matched with kinked decay topology</td>
       </tr>
     </table>
   </div>
@@ -24851,11 +25442,6 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
     <div>
       Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/DataModel/CandidateReconstructionTables.h" target="_blank">PWGHF/DataModel/CandidateReconstructionTables.h</a>
     </div>
-    <div>Is used in:
-      <ul>
-        <li>o2::aod::CandidatesBplusMCD = soa::Join<o2::aod::HfCandBplus, o2::aod::HfSelBplusToD0Pi, o2::aod::HfCandBplusMcRec></li>
-      </ul>
-    </div>
     <table class=DataModel>
       <tr>
         <th>Name</th>
@@ -24888,11 +25474,6 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
     </div>
     <div>
       Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/DataModel/CandidateReconstructionTables.h" target="_blank">PWGHF/DataModel/CandidateReconstructionTables.h</a>
-    </div>
-    <div>Is used in:
-      <ul>
-        <li>o2::aod::CandidatesBplusMCP = soa::Join<o2::aod::JMcParticles, o2::aod::HfCandBplusMcGen></li>
-      </ul>
     </div>
     <table class=DataModel>
       <tr>
@@ -26113,6 +26694,13 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <td>int</td>
         <td>pdg of the first B-hadron mother particle (only in case of non-prompt)</td>
       </tr>
+      <tr>
+        <td>o2::aod::hf_cand::NTracksDecayed</td>
+        <td></td>
+        <td>nTracksDecayed</td>
+        <td>int8_t</td>
+        <td>number of tracks matched with kinked decay topology</td>
+      </tr>
     </table>
   </div>
 
@@ -26951,6 +27539,13 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <td>pdgBhadMotherPart</td>
         <td>int</td>
         <td>pdg of the first B-hadron mother particle (only in case of non-prompt)</td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_cand::NTracksDecayed</td>
+        <td></td>
+        <td>nTracksDecayed</td>
+        <td>int8_t</td>
+        <td>number of tracks matched with kinked decay topology</td>
       </tr>
     </table>
   </div>
@@ -30980,9 +31575,9 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <td>sum of (non-weighted) distances of the secondary vertex to its prongs</td>
       </tr>
       <tr>
-        <td>o2::aod::hf_cand_xic_to_xi_pi_pi::InvMassXic</td>
+        <td>o2::aod::hf_cand_xic_to_xi_pi_pi::InvMassXicPlus</td>
         <td></td>
-        <td>invMassXic</td>
+        <td>invMassXicPlus</td>
         <td>float</td>
         <td></td>
       </tr>
@@ -31099,44 +31694,23 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::hf_cand_xic_to_xi_pi_pi::XDecayVtxXi</td>
+        <td>o2::aod::hf_cand_xic_to_xi_pi_pi::PBachelorPi</td>
         <td></td>
-        <td>xDecayVtxXi</td>
+        <td>pBachelorPi</td>
         <td>float</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::hf_cand_xic_to_xi_pi_pi::YDecayVtxXi</td>
+        <td>o2::aod::hf_cand_xic_to_xi_pi_pi::PPiFromLambda</td>
         <td></td>
-        <td>yDecayVtxXi</td>
+        <td>pPiFromLambda</td>
         <td>float</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::hf_cand_xic_to_xi_pi_pi::ZDecayVtxXi</td>
+        <td>o2::aod::hf_cand_xic_to_xi_pi_pi::PPrFrmoLambda</td>
         <td></td>
-        <td>zDecayVtxXi</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::hf_cand_xic_to_xi_pi_pi::XDecayVtxLambda</td>
-        <td></td>
-        <td>xDecayVtxLambda</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::hf_cand_xic_to_xi_pi_pi::YDecayVtxLambda</td>
-        <td></td>
-        <td>yDecayVtxLambda</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::hf_cand_xic_to_xi_pi_pi::ZDecayVtxLambda</td>
-        <td></td>
-        <td>zDecayVtxLambda</td>
+        <td>pPrFromLambda</td>
         <td>float</td>
         <td></td>
       </tr>
@@ -31169,6 +31743,27 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <td></td>
       </tr>
       <tr>
+        <td>o2::aod::hf_cand_xic_to_xi_pi_pi::CosPaLambdaToXi</td>
+        <td></td>
+        <td>cosPaLambdaToXi</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_cand_xic_to_xi_pi_pi::CosPaXYLambdaToXi</td>
+        <td></td>
+        <td>cosPaXYLambdaToXi</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_cand_xic_to_xi_pi_pi::InvMassXi</td>
+        <td></td>
+        <td>invMassXi</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
         <td>o2::aod::hf_cand_xic_to_xi_pi_pi::InvMassXiPi0</td>
         <td></td>
         <td>invMassXiPi0</td>
@@ -31183,17 +31778,80 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::/hf_cand::RSecondaryVertex</td>
-        <td>GI</td>
+        <td>o2::aod::hf_cand_xic_to_xi_pi_pi::NSigTpcPiFromXicPlus0</td>
         <td></td>
-        <td>?</td>
+        <td>nSigTpcPiFromXicPlus0</td>
+        <td>float</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::hf_cand::DecayLength</td>
-        <td>D</td>
-        <td>decayLength</td>
+        <td>o2::aod::hf_cand_xic_to_xi_pi_pi::NSigTpcPiFromXicPlus1</td>
+        <td></td>
+        <td>nSigTpcPiFromXicPlus1</td>
         <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_cand_xic_to_xi_pi_pi::NSigTpcBachelorPi</td>
+        <td></td>
+        <td>nSigTpcBachelorPi</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_cand_xic_to_xi_pi_pi::NSigTpcPiFromLambda</td>
+        <td></td>
+        <td>nSigTpcPiFromLambda</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_cand_xic_to_xi_pi_pi::NSigTpcPrFromLambda</td>
+        <td></td>
+        <td>nSigTpcPrFromLambda</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_cand_xic_to_xi_pi_pi::NSigTofPiFromXicPlus0</td>
+        <td></td>
+        <td>nSigTofPiFromXicPlus0</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_cand_xic_to_xi_pi_pi::NSigTofPiFromXicPlus1</td>
+        <td></td>
+        <td>nSigTofPiFromXicPlus1</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_cand_xic_to_xi_pi_pi::NSigTofBachelorPi</td>
+        <td></td>
+        <td>nSigTofBachelorPi</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_cand_xic_to_xi_pi_pi::NSigTofPiFromLambda</td>
+        <td></td>
+        <td>nSigTofPiFromLambda</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_cand_xic_to_xi_pi_pi::NSigTofPrFromLambda</td>
+        <td></td>
+        <td>nSigTofPrFromLambda</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::/hf_cand::DecayLength</td>
+        <td>GI</td>
+        <td></td>
+        <td>?</td>
         <td></td>
       </tr>
       <tr>
@@ -31239,16 +31897,37 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::/hf_cand::PtProng0</td>
+        <td>o2::aod::/hf_cand_xic_to_xi_pi_pi::PProng0</td>
         <td>GI</td>
         <td></td>
         <td>?</td>
         <td></td>
       </tr>
       <tr>
+        <td>o2::aod::hf_cand::PtProng0</td>
+        <td>D</td>
+        <td>ptProng0</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_cand_xic_to_xi_pi_pi::PProng1</td>
+        <td>D</td>
+        <td>pProng1</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
         <td>o2::aod::hf_cand::PtProng1</td>
         <td>D</td>
         <td>ptProng1</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_cand_xic_to_xi_pi_pi::PProng2</td>
+        <td>D</td>
+        <td>pProng2</td>
         <td>float</td>
         <td></td>
       </tr>
@@ -31336,13 +32015,6 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <td>float</td>
         <td></td>
       </tr>
-      <tr>
-        <td>o2::aod::hf_cand::E</td>
-        <td>D</td>
-        <td>e</td>
-        <td>float</td>
-        <td></td>
-      </tr>
     </table>
   </div>
 
@@ -31377,9 +32049,23 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <td></td>
       </tr>
       <tr>
+        <td>o2::aod::hf_cand_xic_to_xi_pi_pi::Chi2TopoXicPlusToPVBeforeConstraint</td>
+        <td></td>
+        <td>chi2TopoXicPlusToPVBeforeConstraint</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
         <td>o2::aod::hf_cand_xic_to_xi_pi_pi::Chi2TopoXicPlusToPV</td>
         <td></td>
         <td>chi2TopoXicPlusToPV</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_cand_xic_to_xi_pi_pi::Chi2TopoXiToXicPlusBeforeConstraint</td>
+        <td></td>
+        <td>chi2TopoXiToXicPlusBeforeConstraint</td>
         <td>float</td>
         <td></td>
       </tr>
@@ -32044,12 +32730,6 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
     <div>
       Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/DataModel/CandidateSelectionTables.h" target="_blank">PWGHF/DataModel/CandidateSelectionTables.h</a>
     </div>
-    <div>Is used in:
-      <ul>
-        <li>o2::aod::CandidatesBplusData = soa::Join<o2::aod::HfCandBplus, o2::aod::HfSelBplusToD0Pi></li>
-        <li>o2::aod::CandidatesBplusMCD = soa::Join<o2::aod::HfCandBplus, o2::aod::HfSelBplusToD0Pi, o2::aod::HfCandBplusMcRec></li>
-      </ul>
-    </div>
     <table class=DataModel>
       <tr>
         <th>Name</th>
@@ -32064,6 +32744,32 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <td>isSelBplusToD0Pi</td>
         <td>int</td>
         <td>selection flag on B+ candidate</td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::HfMlBplusToD0Pi</button>
+  <div class="panel">
+    <div>
+
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/DataModel/CandidateSelectionTables.h" target="_blank">PWGHF/DataModel/CandidateSelectionTables.h</a>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_sel_candidate_bplus::MlProbBplusToD0Pi</td>
+        <td></td>
+        <td>mlProbBplusToD0Pi</td>
+        <td>float</td>
+        <td>ML score of B+ candidate for signal class</td>
       </tr>
     </table>
   </div>
@@ -33153,6 +33859,32 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
     </table>
   </div>
 
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::HfMlXicToXiPiPi</button>
+  <div class="panel">
+    <div>
+
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/DataModel/CandidateSelectionTables.h" target="_blank">PWGHF/DataModel/CandidateSelectionTables.h</a>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_sel_candidate_xic::MlProbXicToXiPiPi</td>
+        <td></td>
+        <td>mlProbXicToXiPiPi</td>
+        <td>std::vector&lt;float&gt;</td>
+        <td></td>
+      </tr>
+    </table>
+  </div>
+
 </div>
 
 ###  o2-analysis-hf-candidate-selector-xicc-to-p-k-pi-pi
@@ -33184,6 +33916,70 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
       </tr>
     </table>
   </div>
+
+</div>
+
+###  o2-analysis-hf-converter-dstar-indices
+Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer//converterDstarIndices.cxx" target="_blank">converterDstarIndices.cxx</a>
+<div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::HfDstars_001</button>
+  <div class="panel">
+    <div>
+       D* -> D0pi candidates (Run 3 format)
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/DataModel/CandidateReconstructionTables.h" target="_blank">PWGHF/DataModel/CandidateReconstructionTables.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::HfDstars = o2::aod::HfDstars_001</li>
+      </ul>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::soa::Index</td>
+        <td>GI</td>
+        <td>globalIndex</td>
+        <td>int64_t</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_track_index::CollisionId</td>
+        <td>I</td>
+        <td>collisionId</td>
+        <td>int32</td>
+        <td>Collision index</td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_track_index::Prong0Id</td>
+        <td>I</td>
+        <td>prong0Id</td>
+        <td>int</td>
+        <td>Index to first prong</td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_track_index::ProngD0Id</td>
+        <td>I</td>
+        <td>prongD0Id</td>
+        <td>int</td>
+        <td>Index to a D0 prong</td>
+      </tr>
+    </table>
+  </div>
+
+</div>
+
+###  o2-analysis-hf-derived-data-creator-bplus-to-d0-pi
+Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/TableProducer//derivedDataCreatorBplusToD0Pi.cxx" target="_blank">derivedDataCreatorBplusToD0Pi.cxx</a>
+<div>
 
 </div>
 
@@ -41706,6 +42502,76 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <th>Comment</th>
       </tr>
       <tr>
+        <td>o2::aod::&zwnj;collision::PosX</td>
+        <td></td>
+        <td>posX</td>
+        <td>float</td>
+        <td>X Vertex position in cm</td>
+      </tr>
+      <tr>
+        <td>o2::aod::&zwnj;collision::PosY</td>
+        <td></td>
+        <td>posY</td>
+        <td>float</td>
+        <td>Y Vertex position in cm</td>
+      </tr>
+      <tr>
+        <td>o2::aod::&zwnj;collision::PosZ</td>
+        <td></td>
+        <td>posZ</td>
+        <td>float</td>
+        <td>Z Vertex position in cm</td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_cand::XSecondaryVertex</td>
+        <td></td>
+        <td>xSecondaryVertex</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_cand::YSecondaryVertex</td>
+        <td></td>
+        <td>ySecondaryVertex</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_cand::ZSecondaryVertex</td>
+        <td></td>
+        <td>zSecondaryVertex</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_cand::ErrorDecayLength</td>
+        <td></td>
+        <td>errorDecayLength</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_cand::ErrorDecayLengthXY</td>
+        <td></td>
+        <td>errorDecayLengthXY</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_cand::Chi2PCA</td>
+        <td></td>
+        <td>chi2PCA</td>
+        <td>float</td>
+        <td>sum of (non-weighted) distances of the secondary vertex to its prongs</td>
+      </tr>
+      <tr>
+        <td>o2::aod::full::ImpactParameterXY</td>
+        <td></td>
+        <td>impactParameterXY</td>
+        <td>float</td>
+        <td>Transverse impact parameter of candidate (cm)</td>
+      </tr>
+      <tr>
         <td>o2::aod::full::RSecondaryVertex</td>
         <td></td>
         <td>rSecondaryVertex</td>
@@ -41739,13 +42605,6 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <td>decayLengthXYNormalised</td>
         <td>float</td>
         <td>Normalised transverse decay length of candidate</td>
-      </tr>
-      <tr>
-        <td>o2::aod::hf_cand::Chi2PCA</td>
-        <td></td>
-        <td>chi2PCA</td>
-        <td>float</td>
-        <td>sum of (non-weighted) distances of the secondary vertex to its prongs</td>
       </tr>
       <tr>
         <td>o2::aod::full::ImpactParameterNormalised0</td>
@@ -41788,6 +42647,27 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <td>pProng1</td>
         <td>float</td>
         <td>Momentum of prong1 (in GeV/c)</td>
+      </tr>
+      <tr>
+        <td>o2::aod::full::SignTrk0</td>
+        <td></td>
+        <td>signTrk0</td>
+        <td>int16_t</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::full::NSigTOFTrk0Pi</td>
+        <td></td>
+        <td>nSigTOFTrk0Pi</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::full::NSigTPCTrk0Pi</td>
+        <td></td>
+        <td>nSigTPCTrk0Pi</td>
+        <td>float</td>
+        <td></td>
       </tr>
       <tr>
         <td>o2::aod::hf_cand::PxProng0</td>
@@ -41860,128 +42740,86 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::full::NSigTOFTrk0Pi</td>
+        <td>o2::aod::full::LcNSigTPCPi0</td>
         <td></td>
-        <td>nsigTOFTrk0Pi</td>
+        <td>lcNSigTPCPi0</td>
         <td>float</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::full::NSigRICHTrk0Pi</td>
+        <td>o2::aod::full::LcNSigTPCK0</td>
         <td></td>
-        <td>nsigRICHTrk0Pi</td>
+        <td>lcNSigTPCK0</td>
         <td>float</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::full::NSigRICHTrk1Pi</td>
+        <td>o2::aod::full::LcNSigTPCPr0</td>
         <td></td>
-        <td>nSigRICHTrk1Pi</td>
+        <td>lcNSigTPCPr0</td>
         <td>float</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::full::NSigRICHTrk1Pr</td>
+        <td>o2::aod::full::LcNSigTPCPi1</td>
         <td></td>
-        <td>nSigRICHTrk1Pr</td>
+        <td>lcNSigTPCPi1</td>
         <td>float</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::full::NSigRICHTrk2Ka</td>
+        <td>o2::aod::full::LcNSigTPCK1</td>
         <td></td>
-        <td>nSigRICHTrk2Ka</td>
+        <td>lcNSigTPCK1</td>
         <td>float</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::full::NSigRICHTrk3Pi</td>
+        <td>o2::aod::full::LcNSigTPCPr1</td>
         <td></td>
-        <td>nSigRICHTrk3Pi</td>
+        <td>lcNSigTPCPr1</td>
         <td>float</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::full::NSigRICHTrk3Pr</td>
+        <td>o2::aod::full::LcNSigTPCPi2</td>
         <td></td>
-        <td>nSigRICHTrk3Pr</td>
+        <td>lcNSigTPCPi2</td>
         <td>float</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::full::NSigfRICHTrk0Pi</td>
+        <td>o2::aod::full::LcNSigTPCK2</td>
         <td></td>
-        <td>nsigfRICHTrk0Pi</td>
+        <td>lcNSigTPCK2</td>
         <td>float</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::full::NSigfRICHTrk1Pi</td>
+        <td>o2::aod::full::LcNSigTPCPr2</td>
         <td></td>
-        <td>nSigfRICHTrk1Pi</td>
+        <td>lcNSigTPCPr2</td>
         <td>float</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::full::NSigfRICHTrk1Pr</td>
+        <td>o2::aod::full::LcNSigTOFPr0</td>
         <td></td>
-        <td>nSigfRICHTrk1Pr</td>
+        <td>lcNSigTOFPr0</td>
         <td>float</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::full::NSigfRICHTrk2Ka</td>
+        <td>o2::aod::full::LcNSigTOFK1</td>
         <td></td>
-        <td>nSigfRICHTrk2Ka</td>
+        <td>lcNSigTOFK1</td>
         <td>float</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::full::NSigfRICHTrk3Pi</td>
+        <td>o2::aod::full::LcNSigTOFPi2</td>
         <td></td>
-        <td>nSigfRICHTrk3Pi</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::full::NSigfRICHTrk3Pr</td>
-        <td></td>
-        <td>nSigfRICHTrk3Pr</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::full::NSigTOFTrk1Pi</td>
-        <td></td>
-        <td>nSigTOFrk1Pi</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::full::NSigTOFTrk1Pr</td>
-        <td></td>
-        <td>nSigTOFrk1Pr</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::full::NSigTOFTrk2Ka</td>
-        <td></td>
-        <td>nSigTOFrk2Ka</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::full::NSigTOFTrk3Pi</td>
-        <td></td>
-        <td>nSigTOFrk3Pi</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::full::NSigTOFTrk3Pr</td>
-        <td></td>
-        <td>nSigTOFrk3Pr</td>
+        <td>lcNSigTOFPi2</td>
         <td>float</td>
         <td></td>
       </tr>
@@ -42017,6 +42855,27 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <td>o2::aod::full::LcEta</td>
         <td></td>
         <td>lcEta</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::full::LcVertexX</td>
+        <td></td>
+        <td>lcVertexX</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::full::LcVertexY</td>
+        <td></td>
+        <td>lcVertexY</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::full::LcVertexZ</td>
+        <td></td>
+        <td>lcVertexZ</td>
         <td>float</td>
         <td></td>
       </tr>
@@ -42070,9 +42929,23 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <td></td>
       </tr>
       <tr>
+        <td>o2::aod::full::LcImpactParameterError0</td>
+        <td></td>
+        <td>lcImpactParameterError0</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
         <td>o2::aod::full::LcImpactParameter1</td>
         <td></td>
         <td>lcImpactParameter1</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::full::LcImpactParameterError1</td>
+        <td></td>
+        <td>lcImpactParameterError1</td>
         <td>float</td>
         <td></td>
       </tr>
@@ -42081,6 +42954,97 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <td></td>
         <td>lcImpactParameter2</td>
         <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::full::LcImpactParameterError2</td>
+        <td></td>
+        <td>lcImpactParameterError2</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::full::LcPx0</td>
+        <td></td>
+        <td>lcPx0</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::full::LcPy0</td>
+        <td></td>
+        <td>lcPy0</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::full::LcPz0</td>
+        <td></td>
+        <td>lcPz0</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::full::LcPx1</td>
+        <td></td>
+        <td>lcPx1</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::full::LcPy1</td>
+        <td></td>
+        <td>lcPy1</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::full::LcPz1</td>
+        <td></td>
+        <td>lcPz1</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::full::LcPx2</td>
+        <td></td>
+        <td>lcPx2</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::full::LcPy2</td>
+        <td></td>
+        <td>lcPy2</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::full::LcPz2</td>
+        <td></td>
+        <td>lcPz2</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::full::LcSignProng0</td>
+        <td></td>
+        <td>lcSignProng0</td>
+        <td>int16_t</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::full::LcSignProng1</td>
+        <td></td>
+        <td>lcSignProng1</td>
+        <td>int16_t</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::full::LcSignProng2</td>
+        <td></td>
+        <td>lcSignProng2</td>
+        <td>int16_t</td>
         <td></td>
       </tr>
       <tr>
@@ -42114,14 +43078,14 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
       <tr>
         <td>o2::aod::full::CPA</td>
         <td></td>
-        <td>cpa</td>
+        <td>cPA</td>
         <td>float</td>
         <td></td>
       </tr>
       <tr>
         <td>o2::aod::full::CPAXY</td>
         <td></td>
-        <td>cpaXY</td>
+        <td>cPAXY</td>
         <td>float</td>
         <td></td>
       </tr>
@@ -42154,9 +43118,9 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <td>Rapidity of candidate</td>
       </tr>
       <tr>
-        <td>o2::aod::full::MCflag</td>
+        <td>o2::aod::full::McFlag</td>
         <td></td>
-        <td>mcflag</td>
+        <td>mcFlag</td>
         <td>int8_t</td>
         <td></td>
       </tr>
@@ -42391,14 +43355,14 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
       <tr>
         <td>o2::aod::full::CPA</td>
         <td></td>
-        <td>cpa</td>
+        <td>cPA</td>
         <td>float</td>
         <td></td>
       </tr>
       <tr>
         <td>o2::aod::full::CPAXY</td>
         <td></td>
-        <td>cpaXY</td>
+        <td>cPAXY</td>
         <td>float</td>
         <td></td>
       </tr>
@@ -42886,14 +43850,14 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
       <tr>
         <td>o2::aod::full::CPA</td>
         <td></td>
-        <td>cpa</td>
+        <td>cPA</td>
         <td>float</td>
         <td></td>
       </tr>
       <tr>
         <td>o2::aod::full::CPAXY</td>
         <td></td>
-        <td>cpaXY</td>
+        <td>cPAXY</td>
         <td>float</td>
         <td></td>
       </tr>
@@ -48517,6 +49481,20 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <td></td>
       </tr>
       <tr>
+        <td>o2::aod::hf_cand_xic_to_xi_pi_pi::DebugMcRec</td>
+        <td></td>
+        <td>debugMcRec</td>
+        <td>int8_t</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_cand_xic_to_xi_pi_pi::OriginRec</td>
+        <td></td>
+        <td>originRec</td>
+        <td>int8_t</td>
+        <td></td>
+      </tr>
+      <tr>
         <td>o2::aod::full::CandidateSelFlag</td>
         <td></td>
         <td>candidateSelFlag</td>
@@ -48592,6 +49570,13 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <td>m</td>
         <td>float</td>
         <td>Invariant mass of candidate (GeV/c2)</td>
+      </tr>
+      <tr>
+        <td>o2::aod::full::InvMassXi</td>
+        <td></td>
+        <td>invMassXi</td>
+        <td>float</td>
+        <td></td>
       </tr>
       <tr>
         <td>o2::aod::full::InvMassXiPi0</td>
@@ -48767,6 +49752,20 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <td></td>
       </tr>
       <tr>
+        <td>o2::aod::hf_cand_xic_to_xi_pi_pi::DebugMcRec</td>
+        <td></td>
+        <td>debugMcRec</td>
+        <td>int8_t</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_cand_xic_to_xi_pi_pi::OriginRec</td>
+        <td></td>
+        <td>originRec</td>
+        <td>int8_t</td>
+        <td></td>
+      </tr>
+      <tr>
         <td>o2::aod::full::CandidateSelFlag</td>
         <td></td>
         <td>candidateSelFlag</td>
@@ -48842,6 +49841,13 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <td>m</td>
         <td>float</td>
         <td>Invariant mass of candidate (GeV/c2)</td>
+      </tr>
+      <tr>
+        <td>o2::aod::full::InvMassXi</td>
+        <td></td>
+        <td>invMassXi</td>
+        <td>float</td>
+        <td></td>
       </tr>
       <tr>
         <td>o2::aod::full::InvMassXiPi0</td>
@@ -49005,16 +50011,30 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::full::Chi2XicPlusTopoToPV</td>
+        <td>o2::aod::full::Chi2TopoXicPlusToPVBeforeConstraint</td>
         <td></td>
-        <td>chi2XicPlusTopoToPV</td>
+        <td>chi2TopoXicPlusToPVBeforeConstraint</td>
         <td>float</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::full::Chi2XicPlusTopoXiToXicPlus</td>
+        <td>o2::aod::full::Chi2TopoXicPlusToPV</td>
         <td></td>
-        <td>chi2XicPlusTopoXiToXicPlus</td>
+        <td>chi2TopoXicPlusToPV</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::full::Chi2TopoXiToXicPlusBeforeConstraint</td>
+        <td></td>
+        <td>chi2TopoXiToXicPlusBeforeConstraint</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::full::Chi2TopoXiToXicPlus</td>
+        <td></td>
+        <td>chi2TopoXiToXicPlus</td>
         <td>float</td>
         <td></td>
       </tr>
@@ -49094,6 +50114,20 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <td></td>
       </tr>
       <tr>
+        <td>o2::aod::hf_cand_xic_to_xi_pi_pi::DebugMcRec</td>
+        <td></td>
+        <td>debugMcRec</td>
+        <td>int8_t</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_cand_xic_to_xi_pi_pi::OriginRec</td>
+        <td></td>
+        <td>originRec</td>
+        <td>int8_t</td>
+        <td></td>
+      </tr>
+      <tr>
         <td>o2::aod::full::CandidateSelFlag</td>
         <td></td>
         <td>candidateSelFlag</td>
@@ -49169,6 +50203,13 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <td>m</td>
         <td>float</td>
         <td>Invariant mass of candidate (GeV/c2)</td>
+      </tr>
+      <tr>
+        <td>o2::aod::full::InvMassXi</td>
+        <td></td>
+        <td>invMassXi</td>
+        <td>float</td>
+        <td></td>
       </tr>
       <tr>
         <td>o2::aod::full::InvMassXiPi0</td>
@@ -49318,34 +50359,6 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <td>Maximum normalized difference between measured and expected impact parameter of candidate prongs</td>
       </tr>
       <tr>
-        <td>o2::aod::full::E</td>
-        <td></td>
-        <td>e</td>
-        <td>float</td>
-        <td>Energy of candidate (GeV)</td>
-      </tr>
-      <tr>
-        <td>o2::aod::full::XPv</td>
-        <td></td>
-        <td>xPv</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::full::YPv</td>
-        <td></td>
-        <td>yPv</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::full::ZPv</td>
-        <td></td>
-        <td>zPv</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
         <td>o2::aod::full::XPvErr</td>
         <td></td>
         <td>xPvErr</td>
@@ -49363,27 +50376,6 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <td>o2::aod::full::ZPvErr</td>
         <td></td>
         <td>zPvErr</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::full::XSv</td>
-        <td></td>
-        <td>xSv</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::full::YSv</td>
-        <td></td>
-        <td>ySv</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::full::ZSv</td>
-        <td></td>
-        <td>zSv</td>
         <td>float</td>
         <td></td>
       </tr>
@@ -49409,44 +50401,121 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::full::XDecVtxXi</td>
+        <td>o2::aod::full::CpaLamToXi</td>
         <td></td>
-        <td>xDecVtxXi</td>
+        <td>cpaLamToXi</td>
         <td>float</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::full::YDecVtxXi</td>
+        <td>o2::aod::full::CpaXYLamToXi</td>
         <td></td>
-        <td>yDecVtxXi</td>
+        <td>cpaXYLamToXi</td>
         <td>float</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::full::ZDecVtxXi</td>
+        <td>o2::aod::full::PPi0</td>
         <td></td>
-        <td>zDecVtxXi</td>
+        <td>pPi0</td>
         <td>float</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::full::XDecVtxLam</td>
+        <td>o2::aod::full::PPi1</td>
         <td></td>
-        <td>xDecVtxLam</td>
+        <td>pPi1</td>
         <td>float</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::full::YDecVtxLam</td>
+        <td>o2::aod::full::PBachelorPi</td>
         <td></td>
-        <td>yDecVtxLam</td>
+        <td>pBachelorPi</td>
         <td>float</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::full::ZDecVtxLam</td>
+        <td>o2::aod::full::PPiFromLambda</td>
         <td></td>
-        <td>zDecVtxLam</td>
+        <td>pPiFromLambda</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::full::PPrFromLambda</td>
+        <td></td>
+        <td>pPrFromLambda</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_cand_xic_to_xi_pi_pi::NSigTpcPiFromXicPlus0</td>
+        <td></td>
+        <td>nSigTpcPiFromXicPlus0</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_cand_xic_to_xi_pi_pi::NSigTpcPiFromXicPlus1</td>
+        <td></td>
+        <td>nSigTpcPiFromXicPlus1</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_cand_xic_to_xi_pi_pi::NSigTpcBachelorPi</td>
+        <td></td>
+        <td>nSigTpcBachelorPi</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_cand_xic_to_xi_pi_pi::NSigTpcPiFromLambda</td>
+        <td></td>
+        <td>nSigTpcPiFromLambda</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_cand_xic_to_xi_pi_pi::NSigTpcPrFromLambda</td>
+        <td></td>
+        <td>nSigTpcPrFromLambda</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_cand_xic_to_xi_pi_pi::NSigTofPiFromXicPlus0</td>
+        <td></td>
+        <td>nSigTofPiFromXicPlus0</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_cand_xic_to_xi_pi_pi::NSigTofPiFromXicPlus1</td>
+        <td></td>
+        <td>nSigTofPiFromXicPlus1</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_cand_xic_to_xi_pi_pi::NSigTofBachelorPi</td>
+        <td></td>
+        <td>nSigTofBachelorPi</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_cand_xic_to_xi_pi_pi::NSigTofPiFromLambda</td>
+        <td></td>
+        <td>nSigTofPiFromLambda</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_cand_xic_to_xi_pi_pi::NSigTofPrFromLambda</td>
+        <td></td>
+        <td>nSigTofPrFromLambda</td>
         <td>float</td>
         <td></td>
       </tr>
@@ -49477,6 +50546,20 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <td></td>
       </tr>
       <tr>
+        <td>o2::aod::hf_cand_xic_to_xi_pi_pi::DebugMcRec</td>
+        <td></td>
+        <td>debugMcRec</td>
+        <td>int8_t</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_cand_xic_to_xi_pi_pi::OriginRec</td>
+        <td></td>
+        <td>originRec</td>
+        <td>int8_t</td>
+        <td></td>
+      </tr>
+      <tr>
         <td>o2::aod::full::CandidateSelFlag</td>
         <td></td>
         <td>candidateSelFlag</td>
@@ -49552,6 +50635,13 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <td>m</td>
         <td>float</td>
         <td>Invariant mass of candidate (GeV/c2)</td>
+      </tr>
+      <tr>
+        <td>o2::aod::full::InvMassXi</td>
+        <td></td>
+        <td>invMassXi</td>
+        <td>float</td>
+        <td></td>
       </tr>
       <tr>
         <td>o2::aod::full::InvMassXiPi0</td>
@@ -49701,34 +50791,6 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <td>Maximum normalized difference between measured and expected impact parameter of candidate prongs</td>
       </tr>
       <tr>
-        <td>o2::aod::full::E</td>
-        <td></td>
-        <td>e</td>
-        <td>float</td>
-        <td>Energy of candidate (GeV)</td>
-      </tr>
-      <tr>
-        <td>o2::aod::full::XPv</td>
-        <td></td>
-        <td>xPv</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::full::YPv</td>
-        <td></td>
-        <td>yPv</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::full::ZPv</td>
-        <td></td>
-        <td>zPv</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
         <td>o2::aod::full::XPvErr</td>
         <td></td>
         <td>xPvErr</td>
@@ -49746,27 +50808,6 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <td>o2::aod::full::ZPvErr</td>
         <td></td>
         <td>zPvErr</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::full::XSv</td>
-        <td></td>
-        <td>xSv</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::full::YSv</td>
-        <td></td>
-        <td>ySv</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::full::ZSv</td>
-        <td></td>
-        <td>zSv</td>
         <td>float</td>
         <td></td>
       </tr>
@@ -49792,44 +50833,121 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::full::XDecVtxXi</td>
+        <td>o2::aod::full::CpaLamToXi</td>
         <td></td>
-        <td>xDecVtxXi</td>
+        <td>cpaLamToXi</td>
         <td>float</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::full::YDecVtxXi</td>
+        <td>o2::aod::full::CpaXYLamToXi</td>
         <td></td>
-        <td>yDecVtxXi</td>
+        <td>cpaXYLamToXi</td>
         <td>float</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::full::ZDecVtxXi</td>
+        <td>o2::aod::full::PPi0</td>
         <td></td>
-        <td>zDecVtxXi</td>
+        <td>pPi0</td>
         <td>float</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::full::XDecVtxLam</td>
+        <td>o2::aod::full::PPi1</td>
         <td></td>
-        <td>xDecVtxLam</td>
+        <td>pPi1</td>
         <td>float</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::full::YDecVtxLam</td>
+        <td>o2::aod::full::PBachelorPi</td>
         <td></td>
-        <td>yDecVtxLam</td>
+        <td>pBachelorPi</td>
         <td>float</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::full::ZDecVtxLam</td>
+        <td>o2::aod::full::PPiFromLambda</td>
         <td></td>
-        <td>zDecVtxLam</td>
+        <td>pPiFromLambda</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::full::PPrFromLambda</td>
+        <td></td>
+        <td>pPrFromLambda</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_cand_xic_to_xi_pi_pi::NSigTpcPiFromXicPlus0</td>
+        <td></td>
+        <td>nSigTpcPiFromXicPlus0</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_cand_xic_to_xi_pi_pi::NSigTpcPiFromXicPlus1</td>
+        <td></td>
+        <td>nSigTpcPiFromXicPlus1</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_cand_xic_to_xi_pi_pi::NSigTpcBachelorPi</td>
+        <td></td>
+        <td>nSigTpcBachelorPi</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_cand_xic_to_xi_pi_pi::NSigTpcPiFromLambda</td>
+        <td></td>
+        <td>nSigTpcPiFromLambda</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_cand_xic_to_xi_pi_pi::NSigTpcPrFromLambda</td>
+        <td></td>
+        <td>nSigTpcPrFromLambda</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_cand_xic_to_xi_pi_pi::NSigTofPiFromXicPlus0</td>
+        <td></td>
+        <td>nSigTofPiFromXicPlus0</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_cand_xic_to_xi_pi_pi::NSigTofPiFromXicPlus1</td>
+        <td></td>
+        <td>nSigTofPiFromXicPlus1</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_cand_xic_to_xi_pi_pi::NSigTofBachelorPi</td>
+        <td></td>
+        <td>nSigTofBachelorPi</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_cand_xic_to_xi_pi_pi::NSigTofPiFromLambda</td>
+        <td></td>
+        <td>nSigTofPiFromLambda</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_cand_xic_to_xi_pi_pi::NSigTofPrFromLambda</td>
+        <td></td>
+        <td>nSigTofPrFromLambda</td>
         <td>float</td>
         <td></td>
       </tr>
@@ -49848,16 +50966,30 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::full::Chi2XicPlusTopoToPV</td>
+        <td>o2::aod::full::Chi2TopoXicPlusToPVBeforeConstraint</td>
         <td></td>
-        <td>chi2XicPlusTopoToPV</td>
+        <td>chi2TopoXicPlusToPVBeforeConstraint</td>
         <td>float</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::full::Chi2XicPlusTopoXiToXicPlus</td>
+        <td>o2::aod::full::Chi2TopoXicPlusToPV</td>
         <td></td>
-        <td>chi2XicPlusTopoXiToXicPlus</td>
+        <td>chi2TopoXicPlusToPV</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::full::Chi2TopoXiToXicPlusBeforeConstraint</td>
+        <td></td>
+        <td>chi2TopoXiToXicPlusBeforeConstraint</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::full::Chi2TopoXiToXicPlus</td>
+        <td></td>
+        <td>chi2TopoXiToXicPlus</td>
         <td>float</td>
         <td></td>
       </tr>
@@ -49930,6 +51062,27 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <th>Comment</th>
       </tr>
       <tr>
+        <td>o2::aod::hf_cand_xic_to_xi_pi_pi::FlagMcMatchGen</td>
+        <td></td>
+        <td>flagMcMatchGen</td>
+        <td>int8_t</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_cand_xic_to_xi_pi_pi::DebugMcGen</td>
+        <td></td>
+        <td>debugMcGen</td>
+        <td>int8_t</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_cand_xic_to_xi_pi_pi::OriginGen</td>
+        <td></td>
+        <td>originGen</td>
+        <td>int8_t</td>
+        <td></td>
+      </tr>
+      <tr>
         <td>o2::aod::full::Pt</td>
         <td></td>
         <td>pt</td>
@@ -49957,55 +51110,6 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <td>float</td>
         <td>Rapidity of candidate</td>
       </tr>
-      <tr>
-        <td>o2::aod::full::XPvGen</td>
-        <td></td>
-        <td>xPvGen</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::full::YPvGen</td>
-        <td></td>
-        <td>yPvGen</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::full::ZPvGen</td>
-        <td></td>
-        <td>zPvGen</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::full::XSvGen</td>
-        <td></td>
-        <td>xSvGen</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::full::YSvGen</td>
-        <td></td>
-        <td>ySvGen</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::full::ZSvGen</td>
-        <td></td>
-        <td>zSvGen</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::hf_cand_xic_to_xi_pi_pi::FlagMcMatchGen</td>
-        <td></td>
-        <td>flagMcMatchGen</td>
-        <td>int8_t</td>
-        <td></td>
-      </tr>
     </table>
   </div>
 
@@ -50024,6 +51128,13 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <th>Getter</th>
         <th>Type</th>
         <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_cand_xic_to_xi_pi_pi::OriginGen</td>
+        <td></td>
+        <td>originGen</td>
+        <td>int8_t</td>
+        <td></td>
       </tr>
       <tr>
         <td>o2::aod::full::PResidual</td>
@@ -50459,14 +51570,14 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
       <tr>
         <td>o2::aod::full::CPA</td>
         <td></td>
-        <td>cpa</td>
+        <td>cPA</td>
         <td>float</td>
         <td></td>
       </tr>
       <tr>
         <td>o2::aod::full::CPAXY</td>
         <td></td>
-        <td>cpaXY</td>
+        <td>cPAXY</td>
         <td>float</td>
         <td></td>
       </tr>
@@ -52420,27 +53531,6 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::hf_track_index_reduced::HfRedCollisionId</td>
-        <td>I</td>
-        <td>hfRedCollisionId</td>
-        <td>int32</td>
-        <td>ReducedCollision index</td>
-      </tr>
-      <tr>
-        <td>o2::aod::hf_reso_cand_reduced::Prong0Id</td>
-        <td>I</td>
-        <td>prong0Id</td>
-        <td>int</td>
-        <td>Prong0 index (D daughter)</td>
-      </tr>
-      <tr>
-        <td>o2::aod::hf_reso_cand_reduced::Prong1Id</td>
-        <td>I</td>
-        <td>prong1Id</td>
-        <td>int</td>
-        <td>Prong1 index (V0 daughter)</td>
-      </tr>
-      <tr>
         <td>o2::aod::hf_cand::PxProng0</td>
         <td></td>
         <td>pxProng0</td>
@@ -52525,6 +53615,13 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <td>Radius of V0 candidate</td>
       </tr>
       <tr>
+        <td>o2::aod::hf_reso_cand_reduced::InvMassD0</td>
+        <td></td>
+        <td>invMassD0</td>
+        <td>float</td>
+        <td>Invariant Mass of potential D0 daughter</td>
+      </tr>
+      <tr>
         <td>o2::aod::hf_reso_cand_reduced::Pt</td>
         <td>D</td>
         <td>pt</td>
@@ -52542,6 +53639,27 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <td>o2::aod::hf_reso_cand_reduced::PtProng1</td>
         <td>D</td>
         <td>ptProng1</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_reso_v0::Px</td>
+        <td>D</td>
+        <td>px</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_reso_v0::Py</td>
+        <td>D</td>
+        <td>py</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_reso_v0::Pz</td>
+        <td>D</td>
+        <td>pz</td>
         <td>float</td>
         <td></td>
       </tr>
@@ -52579,6 +53697,46 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <td>cosThetaStarXiC3055</td>
         <td>float</td>
         <td>costhetastar under XiC3055 hypothesis</td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::HfResoIndices</button>
+  <div class="panel">
+    <div>
+       Table with Indices of resonance daughters for MC matching
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/D2H/DataModel/ReducedDataModel.h" target="_blank">PWGHF/D2H/DataModel/ReducedDataModel.h</a>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_track_index_reduced::HfRedCollisionId</td>
+        <td>I</td>
+        <td>hfRedCollisionId</td>
+        <td>int32</td>
+        <td>ReducedCollision index</td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_reso_cand_reduced::Prong0Id</td>
+        <td>I</td>
+        <td>prong0Id</td>
+        <td>int</td>
+        <td>Prong0 index (D daughter)</td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_reso_cand_reduced::Prong1Id</td>
+        <td>I</td>
+        <td>prong1Id</td>
+        <td>int</td>
+        <td>Prong1 index (V0 daughter)</td>
       </tr>
     </table>
   </div>
@@ -52823,12 +53981,6 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
     </div>
     <div>
       Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/DataModel/CandidateSelectionTables.h" target="_blank">PWGHF/DataModel/CandidateSelectionTables.h</a>
-    </div>
-    <div>Is used in:
-      <ul>
-        <li>o2::aod::CandidatesBplusData = soa::Join<o2::aod::HfCandBplus, o2::aod::HfSelBplusToD0Pi></li>
-        <li>o2::aod::CandidatesBplusMCD = soa::Join<o2::aod::HfCandBplus, o2::aod::HfSelBplusToD0Pi, o2::aod::HfCandBplusMcRec></li>
-      </ul>
     </div>
     <table class=DataModel>
       <tr>
@@ -54387,16 +55539,16 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <td>Flag to check if prong1 has a TPC match</td>
       </tr>
       <tr>
-        <td>o2::aod::hf_track_pid_reduced::TPCTOFNSigmaPiProng0</td>
+        <td>o2::aod::hf_track_pid_reduced::TPCTOFNSigmaPiProng1</td>
         <td>D</td>
-        <td>tpcTofNSigmaPiProng0</td>
+        <td>tpcTofNSigmaPiProng1</td>
         <td>float</td>
         <td>Combination of NsigmaTPC and NsigmaTOF</td>
       </tr>
       <tr>
-        <td>o2::aod::hf_track_pid_reduced::TPCTOFNSigmaKaProng0</td>
+        <td>o2::aod::hf_track_pid_reduced::TPCTOFNSigmaKaProng1</td>
         <td>D</td>
-        <td>tpcTofNSigmaKaProng0</td>
+        <td>tpcTofNSigmaKaProng1</td>
         <td>float</td>
         <td>Combination of NsigmaTPC and NsigmaTOF</td>
       </tr>
@@ -55576,6 +56728,27 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <td>float</td>
         <td></td>
       </tr>
+      <tr>
+        <td>o2::aod::hf_cand::PVectorProng0</td>
+        <td>D</td>
+        <td>pVectorProng0</td>
+        <td>std::array&lt;float,3&gt;</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_cand::PVectorProng1</td>
+        <td>D</td>
+        <td>pVectorProng1</td>
+        <td>std::array&lt;float,3&gt;</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_reso_v0::PVector</td>
+        <td>D</td>
+        <td>pVector</td>
+        <td>std::array&lt;float,3&gt;</td>
+        <td></td>
+      </tr>
     </table>
   </div>
 
@@ -55993,16 +57166,30 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::hf_reso_3_prong::InvMassDstar</td>
+        <td>o2::aod::hf_cand_dstar::InvMassDstar</td>
         <td>D</td>
         <td>invMassDstar</td>
         <td>float</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::hf_reso_3_prong::InvMassAntiDstar</td>
+        <td>o2::aod::hf_cand_dstar::InvMassAntiDstar</td>
         <td>D</td>
         <td>invMassAntiDstar</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_cand_dstar::InvMassD0</td>
+        <td>D</td>
+        <td>invMassD0</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_cand_dstar::InvMassD0Bar</td>
+        <td>D</td>
+        <td>invMassD0Bar</td>
         <td>float</td>
         <td></td>
       </tr>
@@ -56011,6 +57198,34 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <td>D</td>
         <td>pt</td>
         <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_cand::PVectorProng0</td>
+        <td>D</td>
+        <td>pVectorProng0</td>
+        <td>std::array&lt;float,3&gt;</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_cand::PVectorProng1</td>
+        <td>D</td>
+        <td>pVectorProng1</td>
+        <td>std::array&lt;float,3&gt;</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_cand::PVectorProng2</td>
+        <td>D</td>
+        <td>pVectorProng2</td>
+        <td>std::array&lt;float,3&gt;</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_reso_3_prong::PVector</td>
+        <td>D</td>
+        <td>pVector</td>
+        <td>std::array&lt;float,3&gt;</td>
         <td></td>
       </tr>
     </table>
@@ -56064,6 +57279,13 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <td>o2::aod::hf_reso_cand_reduced::Origin</td>
         <td></td>
         <td>origin</td>
+        <td>int8_t</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_reso_cand_reduced::SignD0</td>
+        <td></td>
+        <td>signD0</td>
         <td>int8_t</td>
         <td></td>
       </tr>
@@ -57317,79 +58539,6 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
 Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/HFC/TableProducer//correlatorDsHadrons.cxx" target="_blank">correlatorDsHadrons.cxx</a>
 <div>
 
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::HfRedCollisions</button>
-  <div class="panel">
-    <div>
-       Table with collision for reduced workflow
-    </div>
-    <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/D2H/DataModel/ReducedDataModel.h" target="_blank">PWGHF/D2H/DataModel/ReducedDataModel.h</a>
-    </div>
-    <div>Is used in:
-      <ul>
-        <li>o2::aod::HfRedCollision = o2::aod::HfRedCollisions::iterator</li>
-      </ul>
-    </div>
-    <table class=DataModel>
-      <tr>
-        <th>Name</th>
-        <th></th>
-        <th>Getter</th>
-        <th>Type</th>
-        <th>Comment</th>
-      </tr>
-      <tr>
-        <td>o2::soa::Index</td>
-        <td>GI</td>
-        <td>globalIndex</td>
-        <td>int64_t</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::&zwnj;collision::PosX</td>
-        <td></td>
-        <td>posX</td>
-        <td>float</td>
-        <td>X Vertex position in cm</td>
-      </tr>
-      <tr>
-        <td>o2::aod::&zwnj;collision::PosY</td>
-        <td></td>
-        <td>posY</td>
-        <td>float</td>
-        <td>Y Vertex position in cm</td>
-      </tr>
-      <tr>
-        <td>o2::aod::&zwnj;collision::PosZ</td>
-        <td></td>
-        <td>posZ</td>
-        <td>float</td>
-        <td>Z Vertex position in cm</td>
-      </tr>
-      <tr>
-        <td>o2::aod::&zwnj;collision::NumContrib</td>
-        <td></td>
-        <td>numContrib</td>
-        <td>uint16_t</td>
-        <td>Number of tracks used for the vertex</td>
-      </tr>
-      <tr>
-        <td>o2::aod::hf_reduced_collision::HfCollisionRejectionMap</td>
-        <td></td>
-        <td>hfCollisionRejectionMap</td>
-        <td>uint16_t</td>
-        <td>Bitmask with failed selection criteria</td>
-      </tr>
-      <tr>
-        <td>o2::aod::hf_reduced_collision::Bz</td>
-        <td></td>
-        <td>bz</td>
-        <td>float</td>
-        <td>Magnetic field in z-direction</td>
-      </tr>
-    </table>
-  </div>
-
   <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::DsHadronPair</button>
   <div class="panel">
     <div>
@@ -57696,7 +58845,52 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
     </table>
   </div>
 
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::DsCandReduced</button>
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::HfcRedCollisions</button>
+  <div class="panel">
+    <div>
+       Table with collision info
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/HFC/DataModel/DerivedDataCorrelationTables.h" target="_blank">PWGHF/HFC/DataModel/DerivedDataCorrelationTables.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::HfcRedCollision = o2::aod::HfcRedCollisions::iterator</li>
+      </ul>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::soa::Index</td>
+        <td>GI</td>
+        <td></td>
+        <td>?</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_collisions_reduced::Multiplicity</td>
+        <td></td>
+        <td>multiplicity</td>
+        <td>float</td>
+        <td>Event multiplicity</td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_collisions_reduced::PosZ</td>
+        <td></td>
+        <td>posZ</td>
+        <td>float</td>
+        <td>Primary vertex z position</td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::DsCandReduceds</button>
   <div class="panel">
     <div>
        Table with Ds candidate info (rectangular selection)
@@ -57720,9 +58914,9 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::hf_candidate_reduced::HfRedCollisionId</td>
+        <td>o2::aod::hf_candidate_reduced::HfcRedCollisionId</td>
         <td>I</td>
-        <td>hfRedCollisionId</td>
+        <td>hfcRedCollisionId</td>
         <td>int32</td>
         <td>ReducedCollision index</td>
       </tr>
@@ -57757,7 +58951,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
     </table>
   </div>
 
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::AssocTrackReduced</button>
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::AssocTrackReds</button>
   <div class="panel">
     <div>
        Table with associated track info
@@ -57781,9 +58975,9 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::hf_candidate_reduced::HfRedCollisionId</td>
+        <td>o2::aod::hf_candidate_reduced::HfcRedCollisionId</td>
         <td>I</td>
-        <td>hfRedCollisionId</td>
+        <td>hfcRedCollisionId</td>
         <td>int32</td>
         <td>ReducedCollision index</td>
       </tr>
@@ -58234,6 +59428,13 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <td>int</td>
         <td>Pool Bin for the MixedEvent</td>
       </tr>
+      <tr>
+        <td>o2::aod::hf_correlation_lc_hadron::IsAutoCorrelated</td>
+        <td></td>
+        <td>isAutoCorrelated</td>
+        <td>bool</td>
+        <td>Correlation Status</td>
+      </tr>
     </table>
   </div>
 
@@ -58270,6 +59471,192 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
     </table>
   </div>
 
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::LcHadronGenInfo</button>
+  <div class="panel">
+    <div>
+       Lc-Hadrons pairs Generated Information
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/HFC/DataModel/CorrelationTables.h" target="_blank">PWGHF/HFC/DataModel/CorrelationTables.h</a>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_correlation_lc_hadron::IsPrompt</td>
+        <td></td>
+        <td>isPrompt</td>
+        <td>bool</td>
+        <td>Used in MC-Rec, Lc Prompt or Non-Prompt</td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_correlation_lc_hadron::IsPhysicalPrimary</td>
+        <td></td>
+        <td>isPhysicalPrimary</td>
+        <td>bool</td>
+        <td>Used in MC-Rec, primary associated particles</td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_correlation_lc_hadron::TrackOrigin</td>
+        <td></td>
+        <td>trackOrigin</td>
+        <td>int</td>
+        <td>Number of crossed TPC Rows</td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::LcHadronMlInfo</button>
+  <div class="panel">
+    <div>
+       Lc-Hadrons pairs Machine Learning Information
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/HFC/DataModel/CorrelationTables.h" target="_blank">PWGHF/HFC/DataModel/CorrelationTables.h</a>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_correlation_lc_hadron::MlScoreBkg</td>
+        <td></td>
+        <td>mlScoreBkg</td>
+        <td>float</td>
+        <td>ML background score for Lc selection</td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_correlation_lc_hadron::MlScorePrompt</td>
+        <td></td>
+        <td>mlScorePrompt</td>
+        <td>float</td>
+        <td>ML prompt score for Lc selection</td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::LcRecoInfo</button>
+  <div class="panel">
+    <div>
+       Lc candidates Reconstructed Information
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/HFC/DataModel/CorrelationTables.h" target="_blank">PWGHF/HFC/DataModel/CorrelationTables.h</a>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_correlation_lc_hadron::MLc</td>
+        <td></td>
+        <td>mLc</td>
+        <td>float</td>
+        <td>Invariant mass of Lc</td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_correlation_lc_hadron::PtLc</td>
+        <td></td>
+        <td>ptLc</td>
+        <td>float</td>
+        <td>Transverse momentum of Lc</td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_correlation_lc_hadron::MlScoreBkg</td>
+        <td></td>
+        <td>mlScoreBkg</td>
+        <td>float</td>
+        <td>ML background score for Lc selection</td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_correlation_lc_hadron::MlScorePrompt</td>
+        <td></td>
+        <td>mlScorePrompt</td>
+        <td>float</td>
+        <td>ML prompt score for Lc selection</td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::LcGenInfo</button>
+  <div class="panel">
+    <div>
+       Lc candidates Generated Information
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/HFC/DataModel/CorrelationTables.h" target="_blank">PWGHF/HFC/DataModel/CorrelationTables.h</a>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_correlation_lc_hadron::IsPrompt</td>
+        <td></td>
+        <td>isPrompt</td>
+        <td>bool</td>
+        <td>Used in MC-Rec, Lc Prompt or Non-Prompt</td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::TrkRecInfoLc</button>
+  <div class="panel">
+    <div>
+       Tracks Reconstructed Information
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/HFC/DataModel/CorrelationTables.h" target="_blank">PWGHF/HFC/DataModel/CorrelationTables.h</a>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_correlation_lc_hadron::TrackDcaXY</td>
+        <td></td>
+        <td>trackDcaXY</td>
+        <td>float</td>
+        <td>DCA xy of the track</td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_correlation_lc_hadron::TrackDcaZ</td>
+        <td></td>
+        <td>trackDcaZ</td>
+        <td>float</td>
+        <td>DCA z of the track</td>
+      </tr>
+      <tr>
+        <td>o2::aod::hf_correlation_lc_hadron::TrackTPCNClsCrossedRows</td>
+        <td></td>
+        <td>trackTPCNClsCrossedRows</td>
+        <td>int</td>
+        <td>Number of crossed TPC Rows</td>
+      </tr>
+    </table>
+  </div>
+
   <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::LcSelection</button>
   <div class="panel">
     <div>
@@ -58290,7 +59677,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <td>o2::aod::hf_selection_lc_collision::LcSel</td>
         <td></td>
         <td>lcSel</td>
-        <td>int</td>
+        <td>bool</td>
         <td>Selection flag for Lc in a collision</td>
       </tr>
     </table>
@@ -58301,72 +59688,6 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
 ###  o2-analysis-hf-femto-dream-producer
 Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF/HFC/TableProducer//femtoDreamProducer.cxx" target="_blank">femtoDreamProducer.cxx</a>
 <div>
-
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::FDCollisions</button>
-  <div class="panel">
-    <div>
-
-    </div>
-    <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGCF/DataModel/FemtoDerived.h" target="_blank">PWGCF/DataModel/FemtoDerived.h</a>
-    </div>
-    <div>Is used in:
-      <ul>
-        <li>o2::aod::FDCollision = o2::aod::FDCollisions::iterator</li>
-      </ul>
-    </div>
-    <table class=DataModel>
-      <tr>
-        <th>Name</th>
-        <th></th>
-        <th>Getter</th>
-        <th>Type</th>
-        <th>Comment</th>
-      </tr>
-      <tr>
-        <td>o2::soa::Index</td>
-        <td>GI</td>
-        <td>globalIndex</td>
-        <td>int64_t</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::&zwnj;collision::PosZ</td>
-        <td></td>
-        <td>posZ</td>
-        <td>float</td>
-        <td>Z Vertex position in cm</td>
-      </tr>
-      <tr>
-        <td>o2::aod::femtodreamcollision::MultV0M</td>
-        <td></td>
-        <td>multV0M</td>
-        <td>float</td>
-        <td>V0M multiplicity</td>
-      </tr>
-      <tr>
-        <td>o2::aod::femtodreamcollision::MultNtr</td>
-        <td></td>
-        <td>multNtr</td>
-        <td>int</td>
-        <td>multiplicity of charged tracks as defined in the producer</td>
-      </tr>
-      <tr>
-        <td>o2::aod::femtodreamcollision::Sphericity</td>
-        <td></td>
-        <td>sphericity</td>
-        <td>float</td>
-        <td>Sphericity of the event</td>
-      </tr>
-      <tr>
-        <td>o2::aod::femtodreamcollision::MagField</td>
-        <td></td>
-        <td>magField</td>
-        <td>float</td>
-        <td>Magnetic field of the event</td>
-      </tr>
-    </table>
-  </div>
 
   <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::FDColMasks</button>
   <div class="panel">
@@ -58404,70 +59725,6 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
         <td>bitmaskTrackThree</td>
         <td>BitMaskType</td>
         <td>Bit for track three</td>
-      </tr>
-    </table>
-  </div>
-
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::FDMCCollisions</button>
-  <div class="panel">
-    <div>
-
-    </div>
-    <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGCF/DataModel/FemtoDerived.h" target="_blank">PWGCF/DataModel/FemtoDerived.h</a>
-    </div>
-    <div>Is used in:
-      <ul>
-        <li>o2::aod::FDMCCollision = o2::aod::FDMCCollisions::iterator</li>
-      </ul>
-    </div>
-    <table class=DataModel>
-      <tr>
-        <th>Name</th>
-        <th></th>
-        <th>Getter</th>
-        <th>Type</th>
-        <th>Comment</th>
-      </tr>
-      <tr>
-        <td>o2::soa::Index</td>
-        <td>GI</td>
-        <td>globalIndex</td>
-        <td>int64_t</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::femtodreamMCcollision::MultMCgenPartEta08</td>
-        <td></td>
-        <td>multMCgenPartEta08</td>
-        <td>int</td>
-        <td>Multiplicity of the event as given by the generator in |eta|<0.8</td>
-      </tr>
-    </table>
-  </div>
-
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::FDMCCollLabels</button>
-  <div class="panel">
-    <div>
-
-    </div>
-    <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGCF/DataModel/FemtoDerived.h" target="_blank">PWGCF/DataModel/FemtoDerived.h</a>
-    </div>
-    <table class=DataModel>
-      <tr>
-        <th>Name</th>
-        <th></th>
-        <th>Getter</th>
-        <th>Type</th>
-        <th>Comment</th>
-      </tr>
-      <tr>
-        <td>o2::aod::mcfdcolllabel::FDMCCollisionId</td>
-        <td>I</td>
-        <td>fdMCCollisionId</td>
-        <td>int32</td>
-        <td>MC collision for femtodreamcollision</td>
       </tr>
     </table>
   </div>
@@ -58739,576 +59996,6 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
     </table>
   </div>
 
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::FDParticles</button>
-  <div class="panel">
-    <div>
-
-    </div>
-    <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGCF/DataModel/FemtoDerived.h" target="_blank">PWGCF/DataModel/FemtoDerived.h</a>
-    </div>
-    <div>Is used in:
-      <ul>
-        <li>o2::aod::FDParticle = o2::aod::FDParticles::iterator</li>
-      </ul>
-    </div>
-    <table class=DataModel>
-      <tr>
-        <th>Name</th>
-        <th></th>
-        <th>Getter</th>
-        <th>Type</th>
-        <th>Comment</th>
-      </tr>
-      <tr>
-        <td>o2::soa::Index</td>
-        <td>GI</td>
-        <td>globalIndex</td>
-        <td>int64_t</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::femtodreamparticle::FDCollisionId</td>
-        <td>I</td>
-        <td>fdCollisionId</td>
-        <td>int32</td>
-        <td>Pointer into FDCollisions</td>
-      </tr>
-      <tr>
-        <td>o2::aod::femtodreamparticle::Pt</td>
-        <td></td>
-        <td>pt</td>
-        <td>float</td>
-        <td>p_T (GeV/c)</td>
-      </tr>
-      <tr>
-        <td>o2::aod::femtodreamparticle::Eta</td>
-        <td></td>
-        <td>eta</td>
-        <td>float</td>
-        <td>Eta</td>
-      </tr>
-      <tr>
-        <td>o2::aod::femtodreamparticle::Phi</td>
-        <td></td>
-        <td>phi</td>
-        <td>float</td>
-        <td>Phi</td>
-      </tr>
-      <tr>
-        <td>o2::aod::femtodreamparticle::PartType</td>
-        <td></td>
-        <td>partType</td>
-        <td>uint8_t</td>
-        <td>Type of the particle, according to femtodreamparticle::ParticleType</td>
-      </tr>
-      <tr>
-        <td>o2::aod::femtodreamparticle::Cut</td>
-        <td></td>
-        <td>cut</td>
-        <td>cutContainerType</td>
-        <td>Bit-wise container for the different selection criteria</td>
-      </tr>
-      <tr>
-        <td>o2::aod::femtodreamparticle::PIDCut</td>
-        <td></td>
-        <td>pidcut</td>
-        <td>cutContainerType</td>
-        <td>Bit-wise container for the different PID selection criteria \todo since bit-masking cannot be done yet with filters we use a second field for the PID</td>
-      </tr>
-      <tr>
-        <td>o2::aod::femtodreamparticle::TempFitVar</td>
-        <td></td>
-        <td>tempFitVar</td>
-        <td>float</td>
-        <td>Observable for the template fitting (Track: DCA_xy, V0: CPA)</td>
-      </tr>
-      <tr>
-        <td>o2::aod::femtodreamparticle::ChildrenIds</td>
-        <td>SAI</td>
-        <td>childrenIds</td>
-        <td></td>
-        <td>Field for the track indices to remove auto-correlations</td>
-      </tr>
-      <tr>
-        <td>o2::aod::femtodreamparticle::MLambda</td>
-        <td></td>
-        <td>mLambda</td>
-        <td>float</td>
-        <td>The invariant mass of V0 candidate, assuming lambda</td>
-      </tr>
-      <tr>
-        <td>o2::aod::femtodreamparticle::MAntiLambda</td>
-        <td></td>
-        <td>mAntiLambda</td>
-        <td>float</td>
-        <td>The invariant mass of V0 candidate, assuming antilambda</td>
-      </tr>
-      <tr>
-        <td>o2::aod::femtodreamparticle::Theta</td>
-        <td>D</td>
-        <td>theta</td>
-        <td>float</td>
-        <td>Compute the theta of the track</td>
-      </tr>
-      <tr>
-        <td>o2::aod::femtodreamparticle::Px</td>
-        <td>D</td>
-        <td>px</td>
-        <td>float</td>
-        <td>Compute the momentum in x in GeV/c</td>
-      </tr>
-      <tr>
-        <td>o2::aod::femtodreamparticle::Py</td>
-        <td>D</td>
-        <td>py</td>
-        <td>float</td>
-        <td>Compute the momentum in y in GeV/c</td>
-      </tr>
-      <tr>
-        <td>o2::aod::femtodreamparticle::Pz</td>
-        <td>D</td>
-        <td>pz</td>
-        <td>float</td>
-        <td>Compute the momentum in z in GeV/c</td>
-      </tr>
-      <tr>
-        <td>o2::aod::femtodreamparticle::P</td>
-        <td>D</td>
-        <td>p</td>
-        <td>float</td>
-        <td>Compute the overall momentum in GeV/c</td>
-      </tr>
-    </table>
-  </div>
-
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::FDExtParticles</button>
-  <div class="panel">
-    <div>
-
-    </div>
-    <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGCF/DataModel/FemtoDerived.h" target="_blank">PWGCF/DataModel/FemtoDerived.h</a>
-    </div>
-    <div>Is used in:
-      <ul>
-        <li>o2::aod::FDFullParticle = o2::aod::FDExtParticles::iterator</li>
-      </ul>
-    </div>
-    <table class=DataModel>
-      <tr>
-        <th>Name</th>
-        <th></th>
-        <th>Getter</th>
-        <th>Type</th>
-        <th>Comment</th>
-      </tr>
-      <tr>
-        <td>o2::aod::femtodreamparticle::Sign</td>
-        <td></td>
-        <td>sign</td>
-        <td>int8_t</td>
-        <td>Sign of the track charge</td>
-      </tr>
-      <tr>
-        <td>o2::aod::femtodreamparticle::TPCNClsFound</td>
-        <td></td>
-        <td>tpcNClsFound</td>
-        <td>uint8_t</td>
-        <td>Number of TPC clusters</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::TPCNClsFindable</td>
-        <td></td>
-        <td>tpcNClsFindable</td>
-        <td>uint8_t</td>
-        <td>Findable TPC clusters for this track geometry</td>
-      </tr>
-      <tr>
-        <td>o2::aod::femtodreamparticle::TPCNClsCrossedRows</td>
-        <td></td>
-        <td>tpcNClsCrossedRows</td>
-        <td>uint8_t</td>
-        <td>Number of TPC crossed rows</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::TPCNClsShared</td>
-        <td></td>
-        <td>tpcNClsShared</td>
-        <td>uint8_t</td>
-        <td>Number of shared TPC clusters</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::TPCInnerParam</td>
-        <td></td>
-        <td>tpcInnerParam</td>
-        <td>float</td>
-        <td>Momentum at inner wall of the TPC</td>
-      </tr>
-      <tr>
-        <td>o2::aod::femtodreamparticle::ITSNCls</td>
-        <td></td>
-        <td>itsNCls</td>
-        <td>uint8_t</td>
-        <td>Number of ITS clusters</td>
-      </tr>
-      <tr>
-        <td>o2::aod::femtodreamparticle::ITSNClsInnerBarrel</td>
-        <td></td>
-        <td>itsNClsInnerBarrel</td>
-        <td>uint8_t</td>
-        <td>Number of ITS clusters in the inner barrel   TPC signal</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::DcaXY</td>
-        <td></td>
-        <td>dcaXY</td>
-        <td>float</td>
-        <td>Impact parameter in XY of the track to the primary vertex</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::DcaZ</td>
-        <td></td>
-        <td>dcaZ</td>
-        <td>float</td>
-        <td>Impact parameter in Z of the track to the primary vertex</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::TPCSignal</td>
-        <td></td>
-        <td>tpcSignal</td>
-        <td>float</td>
-        <td>dE/dx signal in the TPC</td>
-      </tr>
-      <tr>
-        <td>o2::aod::femtodreamparticle::TPCNSigmaEl</td>
-        <td></td>
-        <td>tpcNSigmaEl</td>
-        <td>float</td>
-        <td>Nsigma separation with the TPC detector for electron</td>
-      </tr>
-      <tr>
-        <td>o2::aod::femtodreamparticle::TPCNSigmaPi</td>
-        <td></td>
-        <td>tpcNSigmaPi</td>
-        <td>float</td>
-        <td>Nsigma separation with the TPC detector for pion</td>
-      </tr>
-      <tr>
-        <td>o2::aod::femtodreamparticle::TPCNSigmaKa</td>
-        <td></td>
-        <td>tpcNSigmaKa</td>
-        <td>float</td>
-        <td>Nsigma separation with the TPC detector for kaon</td>
-      </tr>
-      <tr>
-        <td>o2::aod::femtodreamparticle::TPCNSigmaPr</td>
-        <td></td>
-        <td>tpcNSigmaPr</td>
-        <td>float</td>
-        <td>Nsigma separation with the TPC detector for proton</td>
-      </tr>
-      <tr>
-        <td>o2::aod::femtodreamparticle::TPCNSigmaDe</td>
-        <td></td>
-        <td>tpcNSigmaDe</td>
-        <td>float</td>
-        <td>Nsigma separation with the TPC detector for deuteron</td>
-      </tr>
-      <tr>
-        <td>o2::aod::femtodreamparticle::TPCNSigmaTr</td>
-        <td></td>
-        <td>tpcNSigmaTr</td>
-        <td>float</td>
-        <td>Nsigma separation with the TPC detector for triton</td>
-      </tr>
-      <tr>
-        <td>o2::aod::femtodreamparticle::TPCNSigmaHe</td>
-        <td></td>
-        <td>tpcNSigmaHe</td>
-        <td>float</td>
-        <td>Nsigma separation with the TPC detector for helium3</td>
-      </tr>
-      <tr>
-        <td>o2::aod::femtodreamparticle::TOFNSigmaEl</td>
-        <td></td>
-        <td>tofNSigmaEl</td>
-        <td>float</td>
-        <td>Nsigma separation with the TOF detector for electron</td>
-      </tr>
-      <tr>
-        <td>o2::aod::femtodreamparticle::TOFNSigmaPi</td>
-        <td></td>
-        <td>tofNSigmaPi</td>
-        <td>float</td>
-        <td>Nsigma separation with the TOF detector for pion</td>
-      </tr>
-      <tr>
-        <td>o2::aod::femtodreamparticle::TOFNSigmaKa</td>
-        <td></td>
-        <td>tofNSigmaKa</td>
-        <td>float</td>
-        <td>Nsigma separation with the TOF detector for kaon</td>
-      </tr>
-      <tr>
-        <td>o2::aod::femtodreamparticle::TOFNSigmaPr</td>
-        <td></td>
-        <td>tofNSigmaPr</td>
-        <td>float</td>
-        <td>Nsigma separation with the TOF detector for proton</td>
-      </tr>
-      <tr>
-        <td>o2::aod::femtodreamparticle::TOFNSigmaDe</td>
-        <td></td>
-        <td>tofNSigmaDe</td>
-        <td>float</td>
-        <td>Nsigma separation with the TOF detector for deuteron</td>
-      </tr>
-      <tr>
-        <td>o2::aod::femtodreamparticle::TOFNSigmaTr</td>
-        <td></td>
-        <td>tofNSigmaTr</td>
-        <td>float</td>
-        <td>Nsigma separation with the TOF detector for triton</td>
-      </tr>
-      <tr>
-        <td>o2::aod::femtodreamparticle::TOFNSigmaHe</td>
-        <td></td>
-        <td>tofNSigmaHe</td>
-        <td>float</td>
-        <td>Nsigma separation with the TOF detector for helium3</td>
-      </tr>
-      <tr>
-        <td>o2::aod::femtodreamparticle::DaughDCA</td>
-        <td></td>
-        <td>daughDCA</td>
-        <td>float</td>
-        <td>DCA between daughters</td>
-      </tr>
-      <tr>
-        <td>o2::aod::femtodreamparticle::TransRadius</td>
-        <td></td>
-        <td>transRadius</td>
-        <td>float</td>
-        <td>Transverse radius of the decay vertex</td>
-      </tr>
-      <tr>
-        <td>o2::aod::femtodreamparticle::DecayVtxX</td>
-        <td></td>
-        <td>decayVtxX</td>
-        <td>float</td>
-        <td>X position of the decay vertex</td>
-      </tr>
-      <tr>
-        <td>o2::aod::femtodreamparticle::DecayVtxY</td>
-        <td></td>
-        <td>decayVtxY</td>
-        <td>float</td>
-        <td>Y position of the decay vertex</td>
-      </tr>
-      <tr>
-        <td>o2::aod::femtodreamparticle::DecayVtxZ</td>
-        <td></td>
-        <td>decayVtxZ</td>
-        <td>float</td>
-        <td>Z position of the decay vertex</td>
-      </tr>
-      <tr>
-        <td>o2::aod::femtodreamparticle::MKaon</td>
-        <td></td>
-        <td>mKaon</td>
-        <td>float</td>
-        <td>The invariant mass of V0 candidate, assuming kaon</td>
-      </tr>
-      <tr>
-        <td>o2::aod::femtodreamparticle::TPCCrossedRowsOverFindableCls</td>
-        <td>D</td>
-        <td>tpcCrossedRowsOverFindableCls</td>
-        <td>float</td>
-        <td>Compute the number of crossed rows over findable TPC clusters</td>
-      </tr>
-      <tr>
-        <td>o2::aod::``AOD''</td>
-        <td>GI</td>
-        <td></td>
-        <td>?</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::``FDMCPARTICLE''</td>
-        <td>GI</td>
-        <td></td>
-        <td>?</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::soa::Index</td>
-        <td>GI</td>
-        <td>globalIndex</td>
-        <td>int64_t</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::femtodreamMCparticle::PartOriginMCTruth</td>
-        <td></td>
-        <td>partOriginMCTruth</td>
-        <td>uint8_t</td>
-        <td>Origin of the particle, according to femtodreamparticle::ParticleOriginMCTruth</td>
-      </tr>
-      <tr>
-        <td>o2::aod::femtodreamMCparticle::PDGMCTruth</td>
-        <td></td>
-        <td>pdgMCTruth</td>
-        <td>int</td>
-        <td>Particle PDG</td>
-      </tr>
-      <tr>
-        <td>o2::aod::femtodreamparticle::Pt</td>
-        <td></td>
-        <td>pt</td>
-        <td>float</td>
-        <td>p_T (GeV/c)</td>
-      </tr>
-      <tr>
-        <td>o2::aod::femtodreamparticle::Eta</td>
-        <td></td>
-        <td>eta</td>
-        <td>float</td>
-        <td>Eta</td>
-      </tr>
-      <tr>
-        <td>o2::aod::femtodreamparticle::Phi</td>
-        <td></td>
-        <td>phi</td>
-        <td>float</td>
-        <td>Phi</td>
-      </tr>
-    </table>
-  </div>
-
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::FDMCParticles</button>
-  <div class="panel">
-    <div>
-
-    </div>
-    <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGCF/DataModel/FemtoDerived.h" target="_blank">PWGCF/DataModel/FemtoDerived.h</a>
-    </div>
-    <div>Is used in:
-      <ul>
-        <li>o2::aod::FDMCParticle = o2::aod::FDMCParticles::iterator</li>
-      </ul>
-    </div>
-    <table class=DataModel>
-      <tr>
-        <th>Name</th>
-        <th></th>
-        <th>Getter</th>
-        <th>Type</th>
-        <th>Comment</th>
-      </tr>
-      <tr>
-        <td>o2::soa::Index</td>
-        <td>GI</td>
-        <td>globalIndex</td>
-        <td>int64_t</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::femtodreamMCparticle::PartOriginMCTruth</td>
-        <td></td>
-        <td>partOriginMCTruth</td>
-        <td>uint8_t</td>
-        <td>Origin of the particle, according to femtodreamparticle::ParticleOriginMCTruth</td>
-      </tr>
-      <tr>
-        <td>o2::aod::femtodreamMCparticle::PDGMCTruth</td>
-        <td></td>
-        <td>pdgMCTruth</td>
-        <td>int</td>
-        <td>Particle PDG</td>
-      </tr>
-      <tr>
-        <td>o2::aod::femtodreamparticle::Pt</td>
-        <td></td>
-        <td>pt</td>
-        <td>float</td>
-        <td>p_T (GeV/c)</td>
-      </tr>
-      <tr>
-        <td>o2::aod::femtodreamparticle::Eta</td>
-        <td></td>
-        <td>eta</td>
-        <td>float</td>
-        <td>Eta</td>
-      </tr>
-      <tr>
-        <td>o2::aod::femtodreamparticle::Phi</td>
-        <td></td>
-        <td>phi</td>
-        <td>float</td>
-        <td>Phi</td>
-      </tr>
-    </table>
-  </div>
-
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::FDExtMCParticles</button>
-  <div class="panel">
-    <div>
-
-    </div>
-    <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGCF/DataModel/FemtoDerived.h" target="_blank">PWGCF/DataModel/FemtoDerived.h</a>
-    </div>
-    <div>Is used in:
-      <ul>
-        <li>o2::aod::FDExtMCParticle = o2::aod::FDExtMCParticles::iterator</li>
-      </ul>
-    </div>
-    <table class=DataModel>
-      <tr>
-        <th>Name</th>
-        <th></th>
-        <th>Getter</th>
-        <th>Type</th>
-        <th>Comment</th>
-      </tr>
-      <tr>
-        <td>o2::aod::femtodreamMCparticle::MotherPDG</td>
-        <td></td>
-        <td>motherPDG</td>
-        <td>int</td>
-        <td>Checks mother PDG, where mother is the primary particle for that decay chain</td>
-      </tr>
-    </table>
-  </div>
-
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::FDMCLabels</button>
-  <div class="panel">
-    <div>
-       Table joinable to FemtoDreamParticle containing the MC labels
-    </div>
-    <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGCF/DataModel/FemtoDerived.h" target="_blank">PWGCF/DataModel/FemtoDerived.h</a>
-    </div>
-    <table class=DataModel>
-      <tr>
-        <th>Name</th>
-        <th></th>
-        <th>Getter</th>
-        <th>Type</th>
-        <th>Comment</th>
-      </tr>
-      <tr>
-        <td>o2::aod::mcfdlabel::FDMCParticleId</td>
-        <td>I</td>
-        <td>fdMCParticleId</td>
-        <td>int32</td>
-        <td>MC particle for femtodreamparticle</td>
-      </tr>
-    </table>
-  </div>
-
   <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::FDExtMCLabels</button>
   <div class="panel">
     <div>
@@ -59403,6 +60090,628 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
     </table>
   </div>
 
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::FDCollisions</button>
+  <div class="panel">
+    <div>
+
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGCF/FemtoUniverse/DataModel/FemtoDerived.h" target="_blank">PWGCF/FemtoUniverse/DataModel/FemtoDerived.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::FDCollision = o2::aod::FDCollisions::iterator</li>
+      </ul>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::soa::Index</td>
+        <td>GI</td>
+        <td>globalIndex</td>
+        <td>int64_t</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::&zwnj;collision::PosZ</td>
+        <td></td>
+        <td>posZ</td>
+        <td>float</td>
+        <td>Z Vertex position in cm</td>
+      </tr>
+      <tr>
+        <td>o2::aod::femtouniversecollision::MultV0M</td>
+        <td></td>
+        <td>multV0M</td>
+        <td>float</td>
+        <td>V0M multiplicity</td>
+      </tr>
+      <tr>
+        <td>o2::aod::femtouniversecollision::MultNtr</td>
+        <td></td>
+        <td>multNtr</td>
+        <td>int</td>
+        <td>multiplicity of charged tracks as defined in the producer</td>
+      </tr>
+      <tr>
+        <td>o2::aod::femtouniversecollision::Sphericity</td>
+        <td></td>
+        <td>sphericity</td>
+        <td>float</td>
+        <td>Sphericity of the event</td>
+      </tr>
+      <tr>
+        <td>o2::aod::femtouniversecollision::MagField</td>
+        <td></td>
+        <td>magField</td>
+        <td>float</td>
+        <td>Magnetic field of the event</td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::FDParticles</button>
+  <div class="panel">
+    <div>
+
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGCF/FemtoUniverse/DataModel/FemtoDerived.h" target="_blank">PWGCF/FemtoUniverse/DataModel/FemtoDerived.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::FDParticle = o2::aod::FDParticles::iterator</li>
+      </ul>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::soa::Index</td>
+        <td>GI</td>
+        <td>globalIndex</td>
+        <td>int64_t</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::femtouniverseparticle::FDCollisionId</td>
+        <td>I</td>
+        <td>fdCollisionId</td>
+        <td>int32</td>
+        <td>Pointer into FDCollisions</td>
+      </tr>
+      <tr>
+        <td>o2::aod::femtouniverseparticle::Pt</td>
+        <td></td>
+        <td>pt</td>
+        <td>float</td>
+        <td>p_T (GeV/c)</td>
+      </tr>
+      <tr>
+        <td>o2::aod::femtouniverseparticle::Eta</td>
+        <td></td>
+        <td>eta</td>
+        <td>float</td>
+        <td>Eta</td>
+      </tr>
+      <tr>
+        <td>o2::aod::femtouniverseparticle::Phi</td>
+        <td></td>
+        <td>phi</td>
+        <td>float</td>
+        <td>Phi</td>
+      </tr>
+      <tr>
+        <td>o2::aod::femtouniverseparticle::PartType</td>
+        <td></td>
+        <td>partType</td>
+        <td>uint8_t</td>
+        <td>Type of the particle, according to femtouniverseparticle::ParticleType</td>
+      </tr>
+      <tr>
+        <td>o2::aod::femtouniverseparticle::Cut</td>
+        <td></td>
+        <td>cut</td>
+        <td>cutContainerType</td>
+        <td>Bit-wise container for the different selection criteria</td>
+      </tr>
+      <tr>
+        <td>o2::aod::femtouniverseparticle::PIDCut</td>
+        <td></td>
+        <td>pidcut</td>
+        <td>cutContainerType</td>
+        <td>Bit-wise container for the different PID selection criteria \todo since bit-masking cannot be done yet with filters we use a second field for the PID</td>
+      </tr>
+      <tr>
+        <td>o2::aod::femtouniverseparticle::TempFitVar</td>
+        <td></td>
+        <td>tempFitVar</td>
+        <td>float</td>
+        <td>Observable for the template fitting (Track: DCA_xy, V0: CPA)</td>
+      </tr>
+      <tr>
+        <td>o2::aod::femtouniverseparticle::ChildrenIds</td>
+        <td>SAI</td>
+        <td>childrenIds</td>
+        <td></td>
+        <td>Field for the track indices to remove auto-correlations</td>
+      </tr>
+      <tr>
+        <td>o2::aod::femtouniverseparticle::MLambda</td>
+        <td></td>
+        <td>mLambda</td>
+        <td>float</td>
+        <td>The invariant mass of V0 candidate, assuming lambda</td>
+      </tr>
+      <tr>
+        <td>o2::aod::femtouniverseparticle::MAntiLambda</td>
+        <td></td>
+        <td>mAntiLambda</td>
+        <td>float</td>
+        <td>The invariant mass of V0 candidate, assuming antilambda</td>
+      </tr>
+      <tr>
+        <td>o2::aod::femtouniverseparticle::Theta</td>
+        <td>D</td>
+        <td>theta</td>
+        <td>float</td>
+        <td>Compute the theta of the track</td>
+      </tr>
+      <tr>
+        <td>o2::aod::femtouniverseparticle::Px</td>
+        <td>D</td>
+        <td>px</td>
+        <td>float</td>
+        <td>Compute the momentum in x in GeV/c</td>
+      </tr>
+      <tr>
+        <td>o2::aod::femtouniverseparticle::Py</td>
+        <td>D</td>
+        <td>py</td>
+        <td>float</td>
+        <td>Compute the momentum in y in GeV/c</td>
+      </tr>
+      <tr>
+        <td>o2::aod::femtouniverseparticle::Pz</td>
+        <td>D</td>
+        <td>pz</td>
+        <td>float</td>
+        <td>Compute the momentum in z in GeV/c</td>
+      </tr>
+      <tr>
+        <td>o2::aod::femtouniverseparticle::P</td>
+        <td>D</td>
+        <td>p</td>
+        <td>float</td>
+        <td>Compute the overall momentum in GeV/c</td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::FDExtParticles</button>
+  <div class="panel">
+    <div>
+
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGCF/FemtoUniverse/DataModel/FemtoDerived.h" target="_blank">PWGCF/FemtoUniverse/DataModel/FemtoDerived.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::FDFullParticle = o2::aod::FDExtParticles::iterator</li>
+      </ul>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::femtouniverseparticle::Sign</td>
+        <td></td>
+        <td>sign</td>
+        <td>int8_t</td>
+        <td>Sign of the track charge</td>
+      </tr>
+      <tr>
+        <td>o2::aod::femtouniverseparticle::TPCNClsFound</td>
+        <td></td>
+        <td>tpcNClsFound</td>
+        <td>uint8_t</td>
+        <td>Number of TPC clusters</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::TPCNClsFindable</td>
+        <td></td>
+        <td>tpcNClsFindable</td>
+        <td>uint8_t</td>
+        <td>Findable TPC clusters for this track geometry</td>
+      </tr>
+      <tr>
+        <td>o2::aod::femtouniverseparticle::TPCNClsCrossedRows</td>
+        <td></td>
+        <td>tpcNClsCrossedRows</td>
+        <td>uint8_t</td>
+        <td>Number of TPC crossed rows</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::TPCNClsShared</td>
+        <td></td>
+        <td>tpcNClsShared</td>
+        <td>uint8_t</td>
+        <td>Number of shared TPC clusters</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::TPCInnerParam</td>
+        <td></td>
+        <td>tpcInnerParam</td>
+        <td>float</td>
+        <td>Momentum at inner wall of the TPC</td>
+      </tr>
+      <tr>
+        <td>o2::aod::femtouniverseparticle::ITSNCls</td>
+        <td></td>
+        <td>itsNCls</td>
+        <td>uint8_t</td>
+        <td>Number of ITS clusters</td>
+      </tr>
+      <tr>
+        <td>o2::aod::femtouniverseparticle::ITSNClsInnerBarrel</td>
+        <td></td>
+        <td>itsNClsInnerBarrel</td>
+        <td>uint8_t</td>
+        <td>Number of ITS clusters in the inner barrel   TPC signal</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::DcaXY</td>
+        <td></td>
+        <td>dcaXY</td>
+        <td>float</td>
+        <td>Impact parameter in XY of the track to the primary vertex</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::DcaZ</td>
+        <td></td>
+        <td>dcaZ</td>
+        <td>float</td>
+        <td>Impact parameter in Z of the track to the primary vertex</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::TPCSignal</td>
+        <td></td>
+        <td>tpcSignal</td>
+        <td>float</td>
+        <td>dE/dx signal in the TPC</td>
+      </tr>
+      <tr>
+        <td>o2::aod::pidtpc_tiny::TPCNSigmaStoreEl</td>
+        <td></td>
+        <td>tpcNSigmaStoreEl</td>
+        <td>binning::binned_t</td>
+        <td>Stored binned nsigma with the TPC detector for electron</td>
+      </tr>
+      <tr>
+        <td>o2::aod::pidtpc_tiny::TPCNSigmaStorePi</td>
+        <td></td>
+        <td>tpcNSigmaStorePi</td>
+        <td>binning::binned_t</td>
+        <td>Stored binned nsigma with the TPC detector for pion</td>
+      </tr>
+      <tr>
+        <td>o2::aod::pidtpc_tiny::TPCNSigmaStoreKa</td>
+        <td></td>
+        <td>tpcNSigmaStoreKa</td>
+        <td>binning::binned_t</td>
+        <td>Stored binned nsigma with the TPC detector for kaon</td>
+      </tr>
+      <tr>
+        <td>o2::aod::pidtpc_tiny::TPCNSigmaStorePr</td>
+        <td></td>
+        <td>tpcNSigmaStorePr</td>
+        <td>binning::binned_t</td>
+        <td>Stored binned nsigma with the TPC detector for proton</td>
+      </tr>
+      <tr>
+        <td>o2::aod::pidtpc_tiny::TPCNSigmaStoreDe</td>
+        <td></td>
+        <td>tpcNSigmaStoreDe</td>
+        <td>binning::binned_t</td>
+        <td>Stored binned nsigma with the TPC detector for deuteron</td>
+      </tr>
+      <tr>
+        <td>o2::aod::pidtof_tiny::TOFNSigmaStoreEl</td>
+        <td></td>
+        <td>tofNSigmaStoreEl</td>
+        <td>binning::binned_t</td>
+        <td>Stored binned nsigma with the TOF detector for electron</td>
+      </tr>
+      <tr>
+        <td>o2::aod::pidtof_tiny::TOFNSigmaStorePi</td>
+        <td></td>
+        <td>tofNSigmaStorePi</td>
+        <td>binning::binned_t</td>
+        <td>Stored binned nsigma with the TOF detector for pion</td>
+      </tr>
+      <tr>
+        <td>o2::aod::pidtof_tiny::TOFNSigmaStoreKa</td>
+        <td></td>
+        <td>tofNSigmaStoreKa</td>
+        <td>binning::binned_t</td>
+        <td>Stored binned nsigma with the TOF detector for kaon</td>
+      </tr>
+      <tr>
+        <td>o2::aod::pidtof_tiny::TOFNSigmaStorePr</td>
+        <td></td>
+        <td>tofNSigmaStorePr</td>
+        <td>binning::binned_t</td>
+        <td>Stored binned nsigma with the TOF detector for proton</td>
+      </tr>
+      <tr>
+        <td>o2::aod::pidtof_tiny::TOFNSigmaStoreDe</td>
+        <td></td>
+        <td>tofNSigmaStoreDe</td>
+        <td>binning::binned_t</td>
+        <td>Stored binned nsigma with the TOF detector for deuteron</td>
+      </tr>
+      <tr>
+        <td>o2::aod::femtouniverseparticle::DaughDCA</td>
+        <td></td>
+        <td>daughDCA</td>
+        <td>float</td>
+        <td>DCA between daughters</td>
+      </tr>
+      <tr>
+        <td>o2::aod::femtouniverseparticle::TransRadius</td>
+        <td></td>
+        <td>transRadius</td>
+        <td>float</td>
+        <td>Transverse radius of the decay vertex</td>
+      </tr>
+      <tr>
+        <td>o2::aod::femtouniverseparticle::DecayVtxX</td>
+        <td></td>
+        <td>decayVtxX</td>
+        <td>float</td>
+        <td>X position of the decay vertex</td>
+      </tr>
+      <tr>
+        <td>o2::aod::femtouniverseparticle::DecayVtxY</td>
+        <td></td>
+        <td>decayVtxY</td>
+        <td>float</td>
+        <td>Y position of the decay vertex</td>
+      </tr>
+      <tr>
+        <td>o2::aod::femtouniverseparticle::DecayVtxZ</td>
+        <td></td>
+        <td>decayVtxZ</td>
+        <td>float</td>
+        <td>Z position of the decay vertex</td>
+      </tr>
+      <tr>
+        <td>o2::aod::femtouniverseparticle::MKaon</td>
+        <td></td>
+        <td>mKaon</td>
+        <td>float</td>
+        <td>The invariant mass of V0 candidate, assuming kaon</td>
+      </tr>
+      <tr>
+        <td>o2::aod::femtouniverseparticle::TPCCrossedRowsOverFindableCls</td>
+        <td>D</td>
+        <td>tpcCrossedRowsOverFindableCls</td>
+        <td>float</td>
+        <td>Compute the number of crossed rows over findable TPC clusters</td>
+      </tr>
+      <tr>
+        <td>o2::aod::pidtpc_tiny::TPCNSigmaEl</td>
+        <td>GI</td>
+        <td></td>
+        <td>?</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::pidtpc_tiny::TPCNSigmaPi</td>
+        <td>GI</td>
+        <td></td>
+        <td>?</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::pidtpc_tiny::TPCNSigmaKa</td>
+        <td>GI</td>
+        <td></td>
+        <td>?</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::pidtpc_tiny::TPCNSigmaPr</td>
+        <td>GI</td>
+        <td></td>
+        <td>?</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::pidtpc_tiny::TPCNSigmaDe</td>
+        <td>GI</td>
+        <td></td>
+        <td>?</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::pidtof_tiny::TOFNSigmaEl</td>
+        <td>GI</td>
+        <td></td>
+        <td>?</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::pidtof_tiny::TOFNSigmaPi</td>
+        <td>GI</td>
+        <td></td>
+        <td>?</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::pidtof_tiny::TOFNSigmaKa</td>
+        <td>GI</td>
+        <td></td>
+        <td>?</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::pidtof_tiny::TOFNSigmaPr</td>
+        <td>GI</td>
+        <td></td>
+        <td>?</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::pidtof_tiny::TOFNSigmaDe</td>
+        <td>GI</td>
+        <td></td>
+        <td>?</td>
+        <td></td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::FDMCParticles</button>
+  <div class="panel">
+    <div>
+
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGCF/FemtoUniverse/DataModel/FemtoDerived.h" target="_blank">PWGCF/FemtoUniverse/DataModel/FemtoDerived.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::FDMCParticle = o2::aod::FDMCParticles::iterator</li>
+      </ul>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::soa::Index</td>
+        <td>GI</td>
+        <td>globalIndex</td>
+        <td>int64_t</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::femtouniverseMCparticle::PartOriginMCTruth</td>
+        <td></td>
+        <td>partOriginMCTruth</td>
+        <td>uint8_t</td>
+        <td>Origin of the particle, according to femtouniverseparticle::ParticleOriginMCTruth</td>
+      </tr>
+      <tr>
+        <td>o2::aod::femtouniverseMCparticle::PDGMCTruth</td>
+        <td></td>
+        <td>pdgMCTruth</td>
+        <td>int</td>
+        <td>Particle PDG</td>
+      </tr>
+      <tr>
+        <td>o2::aod::femtouniverseparticle::Pt</td>
+        <td></td>
+        <td>pt</td>
+        <td>float</td>
+        <td>p_T (GeV/c)</td>
+      </tr>
+      <tr>
+        <td>o2::aod::femtouniverseparticle::Eta</td>
+        <td></td>
+        <td>eta</td>
+        <td>float</td>
+        <td>Eta</td>
+      </tr>
+      <tr>
+        <td>o2::aod::femtouniverseparticle::Phi</td>
+        <td></td>
+        <td>phi</td>
+        <td>float</td>
+        <td>Phi</td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::FDExtMCParticles</button>
+  <div class="panel">
+    <div>
+
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGCF/FemtoUniverse/DataModel/FemtoDerived.h" target="_blank">PWGCF/FemtoUniverse/DataModel/FemtoDerived.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::FDExtMCParticle = o2::aod::FDExtMCParticles::iterator</li>
+      </ul>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::femtouniverseMCparticle::MotherPDG</td>
+        <td></td>
+        <td>motherPDG</td>
+        <td>int</td>
+        <td>Checks mother PDG, where mother is the primary particle for that decay chain</td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::FDMCLabels</button>
+  <div class="panel">
+    <div>
+       Table joinable to FemtoUniverseParticle containing the MC labels
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGCF/FemtoUniverse/DataModel/FemtoDerived.h" target="_blank">PWGCF/FemtoUniverse/DataModel/FemtoDerived.h</a>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::mcfdlabel::FDMCParticleId</td>
+        <td>I</td>
+        <td>fdMCParticleId</td>
+        <td>int32</td>
+        <td>MC particle for femtodreamparticle</td>
+      </tr>
+    </table>
+  </div>
+
 </div>
 
 ###  o2-analysis-hf-electron-selection-with-tpc-emcal
@@ -59412,6 +60721,402 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGHF
 </div>
 
 ## PWG-JE
+
+###  o2-analysis-je-jet-deriveddata-producer
+Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGJE/TableProducer//derivedDataProducer.cxx" target="_blank">derivedDataProducer.cxx</a>
+<div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::JCollisions</button>
+  <div class="panel">
+    <div>
+       Reduced collision table
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGCF/JCorran/DataModel/JCatalyst.h" target="_blank">PWGCF/JCorran/DataModel/JCatalyst.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::JCollision = o2::aod::JCollisions::iterator</li>
+        <li>o2::aod::JetCollisions = o2::aod::JCollisions</li>
+      </ul>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::soa::Index</td>
+        <td>GI</td>
+        <td>globalIndex</td>
+        <td>int64_t</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::bc::RunNumber</td>
+        <td></td>
+        <td>runNumber</td>
+        <td>int</td>
+        <td>Run number</td>
+      </tr>
+      <tr>
+        <td>o2::aod::&zwnj;collision::PosZ</td>
+        <td></td>
+        <td>posZ</td>
+        <td>float</td>
+        <td>Z Vertex position in cm</td>
+      </tr>
+      <tr>
+        <td>o2::aod::jcollision::Multiplicity</td>
+        <td></td>
+        <td>multiplicity</td>
+        <td>float</td>
+        <td>Collision centrality or multiplicity</td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::JTracks</button>
+  <div class="panel">
+    <div>
+       Reduced track table
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGCF/JCorran/DataModel/JCatalyst.h" target="_blank">PWGCF/JCorran/DataModel/JCatalyst.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::JTrack = o2::aod::JTracks::iterator</li>
+        <li>o2::aod::JetTracks = o2::aod::JTracks</li>
+      </ul>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::soa::Index</td>
+        <td>GI</td>
+        <td>globalIndex</td>
+        <td>int64_t</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::jtrack::JCollisionId</td>
+        <td>I</td>
+        <td>jcollisionId</td>
+        <td>int32</td>
+        <td>collision ID</td>
+      </tr>
+      <tr>
+        <td>o2::aod::jtrack::Pt</td>
+        <td></td>
+        <td>pt</td>
+        <td>float</td>
+        <td>p_T (GeV/c)</td>
+      </tr>
+      <tr>
+        <td>o2::aod::jtrack::Eta</td>
+        <td></td>
+        <td>eta</td>
+        <td>float</td>
+        <td>Eta</td>
+      </tr>
+      <tr>
+        <td>o2::aod::jtrack::Phi</td>
+        <td></td>
+        <td>phi</td>
+        <td>float</td>
+        <td>Phi</td>
+      </tr>
+      <tr>
+        <td>o2::aod::jtrack::Sign</td>
+        <td></td>
+        <td>sign</td>
+        <td>int8_t</td>
+        <td>Phi</td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::JV0Ids</button>
+  <div class="panel">
+    <div>
+
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGJE/DataModel/JetReducedDataV0.h" target="_blank">PWGJE/DataModel/JetReducedDataV0.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::CandidatesV0Data = soa::Join<o2::aod::V0Cores, o2::aod::JV0Ids></li>
+        <li>o2::aod::CandidatesV0MCD = soa::Join<o2::aod::V0Cores, o2::aod::V0MCCores, o2::aod::JV0Ids></li>
+      </ul>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::jv0indices::JCollisionId</td>
+        <td>I</td>
+        <td>collisionId</td>
+        <td>int32</td>
+        <td>Pointer into JCollisions</td>
+      </tr>
+      <tr>
+        <td>o2::aod::jv0indices::PosTrackId</td>
+        <td>I</td>
+        <td>posTrackId</td>
+        <td>int</td>
+        <td>Pointer into JTracks</td>
+      </tr>
+      <tr>
+        <td>o2::aod::jv0indices::NegTrackId</td>
+        <td>I</td>
+        <td>negTrackId</td>
+        <td>int</td>
+        <td>Pointer into JTracks</td>
+      </tr>
+    </table>
+  </div>
+
+</div>
+
+###  o2-analysis-je-jet-deriveddata-producer-dummy
+Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGJE/TableProducer//derivedDataProducerDummy.cxx" target="_blank">derivedDataProducerDummy.cxx</a>
+<div>
+
+</div>
+
+###  o2-analysis-je-jet-deriveddata-producer-dummy-bplus
+Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGJE/TableProducer//derivedDataProducerDummyBplus.cxx" target="_blank">derivedDataProducerDummyBplus.cxx</a>
+<div>
+
+</div>
+
+###  o2-analysis-je-jet-deriveddata-producer-dummy-d0
+Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGJE/TableProducer//derivedDataProducerDummyD0.cxx" target="_blank">derivedDataProducerDummyD0.cxx</a>
+<div>
+
+</div>
+
+###  o2-analysis-je-jet-deriveddata-producer-dummy-dielectron
+Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGJE/TableProducer//derivedDataProducerDummyDielectron.cxx" target="_blank">derivedDataProducerDummyDielectron.cxx</a>
+<div>
+
+</div>
+
+###  o2-analysis-je-jet-deriveddata-producer-dummy-lc
+Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGJE/TableProducer//derivedDataProducerDummyLc.cxx" target="_blank">derivedDataProducerDummyLc.cxx</a>
+<div>
+
+</div>
+
+###  o2-analysis-je-jet-deriveddata-trigger-producer
+Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGJE/TableProducer//derivedDataTriggerProducer.cxx" target="_blank">derivedDataTriggerProducer.cxx</a>
+<div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::JChTrigSels</button>
+  <div class="panel">
+    <div>
+
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGJE/DataModel/JetReducedData.h" target="_blank">PWGJE/DataModel/JetReducedData.h</a>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::jcollision::ChargedTriggerSel</td>
+        <td></td>
+        <td>chargedTriggerSel</td>
+        <td>uint8_t</td>
+        <td></td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::JFullTrigSels</button>
+  <div class="panel">
+    <div>
+
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGJE/DataModel/JetReducedData.h" target="_blank">PWGJE/DataModel/JetReducedData.h</a>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::jcollision::FullTriggerSel</td>
+        <td></td>
+        <td>fullTriggerSel</td>
+        <td>uint32_t</td>
+        <td></td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::JChHFTrigSels</button>
+  <div class="panel">
+    <div>
+
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGJE/DataModel/JetReducedData.h" target="_blank">PWGJE/DataModel/JetReducedData.h</a>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::jcollision::ChargedHFTriggerSel</td>
+        <td></td>
+        <td>chargedHFTriggerSel</td>
+        <td>uint8_t</td>
+        <td></td>
+      </tr>
+    </table>
+  </div>
+
+</div>
+
+###  o2-analysis-je-jet-deriveddata-writer
+Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGJE/TableProducer//derivedDataWriter.cxx" target="_blank">derivedDataWriter.cxx</a>
+<div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::JDumD0ParDaus</button>
+  <div class="panel">
+    <div>
+
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGJE/DataModel/JetReducedDataHF.h" target="_blank">PWGJE/DataModel/JetReducedDataHF.h</a>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::jdummyd0::DummyD0</td>
+        <td></td>
+        <td>dummyD0</td>
+        <td>bool</td>
+        <td></td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::JDumD0MlDaus</button>
+  <div class="panel">
+    <div>
+
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGJE/DataModel/JetReducedDataHF.h" target="_blank">PWGJE/DataModel/JetReducedDataHF.h</a>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::jdummyd0::DummyD0</td>
+        <td></td>
+        <td>dummyD0</td>
+        <td>bool</td>
+        <td></td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::JDumLcParDaus</button>
+  <div class="panel">
+    <div>
+
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGJE/DataModel/JetReducedDataHF.h" target="_blank">PWGJE/DataModel/JetReducedDataHF.h</a>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::jdummylc::DummyLc</td>
+        <td></td>
+        <td>dummyLc</td>
+        <td>bool</td>
+        <td></td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::JDumLcMlDaus</button>
+  <div class="panel">
+    <div>
+
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGJE/DataModel/JetReducedDataHF.h" target="_blank">PWGJE/DataModel/JetReducedDataHF.h</a>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::jdummylc::DummyLc</td>
+        <td></td>
+        <td>dummyLc</td>
+        <td>bool</td>
+        <td></td>
+      </tr>
+    </table>
+  </div>
+
+</div>
 
 ###  o2-analysis-je-emcal-correction-task
 Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGJE/TableProducer//emcalCorrectionTask.cxx" target="_blank">emcalCorrectionTask.cxx</a>
@@ -60421,65 +62126,202 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGJE
         <td>Pointer into JCollisions</td>
       </tr>
       <tr>
-        <td>o2::aod::jtracksub::Pt</td>
+        <td>o2::aod::jtrack::Pt</td>
         <td></td>
         <td>pt</td>
         <td>float</td>
-        <td></td>
+        <td>p_T (GeV/c)</td>
       </tr>
       <tr>
-        <td>o2::aod::jtracksub::Eta</td>
+        <td>o2::aod::jtrack::Eta</td>
         <td></td>
         <td>eta</td>
         <td>float</td>
-        <td></td>
+        <td>Eta</td>
       </tr>
       <tr>
-        <td>o2::aod::jtracksub::Phi</td>
+        <td>o2::aod::jtrack::Phi</td>
         <td></td>
         <td>phi</td>
         <td>float</td>
-        <td></td>
+        <td>Phi</td>
       </tr>
       <tr>
-        <td>o2::aod::jtracksub::Energy</td>
-        <td></td>
-        <td>energy</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::jtracksub::TrackSel</td>
+        <td>o2::aod::jtrack::TrackSel</td>
         <td></td>
         <td>trackSel</td>
         <td>uint8_t</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::jtracksub::Px</td>
+        <td>o2::aod::jtrack::Px</td>
         <td>D</td>
         <td>px</td>
         <td>float</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::jtracksub::Py</td>
+        <td>o2::aod::jtrack::Py</td>
         <td>D</td>
         <td>py</td>
         <td>float</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::jtracksub::Pz</td>
+        <td>o2::aod::jtrack::Pz</td>
         <td>D</td>
         <td>pz</td>
         <td>float</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::jtracksub::P</td>
+        <td>o2::aod::jtrack::P</td>
         <td>D</td>
         <td>p</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::jtrack::Energy</td>
+        <td>D</td>
+        <td>energy</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::JMcParticleSubs</button>
+  <div class="panel">
+    <div>
+
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGJE/DataModel/JetSubtraction.h" target="_blank">PWGJE/DataModel/JetSubtraction.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::JetParticlesSub = o2::aod::JMcParticleSubs</li>
+        <li>o2::aod::JMcParticleSub = o2::aod::JMcParticleSubs::iterator</li>
+      </ul>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::soa::Index</td>
+        <td>GI</td>
+        <td>globalIndex</td>
+        <td>int64_t</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::bkgcharged::JMcCollisionId</td>
+        <td>I</td>
+        <td>mcCollisionId</td>
+        <td>int32</td>
+        <td>Pointer into JMcCollisions</td>
+      </tr>
+      <tr>
+        <td>o2::aod::jmcparticle::Pt</td>
+        <td></td>
+        <td>pt</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::jmcparticle::Eta</td>
+        <td></td>
+        <td>eta</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::jmcparticle::Phi</td>
+        <td></td>
+        <td>phi</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::jmcparticle::Y</td>
+        <td></td>
+        <td>y</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::jmcparticle::E</td>
+        <td></td>
+        <td>e</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::jmcparticle::PdgCode</td>
+        <td></td>
+        <td>pdgCode</td>
+        <td>int</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::jmcparticle::GenStatusCode</td>
+        <td></td>
+        <td>getGenStatusCode</td>
+        <td>int</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::jmcparticle::HepMCStatusCode</td>
+        <td></td>
+        <td>getHepMCStatusCode</td>
+        <td>int</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::jmcparticle::IsPhysicalPrimary</td>
+        <td></td>
+        <td>isPhysicalPrimary</td>
+        <td>bool</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::jmcparticle::Px</td>
+        <td>D</td>
+        <td>px</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::jmcparticle::Py</td>
+        <td>D</td>
+        <td>py</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::jmcparticle::Pz</td>
+        <td>D</td>
+        <td>pz</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::jmcparticle::P</td>
+        <td>D</td>
+        <td>p</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::jmcparticle::Energy</td>
+        <td>D</td>
+        <td>energy</td>
         <td>float</td>
         <td></td>
       </tr>
@@ -60523,65 +62365,202 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGJE
         <td>Pointer into HfD0Bases</td>
       </tr>
       <tr>
-        <td>o2::aod::jtracksub::Pt</td>
+        <td>o2::aod::jtrack::Pt</td>
         <td></td>
         <td>pt</td>
         <td>float</td>
-        <td></td>
+        <td>p_T (GeV/c)</td>
       </tr>
       <tr>
-        <td>o2::aod::jtracksub::Eta</td>
+        <td>o2::aod::jtrack::Eta</td>
         <td></td>
         <td>eta</td>
         <td>float</td>
-        <td></td>
+        <td>Eta</td>
       </tr>
       <tr>
-        <td>o2::aod::jtracksub::Phi</td>
+        <td>o2::aod::jtrack::Phi</td>
         <td></td>
         <td>phi</td>
         <td>float</td>
-        <td></td>
+        <td>Phi</td>
       </tr>
       <tr>
-        <td>o2::aod::jtracksub::Energy</td>
-        <td></td>
-        <td>energy</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::jtracksub::TrackSel</td>
+        <td>o2::aod::jtrack::TrackSel</td>
         <td></td>
         <td>trackSel</td>
         <td>uint8_t</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::jtracksub::Px</td>
+        <td>o2::aod::jtrack::Px</td>
         <td>D</td>
         <td>px</td>
         <td>float</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::jtracksub::Py</td>
+        <td>o2::aod::jtrack::Py</td>
         <td>D</td>
         <td>py</td>
         <td>float</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::jtracksub::Pz</td>
+        <td>o2::aod::jtrack::Pz</td>
         <td>D</td>
         <td>pz</td>
         <td>float</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::jtracksub::P</td>
+        <td>o2::aod::jtrack::P</td>
         <td>D</td>
         <td>p</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::jtrack::Energy</td>
+        <td>D</td>
+        <td>energy</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::JMcParticleD0Subs</button>
+  <div class="panel">
+    <div>
+
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGJE/DataModel/JetSubtraction.h" target="_blank">PWGJE/DataModel/JetSubtraction.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::JetParticlesSubD0 = o2::aod::JMcParticleD0Subs</li>
+        <li>o2::aod::JMcParticleD0Sub = o2::aod::JMcParticleD0Subs::iterator</li>
+      </ul>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::soa::Index</td>
+        <td>GI</td>
+        <td>globalIndex</td>
+        <td>int64_t</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::bkgd0mc::CandidateId</td>
+        <td>I</td>
+        <td>candidateId</td>
+        <td>int</td>
+        <td>Pointer into HfD0PBases</td>
+      </tr>
+      <tr>
+        <td>o2::aod::jmcparticle::Pt</td>
+        <td></td>
+        <td>pt</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::jmcparticle::Eta</td>
+        <td></td>
+        <td>eta</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::jmcparticle::Phi</td>
+        <td></td>
+        <td>phi</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::jmcparticle::Y</td>
+        <td></td>
+        <td>y</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::jmcparticle::E</td>
+        <td></td>
+        <td>e</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::jmcparticle::PdgCode</td>
+        <td></td>
+        <td>pdgCode</td>
+        <td>int</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::jmcparticle::GenStatusCode</td>
+        <td></td>
+        <td>getGenStatusCode</td>
+        <td>int</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::jmcparticle::HepMCStatusCode</td>
+        <td></td>
+        <td>getHepMCStatusCode</td>
+        <td>int</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::jmcparticle::IsPhysicalPrimary</td>
+        <td></td>
+        <td>isPhysicalPrimary</td>
+        <td>bool</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::jmcparticle::Px</td>
+        <td>D</td>
+        <td>px</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::jmcparticle::Py</td>
+        <td>D</td>
+        <td>py</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::jmcparticle::Pz</td>
+        <td>D</td>
+        <td>pz</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::jmcparticle::P</td>
+        <td>D</td>
+        <td>p</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::jmcparticle::Energy</td>
+        <td>D</td>
+        <td>energy</td>
         <td>float</td>
         <td></td>
       </tr>
@@ -60622,68 +62601,205 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGJE
         <td>I</td>
         <td>candidateId</td>
         <td>int</td>
-        <td>Pointer into Hf3PBases</td>
+        <td>Pointer into HfLcBases</td>
       </tr>
       <tr>
-        <td>o2::aod::jtracksub::Pt</td>
+        <td>o2::aod::jtrack::Pt</td>
         <td></td>
         <td>pt</td>
         <td>float</td>
-        <td></td>
+        <td>p_T (GeV/c)</td>
       </tr>
       <tr>
-        <td>o2::aod::jtracksub::Eta</td>
+        <td>o2::aod::jtrack::Eta</td>
         <td></td>
         <td>eta</td>
         <td>float</td>
-        <td></td>
+        <td>Eta</td>
       </tr>
       <tr>
-        <td>o2::aod::jtracksub::Phi</td>
+        <td>o2::aod::jtrack::Phi</td>
         <td></td>
         <td>phi</td>
         <td>float</td>
-        <td></td>
+        <td>Phi</td>
       </tr>
       <tr>
-        <td>o2::aod::jtracksub::Energy</td>
-        <td></td>
-        <td>energy</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::jtracksub::TrackSel</td>
+        <td>o2::aod::jtrack::TrackSel</td>
         <td></td>
         <td>trackSel</td>
         <td>uint8_t</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::jtracksub::Px</td>
+        <td>o2::aod::jtrack::Px</td>
         <td>D</td>
         <td>px</td>
         <td>float</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::jtracksub::Py</td>
+        <td>o2::aod::jtrack::Py</td>
         <td>D</td>
         <td>py</td>
         <td>float</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::jtracksub::Pz</td>
+        <td>o2::aod::jtrack::Pz</td>
         <td>D</td>
         <td>pz</td>
         <td>float</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::jtracksub::P</td>
+        <td>o2::aod::jtrack::P</td>
         <td>D</td>
         <td>p</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::jtrack::Energy</td>
+        <td>D</td>
+        <td>energy</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::JMcParticleLcSubs</button>
+  <div class="panel">
+    <div>
+
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGJE/DataModel/JetSubtraction.h" target="_blank">PWGJE/DataModel/JetSubtraction.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::JetParticlesSubLc = o2::aod::JMcParticleLcSubs</li>
+        <li>o2::aod::JMcParticleLcSub = o2::aod::JMcParticleLcSubs::iterator</li>
+      </ul>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::soa::Index</td>
+        <td>GI</td>
+        <td>globalIndex</td>
+        <td>int64_t</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::bkglcmc::CandidateId</td>
+        <td>I</td>
+        <td>candidateId</td>
+        <td>int</td>
+        <td>Pointer into HfLcPBases</td>
+      </tr>
+      <tr>
+        <td>o2::aod::jmcparticle::Pt</td>
+        <td></td>
+        <td>pt</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::jmcparticle::Eta</td>
+        <td></td>
+        <td>eta</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::jmcparticle::Phi</td>
+        <td></td>
+        <td>phi</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::jmcparticle::Y</td>
+        <td></td>
+        <td>y</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::jmcparticle::E</td>
+        <td></td>
+        <td>e</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::jmcparticle::PdgCode</td>
+        <td></td>
+        <td>pdgCode</td>
+        <td>int</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::jmcparticle::GenStatusCode</td>
+        <td></td>
+        <td>getGenStatusCode</td>
+        <td>int</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::jmcparticle::HepMCStatusCode</td>
+        <td></td>
+        <td>getHepMCStatusCode</td>
+        <td>int</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::jmcparticle::IsPhysicalPrimary</td>
+        <td></td>
+        <td>isPhysicalPrimary</td>
+        <td>bool</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::jmcparticle::Px</td>
+        <td>D</td>
+        <td>px</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::jmcparticle::Py</td>
+        <td>D</td>
+        <td>py</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::jmcparticle::Pz</td>
+        <td>D</td>
+        <td>pz</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::jmcparticle::P</td>
+        <td>D</td>
+        <td>p</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::jmcparticle::Energy</td>
+        <td>D</td>
+        <td>energy</td>
         <td>float</td>
         <td></td>
       </tr>
@@ -60724,68 +62840,205 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGJE
         <td>I</td>
         <td>candidateId</td>
         <td>int</td>
-        <td>Pointer into HfCandBplus</td>
+        <td>Pointer into HfBplusBases</td>
       </tr>
       <tr>
-        <td>o2::aod::jtracksub::Pt</td>
+        <td>o2::aod::jtrack::Pt</td>
         <td></td>
         <td>pt</td>
         <td>float</td>
-        <td></td>
+        <td>p_T (GeV/c)</td>
       </tr>
       <tr>
-        <td>o2::aod::jtracksub::Eta</td>
+        <td>o2::aod::jtrack::Eta</td>
         <td></td>
         <td>eta</td>
         <td>float</td>
-        <td></td>
+        <td>Eta</td>
       </tr>
       <tr>
-        <td>o2::aod::jtracksub::Phi</td>
+        <td>o2::aod::jtrack::Phi</td>
         <td></td>
         <td>phi</td>
         <td>float</td>
-        <td></td>
+        <td>Phi</td>
       </tr>
       <tr>
-        <td>o2::aod::jtracksub::Energy</td>
-        <td></td>
-        <td>energy</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::jtracksub::TrackSel</td>
+        <td>o2::aod::jtrack::TrackSel</td>
         <td></td>
         <td>trackSel</td>
         <td>uint8_t</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::jtracksub::Px</td>
+        <td>o2::aod::jtrack::Px</td>
         <td>D</td>
         <td>px</td>
         <td>float</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::jtracksub::Py</td>
+        <td>o2::aod::jtrack::Py</td>
         <td>D</td>
         <td>py</td>
         <td>float</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::jtracksub::Pz</td>
+        <td>o2::aod::jtrack::Pz</td>
         <td>D</td>
         <td>pz</td>
         <td>float</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::jtracksub::P</td>
+        <td>o2::aod::jtrack::P</td>
         <td>D</td>
         <td>p</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::jtrack::Energy</td>
+        <td>D</td>
+        <td>energy</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::JMcParticleBplusSubs</button>
+  <div class="panel">
+    <div>
+
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGJE/DataModel/JetSubtraction.h" target="_blank">PWGJE/DataModel/JetSubtraction.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::JetParticlesSubBplus = o2::aod::JMcParticleBplusSubs</li>
+        <li>o2::aod::JMcParticleBplusSub = o2::aod::JMcParticleBplusSubs::iterator</li>
+      </ul>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::soa::Index</td>
+        <td>GI</td>
+        <td>globalIndex</td>
+        <td>int64_t</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::bkgbplusmc::CandidateId</td>
+        <td>I</td>
+        <td>candidateId</td>
+        <td>int</td>
+        <td>Pointer into HfBplusPBases</td>
+      </tr>
+      <tr>
+        <td>o2::aod::jmcparticle::Pt</td>
+        <td></td>
+        <td>pt</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::jmcparticle::Eta</td>
+        <td></td>
+        <td>eta</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::jmcparticle::Phi</td>
+        <td></td>
+        <td>phi</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::jmcparticle::Y</td>
+        <td></td>
+        <td>y</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::jmcparticle::E</td>
+        <td></td>
+        <td>e</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::jmcparticle::PdgCode</td>
+        <td></td>
+        <td>pdgCode</td>
+        <td>int</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::jmcparticle::GenStatusCode</td>
+        <td></td>
+        <td>getGenStatusCode</td>
+        <td>int</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::jmcparticle::HepMCStatusCode</td>
+        <td></td>
+        <td>getHepMCStatusCode</td>
+        <td>int</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::jmcparticle::IsPhysicalPrimary</td>
+        <td></td>
+        <td>isPhysicalPrimary</td>
+        <td>bool</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::jmcparticle::Px</td>
+        <td>D</td>
+        <td>px</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::jmcparticle::Py</td>
+        <td>D</td>
+        <td>py</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::jmcparticle::Pz</td>
+        <td>D</td>
+        <td>pz</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::jmcparticle::P</td>
+        <td>D</td>
+        <td>p</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::jmcparticle::Energy</td>
+        <td>D</td>
+        <td>energy</td>
         <td>float</td>
         <td></td>
       </tr>
@@ -60829,167 +63082,6 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGJE
         <td>Pointer into Dielectrons</td>
       </tr>
       <tr>
-        <td>o2::aod::jtracksub::Pt</td>
-        <td></td>
-        <td>pt</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::jtracksub::Eta</td>
-        <td></td>
-        <td>eta</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::jtracksub::Phi</td>
-        <td></td>
-        <td>phi</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::jtracksub::Energy</td>
-        <td></td>
-        <td>energy</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::jtracksub::TrackSel</td>
-        <td></td>
-        <td>trackSel</td>
-        <td>uint8_t</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::jtracksub::Px</td>
-        <td>D</td>
-        <td>px</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::jtracksub::Py</td>
-        <td>D</td>
-        <td>py</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::jtracksub::Pz</td>
-        <td>D</td>
-        <td>pz</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::jtracksub::P</td>
-        <td>D</td>
-        <td>p</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-    </table>
-  </div>
-
-</div>
-
-###  o2-analysis-je-jet-deriveddata-producer
-Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGJE/TableProducer//jetderiveddataproducer.cxx" target="_blank">jetderiveddataproducer.cxx</a>
-<div>
-
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::JCollisions</button>
-  <div class="panel">
-    <div>
-       Reduced collision table
-    </div>
-    <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGCF/JCorran/DataModel/JCatalyst.h" target="_blank">PWGCF/JCorran/DataModel/JCatalyst.h</a>
-    </div>
-    <div>Is used in:
-      <ul>
-        <li>o2::aod::JCollision = o2::aod::JCollisions::iterator</li>
-        <li>o2::aod::JetCollisions = o2::aod::JCollisions</li>
-      </ul>
-    </div>
-    <table class=DataModel>
-      <tr>
-        <th>Name</th>
-        <th></th>
-        <th>Getter</th>
-        <th>Type</th>
-        <th>Comment</th>
-      </tr>
-      <tr>
-        <td>o2::soa::Index</td>
-        <td>GI</td>
-        <td>globalIndex</td>
-        <td>int64_t</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::bc::RunNumber</td>
-        <td></td>
-        <td>runNumber</td>
-        <td>int</td>
-        <td>Run number</td>
-      </tr>
-      <tr>
-        <td>o2::aod::&zwnj;collision::PosZ</td>
-        <td></td>
-        <td>posZ</td>
-        <td>float</td>
-        <td>Z Vertex position in cm</td>
-      </tr>
-      <tr>
-        <td>o2::aod::jcollision::Multiplicity</td>
-        <td></td>
-        <td>multiplicity</td>
-        <td>float</td>
-        <td>Collision centrality or multiplicity</td>
-      </tr>
-    </table>
-  </div>
-
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::JTracks</button>
-  <div class="panel">
-    <div>
-       Reduced track table
-    </div>
-    <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGCF/JCorran/DataModel/JCatalyst.h" target="_blank">PWGCF/JCorran/DataModel/JCatalyst.h</a>
-    </div>
-    <div>Is used in:
-      <ul>
-        <li>o2::aod::JTrack = o2::aod::JTracks::iterator</li>
-        <li>o2::aod::JetTracks = o2::aod::JTracks</li>
-      </ul>
-    </div>
-    <table class=DataModel>
-      <tr>
-        <th>Name</th>
-        <th></th>
-        <th>Getter</th>
-        <th>Type</th>
-        <th>Comment</th>
-      </tr>
-      <tr>
-        <td>o2::soa::Index</td>
-        <td>GI</td>
-        <td>globalIndex</td>
-        <td>int64_t</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::jtrack::JCollisionId</td>
-        <td>I</td>
-        <td>jcollisionId</td>
-        <td>int32</td>
-        <td>collision ID</td>
-      </tr>
-      <tr>
         <td>o2::aod::jtrack::Pt</td>
         <td></td>
         <td>pt</td>
@@ -61011,27 +63103,62 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGJE
         <td>Phi</td>
       </tr>
       <tr>
-        <td>o2::aod::jtrack::Sign</td>
+        <td>o2::aod::jtrack::TrackSel</td>
         <td></td>
-        <td>sign</td>
-        <td>int8_t</td>
-        <td>Phi</td>
+        <td>trackSel</td>
+        <td>uint8_t</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::jtrack::Px</td>
+        <td>D</td>
+        <td>px</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::jtrack::Py</td>
+        <td>D</td>
+        <td>py</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::jtrack::Pz</td>
+        <td>D</td>
+        <td>pz</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::jtrack::P</td>
+        <td>D</td>
+        <td>p</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::jtrack::Energy</td>
+        <td>D</td>
+        <td>energy</td>
+        <td>float</td>
+        <td></td>
       </tr>
     </table>
   </div>
 
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::JV0Ids</button>
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::JMcParticleDielectronSubs</button>
   <div class="panel">
     <div>
 
     </div>
     <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGJE/DataModel/JetReducedDataV0.h" target="_blank">PWGJE/DataModel/JetReducedDataV0.h</a>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGJE/DataModel/JetSubtraction.h" target="_blank">PWGJE/DataModel/JetSubtraction.h</a>
     </div>
     <div>Is used in:
       <ul>
-        <li>o2::aod::CandidatesV0Data = soa::Join<o2::aod::V0Cores, o2::aod::JV0Ids></li>
-        <li>o2::aod::CandidatesV0MCD = soa::Join<o2::aod::V0Cores, o2::aod::V0MCCores, o2::aod::JV0Ids></li>
+        <li>o2::aod::JetParticlesSubDielectron = o2::aod::JMcParticleDielectronSubs</li>
+        <li>o2::aod::JMcParticleDielectronSub = o2::aod::JMcParticleDielectronSubs::iterator</li>
       </ul>
     </div>
     <table class=DataModel>
@@ -61043,147 +63170,124 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGJE
         <th>Comment</th>
       </tr>
       <tr>
-        <td>o2::aod::jv0indices::JCollisionId</td>
-        <td>I</td>
-        <td>collisionId</td>
-        <td>int32</td>
-        <td>Pointer into JCollisions</td>
+        <td>o2::soa::Index</td>
+        <td>GI</td>
+        <td>globalIndex</td>
+        <td>int64_t</td>
+        <td></td>
       </tr>
       <tr>
-        <td>o2::aod::jv0indices::PosTrackId</td>
+        <td>o2::aod::bkgdielectronmc::CandidateId</td>
         <td>I</td>
-        <td>posTrackId</td>
+        <td>candidateId</td>
         <td>int</td>
-        <td>Pointer into JTracks</td>
+        <td>Pointer into JDielectronMcs</td>
       </tr>
       <tr>
-        <td>o2::aod::jv0indices::NegTrackId</td>
-        <td>I</td>
-        <td>negTrackId</td>
+        <td>o2::aod::jmcparticle::Pt</td>
+        <td></td>
+        <td>pt</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::jmcparticle::Eta</td>
+        <td></td>
+        <td>eta</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::jmcparticle::Phi</td>
+        <td></td>
+        <td>phi</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::jmcparticle::Y</td>
+        <td></td>
+        <td>y</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::jmcparticle::E</td>
+        <td></td>
+        <td>e</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::jmcparticle::PdgCode</td>
+        <td></td>
+        <td>pdgCode</td>
         <td>int</td>
-        <td>Pointer into JTracks</td>
-      </tr>
-    </table>
-  </div>
-
-</div>
-
-###  o2-analysis-je-jet-deriveddata-producer-dummy
-Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGJE/TableProducer//jetderiveddataproducerdummy.cxx" target="_blank">jetderiveddataproducerdummy.cxx</a>
-<div>
-
-</div>
-
-###  o2-analysis-je-jet-deriveddata-producer-dummy-d0
-Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGJE/TableProducer//jetderiveddataproducerdummyd0.cxx" target="_blank">jetderiveddataproducerdummyd0.cxx</a>
-<div>
-
-</div>
-
-###  o2-analysis-je-jet-deriveddata-producer-dummy-dielectron
-Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGJE/TableProducer//jetderiveddataproducerdummydielectron.cxx" target="_blank">jetderiveddataproducerdummydielectron.cxx</a>
-<div>
-
-</div>
-
-###  o2-analysis-je-jet-deriveddata-producer-dummy-lc
-Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGJE/TableProducer//jetderiveddataproducerdummylc.cxx" target="_blank">jetderiveddataproducerdummylc.cxx</a>
-<div>
-
-</div>
-
-###  o2-analysis-je-jet-deriveddata-trigger-producer
-Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGJE/TableProducer//jetderiveddatatriggerproducer.cxx" target="_blank">jetderiveddatatriggerproducer.cxx</a>
-<div>
-
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::JChTrigSels</button>
-  <div class="panel">
-    <div>
-
-    </div>
-    <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGJE/DataModel/JetReducedData.h" target="_blank">PWGJE/DataModel/JetReducedData.h</a>
-    </div>
-    <table class=DataModel>
-      <tr>
-        <th>Name</th>
-        <th></th>
-        <th>Getter</th>
-        <th>Type</th>
-        <th>Comment</th>
-      </tr>
-      <tr>
-        <td>o2::aod::jcollision::ChargedTriggerSel</td>
-        <td></td>
-        <td>chargedTriggerSel</td>
-        <td>uint8_t</td>
         <td></td>
       </tr>
-    </table>
-  </div>
-
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::JFullTrigSels</button>
-  <div class="panel">
-    <div>
-
-    </div>
-    <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGJE/DataModel/JetReducedData.h" target="_blank">PWGJE/DataModel/JetReducedData.h</a>
-    </div>
-    <table class=DataModel>
       <tr>
-        <th>Name</th>
-        <th></th>
-        <th>Getter</th>
-        <th>Type</th>
-        <th>Comment</th>
+        <td>o2::aod::jmcparticle::GenStatusCode</td>
+        <td></td>
+        <td>getGenStatusCode</td>
+        <td>int</td>
+        <td></td>
       </tr>
       <tr>
-        <td>o2::aod::jcollision::FullTriggerSel</td>
+        <td>o2::aod::jmcparticle::HepMCStatusCode</td>
         <td></td>
-        <td>fullTriggerSel</td>
-        <td>uint32_t</td>
+        <td>getHepMCStatusCode</td>
+        <td>int</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::jmcparticle::IsPhysicalPrimary</td>
+        <td></td>
+        <td>isPhysicalPrimary</td>
+        <td>bool</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::jmcparticle::Px</td>
+        <td>D</td>
+        <td>px</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::jmcparticle::Py</td>
+        <td>D</td>
+        <td>py</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::jmcparticle::Pz</td>
+        <td>D</td>
+        <td>pz</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::jmcparticle::P</td>
+        <td>D</td>
+        <td>p</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::jmcparticle::Energy</td>
+        <td>D</td>
+        <td>energy</td>
+        <td>float</td>
         <td></td>
       </tr>
     </table>
   </div>
-
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::JChHFTrigSels</button>
-  <div class="panel">
-    <div>
-
-    </div>
-    <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGJE/DataModel/JetReducedData.h" target="_blank">PWGJE/DataModel/JetReducedData.h</a>
-    </div>
-    <table class=DataModel>
-      <tr>
-        <th>Name</th>
-        <th></th>
-        <th>Getter</th>
-        <th>Type</th>
-        <th>Comment</th>
-      </tr>
-      <tr>
-        <td>o2::aod::jcollision::ChargedHFTriggerSel</td>
-        <td></td>
-        <td>chargedHFTriggerSel</td>
-        <td>uint8_t</td>
-        <td></td>
-      </tr>
-    </table>
-  </div>
-
-</div>
-
-###  o2-analysis-je-jet-deriveddata-writer
-Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGJE/TableProducer//jetderiveddatawriter.cxx" target="_blank">jetderiveddatawriter.cxx</a>
-<div>
 
 </div>
 
 ###  o2-analysis-je-jet-eventweight-mcd
-Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGJE/TableProducer//jeteventweightmcd.cxx" target="_blank">jeteventweightmcd.cxx</a>
+Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGJE/TableProducer//jetEventWeightMCD.cxx" target="_blank">jetEventWeightMCD.cxx</a>
 <div>
 
   <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::ChargedMCDetectorLevelJetEventWeights</button>
@@ -61721,7 +63825,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGJE
 </div>
 
 ###  o2-analysis-je-jet-eventweight-mcp
-Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGJE/TableProducer//jeteventweightmcp.cxx" target="_blank">jeteventweightmcp.cxx</a>
+Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGJE/TableProducer//jetEventWeightMCP.cxx" target="_blank">jetEventWeightMCP.cxx</a>
 <div>
 
   <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::ChargedMCParticleLevelJetEventWeights</button>
@@ -61992,1592 +64096,8 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGJE
 
 </div>
 
-###  o2-analysis-je-jet-matching-duplicates
-Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGJE/TableProducer//jetmatchingduplicates.cxx" target="_blank">jetmatchingduplicates.cxx</a>
-<div>
-
-</div>
-
-###  o2-analysis-je-jet-matching-mc
-Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGJE/TableProducer//jetmatchingmc.cxx" target="_blank">jetmatchingmc.cxx</a>
-<div>
-
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::ChargedMCDetectorLevelJetsMatchedToChargedMCParticleLevelJets</button>
-  <div class="panel">
-    <div>
-
-    </div>
-    <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGJE/DataModel/Jet.h" target="_blank">PWGJE/DataModel/Jet.h</a>
-    </div>
-    <div>Is used in:
-      <ul>
-        <li>o2::aod::ChargedMCDetectorLevelJetsMatchedToChargedMCParticleLevelJet = o2::aod::ChargedMCDetectorLevelJetsMatchedToChargedMCParticleLevelJets::iterator</li>
-      </ul>
-    </div>
-    <table class=DataModel>
-      <tr>
-        <th>Name</th>
-        <th></th>
-        <th>Getter</th>
-        <th>Type</th>
-        <th>Comment</th>
-      </tr>
-      <tr>
-        <td>o2::aod::ChargedMCParticleLeveljetmatchingGeo::ChargedMCParticleLevelJetIds</td>
-        <td>GI</td>
-        <td></td>
-        <td>?</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::ChargedMCParticleLeveljetmatchingPt::ChargedMCParticleLevelJetIds</td>
-        <td>GI</td>
-        <td></td>
-        <td>?</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::ChargedMCParticleLeveljetmatchingCand::ChargedMCParticleLevelJetIds</td>
-        <td>GI</td>
-        <td></td>
-        <td>?</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::ChargedMCDetectorLeveljetsmatchedtoChargedMCParticleLevel::DummyChargedMCDetectorLevels</td>
-        <td>D</td>
-        <td>dummyChargedMCDetectorLevels</td>
-        <td>int</td>
-        <td></td>
-      </tr>
-    </table>
-  </div>
-
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::ChargedMCParticleLevelJetsMatchedToChargedMCDetectorLevelJets</button>
-  <div class="panel">
-    <div>
-
-    </div>
-    <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGJE/DataModel/Jet.h" target="_blank">PWGJE/DataModel/Jet.h</a>
-    </div>
-    <div>Is used in:
-      <ul>
-        <li>o2::aod::ChargedMCParticleLevelJetsMatchedToChargedMCDetectorLevelJet = o2::aod::ChargedMCParticleLevelJetsMatchedToChargedMCDetectorLevelJets::iterator</li>
-      </ul>
-    </div>
-    <table class=DataModel>
-      <tr>
-        <th>Name</th>
-        <th></th>
-        <th>Getter</th>
-        <th>Type</th>
-        <th>Comment</th>
-      </tr>
-      <tr>
-        <td>o2::aod::ChargedMCDetectorLeveljetmatchingGeo::ChargedMCDetectorLevelJetIds</td>
-        <td>GI</td>
-        <td></td>
-        <td>?</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::ChargedMCDetectorLeveljetmatchingPt::ChargedMCDetectorLevelJetIds</td>
-        <td>GI</td>
-        <td></td>
-        <td>?</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::ChargedMCDetectorLeveljetmatchingCand::ChargedMCDetectorLevelJetIds</td>
-        <td>GI</td>
-        <td></td>
-        <td>?</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::ChargedMCParticleLeveljetsmatchedtoChargedMCDetectorLevel::DummyChargedMCParticleLevels</td>
-        <td>D</td>
-        <td>dummyChargedMCParticleLevels</td>
-        <td>int</td>
-        <td></td>
-      </tr>
-    </table>
-  </div>
-
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::FullMCDetectorLevelJetsMatchedToFullMCParticleLevelJets</button>
-  <div class="panel">
-    <div>
-
-    </div>
-    <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGJE/DataModel/Jet.h" target="_blank">PWGJE/DataModel/Jet.h</a>
-    </div>
-    <div>Is used in:
-      <ul>
-        <li>o2::aod::FullMCDetectorLevelJetsMatchedToFullMCParticleLevelJet = o2::aod::FullMCDetectorLevelJetsMatchedToFullMCParticleLevelJets::iterator</li>
-      </ul>
-    </div>
-    <table class=DataModel>
-      <tr>
-        <th>Name</th>
-        <th></th>
-        <th>Getter</th>
-        <th>Type</th>
-        <th>Comment</th>
-      </tr>
-      <tr>
-        <td>o2::aod::FullMCParticleLeveljetmatchingGeo::FullMCParticleLevelJetIds</td>
-        <td>GI</td>
-        <td></td>
-        <td>?</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::FullMCParticleLeveljetmatchingPt::FullMCParticleLevelJetIds</td>
-        <td>GI</td>
-        <td></td>
-        <td>?</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::FullMCParticleLeveljetmatchingCand::FullMCParticleLevelJetIds</td>
-        <td>GI</td>
-        <td></td>
-        <td>?</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::FullMCDetectorLeveljetsmatchedtoFullMCParticleLevel::DummyFullMCDetectorLevels</td>
-        <td>D</td>
-        <td>dummyFullMCDetectorLevels</td>
-        <td>int</td>
-        <td></td>
-      </tr>
-    </table>
-  </div>
-
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::FullMCParticleLevelJetsMatchedToFullMCDetectorLevelJets</button>
-  <div class="panel">
-    <div>
-
-    </div>
-    <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGJE/DataModel/Jet.h" target="_blank">PWGJE/DataModel/Jet.h</a>
-    </div>
-    <div>Is used in:
-      <ul>
-        <li>o2::aod::FullMCParticleLevelJetsMatchedToFullMCDetectorLevelJet = o2::aod::FullMCParticleLevelJetsMatchedToFullMCDetectorLevelJets::iterator</li>
-      </ul>
-    </div>
-    <table class=DataModel>
-      <tr>
-        <th>Name</th>
-        <th></th>
-        <th>Getter</th>
-        <th>Type</th>
-        <th>Comment</th>
-      </tr>
-      <tr>
-        <td>o2::aod::FullMCDetectorLeveljetmatchingGeo::FullMCDetectorLevelJetIds</td>
-        <td>GI</td>
-        <td></td>
-        <td>?</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::FullMCDetectorLeveljetmatchingPt::FullMCDetectorLevelJetIds</td>
-        <td>GI</td>
-        <td></td>
-        <td>?</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::FullMCDetectorLeveljetmatchingCand::FullMCDetectorLevelJetIds</td>
-        <td>GI</td>
-        <td></td>
-        <td>?</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::FullMCParticleLeveljetsmatchedtoFullMCDetectorLevel::DummyFullMCParticleLevels</td>
-        <td>D</td>
-        <td>dummyFullMCParticleLevels</td>
-        <td>int</td>
-        <td></td>
-      </tr>
-    </table>
-  </div>
-
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::NeutralMCDetectorLevelJetsMatchedToNeutralMCParticleLevelJets</button>
-  <div class="panel">
-    <div>
-
-    </div>
-    <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGJE/DataModel/Jet.h" target="_blank">PWGJE/DataModel/Jet.h</a>
-    </div>
-    <div>Is used in:
-      <ul>
-        <li>o2::aod::NeutralMCDetectorLevelJetsMatchedToNeutralMCParticleLevelJet = o2::aod::NeutralMCDetectorLevelJetsMatchedToNeutralMCParticleLevelJets::iterator</li>
-      </ul>
-    </div>
-    <table class=DataModel>
-      <tr>
-        <th>Name</th>
-        <th></th>
-        <th>Getter</th>
-        <th>Type</th>
-        <th>Comment</th>
-      </tr>
-      <tr>
-        <td>o2::aod::NeutralMCParticleLeveljetmatchingGeo::NeutralMCParticleLevelJetIds</td>
-        <td>GI</td>
-        <td></td>
-        <td>?</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::NeutralMCParticleLeveljetmatchingPt::NeutralMCParticleLevelJetIds</td>
-        <td>GI</td>
-        <td></td>
-        <td>?</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::NeutralMCParticleLeveljetmatchingCand::NeutralMCParticleLevelJetIds</td>
-        <td>GI</td>
-        <td></td>
-        <td>?</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::NeutralMCDetectorLeveljetsmatchedtoNeutralMCParticleLevel::DummyNeutralMCDetectorLevels</td>
-        <td>D</td>
-        <td>dummyNeutralMCDetectorLevels</td>
-        <td>int</td>
-        <td></td>
-      </tr>
-    </table>
-  </div>
-
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::NeutralMCParticleLevelJetsMatchedToNeutralMCDetectorLevelJets</button>
-  <div class="panel">
-    <div>
-
-    </div>
-    <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGJE/DataModel/Jet.h" target="_blank">PWGJE/DataModel/Jet.h</a>
-    </div>
-    <div>Is used in:
-      <ul>
-        <li>o2::aod::NeutralMCParticleLevelJetsMatchedToNeutralMCDetectorLevelJet = o2::aod::NeutralMCParticleLevelJetsMatchedToNeutralMCDetectorLevelJets::iterator</li>
-      </ul>
-    </div>
-    <table class=DataModel>
-      <tr>
-        <th>Name</th>
-        <th></th>
-        <th>Getter</th>
-        <th>Type</th>
-        <th>Comment</th>
-      </tr>
-      <tr>
-        <td>o2::aod::NeutralMCDetectorLeveljetmatchingGeo::NeutralMCDetectorLevelJetIds</td>
-        <td>GI</td>
-        <td></td>
-        <td>?</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::NeutralMCDetectorLeveljetmatchingPt::NeutralMCDetectorLevelJetIds</td>
-        <td>GI</td>
-        <td></td>
-        <td>?</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::NeutralMCDetectorLeveljetmatchingCand::NeutralMCDetectorLevelJetIds</td>
-        <td>GI</td>
-        <td></td>
-        <td>?</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::NeutralMCParticleLeveljetsmatchedtoNeutralMCDetectorLevel::DummyNeutralMCParticleLevels</td>
-        <td>D</td>
-        <td>dummyNeutralMCParticleLevels</td>
-        <td>int</td>
-        <td></td>
-      </tr>
-    </table>
-  </div>
-
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::D0ChargedMCDetectorLevelJetsMatchedToD0ChargedMCParticleLevelJets</button>
-  <div class="panel">
-    <div>
-
-    </div>
-    <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGJE/DataModel/Jet.h" target="_blank">PWGJE/DataModel/Jet.h</a>
-    </div>
-    <div>Is used in:
-      <ul>
-        <li>o2::aod::D0ChargedMCDetectorLevelJetsMatchedToD0ChargedMCParticleLevelJet = o2::aod::D0ChargedMCDetectorLevelJetsMatchedToD0ChargedMCParticleLevelJets::iterator</li>
-      </ul>
-    </div>
-    <table class=DataModel>
-      <tr>
-        <th>Name</th>
-        <th></th>
-        <th>Getter</th>
-        <th>Type</th>
-        <th>Comment</th>
-      </tr>
-      <tr>
-        <td>o2::aod::D0ChargedMCParticleLeveljetmatchingGeo::D0ChargedMCParticleLevelJetIds</td>
-        <td>GI</td>
-        <td></td>
-        <td>?</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::D0ChargedMCParticleLeveljetmatchingPt::D0ChargedMCParticleLevelJetIds</td>
-        <td>GI</td>
-        <td></td>
-        <td>?</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::D0ChargedMCParticleLeveljetmatchingCand::D0ChargedMCParticleLevelJetIds</td>
-        <td>GI</td>
-        <td></td>
-        <td>?</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::D0ChargedMCDetectorLeveljetsmatchedtoD0ChargedMCParticleLevel::DummyD0ChargedMCDetectorLevels</td>
-        <td>D</td>
-        <td>dummyD0ChargedMCDetectorLevels</td>
-        <td>int</td>
-        <td></td>
-      </tr>
-    </table>
-  </div>
-
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::D0ChargedMCParticleLevelJetsMatchedToD0ChargedMCDetectorLevelJets</button>
-  <div class="panel">
-    <div>
-
-    </div>
-    <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGJE/DataModel/Jet.h" target="_blank">PWGJE/DataModel/Jet.h</a>
-    </div>
-    <div>Is used in:
-      <ul>
-        <li>o2::aod::D0ChargedMCParticleLevelJetsMatchedToD0ChargedMCDetectorLevelJet = o2::aod::D0ChargedMCParticleLevelJetsMatchedToD0ChargedMCDetectorLevelJets::iterator</li>
-      </ul>
-    </div>
-    <table class=DataModel>
-      <tr>
-        <th>Name</th>
-        <th></th>
-        <th>Getter</th>
-        <th>Type</th>
-        <th>Comment</th>
-      </tr>
-      <tr>
-        <td>o2::aod::D0ChargedMCDetectorLeveljetmatchingGeo::D0ChargedMCDetectorLevelJetIds</td>
-        <td>GI</td>
-        <td></td>
-        <td>?</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::D0ChargedMCDetectorLeveljetmatchingPt::D0ChargedMCDetectorLevelJetIds</td>
-        <td>GI</td>
-        <td></td>
-        <td>?</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::D0ChargedMCDetectorLeveljetmatchingCand::D0ChargedMCDetectorLevelJetIds</td>
-        <td>GI</td>
-        <td></td>
-        <td>?</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::D0ChargedMCParticleLeveljetsmatchedtoD0ChargedMCDetectorLevel::DummyD0ChargedMCParticleLevels</td>
-        <td>D</td>
-        <td>dummyD0ChargedMCParticleLevels</td>
-        <td>int</td>
-        <td></td>
-      </tr>
-    </table>
-  </div>
-
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::LcChargedMCDetectorLevelJetsMatchedToLcChargedMCParticleLevelJets</button>
-  <div class="panel">
-    <div>
-
-    </div>
-    <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGJE/DataModel/Jet.h" target="_blank">PWGJE/DataModel/Jet.h</a>
-    </div>
-    <div>Is used in:
-      <ul>
-        <li>o2::aod::LcChargedMCDetectorLevelJetsMatchedToLcChargedMCParticleLevelJet = o2::aod::LcChargedMCDetectorLevelJetsMatchedToLcChargedMCParticleLevelJets::iterator</li>
-      </ul>
-    </div>
-    <table class=DataModel>
-      <tr>
-        <th>Name</th>
-        <th></th>
-        <th>Getter</th>
-        <th>Type</th>
-        <th>Comment</th>
-      </tr>
-      <tr>
-        <td>o2::aod::LcChargedMCParticleLeveljetmatchingGeo::LcChargedMCParticleLevelJetIds</td>
-        <td>GI</td>
-        <td></td>
-        <td>?</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::LcChargedMCParticleLeveljetmatchingPt::LcChargedMCParticleLevelJetIds</td>
-        <td>GI</td>
-        <td></td>
-        <td>?</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::LcChargedMCParticleLeveljetmatchingCand::LcChargedMCParticleLevelJetIds</td>
-        <td>GI</td>
-        <td></td>
-        <td>?</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::LcChargedMCDetectorLeveljetsmatchedtoLcChargedMCParticleLevel::DummyLcChargedMCDetectorLevels</td>
-        <td>D</td>
-        <td>dummyLcChargedMCDetectorLevels</td>
-        <td>int</td>
-        <td></td>
-      </tr>
-    </table>
-  </div>
-
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::LcChargedMCParticleLevelJetsMatchedToLcChargedMCDetectorLevelJets</button>
-  <div class="panel">
-    <div>
-
-    </div>
-    <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGJE/DataModel/Jet.h" target="_blank">PWGJE/DataModel/Jet.h</a>
-    </div>
-    <div>Is used in:
-      <ul>
-        <li>o2::aod::LcChargedMCParticleLevelJetsMatchedToLcChargedMCDetectorLevelJet = o2::aod::LcChargedMCParticleLevelJetsMatchedToLcChargedMCDetectorLevelJets::iterator</li>
-      </ul>
-    </div>
-    <table class=DataModel>
-      <tr>
-        <th>Name</th>
-        <th></th>
-        <th>Getter</th>
-        <th>Type</th>
-        <th>Comment</th>
-      </tr>
-      <tr>
-        <td>o2::aod::LcChargedMCDetectorLeveljetmatchingGeo::LcChargedMCDetectorLevelJetIds</td>
-        <td>GI</td>
-        <td></td>
-        <td>?</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::LcChargedMCDetectorLeveljetmatchingPt::LcChargedMCDetectorLevelJetIds</td>
-        <td>GI</td>
-        <td></td>
-        <td>?</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::LcChargedMCDetectorLeveljetmatchingCand::LcChargedMCDetectorLevelJetIds</td>
-        <td>GI</td>
-        <td></td>
-        <td>?</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::LcChargedMCParticleLeveljetsmatchedtoLcChargedMCDetectorLevel::DummyLcChargedMCParticleLevels</td>
-        <td>D</td>
-        <td>dummyLcChargedMCParticleLevels</td>
-        <td>int</td>
-        <td></td>
-      </tr>
-    </table>
-  </div>
-
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::V0ChargedMCDetectorLevelJetsMatchedToV0ChargedMCParticleLevelJets</button>
-  <div class="panel">
-    <div>
-
-    </div>
-    <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGJE/DataModel/Jet.h" target="_blank">PWGJE/DataModel/Jet.h</a>
-    </div>
-    <div>Is used in:
-      <ul>
-        <li>o2::aod::V0ChargedMCDetectorLevelJetsMatchedToV0ChargedMCParticleLevelJet = o2::aod::V0ChargedMCDetectorLevelJetsMatchedToV0ChargedMCParticleLevelJets::iterator</li>
-      </ul>
-    </div>
-    <table class=DataModel>
-      <tr>
-        <th>Name</th>
-        <th></th>
-        <th>Getter</th>
-        <th>Type</th>
-        <th>Comment</th>
-      </tr>
-      <tr>
-        <td>o2::aod::V0ChargedMCParticleLeveljetmatchingGeo::V0ChargedMCParticleLevelJetIds</td>
-        <td>GI</td>
-        <td></td>
-        <td>?</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::V0ChargedMCParticleLeveljetmatchingPt::V0ChargedMCParticleLevelJetIds</td>
-        <td>GI</td>
-        <td></td>
-        <td>?</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::V0ChargedMCParticleLeveljetmatchingCand::V0ChargedMCParticleLevelJetIds</td>
-        <td>GI</td>
-        <td></td>
-        <td>?</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::V0ChargedMCDetectorLeveljetsmatchedtoV0ChargedMCParticleLevel::DummyV0ChargedMCDetectorLevels</td>
-        <td>D</td>
-        <td>dummyV0ChargedMCDetectorLevels</td>
-        <td>int</td>
-        <td></td>
-      </tr>
-    </table>
-  </div>
-
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::V0ChargedMCParticleLevelJetsMatchedToV0ChargedMCDetectorLevelJets</button>
-  <div class="panel">
-    <div>
-
-    </div>
-    <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGJE/DataModel/Jet.h" target="_blank">PWGJE/DataModel/Jet.h</a>
-    </div>
-    <div>Is used in:
-      <ul>
-        <li>o2::aod::V0ChargedMCParticleLevelJetsMatchedToV0ChargedMCDetectorLevelJet = o2::aod::V0ChargedMCParticleLevelJetsMatchedToV0ChargedMCDetectorLevelJets::iterator</li>
-      </ul>
-    </div>
-    <table class=DataModel>
-      <tr>
-        <th>Name</th>
-        <th></th>
-        <th>Getter</th>
-        <th>Type</th>
-        <th>Comment</th>
-      </tr>
-      <tr>
-        <td>o2::aod::V0ChargedMCDetectorLeveljetmatchingGeo::V0ChargedMCDetectorLevelJetIds</td>
-        <td>GI</td>
-        <td></td>
-        <td>?</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::V0ChargedMCDetectorLeveljetmatchingPt::V0ChargedMCDetectorLevelJetIds</td>
-        <td>GI</td>
-        <td></td>
-        <td>?</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::V0ChargedMCDetectorLeveljetmatchingCand::V0ChargedMCDetectorLevelJetIds</td>
-        <td>GI</td>
-        <td></td>
-        <td>?</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::V0ChargedMCParticleLeveljetsmatchedtoV0ChargedMCDetectorLevel::DummyV0ChargedMCParticleLevels</td>
-        <td>D</td>
-        <td>dummyV0ChargedMCParticleLevels</td>
-        <td>int</td>
-        <td></td>
-      </tr>
-    </table>
-  </div>
-
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::DielectronChargedMCDetectorLevelJetsMatchedToDielectronChargedMCParticleLevelJets</button>
-  <div class="panel">
-    <div>
-
-    </div>
-    <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGJE/DataModel/Jet.h" target="_blank">PWGJE/DataModel/Jet.h</a>
-    </div>
-    <div>Is used in:
-      <ul>
-        <li>o2::aod::DielectronChargedMCDetectorLevelJetsMatchedToDielectronChargedMCParticleLevelJet = o2::aod::DielectronChargedMCDetectorLevelJetsMatchedToDielectronChargedMCParticleLevelJets::iterator</li>
-      </ul>
-    </div>
-    <table class=DataModel>
-      <tr>
-        <th>Name</th>
-        <th></th>
-        <th>Getter</th>
-        <th>Type</th>
-        <th>Comment</th>
-      </tr>
-      <tr>
-        <td>o2::aod::DielectronChargedMCParticleLeveljetmatchingGeo::DielectronChargedMCParticleLevelJetIds</td>
-        <td>GI</td>
-        <td></td>
-        <td>?</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::DielectronChargedMCParticleLeveljetmatchingPt::DielectronChargedMCParticleLevelJetIds</td>
-        <td>GI</td>
-        <td></td>
-        <td>?</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::DielectronChargedMCParticleLeveljetmatchingCand::DielectronChargedMCParticleLevelJetIds</td>
-        <td>GI</td>
-        <td></td>
-        <td>?</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::DielectronChargedMCDetectorLeveljetsmatchedtoDielectronChargedMCParticleLevel::DummyDielectronChargedMCDetectorLevels</td>
-        <td>D</td>
-        <td>dummyDielectronChargedMCDetectorLevels</td>
-        <td>int</td>
-        <td></td>
-      </tr>
-    </table>
-  </div>
-
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::DielectronChargedMCParticleLevelJetsMatchedToDielectronChargedMCDetectorLevelJets</button>
-  <div class="panel">
-    <div>
-
-    </div>
-    <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGJE/DataModel/Jet.h" target="_blank">PWGJE/DataModel/Jet.h</a>
-    </div>
-    <div>Is used in:
-      <ul>
-        <li>o2::aod::DielectronChargedMCParticleLevelJetsMatchedToDielectronChargedMCDetectorLevelJet = o2::aod::DielectronChargedMCParticleLevelJetsMatchedToDielectronChargedMCDetectorLevelJets::iterator</li>
-      </ul>
-    </div>
-    <table class=DataModel>
-      <tr>
-        <th>Name</th>
-        <th></th>
-        <th>Getter</th>
-        <th>Type</th>
-        <th>Comment</th>
-      </tr>
-      <tr>
-        <td>o2::aod::DielectronChargedMCDetectorLeveljetmatchingGeo::DielectronChargedMCDetectorLevelJetIds</td>
-        <td>GI</td>
-        <td></td>
-        <td>?</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::DielectronChargedMCDetectorLeveljetmatchingPt::DielectronChargedMCDetectorLevelJetIds</td>
-        <td>GI</td>
-        <td></td>
-        <td>?</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::DielectronChargedMCDetectorLeveljetmatchingCand::DielectronChargedMCDetectorLevelJetIds</td>
-        <td>GI</td>
-        <td></td>
-        <td>?</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::DielectronChargedMCParticleLeveljetsmatchedtoDielectronChargedMCDetectorLevel::DummyDielectronChargedMCParticleLevels</td>
-        <td>D</td>
-        <td>dummyDielectronChargedMCParticleLevels</td>
-        <td>int</td>
-        <td></td>
-      </tr>
-    </table>
-  </div>
-
-</div>
-
-###  o2-analysis-je-jet-matching-mc-sub
-Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGJE/TableProducer//jetmatchingmcsub.cxx" target="_blank">jetmatchingmcsub.cxx</a>
-<div>
-
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::ChargedMCDetectorLevelJetsMatchedToChargedMCDetectorLevelEventWiseSubtractedJets</button>
-  <div class="panel">
-    <div>
-
-    </div>
-    <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGJE/DataModel/Jet.h" target="_blank">PWGJE/DataModel/Jet.h</a>
-    </div>
-    <div>Is used in:
-      <ul>
-        <li>o2::aod::ChargedMCDetectorLevelJetsMatchedToChargedMCDetectorLevelEventWiseSubtractedJet = o2::aod::ChargedMCDetectorLevelJetsMatchedToChargedMCDetectorLevelEventWiseSubtractedJets::iterator</li>
-      </ul>
-    </div>
-    <table class=DataModel>
-      <tr>
-        <th>Name</th>
-        <th></th>
-        <th>Getter</th>
-        <th>Type</th>
-        <th>Comment</th>
-      </tr>
-      <tr>
-        <td>o2::aod::ChargedMCDetectorLevelEventWiseSubtractedjetmatchingGeo::ChargedMCDetectorLevelEventWiseSubtractedJetIds</td>
-        <td>GI</td>
-        <td></td>
-        <td>?</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::ChargedMCDetectorLevelEventWiseSubtractedjetmatchingPt::ChargedMCDetectorLevelEventWiseSubtractedJetIds</td>
-        <td>GI</td>
-        <td></td>
-        <td>?</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::ChargedMCDetectorLevelEventWiseSubtractedjetmatchingCand::ChargedMCDetectorLevelEventWiseSubtractedJetIds</td>
-        <td>GI</td>
-        <td></td>
-        <td>?</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::ChargedMCDetectorLeveljetsmatchedtoChargedMCDetectorLevelEventWiseSubtracted::DummyChargedMCDetectorLevels</td>
-        <td>D</td>
-        <td>dummyChargedMCDetectorLevels</td>
-        <td>int</td>
-        <td></td>
-      </tr>
-    </table>
-  </div>
-
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::ChargedMCDetectorLevelEventWiseSubtractedJetsMatchedToChargedMCDetectorLevelJets</button>
-  <div class="panel">
-    <div>
-
-    </div>
-    <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGJE/DataModel/Jet.h" target="_blank">PWGJE/DataModel/Jet.h</a>
-    </div>
-    <div>Is used in:
-      <ul>
-        <li>o2::aod::ChargedMCDetectorLevelEventWiseSubtractedJetsMatchedToChargedMCDetectorLevelJet = o2::aod::ChargedMCDetectorLevelEventWiseSubtractedJetsMatchedToChargedMCDetectorLevelJets::iterator</li>
-      </ul>
-    </div>
-    <table class=DataModel>
-      <tr>
-        <th>Name</th>
-        <th></th>
-        <th>Getter</th>
-        <th>Type</th>
-        <th>Comment</th>
-      </tr>
-      <tr>
-        <td>o2::aod::ChargedMCDetectorLeveljetmatchingGeo::ChargedMCDetectorLevelJetIds</td>
-        <td>GI</td>
-        <td></td>
-        <td>?</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::ChargedMCDetectorLeveljetmatchingPt::ChargedMCDetectorLevelJetIds</td>
-        <td>GI</td>
-        <td></td>
-        <td>?</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::ChargedMCDetectorLeveljetmatchingCand::ChargedMCDetectorLevelJetIds</td>
-        <td>GI</td>
-        <td></td>
-        <td>?</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::ChargedMCDetectorLevelEventWiseSubtractedjetsmatchedtoChargedMCDetectorLevel::DummyChargedMCDetectorLevelEventWiseSubtracteds</td>
-        <td>D</td>
-        <td>dummyChargedMCDetectorLevelEventWiseSubtracteds</td>
-        <td>int</td>
-        <td></td>
-      </tr>
-    </table>
-  </div>
-
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::D0ChargedMCDetectorLevelJetsMatchedToD0ChargedMCDetectorLevelEventWiseSubtractedJets</button>
-  <div class="panel">
-    <div>
-
-    </div>
-    <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGJE/DataModel/Jet.h" target="_blank">PWGJE/DataModel/Jet.h</a>
-    </div>
-    <div>Is used in:
-      <ul>
-        <li>o2::aod::D0ChargedMCDetectorLevelJetsMatchedToD0ChargedMCDetectorLevelEventWiseSubtractedJet = o2::aod::D0ChargedMCDetectorLevelJetsMatchedToD0ChargedMCDetectorLevelEventWiseSubtractedJets::iterator</li>
-      </ul>
-    </div>
-    <table class=DataModel>
-      <tr>
-        <th>Name</th>
-        <th></th>
-        <th>Getter</th>
-        <th>Type</th>
-        <th>Comment</th>
-      </tr>
-      <tr>
-        <td>o2::aod::D0ChargedMCDetectorLevelEventWiseSubtractedjetmatchingGeo::D0ChargedMCDetectorLevelEventWiseSubtractedJetIds</td>
-        <td>GI</td>
-        <td></td>
-        <td>?</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::D0ChargedMCDetectorLevelEventWiseSubtractedjetmatchingPt::D0ChargedMCDetectorLevelEventWiseSubtractedJetIds</td>
-        <td>GI</td>
-        <td></td>
-        <td>?</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::D0ChargedMCDetectorLevelEventWiseSubtractedjetmatchingCand::D0ChargedMCDetectorLevelEventWiseSubtractedJetIds</td>
-        <td>GI</td>
-        <td></td>
-        <td>?</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::D0ChargedMCDetectorLeveljetsmatchedtoD0ChargedMCDetectorLevelEventWiseSubtracted::DummyD0ChargedMCDetectorLevels</td>
-        <td>D</td>
-        <td>dummyD0ChargedMCDetectorLevels</td>
-        <td>int</td>
-        <td></td>
-      </tr>
-    </table>
-  </div>
-
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::D0ChargedMCDetectorLevelEventWiseSubtractedJetsMatchedToD0ChargedMCDetectorLevelJets</button>
-  <div class="panel">
-    <div>
-
-    </div>
-    <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGJE/DataModel/Jet.h" target="_blank">PWGJE/DataModel/Jet.h</a>
-    </div>
-    <div>Is used in:
-      <ul>
-        <li>o2::aod::D0ChargedMCDetectorLevelEventWiseSubtractedJetsMatchedToD0ChargedMCDetectorLevelJet = o2::aod::D0ChargedMCDetectorLevelEventWiseSubtractedJetsMatchedToD0ChargedMCDetectorLevelJets::iterator</li>
-      </ul>
-    </div>
-    <table class=DataModel>
-      <tr>
-        <th>Name</th>
-        <th></th>
-        <th>Getter</th>
-        <th>Type</th>
-        <th>Comment</th>
-      </tr>
-      <tr>
-        <td>o2::aod::D0ChargedMCDetectorLeveljetmatchingGeo::D0ChargedMCDetectorLevelJetIds</td>
-        <td>GI</td>
-        <td></td>
-        <td>?</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::D0ChargedMCDetectorLeveljetmatchingPt::D0ChargedMCDetectorLevelJetIds</td>
-        <td>GI</td>
-        <td></td>
-        <td>?</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::D0ChargedMCDetectorLeveljetmatchingCand::D0ChargedMCDetectorLevelJetIds</td>
-        <td>GI</td>
-        <td></td>
-        <td>?</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::D0ChargedMCDetectorLevelEventWiseSubtractedjetsmatchedtoD0ChargedMCDetectorLevel::DummyD0ChargedMCDetectorLevelEventWiseSubtracteds</td>
-        <td>D</td>
-        <td>dummyD0ChargedMCDetectorLevelEventWiseSubtracteds</td>
-        <td>int</td>
-        <td></td>
-      </tr>
-    </table>
-  </div>
-
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::LcChargedMCDetectorLevelJetsMatchedToLcChargedMCDetectorLevelEventWiseSubtractedJets</button>
-  <div class="panel">
-    <div>
-
-    </div>
-    <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGJE/DataModel/Jet.h" target="_blank">PWGJE/DataModel/Jet.h</a>
-    </div>
-    <div>Is used in:
-      <ul>
-        <li>o2::aod::LcChargedMCDetectorLevelJetsMatchedToLcChargedMCDetectorLevelEventWiseSubtractedJet = o2::aod::LcChargedMCDetectorLevelJetsMatchedToLcChargedMCDetectorLevelEventWiseSubtractedJets::iterator</li>
-      </ul>
-    </div>
-    <table class=DataModel>
-      <tr>
-        <th>Name</th>
-        <th></th>
-        <th>Getter</th>
-        <th>Type</th>
-        <th>Comment</th>
-      </tr>
-      <tr>
-        <td>o2::aod::LcChargedMCDetectorLevelEventWiseSubtractedjetmatchingGeo::LcChargedMCDetectorLevelEventWiseSubtractedJetIds</td>
-        <td>GI</td>
-        <td></td>
-        <td>?</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::LcChargedMCDetectorLevelEventWiseSubtractedjetmatchingPt::LcChargedMCDetectorLevelEventWiseSubtractedJetIds</td>
-        <td>GI</td>
-        <td></td>
-        <td>?</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::LcChargedMCDetectorLevelEventWiseSubtractedjetmatchingCand::LcChargedMCDetectorLevelEventWiseSubtractedJetIds</td>
-        <td>GI</td>
-        <td></td>
-        <td>?</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::LcChargedMCDetectorLeveljetsmatchedtoLcChargedMCDetectorLevelEventWiseSubtracted::DummyLcChargedMCDetectorLevels</td>
-        <td>D</td>
-        <td>dummyLcChargedMCDetectorLevels</td>
-        <td>int</td>
-        <td></td>
-      </tr>
-    </table>
-  </div>
-
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::LcChargedMCDetectorLevelEventWiseSubtractedJetsMatchedToLcChargedMCDetectorLevelJets</button>
-  <div class="panel">
-    <div>
-
-    </div>
-    <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGJE/DataModel/Jet.h" target="_blank">PWGJE/DataModel/Jet.h</a>
-    </div>
-    <div>Is used in:
-      <ul>
-        <li>o2::aod::LcChargedMCDetectorLevelEventWiseSubtractedJetsMatchedToLcChargedMCDetectorLevelJet = o2::aod::LcChargedMCDetectorLevelEventWiseSubtractedJetsMatchedToLcChargedMCDetectorLevelJets::iterator</li>
-      </ul>
-    </div>
-    <table class=DataModel>
-      <tr>
-        <th>Name</th>
-        <th></th>
-        <th>Getter</th>
-        <th>Type</th>
-        <th>Comment</th>
-      </tr>
-      <tr>
-        <td>o2::aod::LcChargedMCDetectorLeveljetmatchingGeo::LcChargedMCDetectorLevelJetIds</td>
-        <td>GI</td>
-        <td></td>
-        <td>?</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::LcChargedMCDetectorLeveljetmatchingPt::LcChargedMCDetectorLevelJetIds</td>
-        <td>GI</td>
-        <td></td>
-        <td>?</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::LcChargedMCDetectorLeveljetmatchingCand::LcChargedMCDetectorLevelJetIds</td>
-        <td>GI</td>
-        <td></td>
-        <td>?</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::LcChargedMCDetectorLevelEventWiseSubtractedjetsmatchedtoLcChargedMCDetectorLevel::DummyLcChargedMCDetectorLevelEventWiseSubtracteds</td>
-        <td>D</td>
-        <td>dummyLcChargedMCDetectorLevelEventWiseSubtracteds</td>
-        <td>int</td>
-        <td></td>
-      </tr>
-    </table>
-  </div>
-
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::DielectronChargedMCDetectorLevelJetsMatchedToDielectronChargedMCDetectorLevelEventWiseSubtractedJets</button>
-  <div class="panel">
-    <div>
-
-    </div>
-    <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGJE/DataModel/Jet.h" target="_blank">PWGJE/DataModel/Jet.h</a>
-    </div>
-    <div>Is used in:
-      <ul>
-        <li>o2::aod::DielectronChargedMCDetectorLevelJetsMatchedToDielectronChargedMCDetectorLevelEventWiseSubtractedJet = o2::aod::DielectronChargedMCDetectorLevelJetsMatchedToDielectronChargedMCDetectorLevelEventWiseSubtractedJets::iterator</li>
-      </ul>
-    </div>
-    <table class=DataModel>
-      <tr>
-        <th>Name</th>
-        <th></th>
-        <th>Getter</th>
-        <th>Type</th>
-        <th>Comment</th>
-      </tr>
-      <tr>
-        <td>o2::aod::DielectronChargedMCDetectorLevelEventWiseSubtractedjetmatchingGeo::DielectronChargedMCDetectorLevelEventWiseSubtractedJetIds</td>
-        <td>GI</td>
-        <td></td>
-        <td>?</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::DielectronChargedMCDetectorLevelEventWiseSubtractedjetmatchingPt::DielectronChargedMCDetectorLevelEventWiseSubtractedJetIds</td>
-        <td>GI</td>
-        <td></td>
-        <td>?</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::DielectronChargedMCDetectorLevelEventWiseSubtractedjetmatchingCand::DielectronChargedMCDetectorLevelEventWiseSubtractedJetIds</td>
-        <td>GI</td>
-        <td></td>
-        <td>?</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::DielectronChargedMCDetectorLeveljetsmatchedtoDielectronChargedMCDetectorLevelEventWiseSubtracted::DummyDielectronChargedMCDetectorLevels</td>
-        <td>D</td>
-        <td>dummyDielectronChargedMCDetectorLevels</td>
-        <td>int</td>
-        <td></td>
-      </tr>
-    </table>
-  </div>
-
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::DielectronChargedMCDetectorLevelEventWiseSubtractedJetsMatchedToDielectronChargedMCDetectorLevelJets</button>
-  <div class="panel">
-    <div>
-
-    </div>
-    <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGJE/DataModel/Jet.h" target="_blank">PWGJE/DataModel/Jet.h</a>
-    </div>
-    <div>Is used in:
-      <ul>
-        <li>o2::aod::DielectronChargedMCDetectorLevelEventWiseSubtractedJetsMatchedToDielectronChargedMCDetectorLevelJet = o2::aod::DielectronChargedMCDetectorLevelEventWiseSubtractedJetsMatchedToDielectronChargedMCDetectorLevelJets::iterator</li>
-      </ul>
-    </div>
-    <table class=DataModel>
-      <tr>
-        <th>Name</th>
-        <th></th>
-        <th>Getter</th>
-        <th>Type</th>
-        <th>Comment</th>
-      </tr>
-      <tr>
-        <td>o2::aod::DielectronChargedMCDetectorLeveljetmatchingGeo::DielectronChargedMCDetectorLevelJetIds</td>
-        <td>GI</td>
-        <td></td>
-        <td>?</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::DielectronChargedMCDetectorLeveljetmatchingPt::DielectronChargedMCDetectorLevelJetIds</td>
-        <td>GI</td>
-        <td></td>
-        <td>?</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::DielectronChargedMCDetectorLeveljetmatchingCand::DielectronChargedMCDetectorLevelJetIds</td>
-        <td>GI</td>
-        <td></td>
-        <td>?</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::DielectronChargedMCDetectorLevelEventWiseSubtractedjetsmatchedtoDielectronChargedMCDetectorLevel::DummyDielectronChargedMCDetectorLevelEventWiseSubtracteds</td>
-        <td>D</td>
-        <td>dummyDielectronChargedMCDetectorLevelEventWiseSubtracteds</td>
-        <td>int</td>
-        <td></td>
-      </tr>
-    </table>
-  </div>
-
-</div>
-
-###  o2-analysis-je-jet-matching-sub
-Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGJE/TableProducer//jetmatchingsub.cxx" target="_blank">jetmatchingsub.cxx</a>
-<div>
-
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::ChargedJetsMatchedToChargedEventWiseSubtractedJets</button>
-  <div class="panel">
-    <div>
-
-    </div>
-    <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGJE/DataModel/Jet.h" target="_blank">PWGJE/DataModel/Jet.h</a>
-    </div>
-    <div>Is used in:
-      <ul>
-        <li>o2::aod::ChargedJetsMatchedToChargedEventWiseSubtractedJet = o2::aod::ChargedJetsMatchedToChargedEventWiseSubtractedJets::iterator</li>
-      </ul>
-    </div>
-    <table class=DataModel>
-      <tr>
-        <th>Name</th>
-        <th></th>
-        <th>Getter</th>
-        <th>Type</th>
-        <th>Comment</th>
-      </tr>
-      <tr>
-        <td>o2::aod::ChargedEventWiseSubtractedjetmatchingGeo::ChargedEventWiseSubtractedJetIds</td>
-        <td>GI</td>
-        <td></td>
-        <td>?</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::ChargedEventWiseSubtractedjetmatchingPt::ChargedEventWiseSubtractedJetIds</td>
-        <td>GI</td>
-        <td></td>
-        <td>?</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::ChargedEventWiseSubtractedjetmatchingCand::ChargedEventWiseSubtractedJetIds</td>
-        <td>GI</td>
-        <td></td>
-        <td>?</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::ChargedjetsmatchedtoChargedEventWiseSubtracted::DummyChargeds</td>
-        <td>D</td>
-        <td>dummyChargeds</td>
-        <td>int</td>
-        <td></td>
-      </tr>
-    </table>
-  </div>
-
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::ChargedEventWiseSubtractedJetsMatchedToChargedJets</button>
-  <div class="panel">
-    <div>
-
-    </div>
-    <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGJE/DataModel/Jet.h" target="_blank">PWGJE/DataModel/Jet.h</a>
-    </div>
-    <div>Is used in:
-      <ul>
-        <li>o2::aod::ChargedEventWiseSubtractedJetsMatchedToChargedJet = o2::aod::ChargedEventWiseSubtractedJetsMatchedToChargedJets::iterator</li>
-      </ul>
-    </div>
-    <table class=DataModel>
-      <tr>
-        <th>Name</th>
-        <th></th>
-        <th>Getter</th>
-        <th>Type</th>
-        <th>Comment</th>
-      </tr>
-      <tr>
-        <td>o2::aod::ChargedjetmatchingGeo::ChargedJetIds</td>
-        <td>GI</td>
-        <td></td>
-        <td>?</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::ChargedjetmatchingPt::ChargedJetIds</td>
-        <td>GI</td>
-        <td></td>
-        <td>?</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::ChargedjetmatchingCand::ChargedJetIds</td>
-        <td>GI</td>
-        <td></td>
-        <td>?</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::ChargedEventWiseSubtractedjetsmatchedtoCharged::DummyChargedEventWiseSubtracteds</td>
-        <td>D</td>
-        <td>dummyChargedEventWiseSubtracteds</td>
-        <td>int</td>
-        <td></td>
-      </tr>
-    </table>
-  </div>
-
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::D0ChargedJetsMatchedToD0ChargedEventWiseSubtractedJets</button>
-  <div class="panel">
-    <div>
-
-    </div>
-    <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGJE/DataModel/Jet.h" target="_blank">PWGJE/DataModel/Jet.h</a>
-    </div>
-    <div>Is used in:
-      <ul>
-        <li>o2::aod::D0ChargedJetsMatchedToD0ChargedEventWiseSubtractedJet = o2::aod::D0ChargedJetsMatchedToD0ChargedEventWiseSubtractedJets::iterator</li>
-      </ul>
-    </div>
-    <table class=DataModel>
-      <tr>
-        <th>Name</th>
-        <th></th>
-        <th>Getter</th>
-        <th>Type</th>
-        <th>Comment</th>
-      </tr>
-      <tr>
-        <td>o2::aod::D0ChargedEventWiseSubtractedjetmatchingGeo::D0ChargedEventWiseSubtractedJetIds</td>
-        <td>GI</td>
-        <td></td>
-        <td>?</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::D0ChargedEventWiseSubtractedjetmatchingPt::D0ChargedEventWiseSubtractedJetIds</td>
-        <td>GI</td>
-        <td></td>
-        <td>?</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::D0ChargedEventWiseSubtractedjetmatchingCand::D0ChargedEventWiseSubtractedJetIds</td>
-        <td>GI</td>
-        <td></td>
-        <td>?</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::D0ChargedjetsmatchedtoD0ChargedEventWiseSubtracted::DummyD0Chargeds</td>
-        <td>D</td>
-        <td>dummyD0Chargeds</td>
-        <td>int</td>
-        <td></td>
-      </tr>
-    </table>
-  </div>
-
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::D0ChargedEventWiseSubtractedJetsMatchedToD0ChargedJets</button>
-  <div class="panel">
-    <div>
-
-    </div>
-    <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGJE/DataModel/Jet.h" target="_blank">PWGJE/DataModel/Jet.h</a>
-    </div>
-    <div>Is used in:
-      <ul>
-        <li>o2::aod::D0ChargedEventWiseSubtractedJetsMatchedToD0ChargedJet = o2::aod::D0ChargedEventWiseSubtractedJetsMatchedToD0ChargedJets::iterator</li>
-      </ul>
-    </div>
-    <table class=DataModel>
-      <tr>
-        <th>Name</th>
-        <th></th>
-        <th>Getter</th>
-        <th>Type</th>
-        <th>Comment</th>
-      </tr>
-      <tr>
-        <td>o2::aod::D0ChargedjetmatchingGeo::D0ChargedJetIds</td>
-        <td>GI</td>
-        <td></td>
-        <td>?</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::D0ChargedjetmatchingPt::D0ChargedJetIds</td>
-        <td>GI</td>
-        <td></td>
-        <td>?</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::D0ChargedjetmatchingCand::D0ChargedJetIds</td>
-        <td>GI</td>
-        <td></td>
-        <td>?</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::D0ChargedEventWiseSubtractedjetsmatchedtoD0Charged::DummyD0ChargedEventWiseSubtracteds</td>
-        <td>D</td>
-        <td>dummyD0ChargedEventWiseSubtracteds</td>
-        <td>int</td>
-        <td></td>
-      </tr>
-    </table>
-  </div>
-
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::LcChargedJetsMatchedToLcChargedEventWiseSubtractedJets</button>
-  <div class="panel">
-    <div>
-
-    </div>
-    <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGJE/DataModel/Jet.h" target="_blank">PWGJE/DataModel/Jet.h</a>
-    </div>
-    <div>Is used in:
-      <ul>
-        <li>o2::aod::LcChargedJetsMatchedToLcChargedEventWiseSubtractedJet = o2::aod::LcChargedJetsMatchedToLcChargedEventWiseSubtractedJets::iterator</li>
-      </ul>
-    </div>
-    <table class=DataModel>
-      <tr>
-        <th>Name</th>
-        <th></th>
-        <th>Getter</th>
-        <th>Type</th>
-        <th>Comment</th>
-      </tr>
-      <tr>
-        <td>o2::aod::LcChargedEventWiseSubtractedjetmatchingGeo::LcChargedEventWiseSubtractedJetIds</td>
-        <td>GI</td>
-        <td></td>
-        <td>?</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::LcChargedEventWiseSubtractedjetmatchingPt::LcChargedEventWiseSubtractedJetIds</td>
-        <td>GI</td>
-        <td></td>
-        <td>?</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::LcChargedEventWiseSubtractedjetmatchingCand::LcChargedEventWiseSubtractedJetIds</td>
-        <td>GI</td>
-        <td></td>
-        <td>?</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::LcChargedjetsmatchedtoLcChargedEventWiseSubtracted::DummyLcChargeds</td>
-        <td>D</td>
-        <td>dummyLcChargeds</td>
-        <td>int</td>
-        <td></td>
-      </tr>
-    </table>
-  </div>
-
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::LcChargedEventWiseSubtractedJetsMatchedToLcChargedJets</button>
-  <div class="panel">
-    <div>
-
-    </div>
-    <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGJE/DataModel/Jet.h" target="_blank">PWGJE/DataModel/Jet.h</a>
-    </div>
-    <div>Is used in:
-      <ul>
-        <li>o2::aod::LcChargedEventWiseSubtractedJetsMatchedToLcChargedJet = o2::aod::LcChargedEventWiseSubtractedJetsMatchedToLcChargedJets::iterator</li>
-      </ul>
-    </div>
-    <table class=DataModel>
-      <tr>
-        <th>Name</th>
-        <th></th>
-        <th>Getter</th>
-        <th>Type</th>
-        <th>Comment</th>
-      </tr>
-      <tr>
-        <td>o2::aod::LcChargedjetmatchingGeo::LcChargedJetIds</td>
-        <td>GI</td>
-        <td></td>
-        <td>?</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::LcChargedjetmatchingPt::LcChargedJetIds</td>
-        <td>GI</td>
-        <td></td>
-        <td>?</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::LcChargedjetmatchingCand::LcChargedJetIds</td>
-        <td>GI</td>
-        <td></td>
-        <td>?</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::LcChargedEventWiseSubtractedjetsmatchedtoLcCharged::DummyLcChargedEventWiseSubtracteds</td>
-        <td>D</td>
-        <td>dummyLcChargedEventWiseSubtracteds</td>
-        <td>int</td>
-        <td></td>
-      </tr>
-    </table>
-  </div>
-
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::DielectronChargedJetsMatchedToDielectronChargedEventWiseSubtractedJets</button>
-  <div class="panel">
-    <div>
-
-    </div>
-    <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGJE/DataModel/Jet.h" target="_blank">PWGJE/DataModel/Jet.h</a>
-    </div>
-    <div>Is used in:
-      <ul>
-        <li>o2::aod::DielectronChargedJetsMatchedToDielectronChargedEventWiseSubtractedJet = o2::aod::DielectronChargedJetsMatchedToDielectronChargedEventWiseSubtractedJets::iterator</li>
-      </ul>
-    </div>
-    <table class=DataModel>
-      <tr>
-        <th>Name</th>
-        <th></th>
-        <th>Getter</th>
-        <th>Type</th>
-        <th>Comment</th>
-      </tr>
-      <tr>
-        <td>o2::aod::DielectronChargedEventWiseSubtractedjetmatchingGeo::DielectronChargedEventWiseSubtractedJetIds</td>
-        <td>GI</td>
-        <td></td>
-        <td>?</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::DielectronChargedEventWiseSubtractedjetmatchingPt::DielectronChargedEventWiseSubtractedJetIds</td>
-        <td>GI</td>
-        <td></td>
-        <td>?</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::DielectronChargedEventWiseSubtractedjetmatchingCand::DielectronChargedEventWiseSubtractedJetIds</td>
-        <td>GI</td>
-        <td></td>
-        <td>?</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::DielectronChargedjetsmatchedtoDielectronChargedEventWiseSubtracted::DummyDielectronChargeds</td>
-        <td>D</td>
-        <td>dummyDielectronChargeds</td>
-        <td>int</td>
-        <td></td>
-      </tr>
-    </table>
-  </div>
-
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::DielectronChargedEventWiseSubtractedJetsMatchedToDielectronChargedJets</button>
-  <div class="panel">
-    <div>
-
-    </div>
-    <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGJE/DataModel/Jet.h" target="_blank">PWGJE/DataModel/Jet.h</a>
-    </div>
-    <div>Is used in:
-      <ul>
-        <li>o2::aod::DielectronChargedEventWiseSubtractedJetsMatchedToDielectronChargedJet = o2::aod::DielectronChargedEventWiseSubtractedJetsMatchedToDielectronChargedJets::iterator</li>
-      </ul>
-    </div>
-    <table class=DataModel>
-      <tr>
-        <th>Name</th>
-        <th></th>
-        <th>Getter</th>
-        <th>Type</th>
-        <th>Comment</th>
-      </tr>
-      <tr>
-        <td>o2::aod::DielectronChargedjetmatchingGeo::DielectronChargedJetIds</td>
-        <td>GI</td>
-        <td></td>
-        <td>?</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::DielectronChargedjetmatchingPt::DielectronChargedJetIds</td>
-        <td>GI</td>
-        <td></td>
-        <td>?</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::DielectronChargedjetmatchingCand::DielectronChargedJetIds</td>
-        <td>GI</td>
-        <td></td>
-        <td>?</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::DielectronChargedEventWiseSubtractedjetsmatchedtoDielectronCharged::DummyDielectronChargedEventWiseSubtracteds</td>
-        <td>D</td>
-        <td>dummyDielectronChargedEventWiseSubtracteds</td>
-        <td>int</td>
-        <td></td>
-      </tr>
-    </table>
-  </div>
-
-</div>
-
 ###  o2-analysis-je-jet-taggerhf
-Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGJE/TableProducer//jettaggerhf.cxx" target="_blank">jettaggerhf.cxx</a>
+Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGJE/TableProducer//jetTaggerHF.cxx" target="_blank">jetTaggerHF.cxx</a>
 <div>
 
   <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::ChargedJetTags</button>
@@ -63949,7 +64469,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGJE
 </div>
 
 ###  o2-analysis-je-jet-track-derived
-Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGJE/TableProducer//jettrackderived.cxx" target="_blank">jettrackderived.cxx</a>
+Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGJE/TableProducer//jetTrackDerived.cxx" target="_blank">jetTrackDerived.cxx</a>
 <div>
 
   <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::JeColls</button>
@@ -64378,7 +64898,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGJE
 </div>
 
 ###  o2-analysis-je-jet-luminosity-producer
-Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGJE/TableProducer//luminosityproducer.cxx" target="_blank">luminosityproducer.cxx</a>
+Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGJE/TableProducer//luminosityProducer.cxx" target="_blank">luminosityProducer.cxx</a>
 <div>
 
 </div>
@@ -64388,6 +64908,46 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGJE
 <div>
 
   <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::BkgChargedRhos</button>
+  <div class="panel">
+    <div>
+
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGJE/DataModel/JetSubtraction.h" target="_blank">PWGJE/DataModel/JetSubtraction.h</a>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::soa::Index</td>
+        <td>GI</td>
+        <td>globalIndex</td>
+        <td>int64_t</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::bkgrho::Rho</td>
+        <td></td>
+        <td>rho</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::bkgrho::RhoM</td>
+        <td></td>
+        <td>rhoM</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::BkgChargedMcRhos</button>
   <div class="panel">
     <div>
 
@@ -64467,7 +65027,87 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGJE
     </table>
   </div>
 
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::BkgD0McRhos</button>
+  <div class="panel">
+    <div>
+
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGJE/DataModel/JetSubtraction.h" target="_blank">PWGJE/DataModel/JetSubtraction.h</a>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::soa::Index</td>
+        <td>GI</td>
+        <td>globalIndex</td>
+        <td>int64_t</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::bkgrho::Rho</td>
+        <td></td>
+        <td>rho</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::bkgrho::RhoM</td>
+        <td></td>
+        <td>rhoM</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+    </table>
+  </div>
+
   <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::BkgLcRhos</button>
+  <div class="panel">
+    <div>
+
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGJE/DataModel/JetSubtraction.h" target="_blank">PWGJE/DataModel/JetSubtraction.h</a>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::soa::Index</td>
+        <td>GI</td>
+        <td>globalIndex</td>
+        <td>int64_t</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::bkgrho::Rho</td>
+        <td></td>
+        <td>rho</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::bkgrho::RhoM</td>
+        <td></td>
+        <td>rhoM</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::BkgLcMcRhos</button>
   <div class="panel">
     <div>
 
@@ -64547,7 +65187,87 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGJE
     </table>
   </div>
 
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::BkgBplusMcRhos</button>
+  <div class="panel">
+    <div>
+
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGJE/DataModel/JetSubtraction.h" target="_blank">PWGJE/DataModel/JetSubtraction.h</a>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::soa::Index</td>
+        <td>GI</td>
+        <td>globalIndex</td>
+        <td>int64_t</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::bkgrho::Rho</td>
+        <td></td>
+        <td>rho</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::bkgrho::RhoM</td>
+        <td></td>
+        <td>rhoM</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+    </table>
+  </div>
+
   <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::BkgDielectronRhos</button>
+  <div class="panel">
+    <div>
+
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGJE/DataModel/JetSubtraction.h" target="_blank">PWGJE/DataModel/JetSubtraction.h</a>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::soa::Index</td>
+        <td>GI</td>
+        <td>globalIndex</td>
+        <td>int64_t</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::bkgrho::Rho</td>
+        <td></td>
+        <td>rho</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::bkgrho::RhoM</td>
+        <td></td>
+        <td>rhoM</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::BkgDielectronMcRhos</button>
   <div class="panel">
     <div>
 
@@ -65625,9 +66345,9 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGLF
         <th>Comment</th>
       </tr>
       <tr>
-        <td>o2::aod::spcalibrationtable::TriggerEvent</td>
+        <td>o2::aod::spcalibrationtable::TriggerEventSP</td>
         <td></td>
-        <td>triggerevent</td>
+        <td>triggereventsp</td>
         <td>bool</td>
         <td></td>
       </tr>
@@ -67582,6 +68302,13 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGLF
         <td>chi2 of proton, pion mass constraint to Lambda mass</td>
       </tr>
       <tr>
+        <td>o2::aod::kfvtx3body::CosPAV0</td>
+        <td></td>
+        <td>cospav0</td>
+        <td>float</td>
+        <td>proton, pion vertex mass</td>
+      </tr>
+      <tr>
         <td>o2::aod::vtx3body::PxTrack0</td>
         <td></td>
         <td>pxtrack0</td>
@@ -67643,6 +68370,27 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGLF
         <td>pztrack2</td>
         <td>float</td>
         <td>track2 pz at min</td>
+      </tr>
+      <tr>
+        <td>o2::aod::kfvtx3body::TPCInnerParamTrack0</td>
+        <td></td>
+        <td>tpcinnerparamtrack0</td>
+        <td>float</td>
+        <td>momentum at inner wall of TPC of proton daughter</td>
+      </tr>
+      <tr>
+        <td>o2::aod::kfvtx3body::TPCInnerParamTrack1</td>
+        <td></td>
+        <td>tpcinnerparamtrack1</td>
+        <td>float</td>
+        <td>momentum at inner wall of TPC of pion daughter</td>
+      </tr>
+      <tr>
+        <td>o2::aod::kfvtx3body::TPCInnerParamTrack2</td>
+        <td></td>
+        <td>tpcinnerparamtrack2</td>
+        <td>float</td>
+        <td>momentum at inner wall of TPC of deuteron daughter</td>
       </tr>
       <tr>
         <td>o2::aod::kfvtx3body::DCATrack0ToPVKF</td>
@@ -67803,133 +68551,70 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGLF
         <td></td>
         <td>tpcnsigmaproton</td>
         <td>float</td>
-        <td>nsigma of TPC PID of the proton daughter</td>
+        <td>nsigma proton of TPC PID of the proton daughter</td>
       </tr>
       <tr>
         <td>o2::aod::kfvtx3body::TPCNSigmaPion</td>
         <td></td>
         <td>tpcnsigmapion</td>
         <td>float</td>
-        <td>nsigma of TPC PID of the pion daughter</td>
+        <td>nsigma pion of TPC PID of the pion daughter</td>
       </tr>
       <tr>
         <td>o2::aod::kfvtx3body::TPCNSigmaDeuteron</td>
         <td></td>
         <td>tpcnsigmadeuteron</td>
         <td>float</td>
-        <td>nsigma of TPC PID of the bachelor daughter</td>
+        <td>nsigma deuteron of TPC PID of the bachelor daughter</td>
       </tr>
       <tr>
-        <td>o2::aod::vtx3body::VtxRadius</td>
-        <td>D</td>
-        <td>vtxradius</td>
+        <td>o2::aod::kfvtx3body::TPCNSigmaPionBach</td>
+        <td></td>
+        <td>tpcnsigmapionbach</td>
         <td>float</td>
-        <td>3 body decay radius (2D, centered at zero)</td>
+        <td>nsigma pion of TPC PID of the bachelor daughter</td>
       </tr>
       <tr>
-        <td>o2::aod::vtx3body::DistOverTotMom</td>
-        <td>D</td>
-        <td>distovertotmom</td>
-        <td>?</td>
-        <td>PV to 3 body decay distance over total momentum</td>
-      </tr>
-      <tr>
-        <td>o2::aod::vtx3body::VtxCosPA</td>
-        <td>D</td>
-        <td>vtxcosPA</td>
+        <td>o2::aod::kfvtx3body::TPCdEdxProton</td>
+        <td></td>
+        <td>tpcdedxproton</td>
         <td>float</td>
-        <td>3 body vtx CosPA</td>
+        <td>TPC dEdx of the proton daughter</td>
       </tr>
       <tr>
-        <td>o2::aod::vtx3body::DCAVtxToPV</td>
-        <td>D</td>
-        <td>dcavtxtopv</td>
+        <td>o2::aod::kfvtx3body::TPCdEdxPion</td>
+        <td></td>
+        <td>tpcdedxpion</td>
         <td>float</td>
-        <td>DCA of 3 body vtx to PV</td>
+        <td>TPC dEdx of the pion daughter</td>
       </tr>
       <tr>
-        <td>o2::aod::vtx3body::YHypertriton</td>
-        <td>D</td>
-        <td>yHypertriton</td>
+        <td>o2::aod::kfvtx3body::TPCdEdxDeuteron</td>
+        <td></td>
+        <td>tpcdedxdeuteron</td>
         <td>float</td>
-        <td>3 body vtx y with hypertriton or antihypertriton hypothesis</td>
+        <td>TPC dEdx of the bachelor daughter</td>
       </tr>
       <tr>
-        <td>o2::aod::vtx3body::Eta</td>
-        <td>D</td>
-        <td>eta</td>
+        <td>o2::aod::kfvtx3body::TOFNSigmaDeuteron</td>
+        <td></td>
+        <td>tofnsigmadeuteron</td>
         <td>float</td>
-        <td>3 body vtx eta</td>
+        <td>nsigma of TOF PID of the bachelor daughter</td>
       </tr>
       <tr>
-        <td>o2::aod::vtx3body::Phi</td>
-        <td>D</td>
-        <td>phi</td>
-        <td>float</td>
-        <td>3 body vtx phi</td>
+        <td>o2::aod::kfvtx3body::ITSClusSizeDeuteron</td>
+        <td></td>
+        <td>itsclussizedeuteron</td>
+        <td>double</td>
+        <td>average ITS cluster size of bachelor daughter</td>
       </tr>
       <tr>
-        <td>o2::aod::vtx3body::Track0Pt</td>
-        <td>D</td>
-        <td>track0pt</td>
-        <td>float</td>
-        <td>daughter0 pT</td>
-      </tr>
-      <tr>
-        <td>o2::aod::vtx3body::Track0Eta</td>
-        <td>D</td>
-        <td>track0eta</td>
-        <td>float</td>
-        <td>daughter0 eta</td>
-      </tr>
-      <tr>
-        <td>o2::aod::vtx3body::Track0Phi</td>
-        <td>D</td>
-        <td>track0phi</td>
-        <td>float</td>
-        <td>daughter0 phi</td>
-      </tr>
-      <tr>
-        <td>o2::aod::vtx3body::Track1Pt</td>
-        <td>D</td>
-        <td>track1pt</td>
-        <td>float</td>
-        <td>daughter1 pT</td>
-      </tr>
-      <tr>
-        <td>o2::aod::vtx3body::Track1Eta</td>
-        <td>D</td>
-        <td>track1eta</td>
-        <td>float</td>
-        <td>daughter1 eta</td>
-      </tr>
-      <tr>
-        <td>o2::aod::vtx3body::Track1Phi</td>
-        <td>D</td>
-        <td>track1phi</td>
-        <td>float</td>
-        <td>daughter1 phi</td>
-      </tr>
-      <tr>
-        <td>o2::aod::vtx3body::Track2Pt</td>
-        <td>D</td>
-        <td>track2pt</td>
-        <td>float</td>
-        <td>daughter2 pT</td>
-      </tr>
-      <tr>
-        <td>o2::aod::vtx3body::Track2Eta</td>
-        <td>D</td>
-        <td>track2eta</td>
-        <td>float</td>
-        <td>daughter2 eta</td>
-      </tr>
-      <tr>
-        <td>o2::aod::vtx3body::Track2Phi</td>
-        <td>D</td>
-        <td>track2phi</td>
-        <td>float</td>
-        <td>daughter2 phi</td>
+        <td>o2::aod::kfvtx3body::PIDTrackingDeuteron</td>
+        <td></td>
+        <td>pidtrackingdeuteron</td>
+        <td>uint32_t</td>
+        <td>PID during tracking of bachelor daughter</td>
       </tr>
     </table>
   </div>
@@ -68023,27 +68708,6 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGLF
         <td>decay position Z</td>
       </tr>
       <tr>
-        <td>o2::aod::kfvtx3body::XErr</td>
-        <td></td>
-        <td>xerr</td>
-        <td>float</td>
-        <td>candidate position x error at decay position</td>
-      </tr>
-      <tr>
-        <td>o2::aod::kfvtx3body::YErr</td>
-        <td></td>
-        <td>yerr</td>
-        <td>float</td>
-        <td>candidate position y error at decay position</td>
-      </tr>
-      <tr>
-        <td>o2::aod::kfvtx3body::ZErr</td>
-        <td></td>
-        <td>zerr</td>
-        <td>float</td>
-        <td>candidate position z error at decay position</td>
-      </tr>
-      <tr>
         <td>o2::aod::kfvtx3body::Px</td>
         <td></td>
         <td>px</td>
@@ -68107,20 +68771,6 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGLF
         <td>3 body vtx CosPA from KFParticle (using kfpPV)</td>
       </tr>
       <tr>
-        <td>o2::aod::kfvtx3body::VtxCosPAKFtopo</td>
-        <td></td>
-        <td>vtxcospakftopo</td>
-        <td>float</td>
-        <td>3 body vtx CosPA from KFParticle after topological constraint (using kfpPV)</td>
-      </tr>
-      <tr>
-        <td>o2::aod::kfvtx3body::VtxCosXYPAKFtopo</td>
-        <td></td>
-        <td>vtxcosxypakftopo</td>
-        <td>float</td>
-        <td>3 body vtx CosPA from KFParticle after topological constraint (using kfpPV)</td>
-      </tr>
-      <tr>
         <td>o2::aod::kfvtx3body::DecayLKF</td>
         <td></td>
         <td>decaylkf</td>
@@ -68175,6 +68825,13 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGLF
         <td>chi2massv0</td>
         <td>float</td>
         <td>chi2 of proton, pion mass constraint to Lambda mass</td>
+      </tr>
+      <tr>
+        <td>o2::aod::kfvtx3body::CosPAV0</td>
+        <td></td>
+        <td>cospav0</td>
+        <td>float</td>
+        <td>proton, pion vertex mass</td>
       </tr>
       <tr>
         <td>o2::aod::vtx3body::PxTrack0</td>
@@ -68238,6 +68895,27 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGLF
         <td>pztrack2</td>
         <td>float</td>
         <td>track2 pz at min</td>
+      </tr>
+      <tr>
+        <td>o2::aod::kfvtx3body::TPCInnerParamTrack0</td>
+        <td></td>
+        <td>tpcinnerparamtrack0</td>
+        <td>float</td>
+        <td>momentum at inner wall of TPC of proton daughter</td>
+      </tr>
+      <tr>
+        <td>o2::aod::kfvtx3body::TPCInnerParamTrack1</td>
+        <td></td>
+        <td>tpcinnerparamtrack1</td>
+        <td>float</td>
+        <td>momentum at inner wall of TPC of pion daughter</td>
+      </tr>
+      <tr>
+        <td>o2::aod::kfvtx3body::TPCInnerParamTrack2</td>
+        <td></td>
+        <td>tpcinnerparamtrack2</td>
+        <td>float</td>
+        <td>momentum at inner wall of TPC of deuteron daughter</td>
       </tr>
       <tr>
         <td>o2::aod::kfvtx3body::DCATrack0ToPVKF</td>
@@ -68331,48 +69009,6 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGLF
         <td>sum of DCAs between daughters in 3D from KFParticle</td>
       </tr>
       <tr>
-        <td>o2::aod::kfvtx3body::DCAxyTrackPosToPV</td>
-        <td></td>
-        <td>dcaxytrackpostopv</td>
-        <td>float</td>
-        <td>DCAxy of positive track to PV (propagated before vtx fit)</td>
-      </tr>
-      <tr>
-        <td>o2::aod::kfvtx3body::DCAxyTrackNegToPV</td>
-        <td></td>
-        <td>dcaxytracknegtopv</td>
-        <td>float</td>
-        <td>DCAxy of negative track to PV (propagated before vtx fit)</td>
-      </tr>
-      <tr>
-        <td>o2::aod::kfvtx3body::DCAxyTrackBachToPV</td>
-        <td></td>
-        <td>dcaxytrackbachtopv</td>
-        <td>float</td>
-        <td>DCAxy of bachelor track to PV (propagated before vtx fit)</td>
-      </tr>
-      <tr>
-        <td>o2::aod::kfvtx3body::DCATrackPosToPV</td>
-        <td></td>
-        <td>dcatrackpostopv</td>
-        <td>float</td>
-        <td>DCA of positive track to PV (propagated before vtx fit)</td>
-      </tr>
-      <tr>
-        <td>o2::aod::kfvtx3body::DCATrackNegToPV</td>
-        <td></td>
-        <td>dcatracknegtopv</td>
-        <td>float</td>
-        <td>DCA of negative track to PV (propagated before vtx fit)</td>
-      </tr>
-      <tr>
-        <td>o2::aod::kfvtx3body::DCATrackBachToPV</td>
-        <td></td>
-        <td>dcatrackbachtopv</td>
-        <td>float</td>
-        <td>DCA of bachelor track to PV (propagated before vtx fit)</td>
-      </tr>
-      <tr>
         <td>o2::aod::kfvtx3body::Track0Sign</td>
         <td></td>
         <td>track0sign</td>
@@ -68398,133 +69034,70 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGLF
         <td></td>
         <td>tpcnsigmaproton</td>
         <td>float</td>
-        <td>nsigma of TPC PID of the proton daughter</td>
+        <td>nsigma proton of TPC PID of the proton daughter</td>
       </tr>
       <tr>
         <td>o2::aod::kfvtx3body::TPCNSigmaPion</td>
         <td></td>
         <td>tpcnsigmapion</td>
         <td>float</td>
-        <td>nsigma of TPC PID of the pion daughter</td>
+        <td>nsigma pion of TPC PID of the pion daughter</td>
       </tr>
       <tr>
         <td>o2::aod::kfvtx3body::TPCNSigmaDeuteron</td>
         <td></td>
         <td>tpcnsigmadeuteron</td>
         <td>float</td>
-        <td>nsigma of TPC PID of the bachelor daughter</td>
+        <td>nsigma deuteron of TPC PID of the bachelor daughter</td>
       </tr>
       <tr>
-        <td>o2::aod::vtx3body::VtxRadius</td>
-        <td>D</td>
-        <td>vtxradius</td>
+        <td>o2::aod::kfvtx3body::TPCNSigmaPionBach</td>
+        <td></td>
+        <td>tpcnsigmapionbach</td>
         <td>float</td>
-        <td>3 body decay radius (2D, centered at zero)</td>
+        <td>nsigma pion of TPC PID of the bachelor daughter</td>
       </tr>
       <tr>
-        <td>o2::aod::vtx3body::DistOverTotMom</td>
-        <td>D</td>
-        <td>distovertotmom</td>
-        <td>?</td>
-        <td>PV to 3 body decay distance over total momentum</td>
-      </tr>
-      <tr>
-        <td>o2::aod::vtx3body::VtxCosPA</td>
-        <td>D</td>
-        <td>vtxcosPA</td>
+        <td>o2::aod::kfvtx3body::TPCdEdxProton</td>
+        <td></td>
+        <td>tpcdedxproton</td>
         <td>float</td>
-        <td>3 body vtx CosPA</td>
+        <td>TPC dEdx of the proton daughter</td>
       </tr>
       <tr>
-        <td>o2::aod::vtx3body::DCAVtxToPV</td>
-        <td>D</td>
-        <td>dcavtxtopv</td>
+        <td>o2::aod::kfvtx3body::TPCdEdxPion</td>
+        <td></td>
+        <td>tpcdedxpion</td>
         <td>float</td>
-        <td>DCA of 3 body vtx to PV</td>
+        <td>TPC dEdx of the pion daughter</td>
       </tr>
       <tr>
-        <td>o2::aod::vtx3body::YHypertriton</td>
-        <td>D</td>
-        <td>yHypertriton</td>
+        <td>o2::aod::kfvtx3body::TPCdEdxDeuteron</td>
+        <td></td>
+        <td>tpcdedxdeuteron</td>
         <td>float</td>
-        <td>3 body vtx y with hypertriton or antihypertriton hypothesis</td>
+        <td>TPC dEdx of the bachelor daughter</td>
       </tr>
       <tr>
-        <td>o2::aod::vtx3body::Eta</td>
-        <td>D</td>
-        <td>eta</td>
+        <td>o2::aod::kfvtx3body::TOFNSigmaDeuteron</td>
+        <td></td>
+        <td>tofnsigmadeuteron</td>
         <td>float</td>
-        <td>3 body vtx eta</td>
+        <td>nsigma of TOF PID of the bachelor daughter</td>
       </tr>
       <tr>
-        <td>o2::aod::vtx3body::Phi</td>
-        <td>D</td>
-        <td>phi</td>
-        <td>float</td>
-        <td>3 body vtx phi</td>
+        <td>o2::aod::kfvtx3body::ITSClusSizeDeuteron</td>
+        <td></td>
+        <td>itsclussizedeuteron</td>
+        <td>double</td>
+        <td>average ITS cluster size of bachelor daughter</td>
       </tr>
       <tr>
-        <td>o2::aod::vtx3body::Track0Pt</td>
-        <td>D</td>
-        <td>track0pt</td>
-        <td>float</td>
-        <td>daughter0 pT</td>
-      </tr>
-      <tr>
-        <td>o2::aod::vtx3body::Track0Eta</td>
-        <td>D</td>
-        <td>track0eta</td>
-        <td>float</td>
-        <td>daughter0 eta</td>
-      </tr>
-      <tr>
-        <td>o2::aod::vtx3body::Track0Phi</td>
-        <td>D</td>
-        <td>track0phi</td>
-        <td>float</td>
-        <td>daughter0 phi</td>
-      </tr>
-      <tr>
-        <td>o2::aod::vtx3body::Track1Pt</td>
-        <td>D</td>
-        <td>track1pt</td>
-        <td>float</td>
-        <td>daughter1 pT</td>
-      </tr>
-      <tr>
-        <td>o2::aod::vtx3body::Track1Eta</td>
-        <td>D</td>
-        <td>track1eta</td>
-        <td>float</td>
-        <td>daughter1 eta</td>
-      </tr>
-      <tr>
-        <td>o2::aod::vtx3body::Track1Phi</td>
-        <td>D</td>
-        <td>track1phi</td>
-        <td>float</td>
-        <td>daughter1 phi</td>
-      </tr>
-      <tr>
-        <td>o2::aod::vtx3body::Track2Pt</td>
-        <td>D</td>
-        <td>track2pt</td>
-        <td>float</td>
-        <td>daughter2 pT</td>
-      </tr>
-      <tr>
-        <td>o2::aod::vtx3body::Track2Eta</td>
-        <td>D</td>
-        <td>track2eta</td>
-        <td>float</td>
-        <td>daughter2 eta</td>
-      </tr>
-      <tr>
-        <td>o2::aod::vtx3body::Track2Phi</td>
-        <td>D</td>
-        <td>track2phi</td>
-        <td>float</td>
-        <td>daughter2 phi</td>
+        <td>o2::aod::kfvtx3body::PIDTrackingDeuteron</td>
+        <td></td>
+        <td>pidtrackingdeuteron</td>
+        <td>uint32_t</td>
+        <td>PID during tracking of bachelor daughter</td>
       </tr>
     </table>
   </div>
@@ -68596,6 +69169,363 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGLF
 ###  o2-analysis-lf-ebye-maker
 Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGLF/TableProducer/Nuspex//ebyeMaker.cxx" target="_blank">ebyeMaker.cxx</a>
 <div>
+
+</div>
+
+###  o2-analysis-lf-he3hadronfemto
+Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGLF/TableProducer/Nuspex//he3HadronFemto.cxx" target="_blank">he3HadronFemto.cxx</a>
+<div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::he3HadronTable</button>
+  <div class="panel">
+    <div>
+
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGLF/DataModel/LFhe3HadronTables.h" target="_blank">PWGLF/DataModel/LFhe3HadronTables.h</a>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::he3HadronTablesNS::PtHe3</td>
+        <td></td>
+        <td>ptHe3</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::he3HadronTablesNS::EtaHe3</td>
+        <td></td>
+        <td>etaHe3</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::he3HadronTablesNS::PhiHe3</td>
+        <td></td>
+        <td>phiHe3</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::he3HadronTablesNS::PtHad</td>
+        <td></td>
+        <td>ptHad</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::he3HadronTablesNS::EtaHad</td>
+        <td></td>
+        <td>etaHad</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::he3HadronTablesNS::PhiHad</td>
+        <td></td>
+        <td>phiHad</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::he3HadronTablesNS::DCAxyHe3</td>
+        <td></td>
+        <td>dcaxyHe3</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::he3HadronTablesNS::DCAzHe3</td>
+        <td></td>
+        <td>dcazHe3</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::he3HadronTablesNS::DCAxyHad</td>
+        <td></td>
+        <td>dcaxyHad</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::he3HadronTablesNS::DCAzHad</td>
+        <td></td>
+        <td>dcazHad</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::he3HadronTablesNS::SignalTPCHe3</td>
+        <td></td>
+        <td>signalTPCHe3</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::he3HadronTablesNS::InnerParamTPCHe3</td>
+        <td></td>
+        <td>innerParamTPCHe3</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::he3HadronTablesNS::SignalTPCHad</td>
+        <td></td>
+        <td>signalTPCHad</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::he3HadronTablesNS::InnerParamTPCHad</td>
+        <td></td>
+        <td>innerParamTPCHad</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::he3HadronTablesNS::NClsTPCHe3</td>
+        <td></td>
+        <td>nClsTPCHe3</td>
+        <td>uint8_t</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::he3HadronTablesNS::NSigmaTPCHe3</td>
+        <td></td>
+        <td>nSigmaTPCHe3</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::he3HadronTablesNS::NSigmaTPCHad</td>
+        <td></td>
+        <td>nSigmaTOFHad</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::he3HadronTablesNS::Chi2TPCHe3</td>
+        <td></td>
+        <td>chi2TPCHe3</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::he3HadronTablesNS::Chi2TPCHad</td>
+        <td></td>
+        <td>chi2TPCHad</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::he3HadronTablesNS::MassTOFHe3</td>
+        <td></td>
+        <td>massTOFHe3</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::he3HadronTablesNS::MassTOFHad</td>
+        <td></td>
+        <td>massTOFHad</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::he3HadronTablesNS::PIDtrkHe3</td>
+        <td></td>
+        <td>pidTrkHe3</td>
+        <td>uint32_t</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::he3HadronTablesNS::PIDtrkHad</td>
+        <td></td>
+        <td>pidTrkHad</td>
+        <td>uint32_t</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::he3HadronTablesNS::ItsClusterSizeHe3</td>
+        <td></td>
+        <td>itsClusterSizeHe3</td>
+        <td>uint32_t</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::he3HadronTablesNS::ItsClusterSizeHad</td>
+        <td></td>
+        <td>itsClusterSizeHad</td>
+        <td>uint32_t</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::he3HadronTablesNS::SharedClustersHe3</td>
+        <td></td>
+        <td>sharedClustersHe3</td>
+        <td>uint8_t</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::he3HadronTablesNS::SharedClustersHad</td>
+        <td></td>
+        <td>sharedClustersHad</td>
+        <td>uint8_t</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::he3HadronTablesNS::IsBkgUS</td>
+        <td></td>
+        <td>isBkgUS</td>
+        <td>bool</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::he3HadronTablesNS::IsBkgEM</td>
+        <td></td>
+        <td>isBkgEM</td>
+        <td>bool</td>
+        <td></td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::he3HadronTableMC</button>
+  <div class="panel">
+    <div>
+
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGLF/DataModel/LFhe3HadronTables.h" target="_blank">PWGLF/DataModel/LFhe3HadronTables.h</a>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::he3HadronTablesNS::PtMCHe3</td>
+        <td></td>
+        <td>ptMCHe3</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::he3HadronTablesNS::EtaMCHe3</td>
+        <td></td>
+        <td>etaMCHe3</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::he3HadronTablesNS::PhiMCHe3</td>
+        <td></td>
+        <td>phiMCHe3</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::he3HadronTablesNS::PtMCHad</td>
+        <td></td>
+        <td>ptMCHad</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::he3HadronTablesNS::EtaMCHad</td>
+        <td></td>
+        <td>etaMCHad</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::he3HadronTablesNS::PhiMCHad</td>
+        <td></td>
+        <td>phiMCHad</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::he3HadronTablesNS::SignedPtMC</td>
+        <td></td>
+        <td>signedPtMC</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::he3HadronTablesNS::MassMC</td>
+        <td></td>
+        <td>massMC</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::he3HadronMult</button>
+  <div class="panel">
+    <div>
+
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGLF/DataModel/LFhe3HadronTables.h" target="_blank">PWGLF/DataModel/LFhe3HadronTables.h</a>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::he3HadronTablesNS::CollisionId</td>
+        <td></td>
+        <td>collisionId</td>
+        <td>int64_t</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::he3HadronTablesNS::ZVertex</td>
+        <td></td>
+        <td>zVertex</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::he3HadronTablesNS::Multiplicity</td>
+        <td></td>
+        <td>multiplicity</td>
+        <td>uint16_t</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::he3HadronTablesNS::CentralityFT0C</td>
+        <td></td>
+        <td>centFT0C</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::he3HadronTablesNS:</td>
+        <td>GI</td>
+        <td></td>
+        <td>?</td>
+        <td></td>
+      </tr>
+    </table>
+  </div>
 
 </div>
 
@@ -68920,6 +69850,851 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGLF
       </tr>
     </table>
   </div>
+
+</div>
+
+###  o2-analysis-lf-hypernuclei-kf-reco-task
+Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGLF/TableProducer/Nuspex//hypKfRecoTask.cxx" target="_blank">hypKfRecoTask.cxx</a>
+<div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::HypKfMcColls</button>
+  <div class="panel">
+    <div>
+
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGLF/DataModel/LFHypernucleiKfTables.h" target="_blank">PWGLF/DataModel/LFHypernucleiKfTables.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::HypKfMcColl = o2::aod::HypKfMcColls::iterator</li>
+      </ul>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::soa::Index</td>
+        <td>GI</td>
+        <td>globalIndex</td>
+        <td>int64_t</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hykfmcColl::PassedEvSel</td>
+        <td></td>
+        <td>passedEvSel</td>
+        <td>bool</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::mccollision::PosX</td>
+        <td></td>
+        <td>posX</td>
+        <td>float</td>
+        <td>X vertex position in cm</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mccollision::PosY</td>
+        <td></td>
+        <td>posY</td>
+        <td>float</td>
+        <td>Y vertex position in cm</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mccollision::PosZ</td>
+        <td></td>
+        <td>posZ</td>
+        <td>float</td>
+        <td>Z vertex position in cm</td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::HypKfMcParts</button>
+  <div class="panel">
+    <div>
+
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGLF/DataModel/LFHypernucleiKfTables.h" target="_blank">PWGLF/DataModel/LFHypernucleiKfTables.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::HypKfMcPart = o2::aod::HypKfMcParts::iterator</li>
+      </ul>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::soa::Index</td>
+        <td>GI</td>
+        <td>globalIndex</td>
+        <td>int64_t</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hykfmc::HypKfMcCollId</td>
+        <td>I</td>
+        <td>hypKfMcCollId</td>
+        <td>int32</td>
+        <td>Pointer into HypKfMcColls</td>
+      </tr>
+      <tr>
+        <td>o2::aod::hykfmc::Species</td>
+        <td></td>
+        <td>species</td>
+        <td>int8_t</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::PdgCode</td>
+        <td></td>
+        <td>pdgCode</td>
+        <td>int</td>
+        <td>PDG code</td>
+      </tr>
+      <tr>
+        <td>o2::aod::hykfmc::IsPhysicalPrimary</td>
+        <td></td>
+        <td>isPhysicalPrimary</td>
+        <td>bool</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::Px</td>
+        <td></td>
+        <td>px</td>
+        <td>float</td>
+        <td>Momentum in x in GeV/c</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::Py</td>
+        <td></td>
+        <td>py</td>
+        <td>float</td>
+        <td>Momentum in y in GeV/c</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::Pz</td>
+        <td></td>
+        <td>pz</td>
+        <td>float</td>
+        <td>Momentum in z in GeV/c</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::E</td>
+        <td></td>
+        <td>e</td>
+        <td>float</td>
+        <td>Energy</td>
+      </tr>
+      <tr>
+        <td>o2::aod::hykfmc::Svx</td>
+        <td></td>
+        <td>svx</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hykfmc::Svy</td>
+        <td></td>
+        <td>svy</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hykfmc::Svz</td>
+        <td></td>
+        <td>svz</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hykfmc::Pt</td>
+        <td>D</td>
+        <td>pt</td>
+        <td>?</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hykfmc::Y</td>
+        <td>D</td>
+        <td>y</td>
+        <td>?</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hykfmc::Mass</td>
+        <td>D</td>
+        <td>mass</td>
+        <td>?</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hykfmc::IsMatter</td>
+        <td>D</td>
+        <td>isMatter</td>
+        <td>?</td>
+        <td></td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::HypKfColls</button>
+  <div class="panel">
+    <div>
+
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGLF/DataModel/LFHypernucleiKfTables.h" target="_blank">PWGLF/DataModel/LFHypernucleiKfTables.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::HypKfColl = o2::aod::HypKfColls::iterator</li>
+      </ul>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::soa::Index</td>
+        <td>GI</td>
+        <td>globalIndex</td>
+        <td>int64_t</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hykfmcColl::PassedEvSel</td>
+        <td></td>
+        <td>passedEvSel</td>
+        <td>bool</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hykfmc::HypKfMcCollId</td>
+        <td>I</td>
+        <td>hypKfMcCollId</td>
+        <td>int32</td>
+        <td>Pointer into HypKfMcColls</td>
+      </tr>
+      <tr>
+        <td>o2::aod::&zwnj;collision::PosX</td>
+        <td></td>
+        <td>posX</td>
+        <td>float</td>
+        <td>X Vertex position in cm</td>
+      </tr>
+      <tr>
+        <td>o2::aod::&zwnj;collision::PosY</td>
+        <td></td>
+        <td>posY</td>
+        <td>float</td>
+        <td>Y Vertex position in cm</td>
+      </tr>
+      <tr>
+        <td>o2::aod::&zwnj;collision::PosZ</td>
+        <td></td>
+        <td>posZ</td>
+        <td>float</td>
+        <td>Z Vertex position in cm</td>
+      </tr>
+      <tr>
+        <td>o2::aod::cent::CentFT0A</td>
+        <td></td>
+        <td>centFT0A</td>
+        <td>float</td>
+        <td>Run3 centrality percentile estimated from FT0A multiplicity</td>
+      </tr>
+      <tr>
+        <td>o2::aod::cent::CentFT0C</td>
+        <td></td>
+        <td>centFT0C</td>
+        <td>float</td>
+        <td>Run3 centrality percentile estimated from FT0C multiplicity</td>
+      </tr>
+      <tr>
+        <td>o2::aod::cent::CentFT0M</td>
+        <td></td>
+        <td>centFT0M</td>
+        <td>float</td>
+        <td>Run3 centrality percentile estimated from FT0A+FT0C multiplicities</td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::HypKfTracks</button>
+  <div class="panel">
+    <div>
+
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGLF/DataModel/LFHypernucleiKfTables.h" target="_blank">PWGLF/DataModel/LFHypernucleiKfTables.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::HypKfTrack = o2::aod::HypKfTracks::iterator</li>
+      </ul>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::soa::Index</td>
+        <td>GI</td>
+        <td>globalIndex</td>
+        <td>int64_t</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hykfmc::Species</td>
+        <td></td>
+        <td>species</td>
+        <td>int8_t</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::Pt</td>
+        <td>E</td>
+        <td>pt</td>
+        <td>float</td>
+        <td>Transverse momentum of the track in GeV/c</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::Eta</td>
+        <td>E</td>
+        <td>eta</td>
+        <td>float</td>
+        <td>Pseudorapidity</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::Phi</td>
+        <td>E</td>
+        <td>phi</td>
+        <td>float</td>
+        <td>Phi of the track, in radians within [0, 2pi)</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::DcaXY</td>
+        <td></td>
+        <td>dcaXY</td>
+        <td>float</td>
+        <td>Impact parameter in XY of the track to the primary vertex</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::DcaZ</td>
+        <td></td>
+        <td>dcaZ</td>
+        <td>float</td>
+        <td>Impact parameter in Z of the track to the primary vertex</td>
+      </tr>
+      <tr>
+        <td>o2::aod::hykftrk::TPCnCluster</td>
+        <td></td>
+        <td>tpcNcluster</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::TPCChi2NCl</td>
+        <td></td>
+        <td>tpcChi2NCl</td>
+        <td>float</td>
+        <td>Chi2 / cluster for the TPC track segment</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::ITSClusterSizes</td>
+        <td></td>
+        <td>itsClusterSizes</td>
+        <td>uint32_t</td>
+        <td>Clusters sizes, four bits per a layer, starting from the innermost</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::ITSChi2NCl</td>
+        <td></td>
+        <td>itsChi2NCl</td>
+        <td>float</td>
+        <td>Chi2 / cluster for the ITS track segment</td>
+      </tr>
+      <tr>
+        <td>o2::aod::hykftrk::Rigidity</td>
+        <td></td>
+        <td>rigidity</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::TPCSignal</td>
+        <td></td>
+        <td>tpcSignal</td>
+        <td>float</td>
+        <td>dE/dx signal in the TPC</td>
+      </tr>
+      <tr>
+        <td>o2::aod::hykftrk::TPCnSigma</td>
+        <td></td>
+        <td>tpcNsigma</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hykftrk::TPCnSigmaNhp</td>
+        <td></td>
+        <td>tpcNsigmaNhp</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hykftrk::TPCnSigmaNlp</td>
+        <td></td>
+        <td>tpcNsigmaNlp</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hykftrk::TOFMass</td>
+        <td></td>
+        <td>tofMass</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hykftrk::IsPVContributor</td>
+        <td></td>
+        <td>isPVContributor</td>
+        <td>bool</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hykftrk::Px</td>
+        <td>D</td>
+        <td>px</td>
+        <td>?</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hykftrk::Py</td>
+        <td>D</td>
+        <td>py</td>
+        <td>?</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hykftrk::Pz</td>
+        <td>D</td>
+        <td>pz</td>
+        <td>?</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hykftrk::P</td>
+        <td>D</td>
+        <td>p</td>
+        <td>?</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hykftrk::Lambda</td>
+        <td>D</td>
+        <td>lambda</td>
+        <td>?</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hykftrk::ITSnCluster</td>
+        <td>D</td>
+        <td>itsNcluster</td>
+        <td>?</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hykftrk::ITSfirstLayer</td>
+        <td>D</td>
+        <td>itsFirstLayer</td>
+        <td>?</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hykftrk::ITSmeanClsSize</td>
+        <td>D</td>
+        <td>itsMeanClsSize</td>
+        <td>?</td>
+        <td></td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::HypKfSubDs</button>
+  <div class="panel">
+    <div>
+
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGLF/DataModel/LFHypernucleiKfTables.h" target="_blank">PWGLF/DataModel/LFHypernucleiKfTables.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::HypKfSubD = o2::aod::HypKfSubDs::iterator</li>
+      </ul>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::soa::Index</td>
+        <td>GI</td>
+        <td>globalIndex</td>
+        <td>int64_t</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hykftrk::SubMass</td>
+        <td></td>
+        <td>subMass</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::HypKfDaughtAdds</button>
+  <div class="panel">
+    <div>
+
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGLF/DataModel/LFHypernucleiKfTables.h" target="_blank">PWGLF/DataModel/LFHypernucleiKfTables.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::HypKfDaughtAdd = o2::aod::HypKfDaughtAdds::iterator</li>
+      </ul>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::soa::Index</td>
+        <td>GI</td>
+        <td>globalIndex</td>
+        <td>int64_t</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::X</td>
+        <td></td>
+        <td>x</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::Y</td>
+        <td></td>
+        <td>y</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::Z</td>
+        <td></td>
+        <td>z</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::Px</td>
+        <td></td>
+        <td>px</td>
+        <td>float</td>
+        <td>Momentum in x in GeV/c</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::Py</td>
+        <td></td>
+        <td>py</td>
+        <td>float</td>
+        <td>Momentum in y in GeV/c</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::Pz</td>
+        <td></td>
+        <td>pz</td>
+        <td>float</td>
+        <td>Momentum in z in GeV/c</td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::HypKfHypNucs</button>
+  <div class="panel">
+    <div>
+
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGLF/DataModel/LFHypernucleiKfTables.h" target="_blank">PWGLF/DataModel/LFHypernucleiKfTables.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::HypKfHypNuc = o2::aod::HypKfHypNucs::iterator</li>
+      </ul>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::soa::Index</td>
+        <td>GI</td>
+        <td>globalIndex</td>
+        <td>int64_t</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hykfhyp::HypKfMcPartId</td>
+        <td>I</td>
+        <td>hypKfMcPartId</td>
+        <td>int32</td>
+        <td>Pointer into HypKfMcParts</td>
+      </tr>
+      <tr>
+        <td>o2::aod::hykfhyp::HypKfCollId</td>
+        <td>I</td>
+        <td>hypKfCollId</td>
+        <td>int32</td>
+        <td>Pointer into HypKfColls</td>
+      </tr>
+      <tr>
+        <td>o2::aod::hykfhyp::HypKfTrackIds</td>
+        <td>GI</td>
+        <td></td>
+        <td>?</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hykfhyp::HypKfDaughtAddIds</td>
+        <td>GI</td>
+        <td></td>
+        <td>?</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hykfhyp::HypDaughterId</td>
+        <td>SI</td>
+        <td>hypDaughterId</td>
+        <td>int</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hykfhyp::HypKfSubDIds</td>
+        <td>GI</td>
+        <td></td>
+        <td>?</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hykfmc::Species</td>
+        <td></td>
+        <td>species</td>
+        <td>int8_t</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hykfhyp::Primary</td>
+        <td></td>
+        <td>primary</td>
+        <td>bool</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hykfhyp::Mass</td>
+        <td></td>
+        <td>mass</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hykfhyp::Px</td>
+        <td></td>
+        <td>px</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hykfhyp::Py</td>
+        <td></td>
+        <td>py</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hykfhyp::Pz</td>
+        <td></td>
+        <td>pz</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hykfhyp::DcaToPvXY</td>
+        <td></td>
+        <td>dcaToPvXY</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hykfhyp::DcaToPvZ</td>
+        <td></td>
+        <td>dcaToPvZ</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hykfhyp::DevToPvXY</td>
+        <td></td>
+        <td>devToPvXY</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hykfhyp::DcaToVtxXY</td>
+        <td></td>
+        <td>dcaToVtxXY</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hykfhyp::DcaToVtxZ</td>
+        <td></td>
+        <td>dcaToVtxZ</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hykfhyp::Chi2</td>
+        <td></td>
+        <td>chi2</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hykfmc::Svx</td>
+        <td></td>
+        <td>svx</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hykfmc::Svy</td>
+        <td></td>
+        <td>svy</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hykfmc::Svz</td>
+        <td></td>
+        <td>svz</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hykfhyp::Y</td>
+        <td>D</td>
+        <td>y</td>
+        <td>?</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hykfhyp::Pt</td>
+        <td>D</td>
+        <td>pt</td>
+        <td>?</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hykfhyp::Eta</td>
+        <td>D</td>
+        <td>eta</td>
+        <td>?</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hykfhyp::Phi</td>
+        <td>D</td>
+        <td>phi</td>
+        <td>?</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hykfhyp::P</td>
+        <td>D</td>
+        <td>p</td>
+        <td>?</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hykfhyp::McTrue</td>
+        <td>D</td>
+        <td>mcTrue</td>
+        <td>?</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hykfhyp::IsMatter</td>
+        <td>D</td>
+        <td>isMatter</td>
+        <td>?</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::hykfhyp::Cascade</td>
+        <td>D</td>
+        <td>cascade</td>
+        <td>?</td>
+        <td></td>
+      </tr>
+    </table>
+  </div>
+
+</div>
+
+###  o2-analysis-lf-hypernuclei-kf-tree-creator
+Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGLF/TableProducer/Nuspex//hypKfTreeCreator.cxx" target="_blank">hypKfTreeCreator.cxx</a>
+<div>
 
 </div>
 
@@ -70669,512 +72444,6 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGLF
 
 </div>
 
-###  o2-analysis-lf-lithium4analysis
-Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGLF/TableProducer/Nuspex//lithium4analysis.cxx" target="_blank">lithium4analysis.cxx</a>
-<div>
-
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::Lithium4Table</button>
-  <div class="panel">
-    <div>
-
-    </div>
-    <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGLF/DataModel/LFLithium4Tables.h" target="_blank">PWGLF/DataModel/LFLithium4Tables.h</a>
-    </div>
-    <table class=DataModel>
-      <tr>
-        <th>Name</th>
-        <th></th>
-        <th>Getter</th>
-        <th>Type</th>
-        <th>Comment</th>
-      </tr>
-      <tr>
-        <td>o2::aod::Lithium4TablesNS::PtHe3</td>
-        <td></td>
-        <td>ptHe3</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::Lithium4TablesNS::EtaHe3</td>
-        <td></td>
-        <td>etaHe3</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::Lithium4TablesNS::PhiHe3</td>
-        <td></td>
-        <td>phiHe3</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::Lithium4TablesNS::PtPr</td>
-        <td></td>
-        <td>ptPr</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::Lithium4TablesNS::EtaPr</td>
-        <td></td>
-        <td>etaPr</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::Lithium4TablesNS::PhiPr</td>
-        <td></td>
-        <td>phiPr</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::Lithium4TablesNS::DCAxyHe3</td>
-        <td></td>
-        <td>dcaxyHe3</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::Lithium4TablesNS::DCAzHe3</td>
-        <td></td>
-        <td>dcazHe3</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::Lithium4TablesNS::DCAxyPr</td>
-        <td></td>
-        <td>dcaxyPr</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::Lithium4TablesNS::DCAzPr</td>
-        <td></td>
-        <td>dcazPr</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::Lithium4TablesNS::SignalTPCHe3</td>
-        <td></td>
-        <td>signalTPCHe3</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::Lithium4TablesNS::InnerParamTPCHe3</td>
-        <td></td>
-        <td>innerParamTPCHe3</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::Lithium4TablesNS::SignalTPCPr</td>
-        <td></td>
-        <td>signalTPCPr</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::Lithium4TablesNS::InnerParamTPCPr</td>
-        <td></td>
-        <td>innerParamTPCPr</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::Lithium4TablesNS::NClsTPCHe3</td>
-        <td></td>
-        <td>nClsTPCHe3</td>
-        <td>uint8_t</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::Lithium4TablesNS::NSigmaTPCHe3</td>
-        <td></td>
-        <td>nSigmaTPCHe3</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::Lithium4TablesNS::NSigmaTPCPr</td>
-        <td></td>
-        <td>nSigmaTOFPr</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::Lithium4TablesNS::Chi2TPCHe3</td>
-        <td></td>
-        <td>chi2TPCHe3</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::Lithium4TablesNS::Chi2TPCPr</td>
-        <td></td>
-        <td>chi2TPCPr</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::Lithium4TablesNS::MassTOFHe3</td>
-        <td></td>
-        <td>massTOFHe3</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::Lithium4TablesNS::MassTOFPr</td>
-        <td></td>
-        <td>massTOFPr</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::Lithium4TablesNS::PIDtrkHe3</td>
-        <td></td>
-        <td>pidTrkHe3</td>
-        <td>uint32_t</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::Lithium4TablesNS::PIDtrkPr</td>
-        <td></td>
-        <td>pidTrkPr</td>
-        <td>uint32_t</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::Lithium4TablesNS::ItsClusterSizeHe3</td>
-        <td></td>
-        <td>itsClusterSizeHe3</td>
-        <td>uint32_t</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::Lithium4TablesNS::ItsClusterSizePr</td>
-        <td></td>
-        <td>itsClusterSizePr</td>
-        <td>uint32_t</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::Lithium4TablesNS::SharedClustersHe3</td>
-        <td></td>
-        <td>sharedClustersHe3</td>
-        <td>uint8_t</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::Lithium4TablesNS::SharedClustersPr</td>
-        <td></td>
-        <td>sharedClustersPr</td>
-        <td>uint8_t</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::Lithium4TablesNS::IsBkgLS</td>
-        <td></td>
-        <td>isBkgLS</td>
-        <td>bool</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::Lithium4TablesNS::IsBkgEM</td>
-        <td></td>
-        <td>isBkgEM</td>
-        <td>bool</td>
-        <td></td>
-      </tr>
-    </table>
-  </div>
-
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::Lithium4TableMC</button>
-  <div class="panel">
-    <div>
-
-    </div>
-    <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGLF/DataModel/LFLithium4Tables.h" target="_blank">PWGLF/DataModel/LFLithium4Tables.h</a>
-    </div>
-    <table class=DataModel>
-      <tr>
-        <th>Name</th>
-        <th></th>
-        <th>Getter</th>
-        <th>Type</th>
-        <th>Comment</th>
-      </tr>
-      <tr>
-        <td>o2::aod::Lithium4TablesNS::PtHe3</td>
-        <td></td>
-        <td>ptHe3</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::Lithium4TablesNS::EtaHe3</td>
-        <td></td>
-        <td>etaHe3</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::Lithium4TablesNS::PhiHe3</td>
-        <td></td>
-        <td>phiHe3</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::Lithium4TablesNS::PtPr</td>
-        <td></td>
-        <td>ptPr</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::Lithium4TablesNS::EtaPr</td>
-        <td></td>
-        <td>etaPr</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::Lithium4TablesNS::PhiPr</td>
-        <td></td>
-        <td>phiPr</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::Lithium4TablesNS::DCAxyHe3</td>
-        <td></td>
-        <td>dcaxyHe3</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::Lithium4TablesNS::DCAzHe3</td>
-        <td></td>
-        <td>dcazHe3</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::Lithium4TablesNS::DCAxyPr</td>
-        <td></td>
-        <td>dcaxyPr</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::Lithium4TablesNS::DCAzPr</td>
-        <td></td>
-        <td>dcazPr</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::Lithium4TablesNS::SignalTPCHe3</td>
-        <td></td>
-        <td>signalTPCHe3</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::Lithium4TablesNS::InnerParamTPCHe3</td>
-        <td></td>
-        <td>innerParamTPCHe3</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::Lithium4TablesNS::SignalTPCPr</td>
-        <td></td>
-        <td>signalTPCPr</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::Lithium4TablesNS::InnerParamTPCPr</td>
-        <td></td>
-        <td>innerParamTPCPr</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::Lithium4TablesNS::NClsTPCHe3</td>
-        <td></td>
-        <td>nClsTPCHe3</td>
-        <td>uint8_t</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::Lithium4TablesNS::NSigmaTPCHe3</td>
-        <td></td>
-        <td>nSigmaTPCHe3</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::Lithium4TablesNS::NSigmaTPCPr</td>
-        <td></td>
-        <td>nSigmaTOFPr</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::Lithium4TablesNS::Chi2TPCHe3</td>
-        <td></td>
-        <td>chi2TPCHe3</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::Lithium4TablesNS::Chi2TPCPr</td>
-        <td></td>
-        <td>chi2TPCPr</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::Lithium4TablesNS::MassTOFHe3</td>
-        <td></td>
-        <td>massTOFHe3</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::Lithium4TablesNS::MassTOFPr</td>
-        <td></td>
-        <td>massTOFPr</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::Lithium4TablesNS::PIDtrkHe3</td>
-        <td></td>
-        <td>pidTrkHe3</td>
-        <td>uint32_t</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::Lithium4TablesNS::PIDtrkPr</td>
-        <td></td>
-        <td>pidTrkPr</td>
-        <td>uint32_t</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::Lithium4TablesNS::ItsClusterSizeHe3</td>
-        <td></td>
-        <td>itsClusterSizeHe3</td>
-        <td>uint32_t</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::Lithium4TablesNS::ItsClusterSizePr</td>
-        <td></td>
-        <td>itsClusterSizePr</td>
-        <td>uint32_t</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::Lithium4TablesNS::SharedClustersHe3</td>
-        <td></td>
-        <td>sharedClustersHe3</td>
-        <td>uint8_t</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::Lithium4TablesNS::SharedClustersPr</td>
-        <td></td>
-        <td>sharedClustersPr</td>
-        <td>uint8_t</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::Lithium4TablesNS::IsBkgLS</td>
-        <td></td>
-        <td>isBkgLS</td>
-        <td>bool</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::Lithium4TablesNS::IsBkgEM</td>
-        <td></td>
-        <td>isBkgEM</td>
-        <td>bool</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::Lithium4TablesNS::PtMCHe3</td>
-        <td></td>
-        <td>ptMCHe3</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::Lithium4TablesNS::EtaMCHe3</td>
-        <td></td>
-        <td>etaMCHe3</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::Lithium4TablesNS::PhiMCHe3</td>
-        <td></td>
-        <td>phiMCHe3</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::Lithium4TablesNS::PtMCPr</td>
-        <td></td>
-        <td>ptMCPr</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::Lithium4TablesNS::EtaMCPr</td>
-        <td></td>
-        <td>etaMCPr</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::Lithium4TablesNS::PhiMCPr</td>
-        <td></td>
-        <td>phiMCPr</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::Lithium4TablesNS::SignedPtMC</td>
-        <td></td>
-        <td>signedPtMC</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::Lithium4TablesNS:</td>
-        <td>GI</td>
-        <td></td>
-        <td>?</td>
-        <td></td>
-      </tr>
-    </table>
-  </div>
-
-</div>
-
 ###  o2-analysis-lf-lnn-reco-task
 Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGLF/TableProducer/Nuspex//lnnRecoTask.cxx" target="_blank">lnnRecoTask.cxx</a>
 <div>
@@ -71845,6 +73114,13 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGLF
         <td></td>
       </tr>
       <tr>
+        <td>o2::aod::NucleiTableNS::TOFchi2</td>
+        <td></td>
+        <td>tofChi2</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
         <td>o2::aod::NucleiTableNS::Flags</td>
         <td></td>
         <td>flags</td>
@@ -72093,6 +73369,13 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGLF
         <td></td>
       </tr>
       <tr>
+        <td>o2::aod::NucleiTableNS::TOFchi2</td>
+        <td></td>
+        <td>tofChi2</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
         <td>o2::aod::NucleiTableNS::Flags</td>
         <td></td>
         <td>flags</td>
@@ -72166,6 +73449,13 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGLF
         <td>o2::aod::NucleiTableNS::PDGcode</td>
         <td></td>
         <td>pdgCode</td>
+        <td>int</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::NucleiTableNS::MotherPDGcode</td>
+        <td></td>
+        <td>MotherpdgCode</td>
         <td>int</td>
         <td></td>
       </tr>
@@ -73170,6 +74460,13 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGLF
         <td>chi2 of proton, pion mass constraint to Lambda mass</td>
       </tr>
       <tr>
+        <td>o2::aod::kfvtx3body::CosPAV0</td>
+        <td></td>
+        <td>cospav0</td>
+        <td>float</td>
+        <td>proton, pion vertex mass</td>
+      </tr>
+      <tr>
         <td>o2::aod::vtx3body::PxTrack0</td>
         <td></td>
         <td>pxtrack0</td>
@@ -73231,6 +74528,27 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGLF
         <td>pztrack2</td>
         <td>float</td>
         <td>track2 pz at min</td>
+      </tr>
+      <tr>
+        <td>o2::aod::kfvtx3body::TPCInnerParamTrack0</td>
+        <td></td>
+        <td>tpcinnerparamtrack0</td>
+        <td>float</td>
+        <td>momentum at inner wall of TPC of proton daughter</td>
+      </tr>
+      <tr>
+        <td>o2::aod::kfvtx3body::TPCInnerParamTrack1</td>
+        <td></td>
+        <td>tpcinnerparamtrack1</td>
+        <td>float</td>
+        <td>momentum at inner wall of TPC of pion daughter</td>
+      </tr>
+      <tr>
+        <td>o2::aod::kfvtx3body::TPCInnerParamTrack2</td>
+        <td></td>
+        <td>tpcinnerparamtrack2</td>
+        <td>float</td>
+        <td>momentum at inner wall of TPC of deuteron daughter</td>
       </tr>
       <tr>
         <td>o2::aod::kfvtx3body::DCATrack0ToPVKF</td>
@@ -73391,21 +74709,70 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGLF
         <td></td>
         <td>tpcnsigmaproton</td>
         <td>float</td>
-        <td>nsigma of TPC PID of the proton daughter</td>
+        <td>nsigma proton of TPC PID of the proton daughter</td>
       </tr>
       <tr>
         <td>o2::aod::kfvtx3body::TPCNSigmaPion</td>
         <td></td>
         <td>tpcnsigmapion</td>
         <td>float</td>
-        <td>nsigma of TPC PID of the pion daughter</td>
+        <td>nsigma pion of TPC PID of the pion daughter</td>
       </tr>
       <tr>
         <td>o2::aod::kfvtx3body::TPCNSigmaDeuteron</td>
         <td></td>
         <td>tpcnsigmadeuteron</td>
         <td>float</td>
-        <td>nsigma of TPC PID of the bachelor daughter</td>
+        <td>nsigma deuteron of TPC PID of the bachelor daughter</td>
+      </tr>
+      <tr>
+        <td>o2::aod::kfvtx3body::TPCNSigmaPionBach</td>
+        <td></td>
+        <td>tpcnsigmapionbach</td>
+        <td>float</td>
+        <td>nsigma pion of TPC PID of the bachelor daughter</td>
+      </tr>
+      <tr>
+        <td>o2::aod::kfvtx3body::TPCdEdxProton</td>
+        <td></td>
+        <td>tpcdedxproton</td>
+        <td>float</td>
+        <td>TPC dEdx of the proton daughter</td>
+      </tr>
+      <tr>
+        <td>o2::aod::kfvtx3body::TPCdEdxPion</td>
+        <td></td>
+        <td>tpcdedxpion</td>
+        <td>float</td>
+        <td>TPC dEdx of the pion daughter</td>
+      </tr>
+      <tr>
+        <td>o2::aod::kfvtx3body::TPCdEdxDeuteron</td>
+        <td></td>
+        <td>tpcdedxdeuteron</td>
+        <td>float</td>
+        <td>TPC dEdx of the bachelor daughter</td>
+      </tr>
+      <tr>
+        <td>o2::aod::kfvtx3body::TOFNSigmaDeuteron</td>
+        <td></td>
+        <td>tofnsigmadeuteron</td>
+        <td>float</td>
+        <td>nsigma of TOF PID of the bachelor daughter</td>
+      </tr>
+      <tr>
+        <td>o2::aod::kfvtx3body::ITSClusSizeDeuteron</td>
+        <td></td>
+        <td>itsclussizedeuteron</td>
+        <td>double</td>
+        <td>average ITS cluster size of bachelor daughter</td>
+      </tr>
+      <tr>
+        <td>o2::aod::kfvtx3body::PIDTrackingDeuteron</td>
+        <td></td>
+        <td>pidtrackingdeuteron</td>
+        <td>uint32_t</td>
+        <td>PID during tracking of bachelor daughter</td>
       </tr>
       <tr>
         <td>o2::aod::kfvtx3body::GenP</td>
@@ -73471,6 +74838,48 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGLF
         <td>generated rapidity</td>
       </tr>
       <tr>
+        <td>o2::aod::kfvtx3body::GenPosP</td>
+        <td></td>
+        <td>genposp</td>
+        <td>float</td>
+        <td>generated momentum pos daughter particle</td>
+      </tr>
+      <tr>
+        <td>o2::aod::kfvtx3body::GenPosPt</td>
+        <td></td>
+        <td>genpospt</td>
+        <td>float</td>
+        <td>generated transverse momentum pos daughter particle</td>
+      </tr>
+      <tr>
+        <td>o2::aod::kfvtx3body::GenNegP</td>
+        <td></td>
+        <td>gennegp</td>
+        <td>float</td>
+        <td>generated momentum neg daughter particle</td>
+      </tr>
+      <tr>
+        <td>o2::aod::kfvtx3body::GenNegPt</td>
+        <td></td>
+        <td>gennegpt</td>
+        <td>float</td>
+        <td>generated transverse momentum neg daughter particle</td>
+      </tr>
+      <tr>
+        <td>o2::aod::kfvtx3body::GenBachP</td>
+        <td></td>
+        <td>genbachp</td>
+        <td>float</td>
+        <td>generated momentum bachelor daughter particle</td>
+      </tr>
+      <tr>
+        <td>o2::aod::kfvtx3body::GenBachPt</td>
+        <td></td>
+        <td>genbachpt</td>
+        <td>float</td>
+        <td>generated transverse momentum bachelor daughter particle</td>
+      </tr>
+      <tr>
         <td>o2::aod::kfvtx3body::IsTrueH3L</td>
         <td></td>
         <td>istrueh3l</td>
@@ -73504,118 +74913,6 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGLF
         <td>survevsel</td>
         <td>int</td>
         <td>flag if reco collision survived event selection</td>
-      </tr>
-      <tr>
-        <td>o2::aod::vtx3body::VtxRadius</td>
-        <td>D</td>
-        <td>vtxradius</td>
-        <td>float</td>
-        <td>3 body decay radius (2D, centered at zero)</td>
-      </tr>
-      <tr>
-        <td>o2::aod::vtx3body::DistOverTotMom</td>
-        <td>D</td>
-        <td>distovertotmom</td>
-        <td>?</td>
-        <td>PV to 3 body decay distance over total momentum</td>
-      </tr>
-      <tr>
-        <td>o2::aod::vtx3body::VtxCosPA</td>
-        <td>D</td>
-        <td>vtxcosPA</td>
-        <td>float</td>
-        <td>3 body vtx CosPA</td>
-      </tr>
-      <tr>
-        <td>o2::aod::vtx3body::DCAVtxToPV</td>
-        <td>D</td>
-        <td>dcavtxtopv</td>
-        <td>float</td>
-        <td>DCA of 3 body vtx to PV</td>
-      </tr>
-      <tr>
-        <td>o2::aod::vtx3body::YHypertriton</td>
-        <td>D</td>
-        <td>yHypertriton</td>
-        <td>float</td>
-        <td>3 body vtx y with hypertriton or antihypertriton hypothesis</td>
-      </tr>
-      <tr>
-        <td>o2::aod::vtx3body::Eta</td>
-        <td>D</td>
-        <td>eta</td>
-        <td>float</td>
-        <td>3 body vtx eta</td>
-      </tr>
-      <tr>
-        <td>o2::aod::vtx3body::Phi</td>
-        <td>D</td>
-        <td>phi</td>
-        <td>float</td>
-        <td>3 body vtx phi</td>
-      </tr>
-      <tr>
-        <td>o2::aod::vtx3body::Track0Pt</td>
-        <td>D</td>
-        <td>track0pt</td>
-        <td>float</td>
-        <td>daughter0 pT</td>
-      </tr>
-      <tr>
-        <td>o2::aod::vtx3body::Track0Eta</td>
-        <td>D</td>
-        <td>track0eta</td>
-        <td>float</td>
-        <td>daughter0 eta</td>
-      </tr>
-      <tr>
-        <td>o2::aod::vtx3body::Track0Phi</td>
-        <td>D</td>
-        <td>track0phi</td>
-        <td>float</td>
-        <td>daughter0 phi</td>
-      </tr>
-      <tr>
-        <td>o2::aod::vtx3body::Track1Pt</td>
-        <td>D</td>
-        <td>track1pt</td>
-        <td>float</td>
-        <td>daughter1 pT</td>
-      </tr>
-      <tr>
-        <td>o2::aod::vtx3body::Track1Eta</td>
-        <td>D</td>
-        <td>track1eta</td>
-        <td>float</td>
-        <td>daughter1 eta</td>
-      </tr>
-      <tr>
-        <td>o2::aod::vtx3body::Track1Phi</td>
-        <td>D</td>
-        <td>track1phi</td>
-        <td>float</td>
-        <td>daughter1 phi</td>
-      </tr>
-      <tr>
-        <td>o2::aod::vtx3body::Track2Pt</td>
-        <td>D</td>
-        <td>track2pt</td>
-        <td>float</td>
-        <td>daughter2 pT</td>
-      </tr>
-      <tr>
-        <td>o2::aod::vtx3body::Track2Eta</td>
-        <td>D</td>
-        <td>track2eta</td>
-        <td>float</td>
-        <td>daughter2 eta</td>
-      </tr>
-      <tr>
-        <td>o2::aod::vtx3body::Track2Phi</td>
-        <td>D</td>
-        <td>track2phi</td>
-        <td>float</td>
-        <td>daughter2 phi</td>
       </tr>
     </table>
   </div>
@@ -74358,1229 +75655,6 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGLF
 
 </div>
 
-###  o2-analysis-lf-reso2initializer
-Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGLF/TableProducer/Resonances//LFResonanceInitializer.cxx" target="_blank">LFResonanceInitializer.cxx</a>
-<div>
-
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::ResoCollisions</button>
-  <div class="panel">
-    <div>
-
-    </div>
-    <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGLF/DataModel/LFResonanceTables.h" target="_blank">PWGLF/DataModel/LFResonanceTables.h</a>
-    </div>
-    <div>Is used in:
-      <ul>
-        <li>o2::aod::ResoCollision = o2::aod::ResoCollisions::iterator</li>
-      </ul>
-    </div>
-    <table class=DataModel>
-      <tr>
-        <th>Name</th>
-        <th></th>
-        <th>Getter</th>
-        <th>Type</th>
-        <th>Comment</th>
-      </tr>
-      <tr>
-        <td>o2::soa::Index</td>
-        <td>GI</td>
-        <td>globalIndex</td>
-        <td>int64_t</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::mult::MultNTracksPV</td>
-        <td></td>
-        <td>multNTracksPV</td>
-        <td>int</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::&zwnj;collision::PosX</td>
-        <td></td>
-        <td>posX</td>
-        <td>float</td>
-        <td>X Vertex position in cm</td>
-      </tr>
-      <tr>
-        <td>o2::aod::&zwnj;collision::PosY</td>
-        <td></td>
-        <td>posY</td>
-        <td>float</td>
-        <td>Y Vertex position in cm</td>
-      </tr>
-      <tr>
-        <td>o2::aod::&zwnj;collision::PosZ</td>
-        <td></td>
-        <td>posZ</td>
-        <td>float</td>
-        <td>Z Vertex position in cm</td>
-      </tr>
-      <tr>
-        <td>o2::aod::resocollision::Cent</td>
-        <td></td>
-        <td>cent</td>
-        <td>float</td>
-        <td>Centrality (Multiplicity) percentile (Default: FT0M)</td>
-      </tr>
-      <tr>
-        <td>o2::aod::resocollision::Spherocity</td>
-        <td></td>
-        <td>spherocity</td>
-        <td>float</td>
-        <td>Spherocity of the event</td>
-      </tr>
-      <tr>
-        <td>o2::aod::resocollision::EvtPl</td>
-        <td></td>
-        <td>evtPl</td>
-        <td>float</td>
-        <td>Second harmonic event plane</td>
-      </tr>
-      <tr>
-        <td>o2::aod::resocollision::EvtPlResAB</td>
-        <td></td>
-        <td>evtPlResAB</td>
-        <td>float</td>
-        <td>Second harmonic event plane resolution of A-B sub events</td>
-      </tr>
-      <tr>
-        <td>o2::aod::resocollision::EvtPlResAC</td>
-        <td></td>
-        <td>evtPlResAC</td>
-        <td>float</td>
-        <td>Second harmonic event plane resolution of A-C sub events</td>
-      </tr>
-      <tr>
-        <td>o2::aod::resocollision::EvtPlResBC</td>
-        <td></td>
-        <td>evtPlResBC</td>
-        <td>float</td>
-        <td>Second harmonic event plane resolution of B-C sub events</td>
-      </tr>
-      <tr>
-        <td>o2::aod::resocollision::BMagField</td>
-        <td></td>
-        <td>bMagField</td>
-        <td>float</td>
-        <td>Magnetic field</td>
-      </tr>
-      <tr>
-        <td>o2::aod::timestamp::Timestamp</td>
-        <td></td>
-        <td>timestamp</td>
-        <td>uint64_t</td>
-        <td>Timestamp of a BC in ms (epoch style)</td>
-      </tr>
-      <tr>
-        <td>o2::aod::evsel::NumTracksInTimeRange</td>
-        <td></td>
-        <td>trackOccupancyInTimeRange</td>
-        <td>int</td>
-        <td>Occupancy in specified time interval by a number of tracks from nearby collisions</td>
-      </tr>
-    </table>
-  </div>
-
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::ResoMCCollisions</button>
-  <div class="panel">
-    <div>
-
-    </div>
-    <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGLF/DataModel/LFResonanceTables.h" target="_blank">PWGLF/DataModel/LFResonanceTables.h</a>
-    </div>
-    <div>Is used in:
-      <ul>
-        <li>o2::aod::ResoMCCollision = o2::aod::ResoMCCollisions::iterator</li>
-      </ul>
-    </div>
-    <table class=DataModel>
-      <tr>
-        <th>Name</th>
-        <th></th>
-        <th>Getter</th>
-        <th>Type</th>
-        <th>Comment</th>
-      </tr>
-      <tr>
-        <td>o2::aod::resocollision::IsVtxIn10</td>
-        <td></td>
-        <td>isVtxIn10</td>
-        <td>bool</td>
-        <td>Vtx10</td>
-      </tr>
-      <tr>
-        <td>o2::aod::resocollision::IsINELgt0</td>
-        <td></td>
-        <td>isINELgt0</td>
-        <td>bool</td>
-        <td>INEL>0</td>
-      </tr>
-      <tr>
-        <td>o2::aod::resocollision::IsTriggerTVX</td>
-        <td></td>
-        <td>isTriggerTVX</td>
-        <td>bool</td>
-        <td>TriggerTVX</td>
-      </tr>
-      <tr>
-        <td>o2::aod::resocollision::IsInSel8</td>
-        <td></td>
-        <td>isInSel8</td>
-        <td>bool</td>
-        <td>InSel8</td>
-      </tr>
-      <tr>
-        <td>o2::aod::resocollision::IsInAfterAllCuts</td>
-        <td></td>
-        <td>isInAfterAllCuts</td>
-        <td>bool</td>
-        <td>InAfterAllCuts</td>
-      </tr>
-      <tr>
-        <td>o2::aod::resocollision::ImpactParameter</td>
-        <td></td>
-        <td>impactParameter</td>
-        <td>float</td>
-        <td>ImpactParameter</td>
-      </tr>
-    </table>
-  </div>
-
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::ResoTracks</button>
-  <div class="panel">
-    <div>
-
-    </div>
-    <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGLF/DataModel/LFResonanceTables.h" target="_blank">PWGLF/DataModel/LFResonanceTables.h</a>
-    </div>
-    <div>Is used in:
-      <ul>
-        <li>o2::aod::ResoTrack = o2::aod::ResoTracks::iterator</li>
-      </ul>
-    </div>
-    <table class=DataModel>
-      <tr>
-        <th>Name</th>
-        <th></th>
-        <th>Getter</th>
-        <th>Type</th>
-        <th>Comment</th>
-      </tr>
-      <tr>
-        <td>o2::soa::Index</td>
-        <td>GI</td>
-        <td>globalIndex</td>
-        <td>int64_t</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::resodaughter::ResoCollisionId</td>
-        <td>I</td>
-        <td>resoCollisionId</td>
-        <td>int32</td>
-        <td>Pointer into ResoCollisions</td>
-      </tr>
-      <tr>
-        <td>o2::aod::resodaughter::Pt</td>
-        <td></td>
-        <td>pt</td>
-        <td>float</td>
-        <td>p_T (GeV/c)</td>
-      </tr>
-      <tr>
-        <td>o2::aod::resodaughter::Px</td>
-        <td></td>
-        <td>px</td>
-        <td>float</td>
-        <td>p_x (GeV/c)</td>
-      </tr>
-      <tr>
-        <td>o2::aod::resodaughter::Py</td>
-        <td></td>
-        <td>py</td>
-        <td>float</td>
-        <td>p_y (GeV/c)</td>
-      </tr>
-      <tr>
-        <td>o2::aod::resodaughter::Pz</td>
-        <td></td>
-        <td>pz</td>
-        <td>float</td>
-        <td>p_z (GeV/c)</td>
-      </tr>
-      <tr>
-        <td>o2::aod::resodaughter::Eta</td>
-        <td></td>
-        <td>eta</td>
-        <td>float</td>
-        <td>Eta</td>
-      </tr>
-      <tr>
-        <td>o2::aod::resodaughter::Phi</td>
-        <td></td>
-        <td>phi</td>
-        <td>float</td>
-        <td>Phi</td>
-      </tr>
-      <tr>
-        <td>o2::aod::resodaughter::Sign</td>
-        <td></td>
-        <td>sign</td>
-        <td>int8_t</td>
-        <td>Sign of the track charge</td>
-      </tr>
-      <tr>
-        <td>o2::aod::resodaughter::TPCNClsCrossedRows</td>
-        <td></td>
-        <td>tpcNClsCrossedRows</td>
-        <td>uint8_t</td>
-        <td>Number of TPC crossed rows</td>
-      </tr>
-      <tr>
-        <td>o2::aod::resodaughter::TPCNClsFound</td>
-        <td></td>
-        <td>tpcNClsFound</td>
-        <td>uint8_t</td>
-        <td>Number of TPC clusters found</td>
-      </tr>
-      <tr>
-        <td>o2::aod::resodaughter::ITSNCls</td>
-        <td></td>
-        <td>itsNCls</td>
-        <td>uint8_t</td>
-        <td>Number of ITS clusters found</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::DcaXY</td>
-        <td></td>
-        <td>dcaXY</td>
-        <td>float</td>
-        <td>Impact parameter in XY of the track to the primary vertex</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::DcaZ</td>
-        <td></td>
-        <td>dcaZ</td>
-        <td>float</td>
-        <td>Impact parameter in Z of the track to the primary vertex</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::X</td>
-        <td></td>
-        <td>x</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::Alpha</td>
-        <td></td>
-        <td>alpha</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::resodaughter::HasITS</td>
-        <td></td>
-        <td>hasITS</td>
-        <td>bool</td>
-        <td>Has ITS</td>
-      </tr>
-      <tr>
-        <td>o2::aod::resodaughter::HasTPC</td>
-        <td></td>
-        <td>hasTPC</td>
-        <td>bool</td>
-        <td>Has TPC</td>
-      </tr>
-      <tr>
-        <td>o2::aod::resodaughter::HasTOF</td>
-        <td></td>
-        <td>hasTOF</td>
-        <td>bool</td>
-        <td>Has TOF</td>
-      </tr>
-      <tr>
-        <td>o2::aod::pidtpc::TPCNSigmaPi</td>
-        <td></td>
-        <td>tpcNSigmaPi</td>
-        <td>float</td>
-        <td>Nsigma separation with the TPC detector for pion</td>
-      </tr>
-      <tr>
-        <td>o2::aod::pidtpc::TPCNSigmaKa</td>
-        <td></td>
-        <td>tpcNSigmaKa</td>
-        <td>float</td>
-        <td>Nsigma separation with the TPC detector for kaon</td>
-      </tr>
-      <tr>
-        <td>o2::aod::pidtpc::TPCNSigmaPr</td>
-        <td></td>
-        <td>tpcNSigmaPr</td>
-        <td>float</td>
-        <td>Nsigma separation with the TPC detector for proton</td>
-      </tr>
-      <tr>
-        <td>o2::aod::pidtpc::TPCNSigmaEl</td>
-        <td></td>
-        <td>tpcNSigmaEl</td>
-        <td>float</td>
-        <td>Nsigma separation with the TPC detector for electron</td>
-      </tr>
-      <tr>
-        <td>o2::aod::pidtof::TOFNSigmaPi</td>
-        <td></td>
-        <td>tofNSigmaPi</td>
-        <td>float</td>
-        <td>Nsigma separation with the TOF detector for pion</td>
-      </tr>
-      <tr>
-        <td>o2::aod::pidtof::TOFNSigmaKa</td>
-        <td></td>
-        <td>tofNSigmaKa</td>
-        <td>float</td>
-        <td>Nsigma separation with the TOF detector for kaon</td>
-      </tr>
-      <tr>
-        <td>o2::aod::pidtof::TOFNSigmaPr</td>
-        <td></td>
-        <td>tofNSigmaPr</td>
-        <td>float</td>
-        <td>Nsigma separation with the TOF detector for proton</td>
-      </tr>
-      <tr>
-        <td>o2::aod::pidtof::TOFNSigmaEl</td>
-        <td></td>
-        <td>tofNSigmaEl</td>
-        <td>float</td>
-        <td>Nsigma separation with the TOF detector for electron</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::TPCSignal</td>
-        <td></td>
-        <td>tpcSignal</td>
-        <td>float</td>
-        <td>dE/dx signal in the TPC</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::PassedITSRefit</td>
-        <td></td>
-        <td>passedITSRefit</td>
-        <td>bool</td>
-        <td>Passed the track cut: kITSRefit</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::PassedTPCRefit</td>
-        <td></td>
-        <td>passedTPCRefit</td>
-        <td>bool</td>
-        <td>Passed the track cut: kTPCRefit</td>
-      </tr>
-      <tr>
-        <td>o2::aod::resodaughter::IsGlobalTrackWoDCA</td>
-        <td></td>
-        <td>isGlobalTrackWoDCA</td>
-        <td>bool</td>
-        <td>Is global track without DCA</td>
-      </tr>
-      <tr>
-        <td>o2::aod::resodaughter::IsGlobalTrack</td>
-        <td></td>
-        <td>isGlobalTrack</td>
-        <td>bool</td>
-        <td>Is global track</td>
-      </tr>
-      <tr>
-        <td>o2::aod::resodaughter::IsPrimaryTrack</td>
-        <td></td>
-        <td>isPrimaryTrack</td>
-        <td>bool</td>
-        <td>Is primary track</td>
-      </tr>
-      <tr>
-        <td>o2::aod::resodaughter::IsPVContributor</td>
-        <td></td>
-        <td>isPVContributor</td>
-        <td>bool</td>
-        <td>Is primary vertex contributor</td>
-      </tr>
-      <tr>
-        <td>o2::aod::resodaughter::TPCCrossedRowsOverFindableCls</td>
-        <td></td>
-        <td>tpcCrossedRowsOverFindableCls</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::ITSChi2NCl</td>
-        <td></td>
-        <td>itsChi2NCl</td>
-        <td>float</td>
-        <td>Chi2 / cluster for the ITS track segment</td>
-      </tr>
-      <tr>
-        <td>o2::aod::track::TPCChi2NCl</td>
-        <td></td>
-        <td>tpcChi2NCl</td>
-        <td>float</td>
-        <td>Chi2 / cluster for the TPC track segment</td>
-      </tr>
-    </table>
-  </div>
-
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::ResoV0s</button>
-  <div class="panel">
-    <div>
-
-    </div>
-    <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGLF/DataModel/LFResonanceTables.h" target="_blank">PWGLF/DataModel/LFResonanceTables.h</a>
-    </div>
-    <div>Is used in:
-      <ul>
-        <li>o2::aod::ResoV0 = o2::aod::ResoV0s::iterator</li>
-      </ul>
-    </div>
-    <table class=DataModel>
-      <tr>
-        <th>Name</th>
-        <th></th>
-        <th>Getter</th>
-        <th>Type</th>
-        <th>Comment</th>
-      </tr>
-      <tr>
-        <td>o2::soa::Index</td>
-        <td>GI</td>
-        <td>globalIndex</td>
-        <td>int64_t</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::resodaughter::ResoCollisionId</td>
-        <td>I</td>
-        <td>resoCollisionId</td>
-        <td>int32</td>
-        <td>Pointer into ResoCollisions</td>
-      </tr>
-      <tr>
-        <td>o2::aod::resodaughter::Pt</td>
-        <td></td>
-        <td>pt</td>
-        <td>float</td>
-        <td>p_T (GeV/c)</td>
-      </tr>
-      <tr>
-        <td>o2::aod::resodaughter::Px</td>
-        <td></td>
-        <td>px</td>
-        <td>float</td>
-        <td>p_x (GeV/c)</td>
-      </tr>
-      <tr>
-        <td>o2::aod::resodaughter::Py</td>
-        <td></td>
-        <td>py</td>
-        <td>float</td>
-        <td>p_y (GeV/c)</td>
-      </tr>
-      <tr>
-        <td>o2::aod::resodaughter::Pz</td>
-        <td></td>
-        <td>pz</td>
-        <td>float</td>
-        <td>p_z (GeV/c)</td>
-      </tr>
-      <tr>
-        <td>o2::aod::resodaughter::Eta</td>
-        <td></td>
-        <td>eta</td>
-        <td>float</td>
-        <td>Eta</td>
-      </tr>
-      <tr>
-        <td>o2::aod::resodaughter::Phi</td>
-        <td></td>
-        <td>phi</td>
-        <td>float</td>
-        <td>Phi</td>
-      </tr>
-      <tr>
-        <td>o2::aod::resodaughter::Indices</td>
-        <td></td>
-        <td>indices</td>
-        <td>int[2]</td>
-        <td>Field for the track indices to remove auto-correlations</td>
-      </tr>
-      <tr>
-        <td>o2::aod::resodaughter::V0CosPA</td>
-        <td></td>
-        <td>v0CosPA</td>
-        <td>float</td>
-        <td>V0 Cosine of Pointing Angle</td>
-      </tr>
-      <tr>
-        <td>o2::aod::resodaughter::DaughDCA</td>
-        <td></td>
-        <td>daughDCA</td>
-        <td>float</td>
-        <td>DCA between daughters</td>
-      </tr>
-      <tr>
-        <td>o2::aod::v0data::DCAPosToPV</td>
-        <td></td>
-        <td>dcapostopv</td>
-        <td>float</td>
-        <td>DCA positive prong to PV</td>
-      </tr>
-      <tr>
-        <td>o2::aod::v0data::DCANegToPV</td>
-        <td></td>
-        <td>dcanegtopv</td>
-        <td>float</td>
-        <td>DCA negative prong to PV</td>
-      </tr>
-      <tr>
-        <td>o2::aod::v0data::DCAV0ToPV</td>
-        <td></td>
-        <td>dcav0topv</td>
-        <td>float</td>
-        <td>DCA V0 to PV</td>
-      </tr>
-      <tr>
-        <td>o2::aod::resodaughter::MLambda</td>
-        <td></td>
-        <td>mLambda</td>
-        <td>float</td>
-        <td>The invariant mass of V0 candidate, assuming lambda</td>
-      </tr>
-      <tr>
-        <td>o2::aod::resodaughter::MAntiLambda</td>
-        <td></td>
-        <td>mAntiLambda</td>
-        <td>float</td>
-        <td>The invariant mass of V0 candidate, assuming antilambda</td>
-      </tr>
-      <tr>
-        <td>o2::aod::resodaughter::MK0Short</td>
-        <td></td>
-        <td>mK0Short</td>
-        <td>float</td>
-        <td>The invariant mass of V0 candidate, assuming k0s</td>
-      </tr>
-      <tr>
-        <td>o2::aod::resodaughter::TransRadius</td>
-        <td></td>
-        <td>transRadius</td>
-        <td>float</td>
-        <td>Transverse radius of the decay vertex</td>
-      </tr>
-      <tr>
-        <td>o2::aod::resodaughter::DecayVtxX</td>
-        <td></td>
-        <td>decayVtxX</td>
-        <td>float</td>
-        <td>X position of the decay vertex</td>
-      </tr>
-      <tr>
-        <td>o2::aod::resodaughter::DecayVtxY</td>
-        <td></td>
-        <td>decayVtxY</td>
-        <td>float</td>
-        <td>Y position of the decay vertex</td>
-      </tr>
-      <tr>
-        <td>o2::aod::resodaughter::DecayVtxZ</td>
-        <td></td>
-        <td>decayVtxZ</td>
-        <td>float</td>
-        <td>Z position of the decay vertex</td>
-      </tr>
-    </table>
-  </div>
-
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::ResoCascades</button>
-  <div class="panel">
-    <div>
-
-    </div>
-    <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGLF/DataModel/LFResonanceTables.h" target="_blank">PWGLF/DataModel/LFResonanceTables.h</a>
-    </div>
-    <div>Is used in:
-      <ul>
-        <li>o2::aod::ResoCascade = o2::aod::ResoCascades::iterator</li>
-      </ul>
-    </div>
-    <table class=DataModel>
-      <tr>
-        <th>Name</th>
-        <th></th>
-        <th>Getter</th>
-        <th>Type</th>
-        <th>Comment</th>
-      </tr>
-      <tr>
-        <td>o2::soa::Index</td>
-        <td>GI</td>
-        <td>globalIndex</td>
-        <td>int64_t</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::resodaughter::ResoCollisionId</td>
-        <td>I</td>
-        <td>resoCollisionId</td>
-        <td>int32</td>
-        <td>Pointer into ResoCollisions</td>
-      </tr>
-      <tr>
-        <td>o2::aod::resodaughter::Pt</td>
-        <td></td>
-        <td>pt</td>
-        <td>float</td>
-        <td>p_T (GeV/c)</td>
-      </tr>
-      <tr>
-        <td>o2::aod::resodaughter::Px</td>
-        <td></td>
-        <td>px</td>
-        <td>float</td>
-        <td>p_x (GeV/c)</td>
-      </tr>
-      <tr>
-        <td>o2::aod::resodaughter::Py</td>
-        <td></td>
-        <td>py</td>
-        <td>float</td>
-        <td>p_y (GeV/c)</td>
-      </tr>
-      <tr>
-        <td>o2::aod::resodaughter::Pz</td>
-        <td></td>
-        <td>pz</td>
-        <td>float</td>
-        <td>p_z (GeV/c)</td>
-      </tr>
-      <tr>
-        <td>o2::aod::resodaughter::Eta</td>
-        <td></td>
-        <td>eta</td>
-        <td>float</td>
-        <td>Eta</td>
-      </tr>
-      <tr>
-        <td>o2::aod::resodaughter::Phi</td>
-        <td></td>
-        <td>phi</td>
-        <td>float</td>
-        <td>Phi</td>
-      </tr>
-      <tr>
-        <td>o2::aod::resodaughter::CascadeIndices</td>
-        <td></td>
-        <td>cascIndices</td>
-        <td>int[3]</td>
-        <td>Field for the track indices to remove auto-correlations (ordered: positive, negative, bachelor)</td>
-      </tr>
-      <tr>
-        <td>o2::aod::resodaughter::V0CosPA</td>
-        <td></td>
-        <td>v0CosPA</td>
-        <td>float</td>
-        <td>V0 Cosine of Pointing Angle</td>
-      </tr>
-      <tr>
-        <td>o2::aod::resodaughter::CascCosPA</td>
-        <td></td>
-        <td>cascCosPA</td>
-        <td>float</td>
-        <td>Cascade Cosine of Pointing Angle</td>
-      </tr>
-      <tr>
-        <td>o2::aod::resodaughter::DaughDCA</td>
-        <td></td>
-        <td>daughDCA</td>
-        <td>float</td>
-        <td>DCA between daughters</td>
-      </tr>
-      <tr>
-        <td>o2::aod::resodaughter::CascDaughDCA</td>
-        <td></td>
-        <td>cascdaughDCA</td>
-        <td>float</td>
-        <td>DCA between daughters from cascade</td>
-      </tr>
-      <tr>
-        <td>o2::aod::cascdata::DCAPosToPV</td>
-        <td></td>
-        <td>dcapostopv</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::cascdata::DCANegToPV</td>
-        <td></td>
-        <td>dcanegtopv</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::cascdata::DCABachToPV</td>
-        <td></td>
-        <td>dcabachtopv</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::v0data::DCAV0ToPV</td>
-        <td></td>
-        <td>dcav0topv</td>
-        <td>float</td>
-        <td>DCA V0 to PV</td>
-      </tr>
-      <tr>
-        <td>o2::aod::cascdata::DCAXYCascToPV</td>
-        <td></td>
-        <td>dcaXYCascToPV</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::cascdata::DCAZCascToPV</td>
-        <td></td>
-        <td>dcaZCascToPV</td>
-        <td>float</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::cascdata::Sign</td>
-        <td></td>
-        <td>sign</td>
-        <td>int</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::resodaughter::MXi</td>
-        <td></td>
-        <td>mXi</td>
-        <td>float</td>
-        <td>The invariant mass of Xi candidate</td>
-      </tr>
-      <tr>
-        <td>o2::aod::resodaughter::TransRadius</td>
-        <td></td>
-        <td>transRadius</td>
-        <td>float</td>
-        <td>Transverse radius of the decay vertex</td>
-      </tr>
-      <tr>
-        <td>o2::aod::resodaughter::CascTransRadius</td>
-        <td></td>
-        <td>casctransRadius</td>
-        <td>float</td>
-        <td>Transverse radius of the decay vertex from cascade</td>
-      </tr>
-      <tr>
-        <td>o2::aod::resodaughter::DecayVtxX</td>
-        <td></td>
-        <td>decayVtxX</td>
-        <td>float</td>
-        <td>X position of the decay vertex</td>
-      </tr>
-      <tr>
-        <td>o2::aod::resodaughter::DecayVtxY</td>
-        <td></td>
-        <td>decayVtxY</td>
-        <td>float</td>
-        <td>Y position of the decay vertex</td>
-      </tr>
-      <tr>
-        <td>o2::aod::resodaughter::DecayVtxZ</td>
-        <td></td>
-        <td>decayVtxZ</td>
-        <td>float</td>
-        <td>Z position of the decay vertex</td>
-      </tr>
-    </table>
-  </div>
-
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::ResoMCTracks</button>
-  <div class="panel">
-    <div>
-
-    </div>
-    <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGLF/DataModel/LFResonanceTables.h" target="_blank">PWGLF/DataModel/LFResonanceTables.h</a>
-    </div>
-    <div>Is used in:
-      <ul>
-        <li>o2::aod::ResoMCTrack = o2::aod::ResoMCTracks::iterator</li>
-      </ul>
-    </div>
-    <table class=DataModel>
-      <tr>
-        <th>Name</th>
-        <th></th>
-        <th>Getter</th>
-        <th>Type</th>
-        <th>Comment</th>
-      </tr>
-      <tr>
-        <td>o2::aod::mcparticle::PdgCode</td>
-        <td></td>
-        <td>pdgCode</td>
-        <td>int</td>
-        <td>PDG code</td>
-      </tr>
-      <tr>
-        <td>o2::aod::resodaughter::MothersId</td>
-        <td></td>
-        <td>motherId</td>
-        <td>int</td>
-        <td>Id of the mother particle</td>
-      </tr>
-      <tr>
-        <td>o2::aod::resodaughter::MotherPDG</td>
-        <td></td>
-        <td>motherPDG</td>
-        <td>int</td>
-        <td>PDG code of the mother particle</td>
-      </tr>
-      <tr>
-        <td>o2::aod::resodaughter::SiblingIds</td>
-        <td></td>
-        <td>siblingIds</td>
-        <td>int[2]</td>
-        <td>Index of the particles with the same mother</td>
-      </tr>
-      <tr>
-        <td>o2::aod::resodaughter::IsPhysicalPrimary</td>
-        <td></td>
-        <td>isPhysicalPrimary</td>
-        <td>bool</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::resodaughter::ProducedByGenerator</td>
-        <td></td>
-        <td>producedByGenerator</td>
-        <td>bool</td>
-        <td></td>
-      </tr>
-    </table>
-  </div>
-
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::ResoMCV0s</button>
-  <div class="panel">
-    <div>
-
-    </div>
-    <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGLF/DataModel/LFResonanceTables.h" target="_blank">PWGLF/DataModel/LFResonanceTables.h</a>
-    </div>
-    <div>Is used in:
-      <ul>
-        <li>o2::aod::ResoMCV0 = o2::aod::ResoMCV0s::iterator</li>
-      </ul>
-    </div>
-    <table class=DataModel>
-      <tr>
-        <th>Name</th>
-        <th></th>
-        <th>Getter</th>
-        <th>Type</th>
-        <th>Comment</th>
-      </tr>
-      <tr>
-        <td>o2::aod::mcparticle::PdgCode</td>
-        <td></td>
-        <td>pdgCode</td>
-        <td>int</td>
-        <td>PDG code</td>
-      </tr>
-      <tr>
-        <td>o2::aod::resodaughter::MothersId</td>
-        <td></td>
-        <td>motherId</td>
-        <td>int</td>
-        <td>Id of the mother particle</td>
-      </tr>
-      <tr>
-        <td>o2::aod::resodaughter::MotherPDG</td>
-        <td></td>
-        <td>motherPDG</td>
-        <td>int</td>
-        <td>PDG code of the mother particle</td>
-      </tr>
-      <tr>
-        <td>o2::aod::resodaughter::DaughterID1</td>
-        <td></td>
-        <td>daughterId1</td>
-        <td>int</td>
-        <td>Id of the first Daughter particle</td>
-      </tr>
-      <tr>
-        <td>o2::aod::resodaughter::DaughterID2</td>
-        <td></td>
-        <td>daughterId2</td>
-        <td>int</td>
-        <td>Id of the second Daughter particle</td>
-      </tr>
-      <tr>
-        <td>o2::aod::resodaughter::DaughterPDG1</td>
-        <td></td>
-        <td>daughterPDG1</td>
-        <td>int</td>
-        <td>PDG code of the first Daughter particle</td>
-      </tr>
-      <tr>
-        <td>o2::aod::resodaughter::DaughterPDG2</td>
-        <td></td>
-        <td>daughterPDG2</td>
-        <td>int</td>
-        <td>PDG code of the second Daughter particle</td>
-      </tr>
-      <tr>
-        <td>o2::aod::resodaughter::IsPhysicalPrimary</td>
-        <td></td>
-        <td>isPhysicalPrimary</td>
-        <td>bool</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::resodaughter::ProducedByGenerator</td>
-        <td></td>
-        <td>producedByGenerator</td>
-        <td>bool</td>
-        <td></td>
-      </tr>
-    </table>
-  </div>
-
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::ResoMCCascades</button>
-  <div class="panel">
-    <div>
-
-    </div>
-    <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGLF/DataModel/LFResonanceTables.h" target="_blank">PWGLF/DataModel/LFResonanceTables.h</a>
-    </div>
-    <div>Is used in:
-      <ul>
-        <li>o2::aod::ResoMCCascade = o2::aod::ResoMCCascades::iterator</li>
-      </ul>
-    </div>
-    <table class=DataModel>
-      <tr>
-        <th>Name</th>
-        <th></th>
-        <th>Getter</th>
-        <th>Type</th>
-        <th>Comment</th>
-      </tr>
-      <tr>
-        <td>o2::aod::mcparticle::PdgCode</td>
-        <td></td>
-        <td>pdgCode</td>
-        <td>int</td>
-        <td>PDG code</td>
-      </tr>
-      <tr>
-        <td>o2::aod::resodaughter::MothersId</td>
-        <td></td>
-        <td>motherId</td>
-        <td>int</td>
-        <td>Id of the mother particle</td>
-      </tr>
-      <tr>
-        <td>o2::aod::resodaughter::MotherPDG</td>
-        <td></td>
-        <td>motherPDG</td>
-        <td>int</td>
-        <td>PDG code of the mother particle</td>
-      </tr>
-      <tr>
-        <td>o2::aod::resodaughter::BachTrkID</td>
-        <td></td>
-        <td>bachtrkID</td>
-        <td>int</td>
-        <td>Id of the bach track from cascade</td>
-      </tr>
-      <tr>
-        <td>o2::aod::resodaughter::V0ID</td>
-        <td></td>
-        <td>v0ID</td>
-        <td>int</td>
-        <td>Id of the V0 from cascade</td>
-      </tr>
-      <tr>
-        <td>o2::aod::resodaughter::DaughterPDG1</td>
-        <td></td>
-        <td>daughterPDG1</td>
-        <td>int</td>
-        <td>PDG code of the first Daughter particle</td>
-      </tr>
-      <tr>
-        <td>o2::aod::resodaughter::DaughterPDG2</td>
-        <td></td>
-        <td>daughterPDG2</td>
-        <td>int</td>
-        <td>PDG code of the second Daughter particle</td>
-      </tr>
-      <tr>
-        <td>o2::aod::resodaughter::IsPhysicalPrimary</td>
-        <td></td>
-        <td>isPhysicalPrimary</td>
-        <td>bool</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::resodaughter::ProducedByGenerator</td>
-        <td></td>
-        <td>producedByGenerator</td>
-        <td>bool</td>
-        <td></td>
-      </tr>
-    </table>
-  </div>
-
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::ResoMCParents</button>
-  <div class="panel">
-    <div>
-
-    </div>
-    <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGLF/DataModel/LFResonanceTables.h" target="_blank">PWGLF/DataModel/LFResonanceTables.h</a>
-    </div>
-    <div>Is used in:
-      <ul>
-        <li>o2::aod::ResoMCParent = o2::aod::ResoMCParents::iterator</li>
-      </ul>
-    </div>
-    <table class=DataModel>
-      <tr>
-        <th>Name</th>
-        <th></th>
-        <th>Getter</th>
-        <th>Type</th>
-        <th>Comment</th>
-      </tr>
-      <tr>
-        <td>o2::soa::Index</td>
-        <td>GI</td>
-        <td>globalIndex</td>
-        <td>int64_t</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::resodaughter::ResoCollisionId</td>
-        <td>I</td>
-        <td>resoCollisionId</td>
-        <td>int32</td>
-        <td>Pointer into ResoCollisions</td>
-      </tr>
-      <tr>
-        <td>o2::aod::resodaughter::McParticleId</td>
-        <td>I</td>
-        <td>mcParticleId</td>
-        <td>int32</td>
-        <td>Index of the corresponding MC particle</td>
-      </tr>
-      <tr>
-        <td>o2::aod::mcparticle::PdgCode</td>
-        <td></td>
-        <td>pdgCode</td>
-        <td>int</td>
-        <td>PDG code</td>
-      </tr>
-      <tr>
-        <td>o2::aod::resodaughter::DaughterPDG1</td>
-        <td></td>
-        <td>daughterPDG1</td>
-        <td>int</td>
-        <td>PDG code of the first Daughter particle</td>
-      </tr>
-      <tr>
-        <td>o2::aod::resodaughter::DaughterPDG2</td>
-        <td></td>
-        <td>daughterPDG2</td>
-        <td>int</td>
-        <td>PDG code of the second Daughter particle</td>
-      </tr>
-      <tr>
-        <td>o2::aod::resodaughter::IsPhysicalPrimary</td>
-        <td></td>
-        <td>isPhysicalPrimary</td>
-        <td>bool</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::resodaughter::ProducedByGenerator</td>
-        <td></td>
-        <td>producedByGenerator</td>
-        <td>bool</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>o2::aod::resodaughter::Pt</td>
-        <td></td>
-        <td>pt</td>
-        <td>float</td>
-        <td>p_T (GeV/c)</td>
-      </tr>
-      <tr>
-        <td>o2::aod::resodaughter::Px</td>
-        <td></td>
-        <td>px</td>
-        <td>float</td>
-        <td>p_x (GeV/c)</td>
-      </tr>
-      <tr>
-        <td>o2::aod::resodaughter::Py</td>
-        <td></td>
-        <td>py</td>
-        <td>float</td>
-        <td>p_y (GeV/c)</td>
-      </tr>
-      <tr>
-        <td>o2::aod::resodaughter::Pz</td>
-        <td></td>
-        <td>pz</td>
-        <td>float</td>
-        <td>p_z (GeV/c)</td>
-      </tr>
-      <tr>
-        <td>o2::aod::resodaughter::Eta</td>
-        <td></td>
-        <td>eta</td>
-        <td>float</td>
-        <td>Eta</td>
-      </tr>
-      <tr>
-        <td>o2::aod::resodaughter::Phi</td>
-        <td></td>
-        <td>phi</td>
-        <td>float</td>
-        <td>Phi</td>
-      </tr>
-      <tr>
-        <td>o2::aod::mcparticle::Y</td>
-        <td>E</td>
-        <td>y</td>
-        <td>float</td>
-        <td>Particle rapidity, conditionally defined to avoid FPEs</td>
-      </tr>
-    </table>
-  </div>
-
-</div>
-
 ###  o2-analysis-lf-reso2mergedf
 Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGLF/TableProducer/Resonances//LFResonanceMergeDF.cxx" target="_blank">LFResonanceMergeDF.cxx</a>
 <div>
@@ -75611,6 +75685,13 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGLF
         <td>GI</td>
         <td>globalIndex</td>
         <td>int64_t</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::mult::MultNTracksPV</td>
+        <td></td>
+        <td>multNTracksPV</td>
+        <td>int</td>
         <td></td>
       </tr>
       <tr>
@@ -75689,6 +75770,13 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGLF
         <td>timestamp</td>
         <td>uint64_t</td>
         <td>Timestamp of a BC in ms (epoch style)</td>
+      </tr>
+      <tr>
+        <td>o2::aod::evsel::NumTracksInTimeRange</td>
+        <td></td>
+        <td>trackOccupancyInTimeRange</td>
+        <td>int</td>
+        <td>Occupancy in specified time interval by a number of tracks from nearby collisions</td>
       </tr>
     </table>
   </div>
@@ -76418,6 +76506,2827 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGLF
         <td>triggereventf1proton</td>
         <td>bool</td>
         <td>F1 - proton femto trigger event</td>
+      </tr>
+    </table>
+  </div>
+
+</div>
+
+###  o2-analysis-lf-resonance-initializer
+Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGLF/TableProducer/Resonances//resonanceInitializer.cxx" target="_blank">resonanceInitializer.cxx</a>
+<div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::ResoCollisions</button>
+  <div class="panel">
+    <div>
+
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGLF/DataModel/LFResonanceTables.h" target="_blank">PWGLF/DataModel/LFResonanceTables.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::ResoCollision = o2::aod::ResoCollisions::iterator</li>
+      </ul>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::soa::Index</td>
+        <td>GI</td>
+        <td>globalIndex</td>
+        <td>int64_t</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::resocollision::CollisionId</td>
+        <td>I</td>
+        <td>collisionId</td>
+        <td>int</td>
+        <td>Pointer into Collisions</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mult::MultNTracksPV</td>
+        <td></td>
+        <td>multNTracksPV</td>
+        <td>int</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::&zwnj;collision::PosX</td>
+        <td></td>
+        <td>posX</td>
+        <td>float</td>
+        <td>X Vertex position in cm</td>
+      </tr>
+      <tr>
+        <td>o2::aod::&zwnj;collision::PosY</td>
+        <td></td>
+        <td>posY</td>
+        <td>float</td>
+        <td>Y Vertex position in cm</td>
+      </tr>
+      <tr>
+        <td>o2::aod::&zwnj;collision::PosZ</td>
+        <td></td>
+        <td>posZ</td>
+        <td>float</td>
+        <td>Z Vertex position in cm</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resocollision::Cent</td>
+        <td></td>
+        <td>cent</td>
+        <td>float</td>
+        <td>Centrality (Multiplicity) percentile (Default: FT0M)</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resocollision::Spherocity</td>
+        <td></td>
+        <td>spherocity</td>
+        <td>float</td>
+        <td>Spherocity of the event</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resocollision::EvtPl</td>
+        <td></td>
+        <td>evtPl</td>
+        <td>float</td>
+        <td>Second harmonic event plane</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resocollision::EvtPlResAB</td>
+        <td></td>
+        <td>evtPlResAB</td>
+        <td>float</td>
+        <td>Second harmonic event plane resolution of A-B sub events</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resocollision::EvtPlResAC</td>
+        <td></td>
+        <td>evtPlResAC</td>
+        <td>float</td>
+        <td>Second harmonic event plane resolution of A-C sub events</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resocollision::EvtPlResBC</td>
+        <td></td>
+        <td>evtPlResBC</td>
+        <td>float</td>
+        <td>Second harmonic event plane resolution of B-C sub events</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resocollision::BMagField</td>
+        <td></td>
+        <td>bMagField</td>
+        <td>float</td>
+        <td>Magnetic field</td>
+      </tr>
+      <tr>
+        <td>o2::aod::timestamp::Timestamp</td>
+        <td></td>
+        <td>timestamp</td>
+        <td>uint64_t</td>
+        <td>Timestamp of a BC in ms (epoch style)</td>
+      </tr>
+      <tr>
+        <td>o2::aod::evsel::NumTracksInTimeRange</td>
+        <td></td>
+        <td>trackOccupancyInTimeRange</td>
+        <td>int</td>
+        <td>Occupancy in specified time interval by a number of tracks from nearby collisions</td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::ResoMCCollisions</button>
+  <div class="panel">
+    <div>
+
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGLF/DataModel/LFResonanceTables.h" target="_blank">PWGLF/DataModel/LFResonanceTables.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::ResoMCCollision = o2::aod::ResoMCCollisions::iterator</li>
+      </ul>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::soa::Index</td>
+        <td>GI</td>
+        <td>globalIndex</td>
+        <td>int64_t</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::resocollision::IsVtxIn10</td>
+        <td></td>
+        <td>isVtxIn10</td>
+        <td>bool</td>
+        <td>Vtx10</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resocollision::IsINELgt0</td>
+        <td></td>
+        <td>isINELgt0</td>
+        <td>bool</td>
+        <td>INEL>0</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resocollision::IsTriggerTVX</td>
+        <td></td>
+        <td>isTriggerTVX</td>
+        <td>bool</td>
+        <td>TriggerTVX</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resocollision::IsInSel8</td>
+        <td></td>
+        <td>isInSel8</td>
+        <td>bool</td>
+        <td>InSel8</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resocollision::IsInAfterAllCuts</td>
+        <td></td>
+        <td>isInAfterAllCuts</td>
+        <td>bool</td>
+        <td>InAfterAllCuts</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resocollision::ImpactParameter</td>
+        <td></td>
+        <td>impactParameter</td>
+        <td>float</td>
+        <td>ImpactParameter</td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::ResoTracks</button>
+  <div class="panel">
+    <div>
+
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGLF/DataModel/LFResonanceTables.h" target="_blank">PWGLF/DataModel/LFResonanceTables.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::ResoTrack = o2::aod::ResoTracks::iterator</li>
+      </ul>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::soa::Index</td>
+        <td>GI</td>
+        <td>globalIndex</td>
+        <td>int64_t</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::ResoCollisionId</td>
+        <td>I</td>
+        <td>resoCollisionId</td>
+        <td>int32</td>
+        <td>Pointer into ResoCollisions</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::TrackId</td>
+        <td>I</td>
+        <td>trackId</td>
+        <td>int</td>
+        <td>Pointer into Tracks</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::Pt</td>
+        <td></td>
+        <td>pt</td>
+        <td>float</td>
+        <td>p_T (GeV/c)</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::Px</td>
+        <td></td>
+        <td>px</td>
+        <td>float</td>
+        <td>p_x (GeV/c)</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::Py</td>
+        <td></td>
+        <td>py</td>
+        <td>float</td>
+        <td>p_y (GeV/c)</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::Pz</td>
+        <td></td>
+        <td>pz</td>
+        <td>float</td>
+        <td>p_z (GeV/c)</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::Eta</td>
+        <td></td>
+        <td>eta</td>
+        <td>float</td>
+        <td>Eta</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::Phi</td>
+        <td></td>
+        <td>phi</td>
+        <td>float</td>
+        <td>Phi</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::Sign</td>
+        <td></td>
+        <td>sign</td>
+        <td>int8_t</td>
+        <td>Sign of the track charge</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::TPCNClsCrossedRows</td>
+        <td></td>
+        <td>tpcNClsCrossedRows</td>
+        <td>uint8_t</td>
+        <td>Number of TPC crossed rows</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::TPCNClsFound</td>
+        <td></td>
+        <td>tpcNClsFound</td>
+        <td>uint8_t</td>
+        <td>Number of TPC clusters found</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::ITSNCls</td>
+        <td></td>
+        <td>itsNCls</td>
+        <td>uint8_t</td>
+        <td>Number of ITS clusters found</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::DcaXY</td>
+        <td></td>
+        <td>dcaXY</td>
+        <td>float</td>
+        <td>Impact parameter in XY of the track to the primary vertex</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::DcaZ</td>
+        <td></td>
+        <td>dcaZ</td>
+        <td>float</td>
+        <td>Impact parameter in Z of the track to the primary vertex</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::X</td>
+        <td></td>
+        <td>x</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::Alpha</td>
+        <td></td>
+        <td>alpha</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::HasITS</td>
+        <td></td>
+        <td>hasITS</td>
+        <td>bool</td>
+        <td>Has ITS</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::HasTPC</td>
+        <td></td>
+        <td>hasTPC</td>
+        <td>bool</td>
+        <td>Has TPC</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::HasTOF</td>
+        <td></td>
+        <td>hasTOF</td>
+        <td>bool</td>
+        <td>Has TOF</td>
+      </tr>
+      <tr>
+        <td>o2::aod::pidtpc::TPCNSigmaPi</td>
+        <td></td>
+        <td>tpcNSigmaPi</td>
+        <td>float</td>
+        <td>Nsigma separation with the TPC detector for pion</td>
+      </tr>
+      <tr>
+        <td>o2::aod::pidtpc::TPCNSigmaKa</td>
+        <td></td>
+        <td>tpcNSigmaKa</td>
+        <td>float</td>
+        <td>Nsigma separation with the TPC detector for kaon</td>
+      </tr>
+      <tr>
+        <td>o2::aod::pidtpc::TPCNSigmaPr</td>
+        <td></td>
+        <td>tpcNSigmaPr</td>
+        <td>float</td>
+        <td>Nsigma separation with the TPC detector for proton</td>
+      </tr>
+      <tr>
+        <td>o2::aod::pidtpc::TPCNSigmaEl</td>
+        <td></td>
+        <td>tpcNSigmaEl</td>
+        <td>float</td>
+        <td>Nsigma separation with the TPC detector for electron</td>
+      </tr>
+      <tr>
+        <td>o2::aod::pidtof::TOFNSigmaPi</td>
+        <td></td>
+        <td>tofNSigmaPi</td>
+        <td>float</td>
+        <td>Nsigma separation with the TOF detector for pion</td>
+      </tr>
+      <tr>
+        <td>o2::aod::pidtof::TOFNSigmaKa</td>
+        <td></td>
+        <td>tofNSigmaKa</td>
+        <td>float</td>
+        <td>Nsigma separation with the TOF detector for kaon</td>
+      </tr>
+      <tr>
+        <td>o2::aod::pidtof::TOFNSigmaPr</td>
+        <td></td>
+        <td>tofNSigmaPr</td>
+        <td>float</td>
+        <td>Nsigma separation with the TOF detector for proton</td>
+      </tr>
+      <tr>
+        <td>o2::aod::pidtof::TOFNSigmaEl</td>
+        <td></td>
+        <td>tofNSigmaEl</td>
+        <td>float</td>
+        <td>Nsigma separation with the TOF detector for electron</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::TPCSignal</td>
+        <td></td>
+        <td>tpcSignal</td>
+        <td>float</td>
+        <td>dE/dx signal in the TPC</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::PassedITSRefit</td>
+        <td></td>
+        <td>passedITSRefit</td>
+        <td>bool</td>
+        <td>Passed the track cut: kITSRefit</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::PassedTPCRefit</td>
+        <td></td>
+        <td>passedTPCRefit</td>
+        <td>bool</td>
+        <td>Passed the track cut: kTPCRefit</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::IsGlobalTrackWoDCA</td>
+        <td></td>
+        <td>isGlobalTrackWoDCA</td>
+        <td>bool</td>
+        <td>Is global track without DCA</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::IsGlobalTrack</td>
+        <td></td>
+        <td>isGlobalTrack</td>
+        <td>bool</td>
+        <td>Is global track</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::IsPrimaryTrack</td>
+        <td></td>
+        <td>isPrimaryTrack</td>
+        <td>bool</td>
+        <td>Is primary track</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::IsPVContributor</td>
+        <td></td>
+        <td>isPVContributor</td>
+        <td>bool</td>
+        <td>Is primary vertex contributor</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::TPCCrossedRowsOverFindableCls</td>
+        <td></td>
+        <td>tpcCrossedRowsOverFindableCls</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::ITSChi2NCl</td>
+        <td></td>
+        <td>itsChi2NCl</td>
+        <td>float</td>
+        <td>Chi2 / cluster for the ITS track segment</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::TPCChi2NCl</td>
+        <td></td>
+        <td>tpcChi2NCl</td>
+        <td>float</td>
+        <td>Chi2 / cluster for the TPC track segment</td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::ResoV0s</button>
+  <div class="panel">
+    <div>
+
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGLF/DataModel/LFResonanceTables.h" target="_blank">PWGLF/DataModel/LFResonanceTables.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::ResoV0 = o2::aod::ResoV0s::iterator</li>
+      </ul>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::soa::Index</td>
+        <td>GI</td>
+        <td>globalIndex</td>
+        <td>int64_t</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::ResoCollisionId</td>
+        <td>I</td>
+        <td>resoCollisionId</td>
+        <td>int32</td>
+        <td>Pointer into ResoCollisions</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::V0Id</td>
+        <td>I</td>
+        <td>v0Id</td>
+        <td>int</td>
+        <td>Pointer into V0s</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::Pt</td>
+        <td></td>
+        <td>pt</td>
+        <td>float</td>
+        <td>p_T (GeV/c)</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::Px</td>
+        <td></td>
+        <td>px</td>
+        <td>float</td>
+        <td>p_x (GeV/c)</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::Py</td>
+        <td></td>
+        <td>py</td>
+        <td>float</td>
+        <td>p_y (GeV/c)</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::Pz</td>
+        <td></td>
+        <td>pz</td>
+        <td>float</td>
+        <td>p_z (GeV/c)</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::Eta</td>
+        <td></td>
+        <td>eta</td>
+        <td>float</td>
+        <td>Eta</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::Phi</td>
+        <td></td>
+        <td>phi</td>
+        <td>float</td>
+        <td>Phi</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::Indices</td>
+        <td></td>
+        <td>indices</td>
+        <td>int[2]</td>
+        <td>Field for the track indices to remove auto-correlations</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::DaughterTPCNSigmaPosPi</td>
+        <td></td>
+        <td>daughterTPCNSigmaPosPi</td>
+        <td>float</td>
+        <td>TPC PID of the positive daughter as Pion</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::DaughterTPCNSigmaPosKa</td>
+        <td></td>
+        <td>daughterTPCNSigmaPosKa</td>
+        <td>float</td>
+        <td>TPC PID of the positive daughter as Kaon</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::DaughterTPCNSigmaPosPr</td>
+        <td></td>
+        <td>daughterTPCNSigmaPosPr</td>
+        <td>float</td>
+        <td>TPC PID of the positive daughter as Proton</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::DaughterTPCNSigmaNegPi</td>
+        <td></td>
+        <td>daughterTPCNSigmaNegPi</td>
+        <td>float</td>
+        <td>TPC PID of the negative daughter as Pion</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::DaughterTPCNSigmaNegKa</td>
+        <td></td>
+        <td>daughterTPCNSigmaNegKa</td>
+        <td>float</td>
+        <td>TPC PID of the negative daughter as Kaon</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::DaughterTPCNSigmaNegPr</td>
+        <td></td>
+        <td>daughterTPCNSigmaNegPr</td>
+        <td>float</td>
+        <td>TPC PID of the negative daughter as Proton</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::DaughterTOFNSigmaPosPi</td>
+        <td></td>
+        <td>daughterTOFNSigmaPosPi</td>
+        <td>float</td>
+        <td>TOF PID of the positive daughter as Pion</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::DaughterTOFNSigmaPosKa</td>
+        <td></td>
+        <td>daughterTOFNSigmaPosKa</td>
+        <td>float</td>
+        <td>TOF PID of the positive daughter as Kaon</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::DaughterTOFNSigmaPosPr</td>
+        <td></td>
+        <td>daughterTOFNSigmaPosPr</td>
+        <td>float</td>
+        <td>TOF PID of the positive daughter as Proton</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::DaughterTOFNSigmaNegPi</td>
+        <td></td>
+        <td>daughterTOFNSigmaNegPi</td>
+        <td>float</td>
+        <td>TOF PID of the negative daughter as Pion</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::DaughterTOFNSigmaNegKa</td>
+        <td></td>
+        <td>daughterTOFNSigmaNegKa</td>
+        <td>float</td>
+        <td>TOF PID of the negative daughter as Kaon</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::DaughterTOFNSigmaNegPr</td>
+        <td></td>
+        <td>daughterTOFNSigmaNegPr</td>
+        <td>float</td>
+        <td>TOF PID of the negative daughter as Proton</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::V0CosPA</td>
+        <td></td>
+        <td>v0CosPA</td>
+        <td>float</td>
+        <td>V0 Cosine of Pointing Angle</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::DaughDCA</td>
+        <td></td>
+        <td>daughDCA</td>
+        <td>float</td>
+        <td>DCA between daughters</td>
+      </tr>
+      <tr>
+        <td>o2::aod::v0data::DCAPosToPV</td>
+        <td></td>
+        <td>dcapostopv</td>
+        <td>float</td>
+        <td>DCA positive prong to PV</td>
+      </tr>
+      <tr>
+        <td>o2::aod::v0data::DCANegToPV</td>
+        <td></td>
+        <td>dcanegtopv</td>
+        <td>float</td>
+        <td>DCA negative prong to PV</td>
+      </tr>
+      <tr>
+        <td>o2::aod::v0data::DCAV0ToPV</td>
+        <td></td>
+        <td>dcav0topv</td>
+        <td>float</td>
+        <td>DCA V0 to PV</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::MLambda</td>
+        <td></td>
+        <td>mLambda</td>
+        <td>float</td>
+        <td>The invariant mass of V0 candidate, assuming lambda</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::MAntiLambda</td>
+        <td></td>
+        <td>mAntiLambda</td>
+        <td>float</td>
+        <td>The invariant mass of V0 candidate, assuming antilambda</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::MK0Short</td>
+        <td></td>
+        <td>mK0Short</td>
+        <td>float</td>
+        <td>The invariant mass of V0 candidate, assuming k0s</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::TransRadius</td>
+        <td></td>
+        <td>transRadius</td>
+        <td>float</td>
+        <td>Transverse radius of the decay vertex</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::DecayVtxX</td>
+        <td></td>
+        <td>decayVtxX</td>
+        <td>float</td>
+        <td>X position of the decay vertex</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::DecayVtxY</td>
+        <td></td>
+        <td>decayVtxY</td>
+        <td>float</td>
+        <td>Y position of the decay vertex</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::DecayVtxZ</td>
+        <td></td>
+        <td>decayVtxZ</td>
+        <td>float</td>
+        <td>Z position of the decay vertex</td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::ResoCascades</button>
+  <div class="panel">
+    <div>
+
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGLF/DataModel/LFResonanceTables.h" target="_blank">PWGLF/DataModel/LFResonanceTables.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::ResoCascade = o2::aod::ResoCascades::iterator</li>
+      </ul>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::soa::Index</td>
+        <td>GI</td>
+        <td>globalIndex</td>
+        <td>int64_t</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::ResoCollisionId</td>
+        <td>I</td>
+        <td>resoCollisionId</td>
+        <td>int32</td>
+        <td>Pointer into ResoCollisions</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::CascadeId</td>
+        <td>I</td>
+        <td>cascadeId</td>
+        <td>int</td>
+        <td>Pointer into Cascades</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::Pt</td>
+        <td></td>
+        <td>pt</td>
+        <td>float</td>
+        <td>p_T (GeV/c)</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::Px</td>
+        <td></td>
+        <td>px</td>
+        <td>float</td>
+        <td>p_x (GeV/c)</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::Py</td>
+        <td></td>
+        <td>py</td>
+        <td>float</td>
+        <td>p_y (GeV/c)</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::Pz</td>
+        <td></td>
+        <td>pz</td>
+        <td>float</td>
+        <td>p_z (GeV/c)</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::Eta</td>
+        <td></td>
+        <td>eta</td>
+        <td>float</td>
+        <td>Eta</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::Phi</td>
+        <td></td>
+        <td>phi</td>
+        <td>float</td>
+        <td>Phi</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::CascadeIndices</td>
+        <td></td>
+        <td>cascadeIndices</td>
+        <td>int[3]</td>
+        <td>Field for the track indices to remove auto-correlations (ordered: positive, negative, bachelor)</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::DaughterTPCNSigmaPosPi</td>
+        <td></td>
+        <td>daughterTPCNSigmaPosPi</td>
+        <td>float</td>
+        <td>TPC PID of the positive daughter as Pion</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::DaughterTPCNSigmaPosKa</td>
+        <td></td>
+        <td>daughterTPCNSigmaPosKa</td>
+        <td>float</td>
+        <td>TPC PID of the positive daughter as Kaon</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::DaughterTPCNSigmaPosPr</td>
+        <td></td>
+        <td>daughterTPCNSigmaPosPr</td>
+        <td>float</td>
+        <td>TPC PID of the positive daughter as Proton</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::DaughterTPCNSigmaNegPi</td>
+        <td></td>
+        <td>daughterTPCNSigmaNegPi</td>
+        <td>float</td>
+        <td>TPC PID of the negative daughter as Pion</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::DaughterTPCNSigmaNegKa</td>
+        <td></td>
+        <td>daughterTPCNSigmaNegKa</td>
+        <td>float</td>
+        <td>TPC PID of the negative daughter as Kaon</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::DaughterTPCNSigmaNegPr</td>
+        <td></td>
+        <td>daughterTPCNSigmaNegPr</td>
+        <td>float</td>
+        <td>TPC PID of the negative daughter as Proton</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::DaughterTPCNSigmaBachPi</td>
+        <td></td>
+        <td>daughterTPCNSigmaBachPi</td>
+        <td>float</td>
+        <td>TPC PID of the bachelor daughter as Pion</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::DaughterTPCNSigmaBachKa</td>
+        <td></td>
+        <td>daughterTPCNSigmaBachKa</td>
+        <td>float</td>
+        <td>TPC PID of the bachelor daughter as Kaon</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::DaughterTPCNSigmaBachPr</td>
+        <td></td>
+        <td>daughterTPCNSigmaBachPr</td>
+        <td>float</td>
+        <td>TPC PID of the bachelor daughter as Proton</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::DaughterTOFNSigmaPosPi</td>
+        <td></td>
+        <td>daughterTOFNSigmaPosPi</td>
+        <td>float</td>
+        <td>TOF PID of the positive daughter as Pion</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::DaughterTOFNSigmaPosKa</td>
+        <td></td>
+        <td>daughterTOFNSigmaPosKa</td>
+        <td>float</td>
+        <td>TOF PID of the positive daughter as Kaon</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::DaughterTOFNSigmaPosPr</td>
+        <td></td>
+        <td>daughterTOFNSigmaPosPr</td>
+        <td>float</td>
+        <td>TOF PID of the positive daughter as Proton</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::DaughterTOFNSigmaNegPi</td>
+        <td></td>
+        <td>daughterTOFNSigmaNegPi</td>
+        <td>float</td>
+        <td>TOF PID of the negative daughter as Pion</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::DaughterTOFNSigmaNegKa</td>
+        <td></td>
+        <td>daughterTOFNSigmaNegKa</td>
+        <td>float</td>
+        <td>TOF PID of the negative daughter as Kaon</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::DaughterTOFNSigmaNegPr</td>
+        <td></td>
+        <td>daughterTOFNSigmaNegPr</td>
+        <td>float</td>
+        <td>TOF PID of the negative daughter as Proton</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::DaughterTOFNSigmaBachPi</td>
+        <td></td>
+        <td>daughterTOFNSigmaBachPi</td>
+        <td>float</td>
+        <td>TOF PID of the bachelor daughter as Pion</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::DaughterTOFNSigmaBachKa</td>
+        <td></td>
+        <td>daughterTOFNSigmaBachKa</td>
+        <td>float</td>
+        <td>TOF PID of the bachelor daughter as Kaon</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::DaughterTOFNSigmaBachPr</td>
+        <td></td>
+        <td>daughterTOFNSigmaBachPr</td>
+        <td>float</td>
+        <td>TOF PID of the bachelor daughter as Proton</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::V0CosPA</td>
+        <td></td>
+        <td>v0CosPA</td>
+        <td>float</td>
+        <td>V0 Cosine of Pointing Angle</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::CascCosPA</td>
+        <td></td>
+        <td>cascCosPA</td>
+        <td>float</td>
+        <td>Cascade Cosine of Pointing Angle</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::DaughDCA</td>
+        <td></td>
+        <td>daughDCA</td>
+        <td>float</td>
+        <td>DCA between daughters</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::CascDaughDCA</td>
+        <td></td>
+        <td>cascDaughDCA</td>
+        <td>float</td>
+        <td>DCA between daughters from cascade</td>
+      </tr>
+      <tr>
+        <td>o2::aod::cascdata::DCAPosToPV</td>
+        <td></td>
+        <td>dcapostopv</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::cascdata::DCANegToPV</td>
+        <td></td>
+        <td>dcanegtopv</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::cascdata::DCABachToPV</td>
+        <td></td>
+        <td>dcabachtopv</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::v0data::DCAV0ToPV</td>
+        <td></td>
+        <td>dcav0topv</td>
+        <td>float</td>
+        <td>DCA V0 to PV</td>
+      </tr>
+      <tr>
+        <td>o2::aod::cascdata::DCAXYCascToPV</td>
+        <td></td>
+        <td>dcaXYCascToPV</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::cascdata::DCAZCascToPV</td>
+        <td></td>
+        <td>dcaZCascToPV</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::cascdata::Sign</td>
+        <td></td>
+        <td>sign</td>
+        <td>int</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::MXi</td>
+        <td></td>
+        <td>mXi</td>
+        <td>float</td>
+        <td>The invariant mass of Xi candidate</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::TransRadius</td>
+        <td></td>
+        <td>transRadius</td>
+        <td>float</td>
+        <td>Transverse radius of the decay vertex</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::CascTransRadius</td>
+        <td></td>
+        <td>cascTransRadius</td>
+        <td>float</td>
+        <td>Transverse radius of the decay vertex from cascade</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::DecayVtxX</td>
+        <td></td>
+        <td>decayVtxX</td>
+        <td>float</td>
+        <td>X position of the decay vertex</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::DecayVtxY</td>
+        <td></td>
+        <td>decayVtxY</td>
+        <td>float</td>
+        <td>Y position of the decay vertex</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::DecayVtxZ</td>
+        <td></td>
+        <td>decayVtxZ</td>
+        <td>float</td>
+        <td>Z position of the decay vertex</td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::ResoMCTracks</button>
+  <div class="panel">
+    <div>
+
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGLF/DataModel/LFResonanceTables.h" target="_blank">PWGLF/DataModel/LFResonanceTables.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::ResoMCTrack = o2::aod::ResoMCTracks::iterator</li>
+      </ul>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::PdgCode</td>
+        <td></td>
+        <td>pdgCode</td>
+        <td>int</td>
+        <td>PDG code</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::MotherId</td>
+        <td></td>
+        <td>motherId</td>
+        <td>int</td>
+        <td>Id of the mother particle</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::MotherPDG</td>
+        <td></td>
+        <td>motherPDG</td>
+        <td>int</td>
+        <td>PDG code of the mother particle</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::SiblingIds</td>
+        <td></td>
+        <td>siblingIds</td>
+        <td>int[2]</td>
+        <td>Index of the particles with the same mother</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::IsPhysicalPrimary</td>
+        <td></td>
+        <td>isPhysicalPrimary</td>
+        <td>bool</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::ProducedByGenerator</td>
+        <td></td>
+        <td>producedByGenerator</td>
+        <td>bool</td>
+        <td></td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::ResoMCV0s</button>
+  <div class="panel">
+    <div>
+
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGLF/DataModel/LFResonanceTables.h" target="_blank">PWGLF/DataModel/LFResonanceTables.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::ResoMCV0 = o2::aod::ResoMCV0s::iterator</li>
+      </ul>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::PdgCode</td>
+        <td></td>
+        <td>pdgCode</td>
+        <td>int</td>
+        <td>PDG code</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::MotherId</td>
+        <td></td>
+        <td>motherId</td>
+        <td>int</td>
+        <td>Id of the mother particle</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::MotherPDG</td>
+        <td></td>
+        <td>motherPDG</td>
+        <td>int</td>
+        <td>PDG code of the mother particle</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::DaughterID1</td>
+        <td></td>
+        <td>daughterID1</td>
+        <td>int</td>
+        <td>Id of the first Daughter particle</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::DaughterID2</td>
+        <td></td>
+        <td>daughterID2</td>
+        <td>int</td>
+        <td>Id of the second Daughter particle</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::DaughterPDG1</td>
+        <td></td>
+        <td>daughterPDG1</td>
+        <td>int</td>
+        <td>PDG code of the first Daughter particle</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::DaughterPDG2</td>
+        <td></td>
+        <td>daughterPDG2</td>
+        <td>int</td>
+        <td>PDG code of the second Daughter particle</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::IsPhysicalPrimary</td>
+        <td></td>
+        <td>isPhysicalPrimary</td>
+        <td>bool</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::ProducedByGenerator</td>
+        <td></td>
+        <td>producedByGenerator</td>
+        <td>bool</td>
+        <td></td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::ResoMCCascades</button>
+  <div class="panel">
+    <div>
+
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGLF/DataModel/LFResonanceTables.h" target="_blank">PWGLF/DataModel/LFResonanceTables.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::ResoMCCascade = o2::aod::ResoMCCascades::iterator</li>
+      </ul>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::PdgCode</td>
+        <td></td>
+        <td>pdgCode</td>
+        <td>int</td>
+        <td>PDG code</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::MotherId</td>
+        <td></td>
+        <td>motherId</td>
+        <td>int</td>
+        <td>Id of the mother particle</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::MotherPDG</td>
+        <td></td>
+        <td>motherPDG</td>
+        <td>int</td>
+        <td>PDG code of the mother particle</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::BachTrkID</td>
+        <td></td>
+        <td>bachTrkID</td>
+        <td>int</td>
+        <td>Id of the bach track from cascade</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::V0ID</td>
+        <td></td>
+        <td>v0ID</td>
+        <td>int</td>
+        <td>Id of the V0 from cascade</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::DaughterPDG1</td>
+        <td></td>
+        <td>daughterPDG1</td>
+        <td>int</td>
+        <td>PDG code of the first Daughter particle</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::DaughterPDG2</td>
+        <td></td>
+        <td>daughterPDG2</td>
+        <td>int</td>
+        <td>PDG code of the second Daughter particle</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::IsPhysicalPrimary</td>
+        <td></td>
+        <td>isPhysicalPrimary</td>
+        <td>bool</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::ProducedByGenerator</td>
+        <td></td>
+        <td>producedByGenerator</td>
+        <td>bool</td>
+        <td></td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::ResoMCParents</button>
+  <div class="panel">
+    <div>
+
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGLF/DataModel/LFResonanceTables.h" target="_blank">PWGLF/DataModel/LFResonanceTables.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::ResoMCParent = o2::aod::ResoMCParents::iterator</li>
+      </ul>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::soa::Index</td>
+        <td>GI</td>
+        <td>globalIndex</td>
+        <td>int64_t</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::ResoCollisionId</td>
+        <td>I</td>
+        <td>resoCollisionId</td>
+        <td>int32</td>
+        <td>Pointer into ResoCollisions</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::McParticleId</td>
+        <td>I</td>
+        <td>mcParticleId</td>
+        <td>int32</td>
+        <td>Index of the corresponding MC particle</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::PdgCode</td>
+        <td></td>
+        <td>pdgCode</td>
+        <td>int</td>
+        <td>PDG code</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::DaughterPDG1</td>
+        <td></td>
+        <td>daughterPDG1</td>
+        <td>int</td>
+        <td>PDG code of the first Daughter particle</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::DaughterPDG2</td>
+        <td></td>
+        <td>daughterPDG2</td>
+        <td>int</td>
+        <td>PDG code of the second Daughter particle</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::IsPhysicalPrimary</td>
+        <td></td>
+        <td>isPhysicalPrimary</td>
+        <td>bool</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::ProducedByGenerator</td>
+        <td></td>
+        <td>producedByGenerator</td>
+        <td>bool</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::Pt</td>
+        <td></td>
+        <td>pt</td>
+        <td>float</td>
+        <td>p_T (GeV/c)</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::Px</td>
+        <td></td>
+        <td>px</td>
+        <td>float</td>
+        <td>p_x (GeV/c)</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::Py</td>
+        <td></td>
+        <td>py</td>
+        <td>float</td>
+        <td>p_y (GeV/c)</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::Pz</td>
+        <td></td>
+        <td>pz</td>
+        <td>float</td>
+        <td>p_z (GeV/c)</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::Eta</td>
+        <td></td>
+        <td>eta</td>
+        <td>float</td>
+        <td>Eta</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::Phi</td>
+        <td></td>
+        <td>phi</td>
+        <td>float</td>
+        <td>Phi</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::Y</td>
+        <td>E</td>
+        <td>y</td>
+        <td>float</td>
+        <td>Particle rapidity, conditionally defined to avoid FPEs</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::E</td>
+        <td></td>
+        <td>e</td>
+        <td>float</td>
+        <td>Energy</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::StatusCode</td>
+        <td></td>
+        <td>statusCode</td>
+        <td>int</td>
+        <td>Generators status code or physics process. Do not use directly. Use dynamic columns getGenStatusCode() or getProcess()</td>
+      </tr>
+    </table>
+  </div>
+
+</div>
+
+###  o2-analysis-lf-resonance-module-initializer
+Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGLF/TableProducer/Resonances//resonanceModuleInitializer.cxx" target="_blank">resonanceModuleInitializer.cxx</a>
+<div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::ResoCollisions</button>
+  <div class="panel">
+    <div>
+
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGLF/DataModel/LFResonanceTables.h" target="_blank">PWGLF/DataModel/LFResonanceTables.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::ResoCollision = o2::aod::ResoCollisions::iterator</li>
+      </ul>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::soa::Index</td>
+        <td>GI</td>
+        <td>globalIndex</td>
+        <td>int64_t</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::resocollision::CollisionId</td>
+        <td>I</td>
+        <td>collisionId</td>
+        <td>int</td>
+        <td>Pointer into Collisions</td>
+      </tr>
+      <tr>
+        <td>o2::aod::mult::MultNTracksPV</td>
+        <td></td>
+        <td>multNTracksPV</td>
+        <td>int</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::&zwnj;collision::PosX</td>
+        <td></td>
+        <td>posX</td>
+        <td>float</td>
+        <td>X Vertex position in cm</td>
+      </tr>
+      <tr>
+        <td>o2::aod::&zwnj;collision::PosY</td>
+        <td></td>
+        <td>posY</td>
+        <td>float</td>
+        <td>Y Vertex position in cm</td>
+      </tr>
+      <tr>
+        <td>o2::aod::&zwnj;collision::PosZ</td>
+        <td></td>
+        <td>posZ</td>
+        <td>float</td>
+        <td>Z Vertex position in cm</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resocollision::Cent</td>
+        <td></td>
+        <td>cent</td>
+        <td>float</td>
+        <td>Centrality (Multiplicity) percentile (Default: FT0M)</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resocollision::Spherocity</td>
+        <td></td>
+        <td>spherocity</td>
+        <td>float</td>
+        <td>Spherocity of the event</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resocollision::EvtPl</td>
+        <td></td>
+        <td>evtPl</td>
+        <td>float</td>
+        <td>Second harmonic event plane</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resocollision::EvtPlResAB</td>
+        <td></td>
+        <td>evtPlResAB</td>
+        <td>float</td>
+        <td>Second harmonic event plane resolution of A-B sub events</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resocollision::EvtPlResAC</td>
+        <td></td>
+        <td>evtPlResAC</td>
+        <td>float</td>
+        <td>Second harmonic event plane resolution of A-C sub events</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resocollision::EvtPlResBC</td>
+        <td></td>
+        <td>evtPlResBC</td>
+        <td>float</td>
+        <td>Second harmonic event plane resolution of B-C sub events</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resocollision::BMagField</td>
+        <td></td>
+        <td>bMagField</td>
+        <td>float</td>
+        <td>Magnetic field</td>
+      </tr>
+      <tr>
+        <td>o2::aod::timestamp::Timestamp</td>
+        <td></td>
+        <td>timestamp</td>
+        <td>uint64_t</td>
+        <td>Timestamp of a BC in ms (epoch style)</td>
+      </tr>
+      <tr>
+        <td>o2::aod::evsel::NumTracksInTimeRange</td>
+        <td></td>
+        <td>trackOccupancyInTimeRange</td>
+        <td>int</td>
+        <td>Occupancy in specified time interval by a number of tracks from nearby collisions</td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::ResoMCCollisions</button>
+  <div class="panel">
+    <div>
+
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGLF/DataModel/LFResonanceTables.h" target="_blank">PWGLF/DataModel/LFResonanceTables.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::ResoMCCollision = o2::aod::ResoMCCollisions::iterator</li>
+      </ul>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::soa::Index</td>
+        <td>GI</td>
+        <td>globalIndex</td>
+        <td>int64_t</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::resocollision::IsVtxIn10</td>
+        <td></td>
+        <td>isVtxIn10</td>
+        <td>bool</td>
+        <td>Vtx10</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resocollision::IsINELgt0</td>
+        <td></td>
+        <td>isINELgt0</td>
+        <td>bool</td>
+        <td>INEL>0</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resocollision::IsTriggerTVX</td>
+        <td></td>
+        <td>isTriggerTVX</td>
+        <td>bool</td>
+        <td>TriggerTVX</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resocollision::IsInSel8</td>
+        <td></td>
+        <td>isInSel8</td>
+        <td>bool</td>
+        <td>InSel8</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resocollision::IsInAfterAllCuts</td>
+        <td></td>
+        <td>isInAfterAllCuts</td>
+        <td>bool</td>
+        <td>InAfterAllCuts</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resocollision::ImpactParameter</td>
+        <td></td>
+        <td>impactParameter</td>
+        <td>float</td>
+        <td>ImpactParameter</td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::ResoTracks</button>
+  <div class="panel">
+    <div>
+
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGLF/DataModel/LFResonanceTables.h" target="_blank">PWGLF/DataModel/LFResonanceTables.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::ResoTrack = o2::aod::ResoTracks::iterator</li>
+      </ul>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::soa::Index</td>
+        <td>GI</td>
+        <td>globalIndex</td>
+        <td>int64_t</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::ResoCollisionId</td>
+        <td>I</td>
+        <td>resoCollisionId</td>
+        <td>int32</td>
+        <td>Pointer into ResoCollisions</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::TrackId</td>
+        <td>I</td>
+        <td>trackId</td>
+        <td>int</td>
+        <td>Pointer into Tracks</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::Pt</td>
+        <td></td>
+        <td>pt</td>
+        <td>float</td>
+        <td>p_T (GeV/c)</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::Px</td>
+        <td></td>
+        <td>px</td>
+        <td>float</td>
+        <td>p_x (GeV/c)</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::Py</td>
+        <td></td>
+        <td>py</td>
+        <td>float</td>
+        <td>p_y (GeV/c)</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::Pz</td>
+        <td></td>
+        <td>pz</td>
+        <td>float</td>
+        <td>p_z (GeV/c)</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::Eta</td>
+        <td></td>
+        <td>eta</td>
+        <td>float</td>
+        <td>Eta</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::Phi</td>
+        <td></td>
+        <td>phi</td>
+        <td>float</td>
+        <td>Phi</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::Sign</td>
+        <td></td>
+        <td>sign</td>
+        <td>int8_t</td>
+        <td>Sign of the track charge</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::TPCNClsCrossedRows</td>
+        <td></td>
+        <td>tpcNClsCrossedRows</td>
+        <td>uint8_t</td>
+        <td>Number of TPC crossed rows</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::TPCNClsFound</td>
+        <td></td>
+        <td>tpcNClsFound</td>
+        <td>uint8_t</td>
+        <td>Number of TPC clusters found</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::ITSNCls</td>
+        <td></td>
+        <td>itsNCls</td>
+        <td>uint8_t</td>
+        <td>Number of ITS clusters found</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::DcaXY</td>
+        <td></td>
+        <td>dcaXY</td>
+        <td>float</td>
+        <td>Impact parameter in XY of the track to the primary vertex</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::DcaZ</td>
+        <td></td>
+        <td>dcaZ</td>
+        <td>float</td>
+        <td>Impact parameter in Z of the track to the primary vertex</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::X</td>
+        <td></td>
+        <td>x</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::Alpha</td>
+        <td></td>
+        <td>alpha</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::HasITS</td>
+        <td></td>
+        <td>hasITS</td>
+        <td>bool</td>
+        <td>Has ITS</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::HasTPC</td>
+        <td></td>
+        <td>hasTPC</td>
+        <td>bool</td>
+        <td>Has TPC</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::HasTOF</td>
+        <td></td>
+        <td>hasTOF</td>
+        <td>bool</td>
+        <td>Has TOF</td>
+      </tr>
+      <tr>
+        <td>o2::aod::pidtpc::TPCNSigmaPi</td>
+        <td></td>
+        <td>tpcNSigmaPi</td>
+        <td>float</td>
+        <td>Nsigma separation with the TPC detector for pion</td>
+      </tr>
+      <tr>
+        <td>o2::aod::pidtpc::TPCNSigmaKa</td>
+        <td></td>
+        <td>tpcNSigmaKa</td>
+        <td>float</td>
+        <td>Nsigma separation with the TPC detector for kaon</td>
+      </tr>
+      <tr>
+        <td>o2::aod::pidtpc::TPCNSigmaPr</td>
+        <td></td>
+        <td>tpcNSigmaPr</td>
+        <td>float</td>
+        <td>Nsigma separation with the TPC detector for proton</td>
+      </tr>
+      <tr>
+        <td>o2::aod::pidtpc::TPCNSigmaEl</td>
+        <td></td>
+        <td>tpcNSigmaEl</td>
+        <td>float</td>
+        <td>Nsigma separation with the TPC detector for electron</td>
+      </tr>
+      <tr>
+        <td>o2::aod::pidtof::TOFNSigmaPi</td>
+        <td></td>
+        <td>tofNSigmaPi</td>
+        <td>float</td>
+        <td>Nsigma separation with the TOF detector for pion</td>
+      </tr>
+      <tr>
+        <td>o2::aod::pidtof::TOFNSigmaKa</td>
+        <td></td>
+        <td>tofNSigmaKa</td>
+        <td>float</td>
+        <td>Nsigma separation with the TOF detector for kaon</td>
+      </tr>
+      <tr>
+        <td>o2::aod::pidtof::TOFNSigmaPr</td>
+        <td></td>
+        <td>tofNSigmaPr</td>
+        <td>float</td>
+        <td>Nsigma separation with the TOF detector for proton</td>
+      </tr>
+      <tr>
+        <td>o2::aod::pidtof::TOFNSigmaEl</td>
+        <td></td>
+        <td>tofNSigmaEl</td>
+        <td>float</td>
+        <td>Nsigma separation with the TOF detector for electron</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::TPCSignal</td>
+        <td></td>
+        <td>tpcSignal</td>
+        <td>float</td>
+        <td>dE/dx signal in the TPC</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::PassedITSRefit</td>
+        <td></td>
+        <td>passedITSRefit</td>
+        <td>bool</td>
+        <td>Passed the track cut: kITSRefit</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::PassedTPCRefit</td>
+        <td></td>
+        <td>passedTPCRefit</td>
+        <td>bool</td>
+        <td>Passed the track cut: kTPCRefit</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::IsGlobalTrackWoDCA</td>
+        <td></td>
+        <td>isGlobalTrackWoDCA</td>
+        <td>bool</td>
+        <td>Is global track without DCA</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::IsGlobalTrack</td>
+        <td></td>
+        <td>isGlobalTrack</td>
+        <td>bool</td>
+        <td>Is global track</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::IsPrimaryTrack</td>
+        <td></td>
+        <td>isPrimaryTrack</td>
+        <td>bool</td>
+        <td>Is primary track</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::IsPVContributor</td>
+        <td></td>
+        <td>isPVContributor</td>
+        <td>bool</td>
+        <td>Is primary vertex contributor</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::TPCCrossedRowsOverFindableCls</td>
+        <td></td>
+        <td>tpcCrossedRowsOverFindableCls</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::ITSChi2NCl</td>
+        <td></td>
+        <td>itsChi2NCl</td>
+        <td>float</td>
+        <td>Chi2 / cluster for the ITS track segment</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::TPCChi2NCl</td>
+        <td></td>
+        <td>tpcChi2NCl</td>
+        <td>float</td>
+        <td>Chi2 / cluster for the TPC track segment</td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::ResoV0s</button>
+  <div class="panel">
+    <div>
+
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGLF/DataModel/LFResonanceTables.h" target="_blank">PWGLF/DataModel/LFResonanceTables.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::ResoV0 = o2::aod::ResoV0s::iterator</li>
+      </ul>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::soa::Index</td>
+        <td>GI</td>
+        <td>globalIndex</td>
+        <td>int64_t</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::ResoCollisionId</td>
+        <td>I</td>
+        <td>resoCollisionId</td>
+        <td>int32</td>
+        <td>Pointer into ResoCollisions</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::V0Id</td>
+        <td>I</td>
+        <td>v0Id</td>
+        <td>int</td>
+        <td>Pointer into V0s</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::Pt</td>
+        <td></td>
+        <td>pt</td>
+        <td>float</td>
+        <td>p_T (GeV/c)</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::Px</td>
+        <td></td>
+        <td>px</td>
+        <td>float</td>
+        <td>p_x (GeV/c)</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::Py</td>
+        <td></td>
+        <td>py</td>
+        <td>float</td>
+        <td>p_y (GeV/c)</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::Pz</td>
+        <td></td>
+        <td>pz</td>
+        <td>float</td>
+        <td>p_z (GeV/c)</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::Eta</td>
+        <td></td>
+        <td>eta</td>
+        <td>float</td>
+        <td>Eta</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::Phi</td>
+        <td></td>
+        <td>phi</td>
+        <td>float</td>
+        <td>Phi</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::Indices</td>
+        <td></td>
+        <td>indices</td>
+        <td>int[2]</td>
+        <td>Field for the track indices to remove auto-correlations</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::DaughterTPCNSigmaPosPi</td>
+        <td></td>
+        <td>daughterTPCNSigmaPosPi</td>
+        <td>float</td>
+        <td>TPC PID of the positive daughter as Pion</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::DaughterTPCNSigmaPosKa</td>
+        <td></td>
+        <td>daughterTPCNSigmaPosKa</td>
+        <td>float</td>
+        <td>TPC PID of the positive daughter as Kaon</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::DaughterTPCNSigmaPosPr</td>
+        <td></td>
+        <td>daughterTPCNSigmaPosPr</td>
+        <td>float</td>
+        <td>TPC PID of the positive daughter as Proton</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::DaughterTPCNSigmaNegPi</td>
+        <td></td>
+        <td>daughterTPCNSigmaNegPi</td>
+        <td>float</td>
+        <td>TPC PID of the negative daughter as Pion</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::DaughterTPCNSigmaNegKa</td>
+        <td></td>
+        <td>daughterTPCNSigmaNegKa</td>
+        <td>float</td>
+        <td>TPC PID of the negative daughter as Kaon</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::DaughterTPCNSigmaNegPr</td>
+        <td></td>
+        <td>daughterTPCNSigmaNegPr</td>
+        <td>float</td>
+        <td>TPC PID of the negative daughter as Proton</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::DaughterTOFNSigmaPosPi</td>
+        <td></td>
+        <td>daughterTOFNSigmaPosPi</td>
+        <td>float</td>
+        <td>TOF PID of the positive daughter as Pion</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::DaughterTOFNSigmaPosKa</td>
+        <td></td>
+        <td>daughterTOFNSigmaPosKa</td>
+        <td>float</td>
+        <td>TOF PID of the positive daughter as Kaon</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::DaughterTOFNSigmaPosPr</td>
+        <td></td>
+        <td>daughterTOFNSigmaPosPr</td>
+        <td>float</td>
+        <td>TOF PID of the positive daughter as Proton</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::DaughterTOFNSigmaNegPi</td>
+        <td></td>
+        <td>daughterTOFNSigmaNegPi</td>
+        <td>float</td>
+        <td>TOF PID of the negative daughter as Pion</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::DaughterTOFNSigmaNegKa</td>
+        <td></td>
+        <td>daughterTOFNSigmaNegKa</td>
+        <td>float</td>
+        <td>TOF PID of the negative daughter as Kaon</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::DaughterTOFNSigmaNegPr</td>
+        <td></td>
+        <td>daughterTOFNSigmaNegPr</td>
+        <td>float</td>
+        <td>TOF PID of the negative daughter as Proton</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::V0CosPA</td>
+        <td></td>
+        <td>v0CosPA</td>
+        <td>float</td>
+        <td>V0 Cosine of Pointing Angle</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::DaughDCA</td>
+        <td></td>
+        <td>daughDCA</td>
+        <td>float</td>
+        <td>DCA between daughters</td>
+      </tr>
+      <tr>
+        <td>o2::aod::v0data::DCAPosToPV</td>
+        <td></td>
+        <td>dcapostopv</td>
+        <td>float</td>
+        <td>DCA positive prong to PV</td>
+      </tr>
+      <tr>
+        <td>o2::aod::v0data::DCANegToPV</td>
+        <td></td>
+        <td>dcanegtopv</td>
+        <td>float</td>
+        <td>DCA negative prong to PV</td>
+      </tr>
+      <tr>
+        <td>o2::aod::v0data::DCAV0ToPV</td>
+        <td></td>
+        <td>dcav0topv</td>
+        <td>float</td>
+        <td>DCA V0 to PV</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::MLambda</td>
+        <td></td>
+        <td>mLambda</td>
+        <td>float</td>
+        <td>The invariant mass of V0 candidate, assuming lambda</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::MAntiLambda</td>
+        <td></td>
+        <td>mAntiLambda</td>
+        <td>float</td>
+        <td>The invariant mass of V0 candidate, assuming antilambda</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::MK0Short</td>
+        <td></td>
+        <td>mK0Short</td>
+        <td>float</td>
+        <td>The invariant mass of V0 candidate, assuming k0s</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::TransRadius</td>
+        <td></td>
+        <td>transRadius</td>
+        <td>float</td>
+        <td>Transverse radius of the decay vertex</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::DecayVtxX</td>
+        <td></td>
+        <td>decayVtxX</td>
+        <td>float</td>
+        <td>X position of the decay vertex</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::DecayVtxY</td>
+        <td></td>
+        <td>decayVtxY</td>
+        <td>float</td>
+        <td>Y position of the decay vertex</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::DecayVtxZ</td>
+        <td></td>
+        <td>decayVtxZ</td>
+        <td>float</td>
+        <td>Z position of the decay vertex</td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::ResoCascades</button>
+  <div class="panel">
+    <div>
+
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGLF/DataModel/LFResonanceTables.h" target="_blank">PWGLF/DataModel/LFResonanceTables.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::ResoCascade = o2::aod::ResoCascades::iterator</li>
+      </ul>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::soa::Index</td>
+        <td>GI</td>
+        <td>globalIndex</td>
+        <td>int64_t</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::ResoCollisionId</td>
+        <td>I</td>
+        <td>resoCollisionId</td>
+        <td>int32</td>
+        <td>Pointer into ResoCollisions</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::CascadeId</td>
+        <td>I</td>
+        <td>cascadeId</td>
+        <td>int</td>
+        <td>Pointer into Cascades</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::Pt</td>
+        <td></td>
+        <td>pt</td>
+        <td>float</td>
+        <td>p_T (GeV/c)</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::Px</td>
+        <td></td>
+        <td>px</td>
+        <td>float</td>
+        <td>p_x (GeV/c)</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::Py</td>
+        <td></td>
+        <td>py</td>
+        <td>float</td>
+        <td>p_y (GeV/c)</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::Pz</td>
+        <td></td>
+        <td>pz</td>
+        <td>float</td>
+        <td>p_z (GeV/c)</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::Eta</td>
+        <td></td>
+        <td>eta</td>
+        <td>float</td>
+        <td>Eta</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::Phi</td>
+        <td></td>
+        <td>phi</td>
+        <td>float</td>
+        <td>Phi</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::CascadeIndices</td>
+        <td></td>
+        <td>cascadeIndices</td>
+        <td>int[3]</td>
+        <td>Field for the track indices to remove auto-correlations (ordered: positive, negative, bachelor)</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::DaughterTPCNSigmaPosPi</td>
+        <td></td>
+        <td>daughterTPCNSigmaPosPi</td>
+        <td>float</td>
+        <td>TPC PID of the positive daughter as Pion</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::DaughterTPCNSigmaPosKa</td>
+        <td></td>
+        <td>daughterTPCNSigmaPosKa</td>
+        <td>float</td>
+        <td>TPC PID of the positive daughter as Kaon</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::DaughterTPCNSigmaPosPr</td>
+        <td></td>
+        <td>daughterTPCNSigmaPosPr</td>
+        <td>float</td>
+        <td>TPC PID of the positive daughter as Proton</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::DaughterTPCNSigmaNegPi</td>
+        <td></td>
+        <td>daughterTPCNSigmaNegPi</td>
+        <td>float</td>
+        <td>TPC PID of the negative daughter as Pion</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::DaughterTPCNSigmaNegKa</td>
+        <td></td>
+        <td>daughterTPCNSigmaNegKa</td>
+        <td>float</td>
+        <td>TPC PID of the negative daughter as Kaon</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::DaughterTPCNSigmaNegPr</td>
+        <td></td>
+        <td>daughterTPCNSigmaNegPr</td>
+        <td>float</td>
+        <td>TPC PID of the negative daughter as Proton</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::DaughterTPCNSigmaBachPi</td>
+        <td></td>
+        <td>daughterTPCNSigmaBachPi</td>
+        <td>float</td>
+        <td>TPC PID of the bachelor daughter as Pion</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::DaughterTPCNSigmaBachKa</td>
+        <td></td>
+        <td>daughterTPCNSigmaBachKa</td>
+        <td>float</td>
+        <td>TPC PID of the bachelor daughter as Kaon</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::DaughterTPCNSigmaBachPr</td>
+        <td></td>
+        <td>daughterTPCNSigmaBachPr</td>
+        <td>float</td>
+        <td>TPC PID of the bachelor daughter as Proton</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::DaughterTOFNSigmaPosPi</td>
+        <td></td>
+        <td>daughterTOFNSigmaPosPi</td>
+        <td>float</td>
+        <td>TOF PID of the positive daughter as Pion</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::DaughterTOFNSigmaPosKa</td>
+        <td></td>
+        <td>daughterTOFNSigmaPosKa</td>
+        <td>float</td>
+        <td>TOF PID of the positive daughter as Kaon</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::DaughterTOFNSigmaPosPr</td>
+        <td></td>
+        <td>daughterTOFNSigmaPosPr</td>
+        <td>float</td>
+        <td>TOF PID of the positive daughter as Proton</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::DaughterTOFNSigmaNegPi</td>
+        <td></td>
+        <td>daughterTOFNSigmaNegPi</td>
+        <td>float</td>
+        <td>TOF PID of the negative daughter as Pion</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::DaughterTOFNSigmaNegKa</td>
+        <td></td>
+        <td>daughterTOFNSigmaNegKa</td>
+        <td>float</td>
+        <td>TOF PID of the negative daughter as Kaon</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::DaughterTOFNSigmaNegPr</td>
+        <td></td>
+        <td>daughterTOFNSigmaNegPr</td>
+        <td>float</td>
+        <td>TOF PID of the negative daughter as Proton</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::DaughterTOFNSigmaBachPi</td>
+        <td></td>
+        <td>daughterTOFNSigmaBachPi</td>
+        <td>float</td>
+        <td>TOF PID of the bachelor daughter as Pion</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::DaughterTOFNSigmaBachKa</td>
+        <td></td>
+        <td>daughterTOFNSigmaBachKa</td>
+        <td>float</td>
+        <td>TOF PID of the bachelor daughter as Kaon</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::DaughterTOFNSigmaBachPr</td>
+        <td></td>
+        <td>daughterTOFNSigmaBachPr</td>
+        <td>float</td>
+        <td>TOF PID of the bachelor daughter as Proton</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::V0CosPA</td>
+        <td></td>
+        <td>v0CosPA</td>
+        <td>float</td>
+        <td>V0 Cosine of Pointing Angle</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::CascCosPA</td>
+        <td></td>
+        <td>cascCosPA</td>
+        <td>float</td>
+        <td>Cascade Cosine of Pointing Angle</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::DaughDCA</td>
+        <td></td>
+        <td>daughDCA</td>
+        <td>float</td>
+        <td>DCA between daughters</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::CascDaughDCA</td>
+        <td></td>
+        <td>cascDaughDCA</td>
+        <td>float</td>
+        <td>DCA between daughters from cascade</td>
+      </tr>
+      <tr>
+        <td>o2::aod::cascdata::DCAPosToPV</td>
+        <td></td>
+        <td>dcapostopv</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::cascdata::DCANegToPV</td>
+        <td></td>
+        <td>dcanegtopv</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::cascdata::DCABachToPV</td>
+        <td></td>
+        <td>dcabachtopv</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::v0data::DCAV0ToPV</td>
+        <td></td>
+        <td>dcav0topv</td>
+        <td>float</td>
+        <td>DCA V0 to PV</td>
+      </tr>
+      <tr>
+        <td>o2::aod::cascdata::DCAXYCascToPV</td>
+        <td></td>
+        <td>dcaXYCascToPV</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::cascdata::DCAZCascToPV</td>
+        <td></td>
+        <td>dcaZCascToPV</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::cascdata::Sign</td>
+        <td></td>
+        <td>sign</td>
+        <td>int</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::MXi</td>
+        <td></td>
+        <td>mXi</td>
+        <td>float</td>
+        <td>The invariant mass of Xi candidate</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::TransRadius</td>
+        <td></td>
+        <td>transRadius</td>
+        <td>float</td>
+        <td>Transverse radius of the decay vertex</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::CascTransRadius</td>
+        <td></td>
+        <td>cascTransRadius</td>
+        <td>float</td>
+        <td>Transverse radius of the decay vertex from cascade</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::DecayVtxX</td>
+        <td></td>
+        <td>decayVtxX</td>
+        <td>float</td>
+        <td>X position of the decay vertex</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::DecayVtxY</td>
+        <td></td>
+        <td>decayVtxY</td>
+        <td>float</td>
+        <td>Y position of the decay vertex</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::DecayVtxZ</td>
+        <td></td>
+        <td>decayVtxZ</td>
+        <td>float</td>
+        <td>Z position of the decay vertex</td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::ResoMCTracks</button>
+  <div class="panel">
+    <div>
+
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGLF/DataModel/LFResonanceTables.h" target="_blank">PWGLF/DataModel/LFResonanceTables.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::ResoMCTrack = o2::aod::ResoMCTracks::iterator</li>
+      </ul>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::PdgCode</td>
+        <td></td>
+        <td>pdgCode</td>
+        <td>int</td>
+        <td>PDG code</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::MotherId</td>
+        <td></td>
+        <td>motherId</td>
+        <td>int</td>
+        <td>Id of the mother particle</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::MotherPDG</td>
+        <td></td>
+        <td>motherPDG</td>
+        <td>int</td>
+        <td>PDG code of the mother particle</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::SiblingIds</td>
+        <td></td>
+        <td>siblingIds</td>
+        <td>int[2]</td>
+        <td>Index of the particles with the same mother</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::IsPhysicalPrimary</td>
+        <td></td>
+        <td>isPhysicalPrimary</td>
+        <td>bool</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::ProducedByGenerator</td>
+        <td></td>
+        <td>producedByGenerator</td>
+        <td>bool</td>
+        <td></td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::ResoMCV0s</button>
+  <div class="panel">
+    <div>
+
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGLF/DataModel/LFResonanceTables.h" target="_blank">PWGLF/DataModel/LFResonanceTables.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::ResoMCV0 = o2::aod::ResoMCV0s::iterator</li>
+      </ul>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::PdgCode</td>
+        <td></td>
+        <td>pdgCode</td>
+        <td>int</td>
+        <td>PDG code</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::MotherId</td>
+        <td></td>
+        <td>motherId</td>
+        <td>int</td>
+        <td>Id of the mother particle</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::MotherPDG</td>
+        <td></td>
+        <td>motherPDG</td>
+        <td>int</td>
+        <td>PDG code of the mother particle</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::DaughterID1</td>
+        <td></td>
+        <td>daughterID1</td>
+        <td>int</td>
+        <td>Id of the first Daughter particle</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::DaughterID2</td>
+        <td></td>
+        <td>daughterID2</td>
+        <td>int</td>
+        <td>Id of the second Daughter particle</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::DaughterPDG1</td>
+        <td></td>
+        <td>daughterPDG1</td>
+        <td>int</td>
+        <td>PDG code of the first Daughter particle</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::DaughterPDG2</td>
+        <td></td>
+        <td>daughterPDG2</td>
+        <td>int</td>
+        <td>PDG code of the second Daughter particle</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::IsPhysicalPrimary</td>
+        <td></td>
+        <td>isPhysicalPrimary</td>
+        <td>bool</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::ProducedByGenerator</td>
+        <td></td>
+        <td>producedByGenerator</td>
+        <td>bool</td>
+        <td></td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::ResoMCCascades</button>
+  <div class="panel">
+    <div>
+
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGLF/DataModel/LFResonanceTables.h" target="_blank">PWGLF/DataModel/LFResonanceTables.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::ResoMCCascade = o2::aod::ResoMCCascades::iterator</li>
+      </ul>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::mcparticle::PdgCode</td>
+        <td></td>
+        <td>pdgCode</td>
+        <td>int</td>
+        <td>PDG code</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::MotherId</td>
+        <td></td>
+        <td>motherId</td>
+        <td>int</td>
+        <td>Id of the mother particle</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::MotherPDG</td>
+        <td></td>
+        <td>motherPDG</td>
+        <td>int</td>
+        <td>PDG code of the mother particle</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::BachTrkID</td>
+        <td></td>
+        <td>bachTrkID</td>
+        <td>int</td>
+        <td>Id of the bach track from cascade</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::V0ID</td>
+        <td></td>
+        <td>v0ID</td>
+        <td>int</td>
+        <td>Id of the V0 from cascade</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::DaughterPDG1</td>
+        <td></td>
+        <td>daughterPDG1</td>
+        <td>int</td>
+        <td>PDG code of the first Daughter particle</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::DaughterPDG2</td>
+        <td></td>
+        <td>daughterPDG2</td>
+        <td>int</td>
+        <td>PDG code of the second Daughter particle</td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::IsPhysicalPrimary</td>
+        <td></td>
+        <td>isPhysicalPrimary</td>
+        <td>bool</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::resodaughter::ProducedByGenerator</td>
+        <td></td>
+        <td>producedByGenerator</td>
+        <td>bool</td>
+        <td></td>
       </tr>
     </table>
   </div>
@@ -80021,6 +82930,20 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGLF
         <td></td>
       </tr>
       <tr>
+        <td>o2::aod::cascadesflow::IsNoCollInTimeRange</td>
+        <td></td>
+        <td>isNoCollInTimeRange</td>
+        <td>bool</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::cascadesflow::IsNoCollInRof</td>
+        <td></td>
+        <td>isNoCollInRof</td>
+        <td>bool</td>
+        <td></td>
+      </tr>
+      <tr>
         <td>o2::aod::cascadesflow::Sign</td>
         <td></td>
         <td>sign</td>
@@ -80446,6 +83369,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGLF
     </div>
     <div>Is used in:
       <ul>
+        <li>o2::aod::ResoCascadesCandidatesMC = soa::Join<o2::aod::ResoCascadesCandidates, o2::aod::McCascLabels></li>
         <li>o2::aod::McCascLabel = o2::aod::McCascLabels::iterator</li>
       </ul>
     </div>
@@ -81692,6 +84616,46 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGLF
       </tr>
       <tr>
         <td>o2::aod::assocPions::TrackId</td>
+        <td>I</td>
+        <td>trackId</td>
+        <td>int</td>
+        <td>Pointer into Tracks</td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::AssocHadrons</button>
+  <div class="panel">
+    <div>
+
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGLF/DataModel/LFHStrangeCorrelationTables.h" target="_blank">PWGLF/DataModel/LFHStrangeCorrelationTables.h</a>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::soa::Index</td>
+        <td>GI</td>
+        <td>globalIndex</td>
+        <td>int64_t</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::assocHadrons::CollisionId</td>
+        <td>I</td>
+        <td>collisionId</td>
+        <td>int32</td>
+        <td>Pointer into Collisions</td>
+      </tr>
+      <tr>
+        <td>o2::aod::assocHadrons::TrackId</td>
         <td>I</td>
         <td>trackId</td>
         <td>int</td>
@@ -83743,6 +86707,7 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGLF
     </div>
     <div>Is used in:
       <ul>
+        <li>o2::aod::ResoV0CandidatesMC = soa::Join<o2::aod::ResoV0Candidates, o2::aod::McV0Labels></li>
         <li>o2::aod::McV0Label = o2::aod::McV0Labels::iterator</li>
       </ul>
     </div>
@@ -84292,6 +87257,27 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGLF
         <td>float</td>
         <td></td>
       </tr>
+      <tr>
+        <td>o2::aod::sigma0Core::SigmaOPAngle</td>
+        <td></td>
+        <td>sigmaOPAngle</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::sigma0Core::SigmaDeltaEta</td>
+        <td></td>
+        <td>sigmaDeltaEta</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::sigma0Core::SigmaDeltaPhi</td>
+        <td></td>
+        <td>sigmaDeltaPhi</td>
+        <td>float</td>
+        <td></td>
+      </tr>
     </table>
   </div>
 
@@ -84425,6 +87411,13 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGLF
         <td>o2::aod::sigmaPhotonExtra::PhotonY</td>
         <td></td>
         <td>photonY</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::sigmaPhotonExtra::PhotonPhi</td>
+        <td></td>
+        <td>photonPhi</td>
         <td>float</td>
         <td></td>
       </tr>
@@ -84651,6 +87644,13 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGLF
         <td></td>
       </tr>
       <tr>
+        <td>o2::aod::sigmaLambdaExtra::LambdaPhi</td>
+        <td></td>
+        <td>lambdaPhi</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
         <td>o2::aod::sigmaLambdaExtra::LambdaPosPrTPCNSigma</td>
         <td></td>
         <td>lambdaPosPrTPCNSigma</td>
@@ -84675,6 +87675,34 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGLF
         <td>o2::aod::sigmaLambdaExtra::LambdaNegPiTPCNSigma</td>
         <td></td>
         <td>lambdaNegPiTPCNSigma</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::sigmaLambdaExtra::LambdaPrTOFNSigma</td>
+        <td></td>
+        <td>lambdaPrTOFNSigma</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::sigmaLambdaExtra::LambdaPiTOFNSigma</td>
+        <td></td>
+        <td>lambdaPiTOFNSigma</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::sigmaLambdaExtra::ALambdaPrTOFNSigma</td>
+        <td></td>
+        <td>aLambdaPrTOFNSigma</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::sigmaLambdaExtra::ALambdaPiTOFNSigma</td>
+        <td></td>
+        <td>aLambdaPiTOFNSigma</td>
         <td>float</td>
         <td></td>
       </tr>
@@ -84827,6 +87855,48 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGLF
         <td>o2::aod::sigmaMCCore::IsAntiSigma</td>
         <td></td>
         <td>isAntiSigma</td>
+        <td>bool</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::sigmaMCCore::PhotonCandPDGCode</td>
+        <td></td>
+        <td>photonCandPDGCode</td>
+        <td>int</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::sigmaMCCore::PhotonCandPDGCodeMother</td>
+        <td></td>
+        <td>photonCandPDGCodeMother</td>
+        <td>int</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::sigmaMCCore::IsPhotonCandPrimary</td>
+        <td></td>
+        <td>isPhotonCandPrimary</td>
+        <td>bool</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::sigmaMCCore::LambdaCandPDGCode</td>
+        <td></td>
+        <td>lambdaCandPDGCode</td>
+        <td>int</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::sigmaMCCore::LambdaCandPDGCodeMother</td>
+        <td></td>
+        <td>lambdaCandPDGCodeMother</td>
+        <td>int</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::sigmaMCCore::IsLambdaCandPrimary</td>
+        <td></td>
+        <td>isLambdaCandPrimary</td>
         <td>bool</td>
         <td></td>
       </tr>
@@ -85377,10 +88447,10 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGLF
     </table>
   </div>
 
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::StraStamps</button>
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::StraZDCSP</button>
   <div class="panel">
     <div>
-       information for ID-ing mag field if needed
+       events used to compute the ZDC spectator plane
     </div>
     <div>
       Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGLF/DataModel/LFStrangenessTables.h" target="_blank">PWGLF/DataModel/LFStrangenessTables.h</a>
@@ -85394,77 +88464,25 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGLF
         <th>Comment</th>
       </tr>
       <tr>
-        <td>o2::aod::bc::RunNumber</td>
+        <td>o2::aod::spcalibrationtable::TriggerEventSP</td>
         <td></td>
-        <td>runNumber</td>
-        <td>int</td>
-        <td>Run number</td>
-      </tr>
-      <tr>
-        <td>o2::aod::timestamp::Timestamp</td>
-        <td></td>
-        <td>timestamp</td>
-        <td>uint64_t</td>
-        <td>Timestamp of a BC in ms (epoch style)</td>
-      </tr>
-    </table>
-  </div>
-
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::StraMCCollisions</button>
-  <div class="panel">
-    <div>
-       MC collision properties
-    </div>
-    <div>
-      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGLF/DataModel/LFStrangenessTables.h" target="_blank">PWGLF/DataModel/LFStrangenessTables.h</a>
-    </div>
-    <div>Is used in:
-      <ul>
-        <li>o2::aod::StraMCCollision = o2::aod::StraMCCollisions::iterator</li>
-      </ul>
-    </div>
-    <table class=DataModel>
-      <tr>
-        <th>Name</th>
-        <th></th>
-        <th>Getter</th>
-        <th>Type</th>
-        <th>Comment</th>
-      </tr>
-      <tr>
-        <td>o2::soa::Index</td>
-        <td>GI</td>
-        <td>globalIndex</td>
-        <td>int64_t</td>
+        <td>triggereventsp</td>
+        <td>bool</td>
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::mccollision::PosX</td>
+        <td>o2::aod::spcalibrationtable::PsiZDCA</td>
         <td></td>
-        <td>posX</td>
+        <td>psiZDCA</td>
         <td>float</td>
-        <td>X vertex position in cm</td>
+        <td></td>
       </tr>
       <tr>
-        <td>o2::aod::mccollision::PosY</td>
+        <td>o2::aod::spcalibrationtable::PsiZDCC</td>
         <td></td>
-        <td>posY</td>
+        <td>psiZDCC</td>
         <td>float</td>
-        <td>Y vertex position in cm</td>
-      </tr>
-      <tr>
-        <td>o2::aod::mccollision::PosZ</td>
         <td></td>
-        <td>posZ</td>
-        <td>float</td>
-        <td>Z vertex position in cm</td>
-      </tr>
-      <tr>
-        <td>o2::aod::mccollision::ImpactParameter</td>
-        <td></td>
-        <td>impactParameter</td>
-        <td>float</td>
-        <td>Impact parameter for A-A</td>
       </tr>
     </table>
   </div>
@@ -90497,6 +93515,81 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGUD
     </table>
   </div>
 
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::UDTracksPIDExtra</button>
+  <div class="panel">
+    <div>
+
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGUD/DataModel/UDTables.h" target="_blank">PWGUD/DataModel/UDTables.h</a>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::pidtpc::TPCNSigmaDe</td>
+        <td></td>
+        <td>tpcNSigmaDe</td>
+        <td>float</td>
+        <td>Nsigma separation with the TPC detector for deuteron</td>
+      </tr>
+      <tr>
+        <td>o2::aod::pidtpc::TPCNSigmaTr</td>
+        <td></td>
+        <td>tpcNSigmaTr</td>
+        <td>float</td>
+        <td>Nsigma separation with the TPC detector for triton</td>
+      </tr>
+      <tr>
+        <td>o2::aod::pidtpc::TPCNSigmaHe</td>
+        <td></td>
+        <td>tpcNSigmaHe</td>
+        <td>float</td>
+        <td>Nsigma separation with the TPC detector for helium3</td>
+      </tr>
+      <tr>
+        <td>o2::aod::pidtpc::TPCNSigmaAl</td>
+        <td></td>
+        <td>tpcNSigmaAl</td>
+        <td>float</td>
+        <td>Nsigma separation with the TPC detector for alpha</td>
+      </tr>
+      <tr>
+        <td>o2::aod::pidtof::TOFNSigmaDe</td>
+        <td></td>
+        <td>tofNSigmaDe</td>
+        <td>float</td>
+        <td>Nsigma separation with the TOF detector for deuteron</td>
+      </tr>
+      <tr>
+        <td>o2::aod::pidtof::TOFNSigmaTr</td>
+        <td></td>
+        <td>tofNSigmaTr</td>
+        <td>float</td>
+        <td>Nsigma separation with the TOF detector for triton</td>
+      </tr>
+      <tr>
+        <td>o2::aod::pidtof::TOFNSigmaHe</td>
+        <td></td>
+        <td>tofNSigmaHe</td>
+        <td>float</td>
+        <td>Nsigma separation with the TOF detector for helium3</td>
+      </tr>
+      <tr>
+        <td>o2::aod::pidtof::TOFNSigmaAl</td>
+        <td></td>
+        <td>tofNSigmaAl</td>
+        <td>float</td>
+        <td>Nsigma separation with the TOF detector for alpha</td>
+      </tr>
+    </table>
+  </div>
+
   <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::UDTracksExtra</button>
   <div class="panel">
     <div>
@@ -91694,6 +94787,65 @@ Code file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGUD
         <td>bgFDDC</td>
         <td>bool</td>
         <td></td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::UDCollisionSelExtras</button>
+  <div class="panel">
+    <div>
+
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/O2Physics/tree/master//PWGUD/DataModel/UDTables.h" target="_blank">PWGUD/DataModel/UDTables.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::UDCollisionSelExtra = o2::aod::UDCollisionSelExtras::iterator</li>
+      </ul>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::udcollision::ChFT0A</td>
+        <td></td>
+        <td>chFT0A</td>
+        <td>uint8_t</td>
+        <td>number of FT0A active channels</td>
+      </tr>
+      <tr>
+        <td>o2::aod::udcollision::ChFT0C</td>
+        <td></td>
+        <td>chFT0C</td>
+        <td>uint8_t</td>
+        <td>number of FT0C active channels</td>
+      </tr>
+      <tr>
+        <td>o2::aod::udcollision::ChFDDA</td>
+        <td></td>
+        <td>chFDDA</td>
+        <td>uint8_t</td>
+        <td>number of FDDA active channels</td>
+      </tr>
+      <tr>
+        <td>o2::aod::udcollision::ChFDDC</td>
+        <td></td>
+        <td>chFDDC</td>
+        <td>uint8_t</td>
+        <td>number of FDDC active channels</td>
+      </tr>
+      <tr>
+        <td>o2::aod::udcollision::ChFV0A</td>
+        <td></td>
+        <td>chFV0A</td>
+        <td>uint8_t</td>
+        <td>number of FV0A active channels</td>
       </tr>
     </table>
   </div>
