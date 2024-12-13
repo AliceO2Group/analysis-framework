@@ -84,7 +84,7 @@ You can list all your available packages with `alienv q`.
 ```note
 This requires that you have successfully built Git branch `[branch]` (e.g. `master`) of O2Physics with aliBuild (see Section [Build and rebuild](#build-and-rebuild)).
 
-You also need to have [`direnv`](https://direnv.net/docs/installation.html) installed to load the correct build environment automatically when you enter the build directory (and to unload it when you exit).
+You also need to have `direnv` installed and hooked (see [instructions](https://direnv.net/docs/installation.html)) to load the correct build environment automatically when you enter the build directory (and to unload it when you exit).
 ```
 
 ```warning
@@ -102,6 +102,9 @@ Allow `direnv` to load the build environment. (Needed only once in a given direc
 ```bash
 direnv allow
 ```
+
+You should see a message starting with `direnv: loading`.
+If you don't, verify that you have `direnv` installed and hooked properly.
 
 You can now rebuild and install entire O2Physics with
 
