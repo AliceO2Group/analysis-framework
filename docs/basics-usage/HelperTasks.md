@@ -661,7 +661,7 @@ At the moment there are two 'FilterBits' available in the TrackSelection table, 
  | require TPC refit                                    | true                                                                   | true                                         |
  | require ITS refit                                    | true                                                                   | true                                         |
  | max DCA to vertex z                                  | 2.0                                                                    | 2.0                                          |
- | max DCA to vertex xy                                 | 0.0105 * 0.035 / p<sub>T</sub><sup>1.1</sup>                           | 0.0105 * 0.035 / p<sub>T</sub><sup>1.1</sup> |
+ | max DCA to vertex xy                                 | 0.0105 + 0.035 / p<sub>T</sub><sup>1.1</sup>                           | 0.0105 + 0.035 / p<sub>T</sub><sup>1.1</sup> |
  | cluster requirement ITS                              | Run 2 (Run 3): at least one hit in SPD (in 3 innermost ITS layers) [*] | no hit in SPD and hit in first SDD layer     |
  | p<sub>T</sub> range                                  | 0.1 - 1e10                                                             | 0.1 - 1e10                                   |
  | &eta; range                                          | -0.8 - 0.8                                                             | -0.8 - 0.8                                   |
