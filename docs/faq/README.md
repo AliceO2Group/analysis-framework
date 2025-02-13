@@ -25,8 +25,12 @@ necessarily need to be duplicated. For an example, please check
 
 ### I haven't changed anything but sometimes my wagon test gives a memory warning and sometimes not, and also the estimated resources change somewhat.
 
-We base the measurement of used memory and CPU on a 3 minute O2 execution with your task. Depending on how the different processes of O2 interact the memory consumption can slightly vary. If your task is just at the limit, this can result sometimes in a warning and sometimes not. Similarly, the estimated CPU is calculated from the short test and then scaled to the entire dataset. Already slight changes in execution time can have a big impact and therefore the numbers are not the same on each test. The best is to not operate close to the memory / CPU limit and so you do not get any warnings. You can inspect the history of all your tests in the wagon modal by clicking on the tab 'test statistics'.
+We base the measurement of used memory and CPU on a 5 minute O2 execution with your task. Depending on how the different processes of O2 interact the memory consumption can slightly vary. If your task is just at the limit, this can result sometimes in a warning and sometimes not. Similarly, the estimated CPU is calculated from the short test and then scaled to the entire dataset. Already slight changes in execution time can have a big impact and therefore the numbers are not the same on each test. The best is to not operate close to the memory / CPU limit and so you do not get any warnings. You can inspect the history of all your tests in the wagon modal by clicking on the tab 'test statistics'.
 
 ### Why do different wagon tests on the same data process a different number of input files?
 
-The wagon test runs for about 3 minutes and is then stopped. Therefore, if you have a fast wagon, you will process more input files than if you have a slow wagon.
+The wagon test runs for about 5 minutes and is then stopped. Therefore, if you have a fast wagon, you will process more input files than if you have a slow wagon.
+
+### What is the job error ERROR_EW?
+
+Hyperloop trains have a so-called express train feature. This feature is based on the fact that the last few percent of jobs usually take the longest time (not in execution time but to be scheduled on a site) and therefore trains can take the double total time just to process the last few percent. Therefore, up to 2% of the jobs are removed from the queue, in order for your train to finish. Those are marked with ERROR_EW in the job overview. In case you want the maximal statistics and you don't mind that your train will be slow, you can ask for a "slow train" submission to the operators.
