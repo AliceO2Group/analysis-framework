@@ -139,6 +139,7 @@ For better overview the tables are grouped into the following categories: \| [Ge
     <div>Is used in:
       <ul>
         <li>o2::aod::BCsWithTimestamps = soa::Join<o2::aod::BCs, o2::aod::Timestamps></li>
+        <li>o2::aod::BCsWithRun2Info = soa::Join<o2::aod::BCs, o2::aod::Run2BCInfos, o2::aod::Timestamps></li>
         <li>o2::aod::pid_tpc_tof_utils::BCsInfo = soa::Join<o2::aod::BCs, o2::aod::Timestamps, o2::aod::BcSels></li>
       </ul>
     </div>
@@ -598,6 +599,13 @@ For better overview the tables are grouped into the following categories: \| [Ge
         <td>Charge: positive: 1, negative: -1</td>
       </tr>
       <tr>
+        <td>o2::aod::0</td>
+        <td>GI</td>
+        <td></td>
+        <td>?</td>
+        <td></td>
+      </tr>
+      <tr>
         <td>o2::aod::track::Pt</td>
         <td>E</td>
         <td>pt</td>
@@ -782,6 +790,13 @@ For better overview the tables are grouped into the following categories: \| [Ge
         <td>Charge: positive: 1, negative: -1</td>
       </tr>
       <tr>
+        <td>o2::aod::0</td>
+        <td>GI</td>
+        <td></td>
+        <td>?</td>
+        <td></td>
+      </tr>
+      <tr>
         <td>o2::aod::track::Pt</td>
         <td>E</td>
         <td>pt</td>
@@ -947,6 +962,13 @@ For better overview the tables are grouped into the following categories: \| [Ge
         <td>rho1PtTgl</td>
         <td>int8_t</td>
         <td>Covariance matrix in compressed form</td>
+      </tr>
+      <tr>
+        <td>o2::aod::0</td>
+        <td>GI</td>
+        <td></td>
+        <td>?</td>
+        <td></td>
       </tr>
       <tr>
         <td>o2::aod::track::CYY</td>
@@ -1187,6 +1209,13 @@ For better overview the tables are grouped into the following categories: \| [Ge
         <td>rho1PtTgl</td>
         <td>int8_t</td>
         <td>Covariance matrix in compressed form</td>
+      </tr>
+      <tr>
+        <td>o2::aod::0</td>
+        <td>GI</td>
+        <td></td>
+        <td>?</td>
+        <td></td>
       </tr>
       <tr>
         <td>o2::aod::track::CYY</td>
@@ -1613,6 +1642,13 @@ For better overview the tables are grouped into the following categories: \| [Ge
         <td>Resolution of the track time in ns (see TrackFlags::TrackTimeResIsRange)</td>
       </tr>
       <tr>
+        <td>o2::aod::0</td>
+        <td>GI</td>
+        <td></td>
+        <td>?</td>
+        <td></td>
+      </tr>
+      <tr>
         <td>o2::aod::track::DetectorMap</td>
         <td>E</td>
         <td>detectorMap</td>
@@ -1634,11 +1670,6 @@ For better overview the tables are grouped into the following categories: \| [Ge
     <div>Extends:
       <ul>
          o2::aod::StoredTracksExtra_001
-      </ul>
-    </div>
-    <div>Is used in:
-      <ul>
-        <li>o2::aod::TracksExtra = o2::aod::TracksExtra_001</li>
       </ul>
     </div>
     <table class=DataModel>
@@ -1977,6 +2008,393 @@ For better overview the tables are grouped into the following categories: \| [Ge
         <td>trackTimeRes</td>
         <td>float</td>
         <td>Resolution of the track time in ns (see TrackFlags::TrackTimeResIsRange)</td>
+      </tr>
+      <tr>
+        <td>o2::aod::1</td>
+        <td>GI</td>
+        <td></td>
+        <td>?</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::v001::DetectorMap</td>
+        <td>E</td>
+        <td>detectorMap</td>
+        <td>uint8_t</td>
+        <td>Detector map version 1, see enum DetectorMapEnum</td>
+      </tr>
+    </table>
+  </div>
+
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::TracksExtra_002 (E)</button>
+  <div class="panel">
+    <div>
+       Additional track information (clusters, PID, etc.)
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev//Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
+    </div>
+    <div>Extends:
+      <ul>
+         o2::aod::StoredTracksExtra_002
+      </ul>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::TracksExtra = o2::aod::TracksExtra_002</li>
+      </ul>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::track::TPCInnerParam</td>
+        <td></td>
+        <td>tpcInnerParam</td>
+        <td>float</td>
+        <td>Momentum at inner wall of the TPC</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::Flags</td>
+        <td></td>
+        <td>flags</td>
+        <td>uint32_t</td>
+        <td>Track flags. Run 2: see TrackFlagsRun2Enum | Run 3: see TrackFlags</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::ITSClusterSizes</td>
+        <td></td>
+        <td>itsClusterSizes</td>
+        <td>uint32_t</td>
+        <td>Clusters sizes, four bits per a layer, starting from the innermost</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::TPCNClsFindable</td>
+        <td></td>
+        <td>tpcNClsFindable</td>
+        <td>uint8_t</td>
+        <td>Findable TPC clusters for this track geometry</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::TPCNClsFindableMinusFound</td>
+        <td></td>
+        <td>tpcNClsFindableMinusFound</td>
+        <td>int8_t</td>
+        <td>TPC Clusters: Findable - Found</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::TPCNClsFindableMinusPID</td>
+        <td></td>
+        <td>tpcNClsFindableMinusPID</td>
+        <td>int8_t</td>
+        <td>TPC Clusters: Findable - Found clusters used for PID</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::TPCNClsFindableMinusCrossedRows</td>
+        <td></td>
+        <td>tpcNClsFindableMinusCrossedRows</td>
+        <td>int8_t</td>
+        <td>TPC Clusters: Findable - crossed rows</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::TPCNClsShared</td>
+        <td></td>
+        <td>tpcNClsShared</td>
+        <td>uint8_t</td>
+        <td>Number of shared TPC clusters</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::v001::extensions::TPCDeltaTFwd</td>
+        <td>D</td>
+        <td>tpcDeltaTFwd</td>
+        <td>float</td>
+        <td>Delta Forward of track time in TPC time bis</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::v001::extensions::TPCDeltaTBwd</td>
+        <td>D</td>
+        <td>tpcDeltaTBwd</td>
+        <td>float</td>
+        <td>Delta Backward of track time in TPC time bis</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::TRDPattern</td>
+        <td></td>
+        <td>trdPattern</td>
+        <td>uint8_t</td>
+        <td>Contributor to the track on TRD layer in bits 0-5, starting from the innermost, bit 6 indicates a potentially split tracklet, bit 7 if the track crossed a padrow</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::ITSChi2NCl</td>
+        <td></td>
+        <td>itsChi2NCl</td>
+        <td>float</td>
+        <td>Chi2 / cluster for the ITS track segment</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::TPCChi2NCl</td>
+        <td></td>
+        <td>tpcChi2NCl</td>
+        <td>float</td>
+        <td>Chi2 / cluster for the TPC track segment</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::TRDChi2</td>
+        <td></td>
+        <td>trdChi2</td>
+        <td>float</td>
+        <td>Chi2 for the TRD track segment</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::TOFChi2</td>
+        <td></td>
+        <td>tofChi2</td>
+        <td>float</td>
+        <td>Chi2 for the TOF track segment</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::TPCSignal</td>
+        <td></td>
+        <td>tpcSignal</td>
+        <td>float</td>
+        <td>dE/dx signal in the TPC</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::TRDSignal</td>
+        <td></td>
+        <td>trdSignal</td>
+        <td>float</td>
+        <td>PID signal in the TRD</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::Length</td>
+        <td></td>
+        <td>length</td>
+        <td>float</td>
+        <td>Track length</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::TOFExpMom</td>
+        <td></td>
+        <td>tofExpMom</td>
+        <td>float</td>
+        <td>TOF expected momentum obtained in tracking, used to compute the expected times</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::PIDForTracking</td>
+        <td>D</td>
+        <td>pidForTracking</td>
+        <td>uint32_t</td>
+        <td>PID hypothesis used during tracking. See the constants in the class PID in PID.h</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::IsPVContributor</td>
+        <td>D</td>
+        <td>isPVContributor</td>
+        <td>bool</td>
+        <td>Run 3: Has this track contributed to the collision vertex fit</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::HasITS</td>
+        <td>D</td>
+        <td>hasITS</td>
+        <td>bool</td>
+        <td>Flag to check if track has a ITS match</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::HasTPC</td>
+        <td>D</td>
+        <td>hasTPC</td>
+        <td>bool</td>
+        <td>Flag to check if track has a TPC match</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::HasTRD</td>
+        <td>D</td>
+        <td>hasTRD</td>
+        <td>bool</td>
+        <td>Flag to check if track has a TRD match</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::HasTOF</td>
+        <td>D</td>
+        <td>hasTOF</td>
+        <td>bool</td>
+        <td>Flag to check if track has a TOF measurement</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::TPCNClsFound</td>
+        <td>D</td>
+        <td>tpcNClsFound</td>
+        <td>int16_t</td>
+        <td>Number of found TPC clusters</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::TPCNClsCrossedRows</td>
+        <td>D</td>
+        <td>tpcNClsCrossedRows</td>
+        <td>int16_t</td>
+        <td>Number of crossed TPC Rows</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::v001::ITSClusterMap</td>
+        <td>D</td>
+        <td>itsClusterMap</td>
+        <td>uint8_t</td>
+        <td>ITS cluster map, one bit per a layer, starting from the innermost</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::v001::ITSNCls</td>
+        <td>D</td>
+        <td>itsNCls</td>
+        <td>uint8_t</td>
+        <td>Number of ITS clusters</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::v001::ITSNClsInnerBarrel</td>
+        <td>D</td>
+        <td>itsNClsInnerBarrel</td>
+        <td>uint8_t</td>
+        <td>Number of ITS clusters in the Inner Barrel</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::v001::ITSClsSizeInLayer</td>
+        <td>D</td>
+        <td>itsClsSizeInLayer</td>
+        <td>uint8_t</td>
+        <td>Size of the ITS cluster in a given layer</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::v001::IsITSAfterburner</td>
+        <td>D</td>
+        <td>isITSAfterburner</td>
+        <td>bool</td>
+        <td>If the track used the afterburner in the ITS</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::TOFExpTimeEl</td>
+        <td>D</td>
+        <td>tofExpTimeEl</td>
+        <td>float</td>
+        <td>Expected time for the track to reach the TOF under the electron hypothesis</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::TOFExpTimeMu</td>
+        <td>D</td>
+        <td>tofExpTimeMu</td>
+        <td>float</td>
+        <td>Expected time for the track to reach the TOF under the muon hypothesis</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::TOFExpTimePi</td>
+        <td>D</td>
+        <td>tofExpTimePi</td>
+        <td>float</td>
+        <td>Expected time for the track to reach the TOF under the pion hypothesis</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::TOFExpTimeKa</td>
+        <td>D</td>
+        <td>tofExpTimeKa</td>
+        <td>float</td>
+        <td>Expected time for the track to reach the TOF under the kaon hypothesis</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::TOFExpTimePr</td>
+        <td>D</td>
+        <td>tofExpTimePr</td>
+        <td>float</td>
+        <td>Expected time for the track to reach the TOF under the proton hypothesis</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::TOFExpTimeDe</td>
+        <td>D</td>
+        <td>tofExpTimeDe</td>
+        <td>float</td>
+        <td>Expected time for the track to reach the TOF under the deuteron hypothesis</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::TOFExpTimeTr</td>
+        <td>D</td>
+        <td>tofExpTimeTr</td>
+        <td>float</td>
+        <td>Expected time for the track to reach the TOF under the triton hypothesis</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::TOFExpTimeHe</td>
+        <td>D</td>
+        <td>tofExpTimeHe</td>
+        <td>float</td>
+        <td>Expected time for the track to reach the TOF under the helium3 hypothesis</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::TOFExpTimeAl</td>
+        <td>D</td>
+        <td>tofExpTimeAl</td>
+        <td>float</td>
+        <td>Expected time for the track to reach the TOF under the helium4 hypothesis</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::TPCCrossedRowsOverFindableCls</td>
+        <td>D</td>
+        <td>tpcCrossedRowsOverFindableCls</td>
+        <td>float</td>
+        <td>Ratio crossed rows over findable clusters</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::TPCFoundOverFindableCls</td>
+        <td>D</td>
+        <td>tpcFoundOverFindableCls</td>
+        <td>float</td>
+        <td>Ratio of found over findable clusters</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::TPCFractionSharedCls</td>
+        <td>D</td>
+        <td>tpcFractionSharedCls</td>
+        <td>float</td>
+        <td>Fraction of shared TPC clusters</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::TrackEtaEMCAL</td>
+        <td></td>
+        <td>trackEtaEmcal</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::TrackPhiEMCAL</td>
+        <td></td>
+        <td>trackPhiEmcal</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::TrackTime</td>
+        <td></td>
+        <td>trackTime</td>
+        <td>float</td>
+        <td>Estimated time of the track in ns wrt collision().bc() or ambiguoustrack.bcSlice()[0]</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::TrackTimeRes</td>
+        <td></td>
+        <td>trackTimeRes</td>
+        <td>float</td>
+        <td>Resolution of the track time in ns (see TrackFlags::TrackTimeResIsRange)</td>
+      </tr>
+      <tr>
+        <td>o2::aod::2</td>
+        <td>GI</td>
+        <td></td>
+        <td>?</td>
+        <td></td>
       </tr>
       <tr>
         <td>o2::aod::track::v001::DetectorMap</td>
@@ -2853,9 +3271,358 @@ For better overview the tables are grouped into the following categories: \| [Ge
     <div>
       Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev//Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
     </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::track::TPCInnerParam</td>
+        <td></td>
+        <td>tpcInnerParam</td>
+        <td>float</td>
+        <td>Momentum at inner wall of the TPC</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::Flags</td>
+        <td></td>
+        <td>flags</td>
+        <td>uint32_t</td>
+        <td>Track flags. Run 2: see TrackFlagsRun2Enum | Run 3: see TrackFlags</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::ITSClusterSizes</td>
+        <td></td>
+        <td>itsClusterSizes</td>
+        <td>uint32_t</td>
+        <td>Clusters sizes, four bits per a layer, starting from the innermost</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::TPCNClsFindable</td>
+        <td></td>
+        <td>tpcNClsFindable</td>
+        <td>uint8_t</td>
+        <td>Findable TPC clusters for this track geometry</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::TPCNClsFindableMinusFound</td>
+        <td></td>
+        <td>tpcNClsFindableMinusFound</td>
+        <td>int8_t</td>
+        <td>TPC Clusters: Findable - Found</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::TPCNClsFindableMinusCrossedRows</td>
+        <td></td>
+        <td>tpcNClsFindableMinusCrossedRows</td>
+        <td>int8_t</td>
+        <td>TPC Clusters: Findable - crossed rows</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::TPCNClsShared</td>
+        <td></td>
+        <td>tpcNClsShared</td>
+        <td>uint8_t</td>
+        <td>Number of shared TPC clusters</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::v001::extensions::TPCDeltaTFwd</td>
+        <td>D</td>
+        <td>tpcDeltaTFwd</td>
+        <td>float</td>
+        <td>Delta Forward of track time in TPC time bis</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::v001::extensions::TPCDeltaTBwd</td>
+        <td>D</td>
+        <td>tpcDeltaTBwd</td>
+        <td>float</td>
+        <td>Delta Backward of track time in TPC time bis</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::TRDPattern</td>
+        <td></td>
+        <td>trdPattern</td>
+        <td>uint8_t</td>
+        <td>Contributor to the track on TRD layer in bits 0-5, starting from the innermost, bit 6 indicates a potentially split tracklet, bit 7 if the track crossed a padrow</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::ITSChi2NCl</td>
+        <td></td>
+        <td>itsChi2NCl</td>
+        <td>float</td>
+        <td>Chi2 / cluster for the ITS track segment</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::TPCChi2NCl</td>
+        <td></td>
+        <td>tpcChi2NCl</td>
+        <td>float</td>
+        <td>Chi2 / cluster for the TPC track segment</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::TRDChi2</td>
+        <td></td>
+        <td>trdChi2</td>
+        <td>float</td>
+        <td>Chi2 for the TRD track segment</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::TOFChi2</td>
+        <td></td>
+        <td>tofChi2</td>
+        <td>float</td>
+        <td>Chi2 for the TOF track segment</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::TPCSignal</td>
+        <td></td>
+        <td>tpcSignal</td>
+        <td>float</td>
+        <td>dE/dx signal in the TPC</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::TRDSignal</td>
+        <td></td>
+        <td>trdSignal</td>
+        <td>float</td>
+        <td>PID signal in the TRD</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::Length</td>
+        <td></td>
+        <td>length</td>
+        <td>float</td>
+        <td>Track length</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::TOFExpMom</td>
+        <td></td>
+        <td>tofExpMom</td>
+        <td>float</td>
+        <td>TOF expected momentum obtained in tracking, used to compute the expected times</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::PIDForTracking</td>
+        <td>D</td>
+        <td>pidForTracking</td>
+        <td>uint32_t</td>
+        <td>PID hypothesis used during tracking. See the constants in the class PID in PID.h</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::IsPVContributor</td>
+        <td>D</td>
+        <td>isPVContributor</td>
+        <td>bool</td>
+        <td>Run 3: Has this track contributed to the collision vertex fit</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::HasITS</td>
+        <td>D</td>
+        <td>hasITS</td>
+        <td>bool</td>
+        <td>Flag to check if track has a ITS match</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::HasTPC</td>
+        <td>D</td>
+        <td>hasTPC</td>
+        <td>bool</td>
+        <td>Flag to check if track has a TPC match</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::HasTRD</td>
+        <td>D</td>
+        <td>hasTRD</td>
+        <td>bool</td>
+        <td>Flag to check if track has a TRD match</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::HasTOF</td>
+        <td>D</td>
+        <td>hasTOF</td>
+        <td>bool</td>
+        <td>Flag to check if track has a TOF measurement</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::TPCNClsFound</td>
+        <td>D</td>
+        <td>tpcNClsFound</td>
+        <td>int16_t</td>
+        <td>Number of found TPC clusters</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::TPCNClsCrossedRows</td>
+        <td>D</td>
+        <td>tpcNClsCrossedRows</td>
+        <td>int16_t</td>
+        <td>Number of crossed TPC Rows</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::v001::ITSClusterMap</td>
+        <td>D</td>
+        <td>itsClusterMap</td>
+        <td>uint8_t</td>
+        <td>ITS cluster map, one bit per a layer, starting from the innermost</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::v001::ITSNCls</td>
+        <td>D</td>
+        <td>itsNCls</td>
+        <td>uint8_t</td>
+        <td>Number of ITS clusters</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::v001::ITSNClsInnerBarrel</td>
+        <td>D</td>
+        <td>itsNClsInnerBarrel</td>
+        <td>uint8_t</td>
+        <td>Number of ITS clusters in the Inner Barrel</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::v001::ITSClsSizeInLayer</td>
+        <td>D</td>
+        <td>itsClsSizeInLayer</td>
+        <td>uint8_t</td>
+        <td>Size of the ITS cluster in a given layer</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::v001::IsITSAfterburner</td>
+        <td>D</td>
+        <td>isITSAfterburner</td>
+        <td>bool</td>
+        <td>If the track used the afterburner in the ITS</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::TOFExpTimeEl</td>
+        <td>D</td>
+        <td>tofExpTimeEl</td>
+        <td>float</td>
+        <td>Expected time for the track to reach the TOF under the electron hypothesis</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::TOFExpTimeMu</td>
+        <td>D</td>
+        <td>tofExpTimeMu</td>
+        <td>float</td>
+        <td>Expected time for the track to reach the TOF under the muon hypothesis</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::TOFExpTimePi</td>
+        <td>D</td>
+        <td>tofExpTimePi</td>
+        <td>float</td>
+        <td>Expected time for the track to reach the TOF under the pion hypothesis</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::TOFExpTimeKa</td>
+        <td>D</td>
+        <td>tofExpTimeKa</td>
+        <td>float</td>
+        <td>Expected time for the track to reach the TOF under the kaon hypothesis</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::TOFExpTimePr</td>
+        <td>D</td>
+        <td>tofExpTimePr</td>
+        <td>float</td>
+        <td>Expected time for the track to reach the TOF under the proton hypothesis</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::TOFExpTimeDe</td>
+        <td>D</td>
+        <td>tofExpTimeDe</td>
+        <td>float</td>
+        <td>Expected time for the track to reach the TOF under the deuteron hypothesis</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::TOFExpTimeTr</td>
+        <td>D</td>
+        <td>tofExpTimeTr</td>
+        <td>float</td>
+        <td>Expected time for the track to reach the TOF under the triton hypothesis</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::TOFExpTimeHe</td>
+        <td>D</td>
+        <td>tofExpTimeHe</td>
+        <td>float</td>
+        <td>Expected time for the track to reach the TOF under the helium3 hypothesis</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::TOFExpTimeAl</td>
+        <td>D</td>
+        <td>tofExpTimeAl</td>
+        <td>float</td>
+        <td>Expected time for the track to reach the TOF under the helium4 hypothesis</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::TPCCrossedRowsOverFindableCls</td>
+        <td>D</td>
+        <td>tpcCrossedRowsOverFindableCls</td>
+        <td>float</td>
+        <td>Ratio crossed rows over findable clusters</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::TPCFoundOverFindableCls</td>
+        <td>D</td>
+        <td>tpcFoundOverFindableCls</td>
+        <td>float</td>
+        <td>Ratio of found over findable clusters</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::TPCFractionSharedCls</td>
+        <td>D</td>
+        <td>tpcFractionSharedCls</td>
+        <td>float</td>
+        <td>Fraction of shared TPC clusters</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::TrackEtaEMCAL</td>
+        <td></td>
+        <td>trackEtaEmcal</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::TrackPhiEMCAL</td>
+        <td></td>
+        <td>trackPhiEmcal</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::TrackTime</td>
+        <td></td>
+        <td>trackTime</td>
+        <td>float</td>
+        <td>Estimated time of the track in ns wrt collision().bc() or ambiguoustrack.bcSlice()[0]</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::TrackTimeRes</td>
+        <td></td>
+        <td>trackTimeRes</td>
+        <td>float</td>
+        <td>Resolution of the track time in ns (see TrackFlags::TrackTimeResIsRange)</td>
+      </tr>
+    </table>
+  </div>
+
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::StoredTracksExtra_002</button>
+  <div class="panel">
+    <div>
+
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev//Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
+    </div>
     <div>Is used in:
       <ul>
-        <li>o2::aod::StoredTracksExtra = o2::aod::StoredTracksExtra_001</li>
+        <li>o2::aod::StoredTracksExtra = o2::aod::StoredTracksExtra_002</li>
       </ul>
     </div>
     <table class=DataModel>
@@ -2900,6 +3667,13 @@ For better overview the tables are grouped into the following categories: \| [Ge
         <td>tpcNClsFindableMinusFound</td>
         <td>int8_t</td>
         <td>TPC Clusters: Findable - Found</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::TPCNClsFindableMinusPID</td>
+        <td></td>
+        <td>tpcNClsFindableMinusPID</td>
+        <td>int8_t</td>
+        <td>TPC Clusters: Findable - Found clusters used for PID</td>
       </tr>
       <tr>
         <td>o2::aod::track::TPCNClsFindableMinusCrossedRows</td>
@@ -3333,6 +4107,13 @@ For better overview the tables are grouped into the following categories: \| [Ge
         <td>Resolution of the track time in ns</td>
       </tr>
       <tr>
+        <td>o2::aod::0</td>
+        <td>GI</td>
+        <td></td>
+        <td>?</td>
+        <td></td>
+      </tr>
+      <tr>
         <td>o2::aod::fwdtrack::Pt</td>
         <td>E</td>
         <td>pt</td>
@@ -3508,6 +4289,13 @@ For better overview the tables are grouped into the following categories: \| [Ge
         <td>trackTimeRes</td>
         <td>float</td>
         <td>Resolution of the track time in ns</td>
+      </tr>
+      <tr>
+        <td>o2::aod::1</td>
+        <td>GI</td>
+        <td></td>
+        <td>?</td>
+        <td></td>
       </tr>
       <tr>
         <td>o2::aod::fwdtrack::Pt</td>
@@ -4035,16 +4823,23 @@ For better overview the tables are grouped into the following categories: \| [Ge
         <td>Resolution of the track time in ns</td>
       </tr>
       <tr>
-        <td>o2::aod::fwdtrack::Eta</td>
-        <td>E</td>
-        <td>eta</td>
-        <td>float</td>
+        <td>o2::aod::0</td>
+        <td>GI</td>
+        <td></td>
+        <td>?</td>
         <td></td>
       </tr>
       <tr>
         <td>o2::aod::fwdtrack::Pt</td>
         <td>E</td>
         <td>pt</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::fwdtrack::Eta</td>
+        <td>E</td>
+        <td>eta</td>
         <td>float</td>
         <td></td>
       </tr>
@@ -4191,6 +4986,13 @@ For better overview the tables are grouped into the following categories: \| [Ge
         <td>rho1PtTgl</td>
         <td>int8_t</td>
         <td>Covariance matrix in compressed form</td>
+      </tr>
+      <tr>
+        <td>o2::aod::0</td>
+        <td>GI</td>
+        <td></td>
+        <td>?</td>
+        <td></td>
       </tr>
       <tr>
         <td>o2::aod::fwdtrack::CXX</td>
@@ -7627,6 +8429,13 @@ For better overview the tables are grouped into the following categories: \| [Ge
         <td>True if particle is considered a physical primary according to the ALICE definition</td>
       </tr>
       <tr>
+        <td>o2::aod::0</td>
+        <td>GI</td>
+        <td></td>
+        <td>?</td>
+        <td></td>
+      </tr>
+      <tr>
         <td>o2::aod::mcparticle::Phi</td>
         <td>E</td>
         <td>phi</td>
@@ -7851,6 +8660,13 @@ For better overview the tables are grouped into the following categories: \| [Ge
         <td>isPhysicalPrimary</td>
         <td>bool</td>
         <td>True if particle is considered a physical primary according to the ALICE definition</td>
+      </tr>
+      <tr>
+        <td>o2::aod::1</td>
+        <td>GI</td>
+        <td></td>
+        <td>?</td>
+        <td></td>
       </tr>
       <tr>
         <td>o2::aod::mcparticle::Phi</td>
@@ -8285,6 +9101,7 @@ For better overview the tables are grouped into the following categories: \| [Ge
         <li>o2::aod::McTrackLabel = o2::aod::McTrackLabels::iterator</li>
         <li>o2::aod::TracksWMc = soa::Join<o2::aod::Tracks, o2::aod::McTrackLabels></li>
         <li>o2::aod::Reso2TracksMC = soa::Join<o2::aod::FullTracks, o2::aod::McTrackLabels></li>
+        <li>o2::aod::ResoTrackCandidatesMC = soa::Join<o2::aod::ResoTrackCandidates, o2::aod::McTrackLabels></li>
       </ul>
     </div>
     <table class=DataModel>
@@ -8475,6 +9292,8 @@ For better overview the tables are grouped into the following categories: \| [Ge
     <div>Is used in:
       <ul>
         <li>o2::aod::McCollisionLabel = o2::aod::McCollisionLabels::iterator</li>
+        <li>o2::aod::ResoCollisionCandidatesMC = soa::Join<o2::aod::ResoCollisionCandidates, o2::aod::McCollisionLabels></li>
+        <li>o2::aod::ResoRun2CollisionCandidatesMC = soa::Join<o2::aod::ResoRun2CollisionCandidates, o2::aod::McCollisionLabels></li>
         <li>o2::aod::pid_tpc_tof_utils::McCollisionsNoCents = soa::Join<o2::aod::Collisions, o2::aod::EvSels, o2::aod::McCollisionLabels></li>
         <li>o2::aod::pid_tpc_tof_utils::McCollisionsFT0Cs = soa::Join<o2::aod::Collisions, o2::aod::EvSels, o2::aod::McCollisionLabels, o2::aod::CentFT0Cs></li>
         <li>o2::aod::pid_tpc_tof_utils::McCollisionsFT0Ms = soa::Join<o2::aod::Collisions, o2::aod::EvSels, o2::aod::McCollisionLabels, o2::aod::CentFT0Ms></li>
@@ -8858,7 +9677,7 @@ For better overview the tables are grouped into the following categories: \| [Ge
 ## Run2
 <div>
 
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::Run2BCInfos</button>
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::Run2BCInfos_000</button>
   <div class="panel">
     <div>
        Legacy information for Run 2 event selection
@@ -8866,9 +9685,106 @@ For better overview the tables are grouped into the following categories: \| [Ge
     <div>
       Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev//Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
     </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::run2::EventCuts</td>
+        <td></td>
+        <td>eventCuts</td>
+        <td>uint32_t</td>
+        <td>Event selection flags. Check enum Run2EventSelectionCut</td>
+      </tr>
+      <tr>
+        <td>o2::aod::run2::TriggerMaskNext50</td>
+        <td></td>
+        <td>triggerMaskNext50</td>
+        <td>uint64_t</td>
+        <td>50 further trigger classes after bc.triggerMask()</td>
+      </tr>
+      <tr>
+        <td>o2::aod::run2::L0TriggerInputMask</td>
+        <td></td>
+        <td>l0TriggerInputMask</td>
+        <td>uint32_t</td>
+        <td>CTP L0 trigger input mask</td>
+      </tr>
+      <tr>
+        <td>o2::aod::run2::SPDClustersL0</td>
+        <td></td>
+        <td>spdClustersL0</td>
+        <td>uint16_t</td>
+        <td>Number of clusters in the first layer of the SPD</td>
+      </tr>
+      <tr>
+        <td>o2::aod::run2::SPDClustersL1</td>
+        <td></td>
+        <td>spdClustersL1</td>
+        <td>uint16_t</td>
+        <td>Number of clusters in the second layer of the SPD</td>
+      </tr>
+      <tr>
+        <td>o2::aod::run2::SPDFiredChipsL0</td>
+        <td></td>
+        <td>spdFiredChipsL0</td>
+        <td>uint16_t</td>
+        <td>Fired chips in the first layer of the SPD (offline)</td>
+      </tr>
+      <tr>
+        <td>o2::aod::run2::SPDFiredChipsL1</td>
+        <td></td>
+        <td>spdFiredChipsL1</td>
+        <td>uint16_t</td>
+        <td>Fired chips in the second layer of the SPD (offline)</td>
+      </tr>
+      <tr>
+        <td>o2::aod::run2::SPDFiredFastOrL0</td>
+        <td></td>
+        <td>spdFiredFastOrL0</td>
+        <td>uint16_t</td>
+        <td>Fired FASTOR signals in the first layer of the SPD (online)</td>
+      </tr>
+      <tr>
+        <td>o2::aod::run2::SPDFiredFastOrL1</td>
+        <td></td>
+        <td>spdFiredFastOrL1</td>
+        <td>uint16_t</td>
+        <td>Fired FASTOR signals in the first layer of the SPD (online)</td>
+      </tr>
+      <tr>
+        <td>o2::aod::run2::V0TriggerChargeA</td>
+        <td></td>
+        <td>v0TriggerChargeA</td>
+        <td>uint16_t</td>
+        <td>V0A trigger charge</td>
+      </tr>
+      <tr>
+        <td>o2::aod::run2::V0TriggerChargeC</td>
+        <td></td>
+        <td>v0TriggerChargeC</td>
+        <td>uint16_t</td>
+        <td>V0C trigger charge</td>
+      </tr>
+    </table>
+  </div>
+
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::Run2BCInfos_001</button>
+  <div class="panel">
+    <div>
+
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev//Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
+    </div>
     <div>Is used in:
       <ul>
-        <li>o2::aod::Run2BCInfo = o2::aod::Run2BCInfos::iterator</li>
+        <li>o2::aod::Run2BCInfos = o2::aod::Run2BCInfos_001</li>
       </ul>
     </div>
     <table class=DataModel>
@@ -8955,6 +9871,20 @@ For better overview the tables are grouped into the following categories: \| [Ge
         <td>v0TriggerChargeC</td>
         <td>uint16_t</td>
         <td>V0C trigger charge</td>
+      </tr>
+      <tr>
+        <td>o2::aod::run2::NTPCClusters</td>
+        <td></td>
+        <td>nTPCClusters</td>
+        <td>uint32_t</td>
+        <td>total number of TPC clusters (for ev sel)</td>
+      </tr>
+      <tr>
+        <td>o2::aod::run2::NSDDSSDClusters</td>
+        <td></td>
+        <td>nSDDSSDClusters</td>
+        <td>uint32_t</td>
+        <td>total number of SSD + SDD clusters (for ev sel)</td>
       </tr>
     </table>
   </div>
@@ -9196,18 +10126,13 @@ For better overview the tables are grouped into the following categories: \| [Ge
   </div>
 
 
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::Run2TrackExtras</button>
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::Run2TrackExtras_000</button>
   <div class="panel">
     <div>
 
     </div>
     <div>
       Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev//Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
-    </div>
-    <div>Is used in:
-      <ul>
-        <li>o2::aod::Run2TrackExtra = o2::aod::Run2TrackExtras::iterator</li>
-      </ul>
     </div>
     <table class=DataModel>
       <tr>
@@ -9228,18 +10153,59 @@ For better overview the tables are grouped into the following categories: \| [Ge
   </div>
 
 
-  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::TracksQA</button>
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::Run2TrackExtras_001</button>
   <div class="panel">
     <div>
-       trackQA information - sampled QA information currently for the TPC
+       adds ITS shared cluster map
     </div>
     <div>
       Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev//Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
     </div>
     <div>Is used in:
       <ul>
-        <li>o2::aod::TrackQA = o2::aod::TracksQA::iterator</li>
+        <li>o2::aod::Run2TrackExtras = o2::aod::Run2TrackExtras_001</li>
       </ul>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::aod::track::ITSSignal</td>
+        <td></td>
+        <td>itsSignal</td>
+        <td>float</td>
+        <td>dE/dx signal in the ITS (Run 2)</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::ITSSharedClusterMap</td>
+        <td></td>
+        <td>itsSharedClusterMap</td>
+        <td>uint8_t</td>
+        <td>shared ITS cluster map (Run 2)</td>
+      </tr>
+      <tr>
+        <td>o2::aod::track::ITSNSharedCls</td>
+        <td>D</td>
+        <td>itsNSharedCls</td>
+        <td>uint8_t</td>
+        <td>Number of shared ITS clusters (Run 2)</td>
+      </tr>
+    </table>
+  </div>
+
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::TracksQA_000</button>
+  <div class="panel">
+    <div>
+       trackQA information - sampled QA information currently for the TPC - version 0
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev//Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
     </div>
     <table class=DataModel>
       <tr>
@@ -9351,6 +10317,967 @@ For better overview the tables are grouped into the following categories: \| [Ge
   </div>
 
 
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::TracksQA_001</button>
+  <div class="panel">
+    <div>
+       trackQA information - version 1 - including contributor residuals of matched tracks at reference radius
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev//Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::soa::Index</td>
+        <td>GI</td>
+        <td>globalIndex</td>
+        <td>int64_t</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::trackqa::TrackId</td>
+        <td>I</td>
+        <td>trackId</td>
+        <td>int32</td>
+        <td>track to which this QA information belongs</td>
+      </tr>
+      <tr>
+        <td>o2::aod::trackqa::TPCTime0</td>
+        <td></td>
+        <td>tpcTime0</td>
+        <td>float</td>
+        <td>tpc only time0 (mTime0 in TPC track)</td>
+      </tr>
+      <tr>
+        <td>o2::aod::trackqa::TPCDCAR</td>
+        <td></td>
+        <td>tpcdcaR</td>
+        <td>int16_t</td>
+        <td>tpc only DCAr</td>
+      </tr>
+      <tr>
+        <td>o2::aod::trackqa::TPCDCAZ</td>
+        <td></td>
+        <td>tpcdcaZ</td>
+        <td>int16_t</td>
+        <td>tpc only DCAz</td>
+      </tr>
+      <tr>
+        <td>o2::aod::trackqa::TPCClusterByteMask</td>
+        <td></td>
+        <td>tpcClusterByteMask</td>
+        <td>uint8_t</td>
+        <td>tracklet bitmask - track defining 8 tracklets (152=8*19 rows) bit set if nCluster>thr (default 5)</td>
+      </tr>
+      <tr>
+        <td>o2::aod::trackqa::TPCdEdxMax0R</td>
+        <td></td>
+        <td>tpcdEdxMax0R</td>
+        <td>uint8_t</td>
+        <td>TPC dEdxQMax -ROC0/dEdx</td>
+      </tr>
+      <tr>
+        <td>o2::aod::trackqa::TPCdEdxMax1R</td>
+        <td></td>
+        <td>tpcdEdxMax1R</td>
+        <td>uint8_t</td>
+        <td>TPC dEdxQMax -ROC1/dEdx</td>
+      </tr>
+      <tr>
+        <td>o2::aod::trackqa::TPCdEdxMax2R</td>
+        <td></td>
+        <td>tpcdEdxMax2R</td>
+        <td>uint8_t</td>
+        <td>TPC dEdxQMax -ROC2/dEdx</td>
+      </tr>
+      <tr>
+        <td>o2::aod::trackqa::TPCdEdxMax3R</td>
+        <td></td>
+        <td>tpcdEdxMax3R</td>
+        <td>uint8_t</td>
+        <td>TPC dEdxQMax -ROC3/dEdx</td>
+      </tr>
+      <tr>
+        <td>o2::aod::trackqa::TPCdEdxTot0R</td>
+        <td></td>
+        <td>tpcdEdxTot0R</td>
+        <td>uint8_t</td>
+        <td>TPC dEdxQtot -ROC0/dEdx</td>
+      </tr>
+      <tr>
+        <td>o2::aod::trackqa::TPCdEdxTot1R</td>
+        <td></td>
+        <td>tpcdEdxTot1R</td>
+        <td>uint8_t</td>
+        <td>TPC dEdxQtot -ROC1/dEdx</td>
+      </tr>
+      <tr>
+        <td>o2::aod::trackqa::TPCdEdxTot2R</td>
+        <td></td>
+        <td>tpcdEdxTot2R</td>
+        <td>uint8_t</td>
+        <td>TPC dEdxQtot -ROC2/dEdx</td>
+      </tr>
+      <tr>
+        <td>o2::aod::trackqa::TPCdEdxTot3R</td>
+        <td></td>
+        <td>tpcdEdxTot3R</td>
+        <td>uint8_t</td>
+        <td>TPC dEdxQtot -ROC3/dEdx</td>
+      </tr>
+      <tr>
+        <td>o2::aod::trackqa::DeltaRefContParamY</td>
+        <td></td>
+        <td>deltaRefContParamY</td>
+        <td>int8_t</td>
+        <td>Normalized delta of contributor tracks at reference point in the same frame Y</td>
+      </tr>
+      <tr>
+        <td>o2::aod::trackqa::DeltaRefContParamZ</td>
+        <td></td>
+        <td>deltaRefITSParamZ</td>
+        <td>int8_t</td>
+        <td>Normalized delta of contributor tracks at reference point in the same frame Z</td>
+      </tr>
+      <tr>
+        <td>o2::aod::trackqa::DeltaRefContParamSnp</td>
+        <td></td>
+        <td>deltaRefContParamSnp</td>
+        <td>int8_t</td>
+        <td>Normalized delta of contributor tracks at reference point in the same frame Snp</td>
+      </tr>
+      <tr>
+        <td>o2::aod::trackqa::DeltaRefContParamTgl</td>
+        <td></td>
+        <td>deltaRefContParamTgl</td>
+        <td>int8_t</td>
+        <td>Normalized delta of contributor tracks at reference point in the same frame Tgl</td>
+      </tr>
+      <tr>
+        <td>o2::aod::trackqa::DeltaRefContParamQ2Pt</td>
+        <td></td>
+        <td>deltaRefContParamQ2Pt</td>
+        <td>int8_t</td>
+        <td>Normalized delta of contributor tracks at reference point in the same frame Q2Pt</td>
+      </tr>
+      <tr>
+        <td>o2::aod::trackqa::DeltaRefGloParamY</td>
+        <td></td>
+        <td>deltaRefGloParamY</td>
+        <td>int8_t</td>
+        <td>Normalized delta of global track to average contributors matched tracks at reference point in the same frame Y</td>
+      </tr>
+      <tr>
+        <td>o2::aod::trackqa::DeltaRefGloParamZ</td>
+        <td></td>
+        <td>deltaRefGloParamZ</td>
+        <td>int8_t</td>
+        <td>Normalized delta of global track to average contributors matched tracks at reference point in the same frame Z</td>
+      </tr>
+      <tr>
+        <td>o2::aod::trackqa::DeltaRefGloParamSnp</td>
+        <td></td>
+        <td>deltaRefGloParamSnp</td>
+        <td>int8_t</td>
+        <td>Normalized delta of global track to average contributors matched tracks at reference point in the same frame Snp</td>
+      </tr>
+      <tr>
+        <td>o2::aod::trackqa::DeltaRefGloParamTgl</td>
+        <td></td>
+        <td>deltaRefGloParamTgl</td>
+        <td>int8_t</td>
+        <td>Normalized delta of global track to average contributors matched tracks at reference point in the same frame Tgl</td>
+      </tr>
+      <tr>
+        <td>o2::aod::trackqa::DeltaRefGloParamQ2Pt</td>
+        <td></td>
+        <td>deltaRefGloParamQ2Pt</td>
+        <td>int8_t</td>
+        <td>Normalized delta of global track to average contributors matched tracks at reference point in the same frame Q2Pt</td>
+      </tr>
+      <tr>
+        <td>o2::aod::trackqa::IsDummy</td>
+        <td>D</td>
+        <td>isDummy</td>
+        <td>bool</td>
+        <td>indicates if the propagation of the contrib. tracks was successful and residuals are available</td>
+      </tr>
+    </table>
+  </div>
+
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::TracksQA_002</button>
+  <div class="panel">
+    <div>
+       trackQA information - version 2 - including contributor residuals of matched tracks at reference radius + TOF delta information
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev//Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::TracksQAVersion = o2::aod::TracksQA_002</li>
+      </ul>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::soa::Index</td>
+        <td>GI</td>
+        <td>globalIndex</td>
+        <td>int64_t</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::trackqa::TrackId</td>
+        <td>I</td>
+        <td>trackId</td>
+        <td>int32</td>
+        <td>track to which this QA information belongs</td>
+      </tr>
+      <tr>
+        <td>o2::aod::trackqa::TPCTime0</td>
+        <td></td>
+        <td>tpcTime0</td>
+        <td>float</td>
+        <td>tpc only time0 (mTime0 in TPC track)</td>
+      </tr>
+      <tr>
+        <td>o2::aod::trackqa::TPCDCAR</td>
+        <td></td>
+        <td>tpcdcaR</td>
+        <td>int16_t</td>
+        <td>tpc only DCAr</td>
+      </tr>
+      <tr>
+        <td>o2::aod::trackqa::TPCDCAZ</td>
+        <td></td>
+        <td>tpcdcaZ</td>
+        <td>int16_t</td>
+        <td>tpc only DCAz</td>
+      </tr>
+      <tr>
+        <td>o2::aod::trackqa::TPCClusterByteMask</td>
+        <td></td>
+        <td>tpcClusterByteMask</td>
+        <td>uint8_t</td>
+        <td>tracklet bitmask - track defining 8 tracklets (152=8*19 rows) bit set if nCluster>thr (default 5)</td>
+      </tr>
+      <tr>
+        <td>o2::aod::trackqa::TPCdEdxMax0R</td>
+        <td></td>
+        <td>tpcdEdxMax0R</td>
+        <td>uint8_t</td>
+        <td>TPC dEdxQMax -ROC0/dEdx</td>
+      </tr>
+      <tr>
+        <td>o2::aod::trackqa::TPCdEdxMax1R</td>
+        <td></td>
+        <td>tpcdEdxMax1R</td>
+        <td>uint8_t</td>
+        <td>TPC dEdxQMax -ROC1/dEdx</td>
+      </tr>
+      <tr>
+        <td>o2::aod::trackqa::TPCdEdxMax2R</td>
+        <td></td>
+        <td>tpcdEdxMax2R</td>
+        <td>uint8_t</td>
+        <td>TPC dEdxQMax -ROC2/dEdx</td>
+      </tr>
+      <tr>
+        <td>o2::aod::trackqa::TPCdEdxMax3R</td>
+        <td></td>
+        <td>tpcdEdxMax3R</td>
+        <td>uint8_t</td>
+        <td>TPC dEdxQMax -ROC3/dEdx</td>
+      </tr>
+      <tr>
+        <td>o2::aod::trackqa::TPCdEdxTot0R</td>
+        <td></td>
+        <td>tpcdEdxTot0R</td>
+        <td>uint8_t</td>
+        <td>TPC dEdxQtot -ROC0/dEdx</td>
+      </tr>
+      <tr>
+        <td>o2::aod::trackqa::TPCdEdxTot1R</td>
+        <td></td>
+        <td>tpcdEdxTot1R</td>
+        <td>uint8_t</td>
+        <td>TPC dEdxQtot -ROC1/dEdx</td>
+      </tr>
+      <tr>
+        <td>o2::aod::trackqa::TPCdEdxTot2R</td>
+        <td></td>
+        <td>tpcdEdxTot2R</td>
+        <td>uint8_t</td>
+        <td>TPC dEdxQtot -ROC2/dEdx</td>
+      </tr>
+      <tr>
+        <td>o2::aod::trackqa::TPCdEdxTot3R</td>
+        <td></td>
+        <td>tpcdEdxTot3R</td>
+        <td>uint8_t</td>
+        <td>TPC dEdxQtot -ROC3/dEdx</td>
+      </tr>
+      <tr>
+        <td>o2::aod::trackqa::DeltaRefContParamY</td>
+        <td></td>
+        <td>deltaRefContParamY</td>
+        <td>int8_t</td>
+        <td>Normalized delta of contributor tracks at reference point in the same frame Y</td>
+      </tr>
+      <tr>
+        <td>o2::aod::trackqa::DeltaRefContParamZ</td>
+        <td></td>
+        <td>deltaRefITSParamZ</td>
+        <td>int8_t</td>
+        <td>Normalized delta of contributor tracks at reference point in the same frame Z</td>
+      </tr>
+      <tr>
+        <td>o2::aod::trackqa::DeltaRefContParamSnp</td>
+        <td></td>
+        <td>deltaRefContParamSnp</td>
+        <td>int8_t</td>
+        <td>Normalized delta of contributor tracks at reference point in the same frame Snp</td>
+      </tr>
+      <tr>
+        <td>o2::aod::trackqa::DeltaRefContParamTgl</td>
+        <td></td>
+        <td>deltaRefContParamTgl</td>
+        <td>int8_t</td>
+        <td>Normalized delta of contributor tracks at reference point in the same frame Tgl</td>
+      </tr>
+      <tr>
+        <td>o2::aod::trackqa::DeltaRefContParamQ2Pt</td>
+        <td></td>
+        <td>deltaRefContParamQ2Pt</td>
+        <td>int8_t</td>
+        <td>Normalized delta of contributor tracks at reference point in the same frame Q2Pt</td>
+      </tr>
+      <tr>
+        <td>o2::aod::trackqa::DeltaRefGloParamY</td>
+        <td></td>
+        <td>deltaRefGloParamY</td>
+        <td>int8_t</td>
+        <td>Normalized delta of global track to average contributors matched tracks at reference point in the same frame Y</td>
+      </tr>
+      <tr>
+        <td>o2::aod::trackqa::DeltaRefGloParamZ</td>
+        <td></td>
+        <td>deltaRefGloParamZ</td>
+        <td>int8_t</td>
+        <td>Normalized delta of global track to average contributors matched tracks at reference point in the same frame Z</td>
+      </tr>
+      <tr>
+        <td>o2::aod::trackqa::DeltaRefGloParamSnp</td>
+        <td></td>
+        <td>deltaRefGloParamSnp</td>
+        <td>int8_t</td>
+        <td>Normalized delta of global track to average contributors matched tracks at reference point in the same frame Snp</td>
+      </tr>
+      <tr>
+        <td>o2::aod::trackqa::DeltaRefGloParamTgl</td>
+        <td></td>
+        <td>deltaRefGloParamTgl</td>
+        <td>int8_t</td>
+        <td>Normalized delta of global track to average contributors matched tracks at reference point in the same frame Tgl</td>
+      </tr>
+      <tr>
+        <td>o2::aod::trackqa::DeltaRefGloParamQ2Pt</td>
+        <td></td>
+        <td>deltaRefGloParamQ2Pt</td>
+        <td>int8_t</td>
+        <td>Normalized delta of global track to average contributors matched tracks at reference point in the same frame Q2Pt</td>
+      </tr>
+      <tr>
+        <td>o2::aod::trackqa::DeltaTOFdX</td>
+        <td></td>
+        <td>deltaTOFdX</td>
+        <td>int8_t</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::trackqa::DeltaTOFdZ</td>
+        <td></td>
+        <td>deltaTOFdZ</td>
+        <td>int8_t</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::trackqa::IsDummy</td>
+        <td>D</td>
+        <td>isDummy</td>
+        <td>bool</td>
+        <td>indicates if the propagation of the contrib. tracks was successful and residuals are available</td>
+      </tr>
+    </table>
+  </div>
+
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::StoredMFTTracksCov</button>
+  <div class="panel">
+    <div>
+
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev//Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::soa::Index</td>
+        <td>GI</td>
+        <td>globalIndex</td>
+        <td>int64_t</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::fwdtrack::MFTTrackId</td>
+        <td>I</td>
+        <td>matchMFTTrackId</td>
+        <td>int32</td>
+        <td>ID of matching MFT track for GlobalMuonTracks and GlobalForwardTracks</td>
+      </tr>
+      <tr>
+        <td>o2::aod::fwdtrack::SigmaX</td>
+        <td></td>
+        <td>sigmaX</td>
+        <td>float</td>
+        <td>Covariance matrix</td>
+      </tr>
+      <tr>
+        <td>o2::aod::fwdtrack::SigmaY</td>
+        <td></td>
+        <td>sigmaY</td>
+        <td>float</td>
+        <td>Covariance matrix</td>
+      </tr>
+      <tr>
+        <td>o2::aod::fwdtrack::SigmaPhi</td>
+        <td></td>
+        <td>sigmaPhi</td>
+        <td>float</td>
+        <td>Covariance matrix</td>
+      </tr>
+      <tr>
+        <td>o2::aod::fwdtrack::SigmaTgl</td>
+        <td></td>
+        <td>sigmaTgl</td>
+        <td>float</td>
+        <td>Covariance matrix</td>
+      </tr>
+      <tr>
+        <td>o2::aod::fwdtrack::Sigma1Pt</td>
+        <td></td>
+        <td>sigma1Pt</td>
+        <td>float</td>
+        <td>Covariance matrix</td>
+      </tr>
+      <tr>
+        <td>o2::aod::fwdtrack::RhoXY</td>
+        <td></td>
+        <td>rhoXY</td>
+        <td>int8_t</td>
+        <td>Covariance matrix in compressed form</td>
+      </tr>
+      <tr>
+        <td>o2::aod::fwdtrack::RhoPhiX</td>
+        <td></td>
+        <td>rhoPhiX</td>
+        <td>int8_t</td>
+        <td>Covariance matrix in compressed form</td>
+      </tr>
+      <tr>
+        <td>o2::aod::fwdtrack::RhoPhiY</td>
+        <td></td>
+        <td>rhoPhiY</td>
+        <td>int8_t</td>
+        <td>Covariance matrix in compressed form</td>
+      </tr>
+      <tr>
+        <td>o2::aod::fwdtrack::RhoTglX</td>
+        <td></td>
+        <td>rhoTglX</td>
+        <td>int8_t</td>
+        <td>Covariance matrix in compressed form</td>
+      </tr>
+      <tr>
+        <td>o2::aod::fwdtrack::RhoTglY</td>
+        <td></td>
+        <td>rhoTglY</td>
+        <td>int8_t</td>
+        <td>Covariance matrix in compressed form</td>
+      </tr>
+      <tr>
+        <td>o2::aod::fwdtrack::RhoTglPhi</td>
+        <td></td>
+        <td>rhoTglPhi</td>
+        <td>int8_t</td>
+        <td>Covariance matrix in compressed form</td>
+      </tr>
+      <tr>
+        <td>o2::aod::fwdtrack::Rho1PtX</td>
+        <td></td>
+        <td>rho1PtX</td>
+        <td>int8_t</td>
+        <td>Covariance matrix in compressed form</td>
+      </tr>
+      <tr>
+        <td>o2::aod::fwdtrack::Rho1PtY</td>
+        <td></td>
+        <td>rho1PtY</td>
+        <td>int8_t</td>
+        <td>Covariance matrix in compressed form</td>
+      </tr>
+      <tr>
+        <td>o2::aod::fwdtrack::Rho1PtPhi</td>
+        <td></td>
+        <td>rho1PtPhi</td>
+        <td>int8_t</td>
+        <td>Covariance matrix in compressed form</td>
+      </tr>
+      <tr>
+        <td>o2::aod::fwdtrack::Rho1PtTgl</td>
+        <td></td>
+        <td>rho1PtTgl</td>
+        <td>int8_t</td>
+        <td>Covariance matrix in compressed form</td>
+      </tr>
+    </table>
+  </div>
+
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::MFTTracksCov (E)</button>
+  <div class="panel">
+    <div>
+
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev//Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
+    </div>
+    <div>Extends:
+      <ul>
+         o2::aod::StoredMFTTracksCov
+      </ul>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::MFTTrackCovFwd = o2::aod::MFTTracksCov::iterator</li>
+      </ul>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::soa::Index</td>
+        <td>GI</td>
+        <td>globalIndex</td>
+        <td>int64_t</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::fwdtrack::MFTTrackId</td>
+        <td>I</td>
+        <td>matchMFTTrackId</td>
+        <td>int32</td>
+        <td>ID of matching MFT track for GlobalMuonTracks and GlobalForwardTracks</td>
+      </tr>
+      <tr>
+        <td>o2::aod::fwdtrack::SigmaX</td>
+        <td></td>
+        <td>sigmaX</td>
+        <td>float</td>
+        <td>Covariance matrix</td>
+      </tr>
+      <tr>
+        <td>o2::aod::fwdtrack::SigmaY</td>
+        <td></td>
+        <td>sigmaY</td>
+        <td>float</td>
+        <td>Covariance matrix</td>
+      </tr>
+      <tr>
+        <td>o2::aod::fwdtrack::SigmaPhi</td>
+        <td></td>
+        <td>sigmaPhi</td>
+        <td>float</td>
+        <td>Covariance matrix</td>
+      </tr>
+      <tr>
+        <td>o2::aod::fwdtrack::SigmaTgl</td>
+        <td></td>
+        <td>sigmaTgl</td>
+        <td>float</td>
+        <td>Covariance matrix</td>
+      </tr>
+      <tr>
+        <td>o2::aod::fwdtrack::Sigma1Pt</td>
+        <td></td>
+        <td>sigma1Pt</td>
+        <td>float</td>
+        <td>Covariance matrix</td>
+      </tr>
+      <tr>
+        <td>o2::aod::fwdtrack::RhoXY</td>
+        <td></td>
+        <td>rhoXY</td>
+        <td>int8_t</td>
+        <td>Covariance matrix in compressed form</td>
+      </tr>
+      <tr>
+        <td>o2::aod::fwdtrack::RhoPhiX</td>
+        <td></td>
+        <td>rhoPhiX</td>
+        <td>int8_t</td>
+        <td>Covariance matrix in compressed form</td>
+      </tr>
+      <tr>
+        <td>o2::aod::fwdtrack::RhoPhiY</td>
+        <td></td>
+        <td>rhoPhiY</td>
+        <td>int8_t</td>
+        <td>Covariance matrix in compressed form</td>
+      </tr>
+      <tr>
+        <td>o2::aod::fwdtrack::RhoTglX</td>
+        <td></td>
+        <td>rhoTglX</td>
+        <td>int8_t</td>
+        <td>Covariance matrix in compressed form</td>
+      </tr>
+      <tr>
+        <td>o2::aod::fwdtrack::RhoTglY</td>
+        <td></td>
+        <td>rhoTglY</td>
+        <td>int8_t</td>
+        <td>Covariance matrix in compressed form</td>
+      </tr>
+      <tr>
+        <td>o2::aod::fwdtrack::RhoTglPhi</td>
+        <td></td>
+        <td>rhoTglPhi</td>
+        <td>int8_t</td>
+        <td>Covariance matrix in compressed form</td>
+      </tr>
+      <tr>
+        <td>o2::aod::fwdtrack::Rho1PtX</td>
+        <td></td>
+        <td>rho1PtX</td>
+        <td>int8_t</td>
+        <td>Covariance matrix in compressed form</td>
+      </tr>
+      <tr>
+        <td>o2::aod::fwdtrack::Rho1PtY</td>
+        <td></td>
+        <td>rho1PtY</td>
+        <td>int8_t</td>
+        <td>Covariance matrix in compressed form</td>
+      </tr>
+      <tr>
+        <td>o2::aod::fwdtrack::Rho1PtPhi</td>
+        <td></td>
+        <td>rho1PtPhi</td>
+        <td>int8_t</td>
+        <td>Covariance matrix in compressed form</td>
+      </tr>
+      <tr>
+        <td>o2::aod::fwdtrack::Rho1PtTgl</td>
+        <td></td>
+        <td>rho1PtTgl</td>
+        <td>int8_t</td>
+        <td>Covariance matrix in compressed form</td>
+      </tr>
+      <tr>
+        <td>o2::aod::0</td>
+        <td>GI</td>
+        <td></td>
+        <td>?</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::fwdtrack::CXX</td>
+        <td>E</td>
+        <td>cXX</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::fwdtrack::CXY</td>
+        <td>E</td>
+        <td>cXY</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::fwdtrack::CYY</td>
+        <td>E</td>
+        <td>cYY</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::fwdtrack::CPhiX</td>
+        <td>E</td>
+        <td>cPhiX</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::fwdtrack::CPhiY</td>
+        <td>E</td>
+        <td>cPhiY</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::fwdtrack::CPhiPhi</td>
+        <td>E</td>
+        <td>cPhiPhi</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::fwdtrack::CTglX</td>
+        <td>E</td>
+        <td>cTglX</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::fwdtrack::CTglY</td>
+        <td>E</td>
+        <td>cTglY</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::fwdtrack::CTglPhi</td>
+        <td>E</td>
+        <td>cTglPhi</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::fwdtrack::CTglTgl</td>
+        <td>E</td>
+        <td>cTglTgl</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::fwdtrack::C1PtX</td>
+        <td>E</td>
+        <td>c1PtX</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::fwdtrack::C1PtY</td>
+        <td>E</td>
+        <td>c1PtY</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::fwdtrack::C1PtPhi</td>
+        <td>E</td>
+        <td>c1PtPhi</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::fwdtrack::C1PtTgl</td>
+        <td>E</td>
+        <td>c1PtTgl</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::fwdtrack::C1Pt21Pt2</td>
+        <td>E</td>
+        <td>c1Pt21Pt2</td>
+        <td>float</td>
+        <td></td>
+      </tr>
+    </table>
+  </div>
+
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::FV0AsExtra</button>
+  <div class="panel">
+    <div>
+       FV0AsExtra table
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev//Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::FV0AExtra = o2::aod::FV0AsExtra::iterator</li>
+      </ul>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::soa::Index</td>
+        <td>GI</td>
+        <td>globalIndex</td>
+        <td>int64_t</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::fv0a::BCId</td>
+        <td>I</td>
+        <td>bcId</td>
+        <td>int32</td>
+        <td>BC index</td>
+      </tr>
+      <tr>
+        <td>o2::aod::fv0a::TimeFV0A</td>
+        <td></td>
+        <td>timeFV0A</td>
+        <td>std::vector&lt;float&gt;</td>
+        <td>Time of non-zero channels. The channel IDs are given in Channel (at the same index). Only for the FITExtra table</td>
+      </tr>
+    </table>
+  </div>
+
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::FT0sExtra</button>
+  <div class="panel">
+    <div>
+       FT0sExtra table
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev//Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::FT0Extra = o2::aod::FT0sExtra::iterator</li>
+      </ul>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::soa::Index</td>
+        <td>GI</td>
+        <td>globalIndex</td>
+        <td>int64_t</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::ft0::BCId</td>
+        <td>I</td>
+        <td>bcId</td>
+        <td>int32</td>
+        <td>BC index</td>
+      </tr>
+      <tr>
+        <td>o2::aod::ft0::TimeFT0A</td>
+        <td></td>
+        <td>timeFT0A</td>
+        <td>std::vector&lt;float&gt;</td>
+        <td>Time of non-zero channels on the A-side. The channel IDs are given in ChannelA (at the same index). Only for the FITExtra table</td>
+      </tr>
+      <tr>
+        <td>o2::aod::ft0::TimeFT0C</td>
+        <td></td>
+        <td>timeFT0C</td>
+        <td>std::vector&lt;float&gt;</td>
+        <td>Time of non-zero channels on the C-side. The channel IDs are given in ChannelC (at the same index). Only for the FITExtra table</td>
+      </tr>
+    </table>
+  </div>
+
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::FDDsExtra</button>
+  <div class="panel">
+    <div>
+       FDDsExtra table
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev//Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::FDDExtra = o2::aod::FDDsExtra::iterator</li>
+      </ul>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::soa::Index</td>
+        <td>GI</td>
+        <td>globalIndex</td>
+        <td>int64_t</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::fdd::BCId</td>
+        <td>I</td>
+        <td>bcId</td>
+        <td>int32</td>
+        <td>BC index</td>
+      </tr>
+      <tr>
+        <td>o2::aod::fdd::TimeFDDA</td>
+        <td></td>
+        <td>timeFDDA</td>
+        <td>float[8]</td>
+        <td>Time per channel A-side, only for the FITExtra table</td>
+      </tr>
+      <tr>
+        <td>o2::aod::fdd::TimeFDDC</td>
+        <td></td>
+        <td>timeFDDC</td>
+        <td>float[8]</td>
+        <td>Time per channel C-side, only for the FITExtra table</td>
+      </tr>
+    </table>
+  </div>
+
+
   <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::Origins</button>
   <div class="panel">
     <div>
@@ -9380,11 +11307,162 @@ For better overview the tables are grouped into the following categories: \| [Ge
         <td></td>
       </tr>
       <tr>
-        <td>o2::aod::origin::DataframeID</td>
+        <td>o2::aod::origins::DataframeID</td>
         <td></td>
         <td>dataframeID</td>
         <td>uint64_t</td>
         <td>Data frame ID (what is usually found in directory name in the AO2D.root, i.e. DF_XXX)</td>
+      </tr>
+    </table>
+  </div>
+
+
+  <button class="myaccordion"><i class="fa fa-table"></i> o2::aod::Run2OTFV0s</button>
+  <div class="panel">
+    <div>
+       Run 2 V0 on the fly table
+    </div>
+    <div>
+      Header file: <a href="https://github.com/AliceO2Group/AliceO2/tree/dev//Framework/Core/include/Framework/AnalysisDataModel.h" target="_blank">Framework/Core/include/Framework/AnalysisDataModel.h</a>
+    </div>
+    <div>Is used in:
+      <ul>
+        <li>o2::aod::Run2OTFV0 = o2::aod::Run2OTFV0s::iterator</li>
+      </ul>
+    </div>
+    <table class=DataModel>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Getter</th>
+        <th>Type</th>
+        <th>Comment</th>
+      </tr>
+      <tr>
+        <td>o2::soa::Index</td>
+        <td>GI</td>
+        <td>globalIndex</td>
+        <td>int64_t</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>o2::aod::run2::oftv0::CollisionId</td>
+        <td>I</td>
+        <td>collisionId</td>
+        <td>int32</td>
+        <td>Collision index</td>
+      </tr>
+      <tr>
+        <td>o2::aod::run2::oftv0::PosTrackId</td>
+        <td>I</td>
+        <td>posTrackId</td>
+        <td>int</td>
+        <td>Positive track</td>
+      </tr>
+      <tr>
+        <td>o2::aod::run2::oftv0::NegTrackId</td>
+        <td>I</td>
+        <td>negTrackId</td>
+        <td>int</td>
+        <td>Negative track</td>
+      </tr>
+      <tr>
+        <td>o2::aod::run2::oftv0::Px</td>
+        <td></td>
+        <td>px</td>
+        <td>float</td>
+        <td>momentum in x</td>
+      </tr>
+      <tr>
+        <td>o2::aod::run2::oftv0::Py</td>
+        <td></td>
+        <td>py</td>
+        <td>float</td>
+        <td>momentum in y</td>
+      </tr>
+      <tr>
+        <td>o2::aod::run2::oftv0::Pz</td>
+        <td></td>
+        <td>pz</td>
+        <td>float</td>
+        <td>momentum in z</td>
+      </tr>
+      <tr>
+        <td>o2::aod::run2::oftv0::E</td>
+        <td></td>
+        <td>e</td>
+        <td>float</td>
+        <td>energy</td>
+      </tr>
+      <tr>
+        <td>o2::aod::run2::oftv0::Qt</td>
+        <td></td>
+        <td>qt</td>
+        <td>float</td>
+        <td>Qt of AP</td>
+      </tr>
+      <tr>
+        <td>o2::aod::run2::oftv0::Alpha</td>
+        <td></td>
+        <td>alpha</td>
+        <td>float</td>
+        <td>Alpha of AP</td>
+      </tr>
+      <tr>
+        <td>o2::aod::run2::oftv0::X</td>
+        <td></td>
+        <td>x</td>
+        <td>float</td>
+        <td>conversion point x coordiante</td>
+      </tr>
+      <tr>
+        <td>o2::aod::run2::oftv0::Y</td>
+        <td></td>
+        <td>y</td>
+        <td>float</td>
+        <td>conversion point y coordiante</td>
+      </tr>
+      <tr>
+        <td>o2::aod::run2::oftv0::Z</td>
+        <td></td>
+        <td>z</td>
+        <td>float</td>
+        <td>conversion point z coordiante</td>
+      </tr>
+      <tr>
+        <td>o2::aod::run2::oftv0::Chi2NDF</td>
+        <td></td>
+        <td>chi2NDF</td>
+        <td>float</td>
+        <td>chi^2 over NDF from KFParticle</td>
+      </tr>
+      <tr>
+        <td>o2::aod::run2::oftv0::PsiPair</td>
+        <td></td>
+        <td>psiPair</td>
+        <td>float</td>
+        <td>Psi pair</td>
+      </tr>
+      <tr>
+        <td>o2::aod::run2::oftv0::DCAr</td>
+        <td></td>
+        <td>dcaR</td>
+        <td>float</td>
+        <td>DCA in radial direction</td>
+      </tr>
+      <tr>
+        <td>o2::aod::run2::oftv0::DCAz</td>
+        <td></td>
+        <td>dcaZ</td>
+        <td>float</td>
+        <td>DCA in z direction</td>
+      </tr>
+      <tr>
+        <td>o2::aod::run2::oftv0::Mass</td>
+        <td></td>
+        <td>mass</td>
+        <td>float</td>
+        <td>mass of the conversion. Do NOT use for cut!</td>
       </tr>
     </table>
   </div>
