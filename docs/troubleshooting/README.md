@@ -175,7 +175,7 @@ Alien Token Check failed - Please get an alien token before running with https C
 ## Graphical issue with high DPI monitors
 
 When using monitors with high DPI the labels and text in TBrowser might be too small, especially when fractional scaling is enabled in multiple
-monitors setup. A workaround for this issue is to create a local .rootrc file in the $HOME folder including the following lines, edited with your own 
+monitors setup. A workaround for this issue is to create a local .rootrc file in the $HOME folder including the following lines, edited with your own
 font preferences:
 
 ```text
