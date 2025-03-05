@@ -133,6 +133,10 @@ You can get to the _All Analyses_ page by using the main menu, or by the link in
   * Max DF size - This sets the maximal dataframe size in the merging step. Has to be 0 for not-self contained derived data (which need parent file access).
   * Max derived file size - Sets the size limit for the output file size of the derived data file. This is an expert parameter which usually does not have to be changed. Only change this value if the processing in subsequent trains takes so long that the jobs fail. If set to 0 a good value will be automatically determined.
  
+```note
+When enabling `Ready for slim derived data` the option has to be selected for the main wagon and all dependencies which produce derived data.
+```
+ 
 * In order to update the derived data configuration with the latest version of the workflow, click on the button `↻ sync` in _Derived data_. By synchronizing the derived data, the tables which no longer belong to the workflow will be removed, and the values of the tables will be updated.
 
 <div align="center">
