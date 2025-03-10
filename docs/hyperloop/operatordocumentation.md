@@ -57,6 +57,18 @@ There are a number of settings that you can decide on when composing a train:
 
 * The train will be automatically tested, and its progress can be followed in the _Train Runs_ table, or in the [**Train Runs**](#train-runs) page by clicking on the TRAIN_ID link.
 
+
+### <a name="wagonscheduling"></a>Scheduling of derived data wagons
+
+* Wagons with derived data can be scheduled by operators to be automatically composed at the next composition schedule.
+* This is supported for standard and linked derived data wagons on any dataset with a composition schedule.
+* Multiple standard derived data wagons can be combined into one train automatically by Hyperloop, but linked derived data wagons are run separately.
+* Operators can simply choose to enable or disable the automatic *submission* and *slow train* options. The schedule is automatically determined by Hyperloop (the next scheduled slot in the dataset is used).
+
+<div align="center">
+<img src="../images/scheduledWagon.png" width="40%">
+</div>
+
 ### <a name="stagedsubmission"></a>Staged Submission
 
 * Short datasets are subsets of a big dataset

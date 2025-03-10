@@ -34,3 +34,7 @@ The wagon test runs for about 5 minutes and is then stopped. Therefore, if you h
 ### What is the job error ERROR_EW?
 
 Hyperloop trains have a so-called express train feature. This feature is based on the fact that the last few percent of jobs usually take the longest time (not in execution time but to be scheduled on a site) and therefore trains can take the double total time just to process the last few percent. Therefore, up to 2% of the jobs are removed from the queue, in order for your train to finish. Those are marked with ERROR_EW in the job overview. In case you want the maximal statistics and you don't mind that your train will be slow, you can ask for a "slow train" submission to the operators.
+
+### Why is it that my train test has a CPU warning but my wagon test was fine?
+
+This usually happens in a situation where the wagon test (which runs on a single core) uses so much memory that it doesn't fit a single core job on the grid and therefore needs two cores for the train (more cores means a higher memory allowance). But if the devices in the wagon cannot be parallelised well over multiple cores, this leads to more wall time and a higher CPU usage as the cores will be underutilised. In this situation, one can either reduce the wagon memory consumption to fit into a single core or reduce the CPU consumption to fit the dataset. 
