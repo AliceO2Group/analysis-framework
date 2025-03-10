@@ -125,9 +125,10 @@ You can get to the _All Analyses_ page by using the main menu, or by the link in
 * <a name="wagonderived"></a>In _Derived Data_ the tables which are produced by the task are displayed. If activated, these are saved to the output if the train is run as a derived data production. The produced derived data can be made available by the operators and serve as input for subsequent trains. 
  
 ### <a name="deriveddatatypes"></a> Derived data types
-* At the moment, there are two types of derived data specifications:
+* There are three types of derived data specifications:
   * Standard derived data (marked with 🗂️)- if the wagon is used in a train, this will produce derived data to be used for further analysis. The results will not be merged across runs and can be used as input for future train runs. Note that standard derived data trains do not submit automatically and may need additional approval. If in doubt, please seek advise before enabling derived data tables in your wagon configuration.
   * Slim derived data (marked with green bordered 🗂️) - similarly to the standard derived data case, if used in a train, this will produce derived data to be used for further analysis. This is reserved for derived data of small output size. The results will be merged across runs and are not available to use in future train runs. The data will be automatically deleted after a preset period of time. You can mark a wagon for running as slim derived data by checking `Ready for slim derived data`.
+  * Linked derived data (marked with red bordered 🗂️) - linked derived data trains will also produce derived data to be used for further analysis. Linked derived data has access to the parent AO2D - this is not the case for other derived data types. Like standard derived data, results are not merged across runs.
  
 * For wagons set as ready for slim derived data, two more fields need to be correctly set:
   * Max DF size - This sets the maximal dataframe size in the merging step. Has to be 0 for not-self contained derived data (which need parent file access).
@@ -337,6 +338,7 @@ When a wagon test finishes in warning, this means that the wagon will not be inc
   </div>
  
  * The CPU usage limit is set per dataset and all trains running on a specific dataset must respect this constraint. If the limit is not respected, the train cannot be composed without PWG approval. Therefore, the user should discuss the details and requirements for this train with the PWG before requesting again. Depending on the amount of total resources, an approval in the Physics Board (PB) may also be needed. The CPU limit of a dataset may be viewed on the dataset page.
+ * It is possible for a train to have a CPU warning when composed despite the wagon test not having a CPU warning. This usually happens in a situation where the wagon test (which runs on a single core) uses so much memory that it doesn't fit a single core job on the grid and therefore needs two cores for the train (more cores means a higher memory allowance). But if the devices in the wagon cannot be parallelised well over multiple cores, this leads to more wall time and a higher CPU usage as the cores will be underutilised. In this situation, one can either reduce the wagon memory consumption to fit into a single core or reduce the CPU consumption to fit the dataset. 
  
 ### 4. <a name="warning-ccdb"></a> Too many CCDB calls
  
