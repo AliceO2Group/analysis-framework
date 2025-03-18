@@ -102,8 +102,7 @@ Block policies have 2 additional parameters: `outsider` and `categoryNeighbours`
 
 `CategoryNeighbours` is the number of the consecutive following elements a given element is combined with. For performance reasons, tuples of elements traditionally are not generated over the whole bin, but over several much smaller intervals.<br>
 Example: `categoryNeighbours = 4`, the bin contains elements at rows: 1, 3, 5, 6, 10, 13, 16, 19<br>
-         Strictly upper pairs (different colors mark pairs from different 5-element combinations intervals): <span style="color:blue">(1, 3), ..., (1, 10), (3, 5), ..., (6, 10),</span> <span style="color:green">(3, 5), ..., (10, 13),</span> <span style="color:orange">(5, 6), ..., (13, 16),</span> ...<br>
-Note that some pairs get repeated, e.g., (3, 5).<br>
+         Strictly upper pairs (different colors mark pairs from different 5-element combinations intervals): <span style="color:blue">(1, 3), ..., (1, 10),</span> <span style="color:green">(3, 5), ..., (3, 13),</span> <span style="color:orange">(5, 6), ..., (5, 16),</span> ...<br>
 To get the behavior without sliding windows, set category neighbours to a very high value.
 
 Below, you can see a full example of block combinations in an analysis task:
