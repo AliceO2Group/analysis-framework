@@ -171,3 +171,19 @@ Alien Token Check failed - Please get an alien token before running with https C
 - Create the AliEn token by executing the `alien.py` command inside the O2Physics environment.
 - You should be greeted with `Welcome to the ALICE GRID`.
 - Exit with `exit`.
+
+## Graphical issue with high DPI monitors
+
+When using monitors with high DPI the labels and text in TBrowser might be too small, especially when fractional scaling is enabled in multiple
+monitors setup. A workaround for this issue is to create a local .rootrc file in the $HOME folder including the following lines, edited with your own
+font preferences:
+
+```text
+Gui.DefaultFont:            -*-helvetica-medium-r-*-*-28-*-*-*-*-*-iso8859-1
+Gui.MenuFont:               -*-helvetica-medium-r-*-*-32-*-*-*-*-*-iso8859-1
+Gui.MenuHiFont:             -*-helvetica-bold-r-*-*-32-*-*-*-*-*-iso8859-1
+Gui.DocFixedFont:           -*-courier-medium-r-*-*-32-*-*-*-*-*-iso8859-1
+Gui.DocPropFont:            -*-helvetica-medium-r-*-*-32-*-*-*-*-*-iso8859-1
+Gui.IconFont:               -*-helvetica-medium-r-*-*-28-*-*-*-*-*-iso8859-1
+Gui.StatusFont:             -*-helvetica-medium-r-*-*-28-*-*-*-*-*-iso8859-1
+```
