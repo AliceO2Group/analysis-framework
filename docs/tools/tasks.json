@@ -1,0 +1,36 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Run O2 Linter",
+      "type": "process",
+      "command": "python3",
+      "args": [
+        "${workspaceFolder}/Scripts/o2_linter.py",
+        "${file}"
+      ],
+      "group": {
+        "kind": "test",
+        "isDefault": true
+      },
+      "problemMatcher": {
+        "owner": "python",
+        "source": "O2 linter",
+        "fileLocation": "absolute",
+        "pattern": {
+          "regexp": "^(.*):(\\d+):\\s+(info|warning|error):\\s+(.*)\\s+\\[(.*)\\]$",
+          "file": 1,
+          "line": 2,
+          "severity": 3,
+          "message": 4,
+          "code": 5
+        }
+      },
+      "presentation": {
+        "revealProblems": "onProblem",
+        "panel": "dedicated"
+      },
+      "detail": "Runs O2 linter on the current file."
+    }
+  ]
+}

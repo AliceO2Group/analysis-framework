@@ -1,5 +1,5 @@
 ---
-sort: 8
+sort: 9
 title: Troubleshooting
 ---
 
@@ -21,6 +21,8 @@ grep -e "FAILED:" -e "error:" -e "warning:" ../log | cut -d : -f -3
 
 If you want to see the full messages, remove the `| cut...` part.
 
+See also [shell rc utilities](../tools/README.md#shell-rc-utilities).
+
 ### Runtime problems
 
 If your O2 code is crashing and you have difficulties finding the reason, try the following tips.
@@ -37,6 +39,8 @@ Search for keywords related to problems in the log file using the `grep` command
 grep -e "\\[ERROR\\]" -e "\\[FATAL\\]" -e "segmentation" -e "Segmentation" -e "SEGMENTATION" -e "command not found" -e "Program crashed" -e "Error:" -e "Error in " -e "\\[WARN\\]" -e "Warning in " stdout.log
 ```
 
+See also [shell rc utilities](../tools/README.md#shell-rc-utilities).
+
 Try to understand and resolve the first reported problem.
 
 ```note
@@ -48,7 +52,7 @@ You can inspect a failing [AliHyperloop test](../hyperloop/userdocumentation.md#
 See the [Support](../gettingstarted/support.md) section for the list of Mattermost channels where you can ask for help.
 
 When asking for help with compilation or with running a local analysis, it may be useful to provide basic information about your O2Physics setup.
-You can generate it by running the [`summarise_o2p_setup.sh`](summarise_o2p_setup.sh) bash script in your `alice` directory.
+You can generate it using the [Setup diagnostic tool](../tools/README.md#setup-diagnostic-tool).
 
 When posting on Mattermost:
 

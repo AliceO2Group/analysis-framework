@@ -204,6 +204,8 @@ Note that this directory tends to grow in size over time, and it is the one you 
 
 When `aliBuild`is installed on your computer and your prerequisits are statisfied, you can move to the next step.
 
+See also [shell rc utilities](../tools/README.md#shell-rc-utilities).
+
 ## Prepare your source code
 
 We assume your work area is `~/alice`.
@@ -317,6 +319,8 @@ For example: `ninja PWGCF/Tasks/install`
 ```bash
 ninja install > ../log 2>&1 && echo "Good" || echo "Bad"
 ```
+
+See also [shell rc utilities](../tools/README.md#shell-rc-utilities).
 
 A specific executable can be built in the staging directory `stage/bin` with
 
