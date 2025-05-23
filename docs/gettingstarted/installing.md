@@ -36,6 +36,9 @@ According to your operating system, please follow the prerequisites below. You w
 * [macOS Sonoma and Sequoia (14.0, 15.0)](#prereq-for-macos)
 * [Ubuntu (20.04 LTS, 22.04 LTS, 24.04 LTS)](#prereq-for-ubuntu)
 * [Fedora](#prereq-for-fedora)
+* Linux Mint
+    * Follow the instructions for the Ubuntu version your Linux Mint version is based on.
+    * Specify the corresponding Ubuntu architecture when running the `aliBuild` command using the `-a` option (e.g. `-a ubuntu2004_x86-64` for Ubuntu 20.04). Use the `-a` option also with the `alienv` command.
 
 If your operating system is *not* in any list, it does not mean our software won't work on it; it will be just more difficult for you to get support for it.
 
