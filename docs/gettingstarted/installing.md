@@ -33,9 +33,9 @@ According to your operating system, please follow the prerequisites below. You w
 
 ##### Platforms supported on a best-effort basis:
 
-* macOS Sonoma and Sequoia (14.0, 15.0)
-* Ubuntu (20.04 LTS, 22.04 LTS, 24.04 LTS)
-* Fedora
+* [macOS Sonoma and Sequoia (14.0, 15.0)](#prereq-for-macos)
+* [Ubuntu (20.04 LTS, 22.04 LTS, 24.04 LTS)](#prereq-for-ubuntu)
+* [Fedora](#prereq-for-fedora)
 
 If your operating system is *not* in any list, it does not mean our software won't work on it; it will be just more difficult for you to get support for it.
 
