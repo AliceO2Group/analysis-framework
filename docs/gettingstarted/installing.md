@@ -10,7 +10,197 @@ can also automatically download precompiled binaries if possible.
 
 ## Installing aliBuild
 
-Follow the instructions <a href="https://alice-doc.github.io/alice-analysis-tutorial/building/custom.html" target="_blank">here</a>. Do not follow "build the packages" on that page.
+Building software has become an increasingly complicated operation, as our software has many dependencies and we expect it to work both on your laptop and on the Grid. In addition, we support many Linux distributions and recent macOS versions.
+
+ALICE uses aliBuild to build software. aliBuild:
+
+* knows how to build software via per-package recipes,
+* manages the dependencies consistently,
+* rebuilds only what's necessary,
+* allows several versions of the same software to be installed at the same time.
+
+### Operating systems we support
+
+#### Prerequisites
+
+According to your operating system, please follow the prerequisites below. You will find a list of packages to install and configurations to perform.
+
+##### Primary supported platform:
+
+* [CentOS 7](#prereq-for-centos7)
+* [CentOS/AlmaLinux 8](#prereq-for-centos8)
+* [AlmaLinux 9](#prereq-for-alma9)
+
+##### Platforms supported on a best-effort basis:
+
+* [macOS Sonoma and Sequoia (14.0, 15.0)](#prereq-for-macos)
+* [Ubuntu (20.04 LTS, 22.04 LTS, 24.04 LTS)](#prereq-for-ubuntu)
+* [Fedora](#prereq-for-fedora)
+
+If your operating system is *not* in any list, it does not mean our software won't work on it; it will be just more difficult for you to get support for it.
+
+Only in case you cannot install aliBuild in the way described above, you can install aliBuild manually. This procedure should only be used as a fall-back, in case you cannot follow the instructions for your operating system linked above.
+
+
+<h6 id=<prereq-for-centos7> aliBuild prerequisites for CentOS7 </h6>
+
+With root permission, i.e. `sudo` or as `root`install the prerequisits using:
+```bash
+cat << EOF > /etc/yum.repos.d/alice-system-deps.repo
+[alice-system-deps]
+name=alice-system-deps
+baseurl=https://s3.cern.ch/swift/v1/alibuild-repo/RPMS/o2-full-deps_x86-64/
+enabled=1
+gpgcheck=0
+EOF
+yum update -y
+yum install -y alice-o2-full-deps 
+yum update -y
+yum install -y alibuild
+```
+
+<h6 id=<prereq-for-centos8> aliBuild prerequisites for CentOS8 </h6>
+
+With root permission, i.e. `sudo` or as `root` install the prerequisits using:
+```bash
+yum install -y epel-release
+yum install -y dnf-plugins-core
+yum config-manager --set-enabled powertools
+yum update -y
+
+dnf group install -y "Development Tools"
+
+cat << EOF > /etc/yum.repos.d/alice-system-deps.repo
+[alice-system-deps]
+name=alice-system-deps
+baseurl=https://s3.cern.ch/swift/v1/alibuild-repo/RPMS/o2-full-deps_el8.x86-64/
+enabled=1
+gpgcheck=0
+EOF
+yum update -y
+yum install -y alice-o2-full-deps alibuild
+```
+
+<h6 id="prereq-for-alma9"> aliBuild prerequisites for AlmaLinux9 </h6>
+
+With root permission, i.e. `sudo` or as `root`install the prerequisits using:
+```bash
+dnf install -y epel-release dnf-plugins-core
+dnf update -y
+dnf config-manager --set-enabled crb
+dnf group install -y 'Development Tools'
+cat << EOF > /etc/yum.repos.d/alice-system-deps.repo
+[alice-system-deps]
+name=alice-system-deps
+baseurl=https://s3.cern.ch/swift/v1/alibuild-repo/RPMS/o2-full-deps_el9.x86-64/
+enabled=1
+gpgcheck=0
+EOF
+dnf update -y
+dnf install -y alice-o2-full-deps alibuild
+```
+
+<h6 id="prereq-for-macos">aliBuild prerequisites for macOS</h6>
+
+**Get Xcode**<br>
+Xcode bundles the necessary tools to build software in the apple ecosystem including compilers, build systems and version control.
+
+* Download it from the [App Store](https://itunes.apple.com/gh/app/xcode/id497799835?mt=12)
+* Open once installed. It will ask to install additional components - approve the action.
+* Open a terminal (Applicaions>Utilities>Terminal) and install the command line tools using: <br>
+* `sudo xcode-select --install`
+* Approve the license conditions by <br>
+`sudo xcodebuild -license`
+
+**Get Homebrew**<br>
+[Homebrew](https://brew.sh/) is a command-line package manager for macOS used to install software packages similar to `yum` on CentOS or `apt` on Ubuntu.
+
+* Install Homebrew using the [instructions on their webpage](https://brew.sh/).
+* Once installed detect any problems regarding Homebrew and your system using: `brew doctor`
+
+
+**Uninstall ROOT**<br>
+If you have an existing ROOT installation on your system, this will interfere with the aliBuild installation, and will cause difficult-to-debug compilation errors.
+
+Please uninstall any existing copy of ROOT on your system. The uninstallation method depends on how you installed it. For example, if you originally installed ROOT using Homebrew, you should uninstall it using `brew uninstall root`.
+
+After uninstalling ROOT, remove any reference to ROOT from your `.zprofile`, `.zshrc` and any other shell configuration files. Then close and re-open your terminal window.
+
+**Install the required packages**<br>
+
+Note that Homebrew does not run as root. Do not prepend sudo to any of the following commands.
+
+* Install the prerequisites and aliBuild via:<br>
+```brew install alisw/system-deps/o2-full-deps alisw/system-deps/alibuild```
+* Set up Homebrew in your shell by running the following command:<br>
+```echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile```
+* Close Terminal and reopen it to apply changes.
+
+
+<h6 id="prereq-for-ubuntu">aliBuild prerequisites for Ubuntu</h6>
+
+ALICE software on Ubuntu is supported on a best effort basis. There is no guarantee that software builds or runs correctly. Support requests might have low priority. We were able to successfully build on:
+
+* Ubuntu 20.04 LTS
+* Ubuntu 22.04 LTS
+* Ubuntu 24.04 LTS
+
+**Install required system packages**<br>
+
+With root permissions, i.e. sudo, update your package sources:
+```bash
+sudo apt update -y
+```
+With root permissions, i.e. `sudo`, install the following packages:
+```bash
+sudo apt install -y curl libcurl4-gnutls-dev build-essential gfortran libmysqlclient-dev xorg-dev libglu1-mesa-dev libfftw3-dev libxml2-dev git unzip autoconf automake autopoint texinfo gettext libtool libtool-bin pkg-config bison flex libperl-dev libbz2-dev swig liblzma-dev libnanomsg-dev rsync lsb-release environment-modules libglfw3-dev libtbb-dev python3-dev python3-venv python3-pip graphviz libncurses-dev software-properties-common gtk-doc-tools
+```
+**Installing aliBuild**<br>
+
+AliBuild, our build tool, is installed as a standard ubuntu package, provided you enable the alisw PPA repository. This is done with:
+
+```bash
+sudo add-apt-repository ppa:alisw/ppa  
+sudo apt update
+sudo apt install python3-alibuild
+```
+
+<h6 id="prereq-for-fedora">aliBuild prerequisites for Fedora</h6>
+
+With root permissions, i.e. `sudo` or as `root` install the prerequisites using:
+```bash
+yum install -y epel-release
+yum install -y dnf-plugins-core
+yum config-manager --set-enabled powertools
+yum update -y
+
+dnf group install -y "Development Tools"
+
+cat << EOF > /etc/yum.repos.d/alice-system-deps.repo
+[alice-system-deps]
+name=alice-system-deps
+baseurl=https://s3.cern.ch/swift/v1/alibuild-repo/RPMS/o2-full-deps_fedora.x86-64/
+enabled=1
+gpgcheck=0
+EOF
+yum update -y
+yum install -y alice-o2-full-deps alibuild
+```
+
+### Configure aliBuild
+
+After you are done installing alibuild you need to configure it by adding the two following lines to your ~/.bashrc, ~/.bash_profile, ~/.zshrc or ~/.zprofile (depending on your operating system and configuration):
+```bash
+export ALIBUILD_WORK_DIR="$HOME/alice/sw"
+eval "$(alienv shell-helper)"
+```
+The first line tells what directory is used as "build cache", the second line installs a "shell helper" that makes easier to run certain aliBuild-related commands.
+
+You need to close and reopen your terminal for the change to be effective. The directory `~/alice/sw` will be created the first time you run aliBuild.
+
+""Note that this directory tends to grow in size over time, and it is the one you need to remove in case of cleanups.""
+
+When `aliBuild`is installed on your computer and your prerequisits are statisfied, you can move to the next step.
 
 ## Prepare your source code
 
