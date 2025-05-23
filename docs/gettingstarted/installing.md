@@ -41,8 +41,7 @@ If your operating system is *not* in any list, it does not mean our software won
 
 Only in case you cannot install aliBuild in the way described above, you can install aliBuild manually. This procedure should only be used as a fall-back, in case you cannot follow the instructions for your operating system linked above.
 
-
-<h6 id=<prereq-for-centos7> aliBuild prerequisites for CentOS7 </h6>
+<h6 id="prereq-for-centos7"> aliBuild prerequisites for CentOS7 </h6>
 
 With root permission, i.e. `sudo` or as `root`install the prerequisits using:
 ```bash
@@ -59,7 +58,7 @@ yum update -y
 yum install -y alibuild
 ```
 
-<h6 id=<prereq-for-centos8> aliBuild prerequisites for CentOS8 </h6>
+<h6 id="prereq-for-centos8"> aliBuild prerequisites for CentOS8 </h6>
 
 With root permission, i.e. `sudo` or as `root` install the prerequisits using:
 ```bash
@@ -189,7 +188,7 @@ yum install -y alice-o2-full-deps alibuild
 
 ### Configure aliBuild
 
-After you are done installing alibuild you need to configure it by adding the two following lines to your ~/.bashrc, ~/.bash_profile, ~/.zshrc or ~/.zprofile (depending on your operating system and configuration):
+After you are done installing alibuild you need to configure it by adding the two following lines to your `~/.bashrc`, `~/.bash_profile`, `~/.zshrc` or `~/.zprofile` (depending on your operating system and configuration):
 ```bash
 export ALIBUILD_WORK_DIR="$HOME/alice/sw"
 eval "$(alienv shell-helper)"
@@ -198,7 +197,7 @@ The first line tells what directory is used as "build cache", the second line in
 
 You need to close and reopen your terminal for the change to be effective. The directory `~/alice/sw` will be created the first time you run aliBuild.
 
-""Note that this directory tends to grow in size over time, and it is the one you need to remove in case of cleanups.""
+Note that this directory tends to grow in size over time, and it is the one you need to remove in case of cleanups.
 
 When `aliBuild`is installed on your computer and your prerequisits are statisfied, you can move to the next step.
 
