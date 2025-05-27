@@ -54,28 +54,28 @@ This operation needs to be performed only once. With Firefox, click on [this lin
 Keep at hand the `myCertificate.p12` file you have previously downloaded. You need to convert it into two files (a "certificate" and a "key") in order to use the ALICE Grid services from the command line.
 
 You will export your certificates to the following directory:
-```
+```bash
 ~/.globus
 ```
 
 Now export the certificate with the following command (you will be prompted for the export password you have selected when you have generated it):
-```
+```bash
 openssl pkcs12 -clcerts -nokeys -in ~/Downloads/myCertificate.p12 -out ~/.globus/usercert.pem
 ```
 
 The result will be a file called `usercert.pem` in your `~/.globus` directory. Note that your input file ending with `.p12` may have a different name and may be stored in a different location.
 
 Time to export the **private key**:
-```
+```bash
 openssl pkcs12 -nocerts -in ~/Downloads/myCertificate.p12 -out ~/.globus/userkey.pem
 chmod 0400 ~/.globus/userkey.pem
 ```
 When it says:
-```
+```bash
 Enter Import Password:
 ```
 you should provide it with the export password you have entered when you generated it. The next question will be:
-```
+```bash
 Enter PEM pass phrase:
 ```
 You should provide it with another password that will be used to protect the private key. You can use the same password as before if you want, but please **do not use your CERN password** (yes, we are stressing this point a **lot**). This question will be asked twice for confirmation.
@@ -85,7 +85,7 @@ You should provide it with another password that will be used to protect the pri
 Your certificate will be available to the ALICE Grid command line client.
 
 Enter your ALICE environment and create a "temporary access token":
-```
+```bash
 alienv enter O2Physics/latest
 alien-token-destroy
 alien-token-init YOUR_ALIEN_USERNAME

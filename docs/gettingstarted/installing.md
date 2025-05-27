@@ -56,7 +56,7 @@ enabled=1
 gpgcheck=0
 EOF
 yum update -y
-yum install -y alice-o2-full-deps 
+yum install -y alice-o2-full-deps
 yum update -y
 yum install -y alibuild
 ```
@@ -162,7 +162,7 @@ sudo apt install -y curl libcurl4-gnutls-dev build-essential gfortran libmysqlcl
 AliBuild, our build tool, is installed as a standard ubuntu package, provided you enable the alisw PPA repository. This is done with:
 
 ```bash
-sudo add-apt-repository ppa:alisw/ppa  
+sudo add-apt-repository ppa:alisw/ppa
 sudo apt update
 sudo apt install python3-alibuild
 ```
