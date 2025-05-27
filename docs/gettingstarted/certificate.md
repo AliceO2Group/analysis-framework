@@ -95,5 +95,5 @@ This assumes you have completed your [installation](https://aliceo2group.github.
 
 The `alien-token-init` command will ask you for a password. This is the last password you have used when you have converted your `.p12` certificate into two `.pem` files.
 
-#### Creating JAliEn and AliEn tokens
+### Creating JAliEn and AliEn tokens
 Note that the new JAliEn Grid clients automatically create tokens, while AliEn-ROOT-Legacy (ROOT5) requires running alien-token-init manually. There is alien-token-init for JAliEn, and you can use it to test your credentials or (re)create tokens manually.
