@@ -87,6 +87,6 @@ Please keep in mind that non-critical issues are still genuine issues and fixing
 - [The Zen of Python](https://peps.python.org/pep-0020/)
 - [Style Guide for Python Code](https://peps.python.org/pep-0008/)
 - [ALICE O2 Coding Guidelines](https://github.com/AliceO2Group/CodingGuidelines)
-- [PWG-HF guidelines](../advanced-specifics/pwghf.html#contribute)
+- [PWG-HF guidelines](../advanced-specifics/pwghf.md#contribute)
 - [Proposal of the O2 linter](https://indico.cern.ch/event/1482467/#29-development-of-the-o2-linte)
 - [Update of the O2 linter](https://indico.cern.ch/event/1513748/#29-o2-linter-development)
