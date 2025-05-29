@@ -109,7 +109,7 @@ You can use the [`bashrc-alice.sh`](bashrc-alice.sh) file to add ALICE-related u
 
 The file provides:
 
-- variables needed to [configure aliBuild](../gettingstarted/installing.md#installing-alibuild)
+- variables needed to [configure aliBuild](../gettingstarted/installing.md#configure-alibuild)
 - utility functions for [recompiling with `ninja`](../gettingstarted/installing.md#building-partially-for-development-using-ninja)
 - utility functions for [debugging compilation and runtime failures](../troubleshooting/README.md#finding-problems)
 
