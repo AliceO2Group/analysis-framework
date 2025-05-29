@@ -42,7 +42,7 @@ Mattermost channel: [hf-o2-analysis](https://mattermost.web.cern.ch/alice/channe
 - Selection of tracks based on the particle identification (PID) detectors is performed via the
 [`TrackSelectorPID`](https://github.com/AliceO2Group/O2Physics/blob/master/Common/Core/TrackSelectorPID.h) class.
 - The validation framework for easy local execution, testing and validation of O2Physics code can be found in the
-[Run3Analysisvalidation](https://github.com/AliceO2Group/Run3Analysisvalidation) repository.
+[Run3AnalysisValidation](https://github.com/AliceO2Group/Run3AnalysisValidation) repository.
 
 ## AliHyperloop
 
@@ -191,7 +191,7 @@ Directories: [`PWGHF/D2H/Macros`](https://github.com/AliceO2Group/O2Physics/tree
     - `warn` for conditions that are likely to affect the expected behaviour of the code,
     - `error` for problems that lead to an unwanted behaviour of the code,
     - `fatal` for critical problems that make further running of the code impossible or useless.
-- Include only needed headers but do not rely on implicitly included headers.
+- Include only needed headers but do not rely on implicitly included headers. See [Include What You Use](https://github.com/AliceO2Group/O2Physics/issues/8357).
 - Organise `#include`s into groups (separated by a blank line) in the following order:
   - C++
   - other external headers
@@ -208,13 +208,12 @@ Directories: [`PWGHF/D2H/Macros`](https://github.com/AliceO2Group/O2Physics/tree
   See also [Magic numbers](https://rawgit.com/AliceO2Group/CodingGuidelines/master/coding_guidelines.html?showone=Magic_numbers#Magic_numbers).
 - Use `Type const&` for table subscriptions in function arguments.
 - Declare iterators in range-based `for` loops over tables with `const auto&`.
-- Test your code before making a pull request.
+- **Test your code before making a pull request.**
   - Check that your branch compiles without warnings.
-  - Propagate your changes into the [Run3Analysisvalidation](https://github.com/AliceO2Group/Run3Analysisvalidation/tree/master/codeHF#add-a-new-workflow) configuration.
+  - Propagate your changes into the [Run3AnalysisValidation](https://github.com/AliceO2Group/Run3AnalysisValidation/tree/master/codeHF#add-a-new-workflow) configuration.
   - Check that your code works and runs without errors and warnings.
     - Make sure your code is compatible with the expected input (Run 2/3/5, real/MC data, p–p/Pb–Pb).
-    - Check that your changes do not alter unexpectedly the control plots produced by the [validation framework](https://github.com/AliceO2Group/Run3Analysisvalidation/tree/master/codeHF#run-the-example).
-  - Make sure your tasks can be fully configured from Run3Analysisvalidation and AliHyperloop.
+  - Make sure your tasks can be fully configured from Run3AnalysisValidation and AliHyperloop.
 
 #### `struct` members
 
@@ -223,23 +222,27 @@ Organising the code in a well defined structure makes it easier to navigate thro
 - Group `struct` data members by category and separate the blocks by a single blank line.
   - If there is a reason to visually divide a category into smaller blocks, add a corresponding comment at the beginning of each block.
 - Sort `struct` member categories in the following order:
-  - `Produces`, `Spawns`, `Builds`
+  - `Spawns`
+  - `Builds`
+  - `Produces`
   - `Configurable`
-    - scalars (`bool`, `int`, `float`, `double`,...)
-    - vectors (`std::vector`)
-    - arrays (`LabeledArray`)
   - other members (constants, objects)
+  - `HfHelper`
+  - `SliceCache`
+  - `Service`
   - `using` declarations
   - `Filter`
   - `Preslice`
+  - `PresliceUnsorted`
   - `Partition`
   - `ConfigurableAxis`
   - `AxisSpec`
   - `HistogramRegistry`
   - output declarations (`OutputObj`,...)
-  - `init` function
+  - `void init`
   - helper functions
-  - `process` function(s)
+  - `void process`
+  - other `process` functions
     - Put one process function argument per line.
     - `PROCESS_SWITCH` follows immediately after the function definition.
 
@@ -280,4 +283,4 @@ Example:
 - Update your branch and test it before creating a PR.
 - Give your PR a short meaningful title.
 - Give further useful details about your changes in the PR description.
-  - Add links to all related PRs (e.g. O2Physics, O2, AliPhysics, Run3Analysisvalidation) in the PR description.
+  - Add links to all related PRs (e.g. O2Physics, O2, AliPhysics, Run3AnalysisValidation) in the PR description.

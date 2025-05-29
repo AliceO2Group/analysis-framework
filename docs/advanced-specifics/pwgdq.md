@@ -8,6 +8,7 @@ title: PWG-DQ
 In the past, some hands-on sessions have been organised within the PWG-DQ. A list of the corresponding indico events is down below:
 
 **most recent:**
+
 1. O2 DQ hands-on session (7 Dec 21) [indico event](https://indico.cern.ch/event/1098200/) , [ZOOM recordings of the first part of the session](https://indico.cern.ch/event/1098200/sessions/419561/attachments/2362418/4033057/videoPlenarySession.mp4)
 2. O2 DQ hands-on session (April 2022) [indico event](https://indico.cern.ch/event/1150382/)
 3. O2 Analysis tutorial (Oct 2022) [indico event](https://indico.cern.ch/event/1200252/timetable/?view=standard)
@@ -48,9 +49,9 @@ Mattermost channel: [O2-DQ Analysis Framework Alpha](https://mattermost.web.cern
 * DQ Data Model (Reduced tracks, events, muons etc.) is defined in
 [`ReducedInfoTables.h`](https://github.com/AliceO2Group/O2Physics/blob/master/PWGDQ/DataModel/ReducedInfoTables.h) class.
 * Code for easy running of the DQ tasks and output processing can be found in the
-[Run3Analysisvalidation](https://github.com/AliceO2Group/Run3Analysisvalidation) repository.
+[Run3AnalysisValidation](https://github.com/AliceO2Group/Run3AnalysisValidation) repository.
   * Analysis code for postprocessing of the task output is collected in the
-  [`FirstAnalysis`](https://github.com/AliceO2Group/Run3Analysisvalidation/tree/master/FirstAnalysis) directory.
+  [`FirstAnalysis`](https://github.com/AliceO2Group/Run3AnalysisValidation/tree/master/FirstAnalysis) directory.
 
 ## Existing Workflows
 
@@ -63,13 +64,14 @@ Mattermost channel: [O2-DQ Analysis Framework Alpha](https://mattermost.web.cern
 * [`dileptonMuMu.cxx`](https://github.com/AliceO2Group/O2Physics/blob/master/PWGDQ/Tasks/dileptonMuMu.cxx) It refers to The dimuon analysis task. It’s a derivative of the tableReader, but with muon only informations.  takes tracks flaged as « muon » and creates Pairs calculating mass, rapidity, pT.
 
 ## Python Interface
+
 To simplify the handling and usage of the O2-DQ framework a [python interface](https://github.com/ctolon/PythonInterfaceOOP) has been developed and will be maintained for further user support.
 
 Its main features are:
 
-- run tasks with simple commands (all main workflows are included)
-- dependencies are selected and set with no need to specify them in the command line
-- auto completion for workflows, settings and configurables
+* run tasks with simple commands (all main workflows are included)
+* dependencies are selected and set with no need to specify them in the command line
+* auto completion for workflows, settings and configurables
 
 To get started, a [detailed introduction](https://github.com/ctolon/PythonInterfaceOOP#user-python-based-interface) has been written and an introduction was given in the [hands-on session](https://indico.cern.ch/event/1220887/) (Dec 22).
 
