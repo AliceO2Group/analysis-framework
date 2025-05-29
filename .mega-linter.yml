@@ -8,6 +8,7 @@ ENABLE: # If you use ENABLE variable, all other languages/formats/tooling-format
   - ACTION
   - BASH
   - CPP
+  - JSON
   - MARKDOWN
   - SPELL
   - YAML
