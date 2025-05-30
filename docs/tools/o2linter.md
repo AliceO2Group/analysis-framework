@@ -35,7 +35,7 @@ Example: `python3 Scripts/o2_linter.py $(find . -path ./.git -prune -o -type f)`
 
 ### In Visual Studio Code
 
-The linter can be executed from Visual Studio Code editor as the default test task to lint the currently opened file.
+The linter can be executed from Visual Studio Code editor as [the default test task](https://code.visualstudio.com/docs/debugtest/testing#_task-integration) to lint the currently opened file.
 The linter output can be parsed by the `problemMatcher` to highlight issues directly in the code editor and list them in the problem panel.
 
 You can use [`tasks.json`](tasks.json) to add the configuration in `O2Physics/.vscode/tasks.json`.
