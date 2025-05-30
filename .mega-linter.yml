@@ -1,6 +1,6 @@
 ---
 # Configuration file for Mega-Linter
-# See all available variables at https://oxsecurity.github.io/megalinter/configuration/ and in linters documentation
+# See all available variables at http://megalinter.io/latest/configuration/ and in linters documentation
 
 APPLY_FIXES: all # all, none, or list of linter keys
 DEFAULT_BRANCH: master # Usually master or main
@@ -8,6 +8,7 @@ ENABLE: # If you use ENABLE variable, all other languages/formats/tooling-format
   - ACTION
   - BASH
   - CPP
+  - JSON
   - MARKDOWN
   - SPELL
   - YAML
