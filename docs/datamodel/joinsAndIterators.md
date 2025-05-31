@@ -54,14 +54,14 @@ Click on the labels to display the definitions. Click buttons to
   <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::StoredTracksExtra</button>
   <div class="panel">
     <ul>
-        <li>o2::aod::StoredTracksExtra = o2::aod::StoredTracksExtra_001</li>
+        <li>o2::aod::StoredTracksExtra = o2::aod::StoredTracksExtra_002</li>
     </ul>
   </div>
 
   <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::TracksExtra</button>
   <div class="panel">
     <ul>
-        <li>o2::aod::TracksExtra = o2::aod::TracksExtra_001</li>
+        <li>o2::aod::TracksExtra = o2::aod::TracksExtra_002</li>
     </ul>
   </div>
 
@@ -100,6 +100,13 @@ Click on the labels to display the definitions. Click buttons to
     </ul>
   </div>
 
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::Run2TrackExtras</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::Run2TrackExtras = o2::aod::Run2TrackExtras_001</li>
+    </ul>
+  </div>
+
   <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::Run2TrackExtra</button>
   <div class="panel">
     <ul>
@@ -121,10 +128,17 @@ Click on the labels to display the definitions. Click buttons to
     </ul>
   </div>
 
-  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::TrackQA</button>
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::TracksQAVersion</button>
   <div class="panel">
     <ul>
-        <li>o2::aod::TrackQA = o2::aod::TracksQA::iterator</li>
+        <li>o2::aod::TracksQAVersion = o2::aod::TracksQA_003</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::TracksQA</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::TracksQA = o2::aod::TracksQAVersion::iterator</li>
     </ul>
   </div>
 
@@ -160,6 +174,13 @@ Click on the labels to display the definitions. Click buttons to
   <div class="panel">
     <ul>
         <li>o2::aod::FwdTrackCovFwd = o2::aod::FwdTracksCov::iterator</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::MFTTrackCovFwd</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::MFTTrackCovFwd = o2::aod::MFTTracksCov::iterator</li>
     </ul>
   </div>
 
@@ -261,6 +282,13 @@ Click on the labels to display the definitions. Click buttons to
     </ul>
   </div>
 
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::FV0AExtra</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::FV0AExtra = o2::aod::FV0AsExtra::iterator</li>
+    </ul>
+  </div>
+
   <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::FV0C</button>
   <div class="panel">
     <ul>
@@ -275,6 +303,13 @@ Click on the labels to display the definitions. Click buttons to
     </ul>
   </div>
 
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::FT0Extra</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::FT0Extra = o2::aod::FT0sExtra::iterator</li>
+    </ul>
+  </div>
+
   <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::FDDs</button>
   <div class="panel">
     <ul>
@@ -286,6 +321,13 @@ Click on the labels to display the definitions. Click buttons to
   <div class="panel">
     <ul>
         <li>o2::aod::FDD = o2::aod::FDDs::iterator</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::FDDExtra</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::FDDExtra = o2::aod::FDDsExtra::iterator</li>
     </ul>
   </div>
 
@@ -380,10 +422,31 @@ Click on the labels to display the definitions. Click buttons to
     </ul>
   </div>
 
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::Run2BCInfos</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::Run2BCInfos = o2::aod::Run2BCInfos_001</li>
+    </ul>
+  </div>
+
   <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::Run2BCInfo</button>
   <div class="panel">
     <ul>
         <li>o2::aod::Run2BCInfo = o2::aod::Run2BCInfos::iterator</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::Run2OTFV0</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::Run2OTFV0 = o2::aod::Run2OTFV0s::iterator</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::Pmd</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::Pmd = o2::aod::Pmds::iterator</li>
     </ul>
   </div>
 
@@ -576,6 +639,20 @@ Click on the labels to display the definitions. Click buttons to
     </ul>
   </div>
 
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::CentRun2RefMult5</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::CentRun2RefMult5 = o2::aod::CentRun2RefMult5s::iterator</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::CentRun2RefMult8</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::CentRun2RefMult8 = o2::aod::CentRun2RefMult8s::iterator</li>
+    </ul>
+  </div>
+
   <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::CentFV0A</button>
   <div class="panel">
     <ul>
@@ -618,6 +695,20 @@ Click on the labels to display the definitions. Click buttons to
     </ul>
   </div>
 
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::CentNGlobal</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::CentNGlobal = o2::aod::CentNGlobals::iterator</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::CentMFT</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::CentMFT = o2::aod::CentMFTs::iterator</li>
+    </ul>
+  </div>
+
   <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::QPercentileFT0C</button>
   <div class="panel">
     <ul>
@@ -639,17 +730,24 @@ Click on the labels to display the definitions. Click buttons to
     </ul>
   </div>
 
-  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::QPercentileTPC</button>
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::QPercentileTPCall</button>
   <div class="panel">
     <ul>
-        <li>o2::aod::QPercentileTPC = o2::aod::QPercentileTPCs::iterator</li>
+        <li>o2::aod::QPercentileTPCall = o2::aod::QPercentileTPCalls::iterator</li>
     </ul>
   </div>
 
-  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::FEseCol</button>
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::QPercentileTPCneg</button>
   <div class="panel">
     <ul>
-        <li>o2::aod::FEseCol = o2::aod::FEseCols::iterator</li>
+        <li>o2::aod::QPercentileTPCneg = o2::aod::QPercentileTPCnegs::iterator</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::QPercentileTPCpos</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::QPercentileTPCpos = o2::aod::QPercentileTPCposs::iterator</li>
     </ul>
   </div>
 
@@ -674,6 +772,34 @@ Click on the labels to display the definitions. Click buttons to
     </ul>
   </div>
 
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::FwdTrackRealign</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::FwdTrackRealign = o2::aod::FwdTracksReAlign::iterator</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::FwdTrkCovRealign</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::FwdTrkCovRealign = o2::aod::FwdTrksCovReAlign::iterator</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::FullFwdTracksRealign</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::FullFwdTracksRealign = soa::Join<o2::aod::FwdTracksReAlign, o2::aod::FwdTrksCovReAlign></li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::FullFwdTrackRealign</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::FullFwdTrackRealign = soa::Join<o2::aod::FwdTracksReAlign, o2::aod::FwdTrksCovReAlign>::iterator</li>
+    </ul>
+  </div>
+
   <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::BarrelMults</button>
   <div class="panel">
     <ul>
@@ -695,6 +821,13 @@ Click on the labels to display the definitions. Click buttons to
     </ul>
   </div>
 
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::MFTMult</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::MFTMult = o2::aod::MFTMults::iterator</li>
+    </ul>
+  </div>
+
   <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::Mult</button>
   <div class="panel">
     <ul>
@@ -713,6 +846,13 @@ Click on the labels to display the definitions. Click buttons to
   <div class="panel">
     <ul>
         <li>o2::aod::MultExtra = o2::aod::MultsExtra::iterator</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::MultMCExtras</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::MultMCExtras = o2::aod::MultMCExtras_001</li>
     </ul>
   </div>
 
@@ -748,6 +888,34 @@ Click on the labels to display the definitions. Click buttons to
   <div class="panel">
     <ul>
         <li>o2::aod::MultBC = o2::aod::MultBCs::iterator</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::Occs</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::Occs = o2::aod::OccsBCsList</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::Occ</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::Occ = o2::aod::Occs::iterator</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::TOFBeta</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::TOFBeta = o2::pidtofbeta::TOFBetaImp<o2::aod::track::Length,o2::aod::pidtofsignal::TOFSignal,o2::aod::pidtofevtime::TOFEvTime></li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::TOFMass</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::TOFMass = o2::pidtofmass::TOFMassImp<o2::aod::track::Length,o2::aod::pidtofsignal::TOFSignal,o2::aod::pidtofevtime::TOFEvTime,o2::aod::track::TOFExpMom></li>
     </ul>
   </div>
 
@@ -982,10 +1150,31 @@ Click on the labels to display the definitions. Click buttons to
     </ul>
   </div>
 
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::CFMcParticleRef</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::CFMcParticleRef = o2::aod::CFMcParticleRefs::iterator</li>
+    </ul>
+  </div>
+
   <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::CF2ProngTrack</button>
   <div class="panel">
     <ul>
         <li>o2::aod::CF2ProngTrack = o2::aod::CF2ProngTracks::iterator</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::CF2ProngTrackml</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::CF2ProngTrackml = o2::aod::CF2ProngTrackmls::iterator</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::CF2ProngMcPart</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::CF2ProngMcPart = o2::aod::CF2ProngMcParts::iterator</li>
     </ul>
   </div>
 
@@ -1062,7 +1251,21 @@ Click on the labels to display the definitions. Click buttons to
   <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::SingleTrackSels</button>
   <div class="panel">
     <ul>
-        <li>o2::aod::SingleTrackSels = o2::aod::SingleTrackSels_v2</li>
+        <li>o2::aod::SingleTrackSels = o2::aod::SingleTrackSels_v3</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::FdCollision</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::FdCollision = o2::aod::FdCollisions::iterator</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::FDExtCollision</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::FDExtCollision = o2::aod::FDExtCollisions::iterator</li>
     </ul>
   </div>
 
@@ -1070,6 +1273,13 @@ Click on the labels to display the definitions. Click buttons to
   <div class="panel">
     <ul>
         <li>o2::aod::FDCascParticle = o2::aod::FDCascParticles::iterator</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::FdMCParticle</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::FdMCParticle = o2::aod::FdMCParticles::iterator</li>
     </ul>
   </div>
 
@@ -1175,6 +1385,13 @@ Click on the labels to display the definitions. Click buttons to
   <div class="panel">
     <ul>
         <li>o2::aod::CFMCParticle = o2::aod::CFMCParticles::iterator</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::ReducedEventsMultPV</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::ReducedEventsMultPV = o2::aod::ReducedEventsMultPV_001</li>
     </ul>
   </div>
 
@@ -1346,6 +1563,20 @@ Click on the labels to display the definitions. Click buttons to
     </ul>
   </div>
 
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::ReducedMFTExtra</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::ReducedMFTExtra = o2::aod::ReducedMFTsExtra::iterator</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::ReducedMFTLabel</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::ReducedMFTLabel = o2::aod::ReducedMFTLabels::iterator</li>
+    </ul>
+  </div>
+
   <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::ReducedMuon</button>
   <div class="panel">
     <ul>
@@ -1458,6 +1689,20 @@ Click on the labels to display the definitions. Click buttons to
     </ul>
   </div>
 
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::DileptonMiniTreeGen</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::DileptonMiniTreeGen = o2::aod::DileptonsMiniTreeGen::iterator</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::DileptonMiniTreeRec</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::DileptonMiniTreeRec = o2::aod::DileptonsMiniTreeRec::iterator</li>
+    </ul>
+  </div>
+
   <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::FwdPidAll</button>
   <div class="panel">
     <ul>
@@ -1469,6 +1714,13 @@ Click on the labels to display the definitions. Click buttons to
   <div class="panel">
     <ul>
         <li>o2::aod::DileptonTrackCandidate = o2::aod::DileptonTrackCandidates::iterator</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::DileptonTrackTrackCandidate</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::DileptonTrackTrackCandidate = o2::aod::DileptonTrackTrackCandidates::iterator</li>
     </ul>
   </div>
 
@@ -1486,10 +1738,17 @@ Click on the labels to display the definitions. Click buttons to
     </ul>
   </div>
 
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::EMBC</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::EMBC = o2::aod::EMBCs::iterator</li>
+    </ul>
+  </div>
+
   <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::EMEvents</button>
   <div class="panel">
     <ul>
-        <li>o2::aod::EMEvents = o2::aod::EMEvents_001</li>
+        <li>o2::aod::EMEvents = o2::aod::EMEvents_002</li>
     </ul>
   </div>
 
@@ -1591,6 +1850,13 @@ Click on the labels to display the definitions. Click buttons to
     </ul>
   </div>
 
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::MostProbableEMEventIdInMC</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::MostProbableEMEventIdInMC = o2::aod::MostProbableEMEventIdsInMC::iterator</li>
+    </ul>
+  </div>
+
   <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::EMMCEventLabel</button>
   <div class="panel">
     <ul>
@@ -1643,7 +1909,7 @@ Click on the labels to display the definitions. Click buttons to
   <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::EMPrimaryElectrons</button>
   <div class="panel">
     <ul>
-        <li>o2::aod::EMPrimaryElectrons = o2::aod::EMPrimaryElectrons_001</li>
+        <li>o2::aod::EMPrimaryElectrons = o2::aod::EMPrimaryElectrons_002</li>
     </ul>
   </div>
 
@@ -1682,6 +1948,13 @@ Click on the labels to display the definitions. Click buttons to
     </ul>
   </div>
 
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::EMPrimaryElectronPrefilterBitDerived</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::EMPrimaryElectronPrefilterBitDerived = o2::aod::EMPrimaryElectronsPrefilterBitDerived::iterator</li>
+    </ul>
+  </div>
+
   <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::EMPrimaryMuon</button>
   <div class="panel">
     <ul>
@@ -1707,6 +1980,20 @@ Click on the labels to display the definitions. Click buttons to
   <div class="panel">
     <ul>
         <li>o2::aod::EMAmbiguousMuonSelfId = o2::aod::EMAmbiguousMuonSelfIds::iterator</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::EMGlobalMuonSelfId</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::EMGlobalMuonSelfId = o2::aod::EMGlobalMuonSelfIds::iterator</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::EMDummyData</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::EMDummyData = o2::aod::EMDummyDatas::iterator</li>
     </ul>
   </div>
 
@@ -1784,6 +2071,13 @@ Click on the labels to display the definitions. Click buttons to
   <div class="panel">
     <ul>
         <li>o2::aod::V0PhotonKFCov = o2::aod::V0PhotonsKFCov::iterator</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::V0PhotonKFPrefilterBitDerived</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::V0PhotonKFPrefilterBitDerived = o2::aod::V0PhotonsKFPrefilterBitDerived::iterator</li>
     </ul>
   </div>
 
@@ -1899,6 +2193,48 @@ Click on the labels to display the definitions. Click buttons to
     </ul>
   </div>
 
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::HfRedPidDau0s</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::HfRedPidDau0s = o2::aod::HfRedPidDau0s_001</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::HfRedPidDau1s</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::HfRedPidDau1s = o2::aod::HfRedPidDau1s_001</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::HfRedPidDau2s</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::HfRedPidDau2s = o2::aod::HfRedPidDau2s_001</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::HfRedPidDau0</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::HfRedPidDau0 = o2::aod::HfRedPidDau0s::iterator</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::HfRedPidDau1</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::HfRedPidDau1 = o2::aod::HfRedPidDau1s::iterator</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::HfRedPidDau2</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::HfRedPidDau2 = o2::aod::HfRedPidDau2s::iterator</li>
+    </ul>
+  </div>
+
   <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::HfRedCandB0</button>
   <div class="panel">
     <ul>
@@ -1917,6 +2253,13 @@ Click on the labels to display the definitions. Click buttons to
   <div class="panel">
     <ul>
         <li>o2::aod::HfRedCandBs = soa::Join<o2::aod::HfCandBsExt, o2::aod::HfRedBsProngs></li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::HfRedCandLb</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::HfRedCandLb = soa::Join<o2::aod::HfCandLbExt, o2::aod::HfRedLbProngs></li>
     </ul>
   </div>
 
@@ -2151,6 +2494,20 @@ Click on the labels to display the definitions. Click buttons to
     </ul>
   </div>
 
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::HfCand3ProngWPidPiKaPr</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::HfCand3ProngWPidPiKaPr = soa::Join<o2::aod::HfCand3Prong, o2::aod::HfProng0PidPi, o2::aod::HfProng0PidPr, o2::aod::HfProng0PidKa, o2::aod::HfProng1PidPi, o2::aod::HfProng1PidPr, o2::aod::HfProng1PidKa, o2::aod::HfProng2PidPi, o2::aod::HfProng2PidPr, o2::aod::HfProng2PidKa></li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::HfCand3ProngWPidPiKa</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::HfCand3ProngWPidPiKa = soa::Join<o2::aod::HfCand3Prong, o2::aod::HfProng0PidPi, o2::aod::HfProng0PidKa, o2::aod::HfProng1PidPi, o2::aod::HfProng1PidKa, o2::aod::HfProng2PidPi, o2::aod::HfProng2PidKa></li>
+    </ul>
+  </div>
+
   <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::HfCandX</button>
   <div class="panel">
     <ul>
@@ -2182,7 +2539,7 @@ Click on the labels to display the definitions. Click buttons to
   <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::HfCandLb</button>
   <div class="panel">
     <ul>
-        <li>o2::aod::HfCandLb = o2::aod::HfCandLbExt</li>
+        <li>o2::aod::HfCandLb = soa::Join<o2::aod::HfCandLbExt, o2::aod::HfCandLbProngs></li>
     </ul>
   </div>
 
@@ -2228,6 +2585,13 @@ Click on the labels to display the definitions. Click buttons to
     </ul>
   </div>
 
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::HfD0FromDstarWPid</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::HfD0FromDstarWPid = soa::Join<o2::aod::HfD0FromDstar, o2::aod::HfProng0PidPi, o2::aod::HfProng0PidKa, o2::aod::HfProng1PidPi, o2::aod::HfProng1PidKa></li>
+    </ul>
+  </div>
+
   <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::HfCandDstars</button>
   <div class="panel">
     <ul>
@@ -2239,6 +2603,55 @@ Click on the labels to display the definitions. Click buttons to
   <div class="panel">
     <ul>
         <li>o2::aod::HfCandDstar = o2::aod::HfCandDstars::iterator</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::HfCandDstarsWPid</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::HfCandDstarsWPid = soa::Join<o2::aod::HfCandDstars, o2::aod::HfProng0PidPi, o2::aod::HfProng0PidKa, o2::aod::HfProng1PidPi, o2::aod::HfProng1PidKa, o2::aod::/HfProng2PidPi, o2::aod::/HfProng2PidKa></li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::Hf</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::Hf = o2::aod::#_hf_type_##CollBase=Hf##_hf_type_##CollBases::iterator</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::StoredHf</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::StoredHf = o2::aod::#_hf_type_##CollBase=StoredHf##_hf_type_##CollBases::iterator</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::Hf_hf_type_CollBase</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::Hf_hf_type_CollBase = o2::aod::Hf_hf_type_CollBases::iterator</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::StoredHf_hf_type_CollBase</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::StoredHf_hf_type_CollBase = o2::aod::StoredHf_hf_type_CollBases::iterator</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::Hf_hf_type_McCollBase</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::Hf_hf_type_McCollBase = o2::aod::Hf_hf_type_McCollBases::iterator</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::StoredHf_hf_type_McCollBase</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::StoredHf_hf_type_McCollBase = o2::aod::StoredHf_hf_type_McCollBases::iterator</li>
     </ul>
   </div>
 
@@ -2256,20 +2669,6 @@ Click on the labels to display the definitions. Click buttons to
     </ul>
   </div>
 
-  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::Hf3PCollBase</button>
-  <div class="panel">
-    <ul>
-        <li>o2::aod::Hf3PCollBase = o2::aod::Hf3PCollBases::iterator</li>
-    </ul>
-  </div>
-
-  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::StoredHf3PCollBase</button>
-  <div class="panel">
-    <ul>
-        <li>o2::aod::StoredHf3PCollBase = o2::aod::StoredHf3PCollBases::iterator</li>
-    </ul>
-  </div>
-
   <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::HfD0McCollBase</button>
   <div class="panel">
     <ul>
@@ -2284,17 +2683,150 @@ Click on the labels to display the definitions. Click buttons to
     </ul>
   </div>
 
-  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::Hf3PMcCollBase</button>
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::HfLcCollBase</button>
   <div class="panel">
     <ul>
-        <li>o2::aod::Hf3PMcCollBase = o2::aod::Hf3PMcCollBases::iterator</li>
+        <li>o2::aod::HfLcCollBase = o2::aod::HfLcCollBases::iterator</li>
     </ul>
   </div>
 
-  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::StoredHf3PMcCollBase</button>
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::StoredHfLcCollBase</button>
   <div class="panel">
     <ul>
-        <li>o2::aod::StoredHf3PMcCollBase = o2::aod::StoredHf3PMcCollBases::iterator</li>
+        <li>o2::aod::StoredHfLcCollBase = o2::aod::StoredHfLcCollBases::iterator</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::HfLcMcCollBase</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::HfLcMcCollBase = o2::aod::HfLcMcCollBases::iterator</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::StoredHfLcMcCollBase</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::StoredHfLcMcCollBase = o2::aod::StoredHfLcMcCollBases::iterator</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::HfDplusCollBase</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::HfDplusCollBase = o2::aod::HfDplusCollBases::iterator</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::StoredHfDplusCollBase</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::StoredHfDplusCollBase = o2::aod::StoredHfDplusCollBases::iterator</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::HfDplusMcCollBase</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::HfDplusMcCollBase = o2::aod::HfDplusMcCollBases::iterator</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::StoredHfDplusMcCollBase</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::StoredHfDplusMcCollBase = o2::aod::StoredHfDplusMcCollBases::iterator</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::HfBplusCollBase</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::HfBplusCollBase = o2::aod::HfBplusCollBases::iterator</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::StoredHfBplusCollBase</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::StoredHfBplusCollBase = o2::aod::StoredHfBplusCollBases::iterator</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::HfBplusMcCollBase</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::HfBplusMcCollBase = o2::aod::HfBplusMcCollBases::iterator</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::StoredHfBplusMcCollBase</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::StoredHfBplusMcCollBase = o2::aod::StoredHfBplusMcCollBases::iterator</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::HfDstarCollBase</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::HfDstarCollBase = o2::aod::HfDstarCollBases::iterator</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::StoredHfDstarCollBase</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::StoredHfDstarCollBase = o2::aod::StoredHfDstarCollBases::iterator</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::HfDstarMcCollBase</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::HfDstarMcCollBase = o2::aod::HfDstarMcCollBases::iterator</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::StoredHfDstarMcCollBase</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::StoredHfDstarMcCollBase = o2::aod::StoredHfDstarMcCollBases::iterator</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::HfB0CollBase</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::HfB0CollBase = o2::aod::HfB0CollBases::iterator</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::StoredHfB0CollBase</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::StoredHfB0CollBase = o2::aod::StoredHfB0CollBases::iterator</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::HfB0McCollBase</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::HfB0McCollBase = o2::aod::HfB0McCollBases::iterator</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::StoredHfB0McCollBase</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::StoredHfB0McCollBase = o2::aod::StoredHfB0McCollBases::iterator</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::HfcRedCollision</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::HfcRedCollision = o2::aod::HfcRedCollisions::iterator</li>
     </ul>
   </div>
 
@@ -2323,6 +2855,13 @@ Click on the labels to display the definitions. Click buttons to
   <div class="panel">
     <ul>
         <li>o2::aod::EMCALMCCluster = o2::aod::EMCALMCClusters::iterator</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::EMCALAmbiguousMCCluster</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::EMCALAmbiguousMCCluster = o2::aod::EMCALAmbiguousMCClusters::iterator</li>
     </ul>
   </div>
 
@@ -3320,6 +3859,153 @@ Click on the labels to display the definitions. Click buttons to
     </ul>
   </div>
 
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::DplusChargedJet</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::DplusChargedJet = o2::aod::DplusChargedJets::iterator</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::DplusChargedJetConstituent</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::DplusChargedJetConstituent = o2::aod::DplusChargedJetConstituents::iterator</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::DplusChargedMCDetectorLevelJet</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::DplusChargedMCDetectorLevelJet = o2::aod::DplusChargedMCDetectorLevelJets::iterator</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::DplusChargedMCDetectorLevelJetConstituent</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::DplusChargedMCDetectorLevelJetConstituent = o2::aod::DplusChargedMCDetectorLevelJetConstituents::iterator</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::DplusChargedMCParticleLevelJet</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::DplusChargedMCParticleLevelJet = o2::aod::DplusChargedMCParticleLevelJets::iterator</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::DplusChargedMCParticleLevelJetConstituent</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::DplusChargedMCParticleLevelJetConstituent = o2::aod::DplusChargedMCParticleLevelJetConstituents::iterator</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::DplusChargedMCDetectorLevelJetsMatchedToDplusChargedMCParticleLevelJet</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::DplusChargedMCDetectorLevelJetsMatchedToDplusChargedMCParticleLevelJet = o2::aod::DplusChargedMCDetectorLevelJetsMatchedToDplusChargedMCParticleLevelJets::iterator</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::DplusChargedMCParticleLevelJetsMatchedToDplusChargedMCDetectorLevelJet</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::DplusChargedMCParticleLevelJetsMatchedToDplusChargedMCDetectorLevelJet = o2::aod::DplusChargedMCParticleLevelJetsMatchedToDplusChargedMCDetectorLevelJets::iterator</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::DplusChargedMCDetectorLevelJetEventWeight</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::DplusChargedMCDetectorLevelJetEventWeight = o2::aod::DplusChargedMCDetectorLevelJetEventWeights::iterator</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::DplusChargedMCParticleLevelJetEventWeight</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::DplusChargedMCParticleLevelJetEventWeight = o2::aod::DplusChargedMCParticleLevelJetEventWeights::iterator</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::DplusChargedEventWiseSubtractedJet</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::DplusChargedEventWiseSubtractedJet = o2::aod::DplusChargedEventWiseSubtractedJets::iterator</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::DplusChargedEventWiseSubtractedJetConstituent</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::DplusChargedEventWiseSubtractedJetConstituent = o2::aod::DplusChargedEventWiseSubtractedJetConstituents::iterator</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::DplusChargedJetsMatchedToDplusChargedEventWiseSubtractedJet</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::DplusChargedJetsMatchedToDplusChargedEventWiseSubtractedJet = o2::aod::DplusChargedJetsMatchedToDplusChargedEventWiseSubtractedJets::iterator</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::DplusChargedEventWiseSubtractedJetsMatchedToDplusChargedJet</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::DplusChargedEventWiseSubtractedJetsMatchedToDplusChargedJet = o2::aod::DplusChargedEventWiseSubtractedJetsMatchedToDplusChargedJets::iterator</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::DplusChargedMCDetectorLevelEventWiseSubtractedJet</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::DplusChargedMCDetectorLevelEventWiseSubtractedJet = o2::aod::DplusChargedMCDetectorLevelEventWiseSubtractedJets::iterator</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::DplusChargedMCDetectorLevelEventWiseSubtractedJetConstituent</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::DplusChargedMCDetectorLevelEventWiseSubtractedJetConstituent = o2::aod::DplusChargedMCDetectorLevelEventWiseSubtractedJetConstituents::iterator</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::DplusChargedMCDetectorLevelEventWiseSubtractedJetEventWeight</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::DplusChargedMCDetectorLevelEventWiseSubtractedJetEventWeight = o2::aod::DplusChargedMCDetectorLevelEventWiseSubtractedJetEventWeights::iterator</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::DplusChargedMCDetectorLevelJetsMatchedToDplusChargedMCDetectorLevelEventWiseSubtractedJet</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::DplusChargedMCDetectorLevelJetsMatchedToDplusChargedMCDetectorLevelEventWiseSubtractedJet = o2::aod::DplusChargedMCDetectorLevelJetsMatchedToDplusChargedMCDetectorLevelEventWiseSubtractedJets::iterator</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::DplusChargedMCDetectorLevelEventWiseSubtractedJetsMatchedToDplusChargedMCDetectorLevelJet</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::DplusChargedMCDetectorLevelEventWiseSubtractedJetsMatchedToDplusChargedMCDetectorLevelJet = o2::aod::DplusChargedMCDetectorLevelEventWiseSubtractedJetsMatchedToDplusChargedMCDetectorLevelJets::iterator</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::DplusChargedMCParticleLevelEventWiseSubtractedJet</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::DplusChargedMCParticleLevelEventWiseSubtractedJet = o2::aod::DplusChargedMCParticleLevelEventWiseSubtractedJets::iterator</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::DplusChargedMCParticleLevelEventWiseSubtractedJetConstituent</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::DplusChargedMCParticleLevelEventWiseSubtractedJetConstituent = o2::aod::DplusChargedMCParticleLevelEventWiseSubtractedJetConstituents::iterator</li>
+    </ul>
+  </div>
+
   <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::LcChargedJet</button>
   <div class="panel">
     <ul>
@@ -3946,14 +4632,14 @@ Click on the labels to display the definitions. Click buttons to
   <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::JetCollisions</button>
   <div class="panel">
     <ul>
-        <li>o2::aod::JetCollisions = o2::aod::JCollisions</li>
+        <li>o2::aod::JetCollisions = soa::Join<o2::aod::JCollisions, o2::aod::JCollisionMcInfos></li>
     </ul>
   </div>
 
   <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::JetCollision</button>
   <div class="panel">
     <ul>
-        <li>o2::aod::JetCollision = o2::aod::JetCollisions::iterator</li>
+        <li>o2::aod::JetCollision = soa::Join<o2::aod::JCollisions, o2::aod::JCollisionMcInfos>::iterator</li>
     </ul>
   </div>
 
@@ -3995,14 +4681,14 @@ Click on the labels to display the definitions. Click buttons to
   <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::JetClusters</button>
   <div class="panel">
     <ul>
-        <li>o2::aod::JetClusters = o2::aod::JClusters</li>
+        <li>o2::aod::JetClusters = soa::Join<o2::aod::JClusters, o2::aod::JClustersCorrectedEnergies, o2::aod::JClusterTracks></li>
     </ul>
   </div>
 
   <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::JetClustersMCD</button>
   <div class="panel">
     <ul>
-        <li>o2::aod::JetClustersMCD = soa::Join<o2::aod::JClusters, o2::aod::JMcClusterLbs></li>
+        <li>o2::aod::JetClustersMCD = soa::Join<o2::aod::JClusters, o2::aod::JClustersCorrectedEnergies, o2::aod::JClusterTracks, o2::aod::JMcClusterLbs></li>
     </ul>
   </div>
 
@@ -4024,6 +4710,13 @@ Click on the labels to display the definitions. Click buttons to
   <div class="panel">
     <ul>
         <li>o2::aod::JetParticles = o2::aod::JMcParticles</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::JetParticlesSub</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::JetParticlesSub = o2::aod::JMcParticleSubs</li>
     </ul>
   </div>
 
@@ -4055,6 +4748,13 @@ Click on the labels to display the definitions. Click buttons to
     </ul>
   </div>
 
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::JetParticlesSubD0</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::JetParticlesSubD0 = o2::aod::JMcParticleD0Subs</li>
+    </ul>
+  </div>
+
   <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::McCollisionsD0</button>
   <div class="panel">
     <ul>
@@ -4069,24 +4769,73 @@ Click on the labels to display the definitions. Click buttons to
     </ul>
   </div>
 
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::CollisionsDplus</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::CollisionsDplus = soa::Join<o2::aod::HfDplusCollBases, o2::aod::JDplusCollisionIds></li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::CandidatesDplusData</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::CandidatesDplusData = soa::Join<o2::aod::HfDplusBases, o2::aod::HfDplusPars, o2::aod::HfDplusParEs, o2::aod::HfDplusSels, o2::aod::HfDplusMls, o2::aod::JDplusIds></li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::CandidatesDplusMCD</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::CandidatesDplusMCD = soa::Join<o2::aod::HfDplusBases, o2::aod::HfDplusPars, o2::aod::HfDplusParEs, o2::aod::HfDplusSels, o2::aod::HfDplusMls, o2::aod::HfDplusMcs, o2::aod::JDplusIds></li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::JetTracksSubDplus</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::JetTracksSubDplus = o2::aod::JTrackDplusSubs</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::JetParticlesSubDplus</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::JetParticlesSubDplus = o2::aod::JMcParticleDplusSubs</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::McCollisionsDplus</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::McCollisionsDplus = soa::Join<o2::aod::HfDplusMcCollBases, o2::aod::JDplusMcCollisionIds></li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::CandidatesDplusMCP</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::CandidatesDplusMCP = soa::Join<o2::aod::HfDplusPBases, o2::aod::JDplusPIds></li>
+    </ul>
+  </div>
+
   <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::CollisionsLc</button>
   <div class="panel">
     <ul>
-        <li>o2::aod::CollisionsLc = soa::Join<o2::aod::Hf3PCollBases, o2::aod::JLcCollisionIds></li>
+        <li>o2::aod::CollisionsLc = soa::Join<o2::aod::HfLcCollBases, o2::aod::JLcCollisionIds></li>
     </ul>
   </div>
 
   <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::CandidatesLcData</button>
   <div class="panel">
     <ul>
-        <li>o2::aod::CandidatesLcData = soa::Join<o2::aod::Hf3PBases, o2::aod::Hf3PPars, o2::aod::Hf3PParEs, o2::aod::Hf3PSels, o2::aod::Hf3PMls, o2::aod::JLcIds></li>
+        <li>o2::aod::CandidatesLcData = soa::Join<o2::aod::HfLcBases, o2::aod::HfLcPars, o2::aod::HfLcParEs, o2::aod::HfLcSels, o2::aod::HfLcMls, o2::aod::JLcIds></li>
     </ul>
   </div>
 
   <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::CandidatesLcMCD</button>
   <div class="panel">
     <ul>
-        <li>o2::aod::CandidatesLcMCD = soa::Join<o2::aod::Hf3PBases, o2::aod::Hf3PPars, o2::aod::Hf3PParEs, o2::aod::Hf3PSels, o2::aod::Hf3PMls, o2::aod::Hf3PMcs, o2::aod::JLcIds></li>
+        <li>o2::aod::CandidatesLcMCD = soa::Join<o2::aod::HfLcBases, o2::aod::HfLcPars, o2::aod::HfLcParEs, o2::aod::HfLcSels, o2::aod::HfLcMls, o2::aod::HfLcMcs, o2::aod::JLcIds></li>
     </ul>
   </div>
 
@@ -4097,31 +4846,45 @@ Click on the labels to display the definitions. Click buttons to
     </ul>
   </div>
 
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::JetParticlesSubLc</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::JetParticlesSubLc = o2::aod::JMcParticleLcSubs</li>
+    </ul>
+  </div>
+
   <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::McCollisionsLc</button>
   <div class="panel">
     <ul>
-        <li>o2::aod::McCollisionsLc = soa::Join<o2::aod::Hf3PMcCollBases, o2::aod::JLcMcCollisionIds></li>
+        <li>o2::aod::McCollisionsLc = soa::Join<o2::aod::HfLcMcCollBases, o2::aod::JLcMcCollisionIds></li>
     </ul>
   </div>
 
   <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::CandidatesLcMCP</button>
   <div class="panel">
     <ul>
-        <li>o2::aod::CandidatesLcMCP = soa::Join<o2::aod::Hf3PPBases, o2::aod::JLcPIds></li>
+        <li>o2::aod::CandidatesLcMCP = soa::Join<o2::aod::HfLcPBases, o2::aod::JLcPIds></li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::CollisionsBplus</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::CollisionsBplus = soa::Join<o2::aod::HfBplusCollBases, o2::aod::JBplusCollisionIds></li>
     </ul>
   </div>
 
   <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::CandidatesBplusData</button>
   <div class="panel">
     <ul>
-        <li>o2::aod::CandidatesBplusData = soa::Join<o2::aod::HfCandBplus, o2::aod::HfSelBplusToD0Pi></li>
+        <li>o2::aod::CandidatesBplusData = soa::Join<o2::aod::HfBplusBases, o2::aod::HfBplusPars, o2::aod::HfBplusParEs, o2::aod::HfBplusParD0s, o2::aod::HfBplusSels, o2::aod::HfBplusMls, o2::aod::HfBplusMlD0s, o2::aod::JBplusIds></li>
     </ul>
   </div>
 
   <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::CandidatesBplusMCD</button>
   <div class="panel">
     <ul>
-        <li>o2::aod::CandidatesBplusMCD = soa::Join<o2::aod::HfCandBplus, o2::aod::HfSelBplusToD0Pi, o2::aod::HfCandBplusMcRec></li>
+        <li>o2::aod::CandidatesBplusMCD = soa::Join<o2::aod::HfBplusBases, o2::aod::HfBplusPars, o2::aod::HfBplusParEs, o2::aod::HfBplusParD0s, o2::aod::HfBplusSels, o2::aod::HfBplusMls, o2::aod::HfBplusMlD0s, o2::aod::HfBplusMcs, o2::aod::JBplusIds></li>
     </ul>
   </div>
 
@@ -4132,10 +4895,24 @@ Click on the labels to display the definitions. Click buttons to
     </ul>
   </div>
 
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::JetParticlesSubBplus</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::JetParticlesSubBplus = o2::aod::JMcParticleBplusSubs</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::McCollisionsBplus</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::McCollisionsBplus = soa::Join<o2::aod::HfBplusMcCollBases, o2::aod::JBplusMcCollisionIds></li>
+    </ul>
+  </div>
+
   <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::CandidatesBplusMCP</button>
   <div class="panel">
     <ul>
-        <li>o2::aod::CandidatesBplusMCP = soa::Join<o2::aod::JMcParticles, o2::aod::HfCandBplusMcGen></li>
+        <li>o2::aod::CandidatesBplusMCP = soa::Join<o2::aod::HfBplusPBases, o2::aod::JBplusPIds></li>
     </ul>
   </div>
 
@@ -4192,6 +4969,13 @@ Click on the labels to display the definitions. Click buttons to
   <div class="panel">
     <ul>
         <li>o2::aod::JetTracksSubDielectron = o2::aod::JTrackDielectronSubs</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::JetParticlesSubDielectron</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::JetParticlesSubDielectron = o2::aod::JMcParticleDielectronSubs</li>
     </ul>
   </div>
 
@@ -4657,6 +5441,118 @@ Click on the labels to display the definitions. Click buttons to
     </ul>
   </div>
 
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::DplusCJetCO</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::DplusCJetCO = o2::aod::DplusCJetCOs::iterator</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::DplusCJetO</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::DplusCJetO = o2::aod::DplusCJetOs::iterator</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::DplusCJetSSO</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::DplusCJetSSO = o2::aod::DplusCJetSSOs::iterator</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::DplusCEWSJetCO</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::DplusCEWSJetCO = o2::aod::DplusCEWSJetCOs::iterator</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::DplusCEWSJetO</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::DplusCEWSJetO = o2::aod::DplusCEWSJetOs::iterator</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::DplusCEWSJetSSO</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::DplusCEWSJetSSO = o2::aod::DplusCEWSJetSSOs::iterator</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::DplusCJetMO</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::DplusCJetMO = o2::aod::DplusCJetMOs::iterator</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::DplusCEWSJetMO</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::DplusCEWSJetMO = o2::aod::DplusCEWSJetMOs::iterator</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::DplusCMCDJetCO</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::DplusCMCDJetCO = o2::aod::DplusCMCDJetCOs::iterator</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::DplusCMCDJetO</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::DplusCMCDJetO = o2::aod::DplusCMCDJetOs::iterator</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::DplusCMCDJetSSO</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::DplusCMCDJetSSO = o2::aod::DplusCMCDJetSSOs::iterator</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::DplusCMCPJetCO</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::DplusCMCPJetCO = o2::aod::DplusCMCPJetCOs::iterator</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::DplusCMCPJetO</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::DplusCMCPJetO = o2::aod::DplusCMCPJetOs::iterator</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::DplusCMCPJetSSO</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::DplusCMCPJetSSO = o2::aod::DplusCMCPJetSSOs::iterator</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::DplusCMCDJetMO</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::DplusCMCDJetMO = o2::aod::DplusCMCDJetMOs::iterator</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::DplusCMCPJetMO</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::DplusCMCPJetMO = o2::aod::DplusCMCPJetMOs::iterator</li>
+    </ul>
+  </div>
+
   <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::LcCJetCO</button>
   <div class="panel">
     <ul>
@@ -5000,10 +5896,38 @@ Click on the labels to display the definitions. Click buttons to
     </ul>
   </div>
 
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::JMcParticleSub</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::JMcParticleSub = o2::aod::JMcParticleSubs::iterator</li>
+    </ul>
+  </div>
+
   <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::JTrackD0Sub</button>
   <div class="panel">
     <ul>
         <li>o2::aod::JTrackD0Sub = o2::aod::JTrackD0Subs::iterator</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::JMcParticleD0Sub</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::JMcParticleD0Sub = o2::aod::JMcParticleD0Subs::iterator</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::JTrackDplusSub</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::JTrackDplusSub = o2::aod::JTrackDplusSubs::iterator</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::JMcParticleDplusSub</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::JMcParticleDplusSub = o2::aod::JMcParticleDplusSubs::iterator</li>
     </ul>
   </div>
 
@@ -5014,6 +5938,13 @@ Click on the labels to display the definitions. Click buttons to
     </ul>
   </div>
 
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::JMcParticleLcSub</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::JMcParticleLcSub = o2::aod::JMcParticleLcSubs::iterator</li>
+    </ul>
+  </div>
+
   <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::JTrackBplusSub</button>
   <div class="panel">
     <ul>
@@ -5021,10 +5952,24 @@ Click on the labels to display the definitions. Click buttons to
     </ul>
   </div>
 
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::JMcParticleBplusSub</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::JMcParticleBplusSub = o2::aod::JMcParticleBplusSubs::iterator</li>
+    </ul>
+  </div>
+
   <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::JTrackDielectronSub</button>
   <div class="panel">
     <ul>
         <li>o2::aod::JTrackDielectronSub = o2::aod::JTrackDielectronSubs::iterator</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::JMcParticleDielectronSub</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::JMcParticleDielectronSub = o2::aod::JMcParticleDielectronSubs::iterator</li>
     </ul>
   </div>
 
@@ -5119,6 +6064,55 @@ Click on the labels to display the definitions. Click buttons to
     </ul>
   </div>
 
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::HypKfMcColl</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::HypKfMcColl = o2::aod::HypKfMcColls::iterator</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::HypKfMcPart</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::HypKfMcPart = o2::aod::HypKfMcParts::iterator</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::HypKfColl</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::HypKfColl = o2::aod::HypKfColls::iterator</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::HypKfTrack</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::HypKfTrack = o2::aod::HypKfTracks::iterator</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::HypKfSubD</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::HypKfSubD = o2::aod::HypKfSubDs::iterator</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::HypKfDaughtAdd</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::HypKfDaughtAdd = o2::aod::HypKfDaughtAdds::iterator</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::HypKfHypNuc</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::HypKfHypNuc = o2::aod::HypKfHypNucs::iterator</li>
+    </ul>
+  </div>
+
   <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::DataHypCand</button>
   <div class="panel">
     <ul>
@@ -5175,10 +6169,38 @@ Click on the labels to display the definitions. Click buttons to
     </ul>
   </div>
 
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::ResoCollisionColl</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::ResoCollisionColl = o2::aod::ResoCollisionColls::iterator</li>
+    </ul>
+  </div>
+
   <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::ResoMCCollision</button>
   <div class="panel">
     <ul>
         <li>o2::aod::ResoMCCollision = o2::aod::ResoMCCollisions::iterator</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::ResoSpheroCollision</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::ResoSpheroCollision = o2::aod::ResoSpheroCollisions::iterator</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::ResoEvtPlCollision</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::ResoEvtPlCollision = o2::aod::ResoEvtPlCollisions::iterator</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::ResoCollisionDF</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::ResoCollisionDF = o2::aod::ResoCollisionDFs::iterator</li>
     </ul>
   </div>
 
@@ -5189,6 +6211,34 @@ Click on the labels to display the definitions. Click buttons to
     </ul>
   </div>
 
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::ResoTrackTrack</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::ResoTrackTrack = o2::aod::ResoTrackTracks::iterator</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::ResoMicroTrack</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::ResoMicroTrack = o2::aod::ResoMicroTracks::iterator</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::ResoMicroTrackTrack</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::ResoMicroTrackTrack = o2::aod::ResoMicroTrackTracks::iterator</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::ResoTrackDF</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::ResoTrackDF = o2::aod::ResoTrackDFs::iterator</li>
+    </ul>
+  </div>
+
   <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::ResoV0</button>
   <div class="panel">
     <ul>
@@ -5196,10 +6246,31 @@ Click on the labels to display the definitions. Click buttons to
     </ul>
   </div>
 
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::ResoV0V0</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::ResoV0V0 = o2::aod::ResoV0V0s::iterator</li>
+    </ul>
+  </div>
+
   <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::ResoCascade</button>
   <div class="panel">
     <ul>
         <li>o2::aod::ResoCascade = o2::aod::ResoCascades::iterator</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::ResoCascadeCascade</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::ResoCascadeCascade = o2::aod::ResoCascadeCascades::iterator</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::ResoCascadeDF</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::ResoCascadeDF = o2::aod::ResoCascadeDFs::iterator</li>
     </ul>
   </div>
 
@@ -5248,7 +6319,7 @@ Click on the labels to display the definitions. Click buttons to
   <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::Reso2TracksPID</button>
   <div class="panel">
     <ul>
-        <li>o2::aod::Reso2TracksPID = soa::Join<o2::aod::FullTracks, o2::aod::pidTPCPi, o2::aod::pidTPCKa, o2::aod::pidTPCPr, o2::aod::pidTPCEl, o2::aod::pidTOFPi, o2::aod::pidTOFKa, o2::aod::pidTOFPr, o2::aod::pidTOFEl></li>
+        <li>o2::aod::Reso2TracksPID = soa::Join<o2::aod::FullTracks, o2::aod::pidTPCPi, o2::aod::pidTPCKa, o2::aod::pidTPCPr, o2::aod::pidTOFPi, o2::aod::pidTOFKa, o2::aod::pidTOFPr></li>
     </ul>
   </div>
 
@@ -5259,24 +6330,80 @@ Click on the labels to display the definitions. Click buttons to
     </ul>
   </div>
 
-  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::ResoCollisionDF</button>
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::ResoCollisionCandidates</button>
   <div class="panel">
     <ul>
-        <li>o2::aod::ResoCollisionDF = o2::aod::ResoCollisionDFs::iterator</li>
+        <li>o2::aod::ResoCollisionCandidates = soa::Join<o2::aod::Collisions, o2::aod::EvSels, o2::aod::CentFT0Ms, o2::aod::CentFT0Cs, o2::aod::CentFT0As, o2::aod::Mults></li>
     </ul>
   </div>
 
-  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::ResoTrackDF</button>
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::ResoRun2CollisionCandidates</button>
   <div class="panel">
     <ul>
-        <li>o2::aod::ResoTrackDF = o2::aod::ResoTrackDFs::iterator</li>
+        <li>o2::aod::ResoRun2CollisionCandidates = soa::Join<o2::aod::Collisions, o2::aod::EvSels, o2::aod::CentRun2V0Ms></li>
     </ul>
   </div>
 
-  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::Sigma0Collision</button>
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::ResoCollisionCandidatesMC</button>
   <div class="panel">
     <ul>
-        <li>o2::aod::Sigma0Collision = o2::aod::Sigma0Collisions::iterator</li>
+        <li>o2::aod::ResoCollisionCandidatesMC = soa::Join<o2::aod::ResoCollisionCandidates, o2::aod::McCollisionLabels></li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::ResoRun2CollisionCandidatesMC</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::ResoRun2CollisionCandidatesMC = soa::Join<o2::aod::ResoRun2CollisionCandidates, o2::aod::McCollisionLabels></li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::ResoTrackCandidates</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::ResoTrackCandidates = o2::aod::Reso2TracksPIDExt</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::ResoTrackCandidatesMC</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::ResoTrackCandidatesMC = soa::Join<o2::aod::ResoTrackCandidates, o2::aod::McTrackLabels></li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::ResoV0Candidates</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::ResoV0Candidates = o2::aod::V0Datas</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::ResoV0CandidatesMC</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::ResoV0CandidatesMC = soa::Join<o2::aod::ResoV0Candidates, o2::aod::McV0Labels></li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::ResoCascadesCandidates</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::ResoCascadesCandidates = o2::aod::CascDatas</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::ResoCascadesCandidatesMC</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::ResoCascadesCandidatesMC = soa::Join<o2::aod::ResoCascadesCandidates, o2::aod::McCascLabels></li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::BCsWithRun2Info</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::BCsWithRun2Info = soa::Join<o2::aod::BCs, o2::aod::Run2BCInfos, o2::aod::Timestamps></li>
     </ul>
   </div>
 
@@ -5287,10 +6414,24 @@ Click on the labels to display the definitions. Click buttons to
     </ul>
   </div>
 
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::StraCents</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::StraCents = o2::aod::StraCents_001</li>
+    </ul>
+  </div>
+
   <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::StraEvSels</button>
   <div class="panel">
     <ul>
-        <li>o2::aod::StraEvSels = o2::aod::StraEvSels_003</li>
+        <li>o2::aod::StraEvSels = o2::aod::StraEvSels_005</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::StraStamps</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::StraStamps = o2::aod::StraStamps_001</li>
     </ul>
   </div>
 
@@ -5304,7 +6445,14 @@ Click on the labels to display the definitions. Click buttons to
   <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::StraCent</button>
   <div class="panel">
     <ul>
-        <li>o2::aod::StraCent = o2::aod::StraCents::iterator</li>
+        <li>o2::aod::StraCent = o2::aod::StraCents_001::iterator</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::StraMCCollisions</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::StraMCCollisions = o2::aod::StraMCCollisions_002</li>
     </ul>
   </div>
 
@@ -5315,10 +6463,17 @@ Click on the labels to display the definitions. Click buttons to
     </ul>
   </div>
 
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::StraMCCollMults</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::StraMCCollMults = o2::aod::StraMCCollMults_001</li>
+    </ul>
+  </div>
+
   <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::DauTrackExtras</button>
   <div class="panel">
     <ul>
-        <li>o2::aod::DauTrackExtras = o2::aod::DauTrackExtras_001</li>
+        <li>o2::aod::DauTrackExtras = o2::aod::DauTrackExtras_003</li>
     </ul>
   </div>
 
@@ -5735,6 +6890,34 @@ Click on the labels to display the definitions. Click buttons to
     </ul>
   </div>
 
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::ReducedDecay3BodysLinked</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::ReducedDecay3BodysLinked = soa::Join<o2::aod::RedDecay3Bodys, o2::aod::Decay3BodyDataLink></li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::ReducedDecay3BodyLinked</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::ReducedDecay3BodyLinked = soa::Join<o2::aod::RedDecay3Bodys, o2::aod::Decay3BodyDataLink>::iterator</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::RedPhiEvent</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::RedPhiEvent = o2::aod::RedPhiEvents::iterator</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::PhiTrack</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::PhiTrack = o2::aod::PhiTracks::iterator</li>
+    </ul>
+  </div>
+
   <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::RedF1PEvent</button>
   <div class="panel">
     <ul>
@@ -5753,6 +6936,34 @@ Click on the labels to display the definitions. Click buttons to
   <div class="panel">
     <ul>
         <li>o2::aod::ProtonTrack = o2::aod::ProtonTracks::iterator</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::RedHQEvent</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::RedHQEvent = o2::aod::RedHQEvents::iterator</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::HQTrack</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::HQTrack = o2::aod::HQTracks::iterator</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::RedLLEvent</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::RedLLEvent = o2::aod::RedLLEvents::iterator</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::LLTrack</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::LLTrack = o2::aod::LLTracks::iterator</li>
     </ul>
   </div>
 
@@ -5840,10 +7051,38 @@ Click on the labels to display the definitions. Click buttons to
     </ul>
   </div>
 
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::MyCollision</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::MyCollision = o2::aod::MyCollisions::iterator</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::MyCollisionV0s</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::MyCollisionV0s = o2::aod::MyCollisionsV0::iterator</li>
+    </ul>
+  </div>
+
   <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::SpColl</button>
   <div class="panel">
     <ul>
         <li>o2::aod::SpColl = o2::aod::SpColls::iterator</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::SGEvent</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::SGEvent = o2::aod::SGEvents::iterator</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::SGTrack</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::SGTrack = o2::aod::SGTracks::iterator</li>
     </ul>
   </div>
 
@@ -5865,6 +7104,13 @@ Click on the labels to display the definitions. Click buttons to
   <div class="panel">
     <ul>
         <li>o2::aod::UDCollisions = o2::aod::UDCollisions_001</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::UDCollisionSelExtras</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::UDCollisionSelExtras = o2::aod::UDCollisionSelExtras_002</li>
     </ul>
   </div>
 
@@ -5900,6 +7146,13 @@ Click on the labels to display the definitions. Click buttons to
   <div class="panel">
     <ul>
         <li>o2::aod::UDCollisionsSelFwd = o2::aod::UDCollisionsSelsFwd::iterator</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::UDCollisionSelExtra</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::UDCollisionSelExtra = o2::aod::UDCollisionSelExtras::iterator</li>
     </ul>
   </div>
 
@@ -6050,6 +7303,13 @@ Click on the labels to display the definitions. Click buttons to
     </ul>
   </div>
 
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::pid::tof::default</button>
+  <div class="panel">
+    <ul>
+        <li>o2::pid::tof::default = o2::pid::tof::<<mDefaultResoParams[i]</li>
+    </ul>
+  </div>
+
   <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::pid::tof::ResponseImplementation</button>
   <div class="panel">
     <ul>
@@ -6183,6 +7443,69 @@ Click on the labels to display the definitions. Click buttons to
     </ul>
   </div>
 
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::pidits::ITSNSigmaEl</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::pidits::ITSNSigmaEl = o2::ITSNSigmaElImp<o2::aod::track::ITSClusterSizes,o2::aod::track::P,o2::aod::track::Eta></li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::pidits::ITSNSigmaMu</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::pidits::ITSNSigmaMu = o2::ITSNSigmaMuImp<o2::aod::track::ITSClusterSizes,o2::aod::track::P,o2::aod::track::Eta></li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::pidits::ITSNSigmaPi</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::pidits::ITSNSigmaPi = o2::ITSNSigmaPiImp<o2::aod::track::ITSClusterSizes,o2::aod::track::P,o2::aod::track::Eta></li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::pidits::ITSNSigmaKa</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::pidits::ITSNSigmaKa = o2::ITSNSigmaKaImp<o2::aod::track::ITSClusterSizes,o2::aod::track::P,o2::aod::track::Eta></li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::pidits::ITSNSigmaPr</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::pidits::ITSNSigmaPr = o2::ITSNSigmaPrImp<o2::aod::track::ITSClusterSizes,o2::aod::track::P,o2::aod::track::Eta></li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::pidits::ITSNSigmaDe</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::pidits::ITSNSigmaDe = o2::ITSNSigmaDeImp<o2::aod::track::ITSClusterSizes,o2::aod::track::P,o2::aod::track::Eta></li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::pidits::ITSNSigmaTr</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::pidits::ITSNSigmaTr = o2::ITSNSigmaTrImp<o2::aod::track::ITSClusterSizes,o2::aod::track::P,o2::aod::track::Eta></li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::pidits::ITSNSigmaHe</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::pidits::ITSNSigmaHe = o2::ITSNSigmaHeImp<o2::aod::track::ITSClusterSizes,o2::aod::track::P,o2::aod::track::Eta></li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::pidits::ITSNSigmaAl</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::pidits::ITSNSigmaAl = o2::ITSNSigmaAlImp<o2::aod::track::ITSClusterSizes,o2::aod::track::P,o2::aod::track::Eta></li>
+    </ul>
+  </div>
+
   <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::femtodreamcollision::BitMaskType</button>
   <div class="panel">
     <ul>
@@ -6197,10 +7520,87 @@ Click on the labels to display the definitions. Click buttons to
     </ul>
   </div>
 
-  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::singletrackselector::binning::nsigma_v0</button>
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::singletrackselector::StoredDcaXY_v2</button>
   <div class="panel">
     <ul>
-        <li>o2::aod::singletrackselector::binning::nsigma_v0 = o2::aod::singletrackselector::binning::binningParent<std::pair<float,float>(-10.f,10.f)></li>
+        <li>o2::aod::singletrackselector::StoredDcaXY_v2 = o2::aod::singletrackselector::StoredDcaXY</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::singletrackselector::StoredDcaZ_v2</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::singletrackselector::StoredDcaZ_v2 = o2::aod::singletrackselector::StoredDcaZ</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::singletrackselector::StoredTOFNSigmaPi_v1</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::singletrackselector::StoredTOFNSigmaPi_v1 = o2::aod::singletrackselector::StoredTOFNSigmaPi</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::singletrackselector::StoredTPCNSigmaPi_v1</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::singletrackselector::StoredTPCNSigmaPi_v1 = o2::aod::singletrackselector::StoredTPCNSigmaPi</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::singletrackselector::StoredTOFNSigmaKa_v1</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::singletrackselector::StoredTOFNSigmaKa_v1 = o2::aod::singletrackselector::StoredTOFNSigmaKa</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::singletrackselector::StoredTPCNSigmaKa_v1</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::singletrackselector::StoredTPCNSigmaKa_v1 = o2::aod::singletrackselector::StoredTPCNSigmaKa</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::singletrackselector::StoredTOFNSigmaPr_v1</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::singletrackselector::StoredTOFNSigmaPr_v1 = o2::aod::singletrackselector::StoredTOFNSigmaPr</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::singletrackselector::StoredTPCNSigmaPr_v1</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::singletrackselector::StoredTPCNSigmaPr_v1 = o2::aod::singletrackselector::StoredTPCNSigmaPr</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::singletrackselector::StoredTOFNSigmaDe_v1</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::singletrackselector::StoredTOFNSigmaDe_v1 = o2::aod::singletrackselector::StoredTOFNSigmaDe</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::singletrackselector::StoredTPCNSigmaDe_v1</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::singletrackselector::StoredTPCNSigmaDe_v1 = o2::aod::singletrackselector::StoredTPCNSigmaDe</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::singletrackselector::StoredTOFNSigmaHe_v1</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::singletrackselector::StoredTOFNSigmaHe_v1 = o2::aod::singletrackselector::StoredTOFNSigmaHe</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::singletrackselector::StoredTPCNSigmaHe_v1</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::singletrackselector::StoredTPCNSigmaHe_v1 = o2::aod::singletrackselector::StoredTPCNSigmaHe</li>
     </ul>
   </div>
 
@@ -6215,20 +7615,6 @@ Click on the labels to display the definitions. Click buttons to
   <div class="panel">
     <ul>
         <li>o2::aod::singletrackselector::binning::nsigma = o2::aod::singletrackselector::binning::nsigma_v1</li>
-    </ul>
-  </div>
-
-  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::singletrackselector::binning::dca_v0</button>
-  <div class="panel">
-    <ul>
-        <li>o2::aod::singletrackselector::binning::dca_v0 = o2::aod::singletrackselector::binning::binningParent<std::pair<float,float>(-1.f,1.f)></li>
-    </ul>
-  </div>
-
-  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::singletrackselector::binning::dca_v1</button>
-  <div class="panel">
-    <ul>
-        <li>o2::aod::singletrackselector::binning::dca_v1 = o2::aod::singletrackselector::binning::binningParent<std::pair<float,float>(-1.f,1.f),int16_t></li>
     </ul>
   </div>
 
@@ -6260,10 +7646,10 @@ Click on the labels to display the definitions. Click buttons to
     </ul>
   </div>
 
-  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::femtouniverseparticle::cutContainerType</button>
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::femtouniverseparticle::CutContainerType</button>
   <div class="panel">
     <ul>
-        <li>o2::aod::femtouniverseparticle::cutContainerType = o2::aod::femtouniverseparticle::uint32_t</li>
+        <li>o2::aod::femtouniverseparticle::CutContainerType = o2::aod::femtouniverseparticle::uint32_t</li>
     </ul>
   </div>
 
@@ -6271,6 +7657,83 @@ Click on the labels to display the definitions. Click buttons to
   <div class="panel">
     <ul>
         <li>o2::aod::femtoworldparticle::cutContainerType = o2::aod::femtoworldparticle::uint32_t</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::hf_cand_xic_to_xi_pi_pi::CascadesLinked</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::hf_cand_xic_to_xi_pi_pi::CascadesLinked = soa::Join<o2::aod::Cascades, o2::aod::CascDataLink></li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::hf_cand_xic_to_xi_pi_pi::CascFull</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::hf_cand_xic_to_xi_pi_pi::CascFull = soa::Join<o2::aod::CascDatas, o2::aod::CascCovs></li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::hf_cand_xic_to_xi_pi_pi::KFCascadesLinked</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::hf_cand_xic_to_xi_pi_pi::KFCascadesLinked = soa::Join<o2::aod::Cascades, o2::aod::KFCascDataLink></li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::hf_cand_xic_to_xi_pi_pi::KFCascFull</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::hf_cand_xic_to_xi_pi_pi::KFCascFull = soa::Join<o2::aod::KFCascDatas, o2::aod::KFCascCovs></li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::hf_cand_xic_to_xi_pi_pi::TracksWCovDcaPidPrPi</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::hf_cand_xic_to_xi_pi_pi::TracksWCovDcaPidPrPi = soa::Join<o2::aod::TracksWCovDca, o2::aod::TracksPidPr, o2::aod::TracksPidPi></li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::hf_cand_xic_to_xi_pi_pi::TracksWCovExtraPidPrPi</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::hf_cand_xic_to_xi_pi_pi::TracksWCovExtraPidPrPi = soa::Join<o2::aod::TracksWCovExtra, o2::aod::TracksPidPr, o2::aod::TracksPidPi></li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::hf_cand_xic_to_xi_pi_pi::McCollisionsNoCents</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::hf_cand_xic_to_xi_pi_pi::McCollisionsNoCents = soa::Join<o2::aod::Collisions, o2::aod::EvSels, o2::aod::McCollisionLabels></li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::hf_cand_xic_to_xi_pi_pi::McCollisionsFT0Cs</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::hf_cand_xic_to_xi_pi_pi::McCollisionsFT0Cs = soa::Join<o2::aod::Collisions, o2::aod::EvSels, o2::aod::McCollisionLabels, o2::aod::CentFT0Cs></li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::hf_cand_xic_to_xi_pi_pi::McCollisionsFT0Ms</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::hf_cand_xic_to_xi_pi_pi::McCollisionsFT0Ms = soa::Join<o2::aod::Collisions, o2::aod::EvSels, o2::aod::McCollisionLabels, o2::aod::CentFT0Ms></li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::hf_cand_xic_to_xi_pi_pi::McCollisionsCentFT0Ms</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::hf_cand_xic_to_xi_pi_pi::McCollisionsCentFT0Ms = soa::Join<o2::aod::McCollisions, o2::aod::McCentFT0Ms></li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::hf_cand_xic_to_xi_pi_pi::BCsInfo</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::hf_cand_xic_to_xi_pi_pi::BCsInfo = soa::Join<o2::aod::BCs, o2::aod::Timestamps, o2::aod::BcSels></li>
     </ul>
   </div>
 
@@ -6302,6 +7765,13 @@ Click on the labels to display the definitions. Click buttons to
     </ul>
   </div>
 
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::pid_tpc_tof_utils::McCollisionsCentFT0Ms</button>
+  <div class="panel">
+    <ul>
+        <li>o2::aod::pid_tpc_tof_utils::McCollisionsCentFT0Ms = soa::Join<o2::aod::McCollisions, o2::aod::McCentFT0Ms></li>
+    </ul>
+  </div>
+
   <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::pid_tpc_tof_utils::BCsInfo</button>
   <div class="panel">
     <ul>
@@ -6309,45 +7779,108 @@ Click on the labels to display the definitions. Click buttons to
     </ul>
   </div>
 
-  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::framework::expressions::FilteredHf3Prongs</button>
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::pid_tpc_tof_utils::FilteredHf3Prongs</button>
   <div class="panel">
     <ul>
-        <li>o2::framework::expressions::FilteredHf3Prongs = o2::framework::expressions::soa::Filtered<aod::Hf3Prongs></li>
+        <li>o2::aod::pid_tpc_tof_utils::FilteredHf3Prongs = o2::aod::pid_tpc_tof_utils::soa::Filtered<aod::Hf3Prongs></li>
     </ul>
   </div>
 
-  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::framework::expressions::FilteredPvRefitHf3Prongs</button>
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::pid_tpc_tof_utils::FilteredPvRefitHf3Prongs</button>
   <div class="panel">
     <ul>
-        <li>o2::framework::expressions::FilteredPvRefitHf3Prongs = soa::Join<o2::framework::expressions::soa::Join></li>
+        <li>o2::aod::pid_tpc_tof_utils::FilteredPvRefitHf3Prongs = soa::Join<o2::aod::pid_tpc_tof_utils::soa::Join></li>
     </ul>
   </div>
 
-  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::framework::expressions::BCsInfo</button>
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::pid_tpc_tof_utils::TracksWCovExtraPidPiKaPr</button>
   <div class="panel">
     <ul>
-        <li>o2::framework::expressions::BCsInfo = soa::Join<o2::framework::expressions::aod::BCs, o2::framework::expressions::aod::Timestamps, o2::framework::expressions::aod::BcSels></li>
+        <li>o2::aod::pid_tpc_tof_utils::TracksWCovExtraPidPiKaPr = soa::Join<o2::aod::TracksWCovExtra, o2::aod::TracksPidPi, o2::aod::PidTpcTofFullPi, o2::aod::TracksPidKa, o2::aod::PidTpcTofFullKa, o2::aod::TracksPidPr, o2::aod::PidTpcTofFullPr></li>
     </ul>
   </div>
 
-  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::framework::expressions::McCollisionsNoCents</button>
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::aod::pid_tpc_tof_utils::TracksPion</button>
   <div class="panel">
     <ul>
-        <li>o2::framework::expressions::McCollisionsNoCents = soa::Join<o2::framework::expressions::aod::Collisions, o2::framework::expressions::aod::EvSels, o2::framework::expressions::aod::McCollisionLabels></li>
+        <li>o2::aod::pid_tpc_tof_utils::TracksPion = soa::Join<o2::aod::TracksWExtra, o2::aod::TracksPidPi, o2::aod::TrackSelection></li>
     </ul>
   </div>
 
-  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::framework::expressions::McCollisionsFT0Cs</button>
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::hf_trkcandsel::TracksWithSel</button>
   <div class="panel">
     <ul>
-        <li>o2::framework::expressions::McCollisionsFT0Cs = soa::Join<o2::framework::expressions::aod::Collisions, o2::framework::expressions::aod::EvSels, o2::framework::expressions::aod::McCollisionLabels, o2::framework::expressions::aod::CentFT0Cs></li>
+        <li>o2::hf_trkcandsel::TracksWithSel = soa::Join<o2::hf_trkcandsel::aod::TracksWCovDca, o2::hf_trkcandsel::aod::TrackSelection></li>
     </ul>
   </div>
 
-  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::framework::expressions::McCollisionsFT0Ms</button>
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::hf_trkcandsel::CandsDFiltered</button>
   <div class="panel">
     <ul>
-        <li>o2::framework::expressions::McCollisionsFT0Ms = soa::Join<o2::framework::expressions::aod::Collisions, o2::framework::expressions::aod::EvSels, o2::framework::expressions::aod::McCollisionLabels, o2::framework::expressions::aod::CentFT0Ms></li>
+        <li>o2::hf_trkcandsel::CandsDFiltered = soa::Join<o2::hf_trkcandsel::soa::Join></li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::hf_trkcandsel::CandsDsFiltered</button>
+  <div class="panel">
+    <ul>
+        <li>o2::hf_trkcandsel::CandsDsFiltered = soa::Join<o2::hf_trkcandsel::soa::Join></li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::hf_trkcandsel::Collisions</button>
+  <div class="panel">
+    <ul>
+        <li>o2::hf_trkcandsel::Collisions = soa::Join<o2::hf_trkcandsel::soa::Join></li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::hf_trkcandsel::TracksExt</button>
+  <div class="panel">
+    <ul>
+        <li>o2::hf_trkcandsel::TracksExt = soa::Join<o2::hf_trkcandsel::aod::TracksIU, o2::hf_trkcandsel::aod::TracksCovIU, o2::hf_trkcandsel::aod::TracksExtra, o2::hf_trkcandsel::aod::TracksDCA, o2::hf_trkcandsel::aod::pidTPCPi, o2::hf_trkcandsel::aod::pidTPCKa, o2::hf_trkcandsel::aod::pidTPCPr, o2::hf_trkcandsel::aod::pidTOFPi, o2::hf_trkcandsel::aod::pidTOFKa, o2::hf_trkcandsel::aod::pidTOFPr></li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::hf_trkcandsel::TracksExtMc</button>
+  <div class="panel">
+    <ul>
+        <li>o2::hf_trkcandsel::TracksExtMc = soa::Join<o2::hf_trkcandsel::TracksExt, o2::hf_trkcandsel::aod::McTrackLabels></li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::hf_trkcandsel::TracksPid</button>
+  <div class="panel">
+    <ul>
+        <li>o2::hf_trkcandsel::TracksPid = soa::Join<o2::hf_trkcandsel::aod::pidTPCFullPi, o2::hf_trkcandsel::aod::pidTOFFullPi, o2::hf_trkcandsel::aod::pidTPCFullKa, o2::hf_trkcandsel::aod::pidTOFFullKa></li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::hf_trkcandsel::TracksWPid</button>
+  <div class="panel">
+    <ul>
+        <li>o2::hf_trkcandsel::TracksWPid = soa::Join<o2::hf_trkcandsel::aod::TracksWCovDcaExtra, o2::hf_trkcandsel::TracksPid, o2::hf_trkcandsel::aod::TrackSelection></li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::hf_trkcandsel::CollisionsWithFT0C</button>
+  <div class="panel">
+    <ul>
+        <li>o2::hf_trkcandsel::CollisionsWithFT0C = soa::Join<o2::hf_trkcandsel::aod::Collisions, o2::hf_trkcandsel::aod::EvSels, o2::hf_trkcandsel::aod::CentFT0Cs></li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::hf_trkcandsel::CollisionsWithFT0M</button>
+  <div class="panel">
+    <ul>
+        <li>o2::hf_trkcandsel::CollisionsWithFT0M = soa::Join<o2::hf_trkcandsel::aod::Collisions, o2::hf_trkcandsel::aod::EvSels, o2::hf_trkcandsel::aod::CentFT0Ms></li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::hf_trkcandsel::SelectedCandidatesMl</button>
+  <div class="panel">
+    <ul>
+        <li>o2::hf_trkcandsel::SelectedCandidatesMl = soa::Join<o2::hf_trkcandsel::soa::Join></li>
     </ul>
   </div>
 
@@ -6372,6 +7905,13 @@ Click on the labels to display the definitions. Click buttons to
     </ul>
   </div>
 
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::framework::expressions::BCsInfo</button>
+  <div class="panel">
+    <ul>
+        <li>o2::framework::expressions::BCsInfo = soa::Join<o2::framework::expressions::aod::BCs, o2::framework::expressions::aod::Timestamps, o2::framework::expressions::aod::BcSels></li>
+    </ul>
+  </div>
+
   <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::framework::expressions::LambdacMc</button>
   <div class="panel">
     <ul>
@@ -6379,101 +7919,17 @@ Click on the labels to display the definitions. Click buttons to
     </ul>
   </div>
 
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::framework::expressions::McCollisionsNoCents</button>
+  <div class="panel">
+    <ul>
+        <li>o2::framework::expressions::McCollisionsNoCents = soa::Join<o2::framework::expressions::aod::Collisions, o2::framework::expressions::aod::EvSels, o2::framework::expressions::aod::McCollisionLabels></li>
+    </ul>
+  </div>
+
   <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::framework::expressions::TracksWithPID</button>
   <div class="panel">
     <ul>
         <li>o2::framework::expressions::TracksWithPID = soa::Join<o2::framework::expressions::aod::TracksWDcaExtra, o2::framework::expressions::aod::TracksPidPi, o2::framework::expressions::aod::TracksPidKa></li>
-    </ul>
-  </div>
-
-  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::framework::expressions::CollisionsWCentMult</button>
-  <div class="panel">
-    <ul>
-        <li>o2::framework::expressions::CollisionsWCentMult = soa::Join<o2::framework::expressions::aod::Collisions, o2::framework::expressions::aod::CentFV0As, o2::framework::expressions::aod::CentFT0Ms, o2::framework::expressions::aod::CentFT0As, o2::framework::expressions::aod::CentFT0Cs, o2::framework::expressions::aod::PVMultZeqs></li>
-    </ul>
-  </div>
-
-  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::framework::expressions::CollisionsWMcCentMult</button>
-  <div class="panel">
-    <ul>
-        <li>o2::framework::expressions::CollisionsWMcCentMult = soa::Join<o2::framework::expressions::aod::Collisions, o2::framework::expressions::aod::McCollisionLabels, o2::framework::expressions::aod::CentFV0As, o2::framework::expressions::aod::CentFT0Ms, o2::framework::expressions::aod::CentFT0As, o2::framework::expressions::aod::CentFT0Cs, o2::framework::expressions::aod::PVMultZeqs></li>
-    </ul>
-  </div>
-
-  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::framework::expressions::SelectedCandidates</button>
-  <div class="panel">
-    <ul>
-        <li>o2::framework::expressions::SelectedCandidates = soa::Join<o2::framework::expressions::soa::Join></li>
-    </ul>
-  </div>
-
-  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::framework::expressions::SelectedCandidatesKf</button>
-  <div class="panel">
-    <ul>
-        <li>o2::framework::expressions::SelectedCandidatesKf = soa::Join<o2::framework::expressions::soa::Join></li>
-    </ul>
-  </div>
-
-  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::framework::expressions::SelectedCandidatesMc</button>
-  <div class="panel">
-    <ul>
-        <li>o2::framework::expressions::SelectedCandidatesMc = soa::Join<o2::framework::expressions::soa::Join></li>
-    </ul>
-  </div>
-
-  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::framework::expressions::SelectedCandidatesMcKf</button>
-  <div class="panel">
-    <ul>
-        <li>o2::framework::expressions::SelectedCandidatesMcKf = soa::Join<o2::framework::expressions::soa::Join></li>
-    </ul>
-  </div>
-
-  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::framework::expressions::SelectedCandidatesMl</button>
-  <div class="panel">
-    <ul>
-        <li>o2::framework::expressions::SelectedCandidatesMl = soa::Join<o2::framework::expressions::soa::Join></li>
-    </ul>
-  </div>
-
-  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::framework::expressions::SelectedCandidatesKfMl</button>
-  <div class="panel">
-    <ul>
-        <li>o2::framework::expressions::SelectedCandidatesKfMl = soa::Join<o2::framework::expressions::soa::Join></li>
-    </ul>
-  </div>
-
-  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::framework::expressions::SelectedCandidatesMcMl</button>
-  <div class="panel">
-    <ul>
-        <li>o2::framework::expressions::SelectedCandidatesMcMl = soa::Join<o2::framework::expressions::soa::Join></li>
-    </ul>
-  </div>
-
-  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::framework::expressions::SelectedCandidatesMcKfMl</button>
-  <div class="panel">
-    <ul>
-        <li>o2::framework::expressions::SelectedCandidatesMcKfMl = soa::Join<o2::framework::expressions::soa::Join></li>
-    </ul>
-  </div>
-
-  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::framework::expressions::MatchedGenCandidatesMc</button>
-  <div class="panel">
-    <ul>
-        <li>o2::framework::expressions::MatchedGenCandidatesMc = soa::Join<o2::framework::expressions::soa::Join></li>
-    </ul>
-  </div>
-
-  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::framework::expressions::TypeMcCollisions</button>
-  <div class="panel">
-    <ul>
-        <li>o2::framework::expressions::TypeMcCollisions = o2::framework::expressions::aod::McCollisions</li>
-    </ul>
-  </div>
-
-  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::framework::expressions::TracksWPid</button>
-  <div class="panel">
-    <ul>
-        <li>o2::framework::expressions::TracksWPid = soa::Join<o2::framework::expressions::aod::Tracks, o2::framework::expressions::aod::TracksPidPi, o2::framework::expressions::aod::PidTpcTofFullPi, o2::framework::expressions::aod::TracksPidKa, o2::framework::expressions::aod::PidTpcTofFullKa, o2::framework::expressions::aod::TracksPidPr, o2::framework::expressions::aod::PidTpcTofFullPr></li>
     </ul>
   </div>
 
@@ -6547,6 +8003,48 @@ Click on the labels to display the definitions. Click buttons to
     </ul>
   </div>
 
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::framework::expressions::SelectedCandidatesMc</button>
+  <div class="panel">
+    <ul>
+        <li>o2::framework::expressions::SelectedCandidatesMc = soa::Join<o2::framework::expressions::soa::Join></li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::framework::expressions::TracksWPid</button>
+  <div class="panel">
+    <ul>
+        <li>o2::framework::expressions::TracksWPid = soa::Join<o2::framework::expressions::aod::Tracks, o2::framework::expressions::aod::TracksPidPi></li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::framework::expressions::SelectedCandidatesMcMl</button>
+  <div class="panel">
+    <ul>
+        <li>o2::framework::expressions::SelectedCandidatesMcMl = soa::Join<o2::framework::expressions::soa::Join></li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::framework::expressions::SelectedCandidatesMcKf</button>
+  <div class="panel">
+    <ul>
+        <li>o2::framework::expressions::SelectedCandidatesMcKf = soa::Join<o2::framework::expressions::soa::Join></li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::framework::expressions::SelectedCandidatesMcKfMl</button>
+  <div class="panel">
+    <ul>
+        <li>o2::framework::expressions::SelectedCandidatesMcKfMl = soa::Join<o2::framework::expressions::soa::Join></li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::framework::expressions::MatchedGenCandidatesMc</button>
+  <div class="panel">
+    <ul>
+        <li>o2::framework::expressions::MatchedGenCandidatesMc = soa::Join<o2::framework::expressions::soa::Join></li>
+    </ul>
+  </div>
+
   <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::framework::expressions::CandDsData</button>
   <div class="panel">
     <ul>
@@ -6617,6 +8115,34 @@ Click on the labels to display the definitions. Click buttons to
     </ul>
   </div>
 
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::framework::expressions::Tracks</button>
+  <div class="panel">
+    <ul>
+        <li>o2::framework::expressions::Tracks = soa::Join<o2::framework::expressions::aod::Tracks, o2::framework::expressions::aod::TrackSelection, o2::framework::expressions::aod::TracksExtra></li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::framework::expressions::Colls</button>
+  <div class="panel">
+    <ul>
+        <li>o2::framework::expressions::Colls = soa::Join<o2::framework::expressions::aod::Collisions, o2::framework::expressions::aod::EvSels></li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::framework::expressions::CandKfSel</button>
+  <div class="panel">
+    <ul>
+        <li>o2::framework::expressions::CandKfSel = soa::Join<o2::framework::expressions::soa::Join></li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::framework::expressions::CascKfMcSel</button>
+  <div class="panel">
+    <ul>
+        <li>o2::framework::expressions::CascKfMcSel = soa::Join<o2::framework::expressions::soa::Join></li>
+    </ul>
+  </div>
+
   <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::framework::expressions::CandXicData</button>
   <div class="panel">
     <ul>
@@ -6635,48 +8161,6 @@ Click on the labels to display the definitions. Click buttons to
   <div class="panel">
     <ul>
         <li>o2::framework::expressions::CandXicMcGen = soa::Join<o2::framework::expressions::soa::Join></li>
-    </ul>
-  </div>
-
-  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::hf_trkcandsel::TracksWithSel</button>
-  <div class="panel">
-    <ul>
-        <li>o2::hf_trkcandsel::TracksWithSel = soa::Join<o2::hf_trkcandsel::aod::TracksWCovDca, o2::hf_trkcandsel::aod::TrackSelection></li>
-    </ul>
-  </div>
-
-  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::hf_trkcandsel::CandsDFiltered</button>
-  <div class="panel">
-    <ul>
-        <li>o2::hf_trkcandsel::CandsDFiltered = soa::Join<o2::hf_trkcandsel::soa::Join></li>
-    </ul>
-  </div>
-
-  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::hf_trkcandsel::CandsDsFiltered</button>
-  <div class="panel">
-    <ul>
-        <li>o2::hf_trkcandsel::CandsDsFiltered = soa::Join<o2::hf_trkcandsel::soa::Join></li>
-    </ul>
-  </div>
-
-  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::hf_trkcandsel::Collisions</button>
-  <div class="panel">
-    <ul>
-        <li>o2::hf_trkcandsel::Collisions = soa::Join<o2::hf_trkcandsel::soa::Join></li>
-    </ul>
-  </div>
-
-  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::hf_trkcandsel::TracksExt</button>
-  <div class="panel">
-    <ul>
-        <li>o2::hf_trkcandsel::TracksExt = soa::Join<o2::hf_trkcandsel::aod::TracksIU, o2::hf_trkcandsel::aod::TracksCovIU, o2::hf_trkcandsel::aod::TracksExtra, o2::hf_trkcandsel::aod::TracksDCA, o2::hf_trkcandsel::aod::pidTPCPi, o2::hf_trkcandsel::aod::pidTPCKa, o2::hf_trkcandsel::aod::pidTPCPr, o2::hf_trkcandsel::aod::pidTOFPi, o2::hf_trkcandsel::aod::pidTOFKa, o2::hf_trkcandsel::aod::pidTOFPr></li>
-    </ul>
-  </div>
-
-  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::hf_trkcandsel::TracksExtMc</button>
-  <div class="panel">
-    <ul>
-        <li>o2::hf_trkcandsel::TracksExtMc = soa::Join<o2::hf_trkcandsel::TracksExt, o2::hf_trkcandsel::aod::McTrackLabels></li>
     </ul>
   </div>
 
@@ -6729,38 +8213,10 @@ Click on the labels to display the definitions. Click buttons to
     </ul>
   </div>
 
-  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::framework::CascadesLinked</button>
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::framework::McCollisionsCentFT0Ms</button>
   <div class="panel">
     <ul>
-        <li>o2::framework::CascadesLinked = soa::Join<o2::framework::aod::Cascades, o2::framework::aod::CascDataLink></li>
-    </ul>
-  </div>
-
-  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::framework::CascFull</button>
-  <div class="panel">
-    <ul>
-        <li>o2::framework::CascFull = soa::Join<o2::framework::aod::CascDatas, o2::framework::aod::CascCovs></li>
-    </ul>
-  </div>
-
-  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::framework::KFCascadesLinked</button>
-  <div class="panel">
-    <ul>
-        <li>o2::framework::KFCascadesLinked = soa::Join<o2::framework::aod::Cascades, o2::framework::aod::KFCascDataLink></li>
-    </ul>
-  </div>
-
-  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::framework::KFCascFull</button>
-  <div class="panel">
-    <ul>
-        <li>o2::framework::KFCascFull = soa::Join<o2::framework::aod::KFCascDatas, o2::framework::aod::KFCascCovs></li>
-    </ul>
-  </div>
-
-  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::framework::derived</button>
-  <div class="panel">
-    <ul>
-        <li>o2::framework::derived = o2::framework::fromHfTrackIndexSkimCreatorLfCascades.``,false)</li>
+        <li>o2::framework::McCollisionsCentFT0Ms = soa::Join<o2::framework::aod::McCollisions, o2::framework::aod::McCentFT0Ms></li>
     </ul>
   </div>
 
@@ -6774,7 +8230,7 @@ Click on the labels to display the definitions. Click buttons to
   <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::framework::HfFullDstarCandidate</button>
   <div class="panel">
     <ul>
-        <li>o2::framework::HfFullDstarCandidate = soa::Join<o2::framework::aod::HfD0FromDstar, o2::framework::aod::HfCandDstars></li>
+        <li>o2::framework::HfFullDstarCandidate = soa::Join<o2::framework::aod::HfD0FromDstar, o2::framework::aod::HfCandDstarsWPid></li>
     </ul>
   </div>
 
@@ -6795,14 +8251,7 @@ Click on the labels to display the definitions. Click buttons to
   <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::framework::TracksWPid</button>
   <div class="panel">
     <ul>
-        <li>o2::framework::TracksWPid = soa::Join<o2::framework::aod::Tracks, o2::framework::aod::pidTOFFullPi, o2::framework::aod::pidTOFFullKa, o2::framework::aod::pidTOFFullPr, o2::framework::aod::HfTrackIndexALICE3PID></li>
-    </ul>
-  </div>
-
-  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::framework::Cents</button>
-  <div class="panel">
-    <ul>
-        <li>o2::framework::Cents = soa::Join<o2::framework::aod::CentFV0As, o2::framework::aod::CentFT0Ms, o2::framework::aod::CentFT0As, o2::framework::aod::CentFT0Cs, o2::framework::aod::CentFDDMs></li>
+        <li>o2::framework::TracksWPid = soa::Join<o2::framework::aod::Tracks, o2::framework::aod::pidTPCFullPi, o2::framework::aod::pidTPCFullKa, o2::framework::aod::pidTPCFullPr, o2::framework::aod::pidTOFFullPi, o2::framework::aod::pidTOFFullKa, o2::framework::aod::pidTOFFullPr></li>
     </ul>
   </div>
 
@@ -6817,6 +8266,34 @@ Click on the labels to display the definitions. Click buttons to
   <div class="panel">
     <ul>
         <li>o2::framework::MyEventTable = soa::Join<o2::framework::aod::Collisions, o2::framework::aod::EvSels></li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::framework::Cents</button>
+  <div class="panel">
+    <ul>
+        <li>o2::framework::Cents = soa::Join<o2::framework::aod::CentFV0As, o2::framework::aod::CentFT0Ms, o2::framework::aod::CentFT0As, o2::framework::aod::CentFT0Cs, o2::framework::aod::CentFDDMs></li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::framework::MyEventTableWithFT0C</button>
+  <div class="panel">
+    <ul>
+        <li>o2::framework::MyEventTableWithFT0C = soa::Join<o2::framework::aod::Collisions, o2::framework::aod::EvSels, o2::framework::aod::CentFT0Cs></li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::framework::MyEventTableWithFT0M</button>
+  <div class="panel">
+    <ul>
+        <li>o2::framework::MyEventTableWithFT0M = soa::Join<o2::framework::aod::Collisions, o2::framework::aod::EvSels, o2::framework::aod::CentFT0Ms></li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::framework::MyEventTableWithNTracksPV</button>
+  <div class="panel">
+    <ul>
+        <li>o2::framework::MyEventTableWithNTracksPV = soa::Join<o2::framework::aod::Collisions, o2::framework::aod::EvSels, o2::framework::aod::CentNTPVs></li>
     </ul>
   </div>
 
@@ -6890,6 +8367,13 @@ Click on the labels to display the definitions. Click buttons to
     </ul>
   </div>
 
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::hf_evsel::KFParticle</button>
+  <div class="panel">
+    <ul>
+        <li>o2::hf_evsel::KFParticle = o2::hf_evsel::,false)</li>
+    </ul>
+  </div>
+
   <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::hf_evsel::MyTracksWMc</button>
   <div class="panel">
     <ul>
@@ -6915,6 +8399,13 @@ Click on the labels to display the definitions. Click buttons to
   <div class="panel">
     <ul>
         <li>o2::hf_evsel::McCollisionsFT0Ms = soa::Join<o2::hf_evsel::aod::Collisions, o2::hf_evsel::aod::EvSels, o2::hf_evsel::aod::McCollisionLabels, o2::hf_evsel::aod::CentFT0Ms></li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::hf_evsel::McCollisionsCentFT0Ms</button>
+  <div class="panel">
+    <ul>
+        <li>o2::hf_evsel::McCollisionsCentFT0Ms = soa::Join<o2::hf_evsel::aod::McCollisions, o2::hf_evsel::aod::McCentFT0Ms></li>
     </ul>
   </div>
 
@@ -6957,6 +8448,104 @@ Click on the labels to display the definitions. Click buttons to
   <div class="panel">
     <ul>
         <li>o2::ml::TracksSel = soa::Join<o2::ml::aod::TracksWDca, o2::ml::aod::TracksPidPi, o2::ml::aod::TracksPidKa, o2::ml::aod::TracksPidPr, o2::ml::aod::pidBayesPi, o2::ml::aod::pidBayesKa, o2::ml::aod::pidBayesPr, o2::ml::aod::pidBayes></li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::analysis::hf_derived::CollisionsWCentMult</button>
+  <div class="panel">
+    <ul>
+        <li>o2::analysis::hf_derived::CollisionsWCentMult = soa::Join<o2::analysis::hf_derived::aod::Collisions, o2::analysis::hf_derived::aod::CentFV0As, o2::analysis::hf_derived::aod::CentFT0Ms, o2::analysis::hf_derived::aod::CentFT0As, o2::analysis::hf_derived::aod::CentFT0Cs, o2::analysis::hf_derived::aod::PVMultZeqs></li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::analysis::hf_derived::CollisionsWMcCentMult</button>
+  <div class="panel">
+    <ul>
+        <li>o2::analysis::hf_derived::CollisionsWMcCentMult = soa::Join<o2::analysis::hf_derived::aod::Collisions, o2::analysis::hf_derived::aod::McCollisionLabels, o2::analysis::hf_derived::aod::CentFV0As, o2::analysis::hf_derived::aod::CentFT0Ms, o2::analysis::hf_derived::aod::CentFT0As, o2::analysis::hf_derived::aod::CentFT0Cs, o2::analysis::hf_derived::aod::PVMultZeqs></li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::analysis::hf_derived::TracksWPid</button>
+  <div class="panel">
+    <ul>
+        <li>o2::analysis::hf_derived::TracksWPid = soa::Join<o2::analysis::hf_derived::aod::Tracks, o2::analysis::hf_derived::aod::TracksPidPi, o2::analysis::hf_derived::aod::PidTpcTofFullPi, o2::analysis::hf_derived::aod::TracksPidKa, o2::analysis::hf_derived::aod::PidTpcTofFullKa></li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::analysis::hf_derived::SelectedCandidates</button>
+  <div class="panel">
+    <ul>
+        <li>o2::analysis::hf_derived::SelectedCandidates = soa::Join<o2::analysis::hf_derived::soa::Join></li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::analysis::hf_derived::SelectedCandidatesMc</button>
+  <div class="panel">
+    <ul>
+        <li>o2::analysis::hf_derived::SelectedCandidatesMc = soa::Join<o2::analysis::hf_derived::soa::Join></li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::analysis::hf_derived::SelectedCandidatesMl</button>
+  <div class="panel">
+    <ul>
+        <li>o2::analysis::hf_derived::SelectedCandidatesMl = soa::Join<o2::analysis::hf_derived::soa::Join></li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::analysis::hf_derived::SelectedCandidatesMcMl</button>
+  <div class="panel">
+    <ul>
+        <li>o2::analysis::hf_derived::SelectedCandidatesMcMl = soa::Join<o2::analysis::hf_derived::soa::Join></li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::analysis::hf_derived::MatchedGenCandidatesMc</button>
+  <div class="panel">
+    <ul>
+        <li>o2::analysis::hf_derived::MatchedGenCandidatesMc = soa::Join<o2::analysis::hf_derived::soa::Join></li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::analysis::hf_derived::TypeMcCollisions</button>
+  <div class="panel">
+    <ul>
+        <li>o2::analysis::hf_derived::TypeMcCollisions = soa::Join<o2::analysis::hf_derived::aod::McCollisions, o2::analysis::hf_derived::aod::McCentFT0Ms></li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::analysis::hf_derived::THfCandDaughtersMl</button>
+  <div class="panel">
+    <ul>
+        <li>o2::analysis::hf_derived::THfCandDaughtersMl = soa::Join<o2::analysis::hf_derived::aod::HfCand3ProngWPidPiKa, o2::analysis::hf_derived::aod::HfMlDplusToPiKPi></li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::analysis::hf_derived::SelectedCandidatesKf</button>
+  <div class="panel">
+    <ul>
+        <li>o2::analysis::hf_derived::SelectedCandidatesKf = soa::Join<o2::analysis::hf_derived::soa::Join></li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::analysis::hf_derived::SelectedCandidatesMcKf</button>
+  <div class="panel">
+    <ul>
+        <li>o2::analysis::hf_derived::SelectedCandidatesMcKf = soa::Join<o2::analysis::hf_derived::soa::Join></li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::analysis::hf_derived::SelectedCandidatesKfMl</button>
+  <div class="panel">
+    <ul>
+        <li>o2::analysis::hf_derived::SelectedCandidatesKfMl = soa::Join<o2::analysis::hf_derived::soa::Join></li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::analysis::hf_derived::SelectedCandidatesMcKfMl</button>
+  <div class="panel">
+    <ul>
+        <li>o2::analysis::hf_derived::SelectedCandidatesMcKfMl = soa::Join<o2::analysis::hf_derived::soa::Join></li>
     </ul>
   </div>
 
@@ -7005,7 +8594,7 @@ Click on the labels to display the definitions. Click buttons to
   <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::track::param</button>
   <div class="panel">
     <ul>
-        <li>o2::track::param = o2::track::``<<mParametrizationPath</li>
+        <li>o2::track::param = o2::track::``<<mParametrizationPath<<``andpass``<<mReconstructionPass</li>
     </ul>
   </div>
 
@@ -7027,6 +8616,55 @@ Click on the labels to display the definitions. Click buttons to
   <div class="panel">
     <ul>
         <li>o2::track::ResponseImplementation = o2::pid::tof::ExpTimes<TrksWtofWevTime::iterator</li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::hf_centrality::SelectedCandidatesMc</button>
+  <div class="panel">
+    <ul>
+        <li>o2::hf_centrality::SelectedCandidatesMc = soa::Join<o2::hf_centrality::soa::Join></li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::hf_centrality::MatchedGenCandidatesMc</button>
+  <div class="panel">
+    <ul>
+        <li>o2::hf_centrality::MatchedGenCandidatesMc = soa::Join<o2::hf_centrality::soa::Join></li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::hf_centrality::SelectedCandidatesMcWithMl</button>
+  <div class="panel">
+    <ul>
+        <li>o2::hf_centrality::SelectedCandidatesMcWithMl = soa::Join<o2::hf_centrality::soa::Join></li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::hf_centrality::TracksWPid</button>
+  <div class="panel">
+    <ul>
+        <li>o2::hf_centrality::TracksWPid = soa::Join<o2::hf_centrality::aod::Tracks, o2::hf_centrality::aod::TracksPidPi, o2::hf_centrality::aod::PidTpcTofFullPi, o2::hf_centrality::aod::TracksPidKa, o2::hf_centrality::aod::PidTpcTofFullKa></li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::hf_centrality::CollisionsCent</button>
+  <div class="panel">
+    <ul>
+        <li>o2::hf_centrality::CollisionsCent = soa::Join<o2::hf_centrality::aod::Collisions, o2::hf_centrality::aod::CentFT0Cs, o2::hf_centrality::aod::CentFT0Ms></li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::constants::physics::TracksWPid</button>
+  <div class="panel">
+    <ul>
+        <li>o2::constants::physics::TracksWPid = soa::Join<o2::constants::physics::aod::Tracks, o2::constants::physics::aod::TracksPidPi, o2::constants::physics::aod::PidTpcTofFullPi, o2::constants::physics::aod::TracksPidKa, o2::constants::physics::aod::PidTpcTofFullKa, o2::constants::physics::aod::TracksPidPr, o2::constants::physics::aod::PidTpcTofFullPr></li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::constants::physics::Cents</button>
+  <div class="panel">
+    <ul>
+        <li>o2::constants::physics::Cents = soa::Join<o2::constants::physics::aod::CentFV0As, o2::constants::physics::aod::CentFT0Ms, o2::constants::physics::aod::CentFT0As, o2::constants::physics::aod::CentFT0Cs, o2::constants::physics::aod::CentFDDMs></li>
     </ul>
   </div>
 
@@ -7055,6 +8693,13 @@ Click on the labels to display the definitions. Click buttons to
   <div class="panel">
     <ul>
         <li>o2::constants::physics::SelectedCandidatesKfMc = soa::Join<o2::constants::physics::soa::Join></li>
+    </ul>
+  </div>
+
+  <button class="myaccordion"><i class="fa fa-map-pin"></i> o2::constants::physics::MatchedGenXicToXiPiPi</button>
+  <div class="panel">
+    <ul>
+        <li>o2::constants::physics::MatchedGenXicToXiPiPi = soa::Join<o2::constants::physics::soa::Join></li>
     </ul>
   </div>
 
