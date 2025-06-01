@@ -67,7 +67,7 @@ This helps to apply the [Include What You Use](https://github.com/AliceO2Group/O
 
 #### Sorting `#include`s
 
-The [`llvm-include-order`](https://clang.llvm.org/extra/clang-tidy/checks/llvm/include-order.html) check sorts `#include`s from most specific to least specific to ensure that the headers does not have any hidden dependencies.
+The [`llvm-include-order`](https://clang.llvm.org/extra/clang-tidy/checks/llvm/include-order.html) check sorts `#include`s from most specific to least specific to ensure that the headers do not have any hidden dependencies.
 
 Unfortunately, the [LLVM include style](https://llvm.org/docs/CodingStandards.html#include-style) is incompatible with the [Google include style](https://google.github.io/styleguide/cppguide.html#Names_and_Order_of_Includes) applied by `cpplint`.
 

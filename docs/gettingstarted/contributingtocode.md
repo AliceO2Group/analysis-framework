@@ -19,6 +19,10 @@ Before starting to write your first piece of code, please get familiar with the
  and also check for more detailed instructions from your [PWG](../advanced-specifics/README.md).
 ```
 
+```tip
+See the [Tools](../tools/README.md) section for suggestions on tools that can make your work with the O2Physics analysis framework much more effective.
+```
+
 In order to contribute new code to the central repository, please follow these steps:
 
 - If you are adding a new workflow:
@@ -66,17 +70,34 @@ __Give your pull request a short and meaningful title.__
 
 ### Automatic checks
 
-Pull requests are tested with automatic checks which get restarted whenever the commits in the PR change.
+Pull requests are tested with automatic continuous-integration (CI) checks which get restarted whenever the commits in the PR change.
+
+The CI checks evaluate:
+
+- Code formatting
+- Code quality
+  - [MegaLinter](https://megalinter.io/)
+  - [O2 linter](../tools/o2linter.md)
+- Compilation: Verifies that the code compiles without problems on all supported platforms.
+- PR properties
+  - Labeler: Assigns [labels](https://github.com/AliceO2Group/O2Physics/labels) to the PR based on which parts of the code base were modified.
+  - Title prefix checker: Verifies that the title of the PR has a valid prefix with tags corresponding to the labels. If a valid prefix is not found, it is created.
+
+Checks flagged as "Required" must succeed before a PR can be merged.
+
 The compilation checks ("build/...") run only on PRs marked as ready for review (i.e. not on draft PRs).
 PRs from first-time contributors (who have not authored any commit in the repository yet) require an approval to start the compilation checks.
 
-If a check fails, you can click on "Details" to see more information about the errors in the log of the test.
+If a check fails, you can click on the name of the check to see more information about the errors in the log of the test.
 
 If the clang-format check (or a formatting linter in MegaLinter) fails, an automatic PR with the formatting fixes is opened in your fork and a notification email is sent to you.
 You have to merge this formatting PR to update your branch (and your opened PR).
 
-```note
-This means that _you do not have to format your (C++ and Python) code_, as the automatic formatting check does that for you.
+```tip
+_You do not have to format your (C++ and Python) code manually_.
+
+- You can let your PR get formatted by the automatic formatting check.
+- Or you can use [pre-commit hooks](../tools/README.md#pre-commit-hooks) to format your code automatically when you make a commit.
 ```
 
 ### Pull request review
