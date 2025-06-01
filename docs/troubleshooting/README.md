@@ -107,6 +107,7 @@ If the missing table is not mentioned there, try to find the missing workflow fo
 | Old                            | New               | Converter                                 |
 |--------------------------------|-------------------|-------------------------------------------|
 | `bc`                           | `bc_001`          | `o2-analysis-bc-converter`                |
+| `run2bcinfo`                   | `run2bcinfo_001`  | `o2-analysis-run2bcinfos-converter`       |
 | `collision`                    | `collision_001`   | `o2-analysis-collision-converter`         |
 | `fdd`                          | `fdd_001`         | `o2-analysis-fdd-converter`               |
 | `hmpid`                        | `hmpid_001`       | `o2-analysis-hmpid-converter`             |
@@ -122,7 +123,7 @@ If the missing table is not mentioned there, try to find the missing workflow fo
 
 #### General cases
 
-You can identify the missing workflow by running the [`find_dependencies.py`](https://github.com/AliceO2Group/O2Physics/blob/master/Scripts/find_dependencies.py) script.
+You can identify the missing workflow by running the [dependency finder](../tools/dependencyFinder.md).
 The procedure is simple: If the error message complains about a missing table `DF_<id>/O2<table>` then you have to run `$O2PHYSICS_ROOT/share/scripts/find_dependencies.py -t <table>`
 inside the O2Physics environment and add the correct one among the listed producer workflows to your command line.
 
