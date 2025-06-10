@@ -192,15 +192,26 @@ Directories: [`PWGHF/D2H/Macros`](https://github.com/AliceO2Group/O2Physics/tree
     - `error` for problems that lead to an unwanted behaviour of the code,
     - `fatal` for critical problems that make further running of the code impossible or useless.
 - Include only needed headers but do not rely on implicitly included headers. See [Include What You Use](https://github.com/AliceO2Group/O2Physics/issues/8357).
-- Organise `#include`s into groups (separated by a blank line) in the following order:
-  - C++
-  - other external headers
-  - ROOT
-  - O2
-  - O2Physics
-  - PWG other than HF
-  - PWGHF
-    - Put PAG headers after the common ones.
+- Sort `#include`s from most specific to least specific and organise them into groups (separated by a blank line) in the following order (can be done automatically with [clang-format](../tools/README.md#pre-commit-hooks)):
+
+  1. Main module
+  2. Local-like file
+  3. Project (O2Physics)
+     - PWG (You can surround the PWG block with `// clang-format off` and `// clang-format on` directives to preserve the order.)
+       - Same PWG, same PAG
+       - Same PWG, different PAG
+       - Same PWG, non-PAG
+       - Other PWG
+     - Other
+  4. Third-party
+     - O2
+     - ROOT
+     - Other non-system (FastJet, ONNX, KFParticle,...)
+     - Anything else
+  5. System
+     - C++ standard library
+     - C standard library
+
 - Sort `#include`s alphabetically within a group.
 - Avoid using hard-coded PDG codes. Use their `enum` names instead
   (from [`PDG_t`](https://root.cern/doc/master/TPDGCode_8h.html) or
