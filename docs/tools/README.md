@@ -60,16 +60,14 @@ Next time you execute `git commit`, the hooks will run automatically.
 
 ### Tips
 
+#### Naming conventions
+
+The [`readability-identifier-naming`](https://clang.llvm.org/extra/clang-tidy/checks/readability/identifier-naming.html) check can fix deviations from the [naming conventions](https://rawgit.com/AliceO2Group/CodingGuidelines/master/naming_formatting.html).
+
 #### Cleaning `#include`s
 
 The [`misc-include-cleaner`](https://clang.llvm.org/extra/clang-tidy/checks/misc/include-cleaner.html) check can fix missing and unused `#include`s.
 This helps to apply the [Include What You Use](https://github.com/AliceO2Group/O2Physics/issues/8357) principle which allows to maintain header dependencies clean.
-
-#### Sorting `#include`s
-
-The [`llvm-include-order`](https://clang.llvm.org/extra/clang-tidy/checks/llvm/include-order.html) check sorts `#include`s from most specific to least specific to ensure that the headers do not have any hidden dependencies.
-
-Unfortunately, the [LLVM include style](https://llvm.org/docs/CodingStandards.html#include-style) is incompatible with the [Google include style](https://google.github.io/styleguide/cppguide.html#Names_and_Order_of_Includes) applied by `cpplint`.
 
 #### Testing (and fixing) many files at once
 
