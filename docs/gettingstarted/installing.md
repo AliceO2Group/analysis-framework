@@ -108,6 +108,7 @@ dnf install -y alice-o2-full-deps alibuild
 <h6 id="prereq-for-macos">aliBuild prerequisites for macOS</h6>
 
 **Get Xcode**<br>
+
 Xcode bundles the necessary tools to build software in the apple ecosystem including compilers, build systems and version control.
 
 * Download it from the [App Store](https://itunes.apple.com/gh/app/xcode/id497799835?mt=12)
@@ -118,12 +119,14 @@ Xcode bundles the necessary tools to build software in the apple ecosystem inclu
 `sudo xcodebuild -license`
 
 **Get Homebrew**<br>
+
 [Homebrew](https://brew.sh/) is a command-line package manager for macOS used to install software packages similar to `yum` on CentOS or `apt` on Ubuntu.
 
 * Install Homebrew using the [instructions on their webpage](https://brew.sh/).
 * Once installed detect any problems regarding Homebrew and your system using: `brew doctor`
 
 **Uninstall ROOT**<br>
+
 If you have an existing ROOT installation on your system, this will interfere with the aliBuild installation, and will cause difficult-to-debug compilation errors.
 
 Please uninstall any existing copy of ROOT on your system. The uninstallation method depends on how you installed it. For example, if you originally installed ROOT using Homebrew, you should uninstall it using `brew uninstall root`.
@@ -256,6 +259,46 @@ aliBuild build O2Physics
 
 See the [Troubleshooting](../troubleshooting/README.md) section for debugging tips if the build fails.
 
+## Delete obsolete builds
+
+With frequent rebuilding of packages, obsolete builds can pile up and occupy a lot of precious
+disk space.
+
+### Basic cleanup
+
+The simplest way to get rid of obsolete builds is to let aliBuild do its best by running:
+
+```bash
+aliBuild clean
+```
+
+which can take the optional argument `--aggressive-cleanup` that deletes also source code of built
+dependency packages and downloaded `.tar.gz` archives.
+
+In general, it's good practice to run `aliBuild clean` always after `aliBuild build`.
+
+This might not be enough, as aliBuild will not delete any build directory pointed to by a symlink
+that has "latest" in its name, even when that build is not needed by any other package anymore.
+Manual intervention is therefore sometimes needed.
+
+### Deep cleanup
+
+If you want to keep only the latest builds of your development packages (and their dependencies),
+you can make aliBuild delete the rest with a little trick.
+
+1. Delete symlinks to all builds:
+
+    ```bash
+    find $ALIBUILD_WORK_DIR/$(aliBuild architecture)/ -mindepth 2 -maxdepth 2 -type l -delete
+    find $ALIBUILD_WORK_DIR/BUILD/ -mindepth 1 -maxdepth 1 -type l -delete
+    ```
+
+    In case you specified the architecture manually (using the `-a` option with `aliBuild build`), you should replace `$(aliBuild architecture)` with your manually specified architecture.
+
+2. Recreate symlinks to the latest builds of development packages (and their dependencies)
+by running `aliBuild build` for each development package.
+3. Let aliBuild delete all the other builds by running `aliBuild clean`.
+
 ## Use your local software installations
 
 You will not find the packages you have built immediately available on your shell.
@@ -291,6 +334,10 @@ You also need to have `direnv` installed and hooked (see [instructions](https://
 
 ```warning
 This only builds O2Physics. If you have updated O2 or alidist, you first need to do a full build with aliBuild.
+```
+
+```danger
+Make sure that you are not inside any environment! (You can check with `alienv list` for aliBuild environments and with `echo $VIRTUAL_ENV` for virtual Python environments.)
 ```
 
 Go to the build directory.
