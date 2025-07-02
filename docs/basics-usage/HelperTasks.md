@@ -754,7 +754,7 @@ The overall table flow is illustrated here:
 </div>
 
 
-### TrackTuner
+## The TrackTuner class
 The `TrackTuner` class ([Common/Tools/TrackTuner.h](https://github.com/AliceO2Group/O2Physics/blob/master/Common/Tools/TrackTuner.h)) allows to smear the reconstructed track parameters.
 Such tool is primarely conceived to smear the parameters of tracks reconstructed in MC simulations according to the discrepancy between data and MC of the dcaXY and dcaZ.
 ```note
@@ -780,7 +780,7 @@ This object can be configured through the `Configurable<std::string> trackTunerP
 * `bool isInputFileFromCCDB`: the `pathInputFile/nameInputFile` is searched in CCDB if this flag is `true`, otherwise in the local file system (debug purposes)
 * `bool usePvRefitCorrections`: if this flag is `true`, the track smearing is performed using mean, resolution and pulls parametrizations vs. pt of dcaXY, dcaZ calculated w.r.t. primary collision vertex refitted w/o the current track, if this was originally a PV contributor
 ```note
-In pp collisions, one should use `usePvRefitCorrections == true`
+In pp collisions, there is a difference between `usePvRefitCorrections == true` and `usePvRefitCorrections == false`. In the former case, the parametrizations are obtained after refitting the primary vertex by removing from its fit the probe track, if it was originally a contributor.
 This is not relevant in Pb-Pb collisions.
 ```
 * `std::string pathFileQoverPt`: path to browse to find the correction file for the `q/pt` smearing
@@ -799,15 +799,18 @@ The string `trackTunerParams` must follow the format: `<variable_name>=<value>|<
 
 
 The dcaXY, dcaZ parametrization currently available are the following:
-* proxy for pp @ 13.6 TeV: [trackTuner_DataLHC23fPass1_McLHC23k4b_run535085.root](http://alice-ccdb.cern.ch/browse/Users/m/mfaggin/test/inputsTrackTuner/pp2023)
-  Data: LHC23f apass1, run 535085.
-  MC: LHC23k4b, run 535085.
-  Slides [here](https://docs.google.com/presentation/d/1_bsxzgB1DdVu-mxRwhpZ-U65c4J9iL2IH8xUEP3tv4Q/edit?usp=sharing).
-* [NEW] proxy for pp @ 13.6 TeV: [trackTuner_DataLHC23hPass4_McLHC23k4g.root](http://alice-ccdb.cern.ch/browse/Users/m/mfaggin/test/inputsTrackTuner/pp2023/pass4/correct_names)
+* proxy for pp @ 13.6 TeV: [trackTuner_DataLHC23hPass4_McLHC23k4g.root](http://alice-ccdb.cern.ch/browse/Users/m/mfaggin/test/inputsTrackTuner/pp2023/pass4/correct_names)
   Data: LHC23h apass4.
   MC: LHC23k4g.
   Slides [here](https://docs.google.com/presentation/d/10d1fE7Dh7OukTNgwwOhS8JQCEqzWZ3yjYZmpjntTDWw/edit?usp=sharing).
+* proxy for pp @ 13.6 TeV in 24 phi intervals: [trackTuner_DataLHC23pass4ThinSmall_McLHC23k4gSmall.root](http://alice-ccdb.cern.ch/browse/Users/m/mfaggin/test/inputsTrackTuner/pp2023/pass4/vsPhi)
+  Data: LHC23_pass4_thin_small, runs 535613, 535621, 535623, 535624, 535627, 535644, 535645, 535711, 535716, 535721, 535725
+  MC: LHC24k4g_small, runs 535613, 535621, 535623, 535624, 535627, 535644, 535645, 535711, 535716, 535721, 535722, 535725
+  Slides [here](https://docs.google.com/presentation/d/1JL8nHY7yJ-PhCqTNTJq8y3dHm5XLe3Nd4bT27yjp97U/edit?usp=sharing)
 * proxy for Pb-Pb @ 5.36 TeV: [trackTuner_DataLHC22sPass5_McLHC22l1b2_run529397.root](http://alice-ccdb.cern.ch/browse/Users/m/mfaggin/test/inputsTrackTuner/PbPb2022)
   Data: LHC22s apass5, run 529397.
   MC: LHC22l1b2, run 529397.
   Slides [here](https://docs.google.com/presentation/d/1sIXWMckaPZJir3gNLeDnB2TorNJrjXKcGJvyTvz5V8s/edit?usp=sharing).
+* proxy for PbPb @ 5.36 TeV in 24 phi intervals: [trackTuner_DataLHC24zzh_apass4_McLHC24e2_MCflat13.root](http://alice-ccdb.cern.ch/browse/Users/m/mfaggin/test/inputsTrackTuner/PbPb2023/apass4/vsPhi)
+  Data: LHC23zzh_apass4
+  MC: LHC24e2
