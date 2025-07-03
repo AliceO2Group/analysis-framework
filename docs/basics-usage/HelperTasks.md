@@ -788,7 +788,8 @@ This is not relevant in Pb-Pb collisions.
 * `bool updateCurvature`: flag to enable the update of the track curvature, i.e. `q/pt`, at the particle production point
 * `bool updateCurvatureIU`: flag to enable the update of the track curvature, i.e. `q/pt`, at the innermost update (IU) point
 * `float oneOverPtMC` (MC) and `float oneOverPtData` (data): the ratio `oneOverPtData/oneOverPtMC` defines the scaling factor to the `q/pt` residual to smear the track pt
-* `fillTrackTunerTable`: flag to enable the filling of a new table containing for each track the smeared `q/pt` at the IU point
+* `bool fillTrackTunerTable`: flag to enable the filling of a new table containing for each track the smeared `q/pt` at the IU point
+* `int nPhiBins`: number of phi intervals in which the parametrizations are provided. The currently-supported cases are `nPhiBins=0` (phi integrated) and `nPhiBins=24` (24 phi bins)
 
 ```note
 * The `TrackTuner` allows also to smear the `q/pt` if only one between `updateCurvature` and `updateCurvatureIU` is `true`
