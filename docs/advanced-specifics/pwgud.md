@@ -57,4 +57,4 @@ Mattermost channels: [PWG-UD O2 analyses](https://mattermost.web.cern.ch/alice/c
 
 ## Framework structure
 A schematic diagram of the typical workflow for a PWG-UD analysis is shown below.
-<div align="center"> <img src="../images/UD-Analysis-framework_v2.png" width="800px" alt="PWGUD analysis framework"> </div>
+<div align="center"> <img src="../images/UD-Anlaysis-frameork_v2.png" width="800px" alt="PWGUD analysis framework"> </div>
