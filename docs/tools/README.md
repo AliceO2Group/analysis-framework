@@ -53,28 +53,23 @@ Next time you execute `git commit`, the hooks will run automatically.
 `clang-tidy` is a clang-based C++ linter tool for diagnosing and fixing typical programming errors, like style violations or bugs.
 (See the [list of checks](https://clang.llvm.org/extra/clang-tidy/checks/list.html).)
 
-### Prerequisites for using clang-tidy
+To use `clang-tidy`, you need to have O2Physics compiled and a valid symbolic link `compile_commands.json` in the O2Physics directory pointing to the `alice/sw/BUILD/.../O2Physics` directory.
 
-- You need to have O2Physics successfully compiled.
-- Verify that there is a valid symbolic link `compile_commands.json` in the O2Physics directory pointing to the `alice/sw/BUILD/.../O2Physics` directory.
-
-### Tips
-
-#### Naming conventions
+### Checking naming conventions
 
 The [`readability-identifier-naming`](https://clang.llvm.org/extra/clang-tidy/checks/readability/identifier-naming.html) check can fix deviations from the [naming conventions](https://rawgit.com/AliceO2Group/CodingGuidelines/master/naming_formatting.html).
 
-#### Cleaning `#include`s
+### Cleaning `#include`s
 
 The [`misc-include-cleaner`](https://clang.llvm.org/extra/clang-tidy/checks/misc/include-cleaner.html) check can fix missing and unused `#include`s.
 This helps to apply the [Include What You Use](https://github.com/AliceO2Group/O2Physics/issues/8357) principle which allows to maintain header dependencies clean.
 
-#### Testing (and fixing) many files at once
+### Testing (and fixing) many files at once
 
-Here is an example of how to run the `misc-include-cleaner` check in parallel on all `.h` and `.cxx` files in the current directory.
+Here is an example of how to run the `misc-include-cleaner` check in parallel on all `.h`, `.cxx`, `.C` files in the current directory.
 
 ```bash
-parallel "clang-tidy --fix -checks=-*,misc-include-cleaner {}; echo \"{} \$?\"" ::: $(find -name "*.h" -o -name "*.cxx") > "clang-tidy.log"
+parallel "clang-tidy --fix -checks=-*,misc-include-cleaner {}; echo \"{} \$?\"" ::: "$(find . -name "*.h" -o -name "*.cxx" -o -name "*.C")" > "clang-tidy.log"
 ```
 
 The [`parallel`](https://www.gnu.org/software/parallel/) command is used to parallelise the execution of the `clang-tidy` command for all files.
@@ -82,6 +77,67 @@ The [`parallel`](https://www.gnu.org/software/parallel/) command is used to para
 For each file, `clang-tidy` will first try to compile it and then run the enabled check(s) and fix found problems (the `--fix` option).
 The messages are redirected into `clang-tidy.log`.
 The file name and the exit code are printed below the output of `clang-tidy` so that you can get the list of files for which `clang-tidy` failed with `grep " 1$" "clang-tidy.log"`.
+
+## [cppcheck](https://cppcheck.sourceforge.io/)
+
+`cppcheck` is a static analysis tool for C/C++ code that detects bugs, undefined behaviour, and dangerous coding constructs that compilers typically miss.
+
+`cppcheck` can analyse individual files (file mode) or entire projects (project mode).
+The two modes give slightly different results so one can consider using both for maximum coverage.
+
+### Using cppcheck in file mode
+
+The file mode is used in the MegaLinter check on GitHub.
+
+To use this mode, provide paths of files you want to analyse in the following way:
+
+```bash
+cppcheck --language=c++ --std=c++20 --enable=style --check-level=exhaustive --suppressions-list=cppcheck_config file1 file2 ... 2> "err.log"
+```
+
+The report will be stored in the `err.log` file.
+
+To run a parallelised analysis of all `.h`, `.cxx`, `.C` files in the current directory, execute:
+
+```bash
+parallel "cppcheck --language=c++ --std=c++20 --enable=style --check-level=exhaustive --suppressions-list=cppcheck_config {}" ::: "$(find . -name "*.h" -o -name "*.cxx" -o -name "*.C")" 2> "err.log"
+```
+
+Note: It is possible to parallelise the execution with the `-j` option instead but it usually produces less results than analysing files independently.
+
+### Using cppcheck in project mode
+
+To use this mode, you need to have O2Physics compiled and a valid symbolic link `compile_commands.json` in the O2Physics directory pointing to the `alice/sw/BUILD/.../O2Physics` directory.
+
+Instead of providing file paths, provide the path to the project compilation database and use the `-j` option for parallelisation:
+
+```bash
+cppcheck --language=c++ --std=c++20 --enable=style --check-level=exhaustive --suppressions-list=cppcheck_config --project=compile_commands.json -j $(nproc) 2> "err.log"
+```
+
+### Generating browsable HTML output
+
+Run `cppcheck` with the additional option `--xml` which will store the output in the XML format.
+
+If you used the file mode, the output file will contain an XML header and a footer for each analysed file which makes the output file invalid.
+To keep only the first header and the last footer, you can extract the relevant parts of the file with:
+
+```bash
+logfile_raw="err.log"
+logfile_merged="err_merged.log"
+head -4 "${logfile_raw}" > "${logfile_merged}"
+grep -vE "<(\?xml |/?results|cppcheck |/?errors)" "${logfile_raw}" >> "${logfile_merged}"
+tail -2 "${logfile_raw}"  >> "${logfile_merged}"
+```
+
+You can generate the HTML report (providing the correct `err` file) with:
+
+```bash
+cppcheck-htmlreport --title=O2Physics --report-dir=cppcheck-report --source-dir=. --file=err.log
+```
+
+The HTML files will be stored in the `cppcheck-report` directory.
+You can browse them in your web browser by opening the `index.html` file.
 
 ## [Visual Studio Code (VS Code)](https://code.visualstudio.com/)
 
