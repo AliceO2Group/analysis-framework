@@ -18,6 +18,7 @@ alias root='root -l'
 # Command "recompile O2Physics" will invoke "ninja install" for the "master" branch of O2Physics.
 # Command "recompile O2Physics my-branch" will invoke "ninja install" for the "my-branch" branch of O2Physics.
 # Command "recompile O2Physics my-branch Common" will invoke "ninja Common/install" for the "my-branch" branch of O2Physics.
+# Command "recompile O2Physics my-branch Common -j 1" will invoke "ninja Common/install -j 1" for the "my-branch" branch of O2Physics.
 recompile() {
   # set -o xtrace # to print out each command
   [ "$1" ] || { echo "Provide a package name"; return 1; }
@@ -27,6 +28,9 @@ recompile() {
   target=""
   target_name="all"
   [ "$3" ] && { target="$3/"; target_name="$3"; }
+  shift
+  shift
+  shift
   dir_pwd=$(pwd)
   dir_build="$ALIBUILD_WORK_DIR/BUILD/${package}-latest-${branch}/${package}"
   log="$(dirname "$dir_build")/log"
@@ -35,8 +39,11 @@ recompile() {
   direnv allow || { echo "Failed to allow direnv"; return 1; }
   eval "$(direnv export "$SHELL")"
   echo "Recompiling ${package}_${branch}_${target_name}..."
+  if [[ -n "$*" ]]; then
+    echo "Additional options:" "$@"
+  fi
   start=$(date +%s)
-  ninja "${target}install" > "$log" 2>&1
+  ninja "${target}install" "$@" > "$log" 2>&1
   ec=$?
   end=$(date +%s)
   echo "Compilation exited with: $ec"
@@ -52,9 +59,9 @@ recompile() {
 }
 
 # Recompile O2 with ninja.
-recompile-o2() { recompile "O2" "$1" "$2"; }
+recompile-o2() { recompile "O2" "$@"; }
 # Recompile O2Physics with ninja.
-recompile-o2p() { recompile "O2Physics" "$1" "$2"; }
+recompile-o2p() { recompile "O2Physics" "$@"; }
 
 # Find the workflow that produces a given table.
 # Limited functionality. Use find_dependencies.py for a full search.
@@ -82,5 +89,5 @@ debug-o2-compile() {
 # Find runtime error messages in an execution log.
 debug-o2-run() {
   [ "$1" ] || { echo "Provide a log file"; return 1; }
-  grep -n -e "\\[ERROR\\]" -e "\\[FATAL\\]" -e "segmentation" -e "Segmentation" -e "SEGMENTATION" -e "command not found" -e "Program crashed" -e "Error:" -e "Error in " -e "\\[WARN\\]" -e "Warning in " "$1"
+  grep -n -e "\\[ERROR\\]" -e "\\[FATAL\\]" -e "\\[CRITICAL\\]" -e "segmentation" -e "Segmentation" -e "SEGMENTATION" -e "command not found" -e "Program crashed" -e "Error:" -e "Error in " -e "\\[WARN\\]" -e "Warning in " "$1"
 }
