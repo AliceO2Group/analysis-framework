@@ -137,7 +137,7 @@ AxisSpec(int nBins,
 
 They differ in the way the axis bins are defined. In the first version a vector of bin edges is provided, which allows bins of different widths, whereas in the second case the edges of the equally wide bins are computed with the provided number of bins and the range of the axis, defined by binMin and binMax.
 
-By-the-way, there is in fact a third version of the AxisSpec constructor, which is similar to the first version, but takes as first argument a ConfigurableAxis (= [Configurable](../basics-usage/HelperTasks.md#configurables)&lt;std::vector&lt;double&gt;&gt;) instead of a std::vector&lt;double&gt;.
+By-the-way, there is in fact a third version of the AxisSpec constructor, which is similar to the first version, but takes as first argument a ConfigurableAxis (= [Configurable](../analysis-tools/EventSelection.md#configurables)&lt;std::vector&lt;double&gt;&gt;) instead of a std::vector&lt;double&gt;.
 
 <a name="addinghistograms"></a>
 
