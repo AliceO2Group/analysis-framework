@@ -7,7 +7,7 @@ title: Appendix&#58; data model reference
 
 The ALICE O2 data model is a collection of tables. Each table can be seen as a collection of objects, where each column represents a property of the objects, and each row is an object. When the users write their analysis, they need to provide at least two things: a query which selects rows of one or more tables and a function which gets invoked on the results of the query. When specifying the query, the users can perform typical database operations between them. For example, they can only select rows matching a given query, or they can put two tables one on the side of the other and select the rows of the resulting table in what it's called a "join".
 
-Tables can be read from the input files [AO2D files](ao2dTables.md) and or they can be created by tasks. To produce some tables with commonly used quantities there exist a set of predefined [helper tasks](../helperTasks/README.md) which can be included in user analysis work flows to produce tables with [commonly used information](helperTaskTables.md)
+Tables can be read from the input files [AO2D files](ao2dTables.md) and or they can be created by tasks. To produce some tables with commonly used quantities there exist a set of predefined [helper tasks](../analysis-tools/README.md) which can be included in user analysis work flows to produce tables with [commonly used information](helperTaskTables.md)
 
 The data model also provides a bunch of pre-defined [joins and iterators](joinsAndIterators.md).
 
