@@ -24,6 +24,7 @@ Table of contents:
 * [Configurables](#configurables)
 * [Remarks](#remarks)
 
+
 ### Concept
 
 The main purpose of the event selection framework in O2 is to provide tools to select triggered events and reject pileup, beam-gas and poor quality collisions.
@@ -367,59 +368,63 @@ One can set other configurables in the json file. This json file has to be provi
 
 
 
-## Occupancy estimators and selection bits
-
+## Occupancy estimation
 
 In ALICE Run 3 Pb–Pb collisions, **occupancy** in the TPC refers to the contamination of an event’s TPC clusters by signals from other nearby collisions within the TPC drift time window.  
 
-- The TPC has a long drift time (~100 µs), so tracks from multiple collisions can overlap in the detector.  
+- The TPC has a long drift time (~100 µs), so clusters from particles originated from multiple collisions can overlap in the detector.  
 - Higher occupancy worsens:  
   - **Tracking efficiency**  
   - **PID performance (dE/dx shifts, peak broadening)**  
-- Occupancy can be estimated using:  
-  - the number of ITS tracks with ≥5 clusters from other collisions in a time window around a given event. In the analysis it can be retrieved as:
-      ``` c++
-      int occupancyByTracks = col.trackOccupancyInTimeRange(); // range is from 0 up to ~15000
-      ```
-  - the summed FT0C amplitude from other collisions:
-     ``` c++
-      float occupancyByFT0C = col.ft0cOccupancyInTimeRange(); 
-      ```
-  In the occupancy calculation, multiplicities of nearby collisions are "weighted" according to their time separation from the collision-of-interest.
+
+### Occupancy estimators
+Occupancy can be estimated using:  
+- the number of ITS tracks from other collisions in a time window around a given event. In the analysis it can be retrieved as:
+  ``` c++
+  int occupancyByTracks = col.trackOccupancyInTimeRange(); // range is from 0 up to ~15k
+  ```
+- the alternative occupancy estimator is the summed FT0C amplitude from other collisions:
+  ``` c++
+   float occupancyByFT0C = col.ft0cOccupancyInTimeRange();  // range is from 0 up to ~150k
+  ```
+- In the occupancy calculation, multiplicities of nearby collisions are "weighted" according to their time separation from a collision-of-interest.  
   Both occupancy estimators are calculated per event in [EventSelectionModule.h](https://github.com/AliceO2Group/O2Physics/blob/daily-20251029-0000/Common/Tools/EventSelectionModule.h#L1361).
-  Estimators return the value of -1 if a collision is close to Time Frame borders (so, not enough information for the occupancy calculation; we need information -40 µs...+100 µs time range wrt a given collision).
+- Estimators return the value of -1 if a collision is close to Time Frame borders (so, not enough information for the occupancy calculation; we need information -40 µs...+100 µs time range wrt a given collision).
 
 
----
+### Occupancy selection bits
 In addition to the occupancy estimators described above, several additional event selection bits are implemented for a better cleanup of various nearby effects from other collisions (related not only to the TPC, but also to the ITS, e.g. to high occupancies in the ITS Readout Frames).
 The following table summarizes the event selection bits used to mitigate occupancy effects in ALICE Run 3.
 
 | **Bit** | **Definition** | **Strictness** | **Typical Effect / Event Loss** |
 |---------|----------------|----------------|--------------------------------|
 | `kNoCollInTimeRangeNarrow` | Rejects events if another collision within **±0.25 µs** | Narrow veto | Useful to suppress residual BC mis-associations; minimal loss |
-| `kNoCollInTimeRangeStandard` | Rejects if: (1) another coll. within ±0.25 µs, or (2) multiplicity > threshold in −4…+2 µs | Medium | Further suppression of effects from nearby collisions; ~3-10% event loss depending on IR |
+| `kNoCollInTimeRangeStandard` | Rejects if: (1) another coll. within ±0.25 µs, or (2) multiplicity of a coll. in dt −4…+2 µs > threshold  | Medium | Further suppression of effects from nearby collisions; ~3-10% event loss depending on IR |
 | `kNoCollInTimeRangeStrict` | Rejects events if another collision is within **±10 µs** | Very strict | Strongly reduces effects from nearby events; large loss of statistics at high IR (can exceed 30–40%) |
 | `kNoCollInRofStrict` | Rejects events if >1 collision in the same **ITS Readout Frame** (~15 µs in Pb-Pb) | Very strict | Removes in-ROF pileup; at 38 kHz Pb–Pb cuts ~35% of events |
 | `kNoCollInRofStandard` | Allows >1 collision per ROF but rejects if another has multiplicity > threshold (default: FT0C amplitude >5000 a.u. ≈ 500 tracks) | Medium | Retains more stats, but protects against large in-ROF pileup |
-| `kNoHighMultCollInPrevRof` | Vetoes event if **previous ROF** has high multiplicity (FT0C >5000 a.u.) | only for cross-ROF ITS reco | Removes cases where previous ROF “steals” clusters; few % loss, but improves ITS tracking quality |
+| `kNoHighMultCollInPrevRof` | Vetoes event if **previous ROF** has high multiplicity (FT0C >5000 a.u.); only for cross-ROF ITS reco | Medium | Removes cases where previous ROF “steals” clusters; few % loss, but improves ITS tracking quality |
 
 These bits can be used as follows:
 ``` c++
 if (col.selection_bit(o2::aod::evsel::kNoCollInTimeRangeStrict)) { /* do analysis */ }
 ```
----
 
-More details can be found in the [report at the APW 2024](https://indico.cern.ch/event/1462154/#7-occupancy-effects), where the concepts and observations are explained (while some figures and indicated values might be outdated).
+
+### Discussion
+
+More details on occupancy in Pb-Pb can be found in the [report at the APW 2024](https://indico.cern.ch/event/1462154/#7-occupancy-effects), where the concepts and observations are explained (while some figures and indicated values might be outdated).
 
 Tight cuts on occupancy improve quality (better S/B, cleaner PID, less bias in kinematics), but reduce event statistics. 
-Sensitivity to the occupancy effects depends on analysis. Therefore, the suggested approach is to study how results of a given analysi change as a function of occupancy (one may try several occupancy "bins", e.g. [0,500), (500, 2000), (2000-4000)), 
-and in addition apply occupancy selection bits, e.g. `kNoCollInTimeRangeNarrow` to eliminate the bc-collision mismatches, and 'kNoCollInTimeRangeStandard' to make a further cleaunup.
 
-Note that the TPC-related occupancy effects are mostly pronounced in Pb-Pb runs, however, one may use the tools described above for occupancy studies also in pp and light-ion runs. 
+However, sensitivity to the occupancy effects depends on analysis. 
+Therefore, the suggested approach is to study how results of a given analysi change as a function of occupancy: one may try several occupancy "bins", e.g. `[0,500), (500, 1000), (1000-2000), (2000-4000)`, etc., 
+and, in addition, apply occupancy selection bits, e.g. `kNoCollInTimeRangeNarrow` to eliminate the bc-collision mismatches, or `kNoCollInTimeRangeStandard` to make a further cleaunup.
+
+Note that TPC-related occupancy effects are most pronounced in Pb–Pb runs, however, the tools described above can also be used for occupancy studies in pp and light-ion runs.
 
 
-
-## Usage of the RCT flags
+## Usage of RCT flags
 
 (to be updated)
 
