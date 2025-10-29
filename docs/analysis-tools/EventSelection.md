@@ -378,21 +378,25 @@ In ALICE Run 3 Pb–Pb collisions, **occupancy** in the TPC refers to the contam
   - **PID performance (dE/dx shifts, peak broadening)**  
 
 ### Occupancy estimators
-Occupancy can be estimated using:  
-- the number of ITS tracks from other collisions in a time window around a given event. In the analysis it can be retrieved as:
+
+A single-value "integrated" occupancy estimator for a given collision can be calculated by summing
+- the number of ITS tracks from other collisions within a defined time window around the given event. In the analysis, it can be accessed as:
   ``` c++
-  int occupancyByTracks = col.trackOccupancyInTimeRange(); // range is from 0 up to ~15k
+  int occupancyByTracks = col.trackOccupancyInTimeRange(); // range: from 0 up to ~15k
   ```
-- the alternative occupancy estimator is the summed FT0C amplitude from other collisions:
+- alternatively, we can sum up FT0C amplitudes from other collisions:
   ``` c++
-   float occupancyByFT0C = col.ft0cOccupancyInTimeRange();  // range is from 0 up to ~150k
+   float occupancyByFT0C = col.ft0cOccupancyInTimeRange();  // range: from 0 up to ~150k
   ```
-- In the occupancy calculation, multiplicities of nearby collisions are "weighted" according to their time separation from a collision-of-interest.  
-  Both occupancy estimators are calculated per event in [EventSelectionModule.h](https://github.com/AliceO2Group/O2Physics/blob/daily-20251029-0000/Common/Tools/EventSelectionModule.h#L1361).
-- Estimators return the value of -1 if a collision is close to Time Frame borders (so, not enough information for the occupancy calculation; we need information -40 µs...+100 µs time range wrt a given collision).
+
+Notes:
+- Both occupancy estimators are calculated per each collision in the event selection routine, [EventSelectionModule.h](https://github.com/AliceO2Group/O2Physics/blob/daily-20251029-0000/Common/Tools/EventSelectionModule.h#L1361).
+- In the occupancy calculation, multiplicities of nearby collisions are "weighted" according to their time separation from a collision-of-interest.
+- Estimators return the value of `-1` if a given collision is close to Time Frame borders (so, not enough information for the occupancy calculation, while we need information within -40 µs...+100 µs time range wrt a given collision).
 
 
 ### Occupancy selection bits
+
 In addition to the occupancy estimators described above, several additional event selection bits are implemented for a better cleanup of various nearby effects from other collisions (related not only to the TPC, but also to the ITS, e.g. to high occupancies in the ITS Readout Frames).
 The following table summarizes the event selection bits used to mitigate occupancy effects in ALICE Run 3.
 
