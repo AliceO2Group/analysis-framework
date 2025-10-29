@@ -97,9 +97,9 @@ If the missing table is not mentioned there, try to find the missing workflow fo
 #### Special cases
 
 - Missing `track`: If you are running on Run 3 input, add `o2-analysis-track-propagation`.
-  - Please refer to the documentation on the [track propagation](../basics-usage/HelperTasks.md#track-propagation) for details.
-- Missing `fv0c`: If you are running on Run 3 input, please make sure that the process switches in the `bc-selection`, `event-selection` and `multiplicity-table` devices are set to `"processRun2": "false", "processRun3": "true"` in your config JSON; see e.g. the `Configurables` section in the [event selection](../basics-usage/HelperTasks.md#event-selection) documentation.
-- Missing `tofsignal`: Please refer to the documentation on the [TOF PID](../basics-usage/HelperTasks.md#particle-identification) requirements.
+  - Please refer to the documentation on the [track propagation](../analysis-tools/TrackSelection.md#track-propagation) for details.
+- Missing `fv0c`: If you are running on Run 3 input, please make sure that the process switches in the `bc-selection`, `event-selection` and `multiplicity-table` devices are set to `"processRun2": "false", "processRun3": "true"` in your config JSON; see e.g. the `Configurables` section in the [event selection](../analysis-tools/EventSelection.md) documentation.
+- Missing `tofsignal`: Please refer to the documentation on the [TOF PID](../analysis-tools/PID.md) requirements.
 - Missing versioned table: Converters convert older versions of tables into their newer versions. (See the table below.)
   - If the missing table is the **old** version, it indicates that you are running the corresponding converter while you should not. **Remove** it.
   - If the missing table is the **new** version, it indicates that you are not running the corresponding converter while you should. **Add** it.

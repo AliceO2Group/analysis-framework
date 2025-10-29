@@ -26,7 +26,7 @@ A simple example is the histogram tutorial which you can run (on Run 2 converted
 o2-analysistutorial-histograms --aod-file AO2D.root
 ```
 
-In case you try the same on Run 3 data or MC, you also need the [track propagation task](HelperTasks.md#track-propagation):
+In case you try the same on Run 3 data or MC, you also need the [track propagation task](../analysis-tools/TrackSelection.md#track-propagation):
 
 ```bash
 o2-analysis-timestamp | o2-analysis-track-propagation | o2-analysistutorial-histograms --aod-file AO2D.root
