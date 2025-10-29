@@ -370,7 +370,7 @@ One can set other configurables in the json file. This json file has to be provi
 
 ## Occupancy estimation
 
-In ALICE Run 3 Pb–Pb collisions, **occupancy** in the TPC refers to the contamination of an event’s TPC clusters by signals from other nearby collisions within the TPC drift time window. 
+In ALICE Run 3 Pb–Pb collisions, **occupancy** in the TPC refers to the contamination of an event’s TPC clusters by signals from other nearby collisions within the TPC drift time window.
 
 - The TPC has a long drift time (~100 µs), so clusters from particles originated from multiple collisions can overlap in the detector.
 - Higher occupancy worsens:
