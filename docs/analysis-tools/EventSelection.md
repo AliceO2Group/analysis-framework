@@ -370,12 +370,12 @@ One can set other configurables in the json file. This json file has to be provi
 
 ## Occupancy estimation
 
-In ALICE Run 3 Pb–Pb collisions, **occupancy** in the TPC refers to the contamination of an event’s TPC clusters by signals from other nearby collisions within the TPC drift time window.  
+In ALICE Run 3 Pb–Pb collisions, **occupancy** in the TPC refers to the contamination of an event’s TPC clusters by signals from other nearby collisions within the TPC drift time window. 
 
-- The TPC has a long drift time (~100 µs), so clusters from particles originated from multiple collisions can overlap in the detector.  
-- Higher occupancy worsens:  
-  - **Tracking efficiency**  
-  - **PID performance (dE/dx shifts, peak broadening)**  
+- The TPC has a long drift time (~100 µs), so clusters from particles originated from multiple collisions can overlap in the detector.
+- Higher occupancy worsens:
+  - Tracking efficiency
+  - PID performance (dE/dx shifts, peak broadening)
 
 ### Occupancy estimators
 
@@ -420,10 +420,10 @@ if (col.selection_bit(o2::aod::evsel::kNoCollInTimeRangeStrict)) { /* do analysi
 
 More details on occupancy in Pb-Pb can be found in the [report at the APW 2024](https://indico.cern.ch/event/1462154/#7-occupancy-effects), where the concepts and observations are explained (while some figures and indicated values might be outdated).
 
-Tight cuts on occupancy improve quality (better S/B, cleaner PID, less bias in kinematics), but reduce event statistics. 
+Tight cuts on occupancy improve quality (better S/B, cleaner PID, less bias in kinematics), but reduce event statistics.
 
-However, sensitivity to the occupancy effects depends on analysis. 
-Therefore, the suggested approach is to study how results of a given analysi change as a function of occupancy: one may try several occupancy "bins", e.g. `[0,500), (500, 1000), (1000-2000), (2000-4000)`, etc., 
+However, sensitivity to the occupancy effects depends on analysis.
+Therefore, the suggested approach is to study how results of a given analysi change as a function of occupancy: one may try several occupancy "bins", e.g. `[0,500), (500, 1000), (1000-2000), (2000-4000)`, etc.,
 and, in addition, apply occupancy selection bits, e.g. `kNoCollInTimeRangeNarrow` to eliminate the bc-collision mismatches, or `kNoCollInTimeRangeStandard` to make a further cleaunup.
 
 Note that TPC-related occupancy effects are most pronounced in Pb–Pb runs, however, the tools described above can also be used for occupancy studies in pp and light-ion runs.
