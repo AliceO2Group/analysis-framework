@@ -397,8 +397,9 @@ Notes:
 
 ### Occupancy selection bits
 
-In addition to the occupancy estimators described above, several additional event selection bits are implemented for a better cleanup of various nearby effects from other collisions (related not only to the TPC, but also to the ITS, e.g. to high occupancies in the ITS Readout Frames).
-The following table summarizes the event selection bits used to mitigate occupancy effects in ALICE Run 3.
+In addition to the occupancy estimators described above, several special event selection bits are implemented for a better cleanup of various nearby effects from other collisions (related not only to the TPC, but also to the ITS, e.g. to high occupancies in the ITS Readout Frames).
+
+The following table summarizes the event selection bits used to mitigate occupancy effects in Pb-Pb:
 
 | **Bit** | **Definition** | **Strictness** | **Typical Effect / Event Loss** |
 |---------|----------------|----------------|--------------------------------|
