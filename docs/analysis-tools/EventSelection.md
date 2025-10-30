@@ -3,7 +3,7 @@ sort: 1
 title: Event Selection
 ---
 
-# Event Selection Basics
+# Event Selection
 
 ## Timestamp
 
@@ -11,7 +11,7 @@ The timestamp task is needed to fill the table with timestamps. Timestamp contai
 
 Since the Timestamps table has an entry per bunch crossing it can be joined with table BC. The join is defined by o2::aod::BCsWithTimestamps (see list of defined [joins and iterators](https://aliceo2group.github.io/analysis-framework/docs/datamodel/joinsAndIterators.html#list-of-joins-and-iterators)).
 
-## Event selection
+## Event selection basics
 
 Table of contents:
 
@@ -94,7 +94,7 @@ In general, one has to follow the following steps:
       }
       ```
 
-The `sel8` event selection bit is a logical _and_ between the `kIsTriggerTVX` bit (based on FT0A & FT0C requirement with time-based constraints on the vertex position), and (since April 2024) `kNoTimeFrameBorder` and  `kNoITSROFrameBorder` bits - see [below](#integration-into-event-selection).
+The `sel8` event selection bit is a logical _and_ between the `kIsTriggerTVX` bit (based on FT0A & FT0C requirement, with time-based constraints on the vertex position), and (since April 2024) `kNoTimeFrameBorder` and  `kNoITSROFrameBorder` bits - see [below](#integration-into-event-selection).
 
 * run your tasks in stack with timestamp and event-selection tasks:
 
@@ -367,17 +367,17 @@ One can set other configurables in the json file. This json file has to be provi
 * EvSel table might be also useful in user tasks relying on beam-beam and beam-gas decisions in forward detectors, e.g. in UPC tasks.
 
 
-## Time Frame and ITS ROF Border cuts
+## Time Frame and ITS ROF border cuts
 
-### Time Frame Borders
+### Time Frame borders
 
 In Run 3 and 4, ALICE operates in **continuous readout mode**, where data are stored in **Time Frames (TFs)** that correspond to 32 LHC orbits, ≈ 2.9 ms (_note:_ in 2022 pp TFs were longer - 128 LHC orbits), and each TF is **reconstructed independently**.  
 
 Because the drift time of electrions in the TPC is **≈ 100 μs**, collisions near the end of a TF **lack full information**, resulting in a depletion of vertex contributors and a drop in ITS+TPC tracking efficiency during the last ≈ 1.1 LHC orbits of the TF (LHC orbit is ≈89 μs).
-Additional effect happens at the **beginning of the next TF**, when the reconstruction starts while the electrons from pre-TF collisions are still drifting.
+Additional effect happens at the **beginning of the next TF**, when the reconstruction starts when the electrons from pre-TF collisions are still drifting.
 
 **Mitigation in event selection**:
-- A dedicated event-selection bit `kNoTimeFrameBorder` was introduced (February, 2024) to reject events close to TF edges:
+- A dedicated event-selection bit `kNoTimeFrameBorder` was introduced (February 2024) to reject events close to TF edges:
   - Cuts ≈ **300 bunch crossings (BCs)** at the start and ≈ **4000 BCs** at the end of each TF.  
   - Corresponds to ≈ **3.7% event loss** for 2023–25 data.
 - This cut ensures full TPC drift information for all accepted events, removing TF-edge artefacts in vertex and track distributions.
@@ -387,11 +387,11 @@ Additional effect happens at the **beginning of the next TF**, when the reconstr
   ```
 
 
-### ITS Readout Frame (ROF) Borders
+### ITS Readout Frame borders
 
 - Although the global readout is continuous, the ITS2 detector is read out in **discrete Readout Frames (ROFs)**:
   - in **pp:** 18 ROFs per LHC orbit, each ≈ 5 μs (198 BCs)  
-  - in **Pb–Pb:** 6 ROFs per orbit (≈ 15 μs each, 594 BCs)
+  - in **Pb–Pb:** 6 ROFs per orbit, ≈ 15 μs each (594 BCs)
 - Cluster losses occur at ROF boundaries due to the **ALPIDE chip’s time-walk effect**:  
   - hits from an interaction in ROF *i* may appear only in ROF *i + 1*  
   - this causes a sharp drop in ITS cluster and track counts at ROF edges.
@@ -405,21 +405,21 @@ Additional effect happens at the **beginning of the next TF**, when the reconstr
   ``` c++
   if (col.selection_bit(o2::aod::evsel::kNoITSROFrameBorder)) { /* do analysis */ }
   ```
-- Note that this cut also helps to remove ROF borders for the MFT detector (where the same chips as in the ITS are used, and the ROFs in the MFT are aligned in time to ROFs in the ITS).
+- Note that this cut also helps to remove collisions at the ROF borders in the MFT detector (where the same chips as in the ITS are used, and ROFs in the MFT are aligned in time to the ITS ROFs).
 
-More details on the TF and ROF border effects and cuts can be found in slides 2-17 of [this presentation (11.2024)](https://indico.cern.ch/event/1453901/timetable/#6-event-selection-in-run3).
+More details on the TF and ROF border effects and cuts can be found e.g. in slides 2-17 of [presentation (November 2024)](https://indico.cern.ch/event/1453901/timetable/#6-event-selection-in-run3).
 
 
 
 ### Integration into event selection
-- Since **April 2024**, both the **Time Frame border** and **ITS Readout Frame border** cuts are combined with the ``kIsTriggerTVX`` condition via logical _and_ into the `sel8` event-selection bit, ensuring events used for analysis are free from TF and ROF boundary artefacts.
+- Since April 2024, both the **Time Frame border** and **ITS Readout Frame border** cuts are combined with the ``kIsTriggerTVX`` condition via logical _and_ in the `sel8` event-selection bit, ensuring events used for analysis are free from TF and ROF boundary artifacts.
 
 
 
 
 ## Occupancy estimation
 
-In ALICE Run 3 Pb–Pb collisions, **occupancy** in the TPC refers to the contamination of an event’s TPC clusters by signals from other nearby collisions within the TPC drift time window.
+In ALICE Run 3 Pb–Pb collisions, **occupancy effects** in the TPC refer to the deterioration of the quality of an event’s TPC clusters by signals from other nearby collisions within the TPC drift time window.
 
 - The TPC has a long drift time (~100 µs), so clusters from particles originated from multiple collisions can overlap in the detector.
 - Higher occupancy worsens:
@@ -441,7 +441,7 @@ A single-value "integrated" occupancy estimator for a given collision can be cal
 Notes:
 - Both occupancy estimators are calculated per each collision in the event selection routine, [EventSelectionModule.h](https://github.com/AliceO2Group/O2Physics/blob/daily-20251029-0000/Common/Tools/EventSelectionModule.h#L1361).
 - In the occupancy calculation, multiplicities of nearby collisions are "weighted" according to their time separation from a collision-of-interest.
-- Estimators return the value of `-1` if a given collision is close to Time Frame borders (so, not enough information for the occupancy calculation, while we need information within -40 µs...+100 µs time range wrt a given collision).
+- Estimators return `-1` if a given collision is close to Time Frame borders (so, not enough information for the occupancy calculation, while we need information within -40 µs...+100 µs time range wrt a given collision).
 
 
 ### Occupancy selection bits
@@ -472,7 +472,7 @@ More details on occupancy in Pb-Pb can be found in the [report at the APW 2024](
 Tight cuts on occupancy improve quality (better S/B, cleaner PID, less bias in kinematics), but reduce event statistics.
 
 However, sensitivity to the occupancy effects depends on analysis.
-Therefore, the suggested approach is to study how results of a given analysi change as a function of occupancy: one may try several occupancy "bins", e.g. `[0,500), (500, 1000), (1000-2000), (2000-4000)`, etc.,
+Therefore, the suggested approach is to study how results of a given analysi change as a function of occupancy: one may try several occupancy "bins", e.g. `[0,500), [500, 1000), [1000-2000), [2000-4000)`, etc.,
 and, in addition, apply occupancy selection bits, e.g. `kNoCollInTimeRangeNarrow` to eliminate the bc-collision mismatches, or `kNoCollInTimeRangeStandard` to make a further cleaunup.
 
 Note that TPC-related occupancy effects are most pronounced in Pb–Pb runs, however, the tools described above can also be used for occupancy studies in pp and light-ion runs.
@@ -506,7 +506,7 @@ if (col.selection_bit(o2::aod::evsel::kIsGoodITSLayersAll)) {
 ```
 This particular bit `kIsGoodITSLayersAll` ensures that all ITS layers are in a good state (i.e. no rebooting **staves**; note that at the same time some **chips** can be inactive).
 
-The logic behind these cuts uses [CCDB maps](https://nvalle.web.cern.ch/its/dmap/) of dead chips and defines per-layer thresholds for allowed inactive chips:
+The logic behind these cuts uses [CCDB maps of dead chips](https://nvalle.web.cern.ch/its/dmap/) and defines per-layer thresholds for allowed inactive chips:
 ```cpp
 maxInactiveChipsPerLayer = {8, 8, 8, 111, 111, 195, 195};
 ```
