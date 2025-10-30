@@ -3,7 +3,7 @@ sort: 1
 title: Event Selection
 ---
 
-# Event Selection
+# Event Selection Basics
 
 ## Timestamp
 
@@ -94,7 +94,7 @@ In general, one has to follow the following steps:
       }
       ```
 
-      Note that sel8 selection based on FT0A & FT0C requirement is not mandatory in Run 3 pilot beam data. It might be safer to work with unbiased sample.
+The `sel8` event selection bit is a logical _and_ between the `kIsTriggerTVX` bit (based on FT0A & FT0C requirement with time-based constraints on the vertex position), and (since April 2024) `kNoTimeFrameBorder` and  `kNoITSROFrameBorder` bits - see [below](#integration-into-event-selection).
 
 * run your tasks in stack with timestamp and event-selection tasks:
 
@@ -367,6 +367,55 @@ One can set other configurables in the json file. This json file has to be provi
 * EvSel table might be also useful in user tasks relying on beam-beam and beam-gas decisions in forward detectors, e.g. in UPC tasks.
 
 
+## Time Frame and ITS ROF Border cuts
+
+### Time Frame Borders
+
+In Run 3 and 4, ALICE operates in **continuous readout mode**, where data are stored in **Time Frames (TFs)** that correspond to 32 LHC orbits, ≈ 2.9 ms (_note:_ in 2022 pp TFs were longer - 128 LHC orbits), and each TF is **reconstructed independently**.  
+
+Because the drift time of electrions in the TPC is **≈ 100 μs**, collisions near the end of a TF **lack full information**, resulting in a depletion of vertex contributors and a drop in ITS+TPC tracking efficiency during the last ≈ 1.1 LHC orbits of the TF (LHC orbit is ≈89 μs).
+Additional effect happens at the **beginning of the next TF**, when the reconstruction starts while the electrons from pre-TF collisions are still drifting.
+
+**Mitigation in event selection**:
+- A dedicated event-selection bit `kNoTimeFrameBorder` was introduced (February, 2024) to reject events close to TF edges:
+  - Cuts ≈ **300 bunch crossings (BCs)** at the start and ≈ **4000 BCs** at the end of each TF.  
+  - Corresponds to ≈ **3.7% event loss** for 2023–25 data.
+- This cut ensures full TPC drift information for all accepted events, removing TF-edge artefacts in vertex and track distributions.
+- Usage in analysis:
+  ``` c++
+  if (col.selection_bit(o2::aod::evsel::kNoTimeFrameBorder)) { /* do analysis */ }
+  ```
+
+
+### ITS Readout Frame (ROF) Borders
+
+- Although the global readout is continuous, the ITS2 detector is read out in **discrete Readout Frames (ROFs)**:
+  - in **pp:** 18 ROFs per LHC orbit, each ≈ 5 μs (198 BCs)  
+  - in **Pb–Pb:** 6 ROFs per orbit (≈ 15 μs each, 594 BCs)
+- Cluster losses occur at ROF boundaries due to the **ALPIDE chip’s time-walk effect**:  
+  - hits from an interaction in ROF *i* may appear only in ROF *i + 1*  
+  - this causes a sharp drop in ITS cluster and track counts at ROF edges.
+- The effect is **particle-dependent**, e.g. protons (larger dE/dx) are recorded earlier than pions—leading to small PID-dependent distortions near borders.
+
+**Mitigation in event selection**
+- The selection bit **`kNoITSROFrameBorder`** rejects events near ITS ROF edges:
+  - removes collisions within  **10 BCs** at the beginning and **20 BCs** at the end of each ROF
+  - it correponds to ≈ 15 % of BCs in pp and ≈5 % of BCs in Pb–Pb (corresponding event losses depend on the LHC filling scheme)
+- Usage in analysis:
+  ``` c++
+  if (col.selection_bit(o2::aod::evsel::kNoITSROFrameBorder)) { /* do analysis */ }
+  ```
+- Note that this cut also helps to remove ROF borders for the MFT detector (where the same chips as in the ITS are used, and the ROFs in the MFT are aligned in time to ROFs in the ITS).
+
+More details on the TF and ROF border effects and cuts can be found in slides 2-17 of [this presentation (11.2024)](https://indico.cern.ch/event/1453901/timetable/#6-event-selection-in-run3).
+
+
+
+### Integration into event selection
+- Since **April 2024**, both the **Time Frame border** and **ITS Readout Frame border** cuts are combined with the ``kIsTriggerTVX`` condition via logical _and_ into the `sel8` event-selection bit, ensuring events used for analysis are free from TF and ROF boundary artefacts.
+
+
+
 
 ## Occupancy estimation
 
@@ -434,16 +483,15 @@ Note that TPC-related occupancy effects are most pronounced in Pb–Pb runs, how
 
 ### Problem
 
-- The **Inner Tracking System (ITS)** occasionally develops **“holes” in acceptance** lasting about **6–8 seconds**, visible as gaps in φ–time plots of track clusters.  
-- These are caused by **reboots of ITS staves**, typically triggered by recovery of failed **lanes** (groups of 7 chips sharing one data link).  
-- When a lane fails, the **full stave** becomes temporarily blind while the DCS recovers it.  
-- The issue affects, in particular, **ITS Layer 3**, which is critical for achieving four consecutive ITS hits in tracking.  
-- These dead periods correlate with **drops in ITS–TPC matching efficiency** and produce visible “holes” in tracking performance.  
+- The ITS occasionally develops **“holes” in acceptance** lasting about **6–8 seconds**, visible as gaps in φ distributions on time-dependent plots.
+- These are caused by **reboots of ITS staves**, typically triggered by recovery of failed **lanes** (groups of 7 chips sharing one data link). When a lane fails, the **full stave** becomes temporarily blind while the DCS recovers it.
+- The issue affects, in particular, **ITS Layer 3**, which is critical for achieving four consecutive ITS hits in tracking.
+- These dead periods correlate also with **drops in ITS–TPC matching efficiency**.
 - The effect appears both in **Pb–Pb** and **pp** data.
 
-### Using new event selection bits
+### Using special event selection bits
 
-To reject events recorded during these faulty intervals, several event selection bits were introduced in O2Physics ([PR #9038](https://github.com/AliceO2Group/O2Physics/pull/9038), Dec 2024):
+To reject events recorded during the affected time intervals, several event selection bits were introduced in O2Physics ([PR #9038](https://github.com/AliceO2Group/O2Physics/pull/9038), Dec 2024):
 ```
 kIsGoodITSLayer3,           // number of inactive chips on ITS layer 3 is below maximum allowed value
 kIsGoodITSLayer0123,        // numbers of inactive chips on ITS layers 0-3 are below maximum allowed values
@@ -456,16 +504,16 @@ if (col.selection_bit(o2::aod::evsel::kIsGoodITSLayersAll)) {
     // do analysis
 }
 ```
-This particular cut ensures that all ITS layers are in a good state (i.e. no rebooting **staves**; note that at the same time some **chips** can be inactive).
+This particular bit `kIsGoodITSLayersAll` ensures that all ITS layers are in a good state (i.e. no rebooting **staves**; note that at the same time some **chips** can be inactive).
 
-The logic uses [CCDB maps](https://nvalle.web.cern.ch/its/dmap/) of dead chips and defines per-layer thresholds for allowed inactive chips:
+The logic behind these cuts uses [CCDB maps](https://nvalle.web.cern.ch/its/dmap/) of dead chips and defines per-layer thresholds for allowed inactive chips:
 ```cpp
 maxInactiveChipsPerLayer = {8, 8, 8, 111, 111, 195, 195};
 ```
 If any layer exceeds its threshold, the event is flagged as **bad** (likely during a stave reboot).
 
-Applying this cut removes time intervals with dead ITS staves and, correspondingly, the large acceptance holes, significantly flattening time-dependent observables like the **2- and 4-particle correlators** and improving the stability of **v₂** measurements in Pb-Pb.
-Note that in pp the `kIsGoodITSLayersAll` cut can reject a huge fraction of events (the holes in pp are more frequent).
+Applying this cut removes time intervals with dead ITS staves and, correspondingly, the large acceptance holes, significantly flattening time-dependent observables, like the **2- and 4-particle correlators** in Pb-Pb.
+Note that in pp the `kIsGoodITSLayersAll` bit can reject a huge fraction of events (the holes in pp are more frequent), however, the `kIsGoodITSLayer0123` bit can be tried (e.g. to study the effects from the rebooting staves on the DCA).
 
 
 ## Usage of RCT flags
