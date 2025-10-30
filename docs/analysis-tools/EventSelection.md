@@ -412,7 +412,7 @@ The following table summarizes the event selection bits used to mitigate occupan
 
 These bits can be used as follows:
 ``` c++
-if (col.selection_bit(o2::aod::evsel::kNoCollInTimeRangeStrict)) { /* do analysis */ }
+if (col.selection_bit(o2::aod::evsel::kNoCollInTimeRangeNarrow)) { /* do analysis */ }
 ```
 
 
@@ -427,6 +427,45 @@ Therefore, the suggested approach is to study how results of a given analysi cha
 and, in addition, apply occupancy selection bits, e.g. `kNoCollInTimeRangeNarrow` to eliminate the bc-collision mismatches, or `kNoCollInTimeRangeStandard` to make a further cleaunup.
 
 Note that TPC-related occupancy effects are most pronounced in Pb–Pb runs, however, the tools described above can also be used for occupancy studies in pp and light-ion runs.
+
+
+
+## Rejection of events with dead zones in ITS
+
+### Problem
+
+- The **Inner Tracking System (ITS)** occasionally develops **“holes” in acceptance** lasting about **6–8 seconds**, visible as gaps in φ–time plots of track clusters.  
+- These are caused by **reboots of ITS staves**, typically triggered by recovery of failed **lanes** (groups of 7 chips sharing one data link).  
+- When a lane fails, the **full stave** becomes temporarily blind while the DCS recovers it.  
+- The issue affects, in particular, **ITS Layer 3**, which is critical for achieving four consecutive ITS hits in tracking.  
+- These dead periods correlate with **drops in ITS–TPC matching efficiency** and produce visible “holes” in tracking performance.  
+- The effect appears both in **Pb–Pb** and **pp** data.
+
+### Using new event selection bits
+
+To reject events recorded during these faulty intervals, several event selection bits were introduced in O2Physics ([PR #9038](https://github.com/AliceO2Group/O2Physics/pull/9038), Dec 2024):
+```
+kIsGoodITSLayer3,           // number of inactive chips on ITS layer 3 is below maximum allowed value
+kIsGoodITSLayer0123,        // numbers of inactive chips on ITS layers 0-3 are below maximum allowed values
+kIsGoodITSLayersAll,        // numbers of inactive chips on all ITS layers are below maximum allowed values
+```
+
+Example usage:
+```cpp
+if (col.selection_bit(o2::aod::evsel::kIsGoodITSLayersAll)) {
+    // do analysis
+}
+```
+This particular cut ensures that all ITS layers are in a good state (i.e. no rebooting **staves**; note that at the same time some **chips** can be inactive).
+
+The logic uses [CCDB maps](https://nvalle.web.cern.ch/its/dmap/) of dead chips and defines per-layer thresholds for allowed inactive chips:
+```cpp
+maxInactiveChipsPerLayer = {8, 8, 8, 111, 111, 195, 195};
+```
+If any layer exceeds its threshold, the event is flagged as **bad** (likely during a stave reboot).
+
+Applying this cut removes time intervals with dead ITS staves and, correspondingly, the large acceptance holes, significantly flattening time-dependent observables like the **2- and 4-particle correlators** and improving the stability of **v₂** measurements in Pb-Pb.
+Note that in pp the `kIsGoodITSLayersAll` cut can reject a huge fraction of events (the holes in pp are more frequent).
 
 
 ## Usage of RCT flags
