@@ -51,10 +51,10 @@ In addition ```EvSels``` table contains additional info:
 
 ```BcSels``` and ```EvSels``` tables are produced by _BcSelectionModule_ and _EventSelectionModule_, respectively, see [`O2Physics/Common/Tools/EventSelectionModule.h`](https://github.com/AliceO2Group/O2Physics/blob/master/Common/Tools/EventSelectionModule.h),
 the process functions are called from the task [`O2Physics/Common/TableProducer/eventSelectionService.cxx`](https://github.com/AliceO2Group/O2Physics/blob/master/Common/TableProducer/eventSelectionService.cxx).
-There are separate process functions for Run 2 and Run 3 in both modules. The `eventSelectionService` autodetects if the dataset being analysed is Run 2 or 3.
+There are separate process functions for Run 2 and Run 3 in both modules, and the `eventSelectionService` autodetects if the dataset being analysed is Run 2 or 3.
 
 ```note
-Previously (until July 2025), the ```BcSels``` and ```EvSels``` tables were produced in the [`O2Physics/Common/TableProducer/eventSelection.cxx`](https://github.com/AliceO2Group/O2Physics/blob/master/Common/TableProducer/eventSelection.cxx) task.
+Previously (until July 2025), the `BcSels` and `EvSels` tables were produced in the [`O2Physics/Common/TableProducer/eventSelection.cxx`](https://github.com/AliceO2Group/O2Physics/blob/master/Common/TableProducer/eventSelection.cxx) task.
 This task is now deprecated and obsolete (and will be removed). All ongoing developments for event selection are being carried out in `eventSelectionService.cxx` and `EventSelectionModule.h`.
 
 A new core wagon called `eventSelectionService` has been [created in the Hyperloop](https://mattermost.web.cern.ch/alice/pl/c19t8owyh3n1ufzaeoisug4s5r) to replace the existing timestamp and event selection wagon and provide users with exactly the same tables but with a much reduced memory overhead. 
@@ -545,7 +545,7 @@ Note that in pp the `kIsGoodITSLayersAll` bit can reject a huge fraction of even
 
 ## Usage of RCT flags
 
-(to be updated)
+(to be added)
 
 
 
