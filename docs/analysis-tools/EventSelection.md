@@ -49,8 +49,19 @@ In addition ```EvSels``` table contains additional info:
 * event selection decisions (in ```EvSels``` table only), i.e. logical combinations of various offline event selection criteria, see [Event selection decisions](#event-selection-decisions) section. For example, _sel7_ is based on beam-beam decisions in V0A and V0C with additional background, pileup and quality checks
 * indices to found bunch crossings and corresponding FT0 and FV0 entries (in ```EvSels``` table only), see [Found bunch crossings](#found-bunch-crossings) section.
 
-```BcSels``` and ```EvSels``` tables are produced by _BcSelectionTask_ and _EventSelectionTask_, respectively, see [`Common/TableProducer/eventSelection.cxx`](https://github.com/AliceO2Group/O2Physics/blob/master/Common/TableProducer/eventSelection.cxx).
-There are separate process functions for Run 2 and Run 3 in both tasks. One has to use _--process-run 2_ or _--process-run 3_ configurables in json files to switch between these process functions, see [Configurables](#configurables) section for more details.
+```BcSels``` and ```EvSels``` tables are produced by _BcSelectionModule_ and _EventSelectionModule_, respectively, see [`O2Physics/Common/Tools/EventSelectionModule.h`](https://github.com/AliceO2Group/O2Physics/blob/master/Common/Tools/EventSelectionModule.h),
+the process functions are called from the task [`O2Physics/Common/TableProducer/eventSelectionService.cxx`](https://github.com/AliceO2Group/O2Physics/blob/master/Common/TableProducer/eventSelectionService.cxx).
+There are separate process functions for Run 2 and Run 3 in both modules. The `eventSelectionService` autodetects if the dataset being analysed is Run 2 or 3.
+
+```note
+Previously (until July 2025), the ```BcSels``` and ```EvSels``` tables were produced in the [`O2Physics/Common/TableProducer/eventSelection.cxx`](https://github.com/AliceO2Group/O2Physics/blob/master/Common/TableProducer/eventSelection.cxx) task.
+This task is now deprecated and obsolete (and will be removed). All ongoing developments for event selection are being carried out in `eventSelectionService.cxx` and `EventSelectionModule.h`.
+
+A new core wagon called `eventSelectionService` has been [created in the Hyperloop](https://mattermost.web.cern.ch/alice/pl/c19t8owyh3n1ufzaeoisug4s5r) to replace the existing timestamp and event selection wagon and provide users with exactly the same tables but with a much reduced memory overhead. 
+
+```
+
+
 
 ### Basic usage in user tasks
 
