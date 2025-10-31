@@ -57,7 +57,7 @@ There are separate process functions for Run 2 and Run 3 in both modules, and th
 Previously (until July 2025), the `BcSels` and `EvSels` tables were produced in the [`O2Physics/Common/TableProducer/eventSelection.cxx`](https://github.com/AliceO2Group/O2Physics/blob/master/Common/TableProducer/eventSelection.cxx) task.
 This task is now deprecated and obsolete (and will be removed). All ongoing developments for event selection are being carried out in `eventSelectionService.cxx` and `EventSelectionModule.h`.
 
-A new core wagon called `eventSelectionService` has been [created in the Hyperloop](https://mattermost.web.cern.ch/alice/pl/c19t8owyh3n1ufzaeoisug4s5r) to replace the existing timestamp and event selection wagon and provide users with exactly the same tables but with a much reduced memory overhead. 
+A new core wagon called `eventSelectionService` has been [created in the Hyperloop](https://mattermost.web.cern.ch/alice/pl/c19t8owyh3n1ufzaeoisug4s5r) to replace the existing timestamp and event selection wagon and provide users with exactly the same tables but with a much reduced memory overhead.
 
 ```
 
