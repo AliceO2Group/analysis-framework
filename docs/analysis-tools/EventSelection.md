@@ -387,14 +387,14 @@ One can set other configurables in the json file. This json file has to be provi
 
 ### Time Frame borders
 
-In Run 3 and 4, ALICE operates in **continuous readout mode**, where data are stored in **Time Frames (TFs)** that correspond to 32 LHC orbits, ≈ 2.9 ms (_note:_ in 2022 pp TFs were longer - 128 LHC orbits), and each TF is **reconstructed independently**.  
+In Run 3 and 4, ALICE operates in **continuous readout mode**, where data are stored in **Time Frames (TFs)** that correspond to 32 LHC orbits, ≈ 2.9 ms (_note:_ in 2022 pp TFs were longer - 128 LHC orbits), and each TF is **reconstructed independently**.
 
 Because the drift time of electrions in the TPC is **≈ 100 μs**, collisions near the end of a TF **lack full information**, resulting in a depletion of vertex contributors and a drop in ITS+TPC tracking efficiency during the last ≈ 1.1 LHC orbits of the TF (LHC orbit is ≈89 μs).
 Additional effect happens at the **beginning of the next TF**, when the reconstruction starts when the electrons from pre-TF collisions are still drifting.
 
 **Mitigation in event selection**:
 - A dedicated event-selection bit `kNoTimeFrameBorder` was introduced (February 2024) to reject events close to TF edges:
-  - Cuts ≈ **300 bunch crossings (BCs)** at the start and ≈ **4000 BCs** at the end of each TF.  
+  - Cuts ≈ **300 bunch crossings (BCs)** at the start and ≈ **4000 BCs** at the end of each TF.
   - Corresponds to ≈ **3.7% event loss** for 2023–25 data.
 - This cut ensures full TPC drift information for all accepted events, removing TF-edge artefacts in vertex and track distributions.
 - Usage in analysis:
@@ -406,10 +406,10 @@ Additional effect happens at the **beginning of the next TF**, when the reconstr
 ### ITS Readout Frame borders
 
 - Although the global readout is continuous, the ITS2 detector is read out in **discrete Readout Frames (ROFs)**:
-  - in **pp:** 18 ROFs per LHC orbit, each ≈ 5 μs (198 BCs)  
+  - in **pp:** 18 ROFs per LHC orbit, each ≈ 5 μs (198 BCs)
   - in **Pb–Pb:** 6 ROFs per orbit, ≈ 15 μs each (594 BCs)
-- Cluster losses occur at ROF boundaries due to the **ALPIDE chip’s time-walk effect**:  
-  - hits from an interaction in ROF *i* may appear only in ROF *i + 1*  
+- Cluster losses occur at ROF boundaries due to the **ALPIDE chip’s time-walk effect**:
+  - hits from an interaction in ROF *i* may appear only in ROF *i + 1*
   - this causes a sharp drop in ITS cluster and track counts at ROF edges.
 - The effect is **particle-dependent**, e.g. protons (larger dE/dx) are recorded earlier than pions—leading to small PID-dependent distortions near borders.
 
