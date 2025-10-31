@@ -11,7 +11,7 @@ The timestamp task is needed to fill the table with timestamps. Timestamp contai
 
 Since the Timestamps table has an entry per bunch crossing it can be joined with table BC. The join is defined by o2::aod::BCsWithTimestamps (see list of defined [joins and iterators](https://aliceo2group.github.io/analysis-framework/docs/datamodel/joinsAndIterators.html#list-of-joins-and-iterators)).
 
-## Event selection
+## Event selection basics
 
 Table of contents:
 
@@ -94,7 +94,7 @@ In general, one has to follow the following steps:
       }
       ```
 
-      Note that sel8 selection based on FT0A & FT0C requirement is not mandatory in Run 3 pilot beam data. It might be safer to work with unbiased sample.
+The `sel8` event selection bit is a logical _and_ between the `kIsTriggerTVX` bit (based on FT0A & FT0C requirement, with time-based constraints on the vertex position), and (since April 2024) `kNoTimeFrameBorder` and  `kNoITSROFrameBorder` bits - see [below](#integration-into-event-selection).
 
 * run your tasks in stack with timestamp and event-selection tasks:
 
@@ -161,42 +161,58 @@ Full list of event selection criteria can be found in [`Common/CCDB/EventSelecti
 
 ``` c++
 enum EventSelectionFlags {
-  kIsBBV0A = 0,        // cell-averaged time in V0A in beam-beam window
-  kIsBBV0C,            // cell-averaged time in V0C in beam-beam window (for Run 2 only)
-  kIsBBFDA,            // cell-averaged time in FDA (or AD in Run2) in beam-beam window
-  kIsBBFDC,            // cell-averaged time in FDC (or AD in Run2) in beam-beam window
-  kIsBBT0A,            // cell-averaged time in T0A in beam-beam window
-  kIsBBT0C,            // cell-averaged time in T0C in beam-beam window
-  kNoBGV0A,            // cell-averaged time in V0A in beam-gas window
-  kNoBGV0C,            // cell-averaged time in V0C in beam-gas window (for Run 2 only)
-  kNoBGFDA,            // cell-averaged time in FDA (AD in Run2) in beam-gas window
-  kNoBGFDC,            // cell-averaged time in FDC (AD in Run2) in beam-gas window
-  kNoBGT0A,            // cell-averaged time in T0A in beam-gas window
-  kNoBGT0C,            // cell-averaged time in T0C in beam-gas window
-  kIsBBZNA,            // time in common ZNA channel in beam-beam window
-  kIsBBZNC,            // time in common ZNC channel in beam-beam window
-  kIsBBZAC,            // time in ZNA and ZNC in beam-beam window - circular cut in ZNA-ZNC plane
-  kNoBGZNA,            // time in common ZNA channel is outside of beam-gas window
-  kNoBGZNC,            // time in common ZNC channel is outside of beam-gas window
-  kNoV0MOnVsOfPileup,  // no out-of-bunch pileup according to online-vs-offline VOM correlation
-  kNoSPDOnVsOfPileup,  // no out-of-bunch pileup according to online-vs-offline SPD correlation
-  kNoV0Casymmetry,     // no beam-gas according to correlation of V0C multiplicities in V0C3 and V0C012
-  kIsGoodTimeRange,    // good time range
-  kNoIncompleteDAQ,    // complete event according to DAQ flags
-  kNoTPCLaserWarmUp,   // no TPC laser warm-up event (used in Run 1)
-  kNoTPCHVdip,         // no TPC HV dip
-  kNoPileupFromSPD,    // no pileup according to SPD vertexer
-  kNoV0PFPileup,       // no out-of-bunch pileup according to V0 past-future info
-  kNoSPDClsVsTklBG,    // no beam-gas according to cluster-vs-tracklet correlation
-  kNoV0C012vsTklBG,    // no beam-gas according to V0C012-vs-tracklet correlation
-  kNoInconsistentVtx,  // no inconsistency in SPD and Track vertices
-  kNoPileupInMultBins, // no pileup according to multiplicity-differential pileup checks
-  kNoPileupMV,         // no pileup according to multi-vertexer
-  kNoPileupTPC,        // no pileup in TPC
-  kIsTriggerTVX,       // FT0 vertex (acceptable FT0C-FT0A time difference) at trigger level
-  kIsINT1,             // SPDGFO >= 1 || V0A || V0C
-  kNsel                // counter
-};
+  kIsBBV0A = 0,               // cell-averaged time in V0A in beam-beam window
+  kIsBBV0C,                   // cell-averaged time in V0C in beam-beam window (for Run 2 only)
+  kIsBBFDA,                   // cell-averaged time in FDA (or AD in Run2) in beam-beam window
+  kIsBBFDC,                   // cell-averaged time in FDC (or AD in Run2) in beam-beam window
+  kIsBBT0A,                   // cell-averaged time in T0A in beam-beam window
+  kIsBBT0C,                   // cell-averaged time in T0C in beam-beam window
+  kNoBGV0A,                   // cell-averaged time in V0A in beam-gas window
+  kNoBGV0C,                   // cell-averaged time in V0C in beam-gas window (for Run 2 only)
+  kNoBGFDA,                   // cell-averaged time in FDA (AD in Run2) in beam-gas window
+  kNoBGFDC,                   // cell-averaged time in FDC (AD in Run2) in beam-gas window
+  kNoBGT0A,                   // cell-averaged time in T0A in beam-gas window
+  kNoBGT0C,                   // cell-averaged time in T0C in beam-gas window
+  kIsBBZNA,                   // time in common ZNA channel in beam-beam window
+  kIsBBZNC,                   // time in common ZNC channel in beam-beam window
+  kIsBBZAC,                   // time in ZNA and ZNC in beam-beam window - circular cut in ZNA-ZNC plane
+  kNoBGZNA,                   // time in common ZNA channel is outside of beam-gas window
+  kNoBGZNC,                   // time in common ZNC channel is outside of beam-gas window
+  kNoV0MOnVsOfPileup,         // no out-of-bunch pileup according to online-vs-offline VOM correlation
+  kNoSPDOnVsOfPileup,         // no out-of-bunch pileup according to online-vs-offline SPD correlation
+  kNoV0Casymmetry,            // no beam-gas according to correlation of V0C multiplicities in V0C3 and V0C012
+  kIsGoodTimeRange,           // good time range
+  kNoIncompleteDAQ,           // complete event according to DAQ flags
+  kNoTPCLaserWarmUp,          // no TPC laser warm-up event (used in Run 1)
+  kNoTPCHVdip,                // no TPC HV dip
+  kNoPileupFromSPD,           // no pileup according to SPD vertexer
+  kNoV0PFPileup,              // no out-of-bunch pileup according to V0 past-future info
+  kNoSPDClsVsTklBG,           // no beam-gas according to cluster-vs-tracklet correlation
+  kNoV0C012vsTklBG,           // no beam-gas according to V0C012-vs-tracklet correlation
+  kNoInconsistentVtx,         // no inconsistency in SPD and Track vertices
+  kNoPileupInMultBins,        // no pileup according to multiplicity-differential pileup checks
+  kNoPileupMV,                // no pileup according to multi-vertexer
+  kNoPileupTPC,               // no pileup in TPC
+  kIsTriggerTVX,              // FT0 vertex (acceptable FT0C-FT0A time difference) at trigger level
+  kIsINT1,                    // SPDGFO >= 1 || V0A || V0C
+  kNoITSROFrameBorder,        // bunch crossing is far from ITS RO Frame border
+  kNoTimeFrameBorder,         // bunch crossing is far from Time Frame borders
+  kNoSameBunchPileup,         // reject collisions in case of pileup with another collision in the same foundBC
+  kIsGoodZvtxFT0vsPV,         // small difference between z-vertex from PV and from FT0
+  kIsVertexITSTPC,            // at least one ITS-TPC track (reject vertices built from ITS-only tracks)
+  kIsVertexTOFmatched,        // at least one of vertex contributors is matched to TOF
+  kIsVertexTRDmatched,        // at least one of vertex contributors is matched to TRD
+  kNoCollInTimeRangeNarrow,   // no other collisions in specified time range (narrower than Strict)
+  kNoCollInTimeRangeStrict,   // no other collisions in specified time range
+  kNoCollInTimeRangeStandard, // no other collisions in specified time range with per-collision multiplicity above threshold
+  kNoCollInRofStrict,         // no other collisions in this Readout Frame
+  kNoCollInRofStandard,       // no other collisions in this Readout Frame with per-collision multiplicity above threshold
+  kNoHighMultCollInPrevRof,   // veto an event if FT0C amplitude in previous ITS ROF is above threshold
+  kIsGoodITSLayer3,           // number of inactive chips on ITS layer 3 is below maximum allowed value
+  kIsGoodITSLayer0123,        // numbers of inactive chips on ITS layers 0-3 are below maximum allowed values
+  kIsGoodITSLayersAll,        // numbers of inactive chips on all ITS layers are below maximum allowed values
+  kNsel                       // counter
+}; // (as of October 2025)
 ```
 
 Technically there are three types of criteria:
@@ -367,10 +383,59 @@ One can set other configurables in the json file. This json file has to be provi
 * EvSel table might be also useful in user tasks relying on beam-beam and beam-gas decisions in forward detectors, e.g. in UPC tasks.
 
 
+## Time Frame and ITS ROF border cuts
+
+### Time Frame borders
+
+In Run 3 and 4, ALICE operates in **continuous readout mode**, where data are stored in **Time Frames (TFs)** that correspond to 32 LHC orbits, ≈ 2.9 ms (_note:_ in 2022 pp TFs were longer - 128 LHC orbits), and each TF is **reconstructed independently**.
+
+Because the drift time of electrions in the TPC is **≈ 100 μs**, collisions near the end of a TF **lack full information**, resulting in a depletion of vertex contributors and a drop in ITS+TPC tracking efficiency during the last ≈ 1.1 LHC orbits of the TF (LHC orbit is ≈89 μs).
+Additional effect happens at the **beginning of the next TF**, when the reconstruction starts when the electrons from pre-TF collisions are still drifting.
+
+**Mitigation in event selection**:
+- A dedicated event-selection bit `kNoTimeFrameBorder` was introduced (February 2024) to reject events close to TF edges:
+  - Cuts ≈ **300 bunch crossings (BCs)** at the start and ≈ **4000 BCs** at the end of each TF.
+  - Corresponds to ≈ **3.7% event loss** for 2023–25 data.
+- This cut ensures full TPC drift information for all accepted events, removing TF-edge artefacts in vertex and track distributions.
+- Usage in analysis:
+  ``` c++
+  if (col.selection_bit(o2::aod::evsel::kNoTimeFrameBorder)) { /* do analysis */ }
+  ```
+
+
+### ITS Readout Frame borders
+
+- Although the global readout is continuous, the ITS2 detector is read out in **discrete Readout Frames (ROFs)**:
+  - in **pp:** 18 ROFs per LHC orbit, each ≈ 5 μs (198 BCs)
+  - in **Pb–Pb:** 6 ROFs per orbit, ≈ 15 μs each (594 BCs)
+- Cluster losses occur at ROF boundaries due to the **ALPIDE chip’s time-walk effect**:
+  - hits from an interaction in ROF *i* may appear only in ROF *i + 1*
+  - this causes a sharp drop in ITS cluster and track counts at ROF edges.
+- The effect is **particle-dependent**, e.g. protons (larger dE/dx) are recorded earlier than pions—leading to small PID-dependent distortions near borders.
+
+**Mitigation in event selection**
+- The selection bit `kNoITSROFrameBorder` rejects events near ITS ROF edges:
+  - removes collisions within  **10 BCs** at the beginning and **20 BCs** at the end of each ROF
+  - it correponds to ≈ 15 % of BCs in pp and ≈5 % of BCs in Pb–Pb (corresponding event losses depend on the LHC filling scheme)
+- Usage in analysis:
+  ``` c++
+  if (col.selection_bit(o2::aod::evsel::kNoITSROFrameBorder)) { /* do analysis */ }
+  ```
+- Note that this cut also helps to remove collisions at the ROF borders in the MFT detector (where the same chips as in the ITS are used, and ROFs in the MFT are aligned in time to the ITS ROFs).
+
+More details on the TF and ROF border effects and cuts can be found e.g. in slides 2-17 of [presentation (November 2024)](https://indico.cern.ch/event/1453901/timetable/#6-event-selection-in-run3).
+
+
+
+### Integration into event selection
+- Since April 2024, both the **Time Frame border** and **ITS Readout Frame border** cuts are combined with the ``kIsTriggerTVX`` condition via logical _and_ in the `sel8` event-selection bit, ensuring events used for analysis are free from TF and ROF boundary artifacts.
+
+
+
 
 ## Occupancy estimation
 
-In ALICE Run 3 Pb–Pb collisions, **occupancy** in the TPC refers to the contamination of an event’s TPC clusters by signals from other nearby collisions within the TPC drift time window.
+In ALICE Run 3 Pb–Pb collisions, **occupancy effects** in the TPC refer to the deterioration of the quality of an event’s TPC clusters by signals from other nearby collisions within the TPC drift time window.
 
 - The TPC has a long drift time (~100 µs), so clusters from particles originated from multiple collisions can overlap in the detector.
 - Higher occupancy worsens:
@@ -392,7 +457,7 @@ A single-value "integrated" occupancy estimator for a given collision can be cal
 Notes:
 - Both occupancy estimators are calculated per each collision in the event selection routine, [EventSelectionModule.h](https://github.com/AliceO2Group/O2Physics/blob/daily-20251029-0000/Common/Tools/EventSelectionModule.h#L1361).
 - In the occupancy calculation, multiplicities of nearby collisions are "weighted" according to their time separation from a collision-of-interest.
-- Estimators return the value of `-1` if a given collision is close to Time Frame borders (so, not enough information for the occupancy calculation, while we need information within -40 µs...+100 µs time range wrt a given collision).
+- Estimators return `-1` if a given collision is close to Time Frame borders (so, not enough information for the occupancy calculation, while we need information within -40 µs...+100 µs time range wrt a given collision).
 
 
 ### Occupancy selection bits
@@ -412,7 +477,7 @@ The following table summarizes the event selection bits used to mitigate occupan
 
 These bits can be used as follows:
 ``` c++
-if (col.selection_bit(o2::aod::evsel::kNoCollInTimeRangeStrict)) { /* do analysis */ }
+if (col.selection_bit(o2::aod::evsel::kNoCollInTimeRangeNarrow)) { /* do analysis */ }
 ```
 
 
@@ -423,10 +488,48 @@ More details on occupancy in Pb-Pb can be found in the [report at the APW 2024](
 Tight cuts on occupancy improve quality (better S/B, cleaner PID, less bias in kinematics), but reduce event statistics.
 
 However, sensitivity to the occupancy effects depends on analysis.
-Therefore, the suggested approach is to study how results of a given analysi change as a function of occupancy: one may try several occupancy "bins", e.g. `[0,500), (500, 1000), (1000-2000), (2000-4000)`, etc.,
+Therefore, the suggested approach is to study how results of a given analysi change as a function of occupancy: one may try several occupancy "bins", e.g. `[0,500), [500, 1000), [1000-2000), [2000-4000)`, etc.,
 and, in addition, apply occupancy selection bits, e.g. `kNoCollInTimeRangeNarrow` to eliminate the bc-collision mismatches, or `kNoCollInTimeRangeStandard` to make a further cleaunup.
 
 Note that TPC-related occupancy effects are most pronounced in Pb–Pb runs, however, the tools described above can also be used for occupancy studies in pp and light-ion runs.
+
+
+
+## Rejection of events with dead zones in ITS
+
+### Problem
+
+- The ITS occasionally develops **“holes” in acceptance** lasting about **6–8 seconds**, visible as gaps in φ distributions on time-dependent plots.
+- These are caused by **reboots of ITS staves**, typically triggered by recovery of failed **lanes** (groups of 7 chips sharing one data link). When a lane fails, the **full stave** becomes temporarily blind while the DCS recovers it.
+- The issue affects, in particular, **ITS Layer 3**, which is critical for achieving four consecutive ITS hits in tracking.
+- These dead periods correlate also with **drops in ITS–TPC matching efficiency**.
+- The effect appears both in **Pb–Pb** and **pp** data.
+
+### Using special event selection bits
+
+To reject events recorded during the affected time intervals, several event selection bits were introduced in O2Physics ([PR #9038](https://github.com/AliceO2Group/O2Physics/pull/9038), Dec 2024):
+```
+kIsGoodITSLayer3,           // number of inactive chips on ITS layer 3 is below maximum allowed value
+kIsGoodITSLayer0123,        // numbers of inactive chips on ITS layers 0-3 are below maximum allowed values
+kIsGoodITSLayersAll,        // numbers of inactive chips on all ITS layers are below maximum allowed values
+```
+
+Example usage:
+```cpp
+if (col.selection_bit(o2::aod::evsel::kIsGoodITSLayersAll)) {
+    // do analysis
+}
+```
+This particular bit `kIsGoodITSLayersAll` ensures that all ITS layers are in a good state (i.e. no rebooting **staves**; note that at the same time some **chips** can be inactive).
+
+The logic behind these cuts uses [CCDB maps of dead chips](https://nvalle.web.cern.ch/its/dmap/) and defines per-layer thresholds for allowed inactive chips:
+```cpp
+maxInactiveChipsPerLayer = {8, 8, 8, 111, 111, 195, 195};
+```
+If any layer exceeds its threshold, the event is flagged as **bad** (likely during a stave reboot).
+
+Applying this cut removes time intervals with dead ITS staves and, correspondingly, the large acceptance holes, significantly flattening time-dependent observables, like the **2- and 4-particle correlators** in Pb-Pb.
+Note that in pp the `kIsGoodITSLayersAll` bit can reject a huge fraction of events (the holes in pp are more frequent), however, the `kIsGoodITSLayer0123` bit can be tried (e.g. to study the effects from the rebooting staves on the DCA).
 
 
 ## Usage of RCT flags
