@@ -38,7 +38,12 @@ fi
 
 for repo in alidist O2 O2Physics; do
   [[ -d "${repo}" ]] || { echo "Directory ${repo} not found in the current directory."; continue; }
-  echo "Last commit of ${repo}: $(cd "${repo}" && git log -n 1 --pretty="format:%ci %h")"
+  cd "${repo}" || { echo "Failed for enter ${repo}"; return 1; }
+  commit="$(git log -n 1 --pretty="format:%ci %h")"
+  branch="$(git rev-parse --abbrev-ref HEAD)"
+  git diff --quiet && status="clean" || status="modified"
+  cd - > /dev/null || { echo "Failed for leave ${repo}"; return 1; }
+  echo "Current commit of ${repo}: $commit (branch $branch, $status)"
 done
 
 # Package build info
