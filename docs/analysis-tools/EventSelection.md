@@ -465,7 +465,7 @@ A single-value "integrated" occupancy estimator for a given collision can be cal
    float occupancyByFT0C = col.ft0cOccupancyInTimeRange();  // range: from 0 up to ~150k
   ```
 
-Notes:
+_Notes:_
 - Both occupancy estimators are pre-calculated per each collision in the event selection routine, [EventSelectionModule.h](https://github.com/AliceO2Group/O2Physics/blob/daily-20251029-0000/Common/Tools/EventSelectionModule.h#L1361).
 - In the occupancy calculation, multiplicities of nearby collisions are "weighted" according to their time separation from a collision-of-interest, to reflect the "severity" of their influence on that collision
 - Estimators return `-1` if a given collision is close to Time Frame borders (so, not enough information for the occupancy calculation, while we need information within -40 µs...+100 µs time range wrt a given collision), event loss ~1.2%.
@@ -475,7 +475,7 @@ Notes:
 
 In addition to the occupancy estimators described above, several special event selection bits are implemented to better clean up various nearby effects from other collisions (related not only the TPC but also the ITS, e.g. due to high occupancies in the ITS Readout Frames).
 
-The following table summarizes the event selection bits used to mitigate occupancy effects in Pb-Pb:
+The following table summarizes the event selection bits that can help to mitigate the occupancy effects:
 
 | **Bit** | **Definition** | **Strictness** | **Typical Effect / Event Loss** |
 |---------|----------------|----------------|--------------------------------|
@@ -515,6 +515,8 @@ Note that TPC-related occupancy effects are most pronounced in Pb–Pb runs, how
 - The issue affects, in particular, **ITS Layer 3**, which is critical for achieving four consecutive ITS hits in tracking.
 - These dead periods correlate also with **drops in ITS–TPC matching efficiency**.
 - The effect appears both in **A-A** and **pp** data.
+
+For more details, see the [report at DPG AOT meeting, Jan 2025](https://indico.cern.ch/event/1493023/#3-rejection-of-events-with-dea).
 
 ### Using special event selection bits
 
