@@ -480,7 +480,7 @@ The following table summarizes the event selection bits that can help to mitigat
 | **Bit** | **Definition** | **Strictness** | **Typical Effect / Event Loss** |
 |---------|----------------|----------------|--------------------------------|
 | `kNoCollInTimeRangeNarrow` | Rejects events if another collision within **±0.25 µs** | Narrow veto | Useful to suppress residual BC mis-associations; minimal event loss, ~1-1.5% |
-| `kNoCollInTimeRangeStandard` | Rejects if: (1) another coll. within ±0.25 µs, or (2) multiplicity of a coll. in dt −4…+2 µs > threshold  | Medium | Further suppression of effects from nearby collisions; ~3-7% event loss depending on IR |
+| `kNoCollInTimeRangeStandard` | Rejects if: (1) another coll. within ±0.25 µs, or (2) multiplicity of a coll. in delta time −4…+2 µs > threshold  | Medium | Further suppression of effects from nearby collisions; ~3-7% event loss depending on IR |
 | `kNoCollInTimeRangeStrict` | Rejects events if another collision is within **±10 µs** | Very strict | Strongly reduces effects from nearby events; large loss of statistics at high IR (can exceed 30–40%) |
 | `kNoCollInRofStrict` | Rejects events if >1 collision in the same **ITS Readout Frame** (~15 µs in Pb-Pb) | Very strict | Removes in-ROF pileup; at 38 kHz Pb–Pb cuts ~35% of events |
 | `kNoCollInRofStandard` | Allows >1 collision per ROF but rejects if another has multiplicity > threshold (default: FT0C amplitude >5000 a.u. ≈ 500 tracks) | Medium | Retains more stats, but protects against large in-ROF pileup |
