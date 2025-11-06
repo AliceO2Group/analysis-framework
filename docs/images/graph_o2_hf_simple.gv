@@ -1,0 +1,194 @@
+// Graph of the PWG-HF analysis framework simplified for an analysis of one decay channel.
+
+// Draw with Graphviz using: dot -Tsvg <name>.gv -o <name>.svg
+
+digraph hf {
+  label="PWG-HF analysis framework"
+  labelloc=t
+  overlap=false
+  splines=true
+  sep=0.1
+  fontname=Helvetica
+  fontsize=30
+  //rankdir=LR // left to right
+  //ranksep=1.
+  ratio=2
+  node [style="filled,rounded",fillcolor=white,shape=box,fontname=Helvetica,fontsize=30]
+
+  subgraph tables_aod {
+    label="tables_aod"
+    node [fillcolor=lemonchiffon,style=filled]
+    tables_aod_legend [label="AOD\ntable"]
+    Collisions [label="collisions"]
+    McCollisions [label="MC collisions"]
+    BCs [label="bunch\ncrossings"]
+    Tracks [label="tracks"]
+    McTrackLabels [label="MC track\nlabels"]
+    McParticles [label="MC particles"]
+  }
+
+  subgraph tables_derived {
+    label="tables_derived"
+    node [fillcolor=lightgrey,style=filled]
+    tables_derived_legend [label="derived\ntable"]
+    HfTrackSel [label="track\nflags"]
+    EvSels [label="trigger\nflags"]
+    HfCollSel [label="collision\nflags"]
+    join_collisions [label="flagged\ncollisions"]
+    {Collisions HfCollSel} -> join_collisions
+    HfTracks [label="flagged\ntracks"]
+    {HfTrackSel Tracks} -> HfTracks
+    TrackPids [label="track\nPID"]
+    {Tracks TrackPids} -> TracksWPid
+    {Tracks McTrackLabels} -> TracksWMc
+    HfTrackIndexProngN [label="track index\npairs/triplets"]
+    HfCand [label="reconstructed\ncandidates"]
+    HfCandMcRec [label="MC rec.\nflags"]
+    HfPartMcGen [label="MC gen.\nflags"]
+    HfCandSel [label="candidate\nflags"]
+    join_cand_real [label="filtered\ncandidates"]
+    {HfCand HfCandSel} -> join_cand_real
+    join_cand_mc_rec [label="MC-flagged\nfiltered\ncandidates"]
+    {HfCand HfCandSel HfCandMcRec} -> join_cand_mc_rec
+    join_part_mc_gen [label="flagged\nMC particles"]
+    {McParticles HfPartMcGen} -> join_part_mc_gen
+    HfCandTree [label="HF\ncandidates"]
+    HfCollTree [label="HF\nevents"]
+    HfPartTree [label="HF\nparticles"]
+    HfDerivedTable [label="derived\nHF tables"]
+  }
+
+  subgraph output {
+    label="output"
+    node [fillcolor=lightblue]
+    output_legend [label="output"]
+    histograms
+    trees
+  }
+
+  subgraph code {
+    label="code"
+    node [fillcolor=springgreen]
+    code_legend [label="processing"]
+
+    // PID
+    PidTask [label="PID"]
+    {Collisions Tracks} -> PidTask -> TrackPids
+
+    // event selection
+    EventSelectionTask [label="event\nselection"]
+    {Collisions BCs Tracks} -> EventSelectionTask -> EvSels
+    HfTagSelCollisions [label="event\nselector"]
+    {Collisions EvSels} -> HfTagSelCollisions -> HfCollSel
+
+    // track selection
+    HfTagSelTracks [label="track\nselector"]
+    {Tracks Collisions} -> HfTagSelTracks -> HfTrackSel
+
+    // index skimming
+    HfTrackIndexSkimsCreator [label="track index\nskim creator"]
+    {HfTracks BCs join_collisions} -> HfTrackIndexSkimsCreator -> HfTrackIndexProngN
+
+    // candidate creator
+    HfCandidateCreator [label="candidate\ncreator"]
+    {Collisions HfTrackIndexProngN Tracks} -> HfCandidateCreator -> HfCand
+
+    // candidate creator MC
+    HfCandidateCreatorMc [label="MC matching"]
+    {HfCand TracksWMc McParticles} -> HfCandidateCreatorMc -> {HfCandMcRec HfPartMcGen}
+
+    // candidate selector
+    HfCandidateSelector [label="candidate\nselector"]
+    {HfCand TracksWPid} -> HfCandidateSelector -> HfCandSel
+
+    // analysis task
+    TaskData [label="process data"]
+    {Collisions join_cand_real} -> TaskData -> histograms
+
+    // analysis task MC
+    TaskMc [label="process MC"]
+    {McCollisions TracksWMc join_cand_mc_rec join_part_mc_gen} -> TaskMc -> histograms
+
+    // tree creator
+    {Collisions McCollisions TracksWPid join_cand_real join_cand_mc_rec join_part_mc_gen} -> HfTreeCreator -> {HfCandTree HfCollTree HfPartTree} -> trees
+    HfTreeCreator [label="tree creator"]
+
+    // derived-data creator
+    {Collisions McCollisions TracksWPid join_cand_real join_cand_mc_rec join_part_mc_gen} -> DerivedDataCreator -> HfDerivedTable
+    DerivedDataCreator [label="derived-data creator"]
+  }
+
+  subgraph cluster_skim {
+    label="track index skimming"
+    color=papayawhip //peachpuff //powderblue
+    style="filled,rounded"
+    HfTagSelTracks
+    HfTagSelCollisions
+    HfTrackSel
+    HfCollSel
+    HfTracks
+    join_collisions
+    HfTrackIndexSkimsCreator
+    HfTrackIndexProngN
+  }
+
+  subgraph cluster_cand {
+    label="candidate reconstruction\nand MC matching"
+    color=papayawhip //peachpuff //powderblue
+    style="filled,rounded"
+    HfCandidateCreator
+    HfCandidateCreatorMc
+    HfCand
+    HfCandMcRec
+    HfPartMcGen
+  }
+
+  subgraph cluster_selector {
+    label="candidate\nfiltering"
+    color=papayawhip //peachpuff //powderblue
+    style="filled,rounded"
+    HfCandidateSelector
+    HfCandSel
+  }
+
+  subgraph cluster_task {
+    label="analysis"
+    color=papayawhip //peachpuff //powderblue
+    style="filled,rounded"
+    TaskData
+    TaskMc
+    histograms
+  }
+
+  subgraph cluster_tree {
+    label="table export"
+    color=papayawhip //peachpuff //powderblue
+    style="filled,rounded"
+    HfTreeCreator
+    HfCandTree
+    HfCollTree
+    HfPartTree
+    trees
+  }
+
+  subgraph cluster_derived {
+    label="derived data"
+    color=papayawhip //peachpuff //powderblue
+    style="filled,rounded"
+    DerivedDataCreator
+    HfCandTree
+    HfCollTree
+    HfPartTree
+    HfDerivedTable
+  }
+
+  subgraph cluster_legend {
+    label="legend"
+    color=black
+    style=rounded
+    tables_aod_legend -> code_legend -> tables_derived_legend -> output_legend
+    tables_aod_legend -> tables_derived_legend
+    code_legend -> output_legend
+  }
+
+}
