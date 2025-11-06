@@ -7,14 +7,24 @@ title: PWG-HF
 
 ## Get started
 
-- See the materials from the [HF O2 hackathon](https://indico.cern.ch/event/1101005/)
-(includes introduction to O2, O2 HF, tutorials,...) and watch the
-[Zoom recordings of the sessions](https://videos.cern.ch/deposit/project/cbe4869a27f749b7b45ea66577ca8a9f) (7, 9 Dec 2021).
-- See the [presentation on HF vertexing and analysis](https://indico.cern.ch/event/1200252/timetable/#10-hf-vertexing-and-analysis)
+See the presentations and materials from the HF session of the latest [O2 Analysis Tutorial](../tutorials/README.md#tutorial-events).
+
+### Archive
+
+- [HF O2 hackathon](https://indico.cern.ch/event/1101005/)
+(introduction to O2, O2 HF, tutorials,...),
+[Zoom recordings of the sessions](https://videos.cern.ch/deposit/project/cbe4869a27f749b7b45ea66577ca8a9f) (7, 9 Dec 2021)
+- [Presentation on HF vertexing and analysis](https://indico.cern.ch/event/1200252/timetable/#10-hf-vertexing-and-analysis)
 and the [HF analysis example](https://indico.cern.ch/event/1200252/timetable/#23-hands-on-session-4-analysis)
-from the [O2 Analysis Tutorial](https://indico.cern.ch/event/1200252/) (13–14 Oct 2022).
-- See the [HF hands-on session](https://indico.cern.ch/event/1267433/timetable/#b-504545-parallel-hands-on-pwg)
-from the [O2 Analysis Tutorial 2.0](https://indico.cern.ch/event/1267433/) (17-28 Apr 2023).
+at the O2 Analysis Tutorial (1.0) (14 Oct 2022)
+- [HF session](https://indico.cern.ch/event/1267433/timetable/#b-504545-parallel-hands-on-pwg)
+at the O2 Analysis Tutorial 2.0 (27 Apr 2023)
+- [HF session](https://indico.cern.ch/event/1326201/timetable/#b-528200-pwg-hf-the-heavy-flav)
+at the O2 Analysis Tutorial 3.0 (8 Nov 2023)
+- [HF session](https://indico.cern.ch/event/1425820/timetable/#b-571495-pwg-hf-the-heavy-flav)
+at the O2 Analysis Tutorial 4.0 (16 Oct 2024)
+- [HF session](https://indico.cern.ch/event/1574136/timetable/#b-629951-pwg-hf-pwg-hf-tutoria)
+at the O2 Analysis Tutorial 5.0 (12 Nov 2025)
 
 ## Contact
 
@@ -24,12 +34,16 @@ Mattermost channel: [hf-o2-analysis](https://mattermost.web.cern.ch/alice/channe
 
 - Code used by the heavy-flavour analysis framework is in the
 [`PWGHF`](https://github.com/AliceO2Group/O2Physics/tree/master/PWGHF) directory.
-  - Tables produced by skimming and candidate creators are defined in
+  - Tables produced by the track index skim creator are defined in
+[`TrackIndexSkimmingTables.h`](https://github.com/AliceO2Group/O2Physics/blob/master/PWGHF/DataModel/TrackIndexSkimmingTables.h).
+  - Tables produced by candidate creators are defined in
 [`CandidateReconstructionTables.h`](https://github.com/AliceO2Group/O2Physics/blob/master/PWGHF/DataModel/CandidateReconstructionTables.h).
   - Tables produced by candidate selectors are defined in
 [`CandidateSelectionTables.h`](https://github.com/AliceO2Group/O2Physics/blob/master/PWGHF/DataModel/CandidateSelectionTables.h).
   - Tables produced by derived-data creators are defined in
 [`DerivedTables.h`](https://github.com/AliceO2Group/O2Physics/blob/master/PWGHF/DataModel/DerivedTables.h).
+  - Constants for MC flagging of HF decay channels are defined in
+[`DecayChannels.h`](https://github.com/AliceO2Group/O2Physics/blob/master/PWGHF/Core/DecayChannels.h).
   - Default parameters used in the selection of single tracks, track-index skims and candidates are defined in
 [`SelectorCuts.h`](https://github.com/AliceO2Group/O2Physics/blob/master/PWGHF/Core/SelectorCuts.h).
   - Machine learning response classes are implemented in [`HfMlResponse(...).h`](https://github.com/AliceO2Group/O2Physics/tree/master/PWGHF/Core) files.
@@ -41,7 +55,7 @@ Mattermost channel: [hf-o2-analysis](https://mattermost.web.cern.ch/alice/channe
 [`RecoDecay`](https://github.com/AliceO2Group/O2Physics/blob/master/Common/Core/RecoDecay.h) class.
 - Selection of tracks based on the particle identification (PID) detectors is performed via the
 [`TrackSelectorPID`](https://github.com/AliceO2Group/O2Physics/blob/master/Common/Core/TrackSelectorPID.h) class.
-- The validation framework for easy local execution, testing and validation of O2Physics code can be found in the
+- The validation framework for easy local execution, testing, and validation of O2Physics code can be found in the
 [Run3AnalysisValidation](https://github.com/AliceO2Group/Run3AnalysisValidation) repository.
 
 ## AliHyperloop
@@ -50,7 +64,7 @@ Mattermost channel: [hf-o2-analysis](https://mattermost.web.cern.ch/alice/channe
 [AliHyperloop analyses](https://alimonitor.cern.ch/hyperloop/all-analyses)
 <!-- markdown-link-check-enable -->
 (Type "PWGHF" in the field "JIRA" to filter.)<br>
-Corresponding [JIRA tickets](https://its.cern.ch/jira/issues/?jql=project%20%3D%20PWG-HF%20AND%20%22Run%203%20analysis%22%20%3D%20Yes)
+Corresponding [JIRA tickets](https://its.cern.ch/jira/issues/?jql=project%20%3D%20PWGHF%20AND%20%22Run%203%20analysis%22%20%3D%20Yes%20ORDER%20BY%20created%20ASC)
 
 ## Framework structure
 
@@ -58,7 +72,7 @@ A simplified graph of the workflows and tasks involved in a single HF analysis i
 Individual components are described in the next section below.
 
 <div align="center">
-<img src="../images/pwghf_graph.svg" width="800px" alt="PWGHF analysis framework">
+<img src="../images/graph_o2_hf_simple.svg" width="800px" alt="PWGHF analysis framework">
 </div>
 
 ## Framework components
@@ -192,7 +206,7 @@ Directories: [`PWGHF/D2H/Macros`](https://github.com/AliceO2Group/O2Physics/tree
     - `error` for problems that lead to an unwanted behaviour of the code,
     - `fatal` for critical problems that make further running of the code impossible or useless.
 - Include only needed headers but do not rely on implicitly included headers. See [Include What You Use](https://github.com/AliceO2Group/O2Physics/issues/8357).
-- Sort `#include`s from most specific to least specific and organise them into groups (separated by a blank line) in the following order (can be done automatically with [clang-format](../tools/README.md#pre-commit-hooks)):
+- Sort `#include`s from most specific to least specific and organise them into groups (separated by a blank line) in the following order (done automatically by [clang-format](../tools/README.md#pre-commit-hooks)):
 
   1. Main module
   2. Local-like file
@@ -212,7 +226,7 @@ Directories: [`PWGHF/D2H/Macros`](https://github.com/AliceO2Group/O2Physics/tree
      - C++ standard library
      - C standard library
 
-- Sort `#include`s alphabetically within a group.
+- Sort `#include`s alphabetically within a group (done automatically by [clang-format](../tools/README.md#pre-commit-hooks)).
 - Avoid using hard-coded PDG codes. Use their `enum` names instead
   (from [`PDG_t`](https://root.cern/doc/master/TPDGCode_8h.html) or
   [`o2::constants::physics::Pdg`](https://github.com/AliceO2Group/AliceO2/blob/dev/Common/Constants/include/CommonConstants/PhysicsConstants.h)).
@@ -259,7 +273,7 @@ Organising the code in a well defined structure makes it easier to navigate thro
 
 ### Naming conventions
 
-- Use the `<object><attribute>` (or `<general><specific>`) naming scheme, so that names of the same kind of objects start with same string and the different attributes follow.
+- Use the `<object><attribute>` (or `<general><specific>`) naming scheme, so that names of the same kind of objects start with same string and the different attributes follow (imagine a tree hierarchy).
   This scheme makes names more readable, searchable and sortable.
   - Example: `ptTrackMin`, `etaTrackMax`, `trackPos`, `trackNeg` is more readable and sortable than `minTrackPt`, `maxTrackEta`, `posTrack`, `negTrack`.
 - Word-like strings (acronyms, abbreviations, particle names, mathematical variables) are treated as words; i.e. capitalise only the first letter.
