@@ -44,7 +44,7 @@ You can include it in your task with:
 In the process functions, you can join the table to add the PID (per particle mass hypothesis) information to the track.
 In this case, we are using the mass hypothesis of the electron, but tables for nine (9) stable particle species are produced (`El`, `Mu`, `Pi`, `Ka`, `Pr`, `De`, `Tr`, `He`, `Al`).
 
-* For the **TOF** PID as:
+- For the **TOF** PID as:
 
     ``` c++
     void process(soa::Join<aod::Tracks, aod::pidTOFEl>::iterator const& track) {
@@ -52,7 +52,7 @@ In this case, we are using the mass hypothesis of the electron, but tables for n
     }
     ```
 
-* For the **TPC** PID as:
+- For the **TPC** PID as:
 
     ``` c++
     void process(soa::Join<aod::Tracks, aod::pidTPCEl>::iterator const& track) {
@@ -60,7 +60,7 @@ In this case, we are using the mass hypothesis of the electron, but tables for n
     }
     ```
 
-* For both TOF and TPC PID information as:
+- For both TOF and TPC PID information as:
 
     ``` c++
     void process(soa::Join<aod::Tracks, aod::pidTOFEl, aod::pidTPCEl>::iterator const& track) {
@@ -72,7 +72,7 @@ In this case, we are using the mass hypothesis of the electron, but tables for n
 
 **In short:** O2 tasks dedicated to the filling of the PID tables are called with
 
-* Filling TOF PID Table
+- Filling TOF PID Table
 
     ``` bash
     o2-analysis-pid-tof
@@ -87,7 +87,7 @@ In this case, we are using the mass hypothesis of the electron, but tables for n
     These tasks can be configured according to the needs specified by the detector experts.
     If you are in doubt, you can contact them or take the configuration of the Hyperloop as a reference.
 
-* Filling the TPC PID Table
+- Filling the TPC PID Table
 
     ``` bash
     o2-analysis-pid-tpc
@@ -102,14 +102,14 @@ In this case, we are using the mass hypothesis of the electron, but tables for n
 
 ## Example of tasks that use the PID tables (and how to run them)
 
-* TOF PID task [`pidTOF.cxx`](https://github.com/AliceO2Group/O2Physics/tree/master/Common/TableProducer/PID/pidTOF.cxx)
+- TOF PID task [`pidTOF.cxx`](https://github.com/AliceO2Group/O2Physics/tree/master/Common/TableProducer/PID/pidTOF.cxx)
     You can run the TOF spectra task with:
 
     ``` bash
     o2-analysis-pid-tof-qa --aod-file AO2D.root -b | o2-analysis-pid-tof -b | o2-analysis-pid-tof-base -b
     ```
 
-* TPC PID task [`pidTPC.cxx`](https://github.com/AliceO2Group/O2Physics/tree/master/Common/TableProducer/PID/pidTPC.cxx)
+- TPC PID task [`pidTPC.cxx`](https://github.com/AliceO2Group/O2Physics/tree/master/Common/TableProducer/PID/pidTPC.cxx)
     You can run the TPC spectra task with:
 
     ``` bash
@@ -118,7 +118,7 @@ In this case, we are using the mass hypothesis of the electron, but tables for n
 
 ## Enabling QA histograms
 
-* QA histograms should come with the PID tasks; they can be enabled by including the QA tasks in your workflow when running locally or with the corresponding QA tasks as in:
+- QA histograms should come with the PID tasks; they can be enabled by including the QA tasks in your workflow when running locally or with the corresponding QA tasks as in:
 
     For the **TOF** QA plots
 
@@ -133,4 +133,3 @@ In this case, we are using the mass hypothesis of the electron, but tables for n
     ```
 
     Where by `...` we mean the other tasks in your workflow.
-
