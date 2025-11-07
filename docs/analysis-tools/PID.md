@@ -11,15 +11,28 @@ Table of contents:
   - [Introduction](#introduction)
   - [Usage in user tasks](#usage-in-user-tasks)
   - [Available PID Information](#available-pid-information)
-      - [Supported Particle Species](#supported-particle-species)
-    - [Additional TOF-Specific Information](#additional-tof-specific-information)
-    - [Usage in analysis tasks](#usage-in-analysis-tasks)
-  - [Tasks for TOF, TPC and ITS PID](#tasks-for-tof-tpc-and-its-pid)
-  - [Example of tasks that use the PID tables (and how to run them)](#example-of-tasks-that-use-the-pid-tables-and-how-to-run-them)
+  - [Supported Particle Species](#supported-particle-species)
+  - [Additional TOF-Specific Information](#additional-tof-specific-information)
+  - [Usage Examples](#usage-examples)
+    - [Basic PID Usage](#basic-pid-usage)
+    - [Combined Detector PID](#combined-detector-pid)
+    - [ITS PID Usage](#its-pid-usage)
+  - [PID Tasks Configuration](#pid-tasks-configuration)
+    - [TOF PID Task](#tof-pid-task)
+    - [TPC PID Tasks](#tpc-pid-tasks)
+    - [ITS PID Configuration](#its-pid-configuration)
+  - [Example Workflows](#example-workflows)
+    - [TOF PID Workflow](#tof-pid-workflow)
+    - [TPC PID Workflow](#tpc-pid-workflow)
+    - [ITS PID Workflow](#its-pid-workflow)
   - [Enabling QA histograms](#enabling-qa-histograms)
-  - [Advanced features](#advanced-features)
-      - [Dynamic Columns for TOF Beta and Mass](#dynamic-columns-for-tof-beta-and-mass)
-      - [Dynamic Columns for nSigma Calculations](#dynamic-columns-for-nsigma-calculations)
+    - [Enabling QA Tasks](#enabling-qa-tasks)
+    - [QA Output](#qa-output)
+  - [Advanced Features](#advanced-features)
+    - [Key Advanced Features:](#key-advanced-features)
+    - [Dynamic Columns for TOF Beta and Mass](#dynamic-columns-for-tof-beta-and-mass)
+    - [Dynamic Columns for nSigma Calculations](#dynamic-columns-for-nsigma-calculations)
+    - [Example Usage](#example-usage)
 
 Here are described the working principles of Particle Identification (PID) in O2 and how to get PID information (expected values, nSigma separation _et cetera_) in your analysis tasks if you plan to identify particles.
 
@@ -58,9 +71,9 @@ The following table shows the available PID methods for each detector and partic
 | **Signal Difference**   | Difference between measured and expected | `tofExpSignalDiffXX()` | `tpcExpSignalDiffXX()` | -                          |
 
 
-#### Supported Particle Species
+## Supported Particle Species
 
-Where `XX` represents the particle species: `El` (electron), `Mu` (muon), `Pi` (pion), `Ka` (kaon), `Pr` (proton), `De` (deuteron), `Tr` (triton), `He` (helium3), `Al` (alpha, i.e. helium4).
+The following nine (9) stable particle species are supported for PID calculations:
 
 | Symbol | Particle | Mass Hypothesis |
 | ------ | -------- | --------------- |
@@ -74,10 +87,7 @@ Where `XX` represents the particle species: `El` (electron), `Mu` (muon), `Pi` (
 | `He`   | Helium-3 | ³He             |
 | `Al`   | Alpha    | α (⁴He)         |
 
-In the process functions, you can join the table to add the PID (per particle mass hypothesis) information to the track.
-In this case, we are using the mass hypothesis of the electron (and only for the **NSigma** information), but tables for nine (9) stable particle species are produced (`El`, `Mu`, `Pi`, `Ka`, `Pr`, `De`, `Tr`, `He`, `Al`).
-
-### Additional TOF-Specific Information
+## Additional TOF-Specific Information
 
 The TOF detector provides additional specialized information beyond the standard PID methods:
 
@@ -90,138 +100,211 @@ The TOF detector provides additional specialized information beyond the standard
 | **Event Time Error** | Uncertainty on event time              | `tofEvTimeErr()`      | Error on collision time determination     |
 | **TOF Signal**       | Raw TOF signal                         | `tofSignal()`         | Direct detector measurement               |
 
-> **Note**: For advanced TOF features including dynamic columns for beta, mass, nSigma calculations, see the [Advanced Features](#advanced-features) section.
+> **Note**: For advanced TOF features including dynamic columns for beta, mass, and nSigma calculations, see the [Advanced Features](#advanced-features) section.
 
-### Usage in analysis tasks
+## Usage Examples
 
-- For the **TOF** PID as:
+The following examples demonstrate how to use PID information in your analysis tasks. You can join PID tables to tracks to add particle mass hypothesis information.
 
-    ``` c++
+### Basic PID Usage
+
+- **TOF PID** for electron identification:
+
+    ```c++
     void process(soa::Join<aod::Tracks, aod::pidTOFEl>::iterator const& track) {
-      track.tofNSigmaEl();
+      float nSigmaEl = track.tofNSigmaEl();
+      // Apply cuts: |nSigmaEl| < 3.0 for electron candidates
     }
     ```
 
-- For the **TPC** PID as:
+- **TPC PID** for electron identification:
 
-    ``` c++
+    ```c++
     void process(soa::Join<aod::Tracks, aod::pidTPCEl>::iterator const& track) {
-      track.tpcNSigmaEl();
+      float nSigmaEl = track.tpcNSigmaEl();
+      // Apply cuts: |nSigmaEl| < 3.0 for electron candidates
     }
     ```
 
-- For both **TOF** and **TPC** PID information as:
+### Combined Detector PID
 
-    ``` c++
+- **TOF + TPC** combined electron identification:
+
+    ```c++
     void process(soa::Join<aod::Tracks, aod::pidTOFEl, aod::pidTPCEl>::iterator const& track) {
-      const float combNSigmaEl = std::sqrt( track.tofNSigmaEl() * track.tofNSigmaEl() + track.tpcNSigmaEl() * track.tpcNSigmaEl());
+      float tofNSigmaEl = track.tofNSigmaEl();
+      float tpcNSigmaEl = track.tpcNSigmaEl();
+      
+      // Combined nSigma calculation
+      float combNSigmaEl = std::sqrt(tofNSigmaEl * tofNSigmaEl + tpcNSigmaEl * tpcNSigmaEl);
+      
+      // Individual cuts
+      bool passTOF = std::abs(tofNSigmaEl) < 3.0;
+      bool passTPC = std::abs(tpcNSigmaEl) < 3.0;
+      bool passAll = passTOF && passTPC;
     }
     ```
 
-- For the **ITS** PID as:
+### ITS PID Usage
 
-    ``` c++
-    void init(o2::framework::InitContext& context)
-    {
+- **ITS PID** requires parameter initialization (needs the `o2-analysis-pid-its` task):
+
+    ```c++
+    void init(o2::framework::InitContext& context) { // Initialization of the ITS PID Response
       o2::aod::ITSResponse::setParameters(context);
     }
 
     void process(aod::Tracks const& tracks) {
-      auto tracksWithPid = soa::Attach<aod::Tracks, aod::pidits::ITSNSigmaEl>(tracks);
-      tracksWithPid.iteratorAt(0).tpcNSigmaEl();
+      auto tracksWithPid = soa::Attach<aod::Tracks, aod::pidits::ITSNSigmaEl>(tracks); // Attaching the ITS information to the track
+      for (auto& track : tracksWithPid) {
+        float itsNSigmaEl = track.itsNSigmaEl();
+        // Apply cuts for electron identification
+      }
     }
     ```
 
+## PID Tasks Configuration
 
-## Tasks for TOF, TPC and ITS PID
+**Overview:** O2 provides dedicated tasks for filling PID tables. These tasks use detector-specific parameterizations from the CCDB to match data-taking conditions.
 
-**In short:** O2 tasks dedicated to the filling of the PID tables are called with
+### TOF PID Task
 
-- Filling TOF PID Table
+```bash
+o2-analysis-pid-tof-merge
+```
 
-    ``` bash
-    o2-analysis-pid-tof-merge
-    ```
+- **Requirements**: No additional tasks needed
+- **Configuration**: Can be configured according to detector expert specifications
+- **Reference**: Use Hyperloop [TOF configuration](https://alimonitor.cern.ch/hyperloop/view-wagon/12925/wagon-settings) as reference
 
-    This requires no other tasks.
-    This tasks can be configured according to the needs specified by the detector experts.
-    If you are in doubt, you can contact them or take the configuration of the Hyperloop as a reference.
+### TPC PID Tasks
 
-- Filling the TPC PID Table
+```bash
+o2-analysis-pid-tpc
+o2-analysis-pid-tpc-base
+```
 
-    ``` bash
-    o2-analysis-pid-tpc
-    ```
+- **Requirements**: Both tasks are typically needed
+- **Configuration**: Can be configured according to detector expert specifications  
+- **Reference**: Use Hyperloop [TPC configuration](https://alimonitor.cern.ch/hyperloop/view-wagon/34291/wagon-settings) as reference
 
-    ``` bash
-    o2-analysis-pid-tpc-base
-    ```
+### ITS PID Configuration
 
-    These tasks can be configured according to the needs specified by the detector experts.
-    If you are in doubt, you can contact them or take the configuration of the Hyperloop [`TOF`](https://alimonitor.cern.ch/hyperloop/view-wagon/12925/wagon-settings), [`TPC`](https://alimonitor.cern.ch/hyperloop/view-wagon/34291/wagon-settings) and [`ITS`](https://alimonitor.cern.ch/hyperloop/view-wagon/21173/wagon-settings) as a reference.
+```bash
+o2-analysis-pid-its
+```
 
-## Example of tasks that use the PID tables (and how to run them)
+- **Note**: ITS PID uses dynamic columns only and does not require a dedicated table-filling task but only needs the ITS response configuration.
+- **Configuration**: Parameters are taken from [`pidITS.cxx`](https://github.com/AliceO2Group/O2Physics/tree/master/Common/TableProducer/PID/pidITS.cxx)
+- **Reference**: Use Hyperloop [ITS configuration](https://alimonitor.cern.ch/hyperloop/view-wagon/21173/wagon-settings) as reference
 
-- TOF PID task [`pidTOFMerge.cxx`](https://github.com/AliceO2Group/O2Physics/tree/master/Common/TableProducer/PID/pidTOFMerge.cxx)
-    You can run the TOF qa task with:
+## Example Workflows
 
-    ``` bash
-    ... | o2-analysis-pid-tof-qa -b | o2-analysis-pid-tof-merge -b --aod-file AO2D.root
-    ```
+### TOF PID Workflow
 
-- TPC PID task [`pidTPC.cxx`](https://github.com/AliceO2Group/O2Physics/tree/master/Common/TableProducer/PID/pidTPC.cxx)
-    You can run the TPC qa task with:
+Complete workflow including QA:
 
-    ``` bash
-    ... | o2-analysis-pid-tpc-qa -b | o2-analysis-pid-tpc -b | o2-analysis-pid-tpc-base -b --aod-file AO2D.root
-    ```
+```bash
+... | o2-analysis-pid-tof-qa -b | o2-analysis-pid-tof-merge -b --aod-file AO2D.root
+```
 
-    Where by `...` we mean the other tasks in your workflow.
+**Components:**
+- [`o2-analysis-pid-tof-merge`](https://github.com/AliceO2Group/O2Physics/tree/master/Common/TableProducer/PID/pidTOFMerge.cxx): Main TOF PID task
+- `o2-analysis-pid-tof-qa`: Optional QA histograms
+
+### TPC PID Workflow
+
+Complete workflow including QA:
+
+```bash
+... | o2-analysis-pid-tpc-qa -b | o2-analysis-pid-tpc -b | o2-analysis-pid-tpc-base -b --aod-file AO2D.root
+```
+
+**Components:**
+- [`o2-analysis-pid-tpc`](https://github.com/AliceO2Group/O2Physics/tree/master/Common/TableProducer/PID/pidTPC.cxx): Main TPC PID task
+- `o2-analysis-pid-tpc-base`: Base TPC PID processing
+- `o2-analysis-pid-tpc-qa`: Optional QA histograms
+
+
+### ITS PID Workflow
+
+Complete workflow including QA:
+
+```bash
+... | o2-analysis-pid-its-qa -b | o2-analysis-pid-its -b --aod-file AO2D.root
+```
+
+**Components:**
+- [`o2-analysis-pid-its`](https://github.com/AliceO2Group/O2Physics/tree/master/Common/TableProducer/PID/pidITS.cxx): Main ITS PID task (needed only to set the ITS PID Response parameters)
+- `o2-analysis-pid-its-qa`: Optional QA histograms
+
+
+**Note:** The `...` represents other tasks in your analysis workflow.
 
 ## Enabling QA histograms
 
-- QA histograms should come with the PID tasks; they can be enabled by including the QA tasks in your workflow when running locally or with the corresponding QA tasks as in:
+QA histograms are essential for monitoring PID performance and can be enabled by including the corresponding QA tasks in your workflow.
 
-    For the **TOF** QA plots
+### Enabling QA Tasks
 
-    ``` bash
-    ... | o2-analysis-pid-tof-qa | ...
-    ```
+**TOF QA histograms:**
+```bash
+... | o2-analysis-pid-tof-qa | ...
+```
 
-    For the **TPC** QA plots
+**TPC QA histograms:**
+```bash
+... | o2-analysis-pid-tpc-qa | ...
+```
 
-    ``` bash
-    ... | o2-analysis-pid-tpc-qa | ...
-    ```
+### QA Output
 
-    Where by `...` we mean the other tasks in your workflow.
+The QA tasks provide:
+- nSigma distributions for each particle species
+- Detector response monitoring
+- Calibration validation plots
+- Performance metrics
 
+**Note:** Include QA tasks when running locally or in development workflows. The `...` represents other tasks in your analysis chain. These workflows are availale on hyperloop with standard configuration. Include their output when contacting experts.
 
-## Advanced features
+## Advanced Features
 
-Beyond the basic PID functionality, the O2 Analysis Framework provides several advanced features for sophisticated particle identification workflows.
+Beyond the basic PID functionality, the O2 Analysis Framework provides several advanced features for sophisticated particle identification workflows. These features are designed for users who need more control over PID calculations, better performance optimization, or specialized analysis requirements.
 
-#### Dynamic Columns for TOF Beta and Mass
+### Key Advanced Features:
 
-The TOF beta and mass can also be calculated dynamically using the following columns:
+1. **Dynamic Columns**: Compute PID quantities on-the-fly without storing pre-calculated tables
+2. **Custom Parameterizations**: Use detector-specific response parameterizations from CCDB
+3. **Multi-detector Combinations**: Combine information from multiple detectors for enhanced PID
+4. **Quality Flags**: Access detector-specific quality indicators for PID reliability
+5. **Binned Storage**: Use compressed storage formats for large-scale analyses
 
-| Dynamic Column | Method      | Description                    |
-| -------------- | ----------- | ------------------------------ |
-| **TOF Beta**   | `tofBeta()` | Dynamically calculated β value |
-| **TOF Mass**   | `tofMass()` | Dynamically calculated mass    |
+These advanced features are particularly useful for:
+- **High-precision analyses** requiring detector-specific tuning
+- **Large-scale productions** where storage optimization is critical  
+- **Development workflows** where PID parameters need frequent updates
+- **Quality assurance** studies requiring detailed detector response information
 
-#### Dynamic Columns for nSigma Calculations
+### Dynamic Columns for TOF Beta and Mass
 
-For more advanced use cases, nSigma values can also be computed dynamically for all detectors:
+TOF beta and mass can be calculated dynamically using the following columns:
 
-| Detector | Dynamic Column   | Method             | Description                   |
-| -------- | ---------------- | ------------------ | ----------------------------- |
-| **TOF**  | `TOFNSigmaDynXX` | `tofNSigmaDynXX()` | On-the-fly nSigma calculation |
-| **TPC**  | `TPCNSigmaDynXX` | `tpcNSigmaDynXX()` | On-the-fly nSigma calculation |
-| **ITS**  | `ITSNSigmaXX`    | `itsNSigmaXX()`    | On-the-fly nSigma calculation |
+| Dynamic Column | Method      | Description                    | Dependencies                            |
+| -------------- | ----------- | ------------------------------ | --------------------------------------- |
+| **TOF Beta**   | `tofBeta()` | Dynamically calculated β value | Length, TOFSignal, TOFEvTime            |
+| **TOF Mass**   | `tofMass()` | Dynamically calculated mass    | Length, TOFSignal, TOFEvTime, TOFExpMom |
+
+### Dynamic Columns for nSigma Calculations
+
+For advanced use cases, nSigma values can be computed dynamically for all detectors:
+
+| Detector | Dynamic Column   | Method             | Description                   | Requirements                        |
+| -------- | ---------------- | ------------------ | ----------------------------- | ----------------------------------- |
+| **TOF**  | `TOFNSigmaDynXX` | `tofNSigmaDynXX()` | On-the-fly nSigma calculation | TOF response service initialization |
+| **TPC**  | `TPCNSigmaDynXX` | `tpcNSigmaDynXX()` | On-the-fly nSigma calculation | Standard table approach             |
+| **ITS**  | `ITSNSigmaXX`    | `itsNSigmaXX()`    | On-the-fly nSigma calculation | Parameter initialization            |
 
 Where `XX` represents the particle species (`El`, `Mu`, `Pi`, `Ka`, `Pr`, `De`, `Tr`, `He`, `Al`).
-The dynamic column need to initialize the TOF response, as a service.
 
 **Dynamic nSigma advantages:**
 - Use the most current detector calibrations
@@ -229,50 +312,53 @@ The dynamic column need to initialize the TOF response, as a service.
 - Allow for real-time parameter adjustments
 - Enable detector-specific tuning on-the-fly
 
-These tasks do not need a dedicated task apart from the computation of the `tofSignal` and `tofEvTime`.
+**Note:** Dynamic columns do not require dedicated table-filling tasks apart from basic signal computation (`tofSignal`, `tofEvTime`).
 
-**Example usage with dynamic columns:**
+### Example Usage
+
+**Basic dynamic columns:**
 ```c++
-// For TOF Beta
+// TOF Beta calculation
 using TOFBeta = o2::aod::TOFBeta;
 void process(soa::Join<aod::Tracks, TOFBeta>::iterator const& track) {
   float beta = track.tofBeta();
 }
 
-// For TOF Mass
+// TOF Mass calculation
 using TOFMass = o2::aod::TOFMass;
 void process(soa::Join<aod::Tracks, TOFMass>::iterator const& track) {
   float mass = track.tofMass();
 }
 ```
 
-For the nSigma:
-
-**Example usage with dynamic nSigma columns:**
+**Advanced dynamic nSigma with TOF response service:**
 ```c++
 #include "Common/Core/PID/PIDTOFParamService.h"
 
-struct exampleTask{
- Service<o2::pid::tof::TOFResponse> tofResponse;
+struct ExampleTask {
+  Service<o2::pid::tof::TOFResponse> tofResponse;
   Service<o2::ccdb::BasicCCDBManager> ccdb;
 
-  void init(o2::framework::InitContext& initContext){
+  void init(o2::framework::InitContext& initContext) {
     tofResponse->initSetup(ccdb, initContext);
   }
 
-
-// For TOF dynamic nSigma (electron hypothesis)
-void process(soa::Join<aod::Tracks, aod::pidtofsignal::TOFSignal, aod::pidtofevtime::TOFEvTime, o2::aod::TOFNSigmaDynEl>::iterator const& track,
-             aod::BCsWithTimestamps const& bcs) {
-    tofResponse->processSetup(bcs.iteratorAt(0)); // Update the calibration parameters
-    //   float tofNSigmaEl = track.tofNSigmaDynEl();
-}
+  void process(soa::Join<aod::Tracks, aod::pidtofsignal::TOFSignal,
+                         aod::pidtofevtime::TOFEvTime,
+                         o2::aod::TOFNSigmaDynEl>::iterator const& track,
+               aod::BCsWithTimestamps const& bcs) {
+    // Update calibration parameters for current collision
+    tofResponse->processSetup(bcs.iteratorAt(0));
+    // Access dynamic nSigma
+    float tofNSigmaEl = track.tofNSigmaDynEl();
+    // Apply PID cuts
+    bool isElectronCandidate = std::abs(tofNSigmaEl) < 3.0;
+  }
 };
 
-WorkflowSpec defineDataProcessing(ConfigContext const& cfgc)
-{
-  // Parse the metadata
+WorkflowSpec defineDataProcessing(ConfigContext const& cfgc) {
+  // Initialize metadata for TOF response
   o2::pid::tof::TOFResponseImpl::metadataInfo.initMetadata(cfgc);
-  return WorkflowSpec{adaptAnalysisTask<exampleTask>(cfgc)};
+  return WorkflowSpec{adaptAnalysisTask<ExampleTask>(cfgc)};
 }
 ```
