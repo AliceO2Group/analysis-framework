@@ -7,10 +7,12 @@ title: Particle identification (PID)
 
 Table of contents:
 
-* [Introduction](#introduction)
-* [Usage in user tasks](#usage-in-user-tasks)
-* [Task for TOF and TPC PID](#task-for-tof-and-tpc-pid)
-* [Example of tasks that use the PID tables (and how to run them)](#example-of-tasks-that-use-the-pid-tables-and-how-to-run-them)
+- [Particle identification (PID)](#particle-identification-pid)
+  - [Introduction](#introduction)
+  - [Usage in user tasks](#usage-in-user-tasks)
+  - [Task for TOF and TPC PID](#task-for-tof-and-tpc-pid)
+  - [Example of tasks that use the PID tables (and how to run them)](#example-of-tasks-that-use-the-pid-tables-and-how-to-run-them)
+  - [Enabling QA histograms](#enabling-qa-histograms)
 
 Here are described the working principles of Particle Identification (PID) in O2 and how to get PID information (expected values, nSigma separation _et cetera_) in your analysis tasks if you plan to identify particles.
 
@@ -19,19 +21,22 @@ Here are described the working principles of Particle Identification (PID) in O2
 PID is handled in analysis by filling helper tables that can be joined to tracks (propagated or not).
 The parameterization of the expected detector response (e.g. signal, resolution, separation) is used in the PID tasks to fill the PID tables.
 These parameterizations are detector specific and handled by the detector experts; usually, they are shipped to the PID helper tasks from the CCDB to match the data-taking conditions.
-The interface between the detector and the Analysis Framework (i.e. your tracks) is fully enclosed in [`PIDResponse.h`](https://github.com/AliceO2Group/O2Physics/tree/master/Common/DataModel/PIDResponse.h).
+The interface between the detector and the Analysis Framework (i.e. your tracks) is enclosed in [`PIDResponseITS.h`](https://github.com/AliceO2Group/O2Physics/tree/master/Common/DataModel/PIDResponseITS.h), [`PIDResponseTPC.h`](https://github.com/AliceO2Group/O2Physics/tree/master/Common/DataModel/PIDResponseTPC.h) and [`PIDResponseTOF.h`](https://github.com/AliceO2Group/O2Physics/tree/master/Common/DataModel/PIDResponseTOF.h) for ITS, TPC and TOF columns, respectively.
 Here are the defined tables for the PID information for all the detectors.
 
 The filling of the PID tables is delegated to dedicated tasks in [`Common/TableProducer/PID/`](https://github.com/AliceO2Group/O2Physics/tree/master/Common/TableProducer/PID)
-Examples of these tasks can be found in [`pidTOF.cxx`](https://github.com/AliceO2Group/O2Physics/tree/master/Common/TableProducer/PID/pidTOF.cxx) and [`pidTPC.cxx`](https://github.com/AliceO2Group/O2Physics/tree/master/Common/TableProducer/PID/pidTPC.cxx) for TOF and TPC tables, respectively.
+Examples of these tasks can be found in [`pidTOFMerge.cxx`](https://github.com/AliceO2Group/O2Physics/tree/master/Common/TableProducer/PID/pidTOFMerge.cxx) and [`pidTPC.cxx`](https://github.com/AliceO2Group/O2Physics/tree/master/Common/TableProducer/PID/pidTPC.cxx) for TOF and TPC tables, respectively.
+The ITS PID columns are only dynamical and do not need a task to produce them, however the configuration is taken from [`pidITS.cxx`](https://github.com/AliceO2Group/O2Physics/tree/master/Common/TableProducer/PID/pidITS.cxx)
 
 ## Usage in user tasks
 
-Tables for PID values in O2 are defined in [`PIDResponse.h`](https://github.com/AliceO2Group/O2Physics/blob/master/Common/DataModel/PIDResponse.h).
+Tables for PID values in O2 are defined in [`PIDResponseITS.h`](https://github.com/AliceO2Group/O2Physics/blob/master/Common/DataModel/PIDResponseITS.h), [`PIDResponseTPC.h`](https://github.com/AliceO2Group/O2Physics/blob/master/Common/DataModel/PIDResponseTPC.h) and [`PIDResponseTOF.h`](https://github.com/AliceO2Group/O2Physics/blob/master/Common/DataModel/PIDResponseTOF.h).
 You can include it in your task with:
 
 ``` c++
-#include "Common/DataModel/PIDResponse.h"
+#include "Common/DataModel/PIDResponseITS.h" // ITS PID information
+#include "Common/DataModel/PIDResponseTPC.h" // TPC PID information
+#include "Common/DataModel/PIDResponseTOF.h" // TOF PID information
 ...
 
 ```
