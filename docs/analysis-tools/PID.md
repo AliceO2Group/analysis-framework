@@ -39,23 +39,23 @@ The ITS PID columns are only dynamical and do not need a task to produce them, h
 
 Tables for PID values in O2 are defined in the following header files:
 
-| Detector | Header File | Usage | Description |
-|----------|-------------|----|---------|
-| ITS | [`PIDResponseITS.h`](https://github.com/AliceO2Group/O2Physics/blob/master/Common/DataModel/PIDResponseITS.h) | `#include "Common/DataModel/PIDResponseITS.h"` | ITS PID information |
-| TPC | [`PIDResponseTPC.h`](https://github.com/AliceO2Group/O2Physics/blob/master/Common/DataModel/PIDResponseTPC.h) | `#include "Common/DataModel/PIDResponseTPC.h"` | TPC PID information |
-| TOF | [`PIDResponseTOF.h`](https://github.com/AliceO2Group/O2Physics/blob/master/Common/DataModel/PIDResponseTOF.h) | `#include "Common/DataModel/PIDResponseTOF.h"` |  TOF PID information |
+| Detector | Header File                                                                                                   | Usage                                          | Description         |
+| -------- | ------------------------------------------------------------------------------------------------------------- | ---------------------------------------------- | ------------------- |
+| ITS      | [`PIDResponseITS.h`](https://github.com/AliceO2Group/O2Physics/blob/master/Common/DataModel/PIDResponseITS.h) | `#include "Common/DataModel/PIDResponseITS.h"` | ITS PID information |
+| TPC      | [`PIDResponseTPC.h`](https://github.com/AliceO2Group/O2Physics/blob/master/Common/DataModel/PIDResponseTPC.h) | `#include "Common/DataModel/PIDResponseTPC.h"` | TPC PID information |
+| TOF      | [`PIDResponseTOF.h`](https://github.com/AliceO2Group/O2Physics/blob/master/Common/DataModel/PIDResponseTOF.h) | `#include "Common/DataModel/PIDResponseTOF.h"` | TOF PID information |
 
 
 ## Available PID Information
 
 The following table shows the available PID methods for each detector and particle species:
 
-| Information Type | Description | TOF Methods | TPC Methods | ITS Methods |
-|------------------|-------------|-------------|-------------|-------------|
-| **nSigma** | Nsigma separation value | `tofNSigmaXX()` | `tpcNSigmaXX()` | `itsNSigmaXX()` |
-| **Expected Signal** | Expected detector signal | `tofExpSignalXX()` | `tpcExpSignalXX()` | `expSignal<PID::XX>()` |
-| **Expected Resolution** | Expected detector resolution | `tofExpSigmaXX()` | `tpcExpSigmaXX()` | `expResolution<PID::XX>()` |
-| **Signal Difference** | Difference between measured and expected | `tofExpSignalDiffXX()` | `tpcExpSignalDiffXX()` | - |
+| Information Type        | Description                              | TOF Methods            | TPC Methods            | ITS Methods                |
+| ----------------------- | ---------------------------------------- | ---------------------- | ---------------------- | -------------------------- |
+| **nSigma**              | Nsigma separation value                  | `tofNSigmaXX()`        | `tpcNSigmaXX()`        | `itsNSigmaXX()`            |
+| **Expected Signal**     | Expected detector signal                 | `tofExpSignalXX()`     | `tpcExpSignalXX()`     | `expSignal<PID::XX>()`     |
+| **Expected Resolution** | Expected detector resolution             | `tofExpSigmaXX()`      | `tpcExpSigmaXX()`      | `expResolution<PID::XX>()` |
+| **Signal Difference**   | Difference between measured and expected | `tofExpSignalDiffXX()` | `tpcExpSignalDiffXX()` | -                          |
 
 
 #### Supported Particle Species
@@ -63,16 +63,16 @@ The following table shows the available PID methods for each detector and partic
 Where `XX` represents the particle species: `El` (electron), `Mu` (muon), `Pi` (pion), `Ka` (kaon), `Pr` (proton), `De` (deuteron), `Tr` (triton), `He` (helium3), `Al` (alpha, i.e. helium4).
 
 | Symbol | Particle | Mass Hypothesis |
-|--------|----------|----------------|
-| `El` | Electron | e⁻ |
-| `Mu` | Muon | μ⁻ |
-| `Pi` | Pion | π± |
-| `Ka` | Kaon | K± |
-| `Pr` | Proton | p |
-| `De` | Deuteron | d |
-| `Tr` | Triton | t |
-| `He` | Helium-3 | ³He |
-| `Al` | Alpha | α (⁴He) |
+| ------ | -------- | --------------- |
+| `El`   | Electron | e⁻              |
+| `Mu`   | Muon     | μ⁻              |
+| `Pi`   | Pion     | π±              |
+| `Ka`   | Kaon     | K±              |
+| `Pr`   | Proton   | p               |
+| `De`   | Deuteron | d               |
+| `Tr`   | Triton   | t               |
+| `He`   | Helium-3 | ³He             |
+| `Al`   | Alpha    | α (⁴He)         |
 
 In the process functions, you can join the table to add the PID (per particle mass hypothesis) information to the track.
 In this case, we are using the mass hypothesis of the electron (and only for the **NSigma** information), but tables for nine (9) stable particle species are produced (`El`, `Mu`, `Pi`, `Ka`, `Pr`, `De`, `Tr`, `He`, `Al`).
@@ -81,14 +81,14 @@ In this case, we are using the mass hypothesis of the electron (and only for the
 
 The TOF detector provides additional specialized information beyond the standard PID methods:
 
-| Information Type | Description | TOF Methods | Notes |
-|------------------|-------------|-------------|-------|
-| **Beta** | Velocity as fraction of speed of light | `beta()`, `tofBeta()` | β = v/c, fundamental for mass calculation |
-| **Beta Error** | Uncertainty on beta measurement | `betaerror()` | Statistical uncertainty on β |
-| **TOF Mass** | Reconstructed particle mass | `mass()`, `tofMass()` | Calculated from momentum and β |
-| **Event Time** | Collision time for TOF measurement | `tofEvTime()` | Event collision time used for PID |
-| **Event Time Error** | Uncertainty on event time | `tofEvTimeErr()` | Error on collision time determination |
-| **TOF Signal** | Raw TOF signal | `tofSignal()` | Direct detector measurement |
+| Information Type     | Description                            | TOF Methods           | Notes                                     |
+| -------------------- | -------------------------------------- | --------------------- | ----------------------------------------- |
+| **Beta**             | Velocity as fraction of speed of light | `beta()`, `tofBeta()` | β = v/c, fundamental for mass calculation |
+| **Beta Error**       | Uncertainty on beta measurement        | `betaerror()`         | Statistical uncertainty on β              |
+| **TOF Mass**         | Reconstructed particle mass            | `mass()`, `tofMass()` | Calculated from momentum and β            |
+| **Event Time**       | Collision time for TOF measurement     | `tofEvTime()`         | Event collision time used for PID         |
+| **Event Time Error** | Uncertainty on event time              | `tofEvTimeErr()`      | Error on collision time determination     |
+| **TOF Signal**       | Raw TOF signal                         | `tofSignal()`         | Direct detector measurement               |
 
 > **Note**: For advanced TOF features including dynamic columns for beta, mass, nSigma calculations, see the [Advanced Features](#advanced-features) section.
 
@@ -205,22 +205,23 @@ Beyond the basic PID functionality, the O2 Analysis Framework provides several a
 
 The TOF beta and mass can also be calculated dynamically using the following columns:
 
-| Dynamic Column | Method | Description |
-|----------------|--------|-------------|
-| **TOF Beta** | `tofBeta()` | Dynamically calculated β value |
-| **TOF Mass** | `tofMass()` | Dynamically calculated mass |
+| Dynamic Column | Method      | Description                    |
+| -------------- | ----------- | ------------------------------ |
+| **TOF Beta**   | `tofBeta()` | Dynamically calculated β value |
+| **TOF Mass**   | `tofMass()` | Dynamically calculated mass    |
 
 #### Dynamic Columns for nSigma Calculations
 
 For more advanced use cases, nSigma values can also be computed dynamically for all detectors:
 
-| Detector | Dynamic Column | Method | Description |
-|----------|----------------|--------|-------------|
-| **TOF** | `TOFNSigmaDynXX` | `tofNSigmaDynXX()` | On-the-fly nSigma calculation |
-| **TPC** | `TPCNSigmaDynXX` | `tpcNSigmaDynXX()` | On-the-fly nSigma calculation |
-| **ITS** | `ITSNSigmaXX` | `itsNSigmaXX()` | On-the-fly nSigma calculation |
+| Detector | Dynamic Column   | Method             | Description                   |
+| -------- | ---------------- | ------------------ | ----------------------------- |
+| **TOF**  | `TOFNSigmaDynXX` | `tofNSigmaDynXX()` | On-the-fly nSigma calculation |
+| **TPC**  | `TPCNSigmaDynXX` | `tpcNSigmaDynXX()` | On-the-fly nSigma calculation |
+| **ITS**  | `ITSNSigmaXX`    | `itsNSigmaXX()`    | On-the-fly nSigma calculation |
 
 Where `XX` represents the particle species (`El`, `Mu`, `Pi`, `Ka`, `Pr`, `De`, `Tr`, `He`, `Al`).
+The dynamic column need to initialize the TOF response, as a service.
 
 **Dynamic nSigma advantages:**
 - Use the most current detector calibrations
@@ -229,9 +230,6 @@ Where `XX` represents the particle species (`El`, `Mu`, `Pi`, `Ka`, `Pr`, `De`, 
 - Enable detector-specific tuning on-the-fly
 
 These tasks do not need a dedicated task apart from the computation of the `tofSignal` and `tofEvTime`.
-
-
-
 
 **Example usage with dynamic columns:**
 ```c++
@@ -245,5 +243,36 @@ void process(soa::Join<aod::Tracks, TOFBeta>::iterator const& track) {
 using TOFMass = o2::aod::TOFMass;
 void process(soa::Join<aod::Tracks, TOFMass>::iterator const& track) {
   float mass = track.tofMass();
+}
+```
+
+For the nSigma:
+
+**Example usage with dynamic nSigma columns:**
+```c++
+#include "Common/Core/PID/PIDTOFParamService.h"
+
+struct exampleTask{
+ Service<o2::pid::tof::TOFResponse> tofResponse;
+  Service<o2::ccdb::BasicCCDBManager> ccdb;
+
+  void init(o2::framework::InitContext& initContext){
+    tofResponse->initSetup(ccdb, initContext);
+  }
+
+
+// For TOF dynamic nSigma (electron hypothesis)
+void process(soa::Join<aod::Tracks, aod::pidtofsignal::TOFSignal, aod::pidtofevtime::TOFEvTime, o2::aod::TOFNSigmaDynEl>::iterator const& track,
+             aod::BCsWithTimestamps const& bcs) {
+    tofResponse->processSetup(bcs.iteratorAt(0)); // Update the calibration parameters
+    //   float tofNSigmaEl = track.tofNSigmaDynEl();
+}
+};
+
+WorkflowSpec defineDataProcessing(ConfigContext const& cfgc)
+{
+  // Parse the metadata
+  o2::pid::tof::TOFResponseImpl::metadataInfo.initMetadata(cfgc);
+  return WorkflowSpec{adaptAnalysisTask<exampleTask>(cfgc)};
 }
 ```
