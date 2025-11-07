@@ -10,7 +10,7 @@ Table of contents:
 - [Particle identification (PID)](#particle-identification-pid)
   - [Introduction](#introduction)
   - [Usage in user tasks](#usage-in-user-tasks)
-  - [Task for TOF and TPC PID](#task-for-tof-and-tpc-pid)
+  - [Task for TOF, TPC and ITS PID](#task-for-tof-tpc-and-its-pid)
   - [Example of tasks that use the PID tables (and how to run them)](#example-of-tasks-that-use-the-pid-tables-and-how-to-run-them)
   - [Enabling QA histograms](#enabling-qa-histograms)
 
@@ -68,23 +68,33 @@ In this case, we are using the mass hypothesis of the electron, but tables for n
     }
     ```
 
-## Task for TOF and TPC PID
+- For the **ITS** PID as:
+
+    ``` c++
+    void init(o2::framework::InitContext& context)
+    {
+      o2::aod::ITSResponse::setParameters(context);
+    }
+
+    void process(aod::Tracks const& tracks) {
+      auto tracksWithPid = soa::Attach<aod::Tracks, aod::pidits::ITSNSigmaEl>(tracks);
+      tracksWithPid.iteratorAt(0).tpcNSigmaEl();
+    }
+    ```
+
+
+## Task for TOF, TPC and ITS PID
 
 **In short:** O2 tasks dedicated to the filling of the PID tables are called with
 
 - Filling TOF PID Table
 
     ``` bash
-    o2-analysis-pid-tof
+    o2-analysis-pid-tof-merge
     ```
 
-    This requires a helper class for the building of the event time information
-
-    ``` bash
-    o2-analysis-pid-tof-base
-    ```
-
-    These tasks can be configured according to the needs specified by the detector experts.
+    This requires no other tasks.
+    This tasks can be configured according to the needs specified by the detector experts.
     If you are in doubt, you can contact them or take the configuration of the Hyperloop as a reference.
 
 - Filling the TPC PID Table
@@ -98,23 +108,25 @@ In this case, we are using the mass hypothesis of the electron, but tables for n
     ```
 
     These tasks can be configured according to the needs specified by the detector experts.
-    If you are in doubt, you can contact them or take the configuration of the Hyperloop as a reference.
+    If you are in doubt, you can contact them or take the configuration of the Hyperloop [`TOF`](https://alimonitor.cern.ch/hyperloop/view-wagon/12925/wagon-settings), [`TPC`](https://alimonitor.cern.ch/hyperloop/view-wagon/34291/wagon-settings) and [`ITS`](https://alimonitor.cern.ch/hyperloop/view-wagon/21173/wagon-settings) as a reference.
 
 ## Example of tasks that use the PID tables (and how to run them)
 
-- TOF PID task [`pidTOF.cxx`](https://github.com/AliceO2Group/O2Physics/tree/master/Common/TableProducer/PID/pidTOF.cxx)
-    You can run the TOF spectra task with:
+- TOF PID task [`pidTOFMerge.cxx`](https://github.com/AliceO2Group/O2Physics/tree/master/Common/TableProducer/PID/pidTOFMerge.cxx)
+    You can run the TOF qa task with:
 
     ``` bash
-    o2-analysis-pid-tof-qa --aod-file AO2D.root -b | o2-analysis-pid-tof -b | o2-analysis-pid-tof-base -b
+    ... | o2-analysis-pid-tof-qa -b | o2-analysis-pid-tof-merge -b --aod-file AO2D.root
     ```
 
 - TPC PID task [`pidTPC.cxx`](https://github.com/AliceO2Group/O2Physics/tree/master/Common/TableProducer/PID/pidTPC.cxx)
-    You can run the TPC spectra task with:
+    You can run the TPC qa task with:
 
     ``` bash
-    o2-analysis-pid-tpc-qa --aod-file AO2D.root -b | o2-analysis-pid-tpc -b | o2-analysis-pid-tpc-base -b
+    ... | o2-analysis-pid-tpc-qa -b | o2-analysis-pid-tpc -b | o2-analysis-pid-tpc-base -b --aod-file AO2D.root
     ```
+
+    Where by `...` we mean the other tasks in your workflow.
 
 ## Enabling QA histograms
 
