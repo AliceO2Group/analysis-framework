@@ -53,30 +53,28 @@ The ITS PID columns are only dynamical and do not need a task to produce them, h
 Tables for PID values in O2 are defined in the following header files:
 
 | Detector | Header File                                                                                                   | Usage                                          | Description         |
-| -------- | ------------------------------------------------------------------------------------------------------------- | ---------------------------------------------- | ------------------- |
+|----------|---------------------------------------------------------------------------------------------------------------|------------------------------------------------|---------------------|
 | ITS      | [`PIDResponseITS.h`](https://github.com/AliceO2Group/O2Physics/blob/master/Common/DataModel/PIDResponseITS.h) | `#include "Common/DataModel/PIDResponseITS.h"` | ITS PID information |
 | TPC      | [`PIDResponseTPC.h`](https://github.com/AliceO2Group/O2Physics/blob/master/Common/DataModel/PIDResponseTPC.h) | `#include "Common/DataModel/PIDResponseTPC.h"` | TPC PID information |
 | TOF      | [`PIDResponseTOF.h`](https://github.com/AliceO2Group/O2Physics/blob/master/Common/DataModel/PIDResponseTOF.h) | `#include "Common/DataModel/PIDResponseTOF.h"` | TOF PID information |
-
 
 ## Available PID Information
 
 The following table shows the available PID methods for each detector and particle species:
 
 | Information Type        | Description                              | TOF Methods            | TPC Methods            | ITS Methods                |
-| ----------------------- | ---------------------------------------- | ---------------------- | ---------------------- | -------------------------- |
+|-------------------------|------------------------------------------|------------------------|------------------------|----------------------------|
 | **nSigma**              | Nsigma separation value                  | `tofNSigmaXX()`        | `tpcNSigmaXX()`        | `itsNSigmaXX()`            |
 | **Expected Signal**     | Expected detector signal                 | `tofExpSignalXX()`     | `tpcExpSignalXX()`     | `expSignal<PID::XX>()`     |
 | **Expected Resolution** | Expected detector resolution             | `tofExpSigmaXX()`      | `tpcExpSigmaXX()`      | `expResolution<PID::XX>()` |
 | **Signal Difference**   | Difference between measured and expected | `tofExpSignalDiffXX()` | `tpcExpSignalDiffXX()` | -                          |
-
 
 ## Supported Particle Species
 
 The following nine (9) stable particle species are supported for PID calculations:
 
 | Symbol | Particle | Mass Hypothesis |
-| ------ | -------- | --------------- |
+|--------|----------|-----------------|
 | `El`   | Electron | e⁻              |
 | `Mu`   | Muon     | μ⁻              |
 | `Pi`   | Pion     | π±              |
@@ -92,7 +90,7 @@ The following nine (9) stable particle species are supported for PID calculation
 The TOF detector provides additional specialized information beyond the standard PID methods:
 
 | Information Type     | Description                            | TOF Methods           | Notes                                     |
-| -------------------- | -------------------------------------- | --------------------- | ----------------------------------------- |
+|----------------------|----------------------------------------|-----------------------|-------------------------------------------|
 | **Beta**             | Velocity as fraction of speed of light | `beta()`, `tofBeta()` | β = v/c, fundamental for mass calculation |
 | **Beta Error**       | Uncertainty on beta measurement        | `betaerror()`         | Statistical uncertainty on β              |
 | **TOF Mass**         | Reconstructed particle mass            | `mass()`, `tofMass()` | Calculated from momentum and β            |
@@ -209,6 +207,7 @@ Complete workflow including QA:
 ```
 
 **Components:**
+
 - [`o2-analysis-pid-tof-merge`](https://github.com/AliceO2Group/O2Physics/tree/master/Common/TableProducer/PID/pidTOFMerge.cxx): Main TOF PID task
 - `o2-analysis-pid-tof-qa`: Optional QA histograms
 
@@ -221,10 +220,10 @@ Complete workflow including QA:
 ```
 
 **Components:**
+
 - [`o2-analysis-pid-tpc`](https://github.com/AliceO2Group/O2Physics/tree/master/Common/TableProducer/PID/pidTPC.cxx): Main TPC PID task
 - `o2-analysis-pid-tpc-base`: Base TPC PID processing
 - `o2-analysis-pid-tpc-qa`: Optional QA histograms
-
 
 ### ITS PID Workflow
 
@@ -235,9 +234,9 @@ Complete workflow including QA:
 ```
 
 **Components:**
+
 - [`o2-analysis-pid-its`](https://github.com/AliceO2Group/O2Physics/tree/master/Common/TableProducer/PID/pidITS.cxx): Main ITS PID task (needed only to set the ITS PID Response parameters)
 - `o2-analysis-pid-its-qa`: Optional QA histograms
-
 
 **Note:** The `...` represents other tasks in your analysis workflow.
 
@@ -248,11 +247,13 @@ QA histograms are essential for monitoring PID performance and can be enabled by
 ### Enabling QA Tasks
 
 **TOF QA histograms:**
+
 ```bash
 ... | o2-analysis-pid-tof-qa | ...
 ```
 
 **TPC QA histograms:**
+
 ```bash
 ... | o2-analysis-pid-tpc-qa | ...
 ```
@@ -260,6 +261,7 @@ QA histograms are essential for monitoring PID performance and can be enabled by
 ### QA Output
 
 The QA tasks provide:
+
 - nSigma distributions for each particle species
 - Detector response monitoring
 - Calibration validation plots
@@ -271,7 +273,7 @@ The QA tasks provide:
 
 Beyond the basic PID functionality, the O2 Analysis Framework provides several advanced features for sophisticated particle identification workflows. These features are designed for users who need more control over PID calculations, better performance optimization, or specialized analysis requirements.
 
-### Key Advanced Features:
+### Key Advanced Features
 
 1. **Dynamic Columns**: Compute PID quantities on-the-fly without storing pre-calculated tables
 2. **Custom Parameterizations**: Use detector-specific response parameterizations from CCDB
@@ -280,6 +282,7 @@ Beyond the basic PID functionality, the O2 Analysis Framework provides several a
 5. **Binned Storage**: Use compressed storage formats for large-scale analyses
 
 These advanced features are particularly useful for:
+
 - **High-precision analyses** requiring detector-specific tuning
 - **Large-scale productions** where storage optimization is critical  
 - **Development workflows** where PID parameters need frequent updates
@@ -290,7 +293,7 @@ These advanced features are particularly useful for:
 TOF beta and mass can be calculated dynamically using the following columns:
 
 | Dynamic Column | Method      | Description                    | Dependencies                            |
-| -------------- | ----------- | ------------------------------ | --------------------------------------- |
+|----------------|-------------|--------------------------------|-----------------------------------------|
 | **TOF Beta**   | `tofBeta()` | Dynamically calculated β value | Length, TOFSignal, TOFEvTime            |
 | **TOF Mass**   | `tofMass()` | Dynamically calculated mass    | Length, TOFSignal, TOFEvTime, TOFExpMom |
 
@@ -299,7 +302,7 @@ TOF beta and mass can be calculated dynamically using the following columns:
 For advanced use cases, nSigma values can be computed dynamically for all detectors:
 
 | Detector | Dynamic Column   | Method             | Description                   | Requirements                        |
-| -------- | ---------------- | ------------------ | ----------------------------- | ----------------------------------- |
+|----------|------------------|--------------------|-------------------------------|-------------------------------------|
 | **TOF**  | `TOFNSigmaDynXX` | `tofNSigmaDynXX()` | On-the-fly nSigma calculation | TOF response service initialization |
 | **TPC**  | `TPCNSigmaDynXX` | `tpcNSigmaDynXX()` | On-the-fly nSigma calculation | Standard table approach             |
 | **ITS**  | `ITSNSigmaXX`    | `itsNSigmaXX()`    | On-the-fly nSigma calculation | Parameter initialization            |
@@ -307,6 +310,7 @@ For advanced use cases, nSigma values can be computed dynamically for all detect
 Where `XX` represents the particle species (`El`, `Mu`, `Pi`, `Ka`, `Pr`, `De`, `Tr`, `He`, `Al`).
 
 **Dynamic nSigma advantages:**
+
 - Use the most current detector calibrations
 - Avoid pre-computed table storage requirements
 - Allow for real-time parameter adjustments
@@ -317,6 +321,7 @@ Where `XX` represents the particle species (`El`, `Mu`, `Pi`, `Ka`, `Pr`, `De`, 
 ### Example Usage
 
 **Basic dynamic columns:**
+
 ```c++
 // TOF Beta calculation
 using TOFBeta = o2::aod::TOFBeta;
@@ -332,6 +337,7 @@ void process(soa::Join<aod::Tracks, TOFMass>::iterator const& track) {
 ```
 
 **Advanced dynamic nSigma with TOF response service:**
+
 ```c++
 #include "Common/Core/PID/PIDTOFParamService.h"
 
