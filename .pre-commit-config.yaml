@@ -3,18 +3,18 @@
 # See https://pre-commit.com/hooks.html for more hooks
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v5.0.0
+    rev: v6.0.0
     hooks:
       - id: end-of-file-fixer
       - id: check-json
       - id: check-yaml
       - id: trailing-whitespace
   - repo: https://github.com/pre-commit/mirrors-clang-format
-    rev: v20.1.5 # clang-format version
+    rev: v21.1.5 # clang-format version
     hooks:
       - id: clang-format
   - repo: https://github.com/cpplint/cpplint
-    rev: 2.0.1
+    rev: 2.0.2
     hooks:
       - id: cpplint
   - repo: https://github.com/igorshubovych/markdownlint-cli
@@ -22,7 +22,7 @@ repos:
     hooks:
       - id: markdownlint-fix
   - repo: https://github.com/tcort/markdown-link-check
-    rev: v3.13.7
+    rev: v3.14.1
     hooks:
       - id: markdown-link-check
         args: [-q]
