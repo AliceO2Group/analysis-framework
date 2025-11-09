@@ -3,33 +3,45 @@ sort: 1
 title: Event Selection
 ---
 
-# Event Selection
+# Table of contents:
 
-## Timestamp
+* [Event selection service wagon](#event-selection-service-wagon)
+* [Timestamp module](#timestamp-module)
+* [Event selection module](#event-selection-module)
+  * [Basic usage in user tasks](#basic-usage-in-user-tasks)
+  * [Trigger aliases](#trigger-aliases)
+  * [Event selection criteria](#event-selection-criteria)
+  * [Time Frame and ITS ROF border cuts](#time-frame-and-its-rof-border-cuts)
+  * [Occupancy estimation](#occupancy-estimation)
+  * [Rejection of events with dead zones in ITS](#rejection-of-events-with-dead-zones-in-its)
+  * [Usage of RCT flags](#usage-of-rct-flags)
+  * [Found bunch crossings](#found-bunch-crossings)
+  * [Configurables](#configurables)
+  * [Event selection decisions for Run 2](#event-selection-decisions-for-run-2)
+* [Luminosity module](#luminosity-module)
 
-The timestamp task is needed to fill the table with timestamps. Timestamp contains the time of a bunch crossing since the start of the run. This time is often needed to retrieve objects in the CCDB (see Tutorial [CCDB](https://aliceo2group.github.io/analysis-framework/docs/tutorials/workingWithCCDB.html)).
+# Event selection service wagon
 
-Since the Timestamps table has an entry per bunch crossing it can be joined with table BC. The join is defined by o2::aod::BCsWithTimestamps (see list of defined [joins and iterators](https://aliceo2group.github.io/analysis-framework/docs/datamodel/joinsAndIterators.html#list-of-joins-and-iterators)).
+_o2-analysis-event-selection-service_ wagon (see [eventSelectionService.cxx](https://github.com/AliceO2Group/O2Physics/blob/master/Common/TableProducer/eventSelectionService.cxx)) integrates several service modules:
 
-## Event selection basics
+* Timestamp module, see details [here](#timestamp-module)
+* Event selection modules for bc-based and collision-based analyses, see details [here](#event-selection-module)
+* Luminosity module, see details [here](#luminosity-module)
 
-Table of contents:
+NOTE: Previously (until July 2025), the timestamp and event selection tables were produced in dedicated [timestamp.cxx](https://github.com/AliceO2Group/O2Physics/blob/master/Common/TableProducer/timestamp.cxx) and [eventSelection.cxx](https://github.com/AliceO2Group/O2Physics/blob/master/Common/TableProducer/eventSelection.cxx) tasks. These tasks are now deprecated and obsolete (and will be removed). All ongoing developments are being carried out in [eventSelectionService.cxx](https://github.com/AliceO2Group/O2Physics/blob/master/Common/TableProducer/eventSelectionService.cxx) task and corresponding [timestampModule.h](https://github.com/AliceO2Group/O2Physics/blob/master/Common/Tools/timestampModule.h) and [EventSelectionModule.h](https://github.com/AliceO2Group/O2Physics/blob/master/Common/Tools/EventSelectionModule.h) modules. A new core wagon called `eventSelectionService` has been [created in the Hyperloop](https://mattermost.web.cern.ch/alice/pl/c19t8owyh3n1ufzaeoisug4s5r) to replace the existing timestamp and event selection wagons and provide users with exactly the same tables but with a much reduced memory overhead.
 
-* [Concept](#concept)
-* [Basic usage in user tasks](#basic-usage-in-user-tasks)
-* [Trigger aliases](#trigger-aliases)
-* [Event selection criteria](#event-selection-criteria)
-* [Event selection decisions](#event-selection-decisions)
-* [Found bunch crossings](#found-bunch-crossings)
-* [Configurables](#configurables)
-* [Remarks](#remarks)
+# Timestamp module
 
+The timestamp module ([timestampModule.h](https://github.com/AliceO2Group/O2Physics/blob/master/Common/Tools/timestampModule.h)) is needed to fill the  ```Timestamps``` table with timestamps corresponding to bunch crossings in the ```BCs``` table. These timestamps (counted in ms from Jan 1, 1970, UTC) are often needed to retrieve CCDB objects (see Tutorial [CCDB](https://aliceo2group.github.io/analysis-framework/docs/tutorials/workingWithCCDB.html)).
 
-### Concept
+Since the ```Timestamps``` table has an entry per bunch crossing it can be joined with ```BCs``` table. The join is defined by ```o2::aod::BCsWithTimestamps``` (see list of defined [joins and iterators](https://aliceo2group.github.io/analysis-framework/docs/datamodel/joinsAndIterators.html#list-of-joins-and-iterators)).
+
+# Event selection module
 
 The main purpose of the event selection framework in O2 is to provide tools to select triggered events and reject pileup, beam-gas and poor quality collisions.
 Event selection in O2 is based on the concept of derived tables created in dedicated tasks from available AOD contents.
-_o2-analysis-event-selection_ executable produces two in-memory tables described in [EventSelection.h](https://github.com/AliceO2Group/O2Physics/blob/master/Common/DataModel/EventSelection.h):
+The event selection module ([EventSelectionModule.h](https://github.com/AliceO2Group/O2Physics/blob/master/Common/Tools/EventSelectionModule.h)) produces
+two in-memory tables described in [EventSelection.h](https://github.com/AliceO2Group/O2Physics/blob/master/Common/DataModel/EventSelection.h):
 
 * ```EvSels``` table joinable with ```Collisions``` table. To be used in analyses based on loops over ```Collisions```, i.e. majority of ALICE analyses.
 * ```BcSels``` table joinable with ```BCs``` table. To be used in analyses based on loops over ```BCs``` table such as muon arm UPCs, luminosity monitoring etc.
@@ -41,29 +53,21 @@ The structure of ```BcSels``` and ```EvSels``` tables is kept the same for Run 2
 
 ```BcSels``` and ```EvSels``` tables contain the following information:
 
-* fired trigger aliases, see [Trigger aliases](#trigger-aliases) section
-* offline event selection criteria such as beam-beam and beam-gas decisions from forward detectors (FV0, FT0, FDD, ZDC) and various in-bunch and out-of-bunch pileup checks, see [Event selection criteria](#event-selection-criteria) section
+* ```alias```: fired trigger alias bits, see [Trigger aliases](#trigger-aliases) section
+* ```selection```: offline event selection bits such as beam-beam and beam-gas decisions from forward detectors (FV0, FT0, FDD, ZDC) and various in-bunch and out-of-bunch pileup checks, see [Event selection criteria](#event-selection-criteria) section
+* ```rct```: RCT flags, see [Usage of RCT flags](#usage-of-rct-flags) section
+
 
 In addition ```EvSels``` table contains additional info:
 
-* event selection decisions (in ```EvSels``` table only), i.e. logical combinations of various offline event selection criteria, see [Event selection decisions](#event-selection-decisions) section. For example, _sel7_ is based on beam-beam decisions in V0A and V0C with additional background, pileup and quality checks
-* indices to found bunch crossings and corresponding FT0 and FV0 entries (in ```EvSels``` table only), see [Found bunch crossings](#found-bunch-crossings) section.
-
-```BcSels``` and ```EvSels``` tables are produced by _BcSelectionModule_ and _EventSelectionModule_, respectively, see [`O2Physics/Common/Tools/EventSelectionModule.h`](https://github.com/AliceO2Group/O2Physics/blob/master/Common/Tools/EventSelectionModule.h),
-the process functions are called from the task [`O2Physics/Common/TableProducer/eventSelectionService.cxx`](https://github.com/AliceO2Group/O2Physics/blob/master/Common/TableProducer/eventSelectionService.cxx).
-There are separate process functions for Run 2 and Run 3 in both modules, and the `eventSelectionService` autodetects if the dataset being analysed is Run 2 or 3.
-
-```note
-Previously (until July 2025), the `BcSels` and `EvSels` tables were produced in the [`O2Physics/Common/TableProducer/eventSelection.cxx`](https://github.com/AliceO2Group/O2Physics/blob/master/Common/TableProducer/eventSelection.cxx) task.
-This task is now deprecated and obsolete (and will be removed). All ongoing developments for event selection are being carried out in `eventSelectionService.cxx` and `EventSelectionModule.h`.
-
-A new core wagon called `eventSelectionService` has been [created in the Hyperloop](https://mattermost.web.cern.ch/alice/pl/c19t8owyh3n1ufzaeoisug4s5r) to replace the existing timestamp and event selection wagon and provide users with exactly the same tables but with a much reduced memory overhead.
-
-```
+* ```sel7``` and ```sel8``` event selection decisions, i.e. logical combinations of various offline event selection criteria, see [Event selection decisions](#event-selection-decisions-for-run-2) section. For example, _sel7_ (main Run 2 selection) is based on beam-beam decisions in V0A and V0C with additional background, pileup and quality checks, while _sel8_ (main Run 3 selection) is based on TVX decision from FT0 detector and additional time-border cuts.
+* ```foundBC```, ```foundFT0```, ```foundFV0```, ```foundFDD``` , ```foundZDC```: indices to found bunch crossings and corresponding FT0, FV0, FDD and ZDC entries, see [Found bunch crossings](#found-bunch-crossings) section.
+* ```trackOccupancyInTimeRange```, ```ft0cOccupancyInTimeRange```: raw occupancy estimators, see [Occupancy estimation](#occupancy-estimation) section for details.
 
 
+```BcSels``` and ```EvSels``` tables are produced by _BcSelectionModule_ and _EventSelectionModule_, respectively, see [`O2Physics/Common/Tools/EventSelectionModule.h`](https://github.com/AliceO2Group/O2Physics/blob/master/Common/Tools/EventSelectionModule.h), the process functions are called from the task [`O2Physics/Common/TableProducer/eventSelectionService.cxx`](https://github.com/AliceO2Group/O2Physics/blob/master/Common/TableProducer/eventSelectionService.cxx). There are separate process functions for Run 2 and Run 3 in both modules, and the `eventSelectionService` autodetects if the dataset being analysed is Run 2 or 3.
 
-### Basic usage in user tasks
+## Basic usage in user tasks
 
 In general, one has to follow the following steps:
 
@@ -79,7 +83,7 @@ In general, one has to follow the following steps:
     void process(soa::Join<aod::Collisions, aod::EvSels>::iterator const& col, ...)
     ```
 
-* check if your trigger alias is fired if you run over Run1 or Run2 data (or future triggered Run3 data):
+* check if your trigger alias is fired if you run over Run1-2 data or triggered Run3 data:
 
     ``` c++
     if (!col.alias_bit(kINT7)) {
@@ -105,21 +109,19 @@ In general, one has to follow the following steps:
       }
       ```
 
-The `sel8` event selection bit is a logical _and_ between the `kIsTriggerTVX` bit (based on FT0A & FT0C requirement, with time-based constraints on the vertex position), and (since April 2024) `kNoTimeFrameBorder` and  `kNoITSROFrameBorder` bits - see [below](#integration-into-event-selection).
+  The `sel8` event selection bit is a logical _and_ between the `kIsTriggerTVX` bit (based on FT0A & FT0C requirement, with time-based constraints on the vertex position), and (since April 2024) `kNoTimeFrameBorder` and  `kNoITSROFrameBorder` bits - see [below](#integration-into-event-selection).
 
-* run your tasks in stack with timestamp and event-selection tasks:
+* run your tasks in stack with event-selection-service task:
 
     ``` bash
-    o2-analysis-timestamp --aod-file AO2D.root -b | o2-analysis-event-selection -b | o2-analysis-user-task -b
+    o2-analysis-event-selection-service -b | o2-analysis-user-task -b --aod-file AO2D.root -b
     ```
 
-  This workflow works for Run 2 data. Special settings are required for MC and Run 3 data, see [Configurables](#configurables) section.
-
-  _o2-analysis-timestamp_ task [`Common/TableProducer/timestamp.cxx`](https://github.com/AliceO2Group/O2Physics/blob/master/Common/TableProducer/timestamp.cxx) is required to create per-event timestamps necessary to access relevant CCDB objects in the event selection task.
+  A number of special configurables are available, see [Configurables](#configurables) section.
 
   _o2-analysis-zdc-converter_ and _o2-analysis-collision-converter_ might be also necessary for old datasets to account for changes in the data model.
 
-### Trigger aliases
+## Trigger aliases
 
 Direct selection on trigger class names in O2 is rather complicated. In contrast to Run 2 AODs, there is no way to get the list of fired classes in a string-like format. Instead one has to check bits corresponding to trigger class ids either in ```triggerMask``` column in ```BCs``` table or ```triggerMaskNext50``` in ```Run2BCInfos``` table (for Run 2 if the trigger class id is larger than 50). This approach is complicated since trigger class ids for the same class vary from run to run.
 
@@ -129,7 +131,7 @@ To simplify trigger checks, we use trigger alias approach. Fired trigger classes
 * alias bits do not change from run to run in contrast to trigger class ids
 
 The list of available trigger alises can be found in [`Common/CCDB/TriggerAliases.h`](https://github.com/AliceO2Group/O2Physics/blob/master/Common/CCDB/TriggerAliases.h). The mapping between trigger classes (and their indices) and trigger aliases is stored in [`CCDB`](http://alice-ccdb.cern.ch/browse/EventSelection/TriggerAliases) run-by-run in dedicated _TriggerAliases_ objects.
-Current mapping can be checked in [upload_trigger_aliases.C](https://github.com/AliceO2Group/O2Physics/blob/master/Common/CCDB/macros/upload_trigger_aliases.C#L24) macro for Run2:
+Current mapping can be checked in [upload_trigger_aliases.C](https://github.com/AliceO2Group/O2Physics/blob/master/Common/CCDB/macros/upload_trigger_aliases.C#L25) macro for Run2 (as of November 2025):
 
 ``` c++
   mAliases[kINT7] = "CINT7-B-NOPF-CENT,CINT7-B-NOPF-FAST,CV0L7-B-NOPF-CENT,CINT7-B-NOPF-CENTNOTRD,CINT7ZAC-B-NOPF-CENTNOPMD,CINT7-B-NOPF-ALLNOTRD,CINT7-I-NOPF-ALLNOTRD,CINT7-S-NOPF-ALLNOTRD,CMBAC-B-NOPF-ALL,CMBACS2-B-NOPF-ALLNOTRD,CMBACS2-B-NOPF-ALL";
@@ -156,17 +158,21 @@ Current mapping can be checked in [upload_trigger_aliases.C](https://github.com/
   mAliases[kDJ2] = "CINT7DJ2-B-NOPF-CENTNOPMD,CDMC7DJ2-B-NOPF-CENT,CDMC7DJ2-B-NOPF-CENTNOTRD,CDMC7DJ2-B-NOPF-CENTNOPMD";
 ```
 
-and in [upload_trigger_aliases_run3.C](https://github.com/AliceO2Group/O2Physics/blob/master/Common/CCDB/macros/upload_trigger_aliases_run3.C#L25) for Run 3:
+and in [upload_trigger_aliases_run3.C](https://github.com/AliceO2Group/O2Physics/blob/master/Common/CCDB/macros/upload_trigger_aliases_run3.C#L26) for Run 3 (as of November 2025):
 
 ``` c++
+  mAliases[kEMC7] = "CTVXEMC-B-NOPF-EMC";
+  mAliases[kDMC7] = "CTVXDMC-B-NOPF-EMC";
   mAliases[kTVXinTRD] = "CMTVX-B-NOPF-TRD,minbias_TVX";
-  mAliases[kTVXinEMC] = "C0TVX-B-NOPF-EMC,minbias_TVX_L0";
-  mAliases[kTVXinPHOS] = "C0TVX-B-NOPF-PHSCPV,minbias_TVX_L0";
+  mAliases[kTVXinEMC] = "C0TVX-B-NOPF-EMC,minbias_TVX_L0,CMTVXTSC-B-NOPF-EMC,CMTVXTCE-B-NOPF-EMC";
+  mAliases[kTVXinPHOS] = "C0TVX-B-NOPF-PHSCPV,minbias_TVX_L0,CMTVXTSC-B-NOPF-PHSCPV,CMTVXTSC-B-NOPF-PHSCPV";
+  mAliases[kTVXinHMP] = "C0TVX-B-NOPF-HMP,minbias_TVX_L0,CMTVXTSC-B-NOPF-HMP";
+  mAliases[kPHOS] = "CTVXPH0-B-NOPF-PHSCPV,mb_PH0_TVX,CPH0SC-B-NOPF-PHSCPV,CPH0CE-B-NOPF-PHSCPV";
 ```
 
 This list of trigger aliases and classes is not complete but it should be enough for tests in various PWGs. New trigger classes and aliases can be added upon request (contact Evgeny Kryshen).
 
-### Event selection criteria
+## Event selection criteria
 
 Full list of event selection criteria can be found in [`Common/CCDB/EventSelectionParams.h`](https://github.com/AliceO2Group/O2Physics/blob/master/Common/CCDB/EventSelectionParams.h#L21)
 
@@ -232,15 +238,211 @@ Technically there are three types of criteria:
 * based on information from FIT and ZDC detectors (_kIsBB..._, _kIsBG..._) and/or additional information stored in ```aod::Run2BCInfos``` table (_kNoV0MOnVsOfPileup_,_kNoSPDOnVsOfPileup_)
 * based on additional information from ```aod::Collisions``` table
 
-Decisions on inidividual selection criteria are stored in _selection_ array ```BcSels``` and ```EvSels``` tables. E.g. one can check if a given collision passed _kIsBBV0A_ selection:
+Decisions on inidividual selection criteria are stored in _selection_ bitmask ```BcSels``` and ```EvSels``` tables. E.g. one can check if a given collision passed _kNoSameBunchPileup_ selection:
 
 ``` c++
-  bool isBBV0Apassed = col.selection_bit(evsel::kIsBBV0A);
+  bool noSameBunchPileup = col.selection_bit(evsel::kNoSameBunchPileup);
 ```
 
-### Event selection decisions
+_kNoTimeFrameBorder_ and _kNoITSROFrameBorder_ selections are described in detail in [this section](#time-frame-and-its-rof-border-cuts).
 
-Offline event selection decisions (e.g. sel7) are constructed based on a subsample of individual checks stored in _selection_ array. The default list of checks may depend on colliding system, specific run conditions and specific analysis requirements. Default set of checks can be found in [Common/CCDB/EventSelectionParams.cxx](https://github.com/AliceO2Group/O2Physics/blob/master/Common/CCDB/EventSelectionParams.cxx). The default _selectionBarrel_ masks for pp, pA, Ap and AA are summarized below:
+Occupancy-related selections (_kNoCollInTimeRangeNarrow_, _kNoCollInTimeRangeStandard_, _kNoCollInTimeRangeStrict_, _kNoCollInRofStrict_, _kNoCollInRofStandard_, _kNoHighMultCollInPrevRof_) are described in [this section](#occupancy-estimation).
+
+## Time Frame and ITS ROF border cuts
+
+### Time Frame borders
+
+In Run 3 and 4, ALICE operates in **continuous readout mode**, where data are stored in **Time Frames (TFs)** that correspond to 32 LHC orbits, ≈ 2.9 ms (_note:_ in 2022 pp TFs were longer - 128 LHC orbits), and each TF is **reconstructed independently**.
+
+Because the drift time of electrons in the TPC is **≈ 100 μs**, collisions near the end of a TF **lack full information**, resulting in a depletion of vertex contributors and a drop in ITS+TPC tracking efficiency during the last ≈ 1.1 LHC orbits of the TF (LHC orbit is ≈89 μs).
+Additional effect takes place at the **beginning of the next TF**, where the reconstruction starts when the electrons from pre-TF collisions are still drifting.
+
+**Mitigation in event selection**:
+- A dedicated event-selection bit `kNoTimeFrameBorder` was introduced (February 2024) to reject events close to TF edges:
+  - Cuts ≈ **300 bunch crossings (BCs)** at the start and ≈ **4000 BCs** at the end of each TF.
+  - Corresponds to ≈ **3.7% event loss** for 2023–25 data.
+- This cut ensures full TPC drift information for all accepted events, removing TF-edge artefacts in vertex and track distributions.
+- Usage in analysis:
+  ``` c++
+  if (col.selection_bit(o2::aod::evsel::kNoTimeFrameBorder)) { /* do analysis */ }
+  ```
+
+
+### ITS Readout Frame borders
+
+- Although the global readout is continuous, the ITS2 detector is read out in **discrete Readout Frames (ROFs)**:
+  - in **pp:** 18 ROFs per LHC orbit, each ≈ 5 μs (198 BCs; full orbit contains 3564 BCs)
+  - in **Pb–Pb:** 6 ROFs per orbit, ≈ 15 μs each (594 BCs)
+- Cluster losses occur at ROF boundaries due to the **ALPIDE chip’s time-walk effect**:
+  - ITS clusters from an interaction in ROF *i* may appear only in ROF *i + 1*
+  - this causes a sharp drop in ITS cluster and track counts at ROF edges.
+- The effect is **particle-dependent**, e.g. protons (larger dE/dx) are recorded earlier than pions—leading to small PID-dependent distortions near borders.
+
+**Mitigation in event selection**
+- The selection bit `kNoITSROFrameBorder` rejects events near ITS ROF edges:
+  - removes collisions within  **10 BCs** at the beginning and **20 BCs** at the end of each ROF
+  - it correponds to ≈ 15 % of (nominal) BCs in pp and ≈5 % of BCs in Pb–Pb (corresponding event losses depend on the LHC filling scheme)
+- Usage in analysis:
+  ``` c++
+  if (col.selection_bit(o2::aod::evsel::kNoITSROFrameBorder)) { /* do analysis */ }
+  ```
+- Note that this cut also helps to remove collisions at the ROF borders in the MFT detector (where the same chips as in the ITS are used, and the MFT ROFs are time-aligned with the ITS ROFs).
+
+More details on the TF and ROF border effects and cuts can be found e.g. in slides 2-17 of [presentation (November 2024)](https://indico.cern.ch/event/1453901/timetable/#6-event-selection-in-run3).
+
+
+### Integration into event selection
+- Since April 2024, both the **Time Frame border** and **ITS Readout Frame border** cuts are combined with the ``kIsTriggerTVX`` condition via logical _and_ in the `sel8` event-selection bit, ensuring events used for analysis are free from TF and ROF boundary artifacts.
+
+## Occupancy estimation
+
+In ALICE Run 3 Pb–Pb collisions, **occupancy effects** in the TPC refer to the deterioration of the quality of an event’s TPC clusters by signals from other nearby collisions within the TPC drift time window.
+
+- The TPC has a long drift time (~100 µs), so clusters from particles originated from multiple collisions can overlap in the detector.
+- Higher occupancy worsens:
+  - Tracking efficiency
+  - PID performance (dE/dx shifts, peak broadening)
+
+### Occupancy estimators
+
+A single-value "integrated" occupancy estimator for a given collision can be calculated by summing
+- the number of ITS tracks from other collisions within a defined time window around the given event. In the analysis, it can be accessed as:
+  ``` c++
+  int occupancyByTracks = col.trackOccupancyInTimeRange(); // range: from 0 up to ~15k
+  ```
+- alternatively, we can sum up FT0C amplitudes from other collisions:
+  ``` c++
+   float occupancyByFT0C = col.ft0cOccupancyInTimeRange();  // range: from 0 up to ~150k
+  ```
+
+_Notes:_
+- Both occupancy estimators are pre-calculated per each collision in the event selection routine, [EventSelectionModule.h](https://github.com/AliceO2Group/O2Physics/blob/daily-20251029-0000/Common/Tools/EventSelectionModule.h#L1361).
+- In the occupancy calculation, multiplicities of nearby collisions are "weighted" according to their time separation from a collision-of-interest, to reflect the "severity" of their influence on that collision
+- Estimators return `-1` if a given collision is close to Time Frame borders (so, not enough information for the occupancy calculation, while we need information within -40 µs...+100 µs time range wrt a given collision), event loss ~1.2%.
+
+
+### Occupancy selection bits
+
+In addition to the occupancy estimators described above, several special event selection bits are implemented to better clean up various nearby effects from other collisions (related not only the TPC but also the ITS, e.g. due to high occupancies in the ITS Readout Frames).
+
+The following table summarizes the event selection bits that can help to mitigate the occupancy effects:
+
+| **Bit** | **Definition** | **Strictness** | **Typical Effect / Event Loss** |
+|---------|----------------|----------------|--------------------------------|
+| `kNoCollInTimeRangeNarrow` | Rejects events if another collision within **±0.25 µs** | Narrow veto | Useful to suppress residual BC mis-associations; minimal event loss, ~1-1.5% |
+| `kNoCollInTimeRangeStandard` | Rejects if: (1) another coll. within ±0.25 µs, or (2) multiplicity of a coll. in delta time −4…+2 µs > threshold  | Medium | Further suppression of effects from nearby collisions; ~3-7% event loss depending on IR |
+| `kNoCollInTimeRangeStrict` | Rejects events if another collision is within **±10 µs** | Very strict | Strongly reduces effects from nearby events; large loss of statistics at high IR (can exceed 30–40%) |
+| `kNoCollInRofStrict` | Rejects events if >1 collision in the same **ITS Readout Frame** (~15 µs in Pb-Pb) | Very strict | Removes in-ROF pileup; at 38 kHz Pb–Pb cuts ~35% of events |
+| `kNoCollInRofStandard` | Allows >1 collision per ROF but rejects if another has multiplicity > threshold (default: FT0C amplitude >5000 a.u. ≈ 500 tracks) | Medium | Retains more stats, but protects against large in-ROF pileup |
+| `kNoHighMultCollInPrevRof` | Vetoes event if **previous ROF** has high multiplicity (FT0C >5000 a.u.); only for cross-ROF ITS reco | Medium | Removes cases where previous ROF “steals” clusters; few % loss, but improves ITS tracking quality |
+
+These bits can be used as follows:
+``` c++
+if (col.selection_bit(o2::aod::evsel::kNoCollInTimeRangeNarrow)) { /* do analysis */ }
+```
+
+
+### Discussion
+
+More details on occupancy in Pb-Pb can be found in the [report at the APW 2024](https://indico.cern.ch/event/1462154/#7-occupancy-effects), where the concepts and observations are explained (while some figures and indicated values might be outdated).
+
+Tight cuts on occupancy improve quality (better S/B, cleaner PID, less bias in kinematics), but reduce event statistics.
+
+However, sensitivity to the occupancy effects depends on analysis.
+Therefore, the suggested approach is to study how results of a given analysis change as a function of occupancy: one may try several occupancy "bins", e.g. `[0,500), [500, 1000), [1000-2000), [2000-4000)`, etc.,
+and, in addition, apply occupancy selection bits, e.g. `kNoCollInTimeRangeNarrow` to eliminate the bc-collision mismatches, or `kNoCollInTimeRangeStandard` to make a further cleaunup.
+
+Note that TPC-related occupancy effects are most pronounced in Pb–Pb runs, however, the tools described above can also be used for occupancy studies in pp and light-ion runs.
+
+
+## Rejection of events with dead zones in ITS
+
+### Problem
+
+- The ITS occasionally develops **“holes” in acceptance** lasting about **6–8 seconds**, visible as gaps in φ distributions on time-dependent plots.
+- These are caused by **reboots of ITS staves**, typically triggered by recovery of failed **lanes** (groups of 7 chips sharing one data link). When a lane fails, the **full stave** becomes temporarily blind while the DCS recovers it.
+- The issue affects, in particular, **ITS Layer 3**, which is critical for achieving four consecutive ITS hits in tracking.
+- These dead periods correlate also with **drops in ITS–TPC matching efficiency**.
+- The effect appears both in **A-A** and **pp** data.
+
+For more details, see the [report at DPG AOT meeting, Jan 2025](https://indico.cern.ch/event/1493023/#3-rejection-of-events-with-dea).
+
+### Using special event selection bits
+
+To reject events recorded during the affected time intervals, several event selection bits were introduced in O2Physics ([PR #9038](https://github.com/AliceO2Group/O2Physics/pull/9038), Dec 2024):
+```
+kIsGoodITSLayer3,           // number of inactive chips on ITS layer 3 is below maximum allowed value
+kIsGoodITSLayer0123,        // numbers of inactive chips on ITS layers 0-3 are below maximum allowed values
+kIsGoodITSLayersAll,        // numbers of inactive chips on all ITS layers are below maximum allowed values
+```
+
+Example usage:
+```cpp
+if (col.selection_bit(o2::aod::evsel::kIsGoodITSLayersAll)) {
+    // do analysis
+}
+```
+This particular bit `kIsGoodITSLayersAll` ensures that all ITS layers are in a good state (i.e. no rebooting **staves**; note that at the same time some **chips** can be inactive, so, smaller holes in the acceptance can remain).
+
+The logic behind these cuts uses **CCDB maps of dead chips** and defines per-layer [thresholds](https://github.com/AliceO2Group/O2Physics/blob/daily-20251029-0000/Common/Tools/EventSelectionModule.h#L99) for allowed inactive chips:
+```cpp
+maxInactiveChipsPerLayer = {8, 8, 8, 111, 111, 195, 195};
+```
+If any layer exceeds its threshold, the event is flagged as **bad** (likely during a stave reboot).
+
+Applying this cut removes time intervals with dead ITS staves and, correspondingly, the large acceptance holes, significantly flattening time dependence of the observables, like the **2- and 4-particle correlators** in Pb-Pb.
+Note that in pp the `kIsGoodITSLayersAll` bit can reject a huge fraction of events (the holes in pp are more frequent), instead, the `kIsGoodITSLayer0123` bit can be tried (e.g. to study effects from the rebooting staves on track DCA).
+
+
+## Usage of RCT flags
+
+See [slides](https://indico.cern.ch/event/1535107/#34-rct-time-dependent-flags) for details.
+
+## Found bunch crossings
+
+One of the main goals of the event selection task in Run 3 is to find the original bunch crossing for each collision. The basic approach is to start from estimated collision bc and search for closest BC containing FT0 entries in a +/-4 sigma window where sigma corresponds to the estimated collision time resolution from ```col.collisionTimeRes()```. Implementation details can be found in [eventSelection.cxx#L348](https://github.com/AliceO2Group/O2Physics/blob/master/Common/TableProducer/eventSelection.cxx#L348).
+
+Users can access found bunch crossings and FT0 entries using _foundBC_ or _foundFT0_ indices stored in the _EvSels_ table:
+
+``` c++
+if (collision.has_foundBC()) {
+  auto bc = collision.foundBC();
+  uint64_t globalBC = bc.globalBC();
+}
+```
+
+or
+
+``` c++
+if (collision.has_foundFT0()) {
+  auto ft0 = collision.foundFT0();
+  int triggersignals = ft0.triggerMask();
+}
+```
+
+If bunch crossing with FT0 entries is not found, _foundBC_ and _foundFT0_ indices are set to -1 therefore one has to check ```collision.has_foundBC()``` or ```collision.has_foundFT0()``` before accessing corresponding info.
+
+## Configurables
+
+Event selection module supports a number of configurables, see [bcselConfigurables](https://github.com/AliceO2Group/O2Physics/blob/master/Common/Tools/EventSelectionModule.h#L90) and [evselConfigurables](https://github.com/AliceO2Group/O2Physics/blob/master/Common/Tools/EventSelectionModule.h#L104), e.g.
+
+* _muonSelection_ allows to activate reduced set of checks for muon analyses in Run 2:
+
+  ``` c++
+  Configurable<int> muonSelection{"muonSelection", 0, "0 - barrel, 1 - muon selection with pileup cuts, 2 - muon selection without pileup cuts"};
+  ```
+
+* TODO: add other examples
+
+One can set various configurables in the json file. This json file has to be provided using ```--configuration``` option:
+
+  ``` bash
+  o2-analysis-event-selection-service --configuration json://config.json -b
+  ```
+
+## Event selection decisions for Run 2
+
+Offline event selection decisions for Run 2 (e.g. sel7) are constructed based on a subsample of individual checks stored in _selection_ bits. The default list of checks may depend on colliding system, specific run conditions and specific analysis requirements. Default set of checks for Run 2 can be found in [Common/CCDB/EventSelectionParams.cxx](https://github.com/AliceO2Group/O2Physics/blob/master/Common/CCDB/EventSelectionParams.cxx). The default _selectionBarrel_ masks for pp, pA, Ap and AA are summarized below:
 
 * default sel7 selection in pp is based on the requirement of beam-beam timing in V0A and V0C and a number of pileup, beam-gas and othe quality checks
 
@@ -323,235 +525,15 @@ Then _sel7_ decision is constructed from active checks:
     }
 ```
 
-### Found bunch crossings
-
-One of the main goals of the event selection task in Run 3 is to find the original bunch crossing for each collision. The basic approach is to start from estimated collision bc and search for closest BC containing FT0 entries in a +/-4 sigma window where sigma corresponds to the estimated collision time resolution from ```col.collisionTimeRes()```. Implementation details can be found in [eventSelection.cxx#L348](https://github.com/AliceO2Group/O2Physics/blob/master/Common/TableProducer/eventSelection.cxx#L348).
-
-Users can access found bunch crossings and FT0 entries using _foundBC_ or _foundFT0_ indices stored in the _EvSels_ table:
-
-``` c++
-if (collision.has_foundBC()) {
-  auto bc = collision.foundBC();
-  uint64_t globalBC = bc.globalBC();
-}
-```
-
-or
-
-``` c++
-if (collision.has_foundFT0()) {
-  auto ft0 = collision.foundFT0();
-  int triggersignals = ft0.triggerMask();
-}
-```
-
-If bunch crossing with FT0 entries is not found, _foundBC_ and _foundFT0_ indices are set to -1 therefore one has to check ```collision.has_foundBC()``` or ```collision.has_foundFT0()``` before accessing corresponding info.
-
-### Configurables
-
-Event selection task supports several configurables:
-
-* _muonSelection_ allows to activate reduced set of checks for muon analyses
-
-  ``` c++
-  Configurable<int> muonSelection{"muonSelection", 0, "0 - barrel, 1 - muon selection with pileup cuts, 2 - muon selection without pileup cuts"};
-  ```
-
-* _isMC_ allows to suppress several checks for Run 2 MC, see [Event selection decisions](#event-selection-decisions):
-
-  ``` c++
-  Configurable<int> isMC{"isMC", 0, "-1 - autoset, 0 - data, 1 - MC"};
-  ```
-
-  Note that one has to enable _isRun2MC_ flag in the timestamp task in this case:
-
-  ``` bash
-  o2-analysis-timestamp --aod-file AO2D.root -b --isRun2MC 1 | o2-analysis-event-selection -b --isMC 1 | o2-analysis-user-task -b
-  ```
-
-In the case of Run 3 processing, one has to set ```processRun2=false``` and ```processRun3=true``` flags in ```bc-selection-task``` and ```event-selection-task```. These configurables cannot be set in the command line. Instead one has to use json files. Typical content of the json file for Run 3 processing:
-
-``` json
-    "bc-selection-task": {
-        "processRun2": "false",
-        "processRun3": "true"
-    },
-    "event-selection-task": {
-        "processRun2": "false",
-        "processRun3": "true"
-    },
-```
-
-One can set other configurables in the json file. This json file has to be provided using ```--configuration``` option:
-
-  ``` bash
-  o2-analysis-timestamp -b | o2-analysis-event-selection --configuration json://config.json -b
-  ```
-
 ### Remarks
 
 * One has to apply offline selections in O2 explicitly in contrast to AliPhysics where these selections were applied together with trigger alias selection.
 * EvSel table might be also useful in user tasks relying on beam-beam and beam-gas decisions in forward detectors, e.g. in UPC tasks.
 
 
-## Time Frame and ITS ROF border cuts
-
-### Time Frame borders
-
-In Run 3 and 4, ALICE operates in **continuous readout mode**, where data are stored in **Time Frames (TFs)** that correspond to 32 LHC orbits, ≈ 2.9 ms (_note:_ in 2022 pp TFs were longer - 128 LHC orbits), and each TF is **reconstructed independently**.
-
-Because the drift time of electrons in the TPC is **≈ 100 μs**, collisions near the end of a TF **lack full information**, resulting in a depletion of vertex contributors and a drop in ITS+TPC tracking efficiency during the last ≈ 1.1 LHC orbits of the TF (LHC orbit is ≈89 μs).
-Additional effect takes place at the **beginning of the next TF**, where the reconstruction starts when the electrons from pre-TF collisions are still drifting.
-
-**Mitigation in event selection**:
-- A dedicated event-selection bit `kNoTimeFrameBorder` was introduced (February 2024) to reject events close to TF edges:
-  - Cuts ≈ **300 bunch crossings (BCs)** at the start and ≈ **4000 BCs** at the end of each TF.
-  - Corresponds to ≈ **3.7% event loss** for 2023–25 data.
-- This cut ensures full TPC drift information for all accepted events, removing TF-edge artefacts in vertex and track distributions.
-- Usage in analysis:
-  ``` c++
-  if (col.selection_bit(o2::aod::evsel::kNoTimeFrameBorder)) { /* do analysis */ }
-  ```
-
-
-### ITS Readout Frame borders
-
-- Although the global readout is continuous, the ITS2 detector is read out in **discrete Readout Frames (ROFs)**:
-  - in **pp:** 18 ROFs per LHC orbit, each ≈ 5 μs (198 BCs; full orbit contains 3564 BCs)
-  - in **Pb–Pb:** 6 ROFs per orbit, ≈ 15 μs each (594 BCs)
-- Cluster losses occur at ROF boundaries due to the **ALPIDE chip’s time-walk effect**:
-  - ITS clusters from an interaction in ROF *i* may appear only in ROF *i + 1*
-  - this causes a sharp drop in ITS cluster and track counts at ROF edges.
-- The effect is **particle-dependent**, e.g. protons (larger dE/dx) are recorded earlier than pions—leading to small PID-dependent distortions near borders.
-
-**Mitigation in event selection**
-- The selection bit `kNoITSROFrameBorder` rejects events near ITS ROF edges:
-  - removes collisions within  **10 BCs** at the beginning and **20 BCs** at the end of each ROF
-  - it correponds to ≈ 15 % of (nominal) BCs in pp and ≈5 % of BCs in Pb–Pb (corresponding event losses depend on the LHC filling scheme)
-- Usage in analysis:
-  ``` c++
-  if (col.selection_bit(o2::aod::evsel::kNoITSROFrameBorder)) { /* do analysis */ }
-  ```
-- Note that this cut also helps to remove collisions at the ROF borders in the MFT detector (where the same chips as in the ITS are used, and the MFT ROFs are time-aligned with the ITS ROFs).
-
-More details on the TF and ROF border effects and cuts can be found e.g. in slides 2-17 of [presentation (November 2024)](https://indico.cern.ch/event/1453901/timetable/#6-event-selection-in-run3).
-
-
-
-### Integration into event selection
-- Since April 2024, both the **Time Frame border** and **ITS Readout Frame border** cuts are combined with the ``kIsTriggerTVX`` condition via logical _and_ in the `sel8` event-selection bit, ensuring events used for analysis are free from TF and ROF boundary artifacts.
-
-
-
-
-## Occupancy estimation
-
-In ALICE Run 3 Pb–Pb collisions, **occupancy effects** in the TPC refer to the deterioration of the quality of an event’s TPC clusters by signals from other nearby collisions within the TPC drift time window.
-
-- The TPC has a long drift time (~100 µs), so clusters from particles originated from multiple collisions can overlap in the detector.
-- Higher occupancy worsens:
-  - Tracking efficiency
-  - PID performance (dE/dx shifts, peak broadening)
-
-### Occupancy estimators
-
-A single-value "integrated" occupancy estimator for a given collision can be calculated by summing
-- the number of ITS tracks from other collisions within a defined time window around the given event. In the analysis, it can be accessed as:
-  ``` c++
-  int occupancyByTracks = col.trackOccupancyInTimeRange(); // range: from 0 up to ~15k
-  ```
-- alternatively, we can sum up FT0C amplitudes from other collisions:
-  ``` c++
-   float occupancyByFT0C = col.ft0cOccupancyInTimeRange();  // range: from 0 up to ~150k
-  ```
-
-_Notes:_
-- Both occupancy estimators are pre-calculated per each collision in the event selection routine, [EventSelectionModule.h](https://github.com/AliceO2Group/O2Physics/blob/daily-20251029-0000/Common/Tools/EventSelectionModule.h#L1361).
-- In the occupancy calculation, multiplicities of nearby collisions are "weighted" according to their time separation from a collision-of-interest, to reflect the "severity" of their influence on that collision
-- Estimators return `-1` if a given collision is close to Time Frame borders (so, not enough information for the occupancy calculation, while we need information within -40 µs...+100 µs time range wrt a given collision), event loss ~1.2%.
-
-
-### Occupancy selection bits
-
-In addition to the occupancy estimators described above, several special event selection bits are implemented to better clean up various nearby effects from other collisions (related not only the TPC but also the ITS, e.g. due to high occupancies in the ITS Readout Frames).
-
-The following table summarizes the event selection bits that can help to mitigate the occupancy effects:
-
-| **Bit** | **Definition** | **Strictness** | **Typical Effect / Event Loss** |
-|---------|----------------|----------------|--------------------------------|
-| `kNoCollInTimeRangeNarrow` | Rejects events if another collision within **±0.25 µs** | Narrow veto | Useful to suppress residual BC mis-associations; minimal event loss, ~1-1.5% |
-| `kNoCollInTimeRangeStandard` | Rejects if: (1) another coll. within ±0.25 µs, or (2) multiplicity of a coll. in delta time −4…+2 µs > threshold  | Medium | Further suppression of effects from nearby collisions; ~3-7% event loss depending on IR |
-| `kNoCollInTimeRangeStrict` | Rejects events if another collision is within **±10 µs** | Very strict | Strongly reduces effects from nearby events; large loss of statistics at high IR (can exceed 30–40%) |
-| `kNoCollInRofStrict` | Rejects events if >1 collision in the same **ITS Readout Frame** (~15 µs in Pb-Pb) | Very strict | Removes in-ROF pileup; at 38 kHz Pb–Pb cuts ~35% of events |
-| `kNoCollInRofStandard` | Allows >1 collision per ROF but rejects if another has multiplicity > threshold (default: FT0C amplitude >5000 a.u. ≈ 500 tracks) | Medium | Retains more stats, but protects against large in-ROF pileup |
-| `kNoHighMultCollInPrevRof` | Vetoes event if **previous ROF** has high multiplicity (FT0C >5000 a.u.); only for cross-ROF ITS reco | Medium | Removes cases where previous ROF “steals” clusters; few % loss, but improves ITS tracking quality |
-
-These bits can be used as follows:
-``` c++
-if (col.selection_bit(o2::aod::evsel::kNoCollInTimeRangeNarrow)) { /* do analysis */ }
-```
-
-
-### Discussion
-
-More details on occupancy in Pb-Pb can be found in the [report at the APW 2024](https://indico.cern.ch/event/1462154/#7-occupancy-effects), where the concepts and observations are explained (while some figures and indicated values might be outdated).
-
-Tight cuts on occupancy improve quality (better S/B, cleaner PID, less bias in kinematics), but reduce event statistics.
-
-However, sensitivity to the occupancy effects depends on analysis.
-Therefore, the suggested approach is to study how results of a given analysis change as a function of occupancy: one may try several occupancy "bins", e.g. `[0,500), [500, 1000), [1000-2000), [2000-4000)`, etc.,
-and, in addition, apply occupancy selection bits, e.g. `kNoCollInTimeRangeNarrow` to eliminate the bc-collision mismatches, or `kNoCollInTimeRangeStandard` to make a further cleaunup.
-
-Note that TPC-related occupancy effects are most pronounced in Pb–Pb runs, however, the tools described above can also be used for occupancy studies in pp and light-ion runs.
-
-
-
-## Rejection of events with dead zones in ITS
-
-### Problem
-
-- The ITS occasionally develops **“holes” in acceptance** lasting about **6–8 seconds**, visible as gaps in φ distributions on time-dependent plots.
-- These are caused by **reboots of ITS staves**, typically triggered by recovery of failed **lanes** (groups of 7 chips sharing one data link). When a lane fails, the **full stave** becomes temporarily blind while the DCS recovers it.
-- The issue affects, in particular, **ITS Layer 3**, which is critical for achieving four consecutive ITS hits in tracking.
-- These dead periods correlate also with **drops in ITS–TPC matching efficiency**.
-- The effect appears both in **A-A** and **pp** data.
-
-For more details, see the [report at DPG AOT meeting, Jan 2025](https://indico.cern.ch/event/1493023/#3-rejection-of-events-with-dea).
-
-### Using special event selection bits
-
-To reject events recorded during the affected time intervals, several event selection bits were introduced in O2Physics ([PR #9038](https://github.com/AliceO2Group/O2Physics/pull/9038), Dec 2024):
-```
-kIsGoodITSLayer3,           // number of inactive chips on ITS layer 3 is below maximum allowed value
-kIsGoodITSLayer0123,        // numbers of inactive chips on ITS layers 0-3 are below maximum allowed values
-kIsGoodITSLayersAll,        // numbers of inactive chips on all ITS layers are below maximum allowed values
-```
-
-Example usage:
-```cpp
-if (col.selection_bit(o2::aod::evsel::kIsGoodITSLayersAll)) {
-    // do analysis
-}
-```
-This particular bit `kIsGoodITSLayersAll` ensures that all ITS layers are in a good state (i.e. no rebooting **staves**; note that at the same time some **chips** can be inactive, so, smaller holes in the acceptance can remain).
-
-The logic behind these cuts uses **CCDB maps of dead chips** and defines per-layer [thresholds](https://github.com/AliceO2Group/O2Physics/blob/daily-20251029-0000/Common/Tools/EventSelectionModule.h#L99) for allowed inactive chips:
-```cpp
-maxInactiveChipsPerLayer = {8, 8, 8, 111, 111, 195, 195};
-```
-If any layer exceeds its threshold, the event is flagged as **bad** (likely during a stave reboot).
-
-Applying this cut removes time intervals with dead ITS staves and, correspondingly, the large acceptance holes, significantly flattening time dependence of the observables, like the **2- and 4-particle correlators** in Pb-Pb.
-Note that in pp the `kIsGoodITSLayersAll` bit can reject a huge fraction of events (the holes in pp are more frequent), instead, the `kIsGoodITSLayer0123` bit can be tried (e.g. to study effects from the rebooting staves on track DCA).
-
-
-## Usage of RCT flags
+# Luminosity module
 
 (to be added)
-
-
-
-
 
 
 
