@@ -120,6 +120,47 @@ You can get to the _All Analyses_ page by using the main menu, or by the link in
 
 * In order to update the base and subwagon configuration with the latest version of the workflow, click on the button `↻ sync` in _Configuration_. By synchronizing the configuration, the parameters which no longer belong to the workflow will be removed, and the values of the wagon's _Base_ will be updated as well if they have not been modified by the user.
 
+### <a name="upload-wagon-json"></a> Upload Wagon Configuration via JSON
+
+* <a name="uploadwagonjson"></a> The wagon configuration may be adjusted via JSON file. Any values in the wagon will be adjusted to the values in the JSON file. 
+
+<div align="center">
+<img src="../images/updateViaJSONButton.png" width="30%">
+</div>
+
+* The required format for Hyperloop to ingest the JSON is the exact format given when downloading the configuration json file from Hyperloop (from the download button above). This download includes workflows from dependencies. When uploading, it is not necessary to remove dependencies - any workflows not directly from the wagon will be ignored during the upload.
+
+<div align="center">
+<img src="../images/updateViaJSONPageOne.png" width="50%">
+</div>
+
+* Only configurables and subwagons which already exist in the wagon may be edited - any new subwagons or configurables in the JSON will be ignored. To add new subwagons, first add them to the existing wagon. When a file is chosen, each changed value is shown in the 'overview'. All values in 'base' are listed first, with subwagons listed below. In the example below, there are two subwagons, 'Pos' and 'Neg'. Hovering over any value will display the change in a tooltip.
+
+<div align="center">
+<img src="../images/updateViaJSONOverview.png" width="40%">
+</div>
+
+* There is validation to check for invalid values. It also ensures that there are no identical subwagons. 
+
+<div align="center">
+<img src="../images/updateViaJSONValidation.png" width="40%">
+</div>
+
+* A full diff between the current and uploaded configuration is also available. Every difference between the current and uploaded configuration is shown.
+
+<div align="center">
+<img src="../images/updateViaJSONDiff.png" width="40%">
+</div>
+
+* Once 'Apply Changes' is pressed, any altered values will be highlighted in yellow. No changes are saved until the 'save' button is pressed, so it is possible to apply the changes to view them without losing the current configuration.
+
+<div align="center">
+<img src="../images/updateViaJSONHighlight.png" width="70%">
+</div>
+
+
+
+
 ## <a name="wagon-derived-data"></a> Derived data 
 
 * <a name="wagonderived"></a>In _Derived Data_ the tables which are produced by the task are displayed. If activated, these are saved to the output if the train is run as a derived data production. The produced derived data can be made available by the operators and serve as input for subsequent trains. 
