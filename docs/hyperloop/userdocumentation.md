@@ -128,7 +128,7 @@ You can get to the _All Analyses_ page by using the main menu, or by the link in
 <img src="../images/updateViaJSONButton.png" width="30%">
 </div>
 
-* The required format for Hyperloop to ingest the JSON is the exact format given when downloading the configuration json file from Hyperloop (from the download button above). This download includes workflows from dependencies. When uploading, it is not necessary to remove dependencies - any workflows not directly from the wagon will be ignored during the upload.
+* The required format for Hyperloop to ingest the JSON is the exact format given when downloading the configuration JSON file from Hyperloop (from the download button above). This download includes workflows from dependencies. When uploading, it is not necessary to remove dependencies - any workflows not directly from the wagon will be ignored during the upload.
 
 <div align="center">
 <img src="../images/updateViaJSONPageOne.png" width="50%">
