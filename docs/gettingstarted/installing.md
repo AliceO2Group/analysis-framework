@@ -218,7 +218,7 @@ aliBuild init O2Physics@master
 aliBuild init O2@dev  # optional
 ```
 
-If you perform `ls` under your work directory, you will see the packages you have downloaded via
+If you perform `ls` under your work directory, you will see the development packages you have downloaded via
 `aliBuild init`, plus the `alidist` directory.
 
 The `alidist` directory contains software recipes, telling aliBuild how the software is built.
