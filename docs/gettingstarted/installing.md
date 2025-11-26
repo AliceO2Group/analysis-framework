@@ -5,48 +5,46 @@ title: Installing O2 and O2Physics
 
 # Installing O2 and O2Physics
 
-ALICE software has several dependencies: aliBuild takes care of downloading them for you. aliBuild
-can also automatically download precompiled binaries if possible.
+Building software has become an increasingly complicated operation, as our software has many dependencies and we expect it to work both on your laptop and on the Grid.
+In addition, we support many Linux distributions and recent macOS versions.
 
-## Installing aliBuild
+ALICE uses [aliBuild](https://alisw.github.io/alibuild/) to build software.
 
-Building software has become an increasingly complicated operation, as our software has many dependencies and we expect it to work both on your laptop and on the Grid. In addition, we support many Linux distributions and recent macOS versions.
-
-ALICE uses aliBuild to build software. aliBuild:
+aliBuild
 
 * knows how to build software via per-package recipes,
 * manages the dependencies consistently,
+* can automatically download precompiled binaries if possible,
 * rebuilds only what's necessary,
-* allows several versions of the same software to be installed at the same time.
+* allows several versions of the same software to be installed side by side.
 
-### Operating systems we support
+## Install aliBuild
 
-#### Prerequisites
+According to your operating system, please follow the corresponding instructions below.
 
-According to your operating system, please follow the prerequisites below. You will find a list of packages to install and configurations to perform.
+Primary supported platforms:
 
-##### Primary supported platform
+* [CentOS 7](#alibuild-for-centos7)
+* [CentOS 8, AlmaLinux 8](#alibuild-for-centos8)
+* [AlmaLinux 9](#alibuild-for-alma9)
 
-* [CentOS 7](#prereq-for-centos7)
-* [CentOS/AlmaLinux 8](#prereq-for-centos8)
-* [AlmaLinux 9](#prereq-for-alma9)
+Platforms supported on a best-effort basis:
 
-##### Platforms supported on a best-effort basis
-
-* [macOS Sonoma and Sequoia (14.0, 15.0)](#prereq-for-macos)
-* [Ubuntu (20.04 LTS, 22.04 LTS, 24.04 LTS)](#prereq-for-ubuntu)
-* [Fedora](#prereq-for-fedora)
+* [macOS](#alibuild-for-macos): Sonoma (14), Sequoia (15)
+* [Ubuntu](#alibuild-for-ubuntu): 20.04 LTS, 22.04 LTS, 24.04 LTS
+* [Fedora](#alibuild-for-fedora)
 * Linux Mint
   * Follow the instructions for the Ubuntu version your Linux Mint version is based on.
-  * Specify the corresponding Ubuntu architecture when running the `aliBuild` command using the `-a` option (e.g. `-a ubuntu2004_x86-64` for Ubuntu 20.04). Use the `-a` option also with the `alienv` command.
+  * Specify the corresponding Ubuntu architecture when running `aliBuild` commands using the `-a` option (e.g. `-a ubuntu2404_x86-64` for Ubuntu 24.04). Use the `-a` option also with `alienv` commands.
 
 If your operating system is *not* in any list, it does not mean our software won't work on it; it will be just more difficult for you to get support for it.
 
-Only in case you cannot install aliBuild in the way described above, you can install aliBuild manually. This procedure should only be used as a fall-back, in case you cannot follow the instructions for your operating system linked above.
+Only in case you cannot install aliBuild in the way described below, you can install aliBuild manually.
+This procedure should only be used as a fallback, in case you cannot follow the instructions for your operating system linked above.
 
-<h6 id="prereq-for-centos7"> aliBuild prerequisites for CentOS7 </h6>
+### CentOS 7 {#alibuild-for-centos7}
 
-With root permission, i.e. `sudo` or as `root`install the prerequisits using:
+With root permissions, i.e. `sudo` or as `root`, install the prerequisites and aliBuild using:
 
 ```bash
 cat << EOF > /etc/yum.repos.d/alice-system-deps.repo
@@ -62,9 +60,9 @@ yum update -y
 yum install -y alibuild
 ```
 
-<h6 id="prereq-for-centos8"> aliBuild prerequisites for CentOS8 </h6>
+### CentOS 8, AlmaLinux 8 {#alibuild-for-centos8}
 
-With root permission, i.e. `sudo` or as `root` install the prerequisits using:
+With root permissions, i.e. `sudo` or as `root`, install the prerequisites and aliBuild using:
 
 ```bash
 yum install -y epel-release
@@ -85,9 +83,9 @@ yum update -y
 yum install -y alice-o2-full-deps alibuild
 ```
 
-<h6 id="prereq-for-alma9"> aliBuild prerequisites for AlmaLinux9 </h6>
+### AlmaLinux 9 {#alibuild-for-alma9}
 
-With root permission, i.e. `sudo` or as `root`install the prerequisits using:
+With root permissions, i.e. `sudo` or as `root`, install the prerequisites and aliBuild using:
 
 ```bash
 dnf install -y epel-release dnf-plugins-core
@@ -105,69 +103,54 @@ dnf update -y
 dnf install -y alice-o2-full-deps alibuild
 ```
 
-<h6 id="prereq-for-macos">aliBuild prerequisites for macOS</h6>
+### macOS {#alibuild-for-macos}
 
-**Get Xcode**<br>
+#### Get Xcode
 
 Xcode bundles the necessary tools to build software in the apple ecosystem including compilers, build systems and version control.
 
-* Download it from the [App Store](https://itunes.apple.com/gh/app/xcode/id497799835?mt=12)
-* Open once installed. It will ask to install additional components - approve the action.
-* Open a terminal (Applicaions>Utilities>Terminal) and install the command line tools using: <br>
-* `sudo xcode-select --install`
-* Approve the license conditions by <br>
-`sudo xcodebuild -license`
+* Download it from the [App Store](https://itunes.apple.com/gh/app/xcode/id497799835?mt=12) and install it.
+* Open once installed. It will ask to install additional components. Approve the action.
+* Open a terminal (Applicaions>Utilities>Terminal) and install the command line tools using: `sudo xcode-select --install`
+* Approve the license conditions by: `sudo xcodebuild -license`
 
-**Get Homebrew**<br>
+#### Get Homebrew
 
-[Homebrew](https://brew.sh/) is a command-line package manager for macOS used to install software packages similar to `yum` on CentOS or `apt` on Ubuntu.
+[Homebrew](https://brew.sh/) is a command-line package manager for macOS used to install software packages (similar to `yum` on CentOS or `apt` on Ubuntu).
 
 * Install Homebrew using the [instructions on their webpage](https://brew.sh/).
-* Once installed detect any problems regarding Homebrew and your system using: `brew doctor`
+* Detect any problems regarding Homebrew and your system using: `brew doctor`.
 
-**Uninstall ROOT**<br>
+#### Uninstall ROOT
 
-If you have an existing ROOT installation on your system, this will interfere with the aliBuild installation, and will cause difficult-to-debug compilation errors.
+If you have an existing ROOT installation on your system, it will interfere with the aliBuild installation and will cause difficult-to-debug compilation errors.
 
 Please uninstall any existing copy of ROOT on your system. The uninstallation method depends on how you installed it. For example, if you originally installed ROOT using Homebrew, you should uninstall it using `brew uninstall root`.
 
 After uninstalling ROOT, remove any reference to ROOT from your `.zprofile`, `.zshrc` and any other shell configuration files. Then close and re-open your terminal window.
 
-**Install the required packages**<br>
+#### Install the required packages
 
 Note that Homebrew does not run as root. Do not prepend sudo to any of the following commands.
 
-* Install the prerequisites and aliBuild via:<br>
-```brew install alisw/system-deps/o2-full-deps alisw/system-deps/alibuild```
-* Set up Homebrew in your shell by running the following command:<br>
-```echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile```
+* Install the prerequisites and aliBuild via: `brew install alisw/system-deps/o2-full-deps alisw/system-deps/alibuild`
+* Set up Homebrew in your shell by: `echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile`
 * Close Terminal and reopen it to apply changes.
 
-<h6 id="prereq-for-ubuntu">aliBuild prerequisites for Ubuntu</h6>
+### Ubuntu {#alibuild-for-ubuntu}
 
-ALICE software on Ubuntu is supported on a best effort basis. There is no guarantee that software builds or runs correctly. Support requests might have low priority. We were able to successfully build on:
+#### Install required system packages
 
-* Ubuntu 20.04 LTS
-* Ubuntu 22.04 LTS
-* Ubuntu 24.04 LTS
-
-**Install required system packages**<br>
-
-With root permissions, i.e. sudo, update your package sources:
+Update your package sources and install the required system packages:
 
 ```bash
 sudo apt update -y
-```
-
-With root permissions, i.e. `sudo`, install the following packages:
-
-```bash
 sudo apt install -y curl libcurl4-gnutls-dev build-essential gfortran libmysqlclient-dev xorg-dev libglu1-mesa-dev libfftw3-dev libxml2-dev git unzip autoconf automake autopoint texinfo gettext libtool libtool-bin pkg-config bison flex libperl-dev libbz2-dev swig liblzma-dev libnanomsg-dev rsync lsb-release environment-modules libglfw3-dev libtbb-dev python3-dev python3-venv python3-pip graphviz libncurses-dev software-properties-common gtk-doc-tools
 ```
 
-**Installing aliBuild**<br>
+#### Install aliBuild {#install-alibuild-for-ubuntu}
 
-AliBuild, our build tool, is installed as a standard ubuntu package, provided you enable the alisw PPA repository. This is done with:
+Add the [alisw PPA repository](https://launchpad.net/~alisw/+archive/ubuntu/ppa) and install aliBuild as an Ubuntu package:
 
 ```bash
 sudo add-apt-repository ppa:alisw/ppa
@@ -175,9 +158,9 @@ sudo apt update
 sudo apt install python3-alibuild
 ```
 
-<h6 id="prereq-for-fedora">aliBuild prerequisites for Fedora</h6>
+### Fedora {#alibuild-for-fedora}
 
-With root permissions, i.e. `sudo` or as `root` install the prerequisites using:
+With root permissions, i.e. `sudo` or as `root`, install the prerequisites and aliBuild using:
 
 ```bash
 yum install -y epel-release
@@ -198,9 +181,9 @@ yum update -y
 yum install -y alice-o2-full-deps alibuild
 ```
 
-### Configure aliBuild
+## Configure aliBuild
 
-After you are done installing alibuild you need to configure it by adding the two following lines to your `~/.bashrc`, `~/.bash_profile`, `~/.zshrc` or `~/.zprofile` (depending on your operating system and configuration):
+After installing aliBuild, configure it by adding the following lines to your `~/.bashrc`, `~/.bash_profile`, `~/.zshrc` or `~/.zprofile` (depending on your operating system and configuration):
 
 ```bash
 export ALIBUILD_WORK_DIR="$HOME/alice/sw"
@@ -211,9 +194,9 @@ The first line tells what directory is used as "build cache", the second line in
 
 You need to close and reopen your terminal for the change to be effective. The directory `~/alice/sw` will be created the first time you run aliBuild.
 
-Note that this directory tends to grow in size over time, and it is the one you need to remove in case of cleanups.
+Note that this directory tends to grow in size over time and it is the one you need to [clean up](#delete-obsolete-builds) occasionally.
 
-When `aliBuild`is installed on your computer and your prerequisits are statisfied, you can move to the next step.
+When `aliBuild` is installed on your computer and your prerequisites are satisfied, you can move to the next step.
 
 See also [shell rc utilities](../tools/README.md#shell-rc-utilities).
 
@@ -221,7 +204,7 @@ See also [shell rc utilities](../tools/README.md#shell-rc-utilities).
 
 We assume your work area is `~/alice`.
 Start with a clean shell where you are not in an `alienv` environment.
-Create the directory and move to it (all the following commands need to be executed in this folder):
+Create the directory and move to it (all the following commands need to be executed in this directory):
 
 ```bash
 mkdir -p ~/alice
@@ -236,11 +219,13 @@ aliBuild init O2Physics@master
 ```
 
 If you perform `ls` under your work directory, you will see the packages you have downloaded via
-`aliBuild init`, plus an `alidist` directory.
+`aliBuild init`, plus the `alidist` directory.
 
-The `alidist` directory contains software recipes, telling aliBuild how the software is built. Your
-`alidist` directory and your software source code are Git directories **managed by you**: you need
-to keep them up-to-date manually.
+The `alidist` directory contains software recipes, telling aliBuild how the software is built.
+
+```warning
+Your `alidist` directory and your software source code are Git repositories **managed by you**. You need to keep them up to date manually.
+```
 
 ## Check your prerequisites
 
@@ -248,8 +233,7 @@ to keep them up-to-date manually.
 aliDoctor O2Physics
 ```
 
-aliDoctor will warn you that some packages have to be built as they could not be found from the
-system.
+aliDoctor will warn you if some packages have to be built as they could not be found on the system.
 
 ## Build and rebuild
 
@@ -311,8 +295,8 @@ Load the latest O2Physics version you have built.
 alienv enter O2Physics/latest
 ```
 
-The `alienv enter` command drops you to a new shell with the O2Physics environment. Unload the packages by simply exiting the environment with
-the `exit` command.
+The `alienv enter` command drops you to a new shell with the O2Physics environment.
+Unload the packages by simply exiting the environment with the `exit` command.
 
 ```warning
 Dependencies are loaded automatically. Do not attempt to load O2 or ROOT as well! You will find them automatically in the environment. `alienv enter` is verbose and will inform you about the loaded packages.
