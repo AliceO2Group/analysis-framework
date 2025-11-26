@@ -241,6 +241,20 @@ aliDoctor will warn you if some packages have to be built as they could not be f
 aliBuild build O2Physics
 ```
 
+To set the maximum number of parallel jobs `N`, provide the `-j N` option.
+
+### Component-based build
+
+To build only parts of O2Physics, provide a space-separated list of requested directories (followed by `/install`) using the `O2PHYSICS_COMPONENTS` variable, e.g.:
+
+```bash
+O2PHYSICS_COMPONENTS="Common/install Tools/install Tutorials/install" aliBuild build O2Physics
+```
+
+```warning
+On Linux, the components providing the required linked shared libraries also need to be included (e.g. `Tools/ML` for `O2Physics::MLCore`).
+```
+
 See the [Troubleshooting](../troubleshooting/README.md) section for debugging tips if the build fails.
 
 ## Delete obsolete builds
