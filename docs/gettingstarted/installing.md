@@ -111,7 +111,7 @@ Xcode bundles the necessary tools to build software in the apple ecosystem inclu
 
 * Download it from the [App Store](https://itunes.apple.com/gh/app/xcode/id497799835?mt=12) and install it.
 * Open once installed. It will ask to install additional components. Approve the action.
-* Open a terminal (Applicaions>Utilities>Terminal) and install the command line tools using: `sudo xcode-select --install`
+* Open a terminal (Applications>Utilities>Terminal) and install the command line tools using: `sudo xcode-select --install`
 * Approve the license conditions by: `sudo xcodebuild -license`
 
 #### Get Homebrew
