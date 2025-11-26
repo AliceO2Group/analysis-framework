@@ -37,7 +37,7 @@ Platforms supported on a best-effort basis:
   * Follow the instructions for the Ubuntu version your Linux Mint version is based on.
   * Specify the corresponding Ubuntu architecture when running `aliBuild` commands using the `-a` option (e.g. `-a ubuntu2404_x86-64` for Ubuntu 24.04). Use the `-a` option also with `alienv` commands.
 
-If your operating system is *not* in any list, it does not mean our software won't work on it; it will be just more difficult for you to get support for it.
+If your operating system is *not* listed, it does not mean our software won't work on it; it will be just more difficult for you to get support for it.
 
 Only in case you cannot install aliBuild in the way described below, you can install aliBuild manually.
 This procedure should only be used as a fallback, in case you cannot follow the instructions for your operating system linked above.
@@ -224,7 +224,7 @@ If you perform `ls` under your work directory, you will see the packages you hav
 The `alidist` directory contains software recipes, telling aliBuild how the software is built.
 
 ```note
-You only need the O2 source code if you need to modify it. Otherwise aliBuild will install the O2 version defined in `alidist` as a dependency of O2Physics.
+You only need the O2 source code if you need to modify it. Otherwise, aliBuild will install the O2 version defined in `alidist` as a dependency of O2Physics.
 ```
 
 ```warning
