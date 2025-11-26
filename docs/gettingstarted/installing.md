@@ -204,24 +204,28 @@ See also [shell rc utilities](../tools/README.md#shell-rc-utilities).
 
 We assume your work area is `~/alice`.
 Start with a clean shell where you are not in an `alienv` environment.
-Create the directory and move to it (all the following commands need to be executed in this directory):
+Create the directory and move to it. (All the following commands need to be executed in this directory.):
 
 ```bash
 mkdir -p ~/alice
 cd ~/alice
 ```
 
-Download O2 and O2Physics:
+Download O2Physics (and optionally O2):
 
 ```bash
-aliBuild init O2@dev
 aliBuild init O2Physics@master
+aliBuild init O2@dev  # optional
 ```
 
 If you perform `ls` under your work directory, you will see the packages you have downloaded via
 `aliBuild init`, plus the `alidist` directory.
 
 The `alidist` directory contains software recipes, telling aliBuild how the software is built.
+
+```note
+You only need the O2 source code if you need to modify it. Otherwise aliBuild will install the O2 version defined in `alidist` as a dependency of O2Physics.
+```
 
 ```warning
 Your `alidist` directory and your software source code are Git repositories **managed by you**. You need to keep them up to date manually.
@@ -301,7 +305,7 @@ dependency packages and downloaded `.tar.gz` archives.
 In general, it's good practice to run `aliBuild clean` always after `aliBuild build`.
 
 This might not be enough, as aliBuild will not delete any build directory pointed to by a symlink
-that has "latest" in its name, even when that build is not needed by any other package anymore.
+that has "latest" in its name, even when that build is not needed by any other package any more.
 Manual intervention is therefore sometimes needed.
 
 ### Deep cleanup
