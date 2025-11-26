@@ -20,7 +20,7 @@ aliBuild
 
 ## Install aliBuild
 
-According to your operating system, please follow the corresponding instructions below.
+Please follow the corresponding instructions below, according to your operating system.
 
 Primary supported platforms:
 
