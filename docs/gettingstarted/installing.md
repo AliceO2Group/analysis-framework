@@ -257,6 +257,31 @@ On Linux, the components providing the required linked shared libraries also nee
 
 See the [Troubleshooting](../troubleshooting/README.md) section for debugging tips if the build fails.
 
+## Use your local software installations
+
+You will not find the packages you have built immediately available on your shell.
+We provide a tool called `alienv` that configures your shell according to the packages you want to load.
+`alienv` is capable of switching between different versions of the same package without a hassle.
+
+Load the latest O2Physics version you have built.
+
+```bash
+alienv enter O2Physics/latest
+```
+
+The `alienv enter` command drops you to a new shell with the O2Physics environment.
+Unload the packages by simply exiting the environment with the `exit` command.
+
+```warning
+Dependencies are loaded automatically. Do not attempt to load O2 or ROOT as well! You will find them automatically in the environment. `alienv enter` is verbose and will inform you about the loaded packages.
+```
+
+```tip
+If you have built several Git branches of O2Physics, you can enter the environment of a given branch `[branch]` with `alienv enter O2Physics/latest-[branch]-o2`.
+
+You can list all your available packages with `alienv q`.
+```
+
 ## Delete obsolete builds
 
 With frequent rebuilding of packages, obsolete builds can pile up and occupy a lot of precious
@@ -296,31 +321,6 @@ you can make aliBuild delete the rest with a little trick.
 2. Recreate symlinks to the latest builds of development packages (and their dependencies)
 by running `aliBuild build` for each development package.
 3. Let aliBuild delete all the other builds by running `aliBuild clean`.
-
-## Use your local software installations
-
-You will not find the packages you have built immediately available on your shell.
-We provide a tool called `alienv` that configures your shell according to the packages you want to load.
-`alienv` is capable of switching between different versions of the same package without a hassle.
-
-Load the latest O2Physics version you have built.
-
-```bash
-alienv enter O2Physics/latest
-```
-
-The `alienv enter` command drops you to a new shell with the O2Physics environment.
-Unload the packages by simply exiting the environment with the `exit` command.
-
-```warning
-Dependencies are loaded automatically. Do not attempt to load O2 or ROOT as well! You will find them automatically in the environment. `alienv enter` is verbose and will inform you about the loaded packages.
-```
-
-```tip
-If you have built several Git branches of O2Physics, you can enter the environment of a given branch `[branch]` with `alienv enter O2Physics/latest-[branch]-o2`.
-
-You can list all your available packages with `alienv q`.
-```
 
 ## Building partially for development using ninja
 
