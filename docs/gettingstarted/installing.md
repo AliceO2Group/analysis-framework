@@ -241,11 +241,15 @@ aliDoctor will warn you if some packages have to be built as they could not be f
 
 ## Build and rebuild
 
+Build (or rebuild) full O2Physics with:
+
 ```bash
 aliBuild build O2Physics
 ```
 
 To set the maximum number of parallel jobs `N`, provide the `-j N` option.
+
+See the [Troubleshooting](../troubleshooting/README.md) section for debugging tips if the build fails.
 
 ### Component-based build
 
@@ -258,8 +262,6 @@ O2PHYSICS_COMPONENTS="Common/install Tools/install Tutorials/install" aliBuild b
 ```warning
 On Linux, the components providing the required linked shared libraries also need to be included (e.g. `Tools/ML` for `O2Physics::MLCore`).
 ```
-
-See the [Troubleshooting](../troubleshooting/README.md) section for debugging tips if the build fails.
 
 ## Use your local software installations
 
