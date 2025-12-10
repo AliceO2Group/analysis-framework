@@ -69,7 +69,7 @@ This helps to apply the [Include What You Use](https://github.com/AliceO2Group/O
 Here is an example of how to run the `misc-include-cleaner` check in parallel on all `.h`, `.cxx`, `.C` files in the current directory.
 
 ```bash
-parallel "clang-tidy --fix -checks=-*,misc-include-cleaner {}; echo \"{} \$?\"" ::: "$(find . -name "*.h" -o -name "*.cxx" -o -name "*.C")" > "clang-tidy.log"
+find . -name "*.h" -o -name "*.cxx" -o -name "*.C" | parallel "clang-tidy --fix -checks=-*,misc-include-cleaner {}; echo \"{} \$?\"" > "clang-tidy.log"
 ```
 
 The [`parallel`](https://www.gnu.org/software/parallel/) command is used to parallelise the execution of the `clang-tidy` command for all files.
@@ -100,7 +100,7 @@ The report will be stored in the `err.log` file.
 To run a parallelised analysis of all `.h`, `.cxx`, `.C` files in the current directory, execute:
 
 ```bash
-parallel "cppcheck --language=c++ --std=c++20 --enable=style --check-level=exhaustive --suppressions-list=cppcheck_config {}" ::: "$(find . -name "*.h" -o -name "*.cxx" -o -name "*.C")" 2> "err.log"
+find . -name "*.h" -o -name "*.cxx" -o -name "*.C" | parallel "cppcheck --language=c++ --std=c++20 --enable=style --check-level=exhaustive --suppressions-list=cppcheck_config {}" 2> "err.log"
 ```
 
 Note: It is possible to parallelise the execution with the `-j` option instead but it usually produces less results than analysing files independently.
