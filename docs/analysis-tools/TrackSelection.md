@@ -203,57 +203,112 @@ Such tool is primarely conceived to smear the parameters of tracks reconstructed
 This task was called `improver-task` in the Run 2 jargon
 ```
 The smearing is done on the `y`, `z` parameters of each reconstructed track in MC evaluated at the associated particle production point. The smearing is based on the discrepancy between resolution, mean and pull ratio of dcaXY, dcaZ w.r.t. primary vertex measured in data and MC.
-The performance of such parameters is evaluated vs. global-track pt and stored into `.root` files, which can be read from CCDB at runtime.
+The performance of such parameters is evaluated vs. global-track pt and stored into `.root` files, which can be read from CCDB at runtime. This is performed through the `TrackTuner::tuneTrackParams(...)` function.
 
-An instance of the `TrackTuner` class is present as data-member in the `trackPropagation` workflow, and it can be enabled via
+```warning
+The track-parameter smearing is performed at the MC particle production point (i.e. primary vertex or decay point of mother particle in case of a decay). This means that in the function `TrackTuner::tuneTrackParams(...)` the current track is propagated to the production point to apply the parameter smearing. The propagation of the track to any other spatial point must be done explicitly after the function `TrackTuner::tuneTrackParams(...)` is invoked.
+```
+
+An instance of the `TrackTuner` class is present as data-member in the `[Common/TableProducer/trackPropagation.cxx](https://github.com/AliceO2Group/O2Physics/blob/master/Common/TableProducer/trackPropagation.cxx#L98)` (deprecated) and in the `[Common/TableProducer/propagationService.cxx](https://github.com/AliceO2Group/O2Physics/blob/master/Common/TableProducer/propagationService.cxx)]` tasks, and it can be enabled via
 ```c++
 Configurable<bool> useTrackTuner{"useTrackTuner", false, "Apply Improver/DCA corrections to MC"};
 ```
 ```note
-The `TrackTuner` can be enabled only if the `processCovarianceMc` process function in the `trackPropagation` workflow is used
+In the `trackPropagation` task, the `TrackTuner` can be enabled only if the `processCovarianceMc` process function is used.
 ```
-This object can be configured through the `Configurable<std::string> trackTunerParams` in the `trackPropagation` workflow. This configuration `std::string` must define the following parameters:
+This object can be configured in two ways, depending on the value
+```c++
+Configurable trackTunerConfigSource{"trackTunerConfigSource", aod::track_tuner::InputString, "1: input string; 2: TrackTuner Configurables"};
+```
+namely:
+1. `trackTunerConfigSource = 1` (default) through the `Configurable<std::string> trackTunerParams` in the `trackPropagation` workflow. This configuration `std::string` must define the parameters discussed below, and it must follow the format `<variable_name>=<value>|<variable_name>=<value>` (see the default configuration [here](https://github.com/AliceO2Group/O2Physics/blob/master/Common/TableProducer/trackPropagation.cxx#L98) as reference);
+2. `trackTunerConfigSource = 2` through the `Configurable`s of the `TrackTuner` object itself.
+
+The parameters to be configured are the following:
 * `bool debugInfo`: flag to switch on/off some debug outputs
 * `bool updateTrackDCAs`: flag to switch on/off the smearing of the dcaXY, dcaZ
 * `bool updateTrackCovMat`: flag to enable the update of the track covariance matrix, propagating the scaling on the dca resolution
 * `bool updatePulls`: flag to enable the update of the track covariance matrix updating also the pulls (if `updateTrackCovMat == true`)
 * `std::string pathInputFile`: path to browse to find the correction file for the dca smearing
 * `std::string nameInputFile`: name of the correction file for the dca smearing
+```note
+This is relevant only if the input file is stored locally
+```
 * `bool isInputFileFromCCDB`: the `pathInputFile/nameInputFile` is searched in CCDB if this flag is `true`, otherwise in the local file system (debug purposes)
 * `bool usePvRefitCorrections`: if this flag is `true`, the track smearing is performed using mean, resolution and pulls parametrizations vs. pt of dcaXY, dcaZ calculated w.r.t. primary collision vertex refitted w/o the current track, if this was originally a PV contributor
 ```note
 In pp collisions, there is a difference between `usePvRefitCorrections == true` and `usePvRefitCorrections == false`. In the former case, the parametrizations are obtained after refitting the primary vertex by removing from its fit the probe track, if it was originally a contributor.
 This is not relevant in Pb-Pb collisions.
 ```
+* `int nPhiBins`: number of phi intervals in which the parametrizations are provided. The currently-supported cases are `nPhiBins=0` (phi integrated) and `nPhiBins=24` (24 phi bins)
+* `bool autoDetectDcaCalib`: flag to enable automatic detection from CCDB of the  dca-calibration files.
+```note
+* If used, the `std::string pathInputFile` is overwritten
+* The auto-detection works only with `nPhiBins=24`
+* The autodetection works only for a list of predefined manually-maintained cases (last update: 10/12/2025):
+
+  1. [CASE 1]: pp, 13.6 TeV 2022, 2023: CCDB path Users/m/mfaggin/test/inputsTrackTuner/pp2023/pass4/vsPhi
+               Run list: (520259 (LHC22f) <= runNumber <= 529691 (LHC22t)) || (534998 (LHC23zc) <= runNumber <= 543113 (LHC23zw))
+               NB: based on 2023 pp data and MC
+
+  2. [CASE 2]: Pb-Pb, 5.34 TeV 2022, 2023, 2024: CCDB path Users/m/mfaggin/test/inputsTrackTuner/PbPb2023/apass4/vsPhi
+               Run list: (529397 <= runNumber <= 529418 (LHC22o)) || (543437 (LHC23zx) <= runNumber <= 545367 (LHC23zzo))
+               NB: based on LHC23zzh data and MC
+
+  3. [CASE 3]: pp, 13.6 TeV 2024: CCDB path Users/m/mfaggin/test/inputsTrackTuner/pp2024/pass1_minBias/vsPhi
+              Run list: 549559 (LHC24ac) <= runNumber && runNumber <= 558807 (LHC24ao)
+
+  4. [CASE 4]: OO, 5.36 TeV 2025, period LHC25ae: CCDB path Users/m/mfaggin/test/inputsTrackTuner/OO/LHC25ae
+               Run list: 564356 <= runNumber && runNumber <= 564445
+
+  5. [CASE 5]: OO, 5.36 TeV 2025, period LHC25af: CCDB path Users/m/mfaggin/test/inputsTrackTuner/OO/LHC25af
+               Run list: 564468 <= runNumber && runNumber <= 564472
+```
+
 * `std::string pathFileQoverPt`: path to browse to find the correction file for the `q/pt` smearing
 * `std::string nameFileQoverPt`: name of the correction file for the `q/pt` smearing
 * `bool updateCurvature`: flag to enable the update of the track curvature, i.e. `q/pt`, at the particle production point
-* `bool updateCurvatureIU`: flag to enable the update of the track curvature, i.e. `q/pt`, at the innermost update (IU) point
-* `float oneOverPtMC` (MC) and `float oneOverPtData` (data): the ratio `oneOverPtData/oneOverPtMC` defines the scaling factor to the `q/pt` residual to smear the track pt
+* `bool updateCurvatureIU`: flag to enable the update of the track curvature, i.e. `q/pt`, before any propagation, namely at the innermost update (IU) point
+* `float qOverPtMC` (MC) and `float qOverPtData` (data): the ratio `qOverPtData/qOverPtMC` defines the scaling factor to the `q/pt` residual to smear the track pt
 * `bool fillTrackTunerTable`: flag to enable the filling of a new table containing for each track the smeared `q/pt` at the IU point
-* `int nPhiBins`: number of phi intervals in which the parametrizations are provided. The currently-supported cases are `nPhiBins=0` (phi integrated) and `nPhiBins=24` (24 phi bins)
-
 ```note
 * The `TrackTuner` allows also to smear the `q/pt` if only one between `updateCurvature` and `updateCurvatureIU` is `true`
-* By default, the variables `oneOverPtData` and `oneOverPtMC` are initialized to `-1`
-* If at least one between`qOverPtMCq` and `OverPtData` is negative, the `q/pt` correction is done wuering the file from CCDB. Otherwise, the input values of `qOverPtMC` and `qOverPtData` are used to defined the factor `oneOverPtData/oneOverPtMC`, which is a constant factor flat in transverse momentum.
+* By default, the variables `qOverPtData` and `qOverPtMC` are initialized to `-1`
+* If at least one between`qOverPtMC` and `OverPtData` is negative, the `q/pt` correction is done wuering the file from CCDB. Otherwise, the input values of `qOverPtMC` and `qOverPtData` are used to defined the factor `qOverPtData/qOverPtMC`, which is a constant factor flat in transverse momentum.
 ```
-The string `trackTunerParams` must follow the format: `<variable_name>=<value>|<variable_name>=<value>` (see the default configuration [here](https://github.com/AliceO2Group/O2Physics/blob/master/Common/TableProducer/trackPropagation.cxx#L62) as reference).
 
+```warning
+The `TrackTuner` includes the functionalities for the smearing of the transverse momentum, but the team does not provide any procedure and/or maintain any kind of parametrization for this smearing, which is left to the user.
+
+The default `pathFileQoverPt/nameFileQoverPt` is there just for legacy and not maintained.
+```
 
 The dcaXY, dcaZ parametrization currently available are the following:
-* proxy for pp @ 13.6 TeV: [trackTuner_DataLHC23hPass4_McLHC23k4g.root](http://alice-ccdb.cern.ch/browse/Users/m/mfaggin/test/inputsTrackTuner/pp2023/pass4/correct_names)
-  Data: LHC23h apass4.
-  MC: LHC23k4g.
-  Slides [here](https://docs.google.com/presentation/d/10d1fE7Dh7OukTNgwwOhS8JQCEqzWZ3yjYZmpjntTDWw/edit?usp=sharing).
-* proxy for pp @ 13.6 TeV in 24 phi intervals: [trackTuner_DataLHC23pass4ThinSmall_McLHC23k4gSmall.root](http://alice-ccdb.cern.ch/browse/Users/m/mfaggin/test/inputsTrackTuner/pp2023/pass4/vsPhi)
-  Data: LHC23_pass4_thin_small, runs 535613, 535621, 535623, 535624, 535627, 535644, 535645, 535711, 535716, 535721, 535725
-  MC: LHC24k4g_small, runs 535613, 535621, 535623, 535624, 535627, 535644, 535645, 535711, 535716, 535721, 535722, 535725
-  Slides [here](https://docs.google.com/presentation/d/1JL8nHY7yJ-PhCqTNTJq8y3dHm5XLe3Nd4bT27yjp97U/edit?usp=sharing)
-* proxy for Pb-Pb @ 5.36 TeV: [trackTuner_DataLHC22sPass5_McLHC22l1b2_run529397.root](http://alice-ccdb.cern.ch/browse/Users/m/mfaggin/test/inputsTrackTuner/PbPb2022)
-  Data: LHC22s apass5, run 529397.
-  MC: LHC22l1b2, run 529397.
-  Slides [here](https://docs.google.com/presentation/d/1sIXWMckaPZJir3gNLeDnB2TorNJrjXKcGJvyTvz5V8s/edit?usp=sharing).
-* proxy for PbPb @ 5.36 TeV in 24 phi intervals: [trackTuner_DataLHC24zzh_apass4_McLHC24e2_MCflat13.root](http://alice-ccdb.cern.ch/browse/Users/m/mfaggin/test/inputsTrackTuner/PbPb2023/apass4/vsPhi)
-  Data: LHC23zzh_apass4
-  MC: LHC24e2
+
+1. phi-integrated (auto-detection not supported)
+    * proxy for pp @ 13.6 TeV, 2022 and 2023: [trackTuner_DataLHC23hPass4_McLHC23k4g.root](http://alice-ccdb.cern.ch/browse/Users/m/mfaggin/test/inputsTrackTuner/pp2023/pass4/correct_names)
+      Data: LHC23h apass4.
+      MC: LHC23k4g.
+      Slides [here](https://docs.google.com/presentation/d/10d1fE7Dh7OukTNgwwOhS8JQCEqzWZ3yjYZmpjntTDWw/edit?usp=sharing).
+    * proxy for Pb-Pb @ 5.36 TeV: [trackTuner_DataLHC22sPass5_McLHC22l1b2_run529397.root](http://alice-ccdb.cern.ch/browse/Users/m/mfaggin/test/inputsTrackTuner/PbPb2022)
+      Data: LHC22s apass5, run 529397.
+
+2. in 24 phi bins
+    * proxy for pp @ 13.6 TeV, 2022 and 2023: [trackTuner_DataLHC23pass4ThinSmall_McLHC23k4gSmall.root](http://alice-ccdb.cern.ch/browse/Users/m/mfaggin/test/inputsTrackTuner/pp2023/pass4/vsPhi)
+      Data: LHC23_pass4_thin_small, runs 535613, 535621, 535623, 535624, 535627, 535644, 535645, 535711, 535716, 535721, 535725
+      MC: LHC24k4g_small, runs 535613, 535621, 535623, 535624, 535627, 535644, 535645, 535711, 535716, 535721, 535722, 535725
+      Slides [here](https://docs.google.com/presentation/d/1JL8nHY7yJ-PhCqTNTJq8y3dHm5XLe3Nd4bT27yjp97U/edit?usp=sharing)
+      MC: LHC22l1b2, run 529397.
+      Slides [here](https://docs.google.com/presentation/d/1sIXWMckaPZJir3gNLeDnB2TorNJrjXKcGJvyTvz5V8s/edit?usp=sharing).
+    * pp @ 13.6 TeV, 2024: [trackTuner_DataLHC24agpass1minBias_McLHC24f4d.root](http://alice-ccdb.cern.ch/browse/Users/m/mfaggin/test/inputsTrackTuner/pp2024/pass1_minBias/vsPhi)
+      Data: LHC24ag_pass1_minBias
+      MC: LHC24f4d
+    * proxy for PbPb @ 5.36 TeV: [trackTuner_DataLHC24zzh_apass4_McLHC24e2_MCflat13.root](http://alice-ccdb.cern.ch/browse/Users/m/mfaggin/test/inputsTrackTuner/PbPb2023/apass4/vsPhi)
+      Data: LHC23zzh_apass4
+      MC: LHC24e2
+    * O-O @ 5.36 TeV, period LHC25ae apass2: [trackTuner_Data_LHC25ae_pass2_MC_LHC25h3b.root](http://alice-ccdb.cern.ch/browse/Users/m/mfaggin/test/inputsTrackTuner/OO/LHC25ae)
+      Data: LHC25ae_pass2
+      MC: LHC25h3b
+    * O-O @ 5.36 TeV, period LHC25af apass2: [trackTuner_Data_LHC25af_pass2_MC_LHC25h3b.root](http://alice-ccdb.cern.ch/browse/Users/m/mfaggin/test/inputsTrackTuner/OO/LHC25af)
+      Data: LHC25af_pass2
+      MC: LHC25h3b
