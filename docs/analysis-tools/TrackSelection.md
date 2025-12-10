@@ -241,7 +241,7 @@ In pp collisions, there is a difference between `usePvRefitCorrections == true` 
 This is not relevant in Pb-Pb collisions.
 ```
 * `int nPhiBins`: number of phi intervals in which the parametrizations are provided. The currently-supported cases are `nPhiBins=0` (phi integrated) and `nPhiBins=24` (24 phi bins)
-* `bool autoDetectDcaCalib`: flag to enable automatic detection from CCDB of the  dca-calibration files. 
+* `bool autoDetectDcaCalib`: flag to enable automatic detection from CCDB of the  dca-calibration files.
 ```note
 * If used, the `std::string pathInputFile` is overwritten
 * The auto-detection works only with `nPhiBins=24`
@@ -250,10 +250,11 @@ This is not relevant in Pb-Pb collisions.
   1. [CASE 1]: pp, 13.6 TeV 2022, 2023: CCDB path Users/m/mfaggin/test/inputsTrackTuner/pp2023/pass4/vsPhi
                Run list: (520259 (LHC22f) <= runNumber <= 529691 (LHC22t)) || (534998 (LHC23zc) <= runNumber <= 543113 (LHC23zw))
                NB: based on 2023 pp data and MC
-                                                                                                         
+
   2. [CASE 2]: Pb-Pb, 5.34 TeV 2022, 2023, 2024: CCDB path Users/m/mfaggin/test/inputsTrackTuner/PbPb2023/apass4/vsPhi           
                Run list: (529397 <= runNumber <= 529418 (LHC22o)) || (543437 (LHC23zx) <= runNumber <= 545367 (LHC23zzo))        
-               NB: based on LHC23zzh data and MC                                                                                         
+               NB: based on LHC23zzh data and MC
+
   3. [CASE 3]: pp, 13.6 TeV 2024: CCDB path Users/m/mfaggin/test/inputsTrackTuner/pp2024/pass1_minBias/vsPhi
               Run list: 549559 (LHC24ac) <= runNumber && runNumber <= 558807 (LHC24ao)
 
@@ -261,8 +262,7 @@ This is not relevant in Pb-Pb collisions.
                Run list: 564356 <= runNumber && runNumber <= 564445
 
   5. [CASE 5]: OO, 5.36 TeV 2025, period LHC25af: CCDB path Users/m/mfaggin/test/inputsTrackTuner/OO/LHC25af                      
-               Run list: 564468 <= runNumber && runNumber <= 564472    
-
+               Run list: 564468 <= runNumber && runNumber <= 564472
 ```
 
 * `std::string pathFileQoverPt`: path to browse to find the correction file for the `q/pt` smearing
