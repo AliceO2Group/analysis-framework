@@ -78,6 +78,20 @@ For each file, `clang-tidy` will first try to compile it and then run the enable
 The messages are redirected into `clang-tidy.log`.
 The file name and the exit code are printed below the output of `clang-tidy` so that you can get the list of files for which `clang-tidy` failed with `grep " 1$" "clang-tidy.log"`.
 
+## Fixing include format
+
+Headers from the same project should be included using quotation marks (`#include "path/header.h"`), all other headers should be included using angle brackets (`#include <path/header.h>`).
+Failing to do so can result in picking a wrong header.
+See more details in the [C++ Core Guidelines](https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines#sf12-prefer-the-quoted-form-of-include-for-files-relative-to-the-including-file-and-the-angle-bracket-form-everywhere-else).
+
+The [`format_includes.awk`](https://github.com/AliceO2Group/O2Physics/blob/master/Scripts/format_includes.awk) script allows to fix the include format in a provided O2Physics file.
+
+To fix the include format in all `.h`, `.cxx` files in the current directory, execute:
+
+```bash
+find . -name "*.h" -o -name "*.cxx" | parallel "awk -f Scripts/format_includes.awk \"{}\" > \"{}.tmp\" && mv \"{}.tmp\" \"{}\""
+```
+
 ## [cppcheck](https://cppcheck.sourceforge.io/)
 
 `cppcheck` is a static analysis tool for C/C++ code that detects bugs, undefined behaviour, and dangerous coding constructs that compilers typically miss.
