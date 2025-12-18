@@ -167,10 +167,13 @@ How to check the timestamp?
 
 ### AliEn connection failed
 
-Error message:
+Error messages:
 
 ```text
-Alien Token Check failed - Please get an alien token before running with https CCDB endpoint, or alice-ccdb.cern.ch!
+Error in <TJAlienCredentials::readPassword>: Error while reading from stdin
+Error in <TJAlienConnectionManager>: Context creation failure
+Error in <TJAlienConnectionManager>: Failed to connect to any server! Giving up
+[FATAL] TGrid::Connect returned nullptr. May be due to missing alien token
 ```
 
 - Create the AliEn token by executing the `alien.py` command inside the O2Physics environment.
