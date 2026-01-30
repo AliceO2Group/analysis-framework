@@ -8,6 +8,8 @@ title: Frequently asked questions (FAQ)
 This document lists a number of questions that have been asked by the community. If you think you have a relevant question to add, please don't hesitate to contact <a href = "mailto:
 paul.buhler@cern.ch">docadmin</a> and we will be happy to add it.
 
+- If you see `shmem: could not create a message of size ...`, add --shm-segment-size 1000000000 (or larger number) to your o2 command.
+
 WILL BE EXPANDED - WORK IN PROGRESS
 
 ## Task writing
