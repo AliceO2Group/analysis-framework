@@ -8,8 +8,6 @@ title: Frequently asked questions (FAQ)
 This document lists a number of questions that have been asked by the community. If you think you have a relevant question to add, please don't hesitate to contact <a href = "mailto:
 paul.buhler@cern.ch">docadmin</a> and we will be happy to add it.
 
-- If you see `shmem: could not create a message of size ...`, add --shm-segment-size 1000000000 (or larger number) to your o2 command.
-
 WILL BE EXPANDED - WORK IN PROGRESS
 
 ## Task writing
@@ -40,3 +38,9 @@ Hyperloop trains have a so-called express train feature. This feature is based o
 ### Why is it that my train test has a CPU warning but my wagon test was fine?
 
 This usually happens in a situation where the wagon test (which runs on a single core) uses so much memory that it doesn't fit a single core job on the grid and therefore needs two cores for the train (more cores means a higher memory allowance). But if the devices in the wagon cannot be parallelised well over multiple cores, this leads to more wall time and a higher CPU usage as the cores will be underutilised. In this situation, one can either reduce the wagon memory consumption to fit into a single core or reduce the CPU consumption to fit the dataset. 
+
+## Your local machines
+### `shmem: could not create a message of size ...`
+
+Add `--shm-segment-size 1000000000` (or larger number) to your o2 command.
+It is due to shared memory segment that is probably outdated for the size of the intermediate tables you have. It is actually set as 90% of system's max VSIZE allowance set in limits, or 2GB if the limits cannot be found, which is probably what happens in your case.
