@@ -180,6 +180,11 @@ Error in <TJAlienConnectionManager>: Failed to connect to any server! Giving up
 - You should be greeted with `Welcome to the ALICE GRID`.
 - Exit with `exit`.
 
+### shmem: could not create a message of size ...
+
+Add `--shm-segment-size 1000000000` (or larger number) to your o2 command.
+It is due to shared memory segment that is probably outdated for the size of the intermediate tables you have. It is actually set as 90% of system's max VSIZE allowance set in limits, or 2GB if the limits cannot be found, which is probably what happens in your case.
+
 ## Graphical issue with high DPI monitors
 
 When using monitors with high DPI the labels and text in TBrowser might be too small, especially when fractional scaling is enabled in multiple
