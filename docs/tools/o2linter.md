@@ -51,13 +51,13 @@ In your fork O2Physics repository go to: "Settings -> Actions -> General -> Acti
 When you push to your remote branch, O2 linter will lint the files modified compared to the remote master branch in your fork.
 (If you want to lint only your commits, make sure your remote master branch is up to date.)
 
-The output can be found in the log of the GitHub action.
+The output can be found in the "Run tests" step of the log of the GitHub action.
 
 ### In GitHub pull requests
 
 O2 linter runs automatically on pull requests and lints files modified by the PR (compared to the target branch).
 
-The total numbers of errors, warnings, and disabled issues are reported for convenience as an auto-updating comment in the PR, while the detailed breakdown per test remains available in the log of the GitHub action.
+The total numbers of errors, warnings, and disabled issues are reported for convenience as an auto-updating comment in the PR, while the detailed breakdown per test remains available in the "Run tests" step of the log of the GitHub action.
 
 The first ten errors also appear as annotations directly in the source code.
 
