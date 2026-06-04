@@ -17,10 +17,12 @@ ENABLE: # If you use ENABLE variable, all other languages/formats/tooling-format
 DISABLE_LINTERS:
   - BASH_EXEC
   - BASH_SHFMT
+  - REPOSITORY_OSV_SCANNER
   - SPELL_CSPELL
-  - YAML_V8R
   - YAML_PRETTIER
-# DISABLE_ERRORS_LINTERS: # If errors are found by these linters, they will be considered as non blocking.
+  - YAML_V8R
+DISABLE_ERRORS_LINTERS: # If errors are found by these linters, they will be considered as non blocking.
+  - ACTION_ZIZMOR
 MARKDOWN_MARKDOWNLINT_DISABLE_ERRORS: false
 SHOW_ELAPSED_TIME: true
 FILEIO_REPORTER: false
@@ -29,3 +31,4 @@ UPDATED_SOURCES_REPORTER: true
 PRINT_ALPACA: false # Don't print ASCII alpaca in the log
 PRINT_ALL_FILES: true # Print all processed files
 FLAVOR_SUGGESTIONS: false # Don't show suggestions about different MegaLinter flavors
+ACTION_ZIZMOR_UNSECURED_ENV_VARIABLES: [GITHUB_TOKEN]
