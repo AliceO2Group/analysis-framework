@@ -5,17 +5,18 @@ title: Git basics
 
 # Git basics
 
-Git is a version control system, or VCS, tracks the history of changes as people and teams collaborate on projects together.
+[Git](https://git-scm.com/) is a [version control system (VCS)](https://en.wikipedia.org/wiki/Version_control) that tracks the history of changes as people and teams collaborate on projects together.
 As developers make changes to the project, any earlier version of the project can be recovered at any time.
 
-Developers can review project history to find out:
-
-- Which changes were made?
-- Who made the changes?
-- When were the changes made?
-- Why were changes needed?
+Developers can review project history to find out _who_ made _what_ changes _when_ and _why_.
 
 ## Complete tutorials
+
+### [Git Documentation](https://git-scm.com/docs)
+
+- [Git Book](https://git-scm.com/book/en/v2)
+- [Git: gittutorial](https://git-scm.com/docs/gittutorial)
+- [Git: giteveryday](https://git-scm.com/docs/giteveryday)
 
 ### [Atlassian Git Tutorial](https://www.atlassian.com/git/tutorials)
 
@@ -41,8 +42,17 @@ Selected sections:
   - [Resolving merge conflicts after a Git rebase](https://docs.github.com/en/get-started/using-git/resolving-merge-conflicts-after-a-git-rebase)
   - [Resolving a merge conflict using the command line](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/addressing-merge-conflicts/resolving-a-merge-conflict-using-the-command-line)
 
+## How to write a Git commit message
+
+- [Chris Beams: How to Write a Git Commit Message](https://cbea.ms/git-commit/)
+- [Tim Pope: A Note About Git Commit Messages](https://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html)
+- [Peter Hutterer: On commit messages](https://who-t.blogspot.com/2009/12/on-commit-messages.html)
+- [Git Book: Commit Guidelines](https://git-scm.com/book/en/v2/Distributed-Git-Contributing-to-a-Project#_commit_guidelines)
+- [Python for Data Science: Git best practices](https://www.python4data.science/en/latest/productive/git/best-practices.html#write-meaningful-commit-messages)
+
 ## Cheat sheets
 
+- [Git Cheat Sheet](https://git-scm.com/cheat-sheet)
 - [GitHub Git Cheat Sheet - GitHub Cheatsheets](https://training.github.com/downloads/github-git-cheat-sheet/)
 - [Git cheat sheet \| Atlassian Git Tutorial](https://www.atlassian.com/git/tutorials/atlassian-git-cheatsheet)
 - [git - the simple guide](https://rogerdudler.github.io/git-guide/)
