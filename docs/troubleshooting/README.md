@@ -41,7 +41,7 @@ grep -e "\\[ERROR\\]" -e "\\[FATAL\\]" -e "\\[CRITICAL\\]" -e "segmentation" -e 
 
 See also [shell rc utilities](../tools/README.md#shell-rc-utilities).
 
-Try to understand and resolve the first reported problem.
+Try to understand and resolve the reported problems in order of appearance.
 
 ```note
 You can inspect a failing [AliHyperloop test](../hyperloop/userdocumentation.md#-wagon-tests) in the same way. The log is saved in the `stdout.log` file in the test output directory.
@@ -53,6 +53,16 @@ See the [Support](../gettingstarted/support.md) section for the list of Mattermo
 
 When asking for help with compilation or with running a local analysis, it may be useful to provide basic information about your O2Physics setup.
 You can generate it using the [Setup diagnostic tool](../tools/README.md#setup-diagnostic-tool).
+
+When asking for help with running an analysis:
+
+- If the problem is on AliHyperloop, provide:
+  - the link to the read-only view of the [wagon test](../hyperloop/userdocumentation.md#-wagon-tests) or the [train run](../hyperloop/userdocumentation.md#train-runs).
+- If the problem is local, provide:
+  - the name of the dataset of the input files,
+  - the command or script used to run the analysis,
+  - the log file,
+  - the dumped `dpl-config.json` file (and the input JSON file, if the dumped one is incomplete).
 
 When posting on Mattermost:
 
