@@ -57,7 +57,11 @@ To use Clang-Tidy, you need to have O2Physics compiled and a valid symbolic link
 
 ### Checking naming conventions
 
-The [`readability-identifier-naming`](https://clang.llvm.org/extra/clang-tidy/checks/readability/identifier-naming.html) check can fix deviations from the [naming conventions](https://rawgit.com/AliceO2Group/CodingGuidelines/master/naming_formatting.html).
+The [`readability-identifier-naming`](https://clang.llvm.org/extra/clang-tidy/checks/readability/identifier-naming.html) check can fix deviations from the [naming conventions](https://rawgit.com/AliceO2Group/CodingGuidelines/master/naming_formatting.html) using the configuration in [`.clang-tidy`](https://github.com/AliceO2Group/O2Physics/blob/master/.clang-tidy).
+
+```tip
+Learn how to form a [correct camelCase name](https://google.github.io/styleguide/javaguide.html#s5.3-camel-case).
+```
 
 ### Cleaning `#include` statements and `using` statements
 
@@ -95,10 +99,14 @@ See also the [C++ Core Guidelines](https://isocpp.github.io/CppCoreGuidelines/Cp
 
 The [`format_includes.awk`](https://github.com/AliceO2Group/O2Physics/blob/master/Scripts/format_includes.awk) script allows to fix the include format in a provided O2Physics file.
 
-To fix the include format in all `.h`, `.cxx` files in the current directory (`.`), execute:
+To fix the include format in all `.h`, `.cxx` files in O2Physics, execute:
 
 ```bash
 find . -name "*.h" -o -name "*.cxx" | parallel "awk -f Scripts/format_includes.awk \"{}\" > \"{}.tmp\" && mv \"{}.tmp\" \"{}\""
+```
+
+```note
+The include format is corrected automatically in O2Physics PRs as part of the automatic formatting PR created by the [clang-format CI check](../gettingstarted/contributingtocode.md#automatic-checks).
 ```
 
 ## [Cppcheck](https://cppcheck.sourceforge.io/)
