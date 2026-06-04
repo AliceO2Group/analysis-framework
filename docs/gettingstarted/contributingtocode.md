@@ -19,12 +19,13 @@ Before starting to write your first piece of code, please get familiar with the
  and also check for more detailed instructions from your [PWG](../advanced-specifics/README.md).
 ```
 
-```tip
-See the [Tools](../tools/README.md) section for suggestions on tools that can make your work with the O2Physics analysis framework much more effective.
+```note
+See the [Tools](../tools/README.md) section for further instructions and for suggestions on tools that can make your work with the O2Physics analysis framework much more effective.
 ```
 
 In order to contribute new code to the central repository, please follow these steps:
 
+- Update your O2Physics installation.
 - If you are adding a new workflow:
   - Place your `cxx` file in the appropriate directory (see the [O2Physics repository structure](theo2physicsrepo.md)).
   - Add the workflow compilation instructions in the `CMakeLists.txt` (you can clone one of the existing `o2physics_add_dpl_workflow` blocks).
@@ -33,7 +34,10 @@ In order to contribute new code to the central repository, please follow these s
   - Make sure the compilation of your code does not produce any errors or warnings.
   - In case you added a new workflow, the newly created executable will have the name you specified on the `o2physics_add_dpl_workflow` line, prefixed with `o2-analysis-<xx>-`, where `<xx>` corresponds to the `PWG<XX>` folder your file is in.
 - Test your code.
+  - Verify that the new code runs successfully and without warnings or errors.
+  - Validate the output of the new code.
 - Commit your changes and push them to your remote fork repository on GitHub.
+  - See [How to write a Git commit message](../gettingstarted/gitbasics.md#how-to-write-a-git-commit-message).
 - [Create a pull request (PR)](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request-from-a-fork)
   from your fork repository to the main repository.
 
@@ -64,9 +68,19 @@ __Keep pull requests small and focused.__
 
 __Give your pull request a short and meaningful title.__
 
-- The title should be informative enough to give an idea of _what_ was changed and _where_.
+- The title should be a brief summary of _what_ was changed and _where_.
+  - To specify _where_, you can use a prefix with the name of the file or of the analysis or of the framework component.
+  - A tag prefix with names of concerned directories is added automatically. (See [Automatic checks](#automatic-checks).) It can be extended with additional details using `,` (e.g. JIRA ticket) or `/` (for subdirectory names).
+  - Example: "[PWGHF/D2H] taskD0: Add centrality histogram"
 - Further details (e.g. _why_ this change is needed or related links) can be provided in the description below the title.
 - Examples of too vague titles: "Test", "Fix bug", "Add new parameter", "Update cuts", "Improve code".
+- See [How to write a Git commit message](../gettingstarted/gitbasics.md#how-to-write-a-git-commit-message).
+
+__Do not duplicate pull requests.__
+
+- Duplicating a PR duplicates review efforts and usage of testing resources and it almost certainly does not solve your problem.
+- Use `git push` to update your PR. (Avoid `--force` if possible. See [Pull request review](#pull-request-review).)
+- Exception: Replacing a PR makes sense, if the PR contains unwanted unrelated changes which have notified unrelated code owners and you want to stop spamming them further.
 
 ### Automatic checks
 
@@ -82,6 +96,8 @@ The CI checks evaluate:
 - PR properties
   - Labeler: Assigns [labels](https://github.com/AliceO2Group/O2Physics/labels) to the PR based on which parts of the code base were modified.
   - Title prefix checker: Verifies that the title of the PR has a valid prefix with tags corresponding to the labels. If a valid prefix is not found, it is created.
+
+__In general, a PR should not be merged if it does not pass all checks, unless there are good reasons to ignore the errors and warnings.__
 
 Checks flagged as "Required" must succeed before a PR can be merged.
 
@@ -99,6 +115,9 @@ _You do not have to format your (C++ and Python) code manually_.
 - You can let your PR get formatted by the automatic formatting check.
 - Or you can use [pre-commit hooks](../tools/README.md#pre-commit-hooks) to format your code automatically when you make a commit.
 ```
+
+PRs are marked as stale after 30 days of no activity and closed 5 days later if still inactive.
+(Events unrelated to the commit history (e.g. automatic comments from failed builds) can reset the timestamp which can prevent obsolete PRs from getting closed automatically.)
 
 ### Pull request review
 
