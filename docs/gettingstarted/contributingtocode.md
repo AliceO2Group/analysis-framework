@@ -13,6 +13,8 @@ on GitHub and add the URL of your fork as the `origin`
 [remote repository](https://docs.github.com/en/get-started/getting-started-with-git/about-remote-repositories)
 in your local Git repository.
 
+Please use your full name in your Git configuration and on your GitHub account so that your contributions can be linked to you easily.
+
 ```instruction
 Before starting to write your first piece of code, please get familiar with the
  [O2 coding, naming and commenting guidelines](https://github.com/AliceO2Group/CodingGuidelines)
