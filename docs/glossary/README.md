@@ -59,15 +59,17 @@ AO2D <a id="ao2d" />
 table <a id="table" />
 : data format storing a collection of columns for each entry (table row).
 Rows represent objects of the given table type and columns represent properties of these objects.
-A table definition defines a C++ type and therefore must be unique.
 Declared with the `DECLARE_SOA_TABLE(...)` macros.
 Stored in [AO2D](#ao2d) as `TTree`.
+The table name defines a C++ type and therefore must be unique.
+The table description (used in the `TTree` name) is truncated to 15 characters if longer.
 
 ## Data processing
 
 task <a id="task" />
 : C++ `struct` which can process and produce [tables](#table) and produce other output (e.g. histograms).
 A task is executed as a [device](#device) of a [workflow](#workflow).
+A task cannot have more than 99 members (including methods).
 
 configurable <a id="configurable" />
 : [task](#task) parameter, whose value can be set without editing the code of the task.
