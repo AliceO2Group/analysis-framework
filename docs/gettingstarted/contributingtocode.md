@@ -92,8 +92,9 @@ The CI checks evaluate:
 
 - Code formatting
 - Code quality
-  - [MegaLinter](https://megalinter.io/)
+  - [MegaLinter](https://megalinter.io/) (e.g. [cpplint](https://github.com/cpplint/cpplint), [Cppcheck](../tools/README.md#cppcheck))
   - [O2 linter](../tools/o2linter.md)
+  - [Clang-Tidy](../tools/README.md#clang-tidy)
 - Compilation: Verifies that the code compiles without problems on all supported platforms.
 - PR properties
   - Labeler: Assigns [labels](https://github.com/AliceO2Group/O2Physics/labels) to the PR based on which parts of the code base were modified.

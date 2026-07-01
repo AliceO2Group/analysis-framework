@@ -51,13 +51,41 @@ Next time you execute `git commit`, the hooks will run automatically.
 ## [Clang-Tidy](https://clang.llvm.org/extra/clang-tidy/)
 
 Clang-Tidy is a clang-based C++ linter tool for diagnosing and fixing typical programming errors, like style violations or bugs.
-(See the [list of checks](https://clang.llvm.org/extra/clang-tidy/checks/list.html).)
+(See the [list of checks](https://releases.llvm.org/20.1.0/tools/clang/tools/extra/docs/clang-tidy/checks/list.html).)
 
-To use Clang-Tidy, you need to have O2Physics compiled and a valid symbolic link `compile_commands.json` in the O2Physics directory pointing to the `alice/sw/BUILD/.../O2Physics` directory.
+By default, Clang-Tidy uses the configuration in [`.clang-tidy`](https://github.com/AliceO2Group/O2Physics/blob/master/.clang-tidy).
+
+False positives can be suppressed per line with `// NOLINT(check-name,...)`. (See the [documentation](https://releases.llvm.org/20.1.0/tools/clang/tools/extra/docs/clang-tidy/index.html#suppressing-undesired-diagnostics) for details.)
+
+### Running directly
+
+To run Clang-Tidy directly locally, you need to have O2Physics compiled and a valid symbolic link `compile_commands.json` in the O2Physics directory pointing to the `alice/sw/BUILD/.../O2Physics` directory.
+
+Without further options, you can run Clang-Tidy with
+
+```bash
+clang-tidy file1 file2 ...
+```
+
+### Running with O2Physics-code-check
+
+Clang-Tidy runs on O2Physics PRs as the O2Physics-code-check tool under the `build/O2Physics/code-check` CI check, using the repository configuration.
+You can run the check locally to test C++ files modified since `<base-commit>` until `<head-commit>` with
+
+```bash
+aliBuild build O2Physics-code-check -e ALIBUILD_BASE_HASH=<base-commit> -e ALIBUILD_HEAD_HASH=<head-commit>
+```
+
+where `<base-commit>` is typically `master` and `<head-commit>` is `HEAD` by default if `ALIBUILD_HEAD_HASH` is omitted.
+If `ALIBUILD_BASE_HASH` is omitted, all tracked C++ files are analysed.
+
+Enabled checks can be modified with the `O2PHYSICS_CHECKER_CHECKS=...` option.
+
+Fixes can be enabled with the `O2PHYSICS_CHECKER_FIX=1` option.
 
 ### Checking naming conventions
 
-The [`readability-identifier-naming`](https://clang.llvm.org/extra/clang-tidy/checks/readability/identifier-naming.html) check can fix deviations from the [naming conventions](https://rawgit.com/AliceO2Group/CodingGuidelines/master/naming_formatting.html) using the configuration in [`.clang-tidy`](https://github.com/AliceO2Group/O2Physics/blob/master/.clang-tidy).
+The [`readability-identifier-naming`](https://clang.llvm.org/extra/clang-tidy/checks/readability/identifier-naming.html) check can fix deviations from the [naming conventions](https://rawgit.com/AliceO2Group/CodingGuidelines/master/naming_formatting.html).
 
 ```tip
 Learn how to form a [correct camelCase name](https://google.github.io/styleguide/javaguide.html#s5.3-camel-case).
@@ -113,6 +141,8 @@ The include format is corrected automatically in O2Physics PRs as part of the au
 
 Cppcheck is a static analysis tool for C/C++ code that detects bugs, undefined behaviour, and dangerous coding constructs that compilers typically miss.
 
+False positives can be suppressed per line with `// cppcheck-suppress check-name`. (See the [documentation](https://github.com/cppcheck-opensource/cppcheck/blob/main/man/manual.md#inline-suppressions) for details.)
+
 Cppcheck can analyse individual files (file mode) or entire projects (project mode).
 The two modes give slightly different results so one can consider using both for maximum coverage.
 
@@ -123,7 +153,7 @@ The file mode is used in the MegaLinter check on GitHub.
 To use this mode, provide paths of files you want to analyse in the following way:
 
 ```bash
-cppcheck --language=c++ --std=c++20 --enable=style --check-level=exhaustive --suppressions-list=cppcheck_config file1 file2 ... 2> "err.log"
+cppcheck --language=c++ --std=c++20 --enable=style --check-level=exhaustive --suppressions-list=cppcheck_suppressions --inline-suppr --force file1 file2 ... 2> "err.log"
 ```
 
 The report will be stored in the `err.log` file.
@@ -131,7 +161,7 @@ The report will be stored in the `err.log` file.
 To run a parallelised analysis of all `.h`, `.cxx`, `.C` files in the current directory (`.`), execute:
 
 ```bash
-find . -name "*.h" -o -name "*.cxx" -o -name "*.C" | parallel "cppcheck --language=c++ --std=c++20 --enable=style --check-level=exhaustive --suppressions-list=cppcheck_config {}" 2> "err.log"
+find . -name "*.h" -o -name "*.cxx" -o -name "*.C" | parallel "cppcheck --language=c++ --std=c++20 --enable=style --check-level=exhaustive --suppressions-list=cppcheck_suppressions --inline-suppr --force {}" 2> "err.log"
 ```
 
 Note: It is possible to parallelise the execution with the `-j` option instead but it usually produces less results than analysing files independently.
@@ -143,7 +173,7 @@ To use this mode, you need to have O2Physics compiled and a valid symbolic link 
 Instead of providing file paths, provide the path to the project compilation database and use the `-j` option for parallelisation:
 
 ```bash
-cppcheck --language=c++ --std=c++20 --enable=style --check-level=exhaustive --suppressions-list=cppcheck_config --project=compile_commands.json -j $(nproc) 2> "err.log"
+cppcheck --language=c++ --std=c++20 --enable=style --check-level=exhaustive --suppressions-list=cppcheck_suppressions --inline-suppr --force --project=compile_commands.json -j $(nproc) 2> "err.log"
 ```
 
 ### Generating browsable HTML output
