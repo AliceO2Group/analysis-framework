@@ -107,6 +107,7 @@ There are a number of settings that you can decide on when composing a train:
   * Killing a train by clicking on `Kill ☠️`. This will stop all running jobs.
   * Closing a train by clicking `Close ❌`. This will stop further activity, but will keep the jobs running.
   * Cloning a train in the tab `Clone`. When cloning a train, the wagons and dataset configuration used will be the same as of the original train. Other settings can be changed: package tag, target facility, slow train, derived data, automatic submission.
+  * Moving a train in the tab `Move`. Moving a train functions similarly to cloning, using the same wagons and dataset configuration as the original train, with the original train also being killed/decomposed (whichever appropriate).
 
 ### <a name="train-run"></a>Train Run Result
 
@@ -201,6 +202,12 @@ There are a number of settings that you can decide on when composing a train:
 
 <div align="center">
    <img src="../images/cloneTrain.png" width="70%" alt="Screenshot of clone train">
+</div>
+
+* <a name="trainmovetab"></a>You can use the _Move train_ tab to move a train to a different target facility, or re-create a copy of a train at the same target, with the original train then being decomposed/killed (whichever appropriate). Similarly to cloning, the moved train will have **the same wagon timestamp** of the original train, with the **current dataset configuration**. Target is the only option that can be modified while moving. Approval and submission state are not copied from the original train.
+
+<div align="center">
+   <img src="../images/moveTrain.png" width="70%" alt="Move train tab, showing that the train's new target can be selected">
 </div>
 
 ### <a name="request-long-train"></a>Request Long Train
