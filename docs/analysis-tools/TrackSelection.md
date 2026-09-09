@@ -264,15 +264,15 @@ Some reference from HF: [here](https://indico.cern.ch/event/1691553/#1-understan
 
   5)  OO, 5.36 TeV 2025, period LHC25af: CCDB path Users/m/mfaggin/test/inputsTrackTuner/OO/LHC25af
       Run list: 564468 <= runNumber && runNumber <= 564472
-  
+
   6) pp, 5.36 TeV 2024, period LHC24ap: CCDB path Users/m/mfaggin/test/inputsTrackTuner/pp2024/ppRef/polarity_positive
      Run list: 559348 <= runNumber && runNumber <= 559387
      NB: both versions with and w/o PV refit are ok
-  
+
   7) pp, 5.36 TeV 2024, period LHC24aq: CCDB path Users/m/mfaggin/test/inputsTrackTuner/pp2024/ppRef/polarity_negative
      Run list: 559408 <= runNumber && runNumber <= 559456
      NB: both versions with and w/o PV refit are ok
-  
+
   If you are analysing another sample, the auto detection crashes and you need to configure manually `std::string pathInputFile`.
 ```
 * `bool usePvRefitCorrections`: flag to enable the usage of the calibrations obtained with the PV refit. If disabled, the calibrations w/o PV refit are used.
