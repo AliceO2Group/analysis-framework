@@ -239,32 +239,43 @@ This is relevant only if the input file is stored locally
 ```note
 In pp collisions, there is a difference between `usePvRefitCorrections == true` and `usePvRefitCorrections == false`. In the former case, the parametrizations are obtained after refitting the primary vertex by removing from its fit the probe track, if it was originally a contributor.
 This is not relevant in Pb-Pb collisions.
+Some reference from HF: [here](https://indico.cern.ch/event/1691553/#1-understanding-the-cut-variat).
 ```
 * `int nPhiBins`: number of phi intervals in which the parametrizations are provided. The currently-supported cases are `nPhiBins=0` (phi integrated) and `nPhiBins=24` (24 phi bins)
 * `bool autoDetectDcaCalib`: flag to enable automatic detection from CCDB of the  dca-calibration files.
 ```note
 * If used, the `std::string pathInputFile` is overwritten
 * The auto-detection works only with `nPhiBins=24`
-* The autodetection works only for a list of predefined manually-maintained cases (last update: 10/12/2025):
+* The autodetection works only for a list of predefined manually-maintained cases (last update: 09/09/2026):
+  1)  pp, 13.6 TeV 2022, 2023: CCDB path Users/m/mfaggin/test/inputsTrackTuner/pp2023/pass4/vsPhi
+      Run list: (520259 (LHC22f) <= runNumber <= 529691 (LHC22t)) || (534998 (LHC23zc) <= runNumber <= 543113 (LHC23zw))
+      NB: both versions with and w/o PV refit are ok
 
-  1. [CASE 1]: pp, 13.6 TeV 2022, 2023: CCDB path Users/m/mfaggin/test/inputsTrackTuner/pp2023/pass4/vsPhi
-               Run list: (520259 (LHC22f) <= runNumber <= 529691 (LHC22t)) || (534998 (LHC23zc) <= runNumber <= 543113 (LHC23zw))
-               NB: based on 2023 pp data and MC
+  2)  Pb-Pb, 5.34 TeV 2022, 2023, 2024: CCDB path Users/m/mfaggin/test/inputsTrackTuner/PbPb2023/apass4/vsPhi
+      Run list: (529397 <= runNumber <= 529418 (LHC22o)) || (543437 (LHC23zx) <= runNumber <= 545367 (LHC23zzo))
+      NB: based on LHC23zzh data and MC
 
-  2. [CASE 2]: Pb-Pb, 5.34 TeV 2022, 2023, 2024: CCDB path Users/m/mfaggin/test/inputsTrackTuner/PbPb2023/apass4/vsPhi
-               Run list: (529397 <= runNumber <= 529418 (LHC22o)) || (543437 (LHC23zx) <= runNumber <= 545367 (LHC23zzo))
-               NB: based on LHC23zzh data and MC
+  3)  pp, 13.6 TeV 2024: CCDB path Users/m/mfaggin/test/inputsTrackTuner/pp2024/pass1_minBias/vsPhi
+      Run list: 549559 (LHC24ac) <= runNumber && runNumber <= 558807 (LHC24ao)
+      NB: only the version w/o PV refit is ok
 
-  3. [CASE 3]: pp, 13.6 TeV 2024: CCDB path Users/m/mfaggin/test/inputsTrackTuner/pp2024/pass1_minBias/vsPhi
-              Run list: 549559 (LHC24ac) <= runNumber && runNumber <= 558807 (LHC24ao)
+  4)  OO, 5.36 TeV 2025, period LHC25ae: CCDB path Users/m/mfaggin/test/inputsTrackTuner/OO/LHC25ae
+      Run list: 564356 <= runNumber && runNumber <= 564445
 
-  4. [CASE 4]: OO, 5.36 TeV 2025, period LHC25ae: CCDB path Users/m/mfaggin/test/inputsTrackTuner/OO/LHC25ae
-               Run list: 564356 <= runNumber && runNumber <= 564445
-
-  5. [CASE 5]: OO, 5.36 TeV 2025, period LHC25af: CCDB path Users/m/mfaggin/test/inputsTrackTuner/OO/LHC25af
-               Run list: 564468 <= runNumber && runNumber <= 564472
+  5)  OO, 5.36 TeV 2025, period LHC25af: CCDB path Users/m/mfaggin/test/inputsTrackTuner/OO/LHC25af
+      Run list: 564468 <= runNumber && runNumber <= 564472
+  
+  6) pp, 5.36 TeV 2024, period LHC24ap: CCDB path Users/m/mfaggin/test/inputsTrackTuner/pp2024/ppRef/polarity_positive
+     Run list: 559348 <= runNumber && runNumber <= 559387
+     NB: both versions with and w/o PV refit are ok
+  
+  7) pp, 5.36 TeV 2024, period LHC24aq: CCDB path Users/m/mfaggin/test/inputsTrackTuner/pp2024/ppRef/polarity_negative
+     Run list: 559408 <= runNumber && runNumber <= 559456
+     NB: both versions with and w/o PV refit are ok
+  
+  If you are analysing another sample, the auto detection crashes and you need to configure manually `std::string pathInputFile`.
 ```
-
+* `bool usePvRefitCorrections`: flag to enable the usage of the calibrations obtained with the PV refit. If disabled, the calibrations w/o PV refit are used.
 * `std::string pathFileQoverPt`: path to browse to find the correction file for the `q/pt` smearing
 * `std::string nameFileQoverPt`: name of the correction file for the `q/pt` smearing
 * `bool updateCurvature`: flag to enable the update of the track curvature, i.e. `q/pt`, at the particle production point
@@ -294,12 +305,17 @@ The dcaXY, dcaZ parametrization currently available are the following:
       Data: LHC22s apass5, run 529397.
 
 2. in 24 phi bins
-    * proxy for pp @ 13.6 TeV, 2022 and 2023: [trackTuner_DataLHC23pass4ThinSmall_McLHC23k4gSmall.root](http://alice-ccdb.cern.ch/browse/Users/m/mfaggin/test/inputsTrackTuner/pp2023/pass4/vsPhi)
-      Data: LHC23_pass4_thin_small, runs 535613, 535621, 535623, 535624, 535627, 535644, 535645, 535711, 535716, 535721, 535725
-      MC: LHC24k4g_small, runs 535613, 535621, 535623, 535624, 535627, 535644, 535645, 535711, 535716, 535721, 535722, 535725
-      Slides [here](https://docs.google.com/presentation/d/1JL8nHY7yJ-PhCqTNTJq8y3dHm5XLe3Nd4bT27yjp97U/edit?usp=sharing)
-      MC: LHC22l1b2, run 529397.
-      Slides [here](https://docs.google.com/presentation/d/1sIXWMckaPZJir3gNLeDnB2TorNJrjXKcGJvyTvz5V8s/edit?usp=sharing).
+    * pp @ 13.6 TeV 2023 apass4: [trackTuner_DataLHC23Pass4Medium_McLHC23k4i_fineTuned.root](http://alice-ccdb.cern.ch/browse/Users/m/mfaggin/test/inputsTrackTuner/pp2023/pass4/vsPhi)
+      Data: LHC23_pass4_medium
+      MC: McLHC23k4i
+      Slides [here](https://cernbox.cern.ch/s/Ggox14MbJH061lY)
+      Notes: the `autodetect` option pick up these calibrations even if you analyse LHC22o
+    * pp @ 5.36 TeV 2024 apass1:
+        - B++: [trackTuner_DataLHC24apPass1Medium_McLHC25b4a6_polarityPositive_fineTuned.root](http://alice-ccdb.cern.ch/browse/Users/m/mfaggin/test/inputsTrackTuner/pp2024/ppRef/polarity_positive)
+        - B--: [trackTuner_Data_24aq_pass1_MC_MC25b4b6_largePtBins_new_polarityNegative_fineTuned.root](http://alice-ccdb.cern.ch/browse/Users/m/mfaggin/test/inputsTrackTuner/pp2024/ppRef/polarity_negative)
+      Data: LHC24ap_pass1, LHC24aq_pass1
+      MC: LHC25b4a6, LHC25b4b6
+      Slides [here](https://cernbox.cern.ch/s/x5xfO1c3zCJa9La)
     * pp @ 13.6 TeV, 2024: [trackTuner_DataLHC24agpass1minBias_McLHC24f4d.root](http://alice-ccdb.cern.ch/browse/Users/m/mfaggin/test/inputsTrackTuner/pp2024/pass1_minBias/vsPhi)
       Data: LHC24ag_pass1_minBias
       MC: LHC24f4d
