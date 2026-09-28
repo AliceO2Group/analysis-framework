@@ -100,7 +100,10 @@ The CI checks evaluate:
   - Labeler: Assigns [labels](https://github.com/AliceO2Group/O2Physics/labels) to the PR based on which parts of the code base were modified.
   - Title prefix checker: Verifies that the title of the PR has a valid prefix with tags corresponding to the labels. If a valid prefix is not found, it is created.
 
-__In general, a PR should not be merged if it does not pass all checks, unless there are good reasons to ignore the errors and warnings.__
+__Policy when dealing with linter / code-checker__
+ - It is agreed that the issues brought up by linter and code-checker tools should be fixed on a best-effort basis.
+ - However, for the purposes of merging, the linter checks are not mandatory.
+ - The final decision on merging PRs is taken by the code owners.
 
 Checks flagged as "Required" must succeed before a PR can be merged.
 
