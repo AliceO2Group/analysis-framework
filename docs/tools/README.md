@@ -33,20 +33,21 @@ See the dedicated [O2 linter](o2linter.md) page.
 Pre-commit hooks run when you execute `git commit` and are used to validate the staged changes that are about to be committed.
 If any hook fails, the commit is not made.
 
-In the O2Physics repository, pre-commit hooks are [configured](https://github.com/AliceO2Group/O2Physics/blob/master/.pre-commit-config.yaml) to format C++ code with [clang-format](https://clang.llvm.org/docs/ClangFormat.html) and lint it (check for issues) with [cpplint](https://github.com/cpplint/cpplint).
-This way you can make sure that your changes will pass the C++ formatting check and the cpplint check in [MegaLinter](https://megalinter.io/) when you make your pull request.
+In the O2Physics repository, pre-commit hooks are [configured](https://github.com/AliceO2Group/O2Physics/blob/master/.pre-commit-config.yaml) to detect invalid files and to format and check code using some of the tools included in the [automatic CI checks](../gettingstarted/contributingtocode.md#automatic-checks).
+This way you can make sure that your changes will pass the same checks on GitHub when you make your pull request.
 
 ### How to use pre-commit hooks
 
-1. [Install pre-commit](https://pre-commit.com/#installation) (typically `pip install pre-commit`).
+1. [Install pre-commit](https://pre-commit.com/#installation) (typically `pip install pre-commit` or `pipx install pre-commit`).
 1. Enter the `O2Physics` directory.
 1. [Install the Git hook scripts](https://pre-commit.com/#3-install-the-git-hook-scripts): `pre-commit install`.
 
 Next time you execute `git commit`, the hooks will run automatically.
 
-- If the clang-format hook fails, it means your staged files have been formatted.
-- If the cpplint hook fails, the linter has found issues that need to be fixed.
-- Updated files need to be staged with `git add` before attempting `git commit` again.
+- If a formatting hook fails, it means your staged files have been formatted.
+- If a linter hook fails, the linter has found issues that should be fixed.
+- Updated files need to be staged with `git add` in order to include the changes in the next attempt to commit them.
+- If needed, the pre-commit hooks can be skipped entirely with `git commit -n` or selectively (see the [documentation](https://pre-commit.com/#temporarily-disabling-hooks)).
 
 ## [Clang-Tidy](https://clang.llvm.org/extra/clang-tidy/)
 
@@ -67,6 +68,10 @@ Without further options, you can run Clang-Tidy with
 clang-tidy file1 file2 ...
 ```
 
+```tip
+This is the best option when you are developing in a different Git branch and you just [compile changes](../gettingstarted/installing.md#building-partially-for-development-using-ninja) on top of the full build of the `master` branch.
+```
+
 ### Running with O2Physics-code-check
 
 Clang-Tidy runs on O2Physics PRs as the O2Physics-code-check tool under the `build/O2Physics/code-check` CI check, using the repository configuration.
@@ -76,16 +81,20 @@ You can run the check locally to test C++ files modified since `<base-commit>` u
 aliBuild build O2Physics-code-check -e ALIBUILD_BASE_HASH=<base-commit> -e ALIBUILD_HEAD_HASH=<head-commit>
 ```
 
-where `<base-commit>` is typically `master` and `<head-commit>` is `HEAD` by default if `ALIBUILD_HEAD_HASH` is omitted.
+where `<base-commit>` is typically `upstream/master` and `<head-commit>` is `HEAD` by default if `ALIBUILD_HEAD_HASH` is omitted.
 If `ALIBUILD_BASE_HASH` is omitted, all tracked C++ files are analysed.
 
-Enabled checks can be modified with the `O2PHYSICS_CHECKER_CHECKS=...` option.
+Enabled checks can be modified with the `-e O2PHYSICS_CHECKER_CHECKS=...` option.
 
-Fixes can be enabled with the `O2PHYSICS_CHECKER_FIX=1` option.
+Fixes can be enabled with the `-e O2PHYSICS_CHECKER_FIX=1` option.
+
+```warning
+Running O2Physics-code-check involves building O2Physics which might mean a full build of the current branch in case you have not done it yet.
+```
 
 ### Checking naming conventions
 
-The [`readability-identifier-naming`](https://clang.llvm.org/extra/clang-tidy/checks/readability/identifier-naming.html) check can fix deviations from the [naming conventions](https://rawgit.com/AliceO2Group/CodingGuidelines/master/naming_formatting.html).
+The [`readability-identifier-naming`](https://clang.llvm.org/extra/clang-tidy/checks/readability/identifier-naming.html) check can fix deviations from the [naming conventions](https://aliceo2group.github.io/CodingGuidelines/naming_formatting.html).
 
 ```tip
 Learn how to form a [correct camelCase name](https://google.github.io/styleguide/javaguide.html#s5.3-camel-case).
@@ -125,16 +134,16 @@ Headers from the same project should be included using quotation marks (`#includ
 Failing to do so points the preprocessor to a [wrong location](https://gcc.gnu.org/onlinedocs/cpp/Include-Syntax.html) and can result in picking a wrong header.
 See also the [C++ Core Guidelines](https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines#sf12-prefer-the-quoted-form-of-include-for-files-relative-to-the-including-file-and-the-angle-bracket-form-everywhere-else).
 
-The [`format_includes.awk`](https://github.com/AliceO2Group/O2Physics/blob/master/Scripts/format_includes.awk) script allows to fix the include format in a provided O2Physics file.
+The [`format_includes.py`](https://github.com/AliceO2Group/O2Physics/blob/master/Scripts/format_includes.py) script allows to fix the include format in provided O2Physics files.
 
-To fix the include format in all `.h`, `.cxx` files in O2Physics, execute:
+To fix the include format in files in O2Physics, execute:
 
 ```bash
-find . -name "*.h" -o -name "*.cxx" | parallel "awk -f Scripts/format_includes.awk \"{}\" > \"{}.tmp\" && mv \"{}.tmp\" \"{}\""
+Scripts/format_includes.py file1 file2 ...
 ```
 
 ```note
-The include format is corrected automatically in O2Physics PRs as part of the automatic formatting PR created by the [clang-format CI check](../gettingstarted/contributingtocode.md#automatic-checks).
+The include format is corrected automatically in O2Physics PRs as part of the automatic formatting PR created by the [clang-format CI check](../gettingstarted/contributingtocode.md#automatic-checks). You can also run the script automatically as a [pre-commit hook](#pre-commit-hooks).
 ```
 
 ## [Cppcheck](https://cppcheck.sourceforge.io/)

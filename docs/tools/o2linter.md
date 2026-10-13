@@ -28,10 +28,14 @@ The [`o2_linter.py`](https://github.com/AliceO2Group/O2Physics/blob/master/Scrip
 You can execute the script locally from the O2Physics directory with:
 
 ```bash
-python3 Scripts/o2_linter.py <files>
+Scripts/o2_linter.py file1 file2 ...
 ```
 
-Example: `python3 Scripts/o2_linter.py $(find . -path ./.git -prune -o -type f)` to lint all O2Physics files.
+Example: `Scripts/o2_linter.py $(find . -path ./.git -prune -o -type f)` to lint all O2Physics files.
+
+### As a pre-commit hook
+
+If you enable pre-commit hooks in your local repository, O2 linter will check your staged files before each commit. See [the instructions](README.md#pre-commit-hooks).
 
 ### In Visual Studio Code
 
