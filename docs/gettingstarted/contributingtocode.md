@@ -90,20 +90,24 @@ Pull requests are tested with automatic continuous-integration (CI) checks which
 
 The CI checks evaluate:
 
-- Code formatting
-- Code quality
-  - [MegaLinter](https://megalinter.io/) (e.g. [cpplint](https://github.com/cpplint/cpplint), [Cppcheck](../tools/README.md#cppcheck))
-  - [O2 linter](../tools/o2linter.md)
-  - [Clang-Tidy](../tools/README.md#clang-tidy)
 - Compilation: Verifies that the code compiles without problems on all supported platforms.
+  - Compilation warnings are not tolerated in PRs.
+- Code formatting
+  - [include formatter](../tools/README.md#fixing-include-format) +  [clang-format](https://clang.llvm.org/docs/ClangFormat.html) ("clang-format" check)
+  - [Ruff formatter](https://docs.astral.sh/ruff/formatter/) (Python)
+- Code quality
+  - [MegaLinter](https://megalinter.io/) (e.g. [cpplint](https://github.com/cpplint/cpplint), [Cppcheck](../tools/README.md#cppcheck), [Ruff linter](https://docs.astral.sh/ruff/linter/) (Python), [ShellCheck](https://www.shellcheck.net/) (Shell))
+  - [O2 linter](../tools/o2linter.md)
+  - [Clang-Tidy](../tools/README.md#clang-tidy) ("[build/O2Physics/code-check](../tools/README.md#running-with-o2physics-code-check)" check)
 - PR properties
-  - Labeler: Assigns [labels](https://github.com/AliceO2Group/O2Physics/labels) to the PR based on which parts of the code base were modified.
+  - Labeler: Assigns [labels](https://github.com/AliceO2Group/O2Physics/labels) to the PR based on which parts of the repository were modified.
   - Title prefix checker: Verifies that the title of the PR has a valid prefix with tags corresponding to the labels. If a valid prefix is not found, it is created.
 
-- __Policy when dealing with linter / code-checker__
-  - It is agreed that the issues brought up by linter and code-checker tools should be fixed on a best-effort basis.
-  - However, for the purposes of merging, the linter checks are not mandatory.
-  - The final decision on merging PRs is taken by the code owners.
+__Policy when dealing with code analysis checks__
+
+- It is agreed that the issues brought up by code analysis tools (linters) should be fixed on a best-effort basis.
+- However, for the purposes of merging, the linter checks are not mandatory.
+- The final decision on merging PRs is taken by the code owners.
 
 Checks flagged as "Required" must succeed before a PR can be merged.
 
@@ -112,7 +116,7 @@ PRs from first-time contributors (who have not authored any commit in the reposi
 
 If a check fails, you can click on the name of the check to see more information about the errors in the log of the test.
 
-If the clang-format check (or a formatting linter in MegaLinter) fails, an automatic PR with the formatting fixes is opened in your fork and a notification email is sent to you.
+If the clang-format check (or a formatter in MegaLinter) fails, an automatic PR with the formatting fixes is opened in your fork and a notification email is sent to you.
 You have to merge this formatting PR to update your branch (and your opened PR).
 
 ```tip

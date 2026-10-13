@@ -336,6 +336,10 @@ This requires that you have successfully built Git branch `[branch]` (e.g. `mast
 You also need to have `direnv` installed and hooked (see [instructions](https://direnv.net/docs/installation.html)) to load the correct build environment automatically when you enter the build directory (and to unload it when you exit).
 ```
 
+```tip
+This works also if you are developing in a different Git branch and you just want to compile changes on top of the full build of the `master` branch.
+```
+
 ```warning
 This only builds O2Physics. If you have updated O2 or alidist, you first need to do a full build with aliBuild.
 ```
