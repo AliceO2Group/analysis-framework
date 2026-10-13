@@ -43,3 +43,17 @@ Derived datasets can be created on Hyperloop which are by construction much smal
 As an example, you can imagine that you run a derived data train on a dataset of 500 TB where you need explicit approval. Say you have a reduction factor of 100, then your output derived data is about 5 TB. You will be allowed to run on that dataset much more frequent, see the table above.
 
 However, it may be that your analysis remains CPU hungry even if the input dataset is reduced. By default the operators who create your dataset will assign the resources based on the table above. The person who has requested the dataset can request to change that assignement. This will increase the CPU limit but reduce the trains/week and auto-submission slots by moving down one row in the table above. Obviously, running on a derived dataset should never take more resources than the limits that apply to the original parent dataset.
+
+The image below summarizes an advantage of derived data:
+<div align="center">
+<img src="../images/dd_advantage.png" width="80%" alt="Screenshot of derived data advantage">
+</div>
+
+Derived data advantage in real life:
+* 2025 Pb-Pb strangeness analysis runs over 3.2 PB and takes 45y CPU
+* Instead of using V0 and Cascade tables directly in memory, save to derived data: 77 times reduction leads to 45 TB space use.
+* Since all core services (track propagation, etc) have been executed, throughput can be high.
+  * 5-10 MB/s -> much lower CPU cost
+  * Once / day autosubmission
+* Effective increase is the multiplication of reduction factor and throughput increase factor: O(100) times increase in performance/time.
+* Multiple further examples: larger reduction factors could even mean one gets a tree downloadable to your laptop.
