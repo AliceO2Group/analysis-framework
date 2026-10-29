@@ -297,34 +297,42 @@ The default `pathFileQoverPt/nameFileQoverPt` is there just for legacy and not m
 The dcaXY, dcaZ parametrization currently available are the following:
 
 1. phi-integrated (auto-detection not supported)
-    * proxy for pp @ 13.6 TeV, 2022 and 2023: [trackTuner_DataLHC23hPass4_McLHC23k4g.root](http://alice-ccdb.cern.ch/browse/Users/m/mfaggin/test/inputsTrackTuner/pp2023/pass4/correct_names)
-      Data: LHC23h apass4.
-      MC: LHC23k4g.
+    * proxy for pp @ 13.6 TeV, 2022 and 2023: [trackTuner_DataLHC23hPass4_McLHC23k4g.root](http://alice-ccdb.cern.ch/browse/Users/m/mfaggin/test/inputsTrackTuner/pp2023/pass4/correct_names)\
+      Data: LHC23h apass4.\
+      MC: LHC23k4g.\
       Slides [here](https://docs.google.com/presentation/d/10d1fE7Dh7OukTNgwwOhS8JQCEqzWZ3yjYZmpjntTDWw/edit?usp=sharing).
-    * proxy for Pb-Pb @ 5.36 TeV: [trackTuner_DataLHC22sPass5_McLHC22l1b2_run529397.root](http://alice-ccdb.cern.ch/browse/Users/m/mfaggin/test/inputsTrackTuner/PbPb2022)
+    * proxy for Pb-Pb @ 5.36 TeV: [trackTuner_DataLHC22sPass5_McLHC22l1b2_run529397.root](http://alice-ccdb.cern.ch/browse/Users/m/mfaggin/test/inputsTrackTuner/PbPb2022)\
       Data: LHC22s apass5, run 529397.
 
 2. in 24 phi bins
-    * pp @ 13.6 TeV 2023 apass4: [trackTuner_DataLHC23Pass4Medium_McLHC23k4i_fineTuned.root](http://alice-ccdb.cern.ch/browse/Users/m/mfaggin/test/inputsTrackTuner/pp2023/pass4/vsPhi)
-      Data: LHC23_pass4_medium
-      MC: McLHC23k4i
-      Slides [here](https://cernbox.cern.ch/s/Ggox14MbJH061lY)
-      Notes: the `autodetect` option pick up these calibrations even if you analyse LHC22o
+    * pp @ 13.6 TeV 2023 apass4: [trackTuner_DataLHC23Pass4Medium_McLHC23k4i_fineTuned.root](http://alice-ccdb.cern.ch/browse/Users/m/mfaggin/test/inputsTrackTuner/pp2023/pass4/vsPhi)\
+      Data: LHC23_pass4_medium\
+      MC: McLHC23k4i\
+      Slides [here](https://cernbox.cern.ch/s/Ggox14MbJH061lY)\
+      Notes: the `autodetect` option picks up these calibrations even if you analyse LHC22o
     * pp @ 5.36 TeV 2024 apass1:
         - B++: [trackTuner_DataLHC24apPass1Medium_McLHC25b4a6_polarityPositive_fineTuned.root](http://alice-ccdb.cern.ch/browse/Users/m/mfaggin/test/inputsTrackTuner/pp2024/ppRef/polarity_positive)
-        - B--: [trackTuner_Data_24aq_pass1_MC_MC25b4b6_largePtBins_new_polarityNegative_fineTuned.root](http://alice-ccdb.cern.ch/browse/Users/m/mfaggin/test/inputsTrackTuner/pp2024/ppRef/polarity_negative)
-      Data: LHC24ap_pass1, LHC24aq_pass1
-      MC: LHC25b4a6, LHC25b4b6
+        - B--: [trackTuner_Data_24aq_pass1_MC_MC25b4b6_largePtBins_new_polarityNegative_fineTuned.root](http://alice-ccdb.cern.ch/browse/Users/m/mfaggin/test/inputsTrackTuner/pp2024/ppRef/polarity_negative)\
+      Data: LHC24ap_pass1, LHC24aq_pass1\
+      MC: LHC25b4a6, LHC25b4b6\
       Slides [here](https://cernbox.cern.ch/s/x5xfO1c3zCJa9La)
-    * pp @ 13.6 TeV, 2024: [trackTuner_DataLHC24agpass1minBias_McLHC24f4d.root](http://alice-ccdb.cern.ch/browse/Users/m/mfaggin/test/inputsTrackTuner/pp2024/pass1_minBias/vsPhi)
-      Data: LHC24ag_pass1_minBias
+    * pp @ 13.6 TeV, 2024: [trackTuner_pp_LHC24ag_pass1_Thin_LHC24f4d_fineTuned_PvRefit.root](http://alice-ccdb.cern.ch/browse/Users/m/mfaggin/test/inputsTrackTuner/pp2024/pass1_minBias/vsPhi)\
+      Data: LHC24ag_pass1_minBias\
       MC: LHC24f4d
-    * proxy for PbPb @ 5.36 TeV: [trackTuner_DataLHC24zzh_apass4_McLHC24e2_MCflat13.root](http://alice-ccdb.cern.ch/browse/Users/m/mfaggin/test/inputsTrackTuner/PbPb2023/apass4/vsPhi)
-      Data: LHC23zzh_apass4
+      Slides: [report](https://cernbox.cern.ch/s/VHOJcrd3QbluwXF) and [fine tuning](https://cernbox.cern.ch/s/3VmJv6fbGsYTabe)
+    * pp @13.6 TeV, 2026: [trackTuner_pp_LHC26ac_pass1_Thin_LHC26e9_fineTuned_PvRefit.root](http://alice-ccdb.cern.ch/browse/Users/m/mfaggin/test/inputsTrackTuner/pp2026/pass1/vsPhi)\
+      Data: LHC26ac_pass1_Thin\
+      MC: LHC26e9\
+      Slides: [report](https://cernbox.cern.ch/s/iD8Y10rBEcVFxrw) and [fine tuning](https://cernbox.cern.ch/s/1X6vqs24T4wTbIT)\
+      Notes: the `autodetect` option picks up these calibrations even if you analyse pp 2025
+    * proxy for PbPb @ 5.36 TeV: [trackTuner_DataLHC24zzh_apass4_McLHC24e2_MCflat13.root](http://alice-ccdb.cern.ch/browse/Users/m/mfaggin/test/inputsTrackTuner/PbPb2023/apass4/vsPhi)\
+      Data: LHC23zzh_apass4\
       MC: LHC24e2
-    * O-O @ 5.36 TeV, period LHC25ae apass2: [trackTuner_Data_LHC25ae_pass2_MC_LHC25h3b.root](http://alice-ccdb.cern.ch/browse/Users/m/mfaggin/test/inputsTrackTuner/OO/LHC25ae)
-      Data: LHC25ae_pass2
-      MC: LHC25h3b
-    * O-O @ 5.36 TeV, period LHC25af apass2: [trackTuner_Data_LHC25af_pass2_MC_LHC25h3b.root](http://alice-ccdb.cern.ch/browse/Users/m/mfaggin/test/inputsTrackTuner/OO/LHC25af)
-      Data: LHC25af_pass2
-      MC: LHC25h3b
+    * p-O @ 9.62 TeV, 2025: [trackTuner_pO_LHC25ad_pass2_LHC25h2c_fineTuned.root](http://alice-ccdb.cern.ch/browse/Users/m/mfaggin/test/inputsTrackTuner/pO)\
+      Data: LHC25ad_pass2\
+      MC: LHC25h2c\
+      Slides: [report](https://cernbox.cern.ch/s/tkVfrlyARNCp0vP) and [fine tuning](https://cernbox.cern.ch/s/WD5ARoyLQhlJsN6)
+    * O-O @ 5.36 TeV, period LHC25ae apass2: [trackTuner_OO_LHC25ae_pass2_LHC25h3c_fineTuned.root](http://alice-ccdb.cern.ch/browse/Users/m/mfaggin/test/inputsTrackTuner/OO/LHC25ae)\
+      Data: LHC25ae_pass2\
+      MC: LHC25h3c\
+      Slides: [report](https://cernbox.cern.ch/s/bcUPHmKSwS1FeMd) and [fine tuning](https://cernbox.cern.ch/s/2LbjdzVM1iBleIO)
