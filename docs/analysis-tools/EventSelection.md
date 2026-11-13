@@ -5,20 +5,31 @@ title: Event Selection
 
 # Table of contents:
 
-* [Event selection service wagon](#event-selection-service-wagon)
-* [Timestamp module](#timestamp-module)
-* [Event selection module](#event-selection-module)
-  * [Basic usage in user tasks](#basic-usage-in-user-tasks)
-  * [Trigger aliases](#trigger-aliases)
-  * [Event selection criteria](#event-selection-criteria)
-  * [Time Frame and ITS ROF border cuts](#time-frame-and-its-rof-border-cuts)
-  * [Occupancy estimation](#occupancy-estimation)
-  * [Rejection of events with dead zones in ITS](#rejection-of-events-with-dead-zones-in-its)
-  * [Usage of RCT flags](#usage-of-rct-flags)
-  * [Found bunch crossings](#found-bunch-crossings)
-  * [Configurables](#configurables)
-  * [Event selection decisions for Run 2](#event-selection-decisions-for-run-2)
-* [Luminosity module](#luminosity-module)
+- [Table of contents:](#table-of-contents)
+- [Event selection service wagon](#event-selection-service-wagon)
+- [Timestamp module](#timestamp-module)
+- [Event selection module](#event-selection-module)
+  - [Basic usage in user tasks](#basic-usage-in-user-tasks)
+  - [Trigger aliases](#trigger-aliases)
+  - [Event selection criteria](#event-selection-criteria)
+  - [Time Frame and ITS ROF border cuts](#time-frame-and-its-rof-border-cuts)
+    - [Time Frame borders](#time-frame-borders)
+    - [ITS Readout Frame borders](#its-readout-frame-borders)
+    - [Integration into event selection](#integration-into-event-selection)
+  - [Occupancy estimation](#occupancy-estimation)
+    - [Occupancy estimators](#occupancy-estimators)
+    - [Occupancy selection bits](#occupancy-selection-bits)
+    - [Occupancy wrt bunch crossings](#occupancy-wrt-bunch-crossings)
+    - [Discussion](#discussion)
+  - [Rejection of events with dead zones in ITS](#rejection-of-events-with-dead-zones-in-its)
+    - [Problem](#problem)
+    - [Using special event selection bits](#using-special-event-selection-bits)
+  - [Usage of RCT flags](#usage-of-rct-flags)
+  - [Found bunch crossings](#found-bunch-crossings)
+  - [Configurables](#configurables)
+  - [Event selection decisions for Run 2](#event-selection-decisions-for-run-2)
+    - [Remarks](#remarks)
+- [Luminosity module](#luminosity-module)
 
 # Event selection service wagon
 
@@ -111,6 +122,8 @@ In general, one has to follow the following steps:
 
   The `sel8` event selection bit is a logical _and_ between the `kIsTriggerTVX` bit (based on FT0A & FT0C requirement, with time-based constraints on the vertex position), and (since April 2024) `kNoTimeFrameBorder` and  `kNoITSROFrameBorder` bits - see [below](#integration-into-event-selection).
 
+  > [!NOTE]
+  > An exception for the 2026 pp data: the `kNoITSROFrameBorder` bit was excluded from `sel8` for this period because reconstruction was performed with the ITS cross-ROF  mode enabled, which should almost completely eliminate the ITS ROF border effect. Note, however, that the ROF border effect is still present for the MFT readout frames!
 * run your tasks in stack with event-selection-service task:
 
     ``` bash
@@ -332,7 +345,7 @@ _Notes:_
 - Both occupancy estimators are pre-calculated per each collision in the event selection routine, [EventSelectionModule.h](https://github.com/AliceO2Group/O2Physics/blob/daily-20251029-0000/Common/Tools/EventSelectionModule.h#L1361).
 - In the occupancy calculation, multiplicities of nearby collisions are "weighted" according to their time separation from a collision-of-interest, to reflect the "severity" of their influence on that collision
 - Estimators return `-1` if a given collision is close to Time Frame borders (so, not enough information for the occupancy calculation, while we need information within -40 µs...+100 µs time range wrt a given collision), event loss ~1.2%.
-
+- An additional column was added to evSel table in [Dec 2025](https://github.com/AliceO2Group/O2Physics/pull/14202) - the **median time** of occupancy from nearby events (i.e. the dt at which the counter of occupancy around a given event in a predefined time window becomes >=0.5 from the total occupancy), as discussed [here](https://indico.cern.ch/event/1568262/#1-study-of-the-tpc-occupancy-e). The getter: `occupancyMedianTime()`.
 
 ### Occupancy selection bits
 
@@ -352,6 +365,47 @@ The following table summarizes the event selection bits that can help to mitigat
 These bits can be used as follows:
 ``` c++
 if (col.selection_bit(o2::aod::evsel::kNoCollInTimeRangeNarrow)) { /* do analysis */ }
+```
+
+
+### Occupancy wrt bunch crossings
+
+The occupancy can also be obtained per **bunch crossing** (e.g. for UPC studies), with the same estimators, time window and thresholds as for collisions (since [PR 12/11/2026](https://github.com/AliceO2Group/O2Physics/pull/18689)). Two tables are produced by the event selection service (only if subscribed to by a task):
+- `aod::BcOccs`: joinable with `aod::BCs`, one row per BC of the BC table;
+- `aod::BcOccsAll`: not joinable, values are calculated for every BC of the Time Frames in the dataframe (also BCs not stored in AO2D). The table is large (114048 rows per 32-orbit TF), so request it only when needed.
+
+The same getters and bits described for per-collision occupancy can also be used for per-BC occupancy studies. The following additional getters are available:
+
+| **Getter** | **Meaning** |
+|------------|-------------|
+| `occupancyFlags_bit(bit)` | `kNoCollInTimeRangeNarrow/Strict/Standard`, `kNoCollInRofStrict/Standard`, `kNoHighMultCollInPrevRof`, `kUpcMode` (enum `aod::bcocc::BcOccupancyFlags`) |
+| `numCollsInBC()` | number of collisions found in this BC  |
+| `numCollsInRof()` | number of collisions found in the ITS ROF of this BC |
+
+**Differences from the per-collision values:**
+- all collisions found in the BC are excluded from its occupancy (for a collision, only the collision itself is excluded);
+- no vZ for BCs, so the close-vZ veto in `kNoCollInRofStandard` is not applied;
+- the flags are stored in a separate 8-bit bitmap: bit numbers differ from `aod::evsel`;
+- `kUpcMode` (filled for all BCs): the ITS ROF of this BC has no collisions, or has collisions reconstructed in the UPC mode of ITS (`Vertex::Flags::UPCMode`).
+
+**Usage:**
+
+``` c++
+// occupancy for BCs of the BC table
+void process(soa::Join<aod::BCs, aod::BcOccs> const& bcs) {
+  for (const auto& bc : bcs) {
+    if (bc.trackOccupancyInTimeRange() >= 0 && bc.occupancyFlags_bit(o2::aod::bcocc::kNoCollInTimeRangeNarrow)) { /* do analysis */ }
+  }
+}
+```
+For `aod::BcOccsAll`, a fast lookup by global BC is provided:
+``` c++
+// occupancy for any BC of the TFs in the DF: O(1) lookup by global BC, no search and no CCDB needed
+aod::bcocc::BcOccAllIndex bcOccAllIndexed(bcOccsAll); // once per dataframe
+if (bcOccAllIndexed.contains(bc.globalBC())) {
+  auto occ = bcOccAllIndexed[bc.globalBC()]; // iterator of aod::BcOccsAll
+  bool isUpcModeRof = occ.occupancyFlags_bit(o2::aod::bcocc::kUpcMode); // example; other occupancy getters can be used as well
+}
 ```
 
 
